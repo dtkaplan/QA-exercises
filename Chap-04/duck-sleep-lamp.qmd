@@ -1,0 +1,75 @@
+<!--
+id: "duck-sleep-lamp"
+created: "Wed Oct 15 11:31:50 2025"
+attribution: TBA
+status: "draft"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-duck-sleep-lamp}
+
+Perspectives on percent ...
+
+1. The first thing to keep in mind is that percent is a unit of [1], written by moving the decimal point two places to the right. 
+
+- 0.0542 is 5.42%. 
+- 2.612 is 261.2%.
+- 0.0005 is 0.05%.
+
+You can write any number in units of percent. The advantage to doing so is that it converts numbers in the range 0.01 to 1 into the range 1 to 100. People can process such two-digit numbers like 56% faster and perhaps more reliably than numbers like 0.56.
+
+2. As a matter of practice, "percent" is also used to designating a *proportion* of some whole.
+
+- If the whole is 100 miles ... 12% corresponds to 12 miles.
+- If the whole is 0.08 liters ... 25% corresponds to 0.02 liters.
+- If the whole is 4,000,000 USD ... 50% corresponds to 2,000,000 USD
+- If the whole is 3 kg ... 400% corresponds to 12 kg.
+
+In this context, the symbol "%" serves two purposes: to indicate that the decimal point has been moved two digits to the right; and, to replace the words "a fraction of," or "a proportion of," or "of the whole." 
+
+- Example: "*a fraction of* 0.11 of 700 seconds is 77 seconds" can be replaced with "11% of 700 seconds." Much shorter.
+
+3. Percent is also sometimes used as a trick to fooling the reader into thinking a quantity is larger than it really is. For instance, 5 and 500% are the same quantity, but 500% has more digits and may look more imposing. Should this propaganda use be distained? 
+
+4. Percent is often used to signify a proportional amount of growth or decline. For example, a five-fold increase from 2 to 10 can be expressed as a growth of 400%. Why 400% and not 500%? That's because the original value, 2 here, corresponds to 100% of itself. The end value, 10 in this example, is 500% of 2, so the amount of *change* is 500% - 100% = 400%. Another way to see this: the change from 2 to 10 involves an increase by 8. Since 8 is four times 2, we can say the increase by 8 is an increase by 400% of the starting value 2. 
+
+Likewise, an increase by 5% is the same as an increase **to** 105% of the original value.
+
+Decreases are even more confusing. A decrease of 20% corresponds to a change **to** 80% of the original value.
+
+5. Percentages, when used to signify "a proportion of," do not add. For instance, starting at 100 USD, two successive increases of 20% (that is 20% then another 20% increase) leads to an overall increase of 44%. 
+
+6. "Percent" and "percentage points" are not the same thing. Use "percentage point" only when referring to a change in a proportion. For instance, if inflation is at 5% and then changes to 7%, we have an increase by 40% in inflation or, stated differently, an increase by 2 percentage points.
+
+When you encounter percent or "percentage points," make sure you understand whether they are talking about a the "*proportion of something*," a "percentage *increase*," a "percentage *point* increase." If it is a change---increase or decrease---you should be aware of what the starting level of the quantity was. 
+
+To illustrate how one might be mislead by percent and percentage points, consider this statement from an AI:
+
+> *Cigarette smokers face significantly higher mortality risks than non-smokers, with studies showing smokers are about twice as likely to die prematurely, experiencing higher rates of lung cancer, heart disease, and respiratory illnesses; for example, one study found current smokers had an overall mortality rate of around 11 per 1,000 person-years, compared to about 3 per 1,000 for never smokers, with risks increasing with the amount and duration of smoking.*
+
+1. Cigarette smokers have a 100% greater risk of premature death. 
+`r devoirs::devoirsTF(TRUE, id="dsl-1-72kd")`
+
+2. Would (1), if true, mean that smokers are certain to die prematurely?
+`r devoirs::devoirsTF(FALSE, id="dsl-2-72kd")`
+
+3. The mortality rate of cigarette smokers is 267% greater than for non-smokers. 
+`r devoirs::devoirsTF(TRUE, id="dsl-3-gsd")`
+
+4. Does (3), if true, mean that cigarette smokers have a mortality rate greater than 100%? (Cats, with their proverbial nine lives, might get away with this, but not people.)
+`r devoirs::devoirsTF(FALSE, id="dsl-4-hwdw")`
+
+5. The mortality rate of smokers is 0.8 percentage points higher than for non-smokers.
+
+`r devoirs::devoirsTF(TRUE, id="dsl-5-72kd")`
+
+6. Does (5), if true, mean that smoking is not a big deal? Explain why or why not.
+
+`r devoirs::devoirs_text("dsl-6-ie2s")`
+
+:::
+ <!-- end of exr-duck-sleep-lamp -->

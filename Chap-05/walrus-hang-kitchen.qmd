@@ -1,0 +1,135 @@
+<!--
+id: "walrus-hang-kitchen"
+created: "Sun Nov 30 17:17:54 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-walrus-hang-kitchen}
+The [*New York Times Magazine*](https://www.nytimes.com/2025/11/30/magazine/e-bikes-accidents-safety-legislation-california.html?smid=nytcore-ios-share) (Nov. 30, 2025) reported on a surge in e-bike injuries. The article sensibly pointed to the rapid increase in e-bikes sales as a factor in the surge.
+
+> *As the pandemic continued, the number of e-bike accidents increased. "You would expect that," Alfrey says, "because sales were skyrocketing." Indeed, in 2022, over a million e-bikes were sold in the United States, up from 287,000 in 2019, according to the Light Electric Vehicle Association.*
+
+The article pointed out that the increase in e-bike sales has not been as sharp as the increase in injuries.
+
+> *During the same [three]-year^[The article mistakenly says "four-year period."] period when nationwide sales quadrupled, e-bike injuries increased by a factor of 10, to 23,493 from 2,215, according to the National Electronic Injury Surveillance System. A study by the University of California, San Francisco, found that from 2017 to 2022, head injuries from e-bike accidents increased 49-fold.*
+
+1. What do you think the units are for the reported e-bike sales?
+
+```{mcq}
+#| label: whk-92-1
+1. Bicycles
+2. Bicycles per year [correct]
+3. Years per bicycle
+4. Something else.
+```
+
+2. What do you think the units are for the reported injuries?
+
+```{mcq}
+#| label: whk-92-2
+1. People
+2. People per year [correct]
+3. Years per person
+4. Something else.
+```
+
+3. What's your opinion? Is it appropriate to compare the rapidly growing e-bike yearly sales to yearly injuries.
+
+`r devoirs::devoirs_text("whk-92-3")`
+
+4. What is the approximate doubling time for e-bike sales, according to the information presented in the article? 
+
+```{mcq}
+#| label: whk-92-4a
+#| inline: true
+1. 6 months
+2. 1 year
+3. 1 year and 6 months [correct]
+3. 2 years 
+4. 2 years and 6 months
+```
+
+Explain the reasoning that led to your conclusion about the doubling time.
+
+`r devoirs::devoirs_text("whk-92-4b")`
+
+5. Accident rates are typically proportional to exposure; the more an activity is undertaken, the larger the number of accidents per year associated with that activity. Which of these would you expect to be proportional to the number of accidents per year?
+
+```{mcq}
+#| label: whk-92-5
+1. The number of bicycles per year.
+2. The overall number of bicycles on the road. [correct]
+3. The fraction of bicycles that were sold that year.
+```
+
+Bicycle sales per year is a rate of change: the change in the number of bicycles divided by the change in time. We are given information about bicycle sales, but we need information about the total number of bikes on the road. Making this conversion in the form of information---from a rate of change of a quantity as opposed to to the quantity itself---can be accomplished by *accumulating* the rate of change over time. 
+
+To perform the accumulation, we need to look at the sales in each year of the period. We know the number of sales in 2019 and 2022: about 250,000 and one-million respectively. 
+
+6. Using the numbers in the previous paragraph, how many doubling occurred from 2019 to 2022? How many years elapsed from 2019 to 2022?
+
+```{mcq}
+#| label: whk-92-6
+1. 1 doubling in the span of 2 years
+2. 2 doublings in the span of 3 years [correct]
+3. 3 doublings in the span of 4 years
+```
+
+The doubling time is the span of years divided by the number of doublings. If D is the doubling time in years, then the proportional increase from year to year is exp2(1 / D).
+
+We've done the calculation for you about bicycles sales in each year using the proportional increase from year to year. Your job is to use the *accumulation* method to calculate the number of bikes on the road in each year.
+
+Year  | 2013 | 2014 |2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022
+:-----|------|------|-----|------|------|------|------|------|------|------
+Sales | 15K  | 25K  | 40K |  60K | 100K | 160K | 250K | 400K | 630K | 1000K
+On road| 15K | 40K  | 80K | ...  | ...  | ...  | ...  | ...  | ...  | ...  
+
+7. Assuming that the number of bikes on the road in any year consists of the bikes sold through that year, how many bikes were on the road in 2017?
+
+```{mcq}
+#| label: whk-92-7
+#| inline: true
+1. 100K
+2. 140K
+3. 200K
+3. 240K [correct]
+```
+
+8. Using the same assumption as in (7), how many bikes were on the road by 2019?
+
+```{mcq}
+#| label: whk-92-8
+#| inline: true
+1. 200K
+2. 400K [correct]
+3. 700K 
+3. 1000K 
+```
+
+9. Using the same assumption as in (7), how many bikes were on the road by 2022?
+
+```{mcq}
+#| label: whk-92-9
+#| inline: true
+1. 1000K
+2. 1200K
+3. 1700K [correct]
+3. 2700K
+```
+
+The article says that e-bike injuries increase 10-fold over the period from 2019 to 2022, while bike sales only increased 4-fold. Coincidentally, the number of bikes on the road increased by slightly more than 4-fold from 2019 to 2022, so the 10-fold increase in injuries does reflect a growing injury rate *per* bicycle.
+
+The number of head injuries, in contrast, increased 49-fold from 2017 to 2022. But there was a 7-fold increase in the number of bicycles on the road. So the head injury rate *per* bicycle increased "only" 7 fold.
+
+
+:::
+
+
+ <!-- end of exr-walrus-hang-kitchen -->

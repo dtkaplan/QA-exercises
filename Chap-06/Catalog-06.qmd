@@ -1,0 +1,540 @@
+---
+title: "Chapter 06 Catalog"
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+<style>
+.theorem-title {
+  display: none;
+}
+
+.panel-tabset {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20%) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.panel-tabset > .nav-tabs {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-tabset > .tab-content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .panel-tabset {
+    display: block;
+  }
+
+  .panel-tabset > .nav-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  .panel-tabset > .nav-tabs .nav-link {
+    width: auto;
+  }
+}
+</style>
+{{< include ../exercise-header.qmd >}}
+
+::: {.callout-note collapse="true" title="Group: unclassified"}
+::: {.panel-tabset collapse=true}
+## ash-hang-saw
+
+
+> File: Chap-06/ash-hang-saw.qmd
+
+{{< include ash-hang-saw.qmd >}}
+
+## aspen-pack-blanket
+
+
+> File: Chap-06/aspen-pack-blanket.qmd
+
+{{< include aspen-pack-blanket.qmd >}}
+
+## aspen-talk-pantry
+
+
+> File: Chap-06/aspen-talk-pantry.qmd
+> Status: draft
+
+
+{{< include aspen-talk-pantry.qmd >}}
+
+## avoid-refer-fridge
+
+
+> File: Chap-06/avoid-refer-fridge.qmd
+
+{{< include avoid-refer-fridge.qmd >}}
+
+## beech-freeze-roof
+
+
+> File: Chap-06/beech-freeze-roof.qmd
+> Status: sketch
+
+
+{{< include beech-freeze-roof.qmd >}}
+
+## birch-cost-stove
+
+
+> File: Chap-06/birch-cost-stove.qmd
+> Status: sketch
+
+
+{{< include birch-cost-stove.qmd >}}
+
+## boy-begin-shirt
+
+
+> File: Chap-06/boy-begin-shirt.qmd
+> Status: sketch
+
+
+{{< include boy-begin-shirt.qmd >}}
+
+## boy-lick-book
+
+
+> File: Chap-06/boy-lick-book.qmd
+> Status: sketch
+
+
+{{< include boy-lick-book.qmd >}}
+
+## brother-blow-futon
+
+
+> File: Chap-06/brother-blow-futon.qmd
+> Status: sketch
+
+
+{{< include brother-blow-futon.qmd >}}
+
+## calf-catch-spoon
+
+
+> File: Chap-06/calf-catch-spoon.qmd
+> Status: sketch
+
+
+{{< include calf-catch-spoon.qmd >}}
+
+## calf-hear-bulb
+
+
+> File: Chap-06/calf-hear-bulb.qmd
+> Status: sketch
+
+
+{{< include calf-hear-bulb.qmd >}}
+
+## cat-know-scarf
+
+
+> File: Chap-06/cat-know-scarf.qmd
+> Status: sketch
+
+
+{{< include cat-know-scarf.qmd >}}
+
+## child-break-spoon
+
+
+> File: Chap-06/child-break-spoon.qmd
+> Status: draft
+
+
+{{< include child-break-spoon.qmd >}}
+
+## deer-form-stove
+
+
+> File: Chap-06/deer-form-stove.qmd
+> Status: draft
+
+
+{{< include deer-form-stove.qmd >}}
+
+## doe-give-table
+
+
+> File: Chap-06/doe-give-table.qmd
+> Status: sketch
+
+
+{{< include doe-give-table.qmd >}}
+
+## doe-mute-pen
+
+
+> File: Chap-06/doe-mute-pen.qmd
+> Status: sketch
+
+
+{{< include doe-mute-pen.qmd >}}
+
+## dolphin-enjoy-kitchen
+
+
+> File: Chap-06/dolphin-enjoy-kitchen.qmd
+
+{{< include dolphin-enjoy-kitchen.qmd >}}
+
+## duck-get-futon
+
+
+> File: Chap-06/duck-get-futon.qmd
+> Status: sketch
+
+
+{{< include duck-get-futon.qmd >}}
+
+## eagle-rise-laundry
+
+
+> File: Chap-06/eagle-rise-laundry.qmd
+> Status: sketch
+
+
+{{< include eagle-rise-laundry.qmd >}}
+
+## elbow-leave-jacket
+
+
+> File: Chap-06/elbow-leave-jacket.qmd
+> Status: sketch
+
+
+{{< include elbow-leave-jacket.qmd >}}
+
+## elephant-sail-mug
+
+
+> File: Chap-06/elephant-sail-mug.qmd
+> Status: sketch
+
+
+{{< include elephant-sail-mug.qmd >}}
+
+## elm-rise-fridge
+
+
+> File: Chap-06/elm-rise-fridge.qmd
+> Status: sketch
+
+
+{{< include elm-rise-fridge.qmd >}}
+
+## elm-teach-spoon
+
+
+> File: Chap-06/elm-teach-spoon.qmd
+> Status: draft
+
+
+{{< include elm-teach-spoon.qmd >}}
+
+## fawn-go-blanket
+
+
+> File: Chap-06/fawn-go-blanket.qmd
+> Status: sketch
+
+
+{{< include fawn-go-blanket.qmd >}}
+
+## finch-ring-magnet
+
+
+> File: Chap-06/finch-ring-magnet.qmd
+
+{{< include finch-ring-magnet.qmd >}}
+
+## finger-speak-ship
+
+
+> File: Chap-06/finger-speak-ship.qmd
+> Status: draft
+
+
+{{< include finger-speak-ship.qmd >}}
+
+## fir-wish-table
+
+
+> File: Chap-06/fir-wish-table.qmd
+
+{{< include fir-wish-table.qmd >}}
+
+## fox-lie-plant
+
+
+> File: Chap-06/fox-lie-plant.qmd
+> Status: draft
+
+
+{{< include fox-lie-plant.qmd >}}
+
+## frog-wish-bolt
+
+
+> File: Chap-06/frog-wish-bolt.qmd
+> Status: draft
+
+
+{{< include frog-wish-bolt.qmd >}}
+
+## goat-dive-painting
+
+
+> File: Chap-06/goat-dive-painting.qmd
+> Status: sketch
+
+
+{{< include goat-dive-painting.qmd >}}
+
+## hyena-dig-pencil
+
+
+> File: Chap-06/hyena-dig-pencil.qmd
+> Status: draft
+
+
+{{< include hyena-dig-pencil.qmd >}}
+
+## kangaroo-hurt-bowl
+
+
+> File: Chap-06/kangaroo-hurt-bowl.qmd
+
+{{< include kangaroo-hurt-bowl.qmd >}}
+
+## kitten-sing-ring
+
+
+> File: Chap-06/kitten-sing-ring.qmd
+
+{{< include kitten-sing-ring.qmd >}}
+
+## lamb-speak-rug
+
+
+> File: Chap-06/lamb-speak-rug.qmd
+> Status: draft
+
+
+{{< include lamb-speak-rug.qmd >}}
+
+## leg-fight-stair
+
+
+> File: Chap-06/leg-fight-stair.qmd
+> Status: sketch
+
+
+{{< include leg-fight-stair.qmd >}}
+
+## lion-have-boat
+
+
+> File: Chap-06/lion-have-boat.qmd
+
+{{< include lion-have-boat.qmd >}}
+
+## lion-ride-spoon
+
+
+> File: Chap-06/lion-ride-spoon.qmd
+> Status: draft
+
+
+{{< include lion-ride-spoon.qmd >}}
+
+## maple-burn-knife
+
+
+> File: Chap-06/maple-burn-knife.qmd
+
+{{< include maple-burn-knife.qmd >}}
+
+## maple-send-ship
+
+
+> File: Chap-06/maple-send-ship.qmd
+
+{{< include maple-send-ship.qmd >}}
+
+## monkey-meet-laundry
+
+
+> File: Chap-06/monkey-meet-laundry.qmd
+
+{{< include monkey-meet-laundry.qmd >}}
+
+## mouse-bathe-knob
+
+
+> File: Chap-06/mouse-bathe-knob.qmd
+> Status: sketch
+
+
+{{< include mouse-bathe-knob.qmd >}}
+
+## nephew-sit-car
+
+
+> File: Chap-06/nephew-sit-car.qmd
+> Status: sketch
+
+
+{{< include nephew-sit-car.qmd >}}
+
+## panda-run-magnet
+
+
+> File: Chap-06/panda-run-magnet.qmd
+
+{{< include panda-run-magnet.qmd >}}
+
+## pig-point-sofa
+
+
+> File: Chap-06/pig-point-sofa.qmd
+> Status: draft
+
+
+{{< include pig-point-sofa.qmd >}}
+
+## pollen-close-sheet
+
+
+> File: Chap-06/pollen-close-sheet.qmd
+
+{{< include pollen-close-sheet.qmd >}}
+
+## reptile-take-socks
+
+
+> File: Chap-06/reptile-take-socks.qmd
+
+{{< include reptile-take-socks.qmd >}}
+
+## seal-talk-room
+
+
+> File: Chap-06/seal-talk-room.qmd
+
+{{< include seal-talk-room.qmd >}}
+
+## shark-choose-bed
+
+
+> File: Chap-06/shark-choose-bed.qmd
+
+{{< include shark-choose-bed.qmd >}}
+
+## sheep-write-jacket
+
+
+> File: Chap-06/sheep-write-jacket.qmd
+
+{{< include sheep-write-jacket.qmd >}}
+
+## sister-bite-gloves
+
+
+> File: Chap-06/sister-bite-gloves.qmd
+
+{{< include sister-bite-gloves.qmd >}}
+
+## sister-teach-pen
+
+
+> File: Chap-06/sister-teach-pen.qmd
+> Status: in progress
+
+
+{{< include sister-teach-pen.qmd >}}
+
+## snail-dig-pen
+
+
+> File: Chap-06/snail-dig-pen.qmd
+
+{{< include snail-dig-pen.qmd >}}
+
+## spider-hit-fork
+
+
+> File: Chap-06/spider-hit-fork.qmd
+
+{{< include spider-hit-fork.qmd >}}
+
+## spruce-lie-kayak
+
+
+> File: Chap-06/spruce-lie-kayak.qmd
+
+{{< include spruce-lie-kayak.qmd >}}
+
+## spruce-refer-bulb
+
+
+> File: Chap-06/spruce-refer-bulb.qmd
+
+{{< include spruce-refer-bulb.qmd >}}
+
+## squirrel-put-map
+
+
+> File: Chap-06/squirrel-put-map.qmd
+
+{{< include squirrel-put-map.qmd >}}
+
+## squirrel-type-sofa
+
+
+> File: Chap-06/squirrel-type-sofa.qmd
+
+{{< include squirrel-type-sofa.qmd >}}
+
+## tiger-blow-shoe
+
+
+> File: Chap-06/tiger-blow-shoe.qmd
+
+{{< include tiger-blow-shoe.qmd >}}
+
+## tiger-build-stair
+
+
+> File: Chap-06/tiger-build-stair.qmd
+
+{{< include tiger-build-stair.qmd >}}
+
+## toe-dig-pencil
+
+
+> File: Chap-06/toe-dig-pencil.qmd
+
+{{< include toe-dig-pencil.qmd >}}
+
+:::
+:::
+

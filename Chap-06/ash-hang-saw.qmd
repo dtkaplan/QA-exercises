@@ -1,0 +1,37 @@
+<!--
+id: "ash-hang-saw"
+created: "Fri Jan 30 17:00:07 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ash-hang-saw}
+An **output transformation** has the form $A \cdot f(\text{input}) + B$ where $f()$ is a core modeling function. If you want the transformed function to have a maximum output of 100 and a minimum of 0, and the core modeling function naturally ranges from 0 to 1, what should $A$ be?
+
+```{mcq}
+#| label: d06-ahs-A-ues
+#| inline: true
+1. 1
+2. 50
+3. 100 [correct]
+4. 200
+```
+
+Continuing from the previous question, what should $B$ be?
+
+```{mcq}
+#| label: d06-ahs-B-3xl
+#| inline: true
+1. -50
+2. 0 [correct]
+3. 50
+4. 100
+```
+
+:::
+ <!-- end of exr-ash-hang-saw -->

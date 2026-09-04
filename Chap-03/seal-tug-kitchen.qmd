@@ -1,0 +1,32 @@
+<!--
+id: "seal-tug-kitchen"
+created: "Fri Nov 28 15:23:38 2025"
+attribution: TBA
+status: "sketch"
+chapter: 3
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-seal-tug-kitchen}
+Turn this into an exercise about the physics of things like seconds-cubed.
+
+- Velocity, {{< var dim.velocity >}} where the unit names---e.g. miles per hour, meters per second---serve as reminders of the fundamental dimensions involved.
+- Acceleration, {{< var dim.acceleration >}}. You may be aware that "acceleration due to gravity" on the Earth's surface is approximately 9.8 meters per second per second.
+- Force, {{< var dim.force >}}. Unfortunately, the unit name "pound" gives no clue about the fundamental dimensions involved. And the unit name "kilogram" is not actually for force; it's simply {{< var dim.mass >}}
+- Energy, {{< var dim.energy >}}. 
+- Power, {{< var dim.power >}}, which is simply energy *per* unit time.
+- Electrical current is itself a fundamental dimensions, denoted {{< var dim.current >}}
+- Electrical voltage amounts to energy per unit electrical charge, that is {{< var dim.voltage >}}. 
+
+
+
+
+In some cases, derived dimensions seem absurd to the untrained mind. After all, what kind of thing could possibly be the result of multiplying volume times surface area, or dividing dollars by time, or multiplying weight times itself? A sensible person might reasonably object: "I know what time is, but there is no such thing as 'inverse time' or 'time squared' or 'time cubed.' But to say "no such thing" is really to mean, "I haven't encountered any such thing." Eventually, however, you might. For instance, you will admit that the ages of a random group of people will vary one from another. In statistics, there is need to measure the amount of variation. For this purpose, statisticians have invented a quantity called the "variance." The variance of ages has {{< var dim.dim >}} T^2^.
+
+
+:::
+ <!-- end of exr-seal-tug-kitchen -->

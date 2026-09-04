@@ -1,0 +1,22 @@
+<!--
+id: "elm-rise-fridge"
+created: "Thu Dec 11 07:59:56 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-elm-rise-fridge}
+The text says, 
+
+> "Previous examples in this book have pointed out situations where *rates*, as in dollars-per-QALY, are more informative that single quantities. But it does not seem obviously wrong to favor the save-more-QALYs (a) argument over the save more dollars-per-QALY (b)."
+
+Discuss this in class.
+
+:::
+ <!-- end of prp-elm-rise-fridge -->

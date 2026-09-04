@@ -1,0 +1,34 @@
+<!--
+id: "walrus-hide-lamp"
+created: "Mon Dec  8 11:35:10 2025"
+attribution: DTK
+chapter: 9
+status: sketch
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-walrus-hide-lamp}
+We need to find---before class---several contexts for custom-built functions that the students have not yet seen. Some should be one-input functions, at least one should be a two-input function. And one should be multi-input.
+
+- Linear regression setting, one-, two-, and several-explanatory variables. Perhaps the Galton height data. Point out the connection to the statistical problem of assessing whether a variable contributes to the model, but do not review the technicalities of the statistical problem. Just that statistics and modeling go hand-in-hand.
+
+- World-record swimming data, with the point of putting in an interaction between sex and year. 
+
+- Scottish hill-racing data.
+
+- Examples from Garfinkel's biomath book.
+
+- Power-law functions for the engines data. Use this for pipelining.    exp2(2.5 * log2(engine))
+
+- Get Stan's photo of the saddle landscape. Construct a saddle from linear combinations of latitude and longitude. Then a Gaussian mountain.
+
+- Tide data or identifying frequency differences, perhaps add two sines of similar frequency to get beats.
+
+- Get a violin or cello note (from MC2?) to show duration of the sound.
+
+Then, explain the setting, ask students to speculate on what the function should look like. Be quick on your feet to work though what core modeling functions should be combined to make the custom function, and how they should be combined. Cover linear combination, multiplication, pipelining. 
+:::
+ <!-- end of prp-walrus-hide-lamp -->

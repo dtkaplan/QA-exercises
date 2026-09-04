@@ -1,0 +1,19 @@
+<!--
+id: "seahorse-enjoy-closet"
+created: "Wed Dec 31 07:06:02 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 1"
+status: "ready-to-use"
+chapter: 1
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seahorse-enjoy-closet}
+The reading makes a distinction between a "variable" and a "quantity." What is the specific difference between these two terms? 
+
+`r devoirs::devoirs_text("sec-RQ1-8ei2")`
+
+:::
+ <!-- end of exr-seahorse-enjoy-closet -->

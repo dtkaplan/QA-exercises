@@ -1,0 +1,16 @@
+<!--
+id: "oak-let-dish"
+created: "Thu Aug 27 08:53:16 2026"
+attribution: DTK
+uses: function input/output scaling
+status: "sketch"
+chapter: 7
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-oak-let-dish}
+EXERCISES: Algebra for input and output scaling with some of the core modeling functions. DON'T NEED TO GIVE A FORMULA: SAVE THIS FOR AN EXERCISE OR ACTIVITY
+:::
+ <!-- end of exr-oak-let-dish -->

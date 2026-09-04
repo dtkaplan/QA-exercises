@@ -1,0 +1,29 @@
+<!--
+id: "ant-put-room"
+created: "Sun Dec 28 14:30:43 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ant-put-room}
+What is the *state* of a dynamical system?
+
+`r devoirs::devoirs_text("RQ11-apr")`
+
+<!-- Opening answer: R1d-5tn -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+A dynamical system is, naturally, a system. Like all systems, it comprises inter-related quantities. The *state* of a dynamical system is the current value of the quantities comprised by the system. (In `r xf("sec-system-diagram")` the state quantities are those named in the boxes that are connected by arrows.) The word "dynamic" reflects that the state can change over time.
+
+
+[..id..]{data-tooltip="Ans id: R1d-5tn"}
+:::
+<!-- closing answer R1d-5tn -->
+
+:::
+ <!-- end of exr-ant-put-room -->

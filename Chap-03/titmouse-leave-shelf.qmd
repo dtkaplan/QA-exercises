@@ -1,0 +1,63 @@
+<!--
+id: "titmouse-leave-shelf"
+created: "Fri Nov 28 14:02:58 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "exercise"
+title: "Dimensions from the *Practical Man*"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-titmouse-leave-shelf}
+
+`r xf("sec-quantities")` quoted a list from *Arithmetic for the practical man* by J.E. Thompson (1931). He wrote:
+
+> Common measurements are of several kinds .... The chief of the common measurements are those of
+>
+> i. Length
+> ii. Surface, or area 
+> iii. Volume, or capacity
+> iv. Weight, or force of gravity
+> v. Time
+> vi. Angles, latitude and longitude
+> vii. Temperature, or intensity of heat
+> viii. Money, or value
+
+Annotate each item of Thompson's list with the dimension. Indicate whether it is a basic dimension or a derived dimension.
+
+```{r echo=FALSE}
+default <- "i. Length:
+ii. Surface, or area: 
+iii. Volume, or capacity:   
+iv. Weight, or force of gravity: 
+v. Time: 
+vi. Angles, latitude and longitude: 
+vii. Temperature, or intensity of heat: 
+viii. Money, or value : "
+```
+
+`r devoirs::devoirs_text("tls-323l", contents=default, rows=8)`
+
+<!-- Opening answer: tls-7Cc -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+i. Length, {{< var dim.length >}}
+ii. Surface, or area {{< var dim.length >}} $\times$ {{< var dim.length >}}, which we will generally write {{< var dim.length >}}^2^
+iii. Volume, or capacity {{< var dim.length >}} $\times$ {{< var dim.length >}} $\times$ {{< var dim.length >}}, which we will generally write {{< var dim.length >}}^3^
+iv. Weight, or force of gravity {{< var dim.mass >}} $\times$ {{< var dim.length >}} / {{< var dim.time >}}^2^, or, written another way, {{< var dim.mass >}} {{< var dim.length >}} {{< var dim.time >}}^-2^
+v. Time, {{< var dim.time >}}
+vi. Angles, latitude and longitude {{< var dim.number >}}
+vii. Temperature, or intensity of heat {{< var dim.temperature >}}
+viii. Money, or value {{< var dim.money >}}
+
+Note that four of them (i, v, vii, and viii) are tautologies. 
+
+
+[..id..]{data-tooltip="Ans id: tls-7Cc"}
+:::
+<!-- closing answer tls-7Cc -->
+:::
+ <!-- end of exr-titmouse-leave-shelf -->

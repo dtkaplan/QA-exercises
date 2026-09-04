@@ -1,0 +1,18 @@
+<!--
+id: "giraffe-read-coat"
+created: "Wed Dec 31 07:07:06 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 1"
+status: "ready-to-use"
+chapter: 1
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-giraffe-read-coat}
+The reading states, “A common criticism of quantitative analysis is that any particular quantitative operationalization is imperfect and incomplete.”  What are some merits of this criticism?  Shortcomings? 
+
+`r devoirs::devoirs_text("grc-RQ1-xdw")`
+:::
+ <!-- end of exr-giraffe-read-coat -->

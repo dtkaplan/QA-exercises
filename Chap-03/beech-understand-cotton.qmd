@@ -1,0 +1,27 @@
+<!--
+id: "beech-understand-cotton"
+created: "Sun Dec 28 13:59:51 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-understand-cotton}
+Explain in your own words what is meant by a *{{< var dim.dim >}}*?
+
+`r devoirs::devoirs_text("RQ-dim")`
+
+<!-- Opening answer: Reading-questions-1ly -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+A {{< var dim.dim >}} refers to the specification of the "kind" or "type" of a quantity in terms of products, powers, or quotients of fundamental dimensions such as length, time, and mass.
+
+[..id..]{data-tooltip="Ans id: Reading-questions-1ly"}
+:::
+<!-- closing answer Reading-questions-1ly -->
+
+:::
+ <!-- end of exr-beech-understand-cotton -->

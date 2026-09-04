@@ -1,0 +1,26 @@
+<!--
+id: "seal-talk-room"
+created: "Fri Jan 30 16:52:24 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seal-talk-room}
+Which core modeling functions have a positive rate of change for all positive inputs?
+
+`r devoirs::devoirsTF(FALSE, leed="recip()", id="d06-str-3ks")`
+
+`r devoirs::devoirsTF(TRUE, leed="exp2()", id="d06-str-lxe")`
+
+`r devoirs::devoirsTF(FALSE, leed="hill()", id="d06-str-8ue")`
+
+`r devoirs::devoirsTF(TRUE, leed="hillside()", id="d06-str-lex")`
+
+`r devoirs::devoirsTF(TRUE, leed="same()", id="d06-str-cwox")`
+:::
+ <!-- end of exr-seal-talk-room -->

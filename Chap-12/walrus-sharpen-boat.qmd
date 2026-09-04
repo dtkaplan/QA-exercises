@@ -1,0 +1,36 @@
+<!--
+id: "walrus-sharpen-boat"
+created: "Thu Feb 19 09:12:47 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-walrus-sharpen-boat}
+These questions all relate to a setting where an event can have only two outcomes, outcome A and B. 
+
+Suppose the relative probabilities are 3 for A and 7 for B.
+
+1. What are the odds of A?
+
+```{mcq}
+#| label: wsb-1-kes
+1. $3/7 \approx 0.43$ [correct]
+2. $3/(3+7) = 0.3$ [hint: Sorry. That's the absolute probability of A.]
+3. $1/3$
+4. Not enough information given.
+```
+
+2. What are the odds of B?
+```{mcq}
+#| label: wsb-2-k4w2
+1. $7/3 \approx 2.33$ [correct]
+2. $7/(3+7) = 0.7$ [hint: Sorry. That's the absolute probability of B.]
+3. $(7 + 3)/3$
+4. Not enough information given.
+```
+:::
+ <!-- end of exr-walrus-sharpen-boat -->

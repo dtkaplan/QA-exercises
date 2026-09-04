@@ -1,0 +1,37 @@
+<!--
+id: "chicken-trim-pot"
+created: "Tue Jul  1 16:29:04 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: Oddities
+mode: "computation"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-chicken-trim-pot}
+The following chunk calculates the date that is 30 days from today:
+
+```{webr}
+#| caption: Arithmetic with days and dates
+#| persist: true
+#| min-lines: 3
+Sys.Date() + 30
+```
+
+Modify the chunk to create the collection which will calculate in one step the dates 30, 60, 90, and 120 days from today.
+
+<!-- Opening answer: ctp-5ka -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+```{webr}
+Sys.Date() + c(30, 60, 90, 120)
+```
+
+[..id..]{data-tooltip="Ans id: ctp-5ka"}
+:::
+<!-- closing answer ctp-5ka -->
+
+:::
+ <!-- end of exr-chicken-trim-pot -->

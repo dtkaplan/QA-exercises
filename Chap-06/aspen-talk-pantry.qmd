@@ -1,0 +1,17 @@
+<!--
+id: "aspen-talk-pantry"
+created: "Fri Jan 16 11:22:34 2026"
+attribution: Dorothy Dickmann
+status: "draft"
+chapter: 6
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-aspen-talk-pantry}
+In the context of modeling systems, what is the difference between endogenous and exogenous quantities? Give an example of each from the solar panel system diagram in the chapter. Think of a different system, and identify an endogenous and exogenous quantity.
+
+`r devoirs::devoirs_text("atp-1-ekse")`
+:::
+ <!-- end of exr-aspen-talk-pantry -->

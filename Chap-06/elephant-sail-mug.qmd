@@ -1,0 +1,16 @@
+<!--
+id: "elephant-sail-mug"
+created: "Mon May 11 09:45:51 2026"
+attribution: DTK
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-elephant-sail-mug}
+DRAFT. EXPLAIN THE RELATIONSHIPS BETWEEN `osc()`, `sin()`, and `cos()` in terms of input and output scaling.
+
+:::
+ <!-- end of exr-elephant-sail-mug -->

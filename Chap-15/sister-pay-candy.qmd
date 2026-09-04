@@ -1,0 +1,35 @@
+<!--
+id: "sister-pay-candy"
+created: "Tue Feb 24 13:05:56 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-sister-pay-candy}
+Energy has dimension L^2^ M T^-2^. Power has dimension L^2 M T^-3^.  What is the relationship between energy and power?
+
+```{mcq}
+#| label: spc-1-clw2
+1. Energy is proportional to power.
+2. Energy is the derivative of power with respect to time. 
+3. Energy is the accumulation of power with respect to time. [correct]
+4. The dimensions are unrelated.
+```
+
+::: {.callout-tip collapse=true}
+Energy is force times distance. Force is mass time acceleration. Acceleration is the derivative of velocity with respect to time. Velocity has dimension L/T.
+
+You can work out the dimension of each of the multiplication and the derivative to construct the dimension of energy. 
+
+Power is the flow of energy, that is, the amount of energy delivered per unit time.
+
+Notice that power involves a quantity denominated in "cubic-seconds." If you can get your head around a cubic-second, you have really come a long way!
+:::
+
+
+:::
+ <!-- end of exr-sister-pay-candy -->

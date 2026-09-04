@@ -1,0 +1,18 @@
+<!--
+id: "finger-talk-clock"
+created: "Mon Oct 27 11:54:18 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-finger-talk-clock}
+Modeling magnitudes: the relationship between power, mass, and rpm of an engine. Allometrics in animals. 
+
+:::
+ <!-- end of exr-finger-talk-clock -->

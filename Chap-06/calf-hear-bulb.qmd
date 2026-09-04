@@ -1,0 +1,17 @@
+<!--
+id: "calf-hear-bulb"
+created: "Mon Oct 27 11:25:57 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-calf-hear-bulb}
+Constructing local functions (unlike square() or cube()) by multiplying hillsides together. This creates a function that levels off rather than running off to infinity.
+:::
+ <!-- end of exr-calf-hear-bulb -->

@@ -1,0 +1,24 @@
+<!--
+id: "kid-hurt-dress"
+created: "Thu Mar 12 08:15:50 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kid-hurt-dress}
+Velocity is the rate of change of position with respect to time. Acceleration is the rate of change of velocity with respect to time. So acceleration is the _____ derivative of position.
+
+```{mcq}
+#| label: khd-1-nslw
+1. first
+2. second [correct hint: Right. That is, the derivative with respect to time of the derivative with respect to time of position.]
+3. marginal
+4. zero
+```
+:::
+ <!-- end of exr-kid-hurt-dress -->

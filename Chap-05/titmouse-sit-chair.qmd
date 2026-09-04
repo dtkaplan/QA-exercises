@@ -1,0 +1,58 @@
+<!--
+id: "titmouse-sit-chair"
+created: "Wed Dec 31 13:27:42 2025"
+attribution: DTK
+use: "Chapter 5 exercises"
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+```{webr}
+#| echo: false
+#| autorun: true
+
+```
+
+
+
+::: {#exr-titmouse-sit-chair}
+Graphs of a function of one input, as in `r xf("fig-payment-r-slice")`, are familiar to many students from high school math courses. They are easily constructed with a computer. For our purposes, we use a package called `{mosaicCalc}` which provides several utilities for making graphics. To make a graph of a function with one input, you will need three pieces of information:
+
+i. What is the function you want to graph?
+ii. What name you want to use for the input to the function?
+iii. What graphics domain you want to show in the graph?
+
+The command to use in R/mosaic is `slice_plot()`. It takes two arguments. For demonstration purposes, we'll plot the `hillside()` function, using `z` as the name of the input and displaying the graph over the domain from -4 to 5. 
+
+```{webr}
+#| caption: Intro to slice_plot()
+slice_plot(          # The R function to use
+  hillside(z) ~ z,   # first argument
+  domain(z = -4:5)   # second argument
+)
+```
+
+The first argument is called a `r xf_definition("tilde expression")`, the name of which comes from the character [`~`]{style="font-size: 20;"}. Put the input name to be used on the right side of the tilde. On the left size, give an R expression for the function you want to graph (`hillside`) as well as the input name to use: `hillside(z)`.
+
+The second argument *always* looks like `domain(z = -4:5)`, but of course you need to substitute in your input name and the lower and upper bounds that define the graphics domain. These are formatted using a colon to separate the lower from the upper bound.
+
+You are welcome to place the whole command on one line. We've used multiple lines so that there is space for a `# comment` that describes the line. (You don't need to do this.)
+
+For each of the following item, put the appropriate command in the R chunk, verify that it works, and copy the command to the text-entry box. There will be one line in the text-entry box for each. Please keep them in order.
+
+a. Plot `osc()` using `t` as the input name with the graphics domain extending from zero to five.
+b. Plot `hill()` using `z` as the input name. The graphics domain should go from -3 to 3.
+c. Plot `log2()` using `fish` as the input name. The graphics domain is zero to three.
+d. Plot `osc() * hill()` using `x` as the input name. The graphics domain is -4 to 4. (Hint: The `x` will appear altogether *three* times in the tilde expression.)
+
+In the textbox, put your answers to each of (a) - (d) on a separate line.
+
+`r devoirs::devoirs_text("tsc-1-exlf")`
+
+
+
+:::
+ <!-- end of exr-titmouse-sit-chair -->

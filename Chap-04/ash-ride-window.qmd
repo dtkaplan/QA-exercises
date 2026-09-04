@@ -1,0 +1,18 @@
+<!--
+id: "ash-ride-window"
+created: "Wed Nov 12 13:04:12 2025"
+attribution: TBA
+status: "sketch"
+chapter: 4
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-ash-ride-window}
+Another simple value statement compares flights. Suppose location C is twice as far as B from A. The cost of providing the service A -> C will be higher. Common intuition often suggests that the ticket price for the A -> C flight will be about twice that of B -> A.
+
+:::
+ <!-- end of exr-ash-ride-window -->

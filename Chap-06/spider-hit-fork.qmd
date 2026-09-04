@@ -1,0 +1,27 @@
+<!--
+id: "spider-hit-fork"
+created: "Fri Jan 30 14:19:22 2026"
+attribution: DTK
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spider-hit-fork}
+
+The graph shows one of the core modeling functions but with *either* input scaling, output scaling, or none.
+
+```{r}
+#| echo: false
+slice_plot(osc(x/3)~ x, domain(x = -3:3)) |>
+  gf_theme(theme_minimal(base_size = 18))
+```
+
+`r devoirs::devoirs_set(id="shf-1-ese", choices = c("input scaling", "output scaling", "none"), correct = "input scaling")`
+
+
+:::
+ <!-- end of exr-spider-hit-fork -->

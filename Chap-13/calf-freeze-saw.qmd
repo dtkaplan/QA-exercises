@@ -1,0 +1,71 @@
+<!--
+id: "calf-freeze-saw"
+created: "Sun Oct 19 08:44:49 2025"
+attribution: DTK
+use: "Chapter 5 exercise"
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-calf-freeze-saw}
+Here are several quantities related to the function and economics of a solar power system. 
+
+```{r}
+#| echo: false
+#| label: C13-tcbnq
+set.seed(101)
+idn <- function(n) {
+  glue::glue("cfs-{n}-{paste0(sample(letters, 5), collapse='')}")
+}
+endo_exo_Q <- function(n=1, answer = "endogenous", type = c("endogenous", "exogenous")) {
+  devoirs::devoirsTF(
+    c(TRUE, FALSE)[which(answer == type)],
+    format = paste(type, collapse = " or "),
+    id = idn(n)
+  )
+}
+```
+
+For each of these system quantities, say whether the quantity is exogenous or endogenous. Keep in mind that the distinction is entirely about which quantities are connected to which. You will have to read through the whole list of system quantities to be able to say which are exogenous. Since you are not yet a solarphotaic engineer or financier, you'll have to use your best judgement about which quantities are connected as inputs to any given quantity. 
+
+i. latitude (degrees) of the site `r endo_exo_Q(n=1, "exogenous")`
+
+ii. electricity price (USD/kWh) at which you can sell the power generated.`r endo_exo_Q(n=2, "exogenous")`
+
+iii. average cloudiness (%) `r endo_exo_Q(n=3, "exogenous")`
+
+iv. interest rate (%) `r endo_exo_Q(n=4, "exogenous")`
+
+v. system cost (USD) `r endo_exo_Q(n=5, "endogenous")`
+
+vi. area (m^2^) of the solar panels `r endo_exo_Q(n=6, "exogenous")`
+
+vii. inclination (degrees) of the solar panels `r endo_exo_Q(n=7, "endogenous")`
+
+viii. instantaneous power maximum capacity (kW) `r endo_exo_Q(n=8, "endogenous")`
+
+ix. yearly energy production (MWh) `r endo_exo_Q(n=9, "endogenous")`
+
+x. return on investment (%) `r endo_exo_Q(n=1, "endogenous")`
+
+
+Perhaps there was one or more quantities that you weren't sure was related to the others. Identify one and write briefly about which possible input quantities you were ambivalent about and whence stems your ambivalence. Or, pick one of the quantities and explain which other quantities you regarded as an input.
+
+`r devoirs::devoirs_text("cfs-essay")`
+
+How many inputs must the function producing a quantity have in order to consider the quantity exogenous?
+
+```{mcq}
+#| label: cfs-exo
+#| inline: true
+1. 0 [correct]
+2. 1
+3. two or more
+4. no more than 1
+```
+:::
+ <!-- end of exr-calf-freeze-saw -->

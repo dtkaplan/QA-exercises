@@ -1,0 +1,26 @@
+<!--
+id: "cheetah-lend-coat"
+created: "Fri Jan 16 09:07:53 2026"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cheetah-lend-coat}
+Which core modeling functions have a negative rate of change whenever the input is zero or greater?
+
+
+`r devoirs::devoirsTF(TRUE, leed="recip()", id="clc-1-3se")`
+
+`r devoirs::devoirsTF(FALSE, leed="log2()", id="clc-2-se")`
+
+`r devoirs::devoirsTF(FALSE, leed="hill()", id="clc-3-dse")`
+
+`r devoirs::devoirsTF(TRUE, leed="hillside()", id="clc-4-y23")`
+
+
+:::
+ <!-- end of exr-cheetah-lend-coat -->

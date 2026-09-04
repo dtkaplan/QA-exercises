@@ -1,0 +1,25 @@
+<!--
+id: "spider-mean-bolt"
+created: "Thu Mar 12 07:58:14 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spider-mean-bolt}
+On a graph of a function, what geometric quantity is the *rate of change* of the function with respect to its input? What is the name of the *function* that outputs that rate for every input?
+
+```{mcq}
+#| label: smb-1-lse
+1. The rate of change is the *height* of the graph; the function that gives it is the *integral*.
+2. The rate of change is the *slope* of the graph at that input; the function that gives the slope at every input is the *derivative*. [correct]
+3. The rate of change is the *area* under the graph; the function is the *antiderivative*.
+4. The rate of change is the *intercept*; the function is the *marginal* function.
+```
+
+:::
+ <!-- end of exr-spider-mean-bolt -->

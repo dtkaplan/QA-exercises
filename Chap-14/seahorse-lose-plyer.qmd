@@ -1,0 +1,23 @@
+<!--
+id: "seahorse-lose-plyer"
+created: "Fri Jan 16 08:34:46 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seahorse-lose-plyer}
+An article in *The Economist* in January 2026 stated:
+
+> Since 2021, demand for electricity in India has increased by around 9% each year. It is set to more than double in the next decade. [Source](https://www.economist.com/asia/2026/01/14/to-power-up-growth-india-must-be-rewired)
+
+Assuming that the starting point is 2025 and that the growth continues at 9% per year, is it a fair statement that electricity demand will "more than double" in the next decade.
+
+Explain your reasoning, using the "`xf_to_def("Rule of 72")`."
+
+`r devoirs::devoirs_text("clp-1-3dld")`
+:::
+ <!-- end of exr-seahorse-lose-plyer -->

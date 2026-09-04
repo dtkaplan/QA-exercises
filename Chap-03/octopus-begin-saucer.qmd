@@ -1,0 +1,32 @@
+<!--
+id: "octopus-begin-saucer"
+created: "Tue Jul 29 16:31:02 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "activity"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-octopus-begin-saucer}
+The A4 string of a violin is roughly 33 cm long, typically has a lineal mass density in the range 0.0058 to 0.0075 grams per cm, and is tuned by setting the tension (pulling force) to an amount equivalent to suspending from the wire 11 to 14 pounds. [Source](https://knutsacoustics.com/files/Typical-string-properties.pdf) The goal of the tuning is a frequency of vibration of 440 Hertz (cycles per second). 
+
+These four quantities---length, mass density, tension, and frequency--- are related to one another. That is, you can calculate any one of them given the others. For instance, if we know the desired frequency $f$, length $L$, and lineal mass density $\mu$, the tension will be $$(2\,f\,L)^2\,\mu\ .$$ 
+
+Task: Find the tension (in pounds) for a string length of 33 cm, frequency of 440 Hz, and linear mass density of 0.0060 gm/cm. Show your work in numbers and units.
+
+Useful facts for this problem: 
+
+i. The unit Hz (Hertz) for frequency can also be written "per second."
+ii. 1 gm cm /s^2^ = 2.24808943 × 10^-6^ pounds force
+
+Step 1: Compute the dimension of $(2\,f\,L)^2\,\mu$ and confirm that it matches the dimension of force.
+
+Step 2. Carry out the multiplication of the specific values for $f$, $L$, and $\mu$.
+
+Step 3. Convert the result to pounds force.
+
+
+:::
+ <!-- end of exr-octopus-begin-saucer -->

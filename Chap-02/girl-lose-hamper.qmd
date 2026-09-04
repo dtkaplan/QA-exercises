@@ -1,0 +1,17 @@
+<!--
+id: "girl-lose-hamper"
+created: "Tue Oct  7 14:05:17 2025"
+attribution: TBA
+status: "sketch"
+chapter: 2
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-girl-lose-hamper}
+- luminous intensity (light) L as the last of the formal SI dimensions.
+:::
+ <!-- end of exr-girl-lose-hamper -->

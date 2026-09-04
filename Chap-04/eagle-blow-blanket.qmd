@@ -1,0 +1,26 @@
+<!--
+id: "eagle-blow-blanket"
+created: "Sat Aug 23 13:12:02 2025"
+attribution: TBA
+status: "sketch"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-blow-blanket}
+From the *Short Introduction to Demography*, reading questions:
+
+The author points out that world population was mostly steady over thousands of years. In this historical period, she points to a *doubling time* for population, that is, the time interval over which the population doubled in size. Then, near the end of the 18th century, population started to grow much more rapidly. After the early work of John Graunt, interest in demography grew rapidly. Why might interest in demography grow at about the same time as population increase was also growing. (Ans: When things are constant, there's no need to be concerned with the relationships among those things. But in a changing world, understanding the underlying relationships becomes more important.)
+
+Estimate how many people have ever lived from the population figures the author gives. Explain your estimate.
+
+`r devoirs::devoirs_text("RQ-demo-1")`
+
+According to the *Short Introduction*, who estimated that the mortality rate for men does not differ between age 20 and age 40?
+
+`r devoirs::devoirs_text("RQ-demo-2")`
+
+:::
+ <!-- end of exr-eagle-blow-blanket -->

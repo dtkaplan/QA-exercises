@@ -1,0 +1,41 @@
+<!--
+id: "turtle-sing-socks"
+created: "Fri Feb 20 08:22:25 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-turtle-sing-socks}
+```{r}
+#| echo: false
+#| label: C13-acynw
+vectorfield_plot(y ~ 2, x ~ 2-y , 
+                 domain(y = 0:5, x = 0:5),
+                 npts = 9,
+                 stretch = 0.6) |>
+  gf_theme(theme_minimal(base_size = 14)) |>
+  gf_refine(coord_fixed())
+```
+
+1. `r devoirsTF(FALSE, id="flow-tss-1-k3")` The y-component of the flow depends strongly on the value of x.
+
+::: {.callout-tip collapse=true}
+In fact, the flow arrows don't vary at all with x.
+:::
+
+2. `r devoirsTF(TRUE, id="flow-tss-2-ws")` The x-component of the flow depends strongly on the value of y.
+
+::: {.callout-tip collapse=true}
+The x-component of flow is sometimes up and sometimes down. Which it is depends on the value of y.
+:::
+
+3. `r devoirsTF(FALSE, id="flow-tss-3-8d")` The x-component of the flow depends strongly on the value of x.
+
+4. `r devoirsTF(FALSE, id="flow-tss-4-is")` The y-component of the flow depends strongly on the value of y.
+
+:::
+ <!-- end of exr-turtle-sing-socks -->

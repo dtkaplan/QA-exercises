@@ -1,0 +1,46 @@
+<!--
+id: "ash-talk-pen"
+created: "Mon Feb 23 17:15:39 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ash-talk-pen}
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| label: C14-dnajb
+F <- double
+f <- D(exp2(t) ~ t)
+
+slice_plot(F(x) ~ x, domain(x=-2:2)) |>
+  gf_theme(theme_minimal(base_size = 16))
+slice_plot(f(x) ~ x, domain(x = -2:2)) |>
+  gf_theme(theme_minimal(base_size = 16))
+```
+
+1. Which of the two functions has the shape of a core modeling function, left, right, or both? 
+
+`r devoirs::devoirs_set(c("left", "right", "both"), correct="both", id="atp-1-cls")`
+
+::: {.callout-tip collapse=true}
+Sorry. Remember that this core modeling function has output 1 when the input is 0.
+:::
+
+
+
+2. Which core modeling function is shown?
+
+`r devoirs::devoirs_set(core_modelings, core_modelings[7], id="atp-2-3d")`
+
+
+
+Note: This is the only core modeling function whose derivative has the same shape as the function itself. Or, said another way, this is the only core modeling function whose anti-derivative has the same shape as the function itself.
+
+
+:::
+ <!-- end of exr-ash-talk-pen -->

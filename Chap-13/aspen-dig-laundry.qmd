@@ -1,0 +1,31 @@
+<!--
+id: "aspen-dig-laundry"
+created: "Mon Nov  3 11:16:49 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-aspen-dig-laundry}
+For each of the pendulum pictures in @fig-pendulums-2, mark where you think the pendulum will be in one second. Remember that the length of the curved arrow corresponds to the velocity of the pendulum bob.
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: fig-pendulums-2
+#| layout-ncol: 2
+#| fig-cap: " "
+#| fig-subcap:
+#| - " "
+#| - " "
+source("_software/pendulum.R")
+draw_pendulum1(pi/5, 0.5)
+draw_pendulum1(-pi/5, 0.5)
+```
+:::
+ <!-- end of exr-aspen-dig-laundry -->

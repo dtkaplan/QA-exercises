@@ -1,0 +1,24 @@
+<!--
+id: "reptile-take-socks"
+created: "Fri Jan 30 16:46:57 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-reptile-take-socks}
+The function `hill()` ...
+
+```{mcq}
+#| label: d06-rts-qclw
+1. goes up from a baseline and then back down to the baseline [correct]
+2. repeats the same pattern over and over
+3. starts at a low value and gradually levels off at a higher value
+4. increases by the same factor for each unit increase in input
+```
+:::
+ <!-- end of exr-reptile-take-socks -->

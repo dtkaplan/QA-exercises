@@ -1,0 +1,17 @@
+<!--
+id: "reptile-speak-piano"
+created: "Tue Oct 14 17:43:28 2025"
+attribution: TBA
+status: "sketch"
+chapter: 4
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-reptile-speak-piano}
+Velocity as a rate of change of position w.r.t. time. Acceleration as a rate of change of velocity w.r.t. time. Velocity has dimension L/T. Acceleration has dimension (L/T)/T or {{< var dim.acceleration >}}
+:::
+ <!-- end of exr-reptile-speak-piano -->

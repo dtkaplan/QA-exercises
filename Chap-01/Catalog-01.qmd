@@ -1,0 +1,201 @@
+---
+title: "Chapter 01 Catalog"
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+<style>
+.theorem-title {
+  display: none;
+}
+
+.panel-tabset {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20%) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.panel-tabset > .nav-tabs {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-tabset > .tab-content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .panel-tabset {
+    display: block;
+  }
+
+  .panel-tabset > .nav-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  .panel-tabset > .nav-tabs .nav-link {
+    width: auto;
+  }
+}
+</style>
+{{< include ../exercise-header.qmd >}}
+
+::: {.callout-note collapse="true" title="Group: activities"}
+::: {.panel-tabset collapse=true}
+## frog-dig-pot
+
+
+> File: Chap-01/frog-dig-pot.qmd
+
+{{< include frog-dig-pot.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: discussion"}
+::: {.panel-tabset collapse=true}
+## hamster-hurt-lamp
+
+
+> File: Chap-01/hamster-hurt-lamp.qmd
+
+{{< include hamster-hurt-lamp.qmd >}}
+
+## mouse-cost-mattress
+
+
+> File: Chap-01/mouse-cost-mattress.qmd
+
+{{< include mouse-cost-mattress.qmd >}}
+
+## rabbit-hang-pan
+
+
+> File: Chap-01/rabbit-hang-pan.qmd
+> Status: null
+
+
+{{< include rabbit-hang-pan.qmd >}}
+
+## snail-stand-oven
+
+
+> File: Chap-01/snail-stand-oven.qmd
+> Status: ready-to-go
+
+
+{{< include snail-stand-oven.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: reading-questions"}
+::: {.panel-tabset collapse=true}
+## ant-catch-roof
+
+
+> File: Chap-01/ant-catch-roof.qmd
+> Status: draft
+
+
+{{< include ant-catch-roof.qmd >}}
+
+## giraffe-read-coat
+
+
+> File: Chap-01/giraffe-read-coat.qmd
+
+{{< include giraffe-read-coat.qmd >}}
+
+## monkey-drive-book
+
+
+> File: Chap-01/monkey-drive-book.qmd
+
+{{< include monkey-drive-book.qmd >}}
+
+## puppy-break-mattress
+
+
+> File: Chap-01/puppy-break-mattress.qmd
+
+{{< include puppy-break-mattress.qmd >}}
+
+## seahorse-enjoy-closet
+
+
+> File: Chap-01/seahorse-enjoy-closet.qmd
+
+{{< include seahorse-enjoy-closet.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: x_drafts"}
+::: {.panel-tabset collapse=true}
+## camel-leave-kitchen
+
+
+> File: Chap-01/camel-leave-kitchen.qmd
+> Status: sketch
+
+
+{{< include camel-leave-kitchen.qmd >}}
+
+## cheetah-cost-tv
+
+
+> File: Chap-01/cheetah-cost-tv.qmd
+> Status: sketch
+
+
+{{< include cheetah-cost-tv.qmd >}}
+
+## deer-break-bowl
+
+
+> File: Chap-01/deer-break-bowl.qmd
+> Status: sketch
+
+
+{{< include deer-break-bowl.qmd >}}
+
+## dingo-dig-suitcase
+
+
+> File: Chap-01/dingo-dig-suitcase.qmd
+> Status: sketch
+
+
+{{< include dingo-dig-suitcase.qmd >}}
+
+## eagle-seek-clock
+
+
+> File: Chap-01/eagle-seek-clock.qmd
+> Status: sketch
+
+
+{{< include eagle-seek-clock.qmd >}}
+
+## horse-enjoy-pants
+
+
+> File: Chap-01/horse-enjoy-pants.qmd
+> Status: sketch
+
+
+{{< include horse-enjoy-pants.qmd >}}
+
+:::
+:::
+

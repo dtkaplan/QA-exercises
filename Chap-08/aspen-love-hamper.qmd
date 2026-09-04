@@ -1,0 +1,18 @@
+<!--
+id: "aspen-love-hamper"
+created: "Mon Oct 27 09:47:55 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-aspen-love-hamper}
+
+Some of the tasks you worked on in high-school algebra were, formally, about finding values for coefficients in linear combinations. 
+YOU HAVE ALREADY SEEN THIS in specific, usually made-up contexts. Point-slope or point-point form for a line. The roots for a quadratic.
+:::
+ <!-- end of exr-aspen-love-hamper -->

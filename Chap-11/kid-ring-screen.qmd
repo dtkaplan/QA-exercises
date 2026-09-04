@@ -1,0 +1,66 @@
+<!--
+id: "kid-ring-screen"
+created: "Mon Nov  3 11:10:56 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-kid-ring-screen}
+The figure shows six different instantaneous configurations for a pendulum as it swings. The curved arrow shows the velocity of the bob. The length of the curved arrow is the velocity times one second.
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: fig-pendulums-6
+#| layout-ncol: 3
+#| fig-cap: " "
+#| fig-subcap:
+#| - " "
+#| - " "
+source("_software/pendulum.R")
+draw_pendulum1(pi/8, -0.2)
+draw_pendulum1(-pi/4, 0.05)
+draw_pendulum1(pi/7, -0.3)
+draw_pendulum1(-pi/6, 0.5)
+draw_pendulum1(pi/10, -0.1)
+draw_pendulum1(-pi/10, +1)
+```
+
+1. Which frame shows the pendulum where it is near to the topmost point on its swing.
+```{mcq}
+#| label: krs-topmost
+#| inline: true
+1. a
+2. b [correct]
+3. c
+4. d
+5. e
+6. f
+```
+
+2. For drawing purposes, @fig-pendulums6-state-space gives you an empty image of the state space for the pendulum.
+
+```{r}
+#| label: fig-pendulums6-state-space
+gf_blank(0 ~ 0) |>
+  gf_lims(y = c(-1,1)) |>
+  gf_labs(y = "velocity", x = (expression(paste(theta, " (deg)")))) |>
+  gf_refine(
+    scale_x_continuous(
+      limits = c(-100,100), 
+      breaks = c(-90,-60, -45, -30, -15, 0, 15, 30, 60, 45, 60, 90))) |> 
+  gf_theme(theme_minimal())
+```
+
+Your task: For each of the six pendulum pictures in `r xf("fig-pendulums-6")`, write the corresponding letter a-f in the right position in the state space. Imagine that the fastest velocity in `r xf("fig-pendulums-6")` is 1. Your answers can be approximate, but they should be correct order relative to one another.
+
+3. Return to `r xf("fig-pendulums6-state-space")`, adding in a vector showing the rate of change of state for each picture with respect to time. Hint: You can tell the rate of change of $\theta$ by referring to the arrows in `r xf("fig-pendulums-6")`. But for the rate of change with respect to $\theta$, you'll have to draw on your intuition about how a pendulum works. Your answers will necessarily be approximate, but make sure to get the *sign* right for each quantity.
+
+:::
+ <!-- end of exr-kid-ring-screen -->

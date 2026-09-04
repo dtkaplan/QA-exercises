@@ -1,0 +1,30 @@
+<!--
+id: "sheep-write-jacket"
+created: "Fri Jan 30 16:55:30 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-sheep-write-jacket}
+For the `log2()` function:
+
+a. What is the output when the input is 8?
+
+`r devoirs::devoirs_set(choices = c(2, 3, 4, 8, 16), correct = 3, id = "d06-swj-8")`
+
+b. What is the output when the input is 1?
+
+`r devoirs::devoirs_set(choices = c(-1, 0, 1, 2), correct = 0, id = "d06-swj-1")`
+
+c. What input to `log2()` gives an output of -2?
+
+`r devoirs::devoirs_set(choices = c(-4, -2, 0.25, 0.5), correct = 0.25, id = "d06-swj-neg2")`
+
+
+:::
+ <!-- end of exr-sheep-write-jacket -->

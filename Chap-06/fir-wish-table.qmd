@@ -1,0 +1,80 @@
+<!--
+id: "fir-wish-table"
+created: "Fri Jan 16 08:29:31 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fir-wish-table}
+To *double* a quantity means to multiply it by 2. *Trebling* means multiplying by 3. And you've probably heard of "quadrupling," which is multiplication by 4.
+
+If you repeatedly double a quantity, it will eventually get quite big. For instance, @tbl-double-many-times shows growth from a starting quantity of 1 as it is successively doubled.
+
+::: {#tbl-double-many-times}
+Times doubled | Quantity | Exponent notation
+--------:|--------:|---------
+0 | 1 | 2^0^
+1 | 2 | 2^1^
+2 | 4 | 2^2^
+3 | 8 | 2^3^
+4 | 16 | 2^4^
+5 | 32 | 2^5^
+6 | 64 | 2^6^
+7 | 128 | 2^7^
+8 | 256 | 2^8^
+9 | 512 | 2^9^
+10 | 1024 | 2^10^ 
+$\vdots$ | $\vdots$ |
+20 | 1,048,576 | 2^20^ 
+$\vdots$ | $\vdots$ |
+30 | 1,073,741,824 | 2^30^
+$\vdots$ | $\vdots$ |
+
+Successive doublings from a starting point of 1.
+:::
+
+Now imagine a situation where there is a quantity that doubles every day. For instance, this might be the amount of algae in a lake during an "algal bloom." If the lake had 1 gm of algae on day zero, it would have 2 gm on day one, 4 gm on day two, and so on. By day 10, the biomass of the algal bloom would be 1024 gm, that is, just over 1 kg. Wait another 10 days, there will be 1,048,567 gm, that is, more than 1000 kg. This pattern of growth is called *exponential growth*. 
+
+Why *exponential* growth? In the third column of @tbl-2-exponential the quantities are written using exponents. For instance, in 2^6^, the exponent is 6. In terms of the algal bloom, the number 2^3^ is the biomass of algae on day 3. Similarly, 2^5^ is the biomass on day 5. In this exponential growth, the exponent increases steadily by 1 each day. But the biomass is 2^exponent^ and grows quickly and at an every-growing rate.
+
+1. What is the rate of change of biomass with respect to time, looking at time 5 to 6? Remember, the *change in biomass* will be on top in the ratio, the *change in time* (we asked about 1 day).
+
+```{mcq}
+#| label: fwt-1-2kdw
+1. 20 gm per day
+2. 32 gm per day [correct]
+3. 65 gm per day
+4. 128 gm per day
+5. 256 gm per day
+```
+
+2. What is the rate of change of biomass with respect to time over the interval day 8 to 9?
+
+```{mcq}
+#| label: fwt-2-2kdw
+1. 20 gm per day
+2. 32 gm per day 
+3. 65 gm per day
+4. 128 gm per day
+5. 256 gm per day [correct]
+```
+
+It's very convenient for the purposes of this problem that the algal biomass doubles with every new day. In reality, however, the *doubling time* would depend on things like the temperature or the oxygen or mineral content of the water.
+
+Suppose that the doubling time for algae is 3.5 days. How many days would it take for the biomass to reach 1024 gm (that is, about 1 kg)?
+
+```{mcq}
+#| label: fwt-3-3lse
+#| inline: true
+1. 28 days
+2. 35 days [correct hint: 3.5 times as long as it took to grow to 1 kg when the doubling time was 1 day.]
+3. 64 days
+4. 72 days
+```
+
+:::
+ <!-- end of exr-fir-wish-table -->

@@ -1,0 +1,41 @@
+project:
+  output-dir: docs
+  type: website
+  render:
+    - Chap-01/*-*-*.qmd
+    - Chap-02/*-*-*.qmd
+    - Chap-03/*-*-*.qmd
+    - Chap-01/Catalog-01.qmd
+    - Chap-02/Catalog-02.qmd
+    - Chap-03/Catalog-03.qmd
+    - Chap-04/Catalog-04.qmd
+    - Chap-05/Catalog-05.qmd
+    - Chap-06/Catalog-06.qmd
+  
+website: 
+  title: "Quantitative Argumentation"
+  reader-mode: true
+
+format:
+  live-html:
+    theme: litera
+    css: styles.css
+    toc: true
+    cell-options:
+      lines: 3
+      render-df: gt
+    number-sections: true
+    number-depth: 2
+    mainfont: "Atkinson Hyperlegible"
+    
+  
+engine: knitr
+
+# Enable webR
+webr:
+  channel-type: 'automatic'
+  repos: ["https://dtkaplan.r-universe.dev"]
+  packages: ['mosaicCalc', 'ggplot2', 'ggformula', "dplyr"]
+filters:
+  - shinylive
+

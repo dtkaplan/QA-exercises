@@ -1,0 +1,75 @@
+<!--
+id: "avoid-get-laundry"
+created: "Thu Oct  9 08:44:48 2025"
+attribution: DTK
+status: "ready-to-use"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-avoid-get-laundry}
+Note: The purpose of this exercise is to help you develop a better understanding of conversion factors. In practical use, you would look up a conversion factor rather than calculating it from the sort of facts presented here.
+
+All of the following quantities are flavors of one.
+
+a. 5.0292 meters per rod
+b. 201.168 meters per furlong
+c. 0.0254 meters per inch
+d. 20.1168 meters per chain
+e. 1852 meters per *nautical* mile
+f. 1609.34 meters per mile (statute mile)
+g. 4046.86 square meters per acre
+h. 60 seconds per minute
+i. 3600 seconds per hour
+j. 86400 seconds per day
+k. 31,557,600 seconds per year (Julian year)
+
+You are to construct additional flavors of one that are conversion factors:
+
+EXAMPLE: Convert nautical miles to inches.
+
+> Dividing or multiplying any flavor of one by any others gives as a result still another flavor of one. Flavors of one are conversion factors from the unit on the bottom (denominator) to the unit on the top (numerator). For nautical miles to inches, we want a flavor of one with nautical miles on the bottom and inches on the top. Scanning the list above we identify (c) and (e) as our raw materials. It takes a moment's thought to figure out whether to multiply or divide here. Division will cancel out the meters leaving the only units as nautical miles and inches. We want nautical miles on the top so divide (e) by (c), giving 72,913.39 inches per nautical mile. As a sanity check on this result, remember that a nautical mile is much longer than an inch, so it takes many inches to constitute a nautical mile.
+
+1. Convert chains to inches. [Divide (d) by (c).]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Rates-exercises-6Th"}
+
+2. Convert nautical miles to furlongs.[Divide (e) by (b).]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Rates-exercises-6nd"}
+
+3. Convert acres to rod-furlongs. [1 acre is 4 rod-furlongs]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Rates-exercises-2CL"}
+
+4. (Hard) Convert miles per hour to meters per second.
+
+<!-- Opening answer: Rates-exercises-8JB -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+On top, we need to convert miles to meters. (f) is the appropriate choice. On bottom, we need to convert hours to seconds, which is (i). So divide (f) by (i) to get the conversion factor: 0.447 mile/hour per meter/sec. Sanity check: 1 mile in an hour is about 1600 meters in an hour which is in turn about 1600/3600 meters in a second.
+
+[..id..]{data-tooltip="Ans id: Rates-exercises-8JB"}
+:::
+<!-- closing answer Rates-exercises-8JB -->
+
+6. (Hard) Convert inches per second to miles per year.
+
+<!-- Opening answer: Rates-exercises-1cl -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+The conversion factor needs miles/year on top and inches/second on bottom. On bottom, inches/second. This works out to a flavor of one with numerator mile-sec and denominator inch-year or, mile/inch divided by second/year.
+
+- (Top): mile/inch is (f)/(c), that is, 0.00001578287 miles/inch
+- (Bottom): year/second is 1/(k), that is, 0.00000003169 year/sec.
+
+Dividing (Top) by (Bottom) gives 498.069 miles/year per inches/sec.
+
+Sanity check. At 1 inch/sec, you would travel 31,557,600 inches in a year. There are 5280 feet $\times$ 12 inches/foot in a mile, that is, about  60,000 inches in a mile. 32 million inches / 60,000 inch/mile gives about 500 miles.
+
+[..id..]{data-tooltip="Ans id: Rates-exercises-1cl"}
+:::
+<!-- closing answer Rates-exercises-1cl -->
+
+
+:::
+ <!-- end of exr-avoid-get-laundry -->

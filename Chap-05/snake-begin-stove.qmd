@@ -1,0 +1,20 @@
+<!--
+id: "snake-begin-stove"
+created: "Wed Dec 31 14:08:03 2025"
+attribution: DTK
+use: "Chapter 5 exercises"
+status: "sketch"
+chapter: 5
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-snake-begin-stove}
+
+YOU WERE HERE.
+
+Introduce contour plots and ask questions about features in several doodle_fun functions.
+
+:::
+ <!-- end of exr-snake-begin-stove -->

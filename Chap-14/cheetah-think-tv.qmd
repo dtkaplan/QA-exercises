@@ -1,0 +1,136 @@
+<!--
+id: "cheetah-think-tv"
+created: "Fri Dec 19 17:11:29 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-cheetah-think-tv}
+Using the interactive R chunk, make a plot of the function `exp2(x) * osc()` over the domain -5 to 5. (The `npts=500` just helps to make the graph look smooth.)
+
+```{webr}
+#| caption: R command chunk
+slice_plot( ~  , dom(   ), npts=500)
+```
+
+1. What is the range covered by the vertical axis? (Choose the closest answer.)
+
+```{mcq}
+#| label: ctt-1-cslw
+1. -5 to 5
+2. 0 to 10 [hint: That's the graphics domain. The vertical axis is for the function output.]
+3. 0 to 1000
+4. -500 to 500 [correct]
+```
+
+-----
+
+2. The following plot involves the multiplication of two core modeling functions. Which two?
+```{r}
+#| echo: false
+#| label: C14-eepnl
+slice_plot(hillside(t)*osc(t) ~ t, domain(t = -5:5), npts = 500)
+```
+
+```{mcq}
+#| label: ctt-2-cksw
+1. osc() and hill()
+2. osc() and exp2()
+3. osc() and hillside() [correct]
+4. osc() and same()
+```
+
+-----
+
+3. Consider the three core modeling functions recip(), exp2(), log2(). For each of the settings below, say which is the better model.
+
+3a. The input is time since your last purchase, the output is the amount of your credit card debt if you do nothing to pay off the outstanding debt.
+    
+```{mcq}
+#| label: ctt-3a-sje
+#| inline: true
+1. recip()
+2. exp2() [correct]
+3. log2()
+```
+  
+-----
+
+3b. The input is the amount of time you spend procrastinating, the output is the amount of work you get done.
+    
+```{mcq}
+#| label: ctt-3b-stwe
+#| inline: true
+1. recip() [correct]
+2. exp2()
+3. log2()
+```
+    
+-----
+
+3c. The input is the amount of time you spend preening for a date, the output is how good you look.
+    
+```{mcq}
+#| label: ctt-3c-ews3
+#| inline: true
+1. recip()
+2. exp2()
+3. log2() [correct]
+```
+
+-----
+
+d. The input is the number of people you share an apartment with, the output is your share of the rent on the apartment.
+    
+```{mcq}
+#| label: ctt-3d-eye2
+#| inline: true
+1. recip() [correct]
+2. exp2()
+3. log2()
+```    
+
+-----
+
+e. The input is driving speed, the output is the time taken to get to your destination (assuming no problems with the car).
+
+```{mcq}
+#| label: ctt-3e-tey
+#| inline: true
+1. recip() [correct]
+2. exp2()
+3. log2() 
+```        
+
+-----
+
+f. The input is the number of weeks you unintentionally left a piece of cheese under your bed, the output is the amount of mold on the cheese.
+    
+```{mcq}
+#| label: ctt-3f-93ue
+#| inline: true
+1. recip() 
+2. exp2() [correct]
+3. log2() 
+```    
+
+-----
+
+g. The input is the amount of time you spend watching Netflix the day before an exam, the output is the your score on the exam.
+    
+```{mcq}
+#| label: ctt-3g-iewe
+#| inline: true
+1. recip() [correct]
+2. exp2() 
+3. log2() 
+```    
+
+:::
+ <!-- end of exr-cheetah-think-tv -->

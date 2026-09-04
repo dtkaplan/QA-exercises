@@ -1,0 +1,26 @@
+<!--
+id: "fawn-draw-radio"
+created: "Tue Feb 24 12:31:03 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fawn-draw-radio}
+Most people have a tangible sense of the distinction between *velocity* and *acceleration*. This distinction is illuminated by the different dimensions of the quantites, for example, miles per hour for velocity and, for acceleration, meters per second-squared.
+
+Translate the units given in the previous paragraph into *dimensions* for velocity and acceleration. Then say which of these is true of the relationship between acceleration and velocity.
+
+```{mcq}
+#| label: fdr-1-b3a
+1. Velocity is proportional to acceleration.
+2. Velocity is the derivative of acceleration with respect to time.
+3. Velocity is the accumulation of acceleration with respect to time. [correct]
+4. Velocity and acceleration have unrelated dimensions.
+```
+
+:::
+ <!-- end of exr-fawn-draw-radio -->

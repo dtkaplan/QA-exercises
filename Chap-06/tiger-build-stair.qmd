@@ -1,0 +1,51 @@
+<!--
+id: "tiger-build-stair"
+created: "Thu Oct 23 15:33:39 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-tiger-build-stair}
+`r xf("sec-uncertainty")` described how the gaussian function is often used as a probability distribution function to represent an interval statement. But it might happen that a modeler prefers a distribution that is closer to uniform, like that in @fig-tbs-1dks(b). 
+
+1. Build a custom function that looks like @fig-tbs-1dks(b). As a hint, here is a riddle: How do you build a *hill* out of two hillsides? 
+
+
+```{r}
+#| label: fig-tbs-1dks
+#| echo: false
+#| layout-ncol: 2
+#| fig-cap: "Two possible relative probability functions to encode the idea of [5 to 15]"
+#| fig-subcap:
+#| - Normal distribution
+#| - Custom distribution
+slice_plot(dnorm(val, mean = 10, sd=2.5) ~ val, domain(val=0:20))
+slice_plot(pnorm(val - 5) - pnorm(val - 15) ~ val, domain(val=0:20))
+```
+
+1. Using linear combination of two functions, build a custom function that looks like @fig-tbs-1dks(b). As a hint, here is a riddle: How do you build a *hill* out of two hillsides? We've scaffolded the problem: you just have to find appropriate values for the `???` in the input scaling, and perhaps change the sign on one of the coefficients of the linear combination.
+
+```{webr}
+myfun <- function(val) {
+  hillside(val - ???) + hillside(val - ???)
+}
+slice_plot(myfun(val) ~ val, domain(val = 0:20))
+```
+
+Copy your function definition here.
+
+`r devoirs::devoirs_text("tbs-1lsxe")`
+
+2. The hillside() function has a parameter `sd` that governs the speed of the transition from zero to one. Modify your function to make the output look more like a uniform distribution running from 5 to 15.
+
+Copy your new function definition here.
+
+`r devoirs::devoirs_text("tbs-2-ekkc")`
+
+
+:::
+ <!-- end of exr-tiger-build-stair -->

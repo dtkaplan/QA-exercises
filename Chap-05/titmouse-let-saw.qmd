@@ -1,0 +1,68 @@
+<!--
+id: "titmouse-let-saw"
+created: "Sun Nov 30 13:50:19 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+::: {#exr-titmouse-let-saw}
+
+`r xf("fig-gdp-mortality2")` displays child mortality versus gross domestic product (GDP) on a country-by-country basis. Child mortality is operationalized as the number of children who die between birth and their fifth birthday. It is a "rate" because the number given is a ratio of the number of deaths in this group to the total number of children in this group, but is given in units of "deaths per 1000 children." That is, the ratio is dimensionless with dimension C C^-1^ = [1], (Strictly speaking, the rate should be called "Under-five mortality.")
+
+GDP is often presented as the value of goods and services produced by a country in one year. The quantity shown here is also a rate, described in the label of the graph as "GDP per capita." The dimension of the GDP is W T^-1^ C^-1^. The operationalization of GDP is defined in a way that makes it relatively easy to measure from government and commercial records. All goods and services for which money is exchanged are included. No goods and services for which money is not exchanged are included. Thus, GDP ignores the value provided by, for instance, home child care and home meal preparation. A country which switched from home-cooked meals to fast food would see a sharp *increase* in GDP but, perhaps, a decrease in nutrition. Paid work need not be productive to be included in GDP. No adjustment is made for losses due to accidents, disasters, or depreciation of buildings and other capital.
+
+Another factor not included in GDP is the price level in each country. Price levels vary from country to country and also from year to year.  In `r xf("fig-gdp-mortality2")`, not only is a comparison made between countries, but also between years. GDP numbers used for international or inter-year comparison are often, as here, adjusted for the "price level" in each country in each year. The price level is determined by what it costs to buy a "market basket" of goods. And that price level varies over the years, a process we call "inflation."
+
+The GDP per capita presented in `r xf("fig-gdp-mortality2")` is adjusted for price level. The adjustment is often referred to as PPP, short for purchasing power parity. The units are 2011 "International Dollars," a hypothetical currency for comparison between countries. 
+
+
+
+::: {#fig-gdp-mortality2}
+```{r}
+#| warning: false
+#| message: false
+#| label: C05-emxra
+#| echo: false
+library(dplyr)
+library(ggiraph)
+library(LSTbook)
+library(ggformula)
+csvname <- "../www/child-mortality-gdp-per-capita.csv"
+
+raw <- readr::read_csv(csvname)
+
+raw |> select(Entity, Year, `Child mortality rate`, `GDP per capita`) |>
+  filter(Year %in% c(1960,2020)) |>
+  mutate(year = as.factor(Year)) -> goo
+
+goo |> gf_point_interactive(`Child mortality rate` ~ `GDP per capita`,
+                            color = ~ year, alpha = 0.6,
+                            tooltip = ~ glue::glue("{Entity} {Year}<br>GDP {signif(`GDP per capita`, 3)}<br>Mortality  {round(`Child mortality rate`,1)}")) |>
+  gf_labs(y = "Child mortality rate (per 1000)", x = "GDP per capita (International Dollars)") |>
+  gf_girafe()
+
+
+# gf_refine(scale_x_log10(), scale_y_log10())
+```
+
+Child mortality (deaths per 1000) versus GDP for 1960 and 2020. Source: Bolt and van Zanden – Maddison Project Database 2023 – with minor processing by [Our World in Data].
+:::
+
+1. Find two countries (in the same year) that have almost the same GDP but very different mortality rates.
+
+`r devoirs::devoirs_text("tls-23-1")`
+
+2. Find two countries (in the same year) that have almost the same mortality, but very different GDPs.
+
+`r devoirs::devoirs_text("tls-23-2")`
+
+3. Describe the overall relationship between GDP and child mortality, as best you can discern from these data.
+
+`r devoirs::devoirs_text("tls-23-3")`
+
+
+:::
+ <!-- end of exr-titmouse-let-saw -->

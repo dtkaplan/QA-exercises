@@ -1,0 +1,23 @@
+<!--
+id: "goldfish-jump-scarf"
+created: "Thu Aug 20 13:36:01 2026"
+attribution: DTK
+use: magnitude chapter, wider discussion point
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-goldfish-jump-scarf}
+With reference to the log graphics in the Magnitudes chapter.
+
+The question is, how to do it? Understanding which dimensions of the situation contribute to low mortality, and which do not, can help us figure out what to do.
+
+Undoubtedly, environmental and ecological conditions contribute to child mortality, such as the presence of malaria or parasitic worms or other sanitary conditions. Social conditions such as a lack of educated health-care providers likely also have an impact. And nutrition deficiencies, displacements from war, and many others. Operationalizing these dimensions into appropriate quantities presents a challenge, not least because many nations lack reliable data-gathering institutions.
+
+A major motivation for developing data-collection institutions in a country is the collection of taxes and the regulation of trade. This means that economic data is more uniformly available. One operationalization of the economic dimensions of a country is called the *Gross Domestic Product*. This has a technical definition and isn't necessarily an accurate indication of a country's entire productive activity, especially in the important non-monetary sector, but it is readily available on a country-by-country basis. The causality of the relationship between GDP and health statistics is potentially complex. For instance, war and malaria lower a country's GDP but also directly impact health.
+
+:::
+ <!-- end of exr-goldfish-jump-scarf -->

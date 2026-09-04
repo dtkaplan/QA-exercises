@@ -1,0 +1,29 @@
+<!--
+id: "ape-teach-spoon"
+created: "Thu Jan 22 10:11:23 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 8
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ape-teach-spoon}
+Consider a function `Total_Cost(Units, Unit_Price)`. You create two slices of this function to understand the behavior:
+
+- Slice A: You hold `Unit_Price` constant at $10 and vary `Units` from 1 to 100.
+- Slice B: You hold `Units` constant at 100 and vary `Unit_Price` from $10 to $1.
+
+What is the geometric shape of the slice plots in Slice A and Slice B?
+
+```{mcq}
+#| label: ats-1-clws
+a. Slice A is curved; Slice B is curved. [hint: Sorry. Focus on Slice A to see why. The output of the function along this slice will be $10 times Units. This is just the same() function with the output scaled by $10. The same() function is not curved.]
+b. Slice A is linear; Slice B is linear. [correct]
+c. Slice A is linear; Slice B is horizontal. [hint: A horizontal function means the output is constant regardless of the value of the input. But in slice B the output will vary from $1000 to $100.]
+d. Slice A is vertical; Slice B is linear. [hint: But in Slice A you are varying Units when making the slice plot. The total cost will be Units x 10.]
+```
+
+:::
+ <!-- end of exr-ape-teach-spoon -->

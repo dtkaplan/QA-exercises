@@ -1,0 +1,31 @@
+<!--
+id: "beech-bid-plate"
+created: "Wed Apr 22 08:35:50 2026"
+attribution: TBA
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-bid-plate}
+The exponents on each element of a dimension, say L T^-1^, must always be integers, that is $\ldots, -2, -1, 0, 1, 2, 3, \ldots$.
+
+1. Multiplying or dividing two quantities creates a quantity with a dimension that is the product or quotient of the two quantities, respectively. For instance, dividing L T^-1^ by T gives L T^-2^. Explain briefly why such multiplication or division of quantities must always produce a dimension expression where all the exponents are integers.
+
+`r devoirs::devoirs_text("bbp-3kd-1")`
+
+In contrast, taking a square root (or any non-integer power) does not necessarily produce integer exponents for the element of the dimension. For instance, $\sqrt{L/T}$ produces L^1/2^ T^-1/2^. For each of the following, say whether the dimension is legitimate.
+
+`r devoirs::devoirsTF(leed = "2. [square root of length]", id = "bbp-723-2", correct = FALSE, format = "Legitimate or Not")`
+
+`r devoirs::devoirsTF(leed = "3. [square root of velocity]", id = "bbp-723-3", correct = FALSE, format = "Legitimate or Not")`
+
+`r devoirs::devoirsTF(leed = "4. [square root of energy]", id = "bbp-723-4", correct = FALSE, format = "Legitimate or Not")`
+
+`r devoirs::devoirsTF(leed = "5. [square root of (energy/mass)]", id = "bbp-723-5", correct = TRUE, format = "Legitimate or Not")`
+
+
+:::
+ <!-- end of exr-beech-bid-plate -->

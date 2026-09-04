@@ -1,0 +1,26 @@
+<!--
+id: "bee-light-kayak"
+created: "Fri Jan 30 16:48:59 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bee-light-kayak}
+Which core modeling function would best describe the adoption of a new technology (few users at first, rapid growth, then leveling off as the market saturates)?
+
+```{mcq}
+#| label: d06-blk-73
+#| inline: true
+1. hill()
+2. hillside() [correct]
+3. osc()
+4. exp2()
+```
+
+:::
+ <!-- end of exr-bee-light-kayak -->

@@ -1,0 +1,20 @@
+<!--
+id: "wolf-choose-stove"
+created: "Tue Sep 30 12:26:48 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-wolf-choose-stove}
+Referring to `r xf("fig-SIR-model-rule1")`, 
+why is there no place where infectives are growing and susceptibles aren't decreasing? 
+
+`r devoirs::devoirs_text("wcs-flow")`
+
+[Because every new infective corresponds to one fewer susceptible.]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: wcs-9EG"}
+:::
+ <!-- end of exr-wolf-choose-stove -->

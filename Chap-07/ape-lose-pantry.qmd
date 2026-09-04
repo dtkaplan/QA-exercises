@@ -1,0 +1,21 @@
+<!--
+id: "ape-lose-pantry"
+created: "Sat Aug 29 10:18:21 2026"
+attribution: DTK
+uses: "discussion topic: oil production example"
+status: "draft"
+chapter: 7
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ape-lose-pantry}
+Pick up on oil production after 1975. Does `exp2()` seem like a good model. How about `same()` or `flat()`? Obviously the production levels don't match the year numerically.
+
+Look at the deviations between the exponential model and the data. Sometimes the data is below the model, sometimes above. Are there historical events (the Great Depression) associated with the data falling below the model. 
+
+A common use for models is to point out deviations from an otherwise well matching function 
+
+:::
+ <!-- end of exr-ape-lose-pantry -->

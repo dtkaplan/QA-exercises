@@ -1,0 +1,107 @@
+<!--
+id: "seahorse-bathe-knife"
+created: "Sun Jul 27 16:37:05 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seahorse-bathe-knife}
+The following is from the *Atlantic* magazine article, "Science Is Winning the Tour de France" (by Matt Seaton, July 25, 2025) 
+
+> The gold standard of cycling performance---which boils down to a rider’s ability to push against the wind and go uphill fast---is a high power-to-weight ratio, given in watts per kilogram. The benchmark figure is how many watts per kilo a cyclist can sustain for a one-hour effort. Every rider now has a power meter fitted to their bike, so they know their numbers in a constant, real-time way (together with heart rate, speed, and other measurements).
+
+The article describes the then-current leader in the Tour de France as having a power-to-weight ratio of seven watts per kilogram.
+
+1. If this rider weighs 70 kg, how many watts can he generate?
+
+```{mcq}
+#| label: sbk-1-vsw
+#| inline: true
+1. 49 watts
+2. 70 watts
+3. 490 watts [correct]
+4. 700 watts
+```
+
+
+2. Look up the conversion factor from watts to horsepower. How many horsepower is the rider generating? 
+
+```{mcq}
+#| label: sbk-2-ie2d
+#| inline: true
+1. 0.066 hp
+2. 0.660 hp [correct]
+3. 6.60 hp 
+4. 66.0 hp
+```
+
+3. A horse weighing 500 kg can generate one horsepower while walking. How does the horse's power efficiency per weight compare to the champion bike rider.
+
+```{mcq}
+#| label: sbk-3-r7f
+1. Horse 7 W/kg versus human 1.4 W/kg
+2. Human 7 W/kg versus horse 1.4 W/kg [correct]
+3. Human 7 W/kg versus horse 2.8 W/kg
+4. Horse 70 W/kg versus human 280 W/kg
+```
+
+4. There is no conversion factor from watts to calories. Why not? 
+
+```{mcq}
+#| label: sbk-4-ri3
+1. One is metric units, the other is "traditional" units. 
+2. You can't compare light-bulbs to food!
+3. They have different dimensions. [correct]
+4. That's wrong. There is a conversion factor.
+```
+
+
+5. Look up the conversion factor from watt-seconds to kilo-calories (kcal (or "Cal"), the relevant unit when looking at diet). How many kcal does the rider produce when biking for one hour at 7 w/kg?
+
+```{mcq}
+#| label: sbk-5-nsl2
+#| inline: true
+1. 211 kcal
+2. 422 kcal [correct]
+3. 633 kcal
+4. 844 kcal
+5. 1688 kcal
+```
+
+[1 watt-second is 0.000239006 kcal. In an hour, the rider generates 3600 s times 70 kg times 7 w/kg = 422 kcal ]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: sbk-1Qy"}
+
+6. It's estimated that a person's efficiency when converting dietary calories to work/movement calories is about 25%. In an hour of biking at 7 w/kg, how many dietary calories does a 70-kg rider consume?
+
+```{mcq}
+#| label: sbk-6-fjfk
+#| inline: true
+1. 211 kcal
+2. 422 kcal
+3. 633 kcal
+4. 844 kcal
+5. 1688 kcal [correct]
+```
+
+7. An "average" adult walking at 2.5 mi/hr is said to use about 150 watts of power. For this hypothetical adult, how much energy is consumed in a 1-hour walk?  
+
+```{mcq}
+#| label: sbk-7-fjfk
+#| inline: true
+1. 130 Cal [correct]
+2. 260 Cal
+3. 1.5 Wh
+3. 15 Wh
+```
+
+8. In the exercise/diet literature it's said that walking a mile consumes about 100 kcal. 
+
+`r devoirs::devoirsTF(correct = TRUE, id="sbk-8-ywr")` This is (roughly) consistent with the 150 watts of power claimed when waking at 2.5 mi/hr.
+
+
+
+:::
+ <!-- end of exr-seahorse-bathe-knife -->

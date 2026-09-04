@@ -1,0 +1,35 @@
+<!--
+id: "titmouse-hide-clock"
+created: "Sun Dec 28 14:06:52 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-titmouse-hide-clock}
+1. What units do you habitually use to measure body weight? 
+
+2. In your 
+preferred unit, how many digits (before the decimal point)correspond to a very small person?
+
+3. How many to a very large person? 
+
+4. Do you need a decimal point for everyday precision?
+
+```{r echo=FALSE}
+default <- "Habitual units:
+Very small person:
+
+Very large person:
+
+Need decimal point?:
+"
+```
+
+`r devoirs::devoirs_text("RQ-mag-weight", contents=default, rows=6)`
+
+:::
+ <!-- end of exr-titmouse-hide-clock -->

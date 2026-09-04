@@ -1,0 +1,89 @@
+<!--
+id: "pollen-cut-lamp"
+created: "Wed Oct 22 12:21:31 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pollen-cut-lamp}
+
+The *Federalist Papers* is a collection of 85 essays written weekly from the end of 1787 through 1788. Authored by James Madison, Alexander Hamilton, and John Jay, the essays presented a case in favor of the new Constitution proposed to replace the Articles of Confederation originally adopted during the revolutionary war. 
+
+The essays were all published under a pseudonym, Publius. In later years, however, Madison, Hamilton, and Jay claimed the essays they wrote. Sometimes the claims overlapped because a essay was authored jointly. Other times, the overlaps might the result of a mistake or due to editing by another author.
+
+In the early 1900s, historians tried to identify the true author of the disputed papers. This became the subject of a famous project in the 1950s by renowned statistician Fred Mosteller and co-workers.
+
+Computers having improved considerably since the 1950s, I undertook a few hour project to reproduce Mosteller's work. 
+
+Since the different authors covered different domains of the Constitution, Mosteller and his team looked for non-contextural words used frequently by one author but not so often by the others. Such words include "upon," "whilst," and "while." We might call these "discriminating words" since they discriminate (in part) between which author wrote each essay.
+
+Looking at the non-disputed papers, I calculated separately for each author the probability that a randomly selected word would match "upon," "whilst," or "while." In essence, that probability is a likelihood. For instance, under the hypothesis that Madison wrote an essay, the word "whilst" has a probability of 0.000294. 
+
+The table gives, for the disputed essays, those words that appeared and the likelihood of the word under each of the two hypotheses, Hamilton vs Madison.
+
+
+
+word | essay | count | favors | HAMILTON  | MADISON | ratio
+-----|-------|-------|--------|-----------|---------|-------
+whilst | XLIX       | 1 | madison  | 0.00000875 | 0.000294  |
+upon   | L          | 1 | hamilton | 0.00331    | 0.000171  |
+whilst | LI         | 2 | madison  | 0.00000875 | 0.000294  |
+whilst | LIII       | 1 | madison  | 0.00000875 | 0.000294  |
+upon   | LIV        | 2 | hamilton | 0.00331    | 0.000171  |
+whilst | LVI        | 1 | madison  | 0.00000875 | 0.000294  |
+whilst | LVII       | 3 | madison  | 0.00000875 | 0.000294  |
+whilst | LXIII      | 1 | madison  | 0.00000875 | 0.000294  |
+
+1. For each of the disputed essays calculate the likelihood ratio and translate it into the verbal scale for strength of evidence.
+
+`r devoirs::devoirs_text("pcl-1-individual")`
+
+Although the table attributes two of the essays to Hamilton, according to the internet consensus among historians is that Madison wrote all of the disputed essays, although Hamilton might have had a hand in editing them.
+
+2. Calculate the likelihood ratio across all of the disputed papers by multiplying the individual ratios together.  Give the number and translate this into the verbal equivalent for strength of evidence.
+
+`r devoirs::devoirs_text("pcl-2-all")`
+
+3. Since Hamilton wrote roughly twice as many essays as Madison, a reasonable prior probability for each essay is 2 to 1 in favor of Hamilton. Use this to calculate the prior probability for Madison having written all of the essays. Then, convert that prior probability into odds form and multiply it by the likelihood ratio from (2) to get the posterior odds that Madison wrote all the disputed essays. Finally, convert the posterior odds into a posterior probability that Madison wrote all the disputed essays.
+
+`r devoirs::devoirs_text("pcl-3-posterior")`
+
+
+
+:::
+ <!-- end of exr-pollen-cut-lamp -->
+ 
+ <!-- Reading Megrayne: "Who wrote the Federalist?"
+
+Raw text of the Federalist Papers in www/Federalist-raw.txt. 
+
+Marker words: 
+
+- upon ---Hamilton
+- enough ---Hamilton
+- while vs whilst : Hamilton vs Madison
+- there
+- on
+- may
+- his
+
+Students can just use ordinary text search to see how often the marker words appear in each paper. 
+
+UNKNOWN 
+- LXII
+- LXIII
+- LVII
+- LVI
+- LV
+- LIV
+- LIII
+- LII
+- LI
+- L
+- XLIX
+-->
+

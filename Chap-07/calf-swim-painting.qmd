@@ -1,0 +1,23 @@
+<!--
+id: "calf-swim-painting"
+created: "Sun Feb  1 08:31:36 2026"
+attribution: TBA
+status: "sketch"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-calf-swim-painting}
+We use the notation `same()` and `flat()` to emphasize that these are *functions*. The conventional algebraic notation is much simpler: $x$ and $1$ respectively, but it's easy to forget that $1$ can be a function. Suppose you create a linear combination of `same(x)`  and `flat()` with coefficients $a$ and $b$ respectively. What is the overall algebraic form of the resulting function?
+
+```{mcq}
+#| label: csp-1-kse
+1. $x + 1$
+2. $mx + b$ [hint: Not quite. But we said that the coefficient on $x$ is to be named $a$ not $m$.]
+3. $ax + b$ [correct]
+4. $a + b$ [hint: No. There is no same() here.]
+```
+:::
+ <!-- end of exr-calf-swim-painting -->

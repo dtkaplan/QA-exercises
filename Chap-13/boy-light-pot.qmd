@@ -1,0 +1,34 @@
+<!--
+id: "boy-light-pot"
+created: "Fri Jan 30 17:06:03 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-boy-light-pot}
+```{r}
+#| echo: false
+#| label: C13-zamri
+slice_plot(2^x ~ x, domain(x = -2:3)) |>
+  gf_labs(y = "output", x = "input") |>
+  gf_theme(theme_minimal(base_size = 16))
+```
+
+Which core modeling function does this graph show?
+
+```{mcq}
+#| label: blp-1-xlde
+#| inline: true
+1. log2()
+2. exp2() [correct]
+3. same()
+4. hillside()
+```
+
+:::
+ <!-- end of exr-boy-light-pot -->

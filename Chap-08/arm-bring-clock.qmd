@@ -1,0 +1,25 @@
+<!--
+id: "arm-bring-clock"
+created: "Wed Dec  3 10:17:27 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-arm-bring-clock}
+DEMONSTRATION to rewrite as an exercise.
+To illustrate an important style of calculation that we will not use in this book, we have an example: the link between spatial and arithmetic reasoning is provided by the simple problem of finding the *mean* of two values. Arithmetically, of course, the mean is the sum of the quantities divided by two. More generally, the mean of n quantities is the sum of them divided by n.
+
+Spatially, the two quantities are represented by a single point in a two-dimensional coordinate space. To calculate the mean, we consider another geometrical object: a line. The line needed is the one that runs diagonally between the coordinate axes, that is, the set of points where the coordinates are equal. The mean is the position on that line closest to the single point defined by the two quantities.
+
+If presented with a point in coordinate space and a line running through the space, most people can do a pretty good job finding the place on the line that is closest to the point. This operation is called "projection." In `r xf("sec-composing-a-function")` we will meet a technique for constructing functions as "linear combinations." The technique is called "linear regression" and amounts, mathematically, to the projection of a point onto a ....
+Well, here we find ourselves having to work with objects in high-dimensional space. So it could be projection of a point onto a line, or onto a plane, or onto an entire three dimensional space, or onto a higher-dimensional space. 
+
+
+:::
+ <!-- end of exr-arm-bring-clock -->

@@ -1,0 +1,17 @@
+<!--
+id: "lobster-serve-sofa"
+created: "Sun Dec 28 14:12:26 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 8
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lobster-serve-sofa}
+A *relative probability distribution* is a function. What is the input and what is the output?
+
+`r devoirs::devoirs_text("RQ7-01")`
+:::
+ <!-- end of exr-lobster-serve-sofa -->

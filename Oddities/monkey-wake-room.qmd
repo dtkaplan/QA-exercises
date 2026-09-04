@@ -1,0 +1,32 @@
+---
+id: "monkey-wake-room"
+created: "Fri Dec 26 14:04:58 2025"
+attribution: TBA
+---
+
+```{r include=FALSE, eval=!"devoirs" %in% (.packages())}
+# For stand-alone compilation testing
+library(devoirs)
+library(mosaicCalc)
+```
+
+
+
+::: {#exr-monkey-wake-room}
+I think I have a good idea it is this:
+
+`r devoirs::devoirs_text("mwr-number1")
+
+2. Where do we live>?
+```{mcq}
+#| label: mwr-2-fkw
+1. The moon
+2. The earth [correct]
+3. The sun.
+```
+
+[This is my explanation.]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: mwr-2My"}
+
+
+:::
+ <!-- end of exr-monkey-wake-room -->

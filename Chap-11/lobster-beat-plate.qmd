@@ -1,0 +1,15 @@
+<!--
+id: "lobster-beat-plate"
+created: "Mon Sep 29 16:16:52 2025"
+attribution: TBA
+status: "sketch"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lobster-beat-plate}
+EXERCISE: Show some random dynamical rules and have students sketch a trajectory from each of several initial conditions.
+:::
+ <!-- end of exr-lobster-beat-plate -->

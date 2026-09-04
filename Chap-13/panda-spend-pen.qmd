@@ -1,0 +1,20 @@
+<!--
+id: "panda-spend-pen"
+created: "Thu Dec  4 09:32:56 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-panda-spend-pen}
+Short classroom discussion about the SIR model graphic including:
+
+- a quick demonstration (narrated by the students) of the patterns seen for different settings of the parameters.
+- speculate on how to operationalize "social distance."
+- reason why the isolation parameter only goes up to 50%: the behavior doesn't change much for higher isolations. Explain that % for isolation means the fraction of the infectives who isolate or, equivalently, how much of the time infectives isolate.
+
+:::
+ <!-- end of exr-panda-spend-pen -->

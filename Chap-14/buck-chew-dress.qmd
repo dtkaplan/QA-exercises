@@ -1,0 +1,121 @@
+<!--
+id: "buck-chew-dress"
+created: "Mon Feb 16 15:50:44 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-buck-chew-dress}
+We are going to pick up on drill problem 10.B.2 [give a link here.] As a reminder, that drill problem was about your trying to predict the outcome of a football game involving your favorite team, the particular form of the prediction being the end-of-game score for your team. For simplicity, assumed that your prior make score outcome of 5 to 24 equally probable and every other score impossible, that is, probability 0 in your prior. (This is unrealistic, since obviously 25, 26, and so on might the the outcome, but our interest here is in showing how a calculation might be structured.)
+
+So, your prior is 0.05 for each of the 20 scores between 5 and 24. (Note that they add up to 1, so this prior is in the form of an absolute probability distribution, which is of course a valid relative probability distribution as well.)
+
+The observation, made a half-time, was a score of 10 pts. Based on this observation, we want to know the *posterior* distribution for the end-of-game score. Do find this, we simply multiply the likelihood of the observation for each of the hypotheses in the prior. Likelihoods should not be simply pulled from the air, there should be some firm reasoning behind them. 
+
+Common sense suggests that a half-time score of 10 is reasonably connected to an end-of-game score of 20. That is, it seems rough justice to say that it's reasonable to expect the second half of the game to go more or less like the first half. But it would be silly to demand that the end-of-game score must be double the half-time score. A stickler for details might point out that the rules of football imply that an end-of-game score of 11 is impossible from a half-time score of 10. A Moneyball enthusiast might turn to the teams' history in past games to look at how many points were scored in the second half of the game. More narrowly, the statistician might look only at previous games where the half-time score was 10, or perhaps throw the opposing team's half-time score into the mix, and so on. But such detail requires more data. More data requires going back further in history. Going back further in history makes more questionable the relevance of that past record to the current performance of your team.
+
+Here is a very rough (but reasonable) model of scoring in a football game: at the end of the game, each point earned is equally likely to have come from the first-half of the game or from the second half. With this in mind, there is a road forward to calculate the likelihood of each end-of-game hypothesis given the half-time observation of 10 pts. Moving forward requires some technical knowledge about probability theory which there is no reason for you to have already gained. But in this situation as in many real-world situations, there is often an expert who can guide you with technical matters.
+
+I'm going to play the role of the expert consultant and tell you the calculation to do. The **binomial** distribution is well suited to this situation. The intuitive setting for the binomial is a series of coin flips, the binomial distribution tells you the probability out of n flips total, of getting 0 heads, or 1 head, or 2, or so on all the way up to n heads.
+
+The R chunk contains the command needed to calculate the probability of getting k heads out of n flips. To use it we provide three numbers: the number of heads, the number of flips (`size=`) and the probability of a head in any one flip (`prob = 1/2`). (If we thought points come harder in the second half of the game, we might set, for instance `prob = 1/4`, but we will stick to 1/2.)
+
+```{webr}
+#| caption: Calculation for 10 heads out of 12 flips
+dbinom(10, prob = 1/2, size = 12)
+```
+
+The table below lists each of the hypotheses for the end-of-game score as well as the prior probability we have assigned to each. There is also a column for the likelihood of observing a half-time score of 10 given each hypothesis. I've filled in the computer command that will calculate the likelihood for the first few hypotheses; the others follow the same pattern. 
+
+Fill in the table by calculating each likelihood, then calculate the posterior relative probability by multiplying together the prior by the likelihood.
+
+
+
+hypothesis (pts) | prior prob | likelihood | posterior relative prob
+-----------------|------------|------------|-----------
+5   |  0.05  | `dbinom(10, prob=1/2, size = 5)`  |     
+6   |  0.05  | `dbinom(10, prob=1/2, size = 6)`  |     
+7   |  0.05  | `dbinom(10, prob=1/2, size = 7)`  |     
+8   |  0.05  |   |    
+9   |  0.05  |   |    
+10  |  0.05  |   |    
+11  |  0.05  |   |    
+12  |  0.05  |   |    
+13  |  0.05  |   |    
+14  |  0.05  |   |    
+15  |  0.05  |   |    
+16  |  0.05  |   |    
+17  |  0.05  |   |    
+18  |  0.05  |   |    
+19  |  0.05  |   |    
+20  |  0.05  |   |    
+21  |  0.05  |   |    
+22  |  0.05  |   |    
+23  |  0.05  |   |    
+24  |  0.05  |   |    
+
+
+To convert the posterior relative probability to an absolute posterior probability, add up all the relative probabilities and then divide each relative probability by this sum.
+
+This is a lot of calculations, and a professional would automate them. You're not expected to know how to do the automation, but perhaps you can understand what's involved. 
+
+```{webr}
+tibble::tibble(
+  hypothesis = 5:24,
+  prior = 1/20,
+  likelihood = dbinom(10, prob = 1/2, size = hypothesis),
+  relative_posterior = prior * likelihood,
+  absolute_posterior = relative_posterior / sum(relative_posterior)
+) |> round(3) |> # we don't need all those digits!
+  knitr::kable() # to display nicely
+  
+
+```
+
+1. What is the end-of-game posterior for a total score of 10 pts? (That is, no points scored in the second half.)
+
+```{mcq}
+#| label: bcd-1-ek32
+1. One in a thousand [correct]
+2. One in a hundred
+3. Five in a hundred
+4. Five in ten
+```
+
+2. A friend, impressed with your Bayesian powers, asks you at half-time, "What's the probability that the final score will be $\leq 15$?" (Pick the closest answer.)
+
+```{mcq}
+#| label: bcd-2-ldw
+#| inline: true
+1. 6%
+2. 13% [correct]
+3. 26%
+4. 33%
+```
+
+3. Another friend, more competitive than the first, offers you an even-money bet claiming that the end-of-game score will be $\geq 20$. How enthusiastic should you be to accept this bet?
+
+```{mcq}
+#| label: bcd-3-xlew
+1. Don't go near it.
+2. Indifferent but slightly disinclined.
+3. Indifferent but slighly inclined [correct]
+4. Super excited.
+```
+
+4. A third friend thinks that the number 21 has magical properties. She's not so silly as to make an even money bet that the end-of-game outcome will be 21, and asks you to give her 7-to-1 odds. (This means, if she wins you pay her $7. If she loses, she pays you $1.) Are you willing to take the bet?
+
+```{mcq}
+#| label: bcd-4-he3ls
+1. You would be ripping her off.
+2. It's to your advantage, but reasonably fair for a friend. [correct]
+3. It's to her advantage, but for a friend, why not?
+4. She's ripping you off.
+```
+
+:::
+ <!-- end of exr-buck-chew-dress -->

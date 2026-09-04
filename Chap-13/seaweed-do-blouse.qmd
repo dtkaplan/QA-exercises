@@ -1,0 +1,21 @@
+<!--
+id: "seaweed-do-blouse"
+created: "Mon Nov 17 10:24:17 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-seaweed-do-blouse}
+Short discussion: The scene in "Hidden Figures" where the Euler method is called on to find a solution that has eluded the team of mathematicians.
+
+{{< video https://www.youtube.com/watch?v=8xPRn9weLYg >}}
+
+
+:::
+ <!-- end of prp-seaweed-do-blouse -->

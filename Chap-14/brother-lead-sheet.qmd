@@ -1,0 +1,18 @@
+<!--
+id: "brother-lead-sheet"
+created: "Tue Oct 28 11:18:28 2025"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-brother-lead-sheet}
+Should the calculations be done with probability or with magnitude. The product of probabilities corresponds to the sum of the magnitudes. 
+
+:::
+ <!-- end of exr-brother-lead-sheet -->

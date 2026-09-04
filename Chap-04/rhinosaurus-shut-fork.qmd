@@ -1,0 +1,37 @@
+<!--
+id: "rhinosaurus-shut-fork"
+created: "Mon Dec 15 13:16:51 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-rhinosaurus-shut-fork}
+
+Write a problem about "mortality" versus "mortality rate." 
+
+1. The mortality rate is 100% for people. What is the "with respect to" variable that makes sense of this claim? 
+
+```{mcq}
+#| label: rsf-1-eks
+#| inline: true
+1. per year
+2. per decade
+3. per capita [correct hint: "This is what 'All men are mortal' means!"]
+```
+
+2. Mortality in the Civil War Battle of Chickamauga was about 25%. This is much lower than the mortality of 100% experienced by the population at large. Explain.
+
+`r devoirs::devoirs_text("rsf-2-udjw")`
+
+3. According to the US Census Bureau, the mortality rate for middle-aged men and women is about 0.5. What must be the units and with respect to variable for this to make sense?
+
+`r devoirs::devoirs_text("rsf-3-vskd")`
+
+:::
+ <!-- end of exr-rhinosaurus-shut-fork -->

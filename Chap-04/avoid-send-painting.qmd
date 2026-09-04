@@ -1,0 +1,25 @@
+<!--
+id: "avoid-send-painting"
+created: "Tue Oct 14 11:05:35 2025"
+attribution: TBA
+status: "sketch"
+chapter: 4
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-avoid-send-painting}
+dollars per square foot
+
+payment per money in account
+
+flow versus rate of flow: water volume per minute moved by a pump (Compound: water flow per minute)
+
+economic product per person (Compound: economic product per person per day)
+
+miles per gallon (Compound: ton miles per gallon(truck) or passenger miles per gallon (car or plane).
+:::
+ <!-- end of exr-avoid-send-painting -->

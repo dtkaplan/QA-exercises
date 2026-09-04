@@ -1,0 +1,52 @@
+<!--
+id: "nephew-find-drawer"
+created: "Thu Feb 19 09:59:42 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-nephew-find-drawer}
+Here is the weather forecast for a winter week in Seattle, Washington. The blue numbers, as you may well know, are the probabilities of rain for that day.
+
+![](../www/seattle-rainfall.png)
+
+1. What are the odds of rain on Sunday?
+
+```{mcq}
+#| label: nfd-1-ekxs
+1. 0
+2. 0.1764
+3. 5.67 [correct hint: Yes! That is, 85/15]
+4. $\infty$
+5. Not enough information given.
+```
+
+2. What are the odds of rain on Monday?
+
+```{mcq}
+#| label: nfd-2-uew
+1. 0 [correct]
+2. 0.1764
+3. 5.67
+4. $\infty$
+5. Not enough information given.
+```
+
+
+3. What are the odds of rain for the first day of the forecast, labelled "Today."
+
+```{mcq}
+#| label: nfd-3-aur
+1. 0
+2. 0.1764
+3. 5.67
+4. $\infty$ [correct]
+5. Not enough information given.
+```
+
+:::
+ <!-- end of exr-nephew-find-drawer -->

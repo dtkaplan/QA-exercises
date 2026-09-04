@@ -1,0 +1,18 @@
+<!--
+id: "panda-run-magnet"
+created: "Mon Aug 24 16:56:30 2026"
+attribution: DTK
+uses: functions. A classroom activity?
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-panda-run-magnet}
+Write down an algorithm for adding two numbers, each with 2 digits. You can assume that you already have the algorithm for adding single digits, for instance 7 + 2.
+
+In addition to your algorithm, write down a table that shows the output for adding any digit 0 to 9 to another digit.
+:::
+ <!-- end of exr-panda-run-magnet -->

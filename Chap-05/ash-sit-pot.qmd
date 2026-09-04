@@ -1,0 +1,52 @@
+<!--
+id: "ash-sit-pot"
+created: "Tue Oct  7 13:13:56 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+A *bit* is a unit of information. In computer hardware, one bit refers to a (tiny) device that can be in either an "on" or "off" state, that is, either of two different states.
+
+With two bits, the computer can represent four different states, with three bits eight, with four bits sixteen. Notice that each additional bit *doubles* the number of possible states that can be represented. 
+
+One bit is a tiny amount of information. The word "byte" refers to a larger amount of information, the equivalent of eight bits. 
+
+1. How many different states can be stored by one byte?
+
+```{mcq}
+#| label: BF-byte
+#| inline: true
+1. 8
+2. 16
+3. 64
+4. 256 [correct]
+```
+
+The words "*megabyte*" (MB) and "*gigabyte*" (GB) refer to the amount of storage space on computers and other devices. Naturally, "mega" means *million* and "giga" means billion. So is 1 megabyte exactly 1,000,000 bytes and 1 gigabyte exactly 1,000,000,000 bytes? Not quite. A megabyte is 1,048,576 bytes and a gigibyte 1,073,741,824 bytes. These funny-looking numbers reflect the nature of information storage: every time we add an additional byte we increase the number of possible states 256-fold. 
+In computer hardware, however, it's common not just to add an additional unit of storage, but to *double* the amount of storage. A megabyte corresponds to 20 doublings of memory from a starting point of one byte. A gigbyte brings in another 10 such doublings. 
+
+In this hardware sense, exactly one million bytes would be a strange construction. Similarly with exactly one billion bytes. 
+
+2. How many doublings correspond to exactly one million? (Choose the closest answer.) You can use the interactive R chunk that follows to do the calculations.
+
+```{mcq}
+#| label: BF-million
+#| inline: true
+1. 9 doublings
+2. 9.5 doublings
+3. 9.9 doublings
+4. approx 9.9432 doublings
+5. approx 9.965784 doublings [correct]
+```
+
+
+```{webr}
+#| caption: "How many doublings will bring you to a number?"
+log2(1000)
+```
+
+

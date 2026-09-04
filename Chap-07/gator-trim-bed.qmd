@@ -1,0 +1,26 @@
+<!--
+id: "gator-trim-bed"
+created: "Fri Jan 30 16:47:51 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-gator-trim-bed}
+
+The function `log2()` is closely related to `exp2()`. What is the relationship?
+
+```{mcq}
+#| label: d06-gtb-ekx
+1. They are the same function with different names
+2. log2() tells you the input needed to reach a given output from exp2() [correct]
+3. log2() is exp2() multiplied by 2
+4. log2() is the rate of change of exp2()
+```
+
+:::
+ <!-- end of exr-gator-trim-bed -->

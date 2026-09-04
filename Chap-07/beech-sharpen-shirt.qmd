@@ -1,0 +1,133 @@
+<!--
+id: "beech-sharpen-shirt"
+created: "Wed Apr 22 07:57:11 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 7
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-sharpen-shirt}
+Many high-school students encounter and even memorize the *quadratic formula*:
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}\ .$
+
+Almost always in textbooks, the quantities in the formula---$x, a, b, c$---are taken to be dimensionless numbers. But let's examine it in the context of dimension-ful quantities.
+
+The the context to which the formula applies is a particular function with a single input $x$ and parameters $a$, $b$, and $c$:
+
+$$f(x) \equiv a x^2 + b x + c$$
+
+The object of the formula is to find values for the input $x$ at which the output of the function is zero. 
+
+Suppose that the dimension of the input $x$ is T and the dimension of the output is L. Using this supposition, answer the following questions:
+
+1. What is the dimension $[c]$?
+
+```{mcq}
+#| label: bss-32ld-1
+#| inline: true
+1. T
+2. L [correct]
+3. T L
+4. T L^-1^
+5. T^-1^ L
+6. Not enough information to tell.
+```
+
+2. What is the dimension $[b]$?
+
+```{mcq}
+#| label: bss-32ld-2
+#| inline: true
+1. T
+2. L 
+3. T L
+4. T L^-1^
+5. T^-1^ L [correct]
+6. Not enough information to tell.
+```
+
+3. What is the dimension $[a]$?
+
+```{mcq}
+#| label: bss-32ld-3
+#| inline: true
+1. T
+2. L [correct]
+3. T L
+4. T L^-1^
+5. T^-1^ L
+6. Not enough information to tell.
+```
+
+Is the quadratic formula dimensionally consistent? The following questions address this issue.
+
+4. What is the dimension $[b^2]$
+
+```{mcq}
+#| label: bss-32ld-4
+#| inline: true
+1. T^2^
+2. L^2^ 
+3. T^2^ L^2^
+4. T^2^ L^-2^
+5. T^-2^ L^2^ [correct]
+```
+
+5. What is the dimension $[4 a c]$?
+
+```{mcq}
+#| label: bss-32ld-5
+#| inline: true
+1. T^2^
+2. 4 L^2^ 
+3. T^2^ L^2^
+4. 4 T^2^ L^-2^
+5. T^-2^ L^2^ [correct]
+6. 4 T^-2^ L^2^ [hint: 4 is not a dimension.]
+```
+
+6. What is the dimension $[-b \pm \sqrt{b^2 - 4 a c}]$?
+
+```{mcq}
+#| label: bss-32ld-6
+#| inline: true
+1. T
+2. L 
+3. T L
+4. T L^-1^
+5. T^-1^ L [correct]
+```
+
+7. What is the dimension of the result of the entire quadratic formula?
+
+```{mcq}
+#| label: bss-32ld-7
+#| inline: true
+1. T [correct]
+2. L 
+3. T L
+4. T L^-1^
+5. T^-1^ L 
+```
+
+8. Briefly explain why the answer to (7) makes sense, that is, that the result of the entire quadratic formula has dimension $[x]$ rather than $[y]$ or something else.
+
+`r devoirs::devoirs_text("bss-32ld-8")`
+
+<!-- Opening answer: bss-4OT -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+The quadratic formula is used to find the *input* value at which the output $f(x)$ is zero. The dimension produced by the formula must therefore be the same as the dimension of the input $x$.
+
+[..id..]{data-tooltip="Ans id: bss-4OT"}
+:::
+<!-- closing answer bss-4OT -->
+
+
+:::
+ <!-- end of exr-beech-sharpen-shirt -->

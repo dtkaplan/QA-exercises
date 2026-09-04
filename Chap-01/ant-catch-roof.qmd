@@ -1,0 +1,29 @@
+<!--
+id: "ant-catch-roof"
+created: "Wed Dec 31 07:04:44 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 1"
+status: "draft"
+chapter: 1
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ant-catch-roof}
+The text discusses a set of blueprints as a model of a building. Explain why a blueprint fits the technical definition of a model. Specifically, propose two purposes for which the blueprint model is a more convenient representation that than the building itself. In addition, describe a purpose for which the blueprint model is completely unsuited.
+
+```{r echo=FALSE}
+default <- "Model suitable
+  Purpose 1:
+  Purpose 2:
+  
+Model unsuitable
+  Purpose:
+"
+```
+
+`r devoirs::devoirs_text("acf-RQ1-erl", contents=default, rows=6)`
+
+:::
+ <!-- end of exr-ant-catch-roof -->

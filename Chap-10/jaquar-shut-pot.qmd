@@ -1,0 +1,66 @@
+<!--
+id: "jaquar-shut-pot"
+created: "Mon Feb 16 08:22:56 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 10
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-jaquar-shut-pot}
+You're trying to predict the outcome of a football game, updating your predictions as the game proceeds. The competing hypotheses here are the possible end scores for your team: 2, 3, 4, 5, 6, 7, 8, 9, ..., 100, 100+. I don't know which is your team and what are your beliefs about it, so I can't tell you much about what relative probability you assign to each of these 100 possible outcomes, but you have your own views, well informed or not. 
+
+Purely for the sake of simplicity, let's consider just these 20 hypotheses: the scores 5 through 24, with equal relative probability assigned to each: 1. 
+
+A. You don't need to translate this relative probability distribution into an (absolute) probability, but if you were to do so, what would it be?
+
+```{mcq}
+#| label: jsp-A-3982
+1. 0.10 for each of the odd-valued scores. [hint: The absolute probability will have the same shape distribution as the relative probability.]
+2. 1% for score of 5, increasing linearly to 13.5% for score 24. [hint: Sorry. Going from a relative to an absolute probability is always a matter of multiplying each relative probability by the same number. That's not what's happening here.]
+3. 0.05 for each of the hypotheses. [correct]
+4. Not enough information has been given. [hint: Sorry, but you have everything you need.]
+```
+
+Now it's half-time. Your team has a score of 10 pts. To update your before-the-game opinion, you need to multiply that relative probability by a likelihood function: What is the probability of the half-time outcome given each of the hypotheses.
+
+B. Some of the hypotheses can be assigned zero likelihood given the half-time observation. Which are these?
+
+```{mcq}
+#| label: jsp-B-3843
+1. Hypothethetical ending scores of 5 through 9 have zero likelihood. [correct]
+2. Hypothetical ending score of 5 through 10 have zero likelihood.
+3. Anything can happen in a football game. Best not to assign zero likelihood to any before-the-game hypothesis.
+4. There is no such thing as zero likelihood.
+```
+
+
+C. What's a better name for relative probability distribution that encodes your "before-the-game opinion" on your team's score?
+
+```{mcq}
+#| label: jsp-C-k3ks
+#| inline: true
+1. Posterior
+2. Prior [correct]
+3. Likelihood
+4. Antebellum
+5. Frequency
+```
+
+D. What's a proper name for your updated distribution of relative probabilities taking into account the half-time score?
+
+```{mcq}
+#| label: jsp-D-3l2s
+#| inline: true
+1. Posterior [correct]
+2. Prior 
+3. Likelihood
+4. Antebellum
+5. Frequency
+```
+
+
+:::
+ <!-- end of exr-jaquar-shut-pot -->

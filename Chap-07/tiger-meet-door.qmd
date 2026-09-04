@@ -1,0 +1,77 @@
+<!--
+id: "tiger-meet-door"
+created: "Sun Aug 30 14:50:27 2026"
+attribution: DTK
+uses: Chap 7, discussion on describing the shape of a graph.
+status: "sketch"
+chapter: 7
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-tiger-meet-door}
+## Reading graphs aloud
+
+
+
+
+::: {#fig-shape-example-839}
+
+```{r echo=FALSE}
+#| label: C07-fapeq
+raw839 <- doodle_fun(~ time, seed = 839)
+f839 <- function(time) {(raw839(time) + 14)/4}
+P839 <- canonical_plot(
+  fun = f839, 
+  output_range = c(-4.5, 4.5), 
+  input_range = c(-4.5, 4.5),
+  panel = c(border = FALSE)) |>
+  gf_refine(coord_cartesian(ratio=1)) 
+P839
+```
+
+A drawing of a function with one input. The function is the blue curve.
+:::
+
+
+The method of graphing a function lets us see the shape of a function. "Graph" is a technical mathematical term that has two unrelated definitions. `r xf("fig-solar-diag1")` is an example of one type of "graph" used to display connections in a network.
+
+For displaying the shape of functions we will work with the other kind of graph. You have very likely encountered this in your high-school studies. These graphs are often marked by two axes, which define a "coordinate space." @fig-shape-example-839 shows an example using a made-up function. The axes are shown in black as lines with arrowheads pointing in both directions. [As you know, math books often identify the axes as $x$ and $y$. It is as if $x$ is a pronoun refering to the horizontal scale, while the pronoun $y$ points to the vertical scale. This convention is strained when functions have more than one input.]{.column-margin} The horizontal axis is labeled "input" and the vertical axis "output." This style is often encountered in math textbooks and is suitable mainly for functions that take a pure number as input and produce a pure-number output. 
+
+
+
+If you are used to reading such graphs, then you can confirm that when the input is zero the output is approximately 0.4. An input of 2 corresponds to an output around -1. The graph is a way of associating an output value for each input value.
+
+Consider the shape of the function in @fig-shape-example-839, to which we will assign the pronoun $f()$. [Since "shape of the function in ..." is very wordy, we will use pronouns to refer to them. In English, we might use "it," or "that," or "this." In math, our pronouns will be $f()$, $g()$ and $h()$.]{.column-margin} It's hard to describe the overall shape of $f()$ with a single phrase. Indeed, much of the point of the core modeling functions is that we can use the names assigned---`osc()`, `hill()`, and `hillside()` are examples---to describe the shape. 
+
+If we restrict ourselves to small locales on the input axis, the local shape is easy to capture with a phrase. For instance, @fig-f-locale shows a few graphs of $f()$ but with different locales highlighted by a box. Within the box the shape is simple.
+
+```{r}
+#| label: fig-f-locale
+#| echo: false
+#| layout-ncol: 2
+#| fig-cap: "Examining different locals of $f()$."
+#| fig-subcap:
+#| - "Sloping down"
+#| - "Flat"
+#| - "A bowl"
+#| - "Sloping up"
+P839 |>
+  gf_rect(-0.5 + 2.5 ~ -4 + -2. , fill = NA, color = "magenta")
+P839 |>
+  gf_rect(-0.5 + 1 ~ -1.5 + -0.5, fill = NA, color = "magenta")
+P839 |>
+  gf_rect(-1.5 + -0.2 ~ 1. + 2.75 , fill = NA, color = "magenta")
+P839 |>
+  gf_rect(-1.2 + 1.5 ~ 2.5 + 4. , fill = NA, color = "magenta")
+
+```
+
+Another way to describe a function uses the metaphor of changing elevation as we walk along a path. The convention is to imagine that we are walking from left to right, that is, the input value is increasing. With this metaphor, $f()$ might be described as "going downhill, then leveling off, then more steeply downhill until reaching the bottom of a value, and from there increasing rather steeply."
+
+It's absolutely crucial to obey the convention of walking from left to right. To say that $f()$ slopes *down* in the region marked in @fig-f-locale(a), only make sense with left-to-right movement.
+
+
+:::
+ <!-- end of exr-tiger-meet-door -->

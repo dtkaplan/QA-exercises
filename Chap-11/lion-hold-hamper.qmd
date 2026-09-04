@@ -1,0 +1,28 @@
+<!--
+id: "lion-hold-hamper"
+created: "Sun Dec 28 14:30:55 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 11
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lion-hold-hamper}
+What is the input to the *dynamical rule*? 
+
+`r devoirs::devoirs_text("RQ11-lhh")`
+
+<!-- Opening answer: R1d-6Yd -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+The input to the dynamical rule is the *state* of the system, that is, the set of quantities that the state comprises.
+
+
+[..id..]{data-tooltip="Ans id: R1d-6Yd"}
+:::
+<!-- closing answer R1d-6Yd -->
+
+:::
+ <!-- end of exr-lion-hold-hamper -->

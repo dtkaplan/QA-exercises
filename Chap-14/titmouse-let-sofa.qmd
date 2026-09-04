@@ -1,0 +1,21 @@
+<!--
+id: "titmouse-let-sofa"
+created: "Wed Sep 10 15:28:22 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-titmouse-let-sofa}
+
+As for setting the *output* transformation parameter $A$, see `r xf("exr-titmouse-let-sofa")`.
+
+EXERCISE IN DRAFT. Explain why $Q_0 = 0$ for matching `hillside()` to the oil production data (`r xf("fig-world-oil-transform")`): when the input $\text{year}^\star < 1910$ or so, the output is zero. So evaluate $\text{hillside}\left(0.045 (\strut\text{year}^\star - 1969.5)\right)$.
+
+What about the output parameter $A$? We arranged the data to set the highest value of oil-production to be index 1. The hillside() function naturally goes to output one as its upper plateau, so $A=1$ will do the job. What would $A$ have to be if the ultimate output of the model were to be 1.05, a little bit higher than the 2023 value?
+
+:::
+ <!-- end of exr-titmouse-let-sofa -->

@@ -1,0 +1,31 @@
+<!--
+id: "maple-ride-pencil"
+created: "Wed Mar  4 17:09:57 2026"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-maple-ride-pencil}
+Who pays?
+
+```{r}
+#| label: C14-sjsyk
+GfromBeta <- function(a, b) {
+  (2/a)*beta(a+b, a+b)/(beta(a,a)*beta(b,b))
+}
+```
+
+0.35 on 0-1 scale corresponds to 1.4% of households. These were the households who paid income tax in 1913, with the deductable of $3000. (There were 357,600 tax forms filed. The total income of all these people was $3,900,000,000. About 80% of them paid tax. The total tax paid was $28,000,000.)
+
+The reported Gini coefficient in 2023 was 0.48. Using the beta distribution as our model, this corresponds to dbeta(frac, 1, 10).
+
+We don't know the median income in 1913. In 2024 it was $83,750. For dbeta(frac, 1,10), the median occurs at frac = 0.065. That provides a scale for converting <income> into frac.
+
+frac = 0.065 * income / 83750
+
+:::
+ <!-- end of exr-maple-ride-pencil -->

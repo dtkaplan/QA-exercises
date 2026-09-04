@@ -1,0 +1,37 @@
+<!--
+id: "ant-tell-saw"
+created: "Sat Dec 20 08:42:51 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-ant-tell-saw}
+AI generated question: In quantitative reasoning, acceleration is one of the most interesting rates because it is a compound rate. Speed is the rate of change of distance with respect to time, while acceleration is the rate of change of speed with respect to time.
+
+To master this, we look at how the units of time appear twice in the denominator, often expressed as "meters per second squared."
+
+Question: Deceleration at the Intersection
+
+Scenario: You are driving a car at a constant velocity of 24 meters per second (24 m/s). You see a traffic light turn red ahead of you. You apply the brakes and come to a complete stop (0 m/s) in exactly 4 seconds.
+
+The Question: Which of the following correctly describes your rate of acceleration (deceleration) and the meaning of its units?
+
+```{mcq}
+#| label: ats-1-swed
+1. Your acceleration is −6 meters per second. This means for every second that passes, you travel 6 fewer meters. [hint: Meters per second does not have the correct dimension to be acceleration. ]
+2. Your acceleration is −6 meters per second squared (m/s^2^). 
+This means for every second that passes, your velocity decreases by 6 meters per second. [correct]
+3. Your acceleration is 6 seconds per meter. This means it takes you 6 seconds to stop for every meter of distance traveled.
+4. Your acceleration is −96 meters. This represents the total distance the car skidded before stopping. [hint: Acceleration does not have dimension L, but rather L T^-2^.]
+```
+
+[To come to a stop, the car needs to slow from 24 m/s to 0, a change of -24 m/s. This change is accomplished in 4 s, so the rate of change of speed with respect to time will be the ratio $$\frac{-24\, \text{m/s}}{4\,\text{s}} = -6\, \text{m} \text{s}^{-2}$$ ]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: ats-6dA"}
+
+:::
+ <!-- end of exr-ant-tell-saw -->

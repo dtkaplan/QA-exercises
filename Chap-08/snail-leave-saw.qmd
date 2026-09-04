@@ -1,0 +1,17 @@
+<!--
+id: "snail-leave-saw"
+created: "Sun Dec 28 14:15:15 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 8
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-snail-leave-saw}
+For each of the four functions in (2), list each of the methods---linear combination, function multiplication, and pipelining---that have been used when defining the function.
+
+`r devoirs::devoirs_text("RQ8-3ts")`
+:::
+ <!-- end of exr-snail-leave-saw -->

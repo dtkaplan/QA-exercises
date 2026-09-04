@@ -1,0 +1,25 @@
+<!--
+id: "sister-bite-gloves"
+created: "Fri Jan 30 16:45:53 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-sister-bite-gloves}
+Match each core modeling function to its characteristic behavior. The function `osc()` ...
+
+```{mcq}
+#| label: d06-sbg-932
+1. goes up and then back down to a baseline
+2. repeats the same pattern over and over [correct]
+3. starts low and levels off at a high value
+4. increases by the same factor for each unit increase in input
+```
+
+:::
+ <!-- end of exr-sister-bite-gloves -->

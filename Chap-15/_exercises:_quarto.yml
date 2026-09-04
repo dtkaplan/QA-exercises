@@ -1,0 +1,9 @@
+project:
+  type: default
+  output-dir: _site
+
+format:
+  html:
+    toc: true
+
+engine: knitr

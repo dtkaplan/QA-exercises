@@ -1,0 +1,25 @@
+<!--
+id: "niece-eat-pot"
+created: "Thu Mar 12 07:51:21 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-niece-eat-pot}
+How does a *rate of change* differ from an ordinary *rate*? What do you need to measure each?
+
+```{mcq}
+#| label: nep-1-udls
+1. A rate needs one snapshot; a rate of change needs one snapshot too, but with different units. [hint: Sorry. If you are going to look at how something changes, you need a before-and-after measurement.]
+2. A rate is one quantity divided by another from a single snapshot; a rate of change uses *changes* in two quantities (numerator and denominator), so you need at least two "frames" (e.g., a short "movie") to form the ratio of those changes. [correct]
+3. A rate of change is always with respect to time; an ordinary rate is not. [hint: No. The rate of change can be with respect to any quantity, for instance the rate of change of student test scores with respect to parental education.]
+4. There is no real difference; the terms are interchangeable. [hint: While it's true that a rate of change is also a rate, not every rate is a rate of change.]
+```
+
+:::
+ <!-- end of exr-niece-eat-pot -->

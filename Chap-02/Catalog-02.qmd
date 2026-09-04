@@ -1,0 +1,163 @@
+---
+title: "Chapter 02 Catalog"
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+<style>
+.theorem-title {
+  display: none;
+}
+
+.panel-tabset {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20%) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.panel-tabset > .nav-tabs {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-tabset > .tab-content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .panel-tabset {
+    display: block;
+  }
+
+  .panel-tabset > .nav-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  .panel-tabset > .nav-tabs .nav-link {
+    width: auto;
+  }
+}
+</style>
+{{< include ../exercise-header.qmd >}}
+
+::: {.callout-note collapse="true" title="Group: unclassified"}
+::: {.panel-tabset collapse=true}
+## avoid-put-socks
+
+
+> File: Chap-02/avoid-put-socks.qmd
+> Status: sketch
+
+
+{{< include avoid-put-socks.qmd >}}
+
+## elephant-hold-knob
+
+
+> File: Chap-02/elephant-hold-knob.qmd
+> Status: null
+
+
+{{< include elephant-hold-knob.qmd >}}
+
+## frog-get-laundry
+
+
+> File: Chap-02/frog-get-laundry.qmd
+> Status: draft
+
+
+{{< include frog-get-laundry.qmd >}}
+
+## girl-lose-hamper
+
+
+> File: Chap-02/girl-lose-hamper.qmd
+> Status: sketch
+
+
+{{< include girl-lose-hamper.qmd >}}
+
+## jellyfish-lay-bolt
+
+
+> File: Chap-02/jellyfish-lay-bolt.qmd
+> Status: sketch
+
+
+{{< include jellyfish-lay-bolt.qmd >}}
+
+## jellyfish-open-spoon
+
+
+> File: Chap-02/jellyfish-open-spoon.qmd
+> Status: sketch
+
+
+{{< include jellyfish-open-spoon.qmd >}}
+
+## kitten-bend-door
+
+
+> File: Chap-02/kitten-bend-door.qmd
+> Status: draft
+
+
+{{< include kitten-bend-door.qmd >}}
+
+## nephew-dig-lamp
+
+
+> File: Chap-02/nephew-dig-lamp.qmd
+
+{{< include nephew-dig-lamp.qmd >}}
+
+## pony-meet-window
+
+
+> File: Chap-02/pony-meet-window.qmd
+
+{{< include pony-meet-window.qmd >}}
+
+## puppy-hang-blanket
+
+
+> File: Chap-02/puppy-hang-blanket.qmd
+
+{{< include puppy-hang-blanket.qmd >}}
+
+## reptile-beat-window
+
+
+> File: Chap-02/reptile-beat-window.qmd
+
+{{< include reptile-beat-window.qmd >}}
+
+## seaweed-bend-laundry
+
+
+> File: Chap-02/seaweed-bend-laundry.qmd
+> Status: sketch
+
+
+{{< include seaweed-bend-laundry.qmd >}}
+
+## seaweed-hang-ring
+
+
+> File: Chap-02/seaweed-hang-ring.qmd
+
+{{< include seaweed-hang-ring.qmd >}}
+
+:::
+:::
+

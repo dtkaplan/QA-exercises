@@ -1,0 +1,26 @@
+devoirs:
+  uploadsite: https://docs.google.com/forms/d/e/1FAIpQLSfh2aEmMwgBA__bl_uTYZl9NjUTLBhzC25qEYHSnwXXWhDqoQ/viewform?usp=header
+  googleform: https://docs.google.com/forms/d/1eAx8Fem_oVrN_sNc77Ltghb7fR_wqOxVGV15bWH3b3M/edit
+dim:
+  dim: "*dimension*"
+  length: L
+  area: "L^2^"
+  volume: "L^3^"
+  time: "T"
+  mass: "M"
+  money: "W"
+  temperature: "𝛳"
+  capita: "C"
+  worth: "W"
+  number: "[1]"
+  lumen: "Q"
+  velocity: "L T^-1^"
+  acceleration: "L T^-2^"
+  force: "M L T^-2^"
+  energy: "M L^2^ T^-2^"
+  power: "M L^2^ T^-3^"
+  current: "I"
+  mole: "N"
+  voltage: "M L^2^ T^-3^ I^-1^"
+
+  

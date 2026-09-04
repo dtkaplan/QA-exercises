@@ -1,0 +1,35 @@
+<!--
+id: "pine-teach-mug"
+created: "Fri Oct 31 17:21:14 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-pine-teach-mug}
+The series of photographs below were taken by Eadweard Muybridge in 1878. 
+
+![](../www/muybridge-horse.png)
+
+As described in the caption, the 11 images of the horse in motion are spaced by 0.04 secs, the vertical lines are spaced 27 horizontal inches apart, and the horizontal lines near the bottom are about 4 inches apart.
+
+1. Find the horse's horizontal position in each frame with respect to the vertical lines. Consider each of two points on the horse: the back of the saddle (which is just barely visible behind the rider) and the tip of the horse's nose.
+
+2. Calculate the horizontal velocity of each of the two points in (1) using the rate of change with respect to time between each pair of successive photos. Since there are 11 frames, you can calculate the velocity at ten successive "instants" in time. Give the velocity in units of miles per hour.
+
+3. Looking at velocity versus time, at which point on the horse (saddle or nose) is the velocity most steady over the course of the stride.
+
+4. You've got ten time points for velocity. Now calculate the rate of change of velocity with respect to time by considering the nine pairs of successive velocity values. (The rate of change of velocity is called the **acceleration**.)
+
+5. Which point on the horse (saddle or nose) reaches the greatest positive acceleration over over the nine points of time in (4)?
+
+6. Now calculate the position, velocity, and acceleration of one of the front hooves. How does the acceleration over time compare to that at the saddle or nose?
+
+
+:::
+ <!-- end of exr-pine-teach-mug -->

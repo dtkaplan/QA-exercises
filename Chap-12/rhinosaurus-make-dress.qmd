@@ -1,0 +1,19 @@
+<!--
+id: "rhinosaurus-make-dress"
+created: "Fri Nov  7 07:35:01 2025"
+attribution: TBA
+status: "sketch"
+chapter: 12
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-rhinosaurus-make-dress}
+In-class Discussion: Work through why the given probability distributions make sense in terms of the probability of *not* having an accident given the accident rate.
+
+ALSO TO INCLUDE IN THE DISCUSSION: The advantages and demerits of different ways to define an "accident." Perhaps we should define it as an incident reported to the police. Or, perhaps, an incident where there is an injury. Still another possibility: an incident where the car decelerates sharply, either because of breaking or collision.
+:::
+ <!-- end of exr-rhinosaurus-make-dress -->

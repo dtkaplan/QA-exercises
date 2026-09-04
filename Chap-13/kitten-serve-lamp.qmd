@@ -1,0 +1,31 @@
+<!--
+id: "kitten-serve-lamp"
+created: "Tue Feb 24 12:23:20 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kitten-serve-lamp}
+One measure of the amount of transportation (for instance, delivered by a bus system) is person-miles (generally written "passenger-miles"). 
+
+Consider a simple instance of an intercity bus that takes on and drops off passengers in going from city A to B to C to D. The distance from A to B is 100 mi, from B to C is 50 mi, and from C to D is 200 mi.
+
+The bus starts from city A, it is carrying 10 passengers. At city B, four passengers get off and 11 get on. At city C, 7 passengers get off and 14 get on. All passengers disembark at city D.
+
+How how much transportation service has the bus provided?
+
+```{mcq}
+#| label: ksl-1-ris
+1. 3400 miles
+2. 3400 passenger-miles
+2. 6650 miles
+4. 6650 passenger-miles
+5. 9850 miles
+6. 9850 passenger-miles
+```
+:::
+ <!-- end of exr-kitten-serve-lamp -->

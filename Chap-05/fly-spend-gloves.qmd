@@ -1,0 +1,22 @@
+<!--
+id: "fly-spend-gloves"
+created: "Fri Jan  9 12:51:41 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fly-spend-gloves}
+Are these two quantities the same (e.g. the same dimension) or different.
+
+- passenger miles
+- passengers per mile
+
+Briefly justify your answer including consideration of the quantities' dimension.
+
+`r devoirs::devoirs_text("fsg-01-skes")`
+:::
+ <!-- end of exr-fly-spend-gloves -->

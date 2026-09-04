@@ -1,0 +1,17 @@
+<!--
+id: "avoid-put-socks"
+created: "Thu Aug 28 15:42:02 2025"
+attribution: TBA
+status: "sketch"
+chapter: 2
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-avoid-put-socks}
+EXERCISE: Windy. How to operationalize windiness.  Sea state, Beauford scale, Richter Scale, Tornado and hurricane scales.
+
+
+:::
+ <!-- end of exr-avoid-put-socks -->

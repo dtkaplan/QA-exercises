@@ -1,0 +1,31 @@
+<!--
+id: "spider-bite-suitcase"
+created: "Sun Dec 28 14:31:21 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 11
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spider-bite-suitcase}
+Explain the relationship between the *state space* and the *trajectory*?
+
+`r devoirs::devoirs_text("RQ11-sbs")`
+
+<!-- Opening answer: R1d-5ds -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+As described in `r xf("sec-spaces")`, a space consists of the possible values for a set of quantities. Each point in the space corresponds to a specific value for each quantity in the set. The cartesian coordinate plane is an example of a space appropriate for a set of two quantities. Each point in the space corresponds to a particular value for each of those quantities.
+
+The state of a dynamical system is the values of the set of quantities that make up the state. The state space contains all possible values for the state quantities. Each point in the state space is a particular value for the state. If the state consists of two quantities, the state space will be a cartesian coordinate plane. Any given state will correspond to a single point in the state space. 
+
+The *trajectory* of the dynamical system is a path through state space. The path consists of the sequence of instantaneous states that the system occupies as time goes by. The dynamical rule tells the instantaneous direction of motion from one point on the path to the next. 
+
+[..id..]{data-tooltip="Ans id: R1d-5ds"}
+:::
+<!-- closing answer R1d-5ds -->
+:::
+ <!-- end of exr-spider-bite-suitcase -->

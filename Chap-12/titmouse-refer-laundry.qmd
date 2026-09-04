@@ -1,0 +1,83 @@
+<!--
+id: "titmouse-refer-laundry"
+created: "Fri Feb 13 11:34:41 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-titmouse-refer-laundry}
+In 1990, Philipine President Corazon Aquino appointed retired Brig. Gen. Alfredo Lim to investigate claims that the government lottery was rigged. In September of that year, Gen. Lim won the lottery's top prize of $200,000. Coincidence?
+
+1. What are appropriate competing hypotheses for evaluating the question of coincidence?
+
+```{mcq}
+#| label: trl-1-3kc
+1. The General won versus the General did not win. [hint: No. These are two possible observations, only the first of which happened.]
+2. President Aquino participated in the conspiracy versus her not participating. 
+3. The Sept. lottery was rigged versus the Sept. lottery was honest. [Correct]
+4. The lottery had been rigged before 1990 versus it was rigged only in 1990.
+```
+
+2. Suppose the lottery was indeed corrupt. Which of the following likelihoods would reflect skepticism that anyone in the lottery management would try to pay off the General?
+
+```{mcq}
+#| label: trl-2-2kd
+#| inline: true
+1. 0.001 [correct]
+2. 0.01
+3. 0.1
+4. Practically 1.0
+```
+
+::: {.callout-tip collapse=true}
+Assigning a low likelihood means that it would have been a surprise that the General won even if the lottery were corrupt.
+:::
+
+3. Suppose that the lottery was honest and that one-million people play it each week. What is the likelihood that the General would win the top prize?
+
+```{mcq}
+#| label: trl-3-jfe
+#| inline: true
+1. 1e-6 [correct]
+2. 1e-4
+3. 1e-2
+4. 1
+```
+
+::: {.callout-tip collapse=true}
+Some people might think that, because the General won, his probability of winning was 100%. But the likelihood of each possible outcome (e.g. win versus not win) has to be evaluated under the relevant hypothesis. Then, given the actual observed outcome, the likelihood assigned to that particular outcome is the one used.
+:::
+
+4. What is the likelihood ratio of the rigged versus honest hypotheses given the indicated answers to the above questions about likelihood?
+
+```{mcq}
+#| label: trl-4-3ws
+#| inline: true
+1. 0.001 
+2. 0.1
+3. 10
+4. 1000 [correct]
+```
+```
+
+::: {.callout-tip collapse=true}
+In constructing a likelihood ratio, you need to decide which hypothesis is in the numerator (top) of the ratio and which in the denominator (bottom). We didn't use these words in the question prompt, but "H1 versus H2" is a standard way of saying that H1 is in the numerator. The calculated likelihood ratio will then measure the strength of evidence in favor of the hypothesis in the numerator.
+:::
+
+5. On the verbal scale for interpretting likelihood, what's the best description for the indicated answer to (4)?
+
+```{mcq}
+#| label: trl-5-wkc
+1. Moderate support for the "rigged" hypothesis.
+2. Weak support for the "honest" hypothesis.
+3. Moderate to strong support for the "rigged" hypothesis. [correct]
+4. Moderate to strong support for the "honest" hypothesis.
+```
+
+
+:::
+ <!-- end of exr-titmouse-refer-laundry -->

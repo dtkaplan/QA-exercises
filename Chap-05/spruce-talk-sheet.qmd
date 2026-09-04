@@ -1,0 +1,33 @@
+<!--
+id: "spruce-talk-sheet"
+created: "Thu Jan 22 09:49:05 2026"
+attribution: Dave Ruth
+use: Chap 5 Drill
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spruce-talk-sheet}
+Consider a function `Profit(price, weather)` used by an ice cream shop owner to predict daily earnings.
+
+- Input 1: `price` (the cost of a cone, set by the owner).
+
+- Input 2: `weather` (the daily high temperature).
+
+- Internal Calculation: The model internally calculates demand (how many people buy ice cream) based on the price and weather. It then calculates profit by subtracting costs from revenue.
+
+In a system diagram of this specific model, how would we classify the variable demand?
+
+```{mcq}
+#| label: sts-1-k3s
+#| inline: true
+a. Exogenous [hint: Not in this model. In the model Profit(price, weather), demand is calculated from the two inputs price and weather. Those inputs are exogenous; the model doesn't determine the weather and the price is dictated by the shop owner.]
+b. Endogenous [correct]
+c. An Argument [hint: Sorry. "Argument" is another word for the input to a function.]
+d. An Algorithm [hint: No. An algorithm is a "recipe" for a computation.]
+```
+:::
+ <!-- end of exr-spruce-talk-sheet -->

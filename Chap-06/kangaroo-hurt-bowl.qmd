@@ -1,0 +1,26 @@
+<!--
+id: "kangaroo-hurt-bowl"
+created: "Fri Jan 30 17:00:58 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kangaroo-hurt-bowl}
+Suppose you want to model oil production using `hillside()`, and the data shows production reached half its maximum value around the year 1970. In the input transformation $a(\text{year} - q_0)$, what value should $q_0$ have?
+
+```{mcq}
+#| label: d06-khb-oil
+#| inline: true
+1. 0
+2. 0.5
+3. 1970 [correct]
+4. 2023
+```
+
+:::
+ <!-- end of exr-kangaroo-hurt-bowl -->

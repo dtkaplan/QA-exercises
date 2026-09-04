@@ -1,0 +1,18 @@
+<!--
+id: "eagle-seek-clock"
+created: "Wed Dec 31 07:08:12 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 1"
+status: "sketch"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-seek-clock}
+In a footnote, the text contrasts the definition of a "variable" in Algebra versus its definition in Statistics/Quantitative Reasoning. What is the primary difference in how these two approaches define a variable?
+
+`r devoirs::devoirs_text("esc-RQ1-er5kf")`
+:::
+ <!-- end of exr-eagle-seek-clock -->

@@ -1,0 +1,30 @@
+---
+id: "leg-pitch-stair"
+created: "Fri Feb 13 16:49:58 2026"
+attribution: DTK
+use: Not sure yet.
+---
+
+```{r include=FALSE, eval=!"devoirs" %in% (.packages())}
+# For stand-alone compilation testing
+library(devoirs)
+library(mosaicCalc)
+```
+
+::: {#exr-leg-pitch-stair}
+The large-language models (LLMs) behind many AIs are called "generative" because they construct answers by making many (well informed) random choices. The choices are made from a fixed list of *tokens*. To illustrate, consider this tokenization of the last paragraph of the Gettysburg address:
+
+::: {#fig-gettysburg-tokens}
+![](../www/gettysburg-tokens.png)
+
+A tokenized version of part of the Gettysburg Address. Each token is shown as a contiguous block of color. [Source](https://tiktokenizer.vercel.app/)
+:::
+
+Most of the tokens shown are regular words, but some words are broken up into two or more tokens. Consider "nobly" in the middle of the text. It is a combination of two tokens, "nob" and "ly". Similarly, "consecrate" is composed of "conse" and "crate", while "consecrated" is "conse" + "cr" + "ated".
+
+At each step in generating a response, the AI looks at what has been generated so far and seeks to add another likely token to it. "Likely" is taken to be in the context of up to hundreds or thousands of already generated tokens. 
+
+Suppose that the response formed so far is, "It was a dark and stormy ...." The job of the AI generator is to select the next token to add to the phrase. For this purpose, the generator looks to a list of possible tokens. There are for some AIs about 50,000 of these tokens; the same set is used for each step of the generation. The mechanism of the AI produces, given its training and the prompt given the AI, a probability for each of these 50,000 tokens.
+
+:::
+ <!-- end of exr-leg-pitch-stair -->

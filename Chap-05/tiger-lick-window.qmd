@@ -1,0 +1,27 @@
+<!--
+id: "tiger-lick-window"
+created: "Wed Jan 28 09:46:50 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 5"
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-tiger-lick-window}
+According to `r xf("sec-intro-to-functions")`, what is the definition of a mathematical function?
+
+```{mcq}
+#| label: tlw-1-dkw
+1.  A mathematical concept that converts units associated with quantities.
+1.  A mathematical concept that connects an unknown variable to a desired solution.
+1.  A mechanism that transforms one or more inputs into a corresponding output. [correct]
+1.  A mechanism that transforms one or more inputs into a collection of outputs.
+1.  A graph that passes the horizontal line test.
+1.  A graph that has a horizontal and vertical axis.
+```
+
+:::
+ <!-- end of exr-tiger-lick-window -->

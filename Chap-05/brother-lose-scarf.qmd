@@ -1,0 +1,17 @@
+<!--
+id: "brother-lose-scarf"
+created: "Fri Jan 16 11:23:10 2026"
+attribution: "Dorothy Dickmann"
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-brother-lose-scarf}
+The chapter discusses the distinction between understanding the steps of an algorithm in detail, and understanding enough about the algorithm to be able to operate it. What do you need to understand in order to operate an algorithm? 
+
+`r devoirs_text("bls-1-wlc")`
+:::
+ <!-- end of exr-brother-lose-scarf -->

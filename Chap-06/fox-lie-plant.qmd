@@ -1,0 +1,38 @@
+<!--
+id: "fox-lie-plant"
+created: "Mon Aug 24 17:36:06 2026"
+attribution: DTK
+uses: functions domains 
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fox-lie-plant}
+Try the `heat_index()` function from Chap. 6 (code is in that chaper's sources) with out-of-bounds arguments like T = 115°F and RH = 80% (and ask the students to pull other out-of-bound inputs from the table printed in the chpater).
+
+Talk about function domains.
+
+Give them the updated model to work with and see what you get with the formerly out-of-bounds inputs. Mention that a revised formula is needed because it is now common to see high temperatures that, in 1947 when the original paper was written, were rare.
+
+Comment on why revision is a natural part of model building.
+
+# Step 2: Install the official UC Berkeley heat index package from GitHub
+remotes::install_github("davidromps/heatindex")
+
+# Step 3: Load and run the model (Inputs require Kelvin or Celsius)
+library(heatindex)
+
+# Note: The function uses standard SI units. 
+# For example: 35°C (95°F) and 50% relative humidity:
+temp_celsius <- 35
+rh_percentage <- 50
+
+# Calculate the Berkeley Corrected Heat Index
+berkeley_hi <- heatindex(t = temp_celsius, rh = rh_percentage)
+
+print(paste("Berkeley Heat Index (°C):", berkeley_hi))
+:::
+ <!-- end of exr-fox-lie-plant -->

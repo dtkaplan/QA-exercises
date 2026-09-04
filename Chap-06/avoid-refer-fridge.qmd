@@ -1,0 +1,24 @@
+<!--
+id: "avoid-refer-fridge"
+created: "Fri Jan 30 14:00:43 2026"
+attribution: DTK
+use: Chap 06 drill
+status: "ready-to-use"
+chapter: 6
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-avoid-refer-fridge}
+For which core modeling functions is the output bounded on the bottom by zero but unbounded on the top?
+
+```{mcq}
+#| label: arf-1-82kd
+1. `log2()` & `same()`
+2. `hillside()` & `hill()`
+3. `exp2()` & `recip()` [correct]
+4. `same()` & `osc()`
+```
+:::
+ <!-- end of exr-avoid-refer-fridge -->

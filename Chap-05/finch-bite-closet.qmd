@@ -1,0 +1,86 @@
+<!--
+id: "finch-bite-closet"
+created: "Thu Aug 20 12:58:38 2026"
+attribution: DTK
+uses: magnitudes
+description: elaboration on the marking of axes in magnitude plots.
+status: "draft"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+NEED TO IMPORT THE mortality-v-GDP GRAPHICS
+
+::: {#exr-finch-bite-closet}
+@fig-log-axes shows an example based on the mortality versus GDP data. Note that the data points are spread out in the same way as when magnitude is used for the labels; only the labels and tick-mark positions differ.
+
+```{r}
+#| label: C05-finch-bite-closet
+#| warning: false
+#| message: false
+#| echo: false
+#| results: hide
+library(ggiraph)
+library(LSTbook)
+library(ggformula)
+csvname <- "../www/child-mortality-gdp-per-capita.csv"
+
+raw <- readr::read_csv(csvname)
+
+goo <- raw |> select(Entity, Year, `Child mortality rate`, `GDP per capita`) |>
+  filter(Year %in% c(1960,2020)) |>
+  na.omit() |>
+  mutate(year = as.factor(Year)) |>
+  filter(n() == 2, .by = Entity) 
+
+Cuba <- goo |>
+  filter(Entity %in% 
+           c("Cuba", "Algeria", "Bolivia", 
+             "Botswana", "Brazil", "Canada", "Chad", "Chile",
+             "Congo", "Eswatini", "Gabon", "Ghana", "Germany",
+             "Democratic Republic of Congo"))
+
+P0 <- goo |> 
+  gf_point_interactive(`Child mortality rate` ~ `GDP per capita`,
+                       color = ~ year, alpha = 0.6,
+                       tooltip = ~ glue::glue("{Entity} {Year}<br>GDP {signif(`GDP per capita`, 3)}<br>Mortality  {round(`Child mortality rate`,1)}")) |>
+  gf_labs(y = "Child mortality rate (per 1000)", x = "GDP per capita (International Dollars)") 
+
+P1 <- P0 |>
+gf_line_interactive(`Child mortality rate` ~ `GDP per capita`, group = ~ Entity,
+           color = "black", data = Cuba, inherit=FALSE)
+
+# Not using this. Perhaps use in an exercise.
+P2 <- goo |> 
+  mutate(logChild = log10(`Child mortality rate`),
+         logGDP = log10(`GDP per capita`)) |>
+  gf_point_interactive(logChild ~ logGDP, 
+                       color = ~ year, alpha = 0.6,
+                       tooltip = ~ glue::glue("{Entity} {Year}<br>GDP {signif(`GDP per capita`, 3)}<br>Mortality  {round(`Child mortality rate`,1)}")) |>
+  gf_labs(y = "Magnitude of child mortality rate (per 1000)", x = "Magnitude of GDP per capita (International Dollars)") |>
+  gf_line_interactive(log10(`Child mortality rate`) ~ log10(`GDP per capita`),
+          group = ~ Entity, color = "black", data = Cuba, inherit=FALSE)
+
+P3 <- P1 |> gf_refine(scale_x_log10(), scale_y_log10())
+```
+
+::: {.column-page-inset-right}
+```{r}
+#| label: fig-log-axes
+#| fig-cap-location: bottom
+#| echo: false
+#| layout-ncol: 2
+#| fig-cap: "Two ways of labelling the axes in magnitude plots. The points and lines are the same; just the numbers on the two axes are different."
+#| fig-subcap:
+#| - Labels show the original quantity.
+#| - Labels show the magnitude of the original quantity
+P3 |> gf_refine(guides(color = "none"))
+P2 |> gf_refine(guides(color = "none"))
+```
+:::
+
+
+:::
+ <!-- end of exr-finch-bite-closet -->

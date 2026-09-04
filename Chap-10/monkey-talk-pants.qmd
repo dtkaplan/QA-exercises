@@ -1,0 +1,91 @@
+<!--
+id: "monkey-talk-pants"
+created: "Mon Feb 16 14:20:56 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 10
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-monkey-talk-pants}
+It's common in mathematics to look at extremes. When it comes to competing hypotheses, there are two extremes: there is an infinite number of hypotheses in competition; or, there are just two hypotheses in competition. Naturally, it's possible and common to have three competing hypotheses, four, or any other number. But there is no such thing as having just one hypothesis in the competition.
+
+In every case, whether it's comparing two hypotheses, ten, or an infinite number the procedure for calculating the Bayesian posterior probabilities on the hypotheses are the same.
+
+i. You assign a prior to each hypothesis. This can be in the form of a relative probability. For two hypotheses, this will be a pair of numbers, for ten hypotheses this will be a list of 10 numbers, and for an infinite number of hypotheses this will be a function that takes any of the hypothesis as input and produces as output a relative probability.
+
+ii. Having made an observation, you calculate the likelihood of that observation under each of the hypotheses. Again, for two hypotheses this will be a pair of numbers, for ten hypotheses it will be a list of 10 numbers, and for an infinite number of hypotheses this will be a function that takes any of the hypotheses as input and produces a number as output.
+
+iii. Multiply the prior in (1) by the likelihood in (2) to get a posterior, expressed as a *relative* probability. Once again, for two hypotheses, the posterior will be two numbers. For 10 hypotheses 10 numbers. For an infinite number of hypotheses it will be a function.
+
+iv. Cast the relative probability posterior into the form of an absolute probability. This involves adding up all the relative probabilities and dividing each by the sum. For instance, imagine two hypotheses:
+
+Hypothesis | prior | likelihood | relative posterior | absolute posterior
+-----------|-------|------------|--------------------|-----------
+A          | 7     |  0.4       |  0.28    | 0.28 / (0.28 + 0.27) = 0.51
+B          | 3     |  0.9       |  0.27    | 0.27 / (0.28 + 0.27) = 0.49
+
+1. In the above example, what is the odds of hypothesis A?
+
+```{mcq}
+#| label: mtp-1-3ls
+#| inline: true
+1. 3
+2. 7
+3. 7/3 [correct]
+4. 3/7
+```
+
+2. Each of the likelihoods is an absolute probability calculated in its own world, a world where the corresponding hypothesis is true. Is there any requirement for the likelihoods to add up to 1 across all the hypotheses?
+
+```{mcq}
+#| label: mtp-2-k4w
+1. Yes, because that's what it means to be an absolute probability. 
+2. No, because each likelihood is a probability of an outcome in a *different world* as opposed to the probabilities of different outcomes in the same world. [correct]
+```
+
+Now let's make up an example where there are four hypotheses, say four different kinds of watercraft where the observation is seeing the craft with binoculars at a distance of 5 miles:
+
+Hypothesis | Prior  | Likelihood | Relative Posterior | Absolute Posterior
+--------|--------|--------|--------|---------
+Aircraft carrier | 0.01  | 0.8 |
+Luxury yacht | 2 | 0.5 |
+Canoe | 5 | 0.1 |
+Rubber dingy | 8 | 0.01 |
+
+Note that the priors reflect a genuine reality: there are many more rubber dingys and canoes than yachts or aircraft carriers.
+
+3. Give a sensible explanation of why the likelihood for the aircraft carrier is 80 times that for a rubber dingy.
+
+`r devoirs::devoirs_text("mtp-3-i2oe")`
+
+4. Which of the four hypotheses has the greatest posterior probability?
+
+```{mcq}
+#| label: mtp-4-3dl
+1. Aircraft carrier
+2. Luxury yacht [correct]
+3. Canoe
+4. Rubber Dingy
+```
+
+5. You can compute the relative posterior for each hypothesis by a simple multiplication of the numbers on that hypothesis's row in the table. 
+
+`r devoirsTF(FALSE, "mtp-5-cks")` You can likewise find each absolute posterior probability by using just the entries in that row.
+
+6. What is the absolute probability, given the observation, of the craft being a luxury yacht? (Pick the closest answer.)
+
+```{mcq}
+#| label: mtp-6-pwd
+#| inline: true
+1. 0.5%
+2. 5%
+3. 30%
+4. 65% [correct]
+```
+
+
+:::
+ <!-- end of exr-monkey-talk-pants -->

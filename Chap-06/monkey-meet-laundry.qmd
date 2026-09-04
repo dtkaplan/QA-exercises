@@ -1,0 +1,25 @@
+<!--
+id: "monkey-meet-laundry"
+created: "Fri Jan 30 16:47:21 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-monkey-meet-laundry}
+The function `exp2()` ...
+
+```{mcq}
+#| label: d06-mml-ldx
+1. goes up from a baseline and then back down to the baseline
+2. the output doubles for every unit increase in input [correct]
+3. tells you how many doublings correspond to a given output
+4. decreases quickly at first, then more slowly
+```
+
+:::
+ <!-- end of exr-monkey-meet-laundry -->

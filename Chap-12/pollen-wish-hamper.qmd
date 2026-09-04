@@ -1,0 +1,121 @@
+<!--
+id: "pollen-wish-hamper"
+created: "Sat Feb 14 12:39:35 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pollen-wish-hamper}
+An important task for quantitative reasoning is evaluating evidence for a claim. Non-Bayesian statistical methodology can offer great insight so long as data can be collected in a repeatable and reliable way as in a laboratory experiment. The logic of non-Bayesian statistics is based on *making assumptions* that the data meet the required standards and have the properties needed for the techniques to give a correct answer. And, for the idea of a "correct" answer to apply at all, non-Bayesian statistics limits its purview to mathematically idealized questions that often do not directly target the questions of actual interest. An example: the "fail to reject" the Null Hypothesis that is at the heart of frequentist statistics.
+
+In his autobiography, Benjamin Franklin (1706-1790), gave a good description of the personality trait of requiring mathematically correct answers:
+
+> Thomas Godfrey, a self-taught mathematician, great in his way, and
+afterward inventor of what is now called Hadley's Quadrant. But he knew
+little out of his way, and was not a pleasing companion; as, like most
+great mathematicians I have met with, he expected universal precision in
+everything said, or was for ever denying or distinguishing upon trifles,
+to the disturbance of all conversation. He soon left us.*
+
+Often, useful quantitative reasoning accepts uncertainty and imprecision as inevitable and recognizes that precise statements about a matter of not usually available. An excellent example of such quantitative reasoning is described in David Spiegelhalter's *The Art of Statistics* and is based on a 2014 report published in *Nature*: "[Identification of the remains of King Richard III](https://www.nature.com/articles/ncomms6631)."
+
+Richard III was killed on August 22, 1485 at the Battle of Bosworth, aged 32. He was buried in the town of Leicester in the medieval church of the Grey Friars. The church was torn down on the orders of Henry VIII in about 1540. The location of the church is documented but there are no grave markers and, today, the site is occupied by a car parking lot. Around 2012, an interdisciplinary group---archeologists, anthropologists, geneticists, historians, etc.---attempted to locate Richard's skeleton. Digging at a likely location in the parking lot let almost immediately to a skeleton.
+
+Finding a skeleton on the site of a church graveyard is hardly surprising, but was the skeleton Richard's? The team sought to evaluate the evidence provided by the skeleton and, importantly, the recovered DNA from the skeleton.
+
+The *Nature* report states:
+
+> To obtain a probability that Skeleton 1 is that of Richard III, we considered the non-genetic data (radiocarbon data, estimated age at death, sex, presence of scoliosis and presence of perimortem wounds) together with the genetic data (mtDNA and Y-chromosome). For each data type, we computed likelihoods for the observed data under hypothesis 1 (H1—that Skeleton 1 is Richard III) and under hypothesis 2 (H2—that Skeleton 1 is not Richard III).
+
+Here are the non-genetic observations:
+
+> The skeleton was that of a male aged 30 to 34 years, with severe scoliosis rendering one shoulder higher than the other, with numerous perimortem battle injuries  Modelled radiocarbon dating ... [indicated death in the interval] 1456–1530 AD at 95.4% probability.
+
+1. Age and sex of skeleton. Given the historical facts, a "male aged 30 to 34 years" is absolutely consistent with the observations. So, under hypothesis 1, the likelihood would be high, perhaps 75%. On the other hand, under hypothesis 2, it's fair to see the likelihood as the product of 1/2 (for sex) and perhaps 1/5 given the age distribution at death of the sorts of people likely to be buried at the church. The likelihood ratio is divides the likelihood under hypothesis 1 by the likelihood under hypothesis 2, something like 0.75 / 0.10 = 7.5. On the verbal scale, this is "weak support" for hypothesis 1.
+
+2. Radiocarbon dating to AD 1456-1530. Given the historical record, this is obviously consistent with hypothesis 1, so the likelihood is high (say, 50%) under hypothesis 1. But under hypothesis 2, given the location and age of the church, it's hardly surprising that any skeleton would date to this period. Let's call it a likelihood of 1/3 to 1/4.  The likelihood ratio is thus about 1.5 to 2, also "weak support." It would have been much more stronger evidence, **against hypothesis 1**, if the skeleton dated to 1400 or 1600.
+
+3. Scoliosis. Under hypothesis 1, the likelihood of this evidence is high. Under hypothesis 2, the likelihood can be estimated from the fraction of skeletons found with scoliosis, perhaps 1 in 300. The likelihood ratio can reasonably be assigned as 200, "moderately strong evidence."
+
+4. Wounds inflicted after death. Under hypothesis 1, this likelihood is high, but hard to know how high. (The War of the Roses, for which Richard's death marked the end, was bitterly fought.) Under hypothesis 2, one could look at how often post-mortem wounds are found in such burials. The researchers assigned a likelihood ratio of 40: "moderate support."
+
+A. Given the evidence presented in (1) - (4), what's a reasonable estimate of the overall likelihood ratio?
+
+```{mcq}
+#| label: pwh-A-3ks
+#| inline: true
+1. 1000
+2. 5,000
+2. 10,000 
+3. 100,000 [correct]
+4. 1,000,000
+5. 5,000,000
+6. 10,000,000
+```
+
+B. What does (A) correspond to on the verbal scale of strength of evidence (in favor of hypothesis 1)?
+
+```{mcq}
+#| label: pwh-B-kdw
+#| inline: true
+1. Moderate support
+2. Moderately strong support
+3. Strong support
+4. Very strong support [correct]
+5. Extremely strong support
+```
+
+The genetic evidence is mixed. Richard had no children, but there are two kinds of DNA that are well conserved over time. The first is DNA from the Y chromosome, which is passed patrillinearly from generation to generation. The second is mitochondrial DNA which is passed exclusively from the mother. 
+
+5. To find a continuous line of male descendents, it was necessary to go back to Richard's great-great-grandfather, Edward III (1312-1377). Edward's descendents tracked through the male line, reach the present after 18-20 generations. No match was found between Edward living descendants and Richard's Y-chromosome DNA. The likelihood of no match is high, practically 1, under hypothesis 2. But even under hypothesis 1, given the many opportunties for false paternity in the many generations between Edward and today's male descendents, the likelihood of no match is something like 10%.
+
+C. Combine the two likelihoods given in (5) to find the likelihood ratio of hypothesis 1 versus hypothesis 2 under the observation of no genetic match. Which number is closest?
+
+```{mcq}
+#| label: pwh-C-k2l
+#| inline: true
+1. 0.01
+2. 0.1 [correct]
+3. 1.0
+4. 10
+5. 100
+```
+
+6. Mitochondrial DNA. Richard had a sister, and the sister has a continuous line of female descendents (through 17 to 19 generations) to the present. These descendants provided a strong genetic match. The likelihood ratio was estimated by the researchers to be approximately 500: "moderately strong support."
+
+D. Combining the likelihood ratios for (1) through (6), what is the overall likelihood ratio in favor of hypothesis 1?
+
+```{mcq}
+#| label: pwh-D-8wd
+#| inline: true
+1. 1000
+2. 5000
+3. 10,000 
+4. 100,000 
+5. 1,000,000
+6. 5,000,000 [correct]
+7. 10,000,000
+```
+
+E. What is the verbal description of the overall likelihood ratio found in (D)?
+
+```{mcq}
+#| label: pwh-E-kdw
+#| inline: true
+1. Moderate support
+2. Moderately strong support
+3. Strong support
+4. Very strong support 
+5. Extremely strong support [correct]
+```
+
+Each of the individual likelihoods (1) - (6) is subject to dispute, but only within a limited range, say, a factor of roughly 2. This renders the overall likelihood uncertain on a numeric scale, but much less uncertain on a logarithmic scale. Note that the likelihood ratios corresponding to the verbal scale are spaced logarithmally. In mathematics, being uncertain by a factor of 10 is considered unacceptable precession for calling an answer "correct." But on the logarithmic likelihood scale, a factor of 10 is not necessarily large.
+
+
+
+:::
+ <!-- end of exr-pollen-wish-hamper -->

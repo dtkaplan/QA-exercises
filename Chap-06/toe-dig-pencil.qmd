@@ -1,0 +1,33 @@
+<!--
+id: "toe-dig-pencil"
+created: "Fri Jan 30 17:06:32 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-toe-dig-pencil}
+```{r}
+#| echo: false
+slice_plot(sin(2*pi*x) ~ x, domain(x = 0:3), npts = 500) |>
+  gf_labs(y = "output", x = "input") |>
+  gf_theme(theme_minimal(base_size = 16))
+```
+
+Which core modeling function does this graph show?
+
+```{mcq}
+#| label: tdp-1-lfr
+#| inline: true
+1. hill()
+2. hillside()
+3. osc() [correct]
+4. same()
+```
+
+:::
+ <!-- end of exr-toe-dig-pencil -->

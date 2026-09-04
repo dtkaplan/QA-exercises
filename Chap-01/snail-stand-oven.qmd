@@ -1,0 +1,36 @@
+<!--
+id: "snail-stand-oven"
+created: "Fri Aug 14 07:40:47 2026"
+attribution: DTK
+use: discussion topic
+chapter: 1
+status: ready-to-go
+mode: discussion
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-snail-stand-oven}
+[From AI] cognitive bias is a predictable, systematic error in thinking that occurs when the brain tries to simplify complex information. It acts like an automated mental filter, causing people to misinterpret data, make irrational judgments, and draw faulty conclusions despite evidence to the contrary.
+ 
+Why They Happen
+
+- Mental shortcuts: The brain uses heuristics (rules of thumb) to make quick decisions.Brain protection: It filters out thousands of daily sensory inputs to prevent information overload.
+- Survival evolution: Quick, instinctual reactions were historically favored over slow, logical analysis.
+ 
+Common Examples
+
+- Confirmation bias: Noticing and remembering only the data that matches your current beliefs.
+ 
+- Anchoring bias: Relying too heavily on the very first piece of information you hear.
+
+- Availability bias: Overestimating risks based on how easily a scary memory comes to mind.
+ 
+- Dunning-Kruger effect: Believing you are an expert in a subject when you actually know very little.
+
+- Bias vs. Logical FallacyBias: An unconscious, psychological glitch in how your brain processes reality.
+
+- Fallacy: A flaw or error in the actual construction of an argument or logic.
+
+:::
+ <!-- end of exr-snail-stand-oven -->

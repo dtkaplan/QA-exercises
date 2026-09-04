@@ -1,0 +1,73 @@
+<!--
+id: "hyena-tell-door"
+created: "Wed Jul 16 14:01:37 2025"
+attribution: DTK
+chapter: 9
+-->
+
+Consider the function plotted below:
+
+```{r}
+#| echo: false
+#| label: C09-glwpa
+f <- mosaicCalc::doodle_fun(~ x & y, seed = 1023)
+contour_plot(f(u, v) + 1~ u & v, domain(u=-5:5, v=-5:5))
+```
+
+```{mcq}
+#| label: hyena-tell-door-names
+#| inline: true
+#| leed: "What are the names of the inputs to the function?"
+1. x & y
+2. just u
+3. u & v [correct]
+```
+
+```{mcq}
+#| label: hyena-tell-door-spacing
+#| inline: true
+#| leed: "The contours show the *output* of the function. How far apart are adjacent contours spaced in terms of the output?"
+1. 1 unit [correct]
+2. 2 units [hint: The *labels* are spaced by 2 units, but only every other contour is labelled.]
+3. No way to know.
+```
+
+```{mcq}
+#| label: hyena-tell-door-argmax
+#| inline: true
+#| leed: Which of these input points are closest to the location of the peak of the terrain?
+1. u = 4, v = 2
+2. u = 2, v = 2 [correct]
+3. u = 0, v = 5 
+```
+
+```{mcq}
+#| label: hyena-tell-door-highest
+#| inline: true
+#| leed: What is the highest function output shown.
+1. Between 6 and 7 [hint: The peak is *inside* the 7 contour.]
+2. Exactly 7.5 [hint: You can't tell the exact value for inputs that are not exactly on a contour.]
+3. Between 7 and 8 [correct]
+```
+
+```{mcq}
+#| label: hyena-tell-door-lowest
+#| inline: true
+#| leed: What is the *lowest* function output shown.
+1. Between -3 and -4 [hint: Since the contours surrounding -4 have a higher (less negative) value, the values inside the -4 contour have a lower (more negative) value than -4.]
+2. Between -4 and -5. [correct]
+3. Exactly - 4.5 [hint: You can't tell the exact value for inputs that are not exactly on a contour.]
+```
+
+```{mcq}
+#| label: hyena-tell-door-shallow
+#| inline: true
+#| leed: There is a shallow bowl near $u = 3$. What is the value of input $v$ at the bottom of the bowl? (Pick the closest answer.)
+1. 1
+2. 0
+3. -1
+4. -2 
+5. -3 [correct]
+```
+
+ <!-- end of exr-hyena-tell-door -->

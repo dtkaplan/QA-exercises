@@ -1,0 +1,22 @@
+<!--
+id: "kitten-bend-door"
+created: "Sat Nov 29 08:37:10 2025"
+attribution: TBA
+status: "draft"
+chapter: 2
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-kitten-bend-door}
+DO WE WANT TO BRING IN mass vs weight as different operationalizations?
+
+Mass as operationalized on a scale by the force on a spring, or the force produced by a leveraged counterweight on a balance.
+
+Similarly, you may recall that weight ({{< var dim.mass >}} {{< var dim.length >}} {{< var dim.time >}}^-2^) is not the same kind of thing as mass ({{ var dim.mass >}}). The idea of weight goes back to antiquity, but "mass" is much more recent, emerging from Newton's work with gravity in the late 1600s.
+
+:::
+ <!-- end of exr-kitten-bend-door -->

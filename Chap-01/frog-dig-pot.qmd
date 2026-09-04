@@ -1,0 +1,23 @@
+<!--
+id: "frog-dig-pot"
+created: "Sun Dec 28 13:50:07 2025"
+attribution: DTK
+use: "Reading Question Chap 1"
+status: "ready-to-use"
+chapter: 1
+mode: "activity"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-frog-dig-pot}
+In the SIR model presented in the chapter, leave the "social distance" and "isolation percent" parameters at 20, and set the "initial cases" to 1. Then, by pressing repeatedly the "up" control in the initial cases box, see how the epidemic plays out and how the pattern of each simulated epidemic changes as the number of initial cases increases.
+
+a. Is there a *tipping point*?
+b. Give a short description of the pattern you see as the number of initial cases increases.
+    
+`r devoirs::devoirs_text("RQ-models-3")`
+:::
+ <!-- end of exr-frog-dig-pot -->

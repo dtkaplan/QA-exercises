@@ -1,0 +1,18 @@
+<!--
+id: "doe-keep-glasses"
+created: "Sun Nov  9 08:54:41 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-doe-keep-glasses}
+Example: Daily high, extreme heat, what happens when you move the mean a little bit to the chances of extreme heat.
+
+:::
+ <!-- end of exr-doe-keep-glasses -->

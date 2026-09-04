@@ -1,0 +1,271 @@
+---
+title: "Chapter 03 Catalog"
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+<style>
+.theorem-title {
+  display: none;
+}
+
+.panel-tabset {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20%) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.panel-tabset > .nav-tabs {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-tabset > .tab-content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .panel-tabset {
+    display: block;
+  }
+
+  .panel-tabset > .nav-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  .panel-tabset > .nav-tabs .nav-link {
+    width: auto;
+  }
+}
+</style>
+{{< include ../exercise-header.qmd >}}
+
+::: {.callout-note collapse="true" title="Group: dimensions"}
+::: {.panel-tabset collapse=true}
+## aspen-buy-chair
+
+
+> File: Chap-03/aspen-buy-chair.qmd
+
+{{< include aspen-buy-chair.qmd >}}
+
+## snake-show-knife
+
+
+> File: Chap-03/snake-show-knife.qmd
+
+{{< include snake-show-knife.qmd >}}
+
+## titmouse-leave-shelf
+
+
+> File: Chap-03/titmouse-leave-shelf.qmd
+
+{{< include titmouse-leave-shelf.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: reading-question"}
+::: {.panel-tabset collapse=true}
+## beech-understand-cotton
+
+
+> File: Chap-03/beech-understand-cotton.qmd
+
+{{< include beech-understand-cotton.qmd >}}
+
+## croc-come-blanket
+
+
+> File: Chap-03/croc-come-blanket.qmd
+
+{{< include croc-come-blanket.qmd >}}
+
+## falcon-have-book
+
+
+> File: Chap-03/falcon-have-book.qmd
+
+{{< include falcon-have-book.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: unit conversion"}
+::: {.panel-tabset collapse=true}
+## avoid-get-laundry
+
+
+> File: Chap-03/avoid-get-laundry.qmd
+
+{{< include avoid-get-laundry.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: units"}
+::: {.panel-tabset collapse=true}
+## ape-sell-plate
+
+
+> File: Chap-03/ape-sell-plate.qmd
+
+{{< include ape-sell-plate.qmd >}}
+
+## beech-find-pot
+
+
+> File: Chap-03/beech-find-pot.qmd
+> Status: sketch
+
+
+{{< include beech-find-pot.qmd >}}
+
+## deer-put-cotton
+
+
+> File: Chap-03/deer-put-cotton.qmd
+
+{{< include deer-put-cotton.qmd >}}
+
+## octopus-begin-saucer
+
+
+> File: Chap-03/octopus-begin-saucer.qmd
+
+{{< include octopus-begin-saucer.qmd >}}
+
+## pine-speak-shelf
+
+
+> File: Chap-03/pine-speak-shelf.qmd
+
+{{< include pine-speak-shelf.qmd >}}
+
+## spider-bid-plate
+
+
+> File: Chap-03/spider-bid-plate.qmd
+
+{{< include spider-bid-plate.qmd >}}
+
+## titmouse-hide-clock
+
+
+> File: Chap-03/titmouse-hide-clock.qmd
+
+{{< include titmouse-hide-clock.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: xx-draft"}
+::: {.panel-tabset collapse=true}
+## bird-run-roof
+
+
+> File: Chap-03/bird-run-roof.qmd
+> Status: draft
+
+
+{{< include bird-run-roof.qmd >}}
+
+## girl-choose-piano
+
+
+> File: Chap-03/girl-choose-piano.qmd
+> Status: sketch
+
+
+{{< include girl-choose-piano.qmd >}}
+
+## jellyfish-look-bulb
+
+
+> File: Chap-03/jellyfish-look-bulb.qmd
+> Status: draft
+
+
+{{< include jellyfish-look-bulb.qmd >}}
+
+## kid-bend-book
+
+
+> File: Chap-03/kid-bend-book.qmd
+> Status: sketch
+
+
+{{< include kid-bend-book.qmd >}}
+
+## kitten-light-pantry
+
+
+> File: Chap-03/kitten-light-pantry.qmd
+> Status: sketch
+
+
+{{< include kitten-light-pantry.qmd >}}
+
+## lobster-tear-clock
+
+
+> File: Chap-03/lobster-tear-clock.qmd
+> Status: sketch
+
+
+{{< include lobster-tear-clock.qmd >}}
+
+## oak-lay-jacket
+
+
+> File: Chap-03/oak-lay-jacket.qmd
+> Status: draft
+
+
+{{< include oak-lay-jacket.qmd >}}
+
+## seal-tug-kitchen
+
+
+> File: Chap-03/seal-tug-kitchen.qmd
+> Status: sketch
+
+
+{{< include seal-tug-kitchen.qmd >}}
+
+## spider-forget-kayak
+
+
+> File: Chap-03/spider-forget-kayak.qmd
+> Status: sketch
+
+
+{{< include spider-forget-kayak.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: unclassified"}
+::: {.panel-tabset collapse=true}
+## deer-trim-coat
+
+
+> File: Chap-03/deer-trim-coat.qmd
+> Status: sketch
+
+
+{{< include deer-trim-coat.qmd >}}
+
+:::
+:::
+

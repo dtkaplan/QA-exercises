@@ -1,0 +1,36 @@
+<!--
+id: "deer-break-chair"
+created: "Thu Nov 20 11:17:21 2025"
+attribution: TBA
+status: "sketch"
+chapter: 11
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-deer-break-chair}
+#### Example
+
+
+SOME MISCELLANEOUS IDEAS FOR EXERCISES
+
+Likelihood for observing a car going 25,000 miles without an accident.
+
+
+How is it that we could calculate the proper balance between Natal and Cancer by looking just at the derivative function, QALYs per dollar, and not the QALY vs cost function itself.
+
+#### Example
+
+Looking at the mean time between events for the two hypotheses in Chap 11 on the interval between events. 
+
+
+
+#### Tie to uncertainty chapter
+
+Referring to `r xf("fig-cal-per-mile-distribution")`, explain how the **cumulative distribution**, with the output rescaled to 0 to 1, provides the official definition of the 95% interval.
+
+:::
+ <!-- end of exr-deer-break-chair -->

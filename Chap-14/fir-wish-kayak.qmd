@@ -1,0 +1,18 @@
+<!--
+id: "fir-wish-kayak"
+created: "Wed Mar  4 17:07:51 2026"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fir-wish-kayak}
+Solving with the gradient
+
+STILL USE THE GRADIENT, BUT LOOK AT WHETHER THE FUNCTION OUTPUT is greater or lesser than the desired value, then step forward or backward respectively.
+
+:::
+ <!-- end of exr-fir-wish-kayak -->

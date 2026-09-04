@@ -1,0 +1,24 @@
+<!--
+id: "squirrel-type-sofa"
+created: "Fri Jan 30 14:01:15 2026"
+attribution: DTK
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-squirrel-type-sofa}
+Which core modeling functions have an output that is unbounded on *both* the top and the bottom?
+
+```{mcq}
+#| label: sts-1-3cw
+1. `log2()` & `same()` [correct]
+2. `hillside()` & `hill()`
+3. `exp2()` & `recip()` 
+4. `same()` & `osc()`
+```
+:::
+ <!-- end of exr-squirrel-type-sofa -->

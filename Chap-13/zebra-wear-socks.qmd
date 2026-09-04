@@ -1,0 +1,15 @@
+<!--
+id: "zebra-wear-socks"
+created: "Tue Sep 30 13:01:37 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-zebra-wear-socks}
+Simple accumulation: growth dynamics: one variable, logistic, sunken gaussian (difficulty finding mate, ...).
+:::
+ <!-- end of exr-zebra-wear-socks -->

@@ -1,0 +1,23 @@
+<!--
+id: "lamb-fly-clock"
+created: "Sun Feb  1 08:22:37 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 9
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lamb-fly-clock}
+Which of the following definitions creates a linear combination of the functions $f(x)$ and $g(x)$?
+
+```{mcq}
+#| label: lfc-1-kdw
+A. $h(x) \equiv f(x) \times g(x)$
+B. $h(x) \equiv f(g(x))$
+C. $h(x) \equiv a \cdot f(x) + b \cdot g(x)$ [correct]
+D. $h(x) \equiv \frac{f(x)}{g(x)}$
+```
+:::
+ <!-- end of exr-lamb-fly-clock -->

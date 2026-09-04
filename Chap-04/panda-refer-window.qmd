@@ -1,0 +1,75 @@
+<!--
+id: "panda-refer-window"
+created: "Tue Oct  7 14:01:47 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-panda-refer-window}
+There are several ways to measure *transportation* services. Let's focus here on the transportation of *people*. The *distance* of transport is, obviously, an important aspect of transportation services. So it the number of people transported. 
+
+In a proper measure of transportation services, it seems reasonable that the longer the distance, the more transportation being provided, so long as the number of passengers is the same. Similarly, the more passengers carried, so long as the distance is the same, the more transportation is provided.
+
+1. Which of the following is a sensible way to measure the amount of transportation?
+
+```{mcq}
+#| label: prw-base-wlci
+1. People plus miles [hint: You can't add quantities with different dimensions.]
+2. People per mile [hint: If the number of miles goes up, so should the amount of transportation services. "Per mile" doesn't do this.]
+3. Miles per person [hint: If the number of persons goes up, so should the amount of transportation services. "Per person" doesn't do this]
+4. Miles $\times \sqrt{\strut\text{person}}$ [hint: The square-root of a person. That makes no sense. In a jokey way, it would be one of the parents if the person multiplied with themselves!]
+5. Persons $\times$ miles [correct]
+```
+
+2. 100 passengers are on a flight covering 500 miles. How much transportation service is provided to the group of passengers?
+
+```{mcq}
+#| label: prw-2-cksd
+1. 500 passenger miles
+2. 5000 passenger miles
+3. 50,000 passenger miles [correct]
+4. 500,000 passenger miles.
+```
+
+Many people are concerned with the amount of fuel used in air travel. For modern jets (with a full load of passengers), the amount of fuel used is approximately 0.02 to 0.03 gallons per passenger mile.
+
+3. What is the {{< var dim.dim >}} of "gallons per passenger mile?"
+
+```{mcq}
+#| label: prw-3-kdlw
+1. L^4 C^-1^
+2. L^3 C^-1^
+3. L^2 C^-1^ [correct]
+4. L C^-1^
+```
+
+4. People in the US are used to measuring *fuel economy* in "miles per gallon." This contrasts with the style in much of the rest of the world the unit is "liters per 100 km." Assume that a group of friends is travelling 600 miles to a concert. They could fly or drive. If there are three friends, how many gallons of fuel will the one-way air travel consume (for these three passengers)? (Pick the closest answer.)
+
+```{mcq}
+#| label: prw-4-cksd
+1. 15 gallons
+2. 30 gallons [correct]
+3. 150 gallons 
+4. 300 gallons
+```
+
+5. Now imagine the three friends are carpooling to the concert in a car that gets 30 miles per gallon. How many gallons of fuel will the one-way drive consume for all three passengers. (Pick the closest answer.)
+
+```{mcq}
+#| label: prw-5-wels
+1. 20 gallons [correct]
+2. 60 gallons
+3. 200 gallons
+4. 300 gallons
+```
+
+6. Some people reason that it does not consume any fuel for the three friends to fly, since even if they didn't fly the plane would consume the same amount of fuel. Are you sympathetic to this argument? Explain why or why not.
+
+`r devoirs::devoirs_text("prw-marginal-ywls")`
+
+:::
+ <!-- end of exr-panda-refer-window -->

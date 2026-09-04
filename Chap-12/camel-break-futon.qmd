@@ -1,0 +1,59 @@
+<!--
+id: "camel-break-futon"
+created: "Tue Oct 28 11:29:55 2025"
+attribution: TBA
+status: "draft"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-camel-break-futon}
+
+Consider the risk of a serious-injury-producing automobile accident. The mileage driven until the next such accident is unknown. But we can frame a hypothesis: the relative probability of the mileage until the next accident is an exponential function (`r xf("sec-uncertainty")`, BUT GIVE A MORE SPECIFIC LINK when you have it) with a rate of 1 in 50,000 miles.
+
+There is an infinite number of other hypotheses that might be applied to the automobile-accident setting. For example, an exponential distribution with a rate of 1 in 72,983.5 miles. Or, perhaps a uniform distribution between a minimum of 138 miles and 21,709 miles. This might be starting to sound silly, but Bayesian reasoning saves the day by adding an additional concept: that every hypothesis can be assigned a relative "*goodness*." There are two components that go into finding the "goodness" of a hypothesis. One of these is called "prior belief" and will be introduced in `r xf("sec-bayes")`. The other is called "**likelihood**."
+
+
+To illustrate, let's work with the specific hypothesis that "the relative probability of the mileage until the next accident is exponentially distributed with a mean of 50,000 miles." We are keeping track of a car. Suppose the car has an accident at 38,231 miles. To find the likelihood, simply evaluate the probability distribution at the observed value. Here's the relevant computing command for the relative probability:
+
+```{r}
+#| label: C12-adevq
+dexp(38231, rate = 1 / 50000)
+```
+
+We can calculate the likelihood for any and all of the other hypotheses we are consideration. For example, we earlier mentioned a different hypothesis: that the exponential distribution has a rate of 1 in 72,983.5 miles. Here's the calculation of the likelihood:
+
+```{r}
+#| label: C12-ukplx
+dexp(38231, rate = 1 / 72983.5)
+```
+
+Now a third hypothesis for the accident mileage: a uniform distribution between a minimum of 138 miles and 21,709 miles. 
+
+```{r}
+#| label: C12-gfzfr
+dunif(38231, min = 138, max = 21709)
+```
+
+The observation of the accident at 38,231 miles produces different likelihoods for the three different hypotheses.
+
+It's useful to consider a **likelihood function** that tells us the likelihood induced by an observation at 38,231 miles for *each* of a large set of hypotheses. Here's the likelihood function for an exponential distribution: it takes the form of likelihood versus the hypothesized rate. 
+
+```{r}
+#| label: C12-ircar
+slice_plot(
+  dexp(38231, rate = 1 / miles) ~ miles,
+  domain(miles = 3000:1000000),
+  npts = 500
+) |>
+  #gf_refine(scale_x_log10()) |>
+  gf_labs(x = "Rate: 1 per n miles",
+          y = "Likelihood of 38,231 miles observation")
+```
+
+:::
+ <!-- end of exr-camel-break-futon -->

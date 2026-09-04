@@ -1,0 +1,42 @@
+<!--
+id: "duck-swim-candy"
+created: "Mon Feb 23 17:15:06 2026"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-duck-swim-candy}
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| label: C13-ioqfp
+F <- hillside
+f <- hill
+
+slice_plot(F(x) ~ x, domain(x=-3:3)) |>
+  gf_theme(theme_minimal(base_size = 16))
+slice_plot(f(x) ~ x, domain(x = -3:3)) |>
+  gf_theme(theme_minimal(base_size = 16))
+```
+
+1. Which of the two functions has the shape of a core modeling function, left, right, or both? 
+
+`r devoirs::devoirs_set(c("left", "right", "both"), correct="both", id="dsc-1-cls")`
+
+
+2. Which core modeling function(s) are shown?
+
+```{mcq}
+#| label: dsc-2-3d
+1. hill() and recip()
+2. hill() and hillside() [correct]
+3. Just recip()
+4. Just log2()
+```
+
+:::
+ <!-- end of exr-duck-swim-candy -->

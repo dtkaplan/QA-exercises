@@ -1,0 +1,29 @@
+<!--
+id: "ant-spend-shoe"
+created: "Fri Jan  9 13:01:39 2026"
+attribution: TBA
+status: "draft"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ant-spend-shoe}
+A car typically has instruments to measure:
+
+i. speed (speedometer)
+ii. mileage (odometer)
+iii. fuel level
+
+Fancier cars also show:
+
+iv. instananeous (second-by-second) fuel economy (usually a menu item in the display)
+v. tire pressure
+
+For each of these, say whether it is a rate, a rate of change, or something else. And, for each, give a very brief explanation of your answer.
+
+`r devoirs::devoirs_text("asps-1-dwle", rows = 6, contents = "i.\nii.\niii.\niv.\nv.\n")`
+
+:::
+ <!-- end of exr-ant-spend-shoe -->

@@ -1,0 +1,28 @@
+<!--
+id: "calf-sing-blanket"
+created: "Thu Aug 20 10:19:17 2026"
+attribution: DTK
+uses: magnitudes
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-calf-sing-blanket}
+
+A point about how logarithms of negative numbers don't exist (at least when considering real numbers.)
+
+Magnitudes are inappropriate whenever zero or negative values have meaning for the quantity under consideration. Consider this short list of numbers and their magnitudes:
+
+Quantity | 1000 | 100 | 10 | 1 | 0.1 | 0.01 | 0.001
+:--------|------|-----|----|---|-----|------|-------
+Magnitude | 3 | 2   | 1  | 0 | -1  | -2   | -3
+
+Continuing the list to cover 0.0001, 0.00001, and so on will never reach a column where a zero or negative quantity appears.
+
+Maybe add an example about negative bases and logs of negative numbers. The R software is set up to default to a number system of real numbers, unless the user specifically asks for imaginary numbers to be included. 
+
+:::
+ <!-- end of exr-calf-sing-blanket -->

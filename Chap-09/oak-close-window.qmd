@@ -1,0 +1,23 @@
+<!--
+id: "oak-close-window"
+created: "Sun Feb  1 08:52:01 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 9
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-oak-close-window}
+"Pipelining" refers to feeding the output of one function into the input of another. If $g(x)$ is the interior function and $f(x)$ is the exterior function, how is this written in algebraic notation?
+
+```{mcq}
+#| label: ocw-1-8ef
+1. $fg(x)$ [hint: Sorry. Remember that the parentheses are the punctuation that says 'this is the input to the function.']
+2. $g(f(x))$ [hint: No. Think about the word "interior."]
+3. $f(x) + g(x)$ [hint: Nope. This is a linear combination of f(x) and g(x).]
+4. $f(g(x))$ [correct]
+```
+:::
+ <!-- end of exr-oak-close-window -->

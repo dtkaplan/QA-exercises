@@ -1,0 +1,17 @@
+<!--
+id: "bobcat-fight-room"
+created: "Sun Dec 28 14:07:26 2025"
+attribution: TBA
+status: "sketch"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bobcat-fight-room}
+What is the non-mantissa part of a number in scientific notation. (If you earlier learned another name, give that. But also give the one used in the chapter.)
+
+`r devoirs::devoirs_text("RQ-mag-other")`
+:::
+ <!-- end of exr-bobcat-fight-room -->

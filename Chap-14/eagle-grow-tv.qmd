@@ -1,0 +1,18 @@
+<!--
+id: "eagle-grow-tv"
+created: "Fri Jan  9 17:37:02 2026"
+attribution: Dave Ruth
+use: Chapter 3 reading questions
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-grow-tv}
+The text discusses "per capita" measurements. When is it more useful to look at a per capita rate (like GDP per person) rather than a total amount (total GDP) when comparing different countries?
+
+`r devoirs_text("egt-dkwe")`
+:::
+ <!-- end of exr-eagle-grow-tv -->

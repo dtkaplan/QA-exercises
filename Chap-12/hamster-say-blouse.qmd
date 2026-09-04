@@ -1,0 +1,20 @@
+<!--
+id: "hamster-say-blouse"
+created: "Fri Dec 19 07:53:34 2025"
+attribution: TBA
+status: "sketch"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-hamster-say-blouse}
+Spotting derivatives in the wild
+
+- Stock and flow. START WITH A SIMPLE, physical example: A bathtub filling up with water. Where does the water come from: the faucet. There's also a loss of water through the drain. Amount of water is a function of time. The rate of change in that function is the flow rate. FOCUS ON THE UNITS.
+
+:::
+ <!-- end of exr-hamster-say-blouse -->

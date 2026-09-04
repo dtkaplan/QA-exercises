@@ -1,0 +1,27 @@
+<!--
+id: "pine-sail-kitchen"
+created: "Fri Jan 30 14:21:21 2026"
+attribution: DTK
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pine-sail-kitchen}
+The graph shows one of the core modeling functions but with *either* input scaling, output scaling, or none.
+
+```{r}
+#| echo: false
+#| label: C07-xzfjw
+slice_plot(exp2(x/3)~ x, domain(x = -10:10)) |>
+  gf_theme(theme_minimal(base_size = 18))
+```
+
+`r devoirs::devoirs_set(id="psk-1-ese", choices = c("input scaling", "output scaling", "none"), correct = "input scaling")`
+
+
+:::
+ <!-- end of exr-pine-sail-kitchen -->

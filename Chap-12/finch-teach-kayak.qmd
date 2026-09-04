@@ -1,0 +1,38 @@
+<!--
+id: "finch-teach-kayak"
+created: "Mon Feb 16 08:31:11 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-finch-teach-kayak}
+There are two outcomes possible: Win or Lose. Your personal opinion is that the relative probabilities of Win and Lose are 15 and 25, respectively. 
+
+1. What's the odds of Win?
+
+```{mcq}
+#| label: ftk-1-k4ld
+1. 2 / 3
+2. 15 / 25 [correct]
+3. 25 / 15 [hint: Sorry, but this is upside down. We want the odds of *Win*, not Lose.]
+4. 15 / (15 + 25) [hint: No. But this is how you would calculate the (absolute) probability of Win.]
+```
+
+2. What's the odds of Lose?
+
+```{mcq}
+#| label: ftk-2-3823
+1. 3 / 2
+2. 15 / 25 [hint: Sorry, but this is upside down. We want the odds of *Lose*, not *Win*.]
+3. 25 / 15 [correct] 
+4. 25 / (15 + 25) [hint: No. But this is how you would calculate the (absolute) probability of Win.]
+```
+
+
+
+:::
+ <!-- end of exr-finch-teach-kayak -->

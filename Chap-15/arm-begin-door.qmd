@@ -1,0 +1,82 @@
+<!--
+id: "arm-begin-door"
+created: "Thu Jan 22 16:50:56 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-arm-begin-door}
+A large ship is cruising at 15 knots (nautical miles per hour). In preparation for a rendez-vous with small boat, the ship reduces the engine power to "standby," that is, zero. Correspondingly, the boat starts to slow. In six minutes (that is, 0.1 hours) the ship has slowed to 7.5 knots. A rough model of the slowing ship's velocity is exponential decay with a halving time of 0.1 hours.
+
+From the point where the ship shifted to standby, how far (in nautical miles) will the ship go before it comes to a negligible speed?
+
+1. Which of these functions is a good model of the ships speed versus time (in hours from the moment it went to standby power) as it slows down? 
+
+```{mcq}
+#| label: abd-1-3kdw
+1. 15 knots * exp2(t / 0.1 hour) [hint: No. The speed decreases over time, so there must be a negative sign in front of the t.]
+2. 15 knots* exp2(-t / 0.1 hour) [correct]
+3. 15 knots * exp2(t * 0.1 hour)  [hint: No. The speed decreases over time, so there must be a negative sign in front of the t.]
+4. 15 knots * exp2(-t * 0.1 hours) [hint: When t= 0.1 hour, this would be exp2(0.01 hours-squared). The argument to exp2(), like all the core modeling functions, must be a dimensionless number, without units.]
+```
+
+2. How fast will the ship be going one-half hour after it switches to standby power? (Hint: how many halving times are there in one-half hour?)
+
+```{mcq}
+#| label: abd-2-ue2
+#| inline: true
+1. 0 knots
+2. 1/4 knot
+3. 1/2 knot [correct]
+4. 1 knot
+5. 2 knots
+```
+
+As you know, the ship's speed is the rate of change of position with respect to time. But we want to know how much the *position* changes. 
+
+3. What mathematical operation will convert the function speed(t) into the function position(t)?
+
+```{mcq}
+#| label: abd-3-73sd
+1. Addition
+2. Multiplication
+3. Differentiation (that is, calculating the rate of change function with respect to t) [hint: No. Differentiating speed gives acceleration, not position.]
+4. Accumulation with respect to t. [correct]
+``` 
+
+The graph below shows position(t) as constructed using the correct mathematical operation from question (3). The red annotations show lines with different slopes.
+
+```{r}
+#| echo: false
+#| label: C15-bskal
+speed <- function(t) 15 * exp2(-t / 0.1)
+pos <- antiD(speed(t) ~ t)
+slice_plot(pos(t) ~ t, domain(t = 0:1)) |>
+  gf_labs(x = "Time since standby (hrs)", y = "Distance travelled (naut. mi.)") |>
+  LSTbook::add_slope_rose(keepers = "pos", x = 0.25, y = 1, scale = 0.25) |>
+  gf_refine(scale_x_continuous(breaks = (0:10)/10)) |>
+  gf_theme(theme_minimal())
+```
+
+4. What are the units of the values given to the slope annotation?
+
+```{mcq}
+#| label: abd-4-fie
+#| inline: true
+1. hours
+2. nautical miles
+3. knots [correct hint: Remember, a knot is one nautical mile per hour.]
+4. no units
+```
+
+5. If the graph really does show position as a function of time, the instantaneous slope should correspond to the speed of the ship. Using what you know about the function for speed versus time, explain what about the graph shows that it really does give position versus time.
+
+`r devoirs::devoirs_text("abd-5-3ks")`
+
+
+:::
+ <!-- end of exr-arm-begin-door -->

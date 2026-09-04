@@ -1,0 +1,33 @@
+<!--
+id: "sheep-feel-tv"
+created: "Sat Dec 20 08:25:55 2025"
+attribution: DTK
+mode: drill
+chapter: 4
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-sheep-feel-tv}
+AI-generated question: 
+
+At a local cafe, you are deciding between two bags of coffee beans. Brand A costs $14.40 for a 12-ounce bag. Brand B costs $18.00 for a 16-ounce bag. Which brand offers the better value based on the unit price per ounce?
+
+```{mcq}
+#| label: sft-1-qifl
+1. Brand A, because its unit price is $1.20 per ounce compared to Brand B's $1.125 per ounce. [hint: The quoted rates are correct, but "value" corresponds to a lower rate rather than a higher rate.]
+2, Brand B, because its unit price is $1.125 per ounce, which is lower than Brand A’s $1.20 per ounce. [correct]
+3. Both brands have the same unit price because they both cost more than $1.00 per ounce. [hint: Why? Because every cost more than $1 is the same? Nonesense.]
+4. Brand A, because you spend $3.60 less upfront than you would for Brand B. [hint: See the human comment below.]
+```
+
+Human comments:
+
+1. A "unit price" of a product is the price per *unit* amount of the product. For coffee, the sensible unit for amount is ounces. For other substances, the *unit* might be stated in terms of mass or count, etc. "Unit price per ounce" sounds like a compound ratio: the unit priced divided by the number of ounces. This would double-count ounces. "Price per ounce" on its own says what they are looking for to measure value.
+
+2. The last item in the multiple choice should not be ruled out. If you are only going to use 8 ounces before the coffee becomes stale, buy the cheaper bag. The problem statement nullifies this choice, since it says, "based on the unit price" with the unit defined as ounces, not bags. Responsible modelers check such assumptions to make sure they are aligned with the actual purpose of the model. A rule of thumb for consultants is to check first whether what the client says they want is really what they want.
+
+:::
+ <!-- end of exr-sheep-feel-tv -->

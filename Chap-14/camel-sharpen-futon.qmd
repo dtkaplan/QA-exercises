@@ -1,0 +1,25 @@
+<!--
+id: "camel-sharpen-futon"
+created: "Thu Mar 12 08:18:17 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-camel-sharpen-futon}
+Why does the chapter say that "important problems of equilibrium," like balancing spending between Natal and Cancer, are easier to think about when you use the idea of differentiation (rates of change)?
+
+```{mcq}
+#| label: csf-1-qe3
+1. Because differentiation gives the total QALYs, which we want to maximize.
+2. Because the best allocation is where the *marginal* benefit (rate of change of QALYs with respect to dollars) is equal for both programs; thinking in terms of derivatives makes that condition clear and easier to work with. [correct]
+3. Because we need the second derivative to find the optimum.
+4. Because rates of change are always positive, so the math is simpler. [hint: No. By the way, rates of change can be either negative, positive, or zero.]
+```
+
+:::
+ <!-- end of exr-camel-sharpen-futon -->

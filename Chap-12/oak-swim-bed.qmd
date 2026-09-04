@@ -1,0 +1,31 @@
+<!--
+id: "oak-swim-bed"
+created: "Sun Dec 28 14:18:53 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-oak-swim-bed}
+There are three roles for functions involved in Bayesian inference: the *prior*, the *likelihood*, and the *posterior*. 
+
+a. What does *Bayes Rule* say about the relationship among these functions?
+
+`r devoirs::devoirs_text("RQ10-rule")`
+
+b. What is the distinction and what are the similarities between the *prior* and the *posterior*?
+
+`r devoirs::devoirs_text("RQ10-prior-posterior")`
+
+c. Which of the three functions is the most directly connected to *data*?
+
+`r devoirs::devoirs_text("RQ10-data")`
+
+d. Two of the functions' names are Latin equivalents of the English words "before" and "after." Before and after what?
+
+`r devoirs::devoirs_text("RQ10-before-after")`
+:::
+ <!-- end of exr-oak-swim-bed -->

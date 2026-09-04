@@ -1,0 +1,59 @@
+<!--
+id: "duck-lay-shelf"
+created: "Fri Aug 21 12:32:50 2026"
+attribution: DTK
+uses: graph interpretation
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-duck-lay-shelf}
+Grab the P2 graphic from Chap-05-magnitudes.qmd. This is the one with black lines connecting a country in 1960 to the same country in 2020. 
+
+```{r echo=FALSE}
+#| label: C05-dlwed
+library(ggiraph)
+library(LSTbook)
+library(ggformula)
+csvname <- "../www/child-mortality-gdp-per-capita.csv"
+
+raw <- readr::read_csv(csvname)
+
+goo <- raw |> select(Entity, Year, `Child mortality rate`, `GDP per capita`) |>
+  filter(Year %in% c(1960,2020)) |>
+  na.omit() |>
+  mutate(year = as.factor(Year)) |>
+  filter(n() == 2, .by = Entity) 
+
+Cuba <- goo |>
+  filter(Entity %in% 
+           c("Cuba", "Algeria", "Bolivia", 
+             "Botswana", "Brazil", "Canada", "Chad", "Chile",
+             "Congo", "Eswatini", "Gabon", "Ghana", "Germany",
+             "Democratic Republic of Congo"))
+
+```
+
+```{r}
+#| label: C05-igooa
+P2 <- goo |> 
+  mutate(logChild = log10(`Child mortality rate`),
+         logGDP = log10(`GDP per capita`)) |>
+  gf_point_interactive(logChild ~ logGDP, 
+                       color = ~ year, alpha = 0.6,
+                       tooltip = ~ glue::glue("{Entity} {Year}<br>GDP {signif(`GDP per capita`, 3)}<br>Mortality  {round(`Child mortality rate`,1)}")) |>
+  gf_labs(y = "Magnitude of child mortality rate (per 1000)", x = "Magnitude of GDP per capita (International Dollars)") |>
+  gf_line_interactive(log10(`Child mortality rate`) ~ log10(`GDP per capita`),
+          group = ~ Entity, color = "black", data = Cuba, inherit=FALSE)
+
+P2 |> gf_refine(scale_x_log10(), scale_y_log10())
+```
+
+What does it mean when two country points from different years lie nearly directly above one another on a plot with GDP on the horizontal axis? Expected answer: GDP changed little while the vertical quantity changed substantially.
+
+
+:::
+ <!-- end of exr-duck-lay-shelf -->

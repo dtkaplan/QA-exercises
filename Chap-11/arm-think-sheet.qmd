@@ -1,0 +1,23 @@
+<!--
+id: "arm-think-sheet"
+created: "Tue Oct 28 12:41:51 2025"
+attribution: TBA
+status: "sketch"
+chapter: 11
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-arm-think-sheet}
+
+MAKE THIS ABOUT PUTTING high-school calculations in the likelihood framework.
+
+ORIENT THIS TOWARD the high-school calculations being about likelihoods. Coin flip and die toss are shorthand for hypotheses.
+
+"Probability" is a standard high-school mathematics topic, and it's likely that you have spent some time *calculating* the probability of all heads from three coin flips or the probability of a 7 from rolling a pair of dice. Why coins? Why dice? One reason is that there is not a lot to know about coins and dice and we can be confident in the idea that heads or tails have the same relative probability, and, similarly, that the outcomes one through six of an individual die have the same relative probability. Other reasons: we are familiar from an early age with games that involve multiple throws of dice; we feel justified in the belief that just about any coin or any pair of dice thrown by just about any person provide a fair randomization device.
+
+Whatever the educational virtues of learning the high-school probability calculations for dice and coins, the same reasons they are in the curriculum are also reasons why they are poor examples for dealing with uncertainty in significant events such as floods, fires, earthquakes, heat waves, financial collapses, illnesses, automobile mishaps, or---to reach for an extreme---the risk of an accidental detonation of a nuclear bomb. It would be foolish to think that the probability of a flood is the same at any location at any time or that we are all the same when it comes to becoming ill or the victim of an automobile mishap. And, unlike dice and coins, there *is* a lot to know about significant events and how they depend on circumstances. Finally, and thankfully, significant events are rare. We are always working with limited data and the understanding that risk can change over time.
+
+:::
+ <!-- end of exr-arm-think-sheet -->

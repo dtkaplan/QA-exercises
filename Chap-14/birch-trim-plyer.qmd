@@ -1,0 +1,37 @@
+<!--
+id: "birch-trim-plyer"
+created: "Fri Aug 14 07:33:06 2026"
+attribution: DTK
+status: "draft"
+chapter: 14
+mode: "exercise"
+use: "Discussion of heuristics"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-birch-trim-plyer}
+A discussion prompt based on Latin names for logical fallacies. Which ones do you recognize? Which ones do you think you may have heard of? Look up definitions of ones you don't know. Which ones are effective rhetorical strategies? 
+
+[From AI] Many common logical fallacies have traditional Latin names that describe the specific error in reasoning. Well-known examples include ad hominem (attacking the person), post hoc ergo propter hoc (false cause), and non sequitur (a conclusion that does not follow).
+
+* Personal and Emotional Attacks
+    - Argumentum ad hominem: Attacking the person making the claim instead of the argument itself.
+    - Tu quoque: Claiming an argument is false because the person-arguing acts hypocritically ("you too").
+    - Argumentum ad misericordiam: Appealing to pity or sympathy to force a conclusion.
+    - Argumentum ad baculum: Appealing to force, fear, or threats to make someone agree.
+    
+* Appeals to Popularity and Authority
+    - Argumentum ad populum: Claiming something is true because many people believe it.
+    - Argumentum ad verecundiam: Appealing to an unqualified or false authority.
+    - Argumentum ad ignorantiam: Claiming a statement is true because it has not been proven false.
+    - Ipse dictit: Relying on a bare assertion without any proof ("he himself said it").
+    
+* Causation and Logic Errors
+    - Post hoc ergo propter hoc: Assuming one event caused another just because it happened first ("after this, therefore because of this").
+    - Non sequitur: Presenting a conclusion that does not logically follow from the premises ("it does not follow").
+    - Petitio principii: Assuming the initial point is already proven ("begging the question").
+    - Ignoratio elenchi: Missing the point by proving a different conclusion than the one proposed.
+:::
+
+ <!-- end of exr-birch-trim-plyer -->

@@ -1,0 +1,35 @@
+<!--
+id: "seahorse-pitch-teacup"
+created: "Tue Jan 20 15:10:55 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seahorse-pitch-teacup}
+Official standards for bacterial cleanliness are set on a scale measuring what proportion of bacteria may survive a cleaning. For instance, the Mr. Clean bottle claims to eliminate 99.9% of bacteria, that is, that only one in a thousand bacteria will survive.
+
+![](../www/mr-clean.png)
+
+Experts often us a more "scientific"-sounding logarithmic scale. For instance, food safety might be set at a "7 log$_{10}$ lethality." This means that of 10^7^ bacteria, only one might survive. 
+
+On the "log$_10$ lethality" scale, how clean is Mr. Clean?
+
+```{mcq}
+#| label: spt-1-wlww
+#| inline: true
+1. 3 [correct]
+2. 4
+3. 5
+4. 6
+5. 7
+6. None of the above.
+```
+
+
+
+:::
+ <!-- end of exr-seahorse-pitch-teacup -->

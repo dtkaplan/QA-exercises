@@ -1,0 +1,33 @@
+<!--
+id: "fish-toss-boat"
+created: "Fri Feb 20 08:39:41 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fish-toss-boat}
+
+```{r}
+#| echo: false
+#| label: C13-zdnhv
+vectorfield_plot(y ~ 1/(x-6), x ~ x-1 , 
+                 domain(y = 0:5, x = 0:5),
+                 npts = 9,
+                 stretch = 0.8) |>
+  gf_theme(theme_minimal(base_size = 14)) |>
+  gf_refine(coord_fixed())
+```
+
+1. `r devoirsTF(TRUE, id="flow-ftb-1-k3")` The y-component of the flow depends on the value of x.
+
+2. `r devoirsTF(FALSE, id="flow-ftb-2-ws")` The x-component of the flow depends strongly on the value of y.
+
+3. `r devoirsTF(TRUE, id="flow-ftb-3-8d")` The x-component of the flow depends strongly on the value of x.
+
+4. `r devoirsTF(FALSE, id="flow-ftb-4-is")` The y-component of the flow depends on the value of y.
+:::
+ <!-- end of exr-fish-toss-boat -->

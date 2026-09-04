@@ -1,0 +1,48 @@
+<!--
+id: "fish-draw-bolt"
+created: "Mon Nov 10 06:30:12 2025"
+attribution: TBA
+status: "sketch"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-fish-draw-bolt}
+[[There are occasions when not only is the mantissa of a number uncertain, but the magnitude as well.  The *log-normal* distribution is provides insight into a range of phenomena such as the impact of disasters, the workings of financial markets, and income distributions. The *power-law* family of distributions provides ways to quantify a statement like, "I have *no idea at all* what the outcome will be." One reason this is rarely used in modeling is that most of the time the modeler has some idea of the outcome, even if it is vague.]]
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: fig-lognormal-medical
+#| fig-cap: "A relative probability function for a healthy person's medical expenses over the next year."
+#| layout-ncol: 2
+#| fig-subcap:
+#| - "Log x axis"
+#| - "Linear x axis"
+slice_plot(dlnorm(p, meanlog=3*2.3, sdlog=1) ~ p, 
+           domain(p = 0:10000), npts=1000) |>
+  gf_labs(
+    x = "Magnitude of medical expenses per year ($)",
+    y = "Relative probability") |>
+  gf_refine(scale_x_log10())
+  slice_plot(dlnorm(p, meanlog=3*2.3, sdlog=1) ~ p, 
+           domain(p = 0:10000), npts=1000) |>
+  gf_labs(
+    x = "Medical expenses per year ($)",
+    y = "") 
+```
+There are two subgraphs in @fig-lognormal-medical. (a) shows inputs on a magnitude scale, meaning that position measured with a ruler corresponds to the magnitude of the medical expenses. For this, we're using the familiar hill() function, which is to say, "We know something about the likely magnitude."
+
+Subgraph (b) shows exactly the same function, but plotted on a linear scale for the x-axis, meaning that position refers to the actual dollar amount of expenses. It should be clear that the relative probability function is very different from flat(). If it had been flat(), then expenses of $10,000 would be just as likely as $1000 or even $100. That is far from the case, reflecting that we have something to say about the magnitude of the expenses.
+
+
+
+
+:::
+ <!-- end of exr-fish-draw-bolt -->

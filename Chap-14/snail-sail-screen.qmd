@@ -1,0 +1,113 @@
+<!--
+id: "snail-sail-screen"
+created: "Sat Dec 20 09:37:03 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-snail-sail-screen}
+AI generated: In quantitative reasoning, we move from linear growth (adding the same amount each time) to Exponential Growth. This occurs when the rate of change function is proportional to the current value. In social media, we call this "virality."
+
+The more people who see a post, the more people there are to share it, which causes the growth rate to accelerate.
+
+Question 15: The Viral Content Surge
+
+Scenario: You are a digital marketing manager for a new sustainable fashion brand. You post a short video that goes viral. You model the total number of views (V) over time (t, in hours) using the following exponential function:
+
+V(t)=500⋅e 
+0.15t
+ 
+To track how fast your brand is growing at any specific moment, you use the rate of change function, V 
+′
+ (t), which represents the "views per hour":
+
+V 
+′
+ (t)=75⋅e 
+0.15t
+ 
+The Question: Compare the state of your video at hour 2 and hour 10. Which of the following statements correctly interprets the rate of change of your views?
+
+A) At hour 2, you are gaining views at a rate of 101 views/hour; by hour 10, the rate has accelerated to 336 views/hour.
+
+B) At hour 2, you are gaining views at a rate of 101 views/hour; by hour 10, the rate has accelerated to 2,240 views/hour.
+
+C) The rate of change is constant at 75 views per hour because that is the leading coefficient.
+
+D) At hour 10, the total views are higher, but the rate of growth actually slows down because of diminishing returns.
+
+Professor’s Quantitative Breakdown
+
+Exponential growth is characterized by a "snowball effect." We calculate the rate of change by plugging our time values into V 
+′
+ (t):
+
+At t=2:
+
+V 
+′
+ (2)=75⋅e 
+0.15(2)
+ =75⋅e 
+0.3
+ ≈75⋅1.35=101.25 views/hour
+At t=10:
+
+V 
+′
+ (10)=75⋅e 
+0.15(10)
+ =75⋅e 
+1.5
+ ≈75⋅4.48=336 views/hour
+Correct Answer: A Note the difference between the total count and the rate. At hour 10, your total views V(10) would be about 2,240, but the speed at which you are currently gaining them is 336 per hour.
+
+The "Doubling Time" Concept
+
+A key feature of this rate is the Doubling Time. In exponential growth, the time it takes for the quantity to double is constant, regardless of how large the number is.
+
+For a growth rate of r=0.15, we use the "Rule of 70" (or more accurately, ln(2)/r):
+
+Doubling Time≈ 
+0.15
+0.693
+​	
+ ≈4.62 hours
+Whether you are going from 500 to 1,000 views or 50,000 to 100,000 views, it will take the same 4.6 hours!
+
+Visualizing Viral Growth in R
+
+R
+library(ggplot2)
+
+# Define growth function
+growth_func <- function(t) 500 * exp(0.15 * t)
+rate_func <- function(t) 75 * exp(0.15 * t)
+
+# Generate data
+t_vals <- seq(0, 24, length.out = 500)
+df <- data.frame(
+  time = t_vals,
+  views = growth_func(t_vals),
+  rate = rate_func(t_vals)
+)
+
+# Plotting Total Views
+ggplot(df, aes(x = time, y = views)) +
+  geom_line(color = "purple", size = 1.2) +
+  labs(title = "Total Video Views Over 24 Hours",
+       subtitle = "Exponential Growth: V(t) = 500 * e^(0.15t)",
+       x = "Time (hours)",
+       y = "Total Views") +
+  theme_minimal()
+Professor's Closing Thought
+
+In the non-STEM world, understanding exponential rates is the difference between a "fad" and a "trend." If the rate of change function is increasing, the momentum is still building. If the rate of change begins to flatten, you have reached the "saturation point" of your audience.
+:::
+ <!-- end of exr-snail-sail-screen -->

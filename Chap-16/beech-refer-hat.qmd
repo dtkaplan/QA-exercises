@@ -1,0 +1,15 @@
+<!--
+id: "beech-refer-hat"
+created: "Wed Mar  4 17:13:00 2026"
+attribution: TBA
+status: "sketch"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-refer-hat}
+In-class discussion: The gradient field. In optimization, we are walking on a field of gradient flowers. Each flower has a small stamen that points in a particular compass direction. We can, however, only see the stamen of the flower at hand. At each step, we examine that flower, then walk in the direction indicated for a small distance. Examining the flower at our new position gives a new direction to walk in. We continue in this way, following an uphill path from flower to flower.
+:::
+ <!-- end of exr-beech-refer-hat -->

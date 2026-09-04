@@ -1,0 +1,29 @@
+<!--
+id: "deer-put-cotton"
+created: "Sun Dec 28 14:00:11 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-deer-put-cotton}
+Give at least **five** names for units used for each of these four fundamental {{< var dim.dim >}}s. You might need to do a web search to find unfamiliar units.
+
+Whenever one of your units came as a surprise to you, write it with double-stars around it, like `**parsec**`.
+
+```{r echo=FALSE}
+default_text <- "Length:
+Mass: 
+Time: 
+Temperature: 
+"
+```
+
+`r devoirs::devoirs_text("RQ-units-fundamental", contents = default_text, rows = 5)`
+
+:::
+ <!-- end of exr-deer-put-cotton -->

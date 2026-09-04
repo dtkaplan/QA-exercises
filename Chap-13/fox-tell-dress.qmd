@@ -1,0 +1,114 @@
+<!--
+id: "fox-tell-dress"
+created: "Fri Feb 20 09:33:20 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fox-tell-dress}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: C13-hzqdf
+dyn1 <- makeODE(dy ~ 2, dx ~ 2-y)
+sol1a <- integrateODE(dyn1, domain(t=0:2), x = 0, y =0)
+sol1b <- integrateODE(dyn1, domain(t=0:2), x = 2, y =1)
+
+dyn2 <- makeODE(dy ~ x, dx ~ x + 2-y)
+sol2a <- integrateODE(dyn2, domain(t=0:1.6), x = 1, y =1)
+sol2b <- integrateODE(dyn2, domain(t=0:.6), x = 2, y =0)
+```
+
+```{r}
+#| echo: false
+#| label: C13-cqrtk
+flow_field(dyn1, domain(x = 0:5, y = 0:5)) |>
+  traj_plot(x(t) ~ y(t), sol1a, color = "blue", nt=0, inherit=FALSE, linewidth = 2, alpha = 0.5) |>
+  traj_plot(x(t) ~ y(t), sol1b, color = "green", nt=0, inherit=FALSE, linewidth = 2, alpha = 0.5) |>
+  traj_plot(x(t) ~ y(t), sol2a, color = "tomato", nt=0, inherit=FALSE, linewidth = 2, alpha = 0.5) |>
+  traj_plot(x(t) ~ y(t), sol2b, color = "gray", nt=0, inherit=FALSE, linewidth = 2, alpha = 0.75) |>
+  gf_refine(coord_fixed()) |>
+  gf_theme(theme_minimal(base_size = 16))
+```
+
+1. `r devoirs::devoirsTF(FALSE, id = "traj-ftd-1-lx")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
+
+2. `r devoirs::devoirsTF(TRUE, id = "traj-ftd-2-l7y")` For the flow shown above, [green]{style="color: green;"} is a trajectory.
+
+3. `r devoirs::devoirsTF(FALSE, id = "traj-ftd-3-kw")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
+
+4. `r devoirs::devoirsTF(FALSE, id = "traj-ftd-3-luy")` For the flow shown above, [gray]{style="color: darkgray;"} is a trajectory.
+
+```{r}
+#| echo: false
+#| label: C13-pypey
+traj_plot(x(t) ~ t, sol1b) |> 
+  gf_labs(x = "t", y = "??", subtitle="Time series 1")
+```
+
+5. Time series 1 matches which component of which trajectory?
+
+    a. [gray-x]{style="color: darkgray;"}
+    b. [gray-y]{style="color: darkgray;"}
+    c. [red-x]{style="color: red;"}
+    d. [red-y]{style="color: red;"}
+    e. [green-x]{style="color: green;"}
+    f. [green-y]{style="color: green;"}
+    g. [blue-x]{style="color: blue;"}
+    h. [blue-y]{style="color: blue;"}
+
+```{mcq}
+#| label: ts-ftd-5-wkd
+#| inline: true
+1. a
+2. b
+3. c
+4. d
+5. e  [correct]
+6. f
+7. g
+8. h
+9. None of the others.
+```
+
+
+```{r}
+#| echo: false
+#| label: C13-khody
+traj_plot(x(t) ~ t, sol2a) |> 
+  gf_labs(x = "t", y = "??", subtitle="Time series 2")
+```
+
+6. Time series 2 matches which component of which trajectory?
+
+    a. [gray-x]{style="color: darkgray;"}
+    b. [gray-y]{style="color: darkgray;"}
+    c. [red-x]{style="color: red;"}
+    d. [red-y]{style="color: red;"}
+    e. [green-x]{style="color: green;"}
+    f. [green-y]{style="color: green;"}
+    g. [blue-x]{style="color: blue;"}
+    h. [blue-y]{style="color: blue;"}
+
+```{mcq}
+#| label: ts-ftd-6-wkd
+#| inline: true
+1. a
+2. b
+3. c [correct]
+4. d
+5. e 
+6. f
+7. g
+8. h
+9. None of the others.
+```
+
+:::
+ <!-- end of exr-fox-tell-dress -->

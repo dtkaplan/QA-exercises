@@ -1,0 +1,54 @@
+<!--
+id: "elm-cost-pencil"
+created: "Tue Sep 30 13:15:51 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exerciser-elm-cost-pencil}
+
+
+Often, the motivation behind model building is to make *predictions*. For instance, domestic policy planners have to make decisions about how many new roads to build over the next 30 years, or how to staff education or expand health care facilities over the next decade. To make such decisions sensibly and effectively, the decision-maker must have good predictions what will be the demand for such services and facilities will be.
+
+Prediction models for such purposes have a characteristic form that draws on two distinct types of information: 
+
+i. What is the current state of the situation?
+ii. What are the expected patterns of change?
+
+These two types of information draw on different sources. Quantifying the current state of the situation can be based on existing records, e.g., how many nurses and other licensed medical professionals are currently active. In contrast, describing the pattern of change often involves figuring out what is the **mechanism** of change. For instance, the change in the number of available medical professionals comes primarily from two sources: the number of students enrolled in appropriate training programs and the retirement or burn-out rates of existing professionals.
+
+Consider one aspect of health-care provision: the number of active physicians. Government statistics provide indicators of the present state: as of 2025, there are very close to one-million active physicians and about 100,000 medical students in the US. 
+
+The change in state is another matter; we have to know about the mechanisms. For instance, medical school is typically four years long. (Med school is followed by additional years of training, but those people are usually already providing medical care.) So, a reasonable estimate is that there will be roughly 25,000 new physicians per year entering the system. 
+
+What about retirement? A ballpark estimate will get us started. If a typical physician works for 35 years, roughly 1/35 of the physician population will retire each year: about 3% per year. Following along these lines, a quantitative model for the yearly **change** in the physician population is:
+
+$$\text{Yearly change in }P \equiv \underbrace{25,000}_\text{new graduates} - \underbrace{0.03 P}_\text{retirements}$$ {#eq-simple-P-model}
+
+Where $P$ is the number of physicians.
+
+Now for the prediction itself. This is a matter of book-keeping. For each year, the number of physicians at the end of the year will be the number at the start plus the yearly change in $P$. Arithmetic suffices to construct the prediction which we do year by year. Apply the mechanism of the change in state to the starting 2025 state to find the ending 2025 state. Each row of @tab-physician-prediction shows one such calculation. We can then move on to the row for the next year, noting that the ending 2025 state will be the starting 2026 state.
+
+::: {#tab-physician-prediction}
+
+Year  | Starting state | Change in State | Ending state
+------|-----------------:|---------:|------:
+2025  | 1,000,000   | 25,000 - 0.03 $\times$ 1,000,000 | 995,000
+2026  | 995,000     | 25,000 - 0.03 $\times$ 995,000   | 990,150
+2027  | 990,150     | 25,000 - 0.03 $\times$ 990,150   | 985,446
+2028  | 985,446     | 25,000 - 0.03 $\times$ 985,445   | 980,883
+
+Accumulating the change in state over several years.
+
+:::
+
+Really? 980,883 physicians to start 2029? The simple model of @eq-simple-P-model doesn't itself justify the many digits being given in @tab-physician-prediction for the physician population each year. The reason for the digits is something else. [[We're just mechanically applying the dynamical rule. It's a matter of book-keeping, like keeping track of the pennies when calculating credit-card debt.]]
+
+
+
+:::
+ <!-- end of exr-elm-cost-pencil -->

@@ -1,0 +1,64 @@
+<!--
+id: "panda-mean-pen"
+created: "Thu Feb 19 09:50:39 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-panda-mean-pen}
+Suppose we have an event with possible outcomes A, B, C, D, E. We'll call the relative probabilities of each of these outcomes rA, rB, rC, and so on. Remember, A, B, C, ... are outcomes (e.g. snow, sun, cloudy, ...) while rA, rB, rC, and so on are relative probabilities, that is, non-negative numbers. We'll use pA, pB, pC, ... to indicate absolute probabilities. 
+
+Assume that rA $\neq$ pA, that is, that the relative probabilities are *not* absolute probabilities.
+
+1. What is the quantity rA/(rA + rB + rC + rD + rE)?
+
+```{mcq}
+#| label: pmp-1-xgs
+1. The odds of A 
+2. The absolute probability of A, that is, pA [correct]
+3. Neither of the above.
+```
+
+2. What is the quantity rA/(rB + rC + rD + rE)?
+
+```{mcq}
+#| label: pmp-2-3xgs
+1. The odds of A [correct]
+2. The absolute probability of A, that is, pA.
+3. Neither of the above.
+```
+
+3. What is the quantity pA/(rB + rC + rD + rE)?
+
+```{mcq}
+#| label: pmp-3-r3gs
+1. The odds of A [hint: Sorry. It would be, if rA = pA.]
+2. The absolute probability of A, that is, pA.
+3. Neither of the above. [correct hint: Yes, although if rA happens to equal pA we'd have the odds of A]
+```
+
+4. What is the quantity pA/(pA + pB + pC + pD + pE)?
+
+```{mcq}
+#| label: pmp-4-g312s
+1. The odds of A [hint: Sorry, but pA also appears in the denominator (bottom) of the fraction.]
+2. The absolute probability of A, that is, pA. [correct hint: Yes. But a pointless computation since we already know pA, we don't need pB, pC, pD, or pE.]
+3. Neither of the above. 
+```
+
+5. What is the quantity rA/(1-rA)?
+
+```{mcq}
+#| label: pmp-5-gjki8
+1. The odds of A [hint: No. In fact, if rA > 1 then this quantity would be negative.]
+2. The absolute probability of A, that is, pA. 
+3. Neither of the above. [correct]
+```
+
+
+:::
+ <!-- end of exr-panda-mean-pen -->

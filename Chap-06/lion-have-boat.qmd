@@ -1,0 +1,26 @@
+<!--
+id: "lion-have-boat"
+created: "Fri Jan 30 13:49:17 2026"
+attribution: DTK
+use: Chap 06 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lion-have-boat}
+Some core modeling functions have a *bounded* output, that is, the output has finite maximum and minimum values. Pick the one that does **not** fit into this category.
+
+```{mcq}
+#| label: lhb-1-k32
+#| inline: true
+1. `osc()` 
+2  `hill()`
+3. `hillside()`
+4. `exp2()` [correct]
+5. `flat()`
+```
+:::
+ <!-- end of exr-lion-have-boat -->

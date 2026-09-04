@@ -1,0 +1,33 @@
+<!--
+id: "monkey-lose-knife"
+created: "Thu Oct 23 15:30:34 2025"
+attribution: TBA
+status: "draft"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-monkey-lose-knife}
+
+
+Let's do a formal analysis of uncertainty about the number of calories you burned on this morning's walk. You didn't follow your regular route, and you stopped to watch some construction work along the way, but you think you walked about 3 to 4 miles. An AI search stated that the energy burned per mile is approximately 60 to 100 Cals/mile.
+
+1. Do AI searches with three queries: "how to multiply two ranges," "how to multiply two intervals," and "how to multiply two uncertain numbers." Quickly summarize what you found out, indicating whether the answers were clear and the extent to which they fall under the description, "Not related to what I was looking for."
+
+`r devoirs::devoirs_text("mlk-942-1")`
+
+2. GENERATE A SIMULATION WITH `distance` and `energy_rate`, each modeled by a hill function with an appropriate [WHAT IS THE PARAMETER, standard deviation?], and setting `Cals` to be the product of the two. What's the mean and standard deviation of `Cals`.
+
+IT WORKS OUT TO 280 $\pm$ 80 Cals
+
+```{r}
+#| label: C07-dnqjy
+mean(rnorm(1000, 3.5, .25) * rnorm(1000, 80, 10))
+```
+
+:::
+ <!-- end of exr-monkey-lose-knife -->

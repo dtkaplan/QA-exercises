@@ -1,0 +1,26 @@
+<!--
+id: "girl-keep-hamper"
+created: "Fri Jan 30 16:53:38 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-girl-keep-hamper}
+For the `osc()` function, what is the **period** (the input interval over which the function completes one full cycle and returns to its starting pattern)?
+
+```{mcq}
+#| label: d06-gkh-ekos
+#| inline: true
+1. 0.5
+2. 1 [correct]
+3. 2
+4. 3.14159
+```
+
+:::
+ <!-- end of exr-girl-keep-hamper -->

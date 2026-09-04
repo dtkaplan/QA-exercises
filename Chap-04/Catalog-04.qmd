@@ -1,0 +1,257 @@
+---
+title: "Chapter 04 Catalog"
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+<style>
+.theorem-title {
+  display: none;
+}
+
+.panel-tabset {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20%) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.panel-tabset > .nav-tabs {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-tabset > .tab-content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .panel-tabset {
+    display: block;
+  }
+
+  .panel-tabset > .nav-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  .panel-tabset > .nav-tabs .nav-link {
+    width: auto;
+  }
+}
+</style>
+{{< include ../exercise-header.qmd >}}
+
+::: {.callout-note collapse="true" title="Group: unclassified"}
+::: {.panel-tabset collapse=true}
+## ant-spend-shoe
+
+
+> File: Chap-04/ant-spend-shoe.qmd
+> Status: draft
+
+
+{{< include ant-spend-shoe.qmd >}}
+
+## ash-ride-window
+
+
+> File: Chap-04/ash-ride-window.qmd
+> Status: sketch
+
+
+{{< include ash-ride-window.qmd >}}
+
+## aspen-let-shelf
+
+
+> File: Chap-04/aspen-let-shelf.qmd
+
+{{< include aspen-let-shelf.qmd >}}
+
+## avoid-send-painting
+
+
+> File: Chap-04/avoid-send-painting.qmd
+> Status: sketch
+
+
+{{< include avoid-send-painting.qmd >}}
+
+## bat-meet-mattress
+
+
+> File: Chap-04/bat-meet-mattress.qmd
+> Status: sketch
+
+
+{{< include bat-meet-mattress.qmd >}}
+
+## bee-spend-magnet
+
+
+> File: Chap-04/bee-spend-magnet.qmd
+
+{{< include bee-spend-magnet.qmd >}}
+
+## beech-put-knife
+
+
+> File: Chap-04/beech-put-knife.qmd
+
+{{< include beech-put-knife.qmd >}}
+
+## boy-speak-dish
+
+
+> File: Chap-04/boy-speak-dish.qmd
+> Status: sketch
+
+
+{{< include boy-speak-dish.qmd >}}
+
+## dolphin-see-pants
+
+
+> File: Chap-04/dolphin-see-pants.qmd
+> Status: sketch
+
+
+{{< include dolphin-see-pants.qmd >}}
+
+## duck-sleep-lamp
+
+
+> File: Chap-04/duck-sleep-lamp.qmd
+> Status: draft
+
+
+{{< include duck-sleep-lamp.qmd >}}
+
+## eagle-blow-blanket
+
+
+> File: Chap-04/eagle-blow-blanket.qmd
+> Status: sketch
+
+
+{{< include eagle-blow-blanket.qmd >}}
+
+## falcon-iron-pants
+
+
+> File: Chap-04/falcon-iron-pants.qmd
+
+{{< include falcon-iron-pants.qmd >}}
+
+## finger-dig-fridge
+
+
+> File: Chap-04/finger-dig-fridge.qmd
+
+{{< include finger-dig-fridge.qmd >}}
+
+## kid-sail-sofa
+
+
+> File: Chap-04/kid-sail-sofa.qmd
+> Status: sketch
+
+
+{{< include kid-sail-sofa.qmd >}}
+
+## lion-understand-suitcase
+
+
+> File: Chap-04/lion-understand-suitcase.qmd
+
+{{< include lion-understand-suitcase.qmd >}}
+
+## maple-shut-pantry
+
+
+> File: Chap-04/maple-shut-pantry.qmd
+
+{{< include maple-shut-pantry.qmd >}}
+
+## panda-draw-shirt
+
+
+> File: Chap-04/panda-draw-shirt.qmd
+
+{{< include panda-draw-shirt.qmd >}}
+
+## panda-refer-window
+
+
+> File: Chap-04/panda-refer-window.qmd
+
+{{< include panda-refer-window.qmd >}}
+
+## reptile-speak-piano
+
+
+> File: Chap-04/reptile-speak-piano.qmd
+> Status: sketch
+
+
+{{< include reptile-speak-piano.qmd >}}
+
+## rhinosaurus-shut-fork
+
+
+> File: Chap-04/rhinosaurus-shut-fork.qmd
+
+{{< include rhinosaurus-shut-fork.qmd >}}
+
+## seahorse-bathe-knife
+
+
+> File: Chap-04/seahorse-bathe-knife.qmd
+
+{{< include seahorse-bathe-knife.qmd >}}
+
+## sheep-feel-tv
+
+
+> File: Chap-04/sheep-feel-tv.qmd
+> Status: null
+
+
+{{< include sheep-feel-tv.qmd >}}
+
+## spider-forgive-pantry
+
+
+> File: Chap-04/spider-forgive-pantry.qmd
+> Status: draft
+
+
+{{< include spider-forgive-pantry.qmd >}}
+
+## spider-stand-ship
+
+
+> File: Chap-04/spider-stand-ship.qmd
+
+{{< include spider-stand-ship.qmd >}}
+
+## squirrel-wish-vase
+
+
+> File: Chap-04/squirrel-wish-vase.qmd
+> Status: sketch
+
+
+{{< include squirrel-wish-vase.qmd >}}
+
+:::
+:::
+

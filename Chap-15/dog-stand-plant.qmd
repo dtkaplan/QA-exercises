@@ -1,0 +1,57 @@
+<!--
+id: "dog-stand-plant"
+created: "Wed Jan 28 16:05:35 2026"
+attribution: TBA
+status: "draft"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-dog-stand-plant}
+The figure shows three aspects of a dynamical system. Match each to the appropriate color.
+
+a. the flow field `r devoirs::devoirs_set(id = "dsp-a", choices = c("black", "blue", "green"), correct = "black")`
+b. a trajectory `r devoirs::devoirs_set(id = "dsp-b", choices = c("black", "blue", "green"), correct = "blue")`
+c. a time series `r devoirs::devoirs_set(id = "dsp-c", choices = c("black", "blue", "green"), correct = "green")`
+
+```{r}
+#| label: fig-climb-56
+#| fig-cap: "Aspects of a dynamical system"
+#| echo: false
+f <- doodle_fun(~ w + z, seed = 9390)
+# contour_plot(f(w, z) ~ w & z, domain(w=-5:5, z = -5:5)) |>
+#   gf_refine(coord_fixed())
+
+dfdw <- numD(f(w, z) ~ w)
+dfdz <- numD(f(w, z) ~ z)
+# Why are these reversed?
+climb <- makeODE(dz ~ dfdw(w, z), dw ~ dfdz(w,z),
+                 w = -5, z = 3.1)
+soln <- suppressMessages(integrateODE(climb, domain(t = 0:10)))
+Pts <- tibble::tibble(
+  t = seq(0, 10, length = 100),
+  z = soln$z(t),
+  w = soln$w(t)
+)
+vectorfield_plot(dz ~ dfdw(w, z), dw ~ dfdz(w,z),  
+                 domain(w=-5:5, z = -5:5), 
+                 transform = function(x) sqrt(x), 
+                 stretch = 1.5) |>
+  gf_line(z ~ w, data = Pts, inherit = FALSE, color = "blue") |>
+  #contour_plot(f(w, z) ~ w & z, alpha = 0.3) |>
+  gf_refine(coord_fixed()) |>
+  gf_theme(theme_minimal())
+
+gf_line(z ~ t, data = Pts, color = "darkgreen") |> 
+  gf_theme(theme_minimal())
+```
+
+Explain what you see in the figure that tells you that the flow field, trajectory, and time series are consistent with one another.
+
+`r devoirs::devoirs_text("dsp-d-3ks")`
+
+
+:::
+ <!-- end of exr-dog-stand-plant -->

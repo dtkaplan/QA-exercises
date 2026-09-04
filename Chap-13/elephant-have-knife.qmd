@@ -1,0 +1,128 @@
+<!--
+id: "elephant-have-knife"
+created: "Tue Jan 13 19:28:12 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-elephant-have-knife}
+Modeling of intravenous (IV) fluid administration.
+
+As you likely know, an IV is a mechanism for adding fluid to a patient's bloodstream at a desired flow rate. The real-world system is somewhat complicated, involving bags of fluid, tubing, clamps, and an ingenous device called a drip chamber. A nurse setting up an IV has to keep track of many things, including how to exclude air bubbles from entering the patient's bloodstream, how to maintain aseptic standards, and such. If you are interested, [this video](https://youtu.be/N0rCuC2XE1U?si=vHATrk4ktij0Y_d8) is part of training materials for nurses, and shows how an IV is set up. There are many, many steps and several different techniques.
+
+We are going to build a model of an IV system. Like all models, our model will have a purpose. In our case, the purpose is to calculate how to regulate the fluid flow at the proper rate.
+
+A physician's order to a nurse might be to infuse one liter of fluid over an eight-hour period. (Why eight hours? Likely because that's when the next nursing shift will come in.) This quantity (1 L per 8 hours) is a *flow rate* stated as a rate of change: a change of 8 hours in time will lead to an additional one liter of fluid being administered. *Regulating the flow* means to set up the system to deliver the specified flow rate.
+
+Physically, the system consists of a bag of fluid, to which is connecting a tubing set. The top of the tubing is a *plastic spike* that is inserted into a port of the bag. attached to the bag, the bottom end is a *needle* to be inserted into a vein. In between, there are two devices, a *drip chamber* and an *adjustable clamp*. @fig-iv-tubing shows a typical setup for the tubing; the bag and the patient are not shown.
+
+::: {#fig-iv-tubing layout-ncol=3}
+![tubing set](www/IV-tube.png)
+
+![drip chamber](www/IV-drip-chamber.png)
+
+![package labeling](www/IV-label.png)
+
+Components of an IV system. Sources [1](https://www.kmedhealth.com/iv-set-parts/#:~:text=From%20the%20IV%20set%20diagram,%2C%20protective%20cap%2C%20and%20tubing.) and [2](https://basicmedicalkey.com/wp-content/uploads/2017/02/F500376f16-04-9780323077538.jpg)
+:::
+
+The clamp is used to restrict flow through the tube. The resistance is set by a *roller* that can be moved by the nurse. The drip chamber is used to measure the flow rate through the tube. The chamber is more or less a transparent vial that, in use, is half-filled with air at the top and liquid at the bottom. There is a small nipple at the top; the fluid flows through in drops. 
+
+The package label shows conspicuously the number 10 in a blue box. That corresponds to a rate: 10 drops per mL. (The abbreviation for "drops" is gtts, so the rate is 10 gtts mL^-1^.) Different tubing sets can have different drop rates. For instance, pediatric tubing comes at 60 gtts mL^-1^.
+
+The goal of the nurse is to set (using the clamp) the number of drops per minute to correspond to the prescribed flow rate.
+
+Let's see if we have enough information for the nurse to determine what is the right rate of drops per minute (that is, gtts min^-1^) that corresponds to the correct flow. Here are three quantities, of which the third is as yet unknown:
+
+$$\overbrace{\underbrace{\frac{1}{8}\frac{\text{L}}{\text{hr}}}_\text{prescribed flow}}^\text{Rate A}\ \ \ \ \ \ \overbrace{\underbrace{10 \frac{\text{gtts}}{\text{mL}}}_\text{volume of a drop}}^\text{Rate B}\ \ \ \ \ \overbrace{\text{???} \frac{\text{gtts}}{\text{min}}}^\text{Target}$$, 
+
+Our goal is to find out how to combine Rate A and Rate B by multiplication or division in order to get to the target. For instance, the answer might be A/B, or A $\times$ B or B / A or 1/(A $\times$ B).
+
+The way to start is by writing down the *dimension* of Rates A and B. Keep in mind that the unit L refers to liters. The dimension L however, refers to length.  [L] = [volume] = L^3^.
+
+1. What is the dimension of Rate A?
+```{mcq}
+#| label: ehk-1-3sk
+#| inline: true
+1. T L^-3^ 
+2. L T^-1^
+3. L^3^ T^-1^ [correct]
+4. L^-3^ T^-1^
+```
+
+2. What is the dimension of gtts, that is, [gtts]?
+```{mcq}
+#| label: ehk-2-si3
+#| inline: true
+1. L T
+2. L^2^ T^-1^
+3. L^-3^
+4. L^3^ [correct]
+```
+
+3. What is the dimension of Rate B, that is, [gtts/mL]?
+```{mcq}
+#| label: ehk-3-esle
+#| inline: true
+1. dim(1) [correct]
+2. L
+3. L^2
+4. L^-1^
+5. L^-2^
+```
+
+4. What is the dimension of the target, that is, [gtts/min]?
+```{mcq}
+#| label: ehk-4-lfdw
+#| inline: true
+1. dim(1)
+2. L T^-1^
+3. L^3^ T
+4. L^3^ T^-1^
+```
+
+We can multiply and divide dimensions in whatever way we like. For instance,
+(L T^-2^)^-1^ if T^2^ L^-1^.
+
+5. What's the way to combine [Rate A] and [Rate B] to end up with [target]?
+```{mcq}
+#| label: ehk-5-eks
+#| inline: false
+1. dim(Rate A) $\times$ dim(Rate B) [correct]
+2. dim(Rate A)/dim(Rate B)
+3.  1/(dim(Rate A)$\times$ dim(Rate B))
+4.  dim(Rate B)/dim(Rate A)
+```
+
+This dimensional analysis tells us how to combine the quantities Rate A and Rate B. Carry out the combination according to your answer to Question 5. 
+
+
+6. What is the quantity of the combination:
+```{mcq}
+#| label: ehk-6-kr3e
+#| inline: false
+1. $\frac{\text{L}}{8\,\text{hr}} \frac{10\ \text{gtts}}{\text{mL}}$ [correct]
+2. $\frac{\text{L}}{8\ \text{hr}} \frac{\text{mL}}{\text{gtts}}$
+3. $\frac{8\ \text{hr}}{\text{L}} \frac{\text{mL}}{10\ \text{gtts}}$
+4. $\frac{10\ \text{gtts}}{\text{mL}} \frac{8\ \text{hr}}{\text{L}}$
+```
+
+Your answer to (6) is the target quantity, but it has some funny units:
+
+1.25 L hr^{-1} gtts mL^-1^, or, re-arranging, `1.25 (L/mL) (gtts/hr)
+
+We don't want hours, we want minutes. One hour is 60 minutes. So re-arrange again:
+
+1.25 {L/mL) (gtts/60min) To convert hours to minutes, multiply by 60 min hr^-1^.  And isn't L/mL a dimensionless quantity? Since one L is 1000 mL, L/ mL = 1000. So we get
+
+1.25 \times 1000 gtts / (60 min) = 1250/60 = 20.8 gtts/min.
+
+The nurse should adjust the roller on the clamp so that there are about 20 drops per minute, or 1 drop every 3 seconds.
+
+
+:::
+ <!-- end of exr-elephant-have-knife -->

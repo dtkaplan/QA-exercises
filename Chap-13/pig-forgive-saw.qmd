@@ -1,0 +1,29 @@
+<!--
+id: "pig-forgive-saw"
+created: "Thu Sep 18 12:00:55 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pig-forgive-saw}
+Consider this simple, made-up mortality table that might be representative of a bird species, e.g. robins.
+
+Age | Mortality | Starting Population 
+----|-----------|----------
+0   |           | 1000
+1   | 0.50      | 500
+2   | 0.50      | 250
+3   | 1.00      | 125
+4   |           | 0
+
+Calculate the life expectancy for these birds. Give a number, but also explain you reasoning in words. (Hint: It's not a long calculation.)
+
+`r devoirs_text("pfs-LE")`
+
+
+:::
+ <!-- end of exr-pig-forgive-saw -->

@@ -1,0 +1,16 @@
+<!--
+id: "turtle-seek-linen"
+created: "Mon Feb 16 15:57:37 2026"
+attribution: TBA
+status: "sketch"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-turtle-seek-linen}
+Pick up on `r xf("exr-pollen-wish-hamper")` to estimate the posterior probability that the skeleton was Richard III. 
+
+:::
+ <!-- end of exr-turtle-seek-linen -->

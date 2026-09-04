@@ -1,0 +1,39 @@
+<!--
+id: "lamb-point-saucer"
+created: "Tue Feb 24 12:31:43 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lamb-point-saucer}
+Typically, people and companies have an amount of "cash on hand," for example the amount of money in bank accounts which can be drawn on without advance notice. (Such accounts are said to be "completely liquid." In contrast, an asset like a house is not so liquid, since it takes time and effort to sell it.) The dimension of cash on hand is W. 
+
+Careful people and companies also keep track of their cash flow (which can change over time). Cash flow has dimension W T^-1^.
+
+What is the relationship between cash flow and cash-on-hand?
+
+```{mcq}
+#| label: lps-1-rmz
+1. Cash-on-hand is proportional to cash flow.
+2. Cash-on-hand is the derivative of cash flow with respect to time.
+3. Cash-on-hand is the accumulation of cash flow with respect to time. [correct]
+4. Cash-on-hand and cash flow have unrelated dimensions.
+```
+
+It can be worthwhile to combine cash flow and cash-on-hand for some purposes. Naturally, they cannot be added or subtracted; they have different dimensions. But they can be multiplied or divided.
+
+Suppose a person or company has *negative* cash flow, that is, their expenses exceed their income. Such a situation cannot be sustained indefinitely. We'd like to figure out how long the situation can last before running out of money (e.g., bankruptsy). Which of these calculations is most relevant to figuring out how long the situation can last?
+
+```{mcq}
+#| label: lps-2-jcs
+1. Multiply cash flow by cash-on-hand.
+2. Divide cash flow by cash-on-hand.
+3. Divide cash-on-hand by cash flow. [correct hint: Yes! The dimension will be W / (W/T) which simplifies to T.]
+4. There is no simple combination of cash flow and cash-on-hand that is relevant.
+```
+:::
+ <!-- end of exr-lamb-point-saucer -->

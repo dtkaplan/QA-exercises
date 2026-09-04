@@ -1,0 +1,39 @@
+<!--
+id: "deer-burn-fridge"
+created: "Sat Dec 20 08:28:00 2025"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-deer-burn-fridge}
+AI generated.
+
+You are planning a trip to London and need to exchange some money. The current exchange rate is 1 British Pound (£) to 1.25 U.S. Dollars ($). If you have $600 for spending money, how many British Pounds will you receive (assuming no fees)?
+
+```{mcq}
+#| label: dbf-1-pcas
+1. £500, because you divide the dollars by the rate of 1.25 per pound. [correct]
+2. £750, because you multiply the dollars by the rate of 1.25. 
+3. £400, because the pound is stronger and you should expect significantly less currency.
+4. £480, because the ratio is  $1.25 per £1 and $600 $\times$ 1.25 = 480. [hint: See the human comment below.]
+```
+
+Human comments:
+
+1. The proper choice between the first two answer candidates is difficult, because it's rendered as the distinction between dividing and multiplying. Such problems would be easier if conversion was always presented a *multiplying by* the conversion factor. Of course, you have to construct the correct conversion factor.
+
+2. "The rate of 1.25" is not stated with the proper units. The units are dollars/pound, with the "flavor of one" is based on the equality of 1 pound to 1.25 dollars. However, since the conversion is *from* dollars *to* pounds, the flavor of one should have pounds on the top and dollars on the bottom: one pound per 1.25 dollars, or, equivalently 0.8 pounds per dollar. The *to* units need to go on the top of the conversion factor with the *from* units on the bottom: 1 pound per 1.25 dollars. 
+
+3. Almost everyone has trouble with the term "stronger" when used with currency. It would be sensible to quantify "strength" by the amount of stuff you can *buy* with a unit of currency. So which is stronger: 1.25 dollars or 1 pound? They are the *same strength* since those amounts are equivalent to one another. Better to frame the question in terms of 1 unit for each currency. Which is stronger: 1 dollar or 1 pound? 1 pound will buy more than 1 dollar, so the pound is "stronger."
+    
+    The metaphor of strength/weakness makes better sense when you look at *changes* in the exchange rate. But care is still needed. Suppose you want to say whether the dollar or the pound is getting stronger. For dollars, you need to look at the exchange rate in terms of pounds per dollar. If that exchange rate is going up, the dollar is getting stronger. If down, the dollar is getting weaker. For instance, suppose yesterday's exchange rate of 1 pound per 1.25 dollar changes to 1 pound per 1.30 dollars. 1/1.25 is larger than 1/1.30, so the dollar is getting weaker. You need more dollars ($1.30) to buy the same stuff you could buy yesterday for $1.25.
+
+
+:::
+ <!-- end of exr-deer-burn-fridge -->

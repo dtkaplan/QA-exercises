@@ -1,0 +1,26 @@
+<!--
+id: "fox-burn-spoon"
+created: "Fri Jan 30 16:56:16 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fox-burn-spoon}
+The `flat()` function always returns the same output regardless of input. What is the rate of change of `flat()` with respect to its input?
+
+```{mcq}
+#| label: d06-fbs-4kdi
+#| inline: true
+1. -1
+2. 0 [correct]
+3. 1
+4. It depends on the input.
+```
+
+:::
+ <!-- end of exr-fox-burn-spoon -->

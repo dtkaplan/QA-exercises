@@ -1,0 +1,93 @@
+<!--
+id: "mouse-catch-closet"
+created: "Sun Aug 30 08:55:14 2026"
+attribution: DTK
+uses: "Chapter 7 activity, math of input/output scaling"
+status: "draft"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-mouse-catch-closet}
+Have some exercises and drill to translate `scaled_plot()` examples into the parameters of input and output scaling.
+
+TURN THIS INTO AN ACTIVITY.
+
+
+A function that accomplishes both of these is:
+
+```{r}
+#| label: C07-qdwxu
+input_scale_fun <- function(year) {
+  (year - 1956) * (4 - 0) / (2000 - 1956) 
+}
+```
+
+For output scaling, look at the vertical grid and the corresponding blue scale. Zero on the grid scale corresponds to 0 on the blue scale. 1 on the vertical grid scale corresponds to 10 on the vertical blue scale. Consequently, the function that transforms values on the vertical grid scale to values on the vertical blue scale is:
+
+```{r}
+#| label: C07-aweju
+output_scale_fun <- function(y) {
+  (y - 0) * (10 - 0) + 0
+}
+```
+
+To confirm ... [The function `input_scale_find()` in the `{QA}` R package generalizes this to handle all input scalings.]{.column_margin}
+```{r}
+#| label: C07-zanhj
+input_scale_fun(year = 1956)
+input_scale_fun(year = 2000)
+```
+
+
+```{r}
+#| label: C07-lwxiv
+# a general-purpose function for finding input scaling from a pair of points.
+# Example: input_scale_find(1956, 0, 2000, 4)
+input_scale_find <- function(nat1, grid1, nat2, grid2) {
+  # check that all are numeric)
+  if (any(!is.numeric(c(nat1, grid1, nat2, grid2))))
+    stop("All four arg must be numeric.")
+  str <- glue::glue("function(Q) {{
+  (Q - {nat1}) * ({grid2} - {grid1}) / ({nat2} - {nat1})
+  }}")
+  # function(Q) {
+  #    (Q - nat1) * (nat2 - nat1) / (grid2 - grid1)
+  # }
+  return(eval(parse(text = str)))
+
+}
+
+fin <- input_scale_find(1956, 0, 2000, 4)
+fin(1956)
+fin(2000)
+
+output_scale_find <- function(nat1, grid1, nat2, grid2) {
+  # check that all are numeric)
+  if (any(!is.numeric(c(nat1, grid1, nat2, grid2))))
+    stop("All four args must be numeric.")
+
+
+    #0L -> 10, -5L -> 0
+
+  # (y - 0) * (10 - 0) + 0
+  str <- glue::glue("function(y) {{
+  (y - {grid1}) * ({nat2} - {nat1}) + {nat1}
+  }}")
+  # function(Q) {
+  #    (Q - nat1) * (nat2 - nat1) / (grid2 - grid1)
+  # }
+  return(eval(parse(text = str)))
+
+}
+
+fout <- output_scale_find(0,0,10,1)
+```
+
+
+
+Use `input_scale_fun()` and `output_scale_fun()` to assist.
+:::
+ <!-- end of exr-mouse-catch-closet -->

@@ -1,0 +1,19 @@
+<!--
+id: "owl-light-vase"
+created: "Tue Sep  1 17:14:57 2026"
+attribution: DTK
+chapter: 8
+status: sketch
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-owl-light-vase}
+REPEAT THE Monte Carlo interval SIMULATION for the walking energetics example.
+
+Describe the shape of the distribution.
+
+:::
+
+ <!-- end of exr-owl-light-vase -->

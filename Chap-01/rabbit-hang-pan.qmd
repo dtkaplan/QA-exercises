@@ -1,0 +1,18 @@
+<!--
+id: "rabbit-hang-pan"
+created: "Mon Aug 10 12:35:11 2026"
+attribution: DTK
+use: this is really an example or discussion point.
+mode: discussion
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-rabbit-hang-pan}
+Heuristics often appear in political debate and rhetoric. Indeed, one strategy for getting agreement with your point of view is to repeat a point often enough that the listener installs it as a heuristic. For instance, in ongoing discussions about the unaffordability of health care, it is often stated, “Health care is a right!” However heartfelt your views on this matter, I think people can agree that for the statement to be correct, “health care” must be carefully defined and that not all people will agree on an appropriate definition. (For instance, is cosmetic surgery a component of health care that should be treated as a right in all circumstances? Is there a right to a hip replacement for people in the advanced stages of congestive heart failure?) So, “health care is a right” is a heuristic.
+
+Often, rights are protected by government action. This statement is really a second heuristic, sometimes true and sometimes not. Combining the two heuristics leads to a conclusion, “Government should act to make health care affordable to all.” Your agreement with this conclusion depends in part on whether you regard the two heuristics involved as reliable.
+:::
+ 
+ <!-- end of exr-rabbit-hang-pan -->

@@ -1,0 +1,63 @@
+<!--
+id: "pine-speak-shelf"
+created: "Fri Aug 21 12:04:07 2026"
+attribution: DTK
+uses: dimension calculation
+status: "ready-to-use"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pine-speak-shelf}
+
+Sound consists of power moving through air in the form of vibrations: sound waves. The wave front is spread out, so it means little to talk about power at a single point. Instead, "power density" is used. A gentle sound might have a power density of `1e-6` W/m^2^.
+
+1. Which of the units in `1e-6` W/m^2^ is about power?
+
+```{mcq}
+#| label: 05-ear-power
+#| inline: true
+1. m^-1^
+2. m^2^
+3. W [correct]
+4. W/m
+```
+
+
+2. Which of the units in `1e-6` W/m^2^ can be translated "per square meter"?
+
+```{mcq}
+#| label: 05-ear-power2
+#| inline: true
+1. m^1^
+2. m^-2^ [correct]
+3. W 
+4. W/m
+```
+
+3. An adult human eardrum has a vibrating surface area of about `5e-5` m^2^. This is what transfers power to the human ear. For the gentle sound of `1e-6` W/m^2^, what is the total power impinging on the eardrum?
+
+```{mcq}
+#| label: 05-ear-power3
+#| inline: true
+1. `5e-11` W [correct]
+2. `5e-9` W [hint: Multiply the mantissas and add the exponents.]
+3. `5e-1` W [hint: Multiply the mantissas and add the exponents.]
+4. `5e1` W (e.g. 5 W) [hint: Multiply the mantissas and add the exponents.]
+```
+
+4. On a piece of paper, draw a circle that has an area of roughly `5e-5` m^2^. (Hint: You might find it easier to think in terms of mm^2^ rather than m^2^.) Which of these is most similar to the circle of the correct size?
+
+```{mcq}
+#| label: 05-ear-power4
+#| inline: true
+1. a poppy seed
+2. a sesame seed
+3. a pumpkin seed [correct]
+4. a walnut
+```
+
+:::
+ <!-- end of exr-pine-speak-shelf -->

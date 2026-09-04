@@ -1,0 +1,17 @@
+<!--
+id: "seal-form-glasses"
+created: "Fri Jan 16 11:24:35 2026"
+attribution: "Dorothy Dickmann"
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seal-form-glasses}
+Look at Figure 5.5 showing the relationship between a mortgage's monthly payment and loan duration in years. What story does this figure tell? What do you think the author means when he says "the homeowner suffers from “diminishing marginal returns ” as the loan duration increases?"
+
+`r devoirs::devoirs_text("sfg-1-kr3s")`
+:::
+ <!-- end of exr-seal-form-glasses -->

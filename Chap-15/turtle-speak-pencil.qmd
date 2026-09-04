@@ -1,0 +1,42 @@
+<!--
+id: "turtle-speak-pencil"
+created: "Thu Aug 28 07:34:06 2025"
+attribution: DTK
+status: "ready-to-use"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-turtle-speak-pencil}
+Let's pick up on the graphic in @exr-jaquar-mean-hamper, repeated below.
+
+![](../www/overdose-deaths-NYT.png)
+
+A reasonable form for the data represented by the graphic would be a data frame like this, where the `date` column is sorted in ascending order.
+
+row | date | year  | incident_file
+---:|------|------:|--------
+1   | 2000-01-01 | 2000.00274 | nxg93c.pdf
+2   | 2000-01-01 | 2000.00274 | pzd61f.pdf
+3   | 2000-01-02 | 2000.00548 | ytr41u.pdf
+... | ...        | ...        | ... 
+
+
+Assume that each incident file pertains to a single overdose death. The actual data frame would be much longer and would have scores of entries for each date.
+
+
+a. The [*New York Times* editorial](https://www.nytimes.com/2025/08/28/opinion/opioids-progress-trump-policy-law.html?smid=nytcore-ios-share&referringSource=articleShare) in which the graphic appeared gave this fact: "More than 400,000 Americans died from drug overdoses between 2020 and 2023." Based on this statement, roughly how many Americans died during the complete period included in the graph? Explain your reasoning.
+
+b. Assuming the data frame covers the entire period 2000-2024, roughly how many rows would be included?
+
+c. Suppose you constructed, by interpolation, a continuous function for *cumulative deaths* (starting in 2020) at any instant from the data frame. What variables would be needed as inputs to the interpolation operation?
+
+d. How can you tell from the graphic that it does not display the *cumulative death function*?
+
+e. What mathematical operation would you perform on the *cumulative death function* 
+
+
+:::
+ <!-- end of exr-turtle-speak-pencil -->

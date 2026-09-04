@@ -1,0 +1,19 @@
+<!--
+id: "seaweed-hang-ring"
+created: "Wed Dec 31 07:16:52 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 2"
+status: "ready-to-use"
+chapter: 2
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seaweed-hang-ring}
+The text notes that there is no equivalent English word for the operation of multiplication in units. How are units formed by multiplication typically written or spoken compared to those formed using "per"?
+
+`r devoirs::devoirs_text("shr-RQ2-732k")`
+
+:::
+ <!-- end of exr-seaweed-hang-ring -->

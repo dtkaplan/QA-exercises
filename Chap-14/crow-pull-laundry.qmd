@@ -1,0 +1,112 @@
+<!--
+id: "crow-pull-laundry"
+created: "Sat Jul 12 09:28:56 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-crow-pull-laundry}
+Light bulbs generally have a quantity printed on them: the wattage. Similarly, light-bulb sockets often have a "max watts" label advising the user of the largest wattage bulb that can work safely in the socket.
+
+Part a
+: What is the dimension of a watt?
+```{mcq}
+#| label: bulb-wattage
+#| inline: true
+1. Energy 
+2. Power [correct]
+3. Electrical voltage
+4. Electrical current
+```
+
+<!-- Opening answer: quantities-2uB -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+Since people don't directly perceive electrical current or voltage, it is hard to form an intuition about them. Instead, training is required to interpret properly the meanings of electrical dimensions.
+
+An exact mathematical analogy to electrical dimensions can be made to water and flow. You turn on the shower and step in for four minutes. As you shower, at each instant you can feel the "intensity" (flow) of the spray from the shower-head. You even have a faucet to set the flow. This flow is analogous to the power used by a light bulb.
+
+Over the full course of your 4-minute shower, six gallons of water goes down the train. Gallons, of course, have the dimension of *volume*. You used those six gallons over four minutes. Consequently, the **flow** of water is $\frac{6\, \text{gallons}}{4\, \text{minutes}} = 1.5\, \text{gallons per minute}$. The volume of water used in your shower session is analogous to the energy used by a light bulb: it is power multiplied by duration.
+[..id..]{data-tooltip="Ans id: quantities-2uB"}
+:::
+<!-- closing answer quantities-2uB -->
+
+Part b
+: The brightness of the light emitted by a light bulb is proportional to power. Suppose you turn on a 20-watt light when you walk into a room. This consumes energy. The energy used by the bulb is the power multiplied by the duration that the light was on. 
+
+1. If you stay in the room for 1 hour, turning off the light when you leave, how much energy has the light consumed?
+
+```{mcq}
+#| label: light-bulb-b1
+#| inline: true
+1. 20 watts [hint: A watt is a unit of power, not energy,]
+2. 20 watt-hours [correct]
+3. Not enough information is given
+4. 1 hour [hint: An hour is a unit of time. Energy is power multiplied by duration (time).]
+```
+
+2. In terms of the fundamental {{< var dim.dim >}}s---L, M, T---energy has {{< var dim.dim >}} L^2^ M T^-2^. What is the {{< var dim.dim >}} of power?
+
+```{mcq}
+#| label: light-bulb-b2
+#| inline: true
+1. L^2^ M T^-1^
+2. L^2^ M T^-2^
+3. L^2^ M T^-3^ [correct hint: That is, energy *divided by* time.]
+```
+
+3. You might reasonably ask, "What does mass have to do with energy?" Perhaps you remember Einstein's famous equation for energy:
+$$E = m\, c^2$$
+where $m$ is mass and $c$ is the *speed* of light. What is the dimension of $c^2$?
+
+```{mcq}
+#| label: light-bulb-b3
+#| inline: true
+1. L T
+2. L
+3. L T^-1^
+4. L T^-2^
+5. L^2^ T^-2^ [correct]
+```
+
+Consequently, $m\, c^2$ has the dimension of energy.
+
+Part c
+: Consider this statement:
+
+> Power consumption is a property of the light bulb, but *energy* consumption involves both the light bulb itself and the pattern of usage.
+
+`r devoirsTF(correct = TRUE, id = "light-bulb-c1")`
+
+Part d
+: A typical household uses about 10 kilowatt-hours of energy per day. "10 kilowatt-hours" is an amount of energy, but "energy per day" is a flow of energy, that is, a power. 
+
+1. Translate "10 kilowatt-hours of energy per day" into the equivalent watts. For simplicity in the calculation, assume that the energy is used evenly over the 24-hour day. 
+
+```{mcq}
+#| label: light-bulb-d1
+#| inline: true
+1. 417 watts [correct]
+2. 10,000 watts
+3. 240,000 watts
+4. Not enough information 
+```
+
+2. Look up the power consumption of a hand-held blow-dryer. When the blow-dryer is in use, energy consumption of the household increases. Which of these is a plausible fraction of average household power consumed by the hair-dryer?
+
+```{mcq}
+#| label: light-bulb-d2
+#| inline: true
+1. 10% of average power
+2. 50% of average power
+3. 100% of average power
+4. 200% of average power [correct]
+```
+
+:::
+ <!-- end of exr-crow-pull-laundry -->

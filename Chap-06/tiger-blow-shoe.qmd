@@ -1,0 +1,27 @@
+<!--
+id: "tiger-blow-shoe"
+created: "Fri Jan 30 16:45:30 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-tiger-blow-shoe}
+Which of the following is **not** the name of a core modeling function?
+
+```{mcq}
+#| label: d06-tbs-2da
+#| inline: true
+1. hill()
+2. ramp() [correct]
+3. same()
+4. log2()
+5. recip()
+```
+
+:::
+ <!-- end of exr-tiger-blow-shoe -->

@@ -1,0 +1,17 @@
+<!--
+id: "doe-give-table"
+created: "Mon Oct 27 11:53:14 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-doe-give-table}
+Use Boyle's data as an example. Ask students to try out various ways of building a function that matches the shape of the data.
+:::
+ <!-- end of exr-doe-give-table -->

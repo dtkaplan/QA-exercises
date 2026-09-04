@@ -1,0 +1,33 @@
+<!--
+id: "panda-draw-shirt"
+created: "Tue Feb 24 13:23:11 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-panda-draw-shirt}
+The US government debt (usually called the "National Debt") is approximately $40 trillion as of early 2026. Written out, that's $40,000,000,000,000. Or, $`4e13`.
+
+The "gross domestic product" (GDP) of the US is about $30 trillion per year. The per-year is important. It's the same as $2.5 trillion per month, or $1 million per second, or $3000 trillion per century. 
+
+Economic journalists often describe the debt condition of a country as ratio of debt to GDP. For instance, looking at the amounts $40 and $30 trillion, they would measure the US debt is 125% of GDP. A journalist's rule of thumb is that ratios above 100% are a sign of trouble.
+
+But, since GDP can also be measured as $3000 trillion per century, wouldn't it be right to say that the ratio of debt to GDP is 1%?  Explain why or why not the 125% figure is meaningful.
+
+`r devoirs::devoirs_text("pds-hgl")`
+
+::: {.callout-tip collapse=true}
+Comparing GDP (dimension W T^-1^) with government debt (dimension W) only makes sense if we are interested in extracting the T component. The ratio Debt/GDP has dimension T. Whichever way we choose to denominate GDP (per year, per second, per centure), Debt/GDP will be a measure of time. The 125% should really be stated as 1.25 years, or using the per century denomination, 0.0125 centuries. Same thing.
+
+It's not clear what the proper quantity, 1.25 years, tells us about the economic situation. It's not like we are going to make everybody work for 1.25 years with zero take-home pay in order to pay off the debt. It's not even clear whether the debt needs to be paid down.
+
+Maybe it would be better to think of debt in terms of how much it costs to carry it. For instance, at an interest rate of 5%, it costs $\$30 $\times 0.05 = \$1.5$ trillion each year to "pay for" the debt. If this money could be invested in the economy or in human capital, it would be a big deal. But we also benefit in an ongoing way from the historical investment of $1.5 trillion/year that was enabled by the debt.
+
+:::
+
+:::
+ <!-- end of exr-panda-draw-shirt -->

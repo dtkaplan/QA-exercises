@@ -1,0 +1,15 @@
+<!--
+id: "giraffe-bite-ring"
+created: "Wed Mar  4 17:13:33 2026"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-giraffe-bite-ring}
+Show the vector field and ask students to follow the gradient. Then switch to the Shiny app, which lets them evaluate the field one step at a time.
+:::
+ <!-- end of exr-giraffe-bite-ring -->

@@ -1,0 +1,93 @@
+<!--
+id: "dingo-eat-saw"
+created: "Thu Feb 19 12:08:19 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-dingo-eat-saw}
+Consider a bad movie plot organized along these lines: The protagonist has a disturbing dream that the universe has changed from "Normal" to a new state: "Doom."  Doom was hitherto thought impossible. Doom and Normal constitute two hypotheses about the state of the universe.
+
+To say that a hypothesis is impossible is equivalent to assigning it probability zero. That's what everyone else believes, but our protagonist, on account of his dream, assigns Doom the rhetorical odds "one-in-a-million."
+
+1. If an outcome has probability zero, what are the odds of that outcome?
+
+```{mcq}
+#| label: des-1-ckd
+1. Zero [correct]
+2. One
+3. Infinity
+4. You can't use odds here.
+```
+
+Now, in typical movie fashion, the protagonist starts to observe events---call them "strange events"---that shouldn't be happening. In the Doom universe, such events have a high likelihood. But in the normal universe they could also be observed due to optical illusions, distraction, or tricks played by the neighborhood children who think the protagonist is crazy. Let's assign each observed strange event a likelihood ratio of 2 in favor of Doom. 
+
+2. Explain what feature of Bayesian reasoning allows evidence to be in favor of a hypothesis that we believe is impossible.
+
+`r devoirs::devoirs_text("des-2-rtir")`
+
+3. Translate a likelihood ratio of 3 according to the verbal scale for evidence:
+
+```{mcq}
+#| label: des-3-lfs
+1. No evidence
+2. Limited
+3. Moderate
+4. Moderate to strong
+```
+
+The Bayesian updating calculation has a particularly simple mathematical form when the prior probability is stated in terms of odds. 
+
+$$\text{posterior odds} = \text{prior odds} \times \text{likelihood ratio} .$$
+
+For the character who claims that the prior odds of Doom is zero, the posterior odds must always remain zero regardless of the likelihood ratio. In the movies, such a character always ends up dying in a dramatic way, just punishment for his skepticism. 
+
+4. For our protagonist, who started with a prior odds of one-in-a-million, the posterior odds after one such "strange" event will be what?
+
+```{mcq}
+#| label: des-4-sot
+1. One in a million
+2. Two in a million [correct]
+3. One in one-hundred thousand
+4. One in ten thousand
+```
+
+Our protagonist starts to encounter other "strange" reports, hearing about them on the radio, seeing them in news reports from diverse locations, and so on. For the skeptic, these are all of no import. It is impossible to move the skeptic off his prior odds of zero. But our protagonist takes them seriously. Or, at least, he is willing to fold them in to a Bayesian calculation.
+
+5. After five strange events (in total), what should be our protagonist's posterior odds? (Pick the closest answer.)
+
+```{mcq}
+#| label: des-5-hjw
+#| inline: true
+1. 0.000001
+2. 0.00003 [correct]
+3. 0.0001
+4. 0.003
+5. 0.01
+6. 0.3 
+```
+
+6. Another five strange events are observed, making 10 in all. What should be our protagonists posterior odds?
+
+```{mcq}
+#| label: des-6-yqe
+#| inline: true
+1. 0.000001
+2. 0.00003
+3. 0.0001  [correct]
+4. 0.003
+5. 0.01
+6. 0.3 
+```
+
+Amazingly, we have all been exposed to series of strange events through web "doomscrolling." We Bayesian thinkers might deal with the deluge by adding new hypotheses to consider. Not just Normal and Doom, but also Clickbait/AI. 
+
+
+
+
+:::
+ <!-- end of exr-dingo-eat-saw -->

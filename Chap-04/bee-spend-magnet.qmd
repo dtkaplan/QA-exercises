@@ -1,0 +1,35 @@
+<!--
+id: "bee-spend-magnet"
+created: "Mon Dec  1 10:38:18 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "exercise"
+-->
+
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bee-spend-magnet}
+
+With the metric system, students are taught that the prefixes milli, micro, nano, pico, and so on represent successive powers of ten smaller than the base unit.
+
+For traditional units, even in household where they are used every day, many people don't know that the unit names also correspond successive powers, but not powers of ten.
+
+Starting with the traditional volume measure "cup", say how much bigger each of these units is with respect to the previous one.
+
+```{r echo=FALSE}
+#| label: C04-fhxkv
+default_text <- "Starting with 1 cup ...
+pint:
+quart:
+gallon:
+cubic foot:"
+```
+
+
+
+`r devoirs_text("bsm-volume-units", rows=5, contents = default_text)`
+
+:::
+ <!-- end of exr-bee-spend-magnet -->

@@ -1,0 +1,55 @@
+<!--
+id: "elm-teach-spoon"
+created: "Tue Jul  1 16:39:13 2025"
+attribution: TBA
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-elm-teach-spoon}
+The function `as.Date()` takes an integer and an "origin" date to calculate the date the given number of days from the origin. For instance:
+
+```{webr}
+#| caption: "Was 1900 a leap year?"
+as.Date(365, origin = "1900-01-01")
+```
+
+Part I
+: Most years have 365 days, but leap years have 366. Was 1900 a leap year?
+
+```{mcq}
+#| label: computing-leap-year
+1. Yes. [hint: But adding 365 days to New Years day does bring us to the next New Years day.]
+2. Yes, because years evenly divisible by 4 are usually leap years. [hint: Evidently, 1900 is an exception to the rule.]
+3. No. [correct]
+```
+
+Part 2
+: Modify the above chunk to figure out if year 2000 was a leap year. How about year 2100?
+
+```{mcq}
+#| label: computing-leap-year-2
+1. Neither is a leap year.
+2. 2000 is a leap year, but 2100 not. [correct]
+3. 2000 is not a leap year, but 2100 is.
+4. Both are leap years.
+```
+
+
+Part 3
+: To judge from the output of the following chunk, January is not 30 days long.
+
+```{webr}
+#| caption: "Month lengths?"
+#| min-lines: 3
+as.Date(30, origin = "2026-01-01")
+
+```
+
+Add in 11 more similar lines, one for each calendar month, and look at the output to figure out which months are 30 days long.
+
+:::
+ <!-- end of exr-elm-teach-spoon -->

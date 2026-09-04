@@ -1,0 +1,19 @@
+---
+id: "pony-draw-laundry"
+created: "Wed Nov  5 06:56:38 2025"
+attribution: TBA
+---
+
+```{r include=FALSE, eval=!"devoirs" %in% (.packages())}
+# For stand-alone compilation testing
+library(devoirs)
+library(mosaicCalc)
+```
+
+
+
+::: {#exr-pony-draw-laundry}
+Almost all past and present college students are aware of the phrase, "financial aid." Many have heard of "merit aid." But you won't see on any college website mention of "willingness to pay," which is the only salient quantity when it comes to tuition. SHOW A DISTRIBUTION of willingness to pay, then randomly admit students with a weighting factor that's an increasing function of "amount willing to pay." Liken the weighting factor to the prior in Bayesian thinking
+
+:::
+ <!-- end of exr-pony-draw-laundry -->

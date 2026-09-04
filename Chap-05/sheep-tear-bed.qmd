@@ -1,0 +1,17 @@
+<!--
+id: "sheep-tear-bed"
+created: "Sun Dec 28 14:07:05 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-sheep-tear-bed}
+What units do you habitually use to measure speed, either walking or biking or driving or flying? In those units, how many digits are needed across the spectrum encounted in everyday movement?
+
+`r devoirs::devoirs_text("RQ-mag-speed")`
+:::
+ <!-- end of exr-sheep-tear-bed -->

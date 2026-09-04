@@ -1,0 +1,25 @@
+<!--
+id: "kitten-sing-ring"
+created: "Fri Jan 30 14:17:44 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kitten-sing-ring}
+The graph shows one of the core modeling functions but with *either* input scaling, output scaling, or none.
+
+```{r}
+#| echo: false
+slice_plot(2*osc(x) + 4 ~ x, domain(x = -2:2)) |>
+  gf_theme(theme_minimal(base_size = 18))
+```
+
+`r devoirs::devoirs_set(id="ksr-1-ese", choices = c("input scaling", "output scaling", "none"), correct = "output scaling")`
+
+
+:::
+ <!-- end of exr-kitten-sing-ring -->

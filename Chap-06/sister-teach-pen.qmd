@@ -1,0 +1,25 @@
+<!--
+id: "sister-teach-pen"
+created: "Thu Jul 17 11:40:37 2025"
+attribution: DTK
+chapter: 6
+status: in progress
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+The calculator in @fig-heat-index-sliders is based on a formula well suited to computers. Can you find a (temperature, humidity) input where the output from the formula is different from the table presented in @fig-original-heat-index?
+
+`r devoirs::devoirs_text("sister-teach-pen")`
+
+
+<!-- Opening answer: stp-2Av -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+One such set of inputs is temperature 35 C, humidity 50%. Steadman's table gives 40 deg. as the output but the calculator gives 41 deg..
+
+[..id..]{data-tooltip="Ans id: stp-2Av"}
+:::
+<!-- closing answer stp-2Av -->

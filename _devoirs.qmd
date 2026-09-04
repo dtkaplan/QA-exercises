@@ -1,0 +1,28 @@
+
+::::{.callout-warning collapse=true}
+### Remember to hand in your work ...
+::: {.panel-tabset}
+## Submitting answers
+
+At any point, you can submit your answers by collecting them and uploading them to the class site.
+
+`r devoirs_start_no_link()`
+
+```{r echo=FALSE}
+devoirs_end()
+```
+
+[Link to upload site]({{< var devoirs.uploadsite >}}){target="_blank"}
+
+## Honor statement
+
+If requested by your instructor, please identify here the people from whom you received assistance on this assignment.
+
+`r devoirs::devoirs_text("honor-statement")`
+
+## Clearing document memory
+If the answers that have been loaded automatically are not yours, press this button before starting your work:
+`r devoirs::clear_persistent_storage()`
+:::
+
+::::

@@ -1,0 +1,24 @@
+<!--
+id: "seal-ride-book"
+created: "Wed Jan 28 09:48:09 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 5"
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seal-ride-book}
+In the text's example about sun position, cloudiness, and production, select the correct description:
+
+```{mcq}
+#| label: srb-1-njvc
+1.  All three variables are endogenous.
+1.  The variables sun position and cloudiness are endogenous; production is exogenous.
+1.  The variables sun position and cloudiness are exogenous; production is endogenous. [correct]
+1.  All three variables are exogenous.
+```
+:::
+ <!-- end of exr-seal-ride-book -->

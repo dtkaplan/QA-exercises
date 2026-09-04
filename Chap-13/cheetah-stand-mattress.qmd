@@ -1,0 +1,149 @@
+<!--
+id: "cheetah-stand-mattress"
+created: "Sun Dec 28 14:33:01 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cheetah-stand-mattress}
+The series of images of "The Horse in Motion," made by Eadweard Muybridge in 1878, was one of the first stop-action, multi-frame photographs. There are 11 successive frames, each separated by 0.04 seconds. (The last frame is out of sequence, so ignore it for our purposes.) The vertical lines are separated by 27 inches. The whole set of frames, from 1 to 11, covers approximately one-half stride cycle of the horse.
+
+::: {.column-page-inset-right}
+![](../www/muybridge-horse.png)
+:::
+
+We are going to look at the rate of change of the horse's position with respect to time. Of course, "rate of change of position with respect to time" is more commonly known as *velocity*. And, evidently, different parts of the horse are moving with different velocities at different times. 
+
+To start, make measurements from the photos of two parts of the horse: the tip of the nose and the center of one of the front hooves. Which hoof? The one that is *not* in contact with the ground in frame 1 and is being pulled behind a bent knee in frame 2. (Note that to see the hoof is being pulled, you might need to refer to frame 3. Simple dynamical phenomena play out over extended time.)
+
+```{r}
+#| echo: false
+#| label: C13-ktsii
+Framework <- 
+"                              Nose       Hoof
+Frame | Time | Nose | Hoof | Velocity | Velocity 
+------|------|------|------|----------|----------
+1     | 0.00 |  8.1 |  5.4 |
+2     | 0.04 |  9.4 |  7.5 |
+3     | 0.08 | 10.1 |  8.7 |
+4     | 0.12 | 11.4 | 10.8 |
+5     | 0.16 | 12.3 | 12.2 |
+6     | 0.20 | 13.3 | 13.3 |
+7     | 0.24 | 14.3 | 14.0 |
+8     | 0.28 | 15.1 | 14.0 |
+9     | 0.32 | 16.1 | 14.0 |
+10    | 0.36 | 17.2 | 14.3 |
+11    | 0.40 | 18.3 | 16.1 |
+"
+```
+
+
+The following is a text-entry box that will be submitted along with your other answers. Questions (1) - (3) below are to get you started filling in the velocity columns of the table. 
+
+`r devoirs::devoirs_text("csm-tab-3ks", contents = Framework, rows = 14)`
+
+
+
+1. What is the change in nose position from frame 1 to frame 2?
+
+`r devoirs::devoirs_set(c(-0.6, 0.6, 1.3, 2.7, 3.5), correct = 1.3, id = "csm-1-clw")`
+
+2. What is the rate of change of nose position with respect to time from frame 1 to frame 2?
+
+`r devoirs::devoirs_set(c(-10.9, 14.6, 32.5, 52.3, 57.7), correct = 32.5, id = "csv-2-kwc")`
+
+3. What is the rate of change in hoof position with respect to time from frame 1 to frame 2?
+
+`r devoirs::devoirs_set(c(25.1, 31.9, 45.1, 52.5, 57.7), correct = 52.5, id = "csv-3-csl")`
+
+
+4. Consider this phrase: "The rate of change in hoof position with respect to nose position." Calculate it, then explain how the value is related to the values from (2) and (3).
+
+5. Do similar calculations as in (2) and (3), but go backwards: from frame 2 to frame 1. Do your results have an evident relationship to the values you calculated in (2) and (3).
+
+6. Fill in the velocity columns for @tbl-nose-hoof for all ten pairs of successive frames. As you do so, contemplate this question: for the rates of change from frame n to n+1, should you enter the values on line n or line n+1 or something different? Would either be valid? Both? We just want to hear what you're thinking about this, not that there is a right answer.
+
+`r devoirs::devoirs_text("csm-roc-uw34", str = "Write your answer to (6) here.")`
+
+7. Imagine that your answer to the previous question was "both." You would then have two different velocities to enter on each line of the table. But the horse's nose cannot have two different velocities at the same time. This is a genuine problem. In `r xf("sec-rates-of-change")` the word "instantaneous" is associated with the conceptual resolution of this problem. Explain the connection between "instantaneous" and the resolution of the riddle in (6). 
+
+`r devoirs::devoirs_text("csm-7-xekw", str = "Write your answer to (7) here.")`
+
+8. A high-speed, high-resolution video camera can cover the same time span as covered in Muybridge's photo with thousands of successive frames rather than just eleven. 
+How might such data make the question of where to place each velocity data point practically of no consequence.
+
+`r devoirs::devoirs_text("csm-8-gskw", str = "Write your answer to (8) here.")`
+
+
+@fig-nose-hoof-continuous shows a model of the position of the nose and hoof as they vary continuously in time. The graphs are annotated with sloping lines where the unit of the slope is m/s.
+
+```{r}
+#| label: fig-nose-hoof-continuous
+#| layout-ncol: 1
+#| echo: false
+#| fig-cap: "A reconstruction of nose and hoof positions as a continuous function of time."
+#| fig-subcap:
+#| - Nose
+#| - Hoof
+Horse <- tibble::tribble(
+  ~ frame, ~ nose, ~ hoof, 
+  1, 8.1, 5.4,
+  2, 9.4, 7.5,
+  3, 9.1, 8.7,
+  4, 11.4, 10.8,
+  5, 12.3, 12.2,
+  6, 13.3, 13.3,
+  7, 14.3, 14.0,
+  8, 15.1, 14.0,
+  9, 16.1, 14.0,
+  10, 17.2, 14.3,
+  11, 18.3, 16.1) |>
+  mutate(time = 0.04*(frame-1),
+         nose = nose * 27 * 0.0254,
+         hoof = hoof * 27 * 0.0254)
+fnose <- with(Horse, splinefun(time, nose, method = "monoH.FC"))
+fhoof <- with(Horse, splinefun(time, hoof, method = "monoH.FC"))
+slice_plot(fnose(t) ~ t, domain(t = 0:0.40) , color = "black") |>
+  gf_labs(y = "Position (m)", x = "Time (s)") |>
+  gf_refine(scale_x_continuous(breaks = 0.04*(0:10)),
+            scale_y_continuous(breaks = 3:13, limits = c(3, 13))) |>
+  LSTbook::add_slope_rose(y = 4, keepers="pos") |>
+  gf_theme(theme_minimal())
+slice_plot(fhoof(t) ~ t, domain(t = 0:0.40) , color = "blue") |>
+  gf_labs(y = "Position (m)", x = "Time (s)") |>
+  gf_refine(scale_x_continuous(breaks = 0.04*(0:10)),
+            scale_y_continuous(breaks = 3:13, limits = c(3, 13))) |>
+  LSTbook::add_slope_rose(y = 4, keepers="pos") |>
+  gf_theme(theme_minimal())
+
+
+```
+
+9. Copy over one of the graphs (approximate is OK) to a piece of paper. Annotate the graph with:
+
+    a. Points and a sloping line connecting them that correspond to the velocity calculation between frames 3 and 4 (that is, time 0.08 to 0.12 s).
+    b. Points and a sloping line connecting them that correspond to the overall velocity over the interval from time zero to time 0.40 s
+    c. The instant when the velocity is highest.
+    
+The `{devoirs}` homework collection system doesn't handle pictures, but bring your annotated graph to class for discussion purposes.
+
+```{r}
+#| eval: false
+#| echo: false
+#| label: fig-nose-hoof-vel
+#| fig-cap: "Instantaneous velocity (based on position in @fig-nose-hoof-continuous)"
+slice_plot(fnose(t, deriv = 1) ~ t, domain(t = 0:0.40) , color = "tomato", npts=300) |>
+  gf_labs(y = "Velocity (m/s)", t = "Time (s)") |>
+  slice_plot(fhoof(t, deriv = 1) ~ t, domain(t = 0:0.40) , color = "blue", npts=300) |>
+  gf_refine(scale_x_continuous(breaks = 0.04*(0:10)),
+            scale_y_continuous(breaks = 4*(-5:12), limits = c(-20, 50))) |>
+  gf_theme(theme_minimal())
+```  
+
+
+:::
+ <!-- end of exr-cheetah-stand-mattress -->

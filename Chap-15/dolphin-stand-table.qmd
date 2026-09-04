@@ -1,0 +1,18 @@
+<!--
+id: "dolphin-stand-table"
+created: "Sun Aug 16 16:36:02 2026"
+attribution: DTK
+uses: in systems chapter
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-dolphin-stand-table}
+Highlight our vocabulary: specimen, sample, dimension, operationalization, etc. with the standard statistical vocabulary, e.g. unit of observation, sample, variable, population. Maybe fix up this paragraph:
+
+Readers who have studied statistics may remember the idea of “statistical inference,” a technical term that specifically refers to the uncertainty remaining in inferring the properties of a population from a sample of that population. Obviously, the word “inference” is close in meaning to “reasoning.” So, for readers who have already internalized the conventions of formal statistical inference, it will be helpful to contrast it with the approach to quantitative argumentation used in this book. For us, the objects about which we are trying to reason are systems with their various dimensions rather than populations with their variables. Effective quantitative argumentation, of course, may include data as part of the underlying givens, but it can also include theories, beliefs, prior knowledge, hunches, and so on. Our goal in quantitative argumentation is to bring all these sources together as we attempt to understand better and work with the sort of complex situations we encounter in the world.
+:::
+ <!-- end of exr-dolphin-stand-table -->

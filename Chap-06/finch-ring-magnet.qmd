@@ -1,0 +1,24 @@
+<!--
+id: "finch-ring-magnet"
+created: "Fri Jan 30 16:46:25 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-finch-ring-magnet}
+The function `hillside()` ...
+
+```{mcq}
+#| label: d06-frm-clw
+1. goes up and then back down to a baseline
+2. repeats the same pattern over and over
+3. starts at a low value and gradually levels off at a higher value [correct]
+4. decreases quickly at first, then more slowly
+```
+:::
+ <!-- end of exr-finch-ring-magnet -->

@@ -1,0 +1,27 @@
+<!--
+id: "avoid-read-tv"
+created: "Fri Dec 19 17:18:21 2025"
+attribution: TBA
+status: "draft"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-avoid-read-tv}
+Write and verify the command to make this plot:
+
+```{r}
+#| echo: false
+#| label: C07-uofes
+slice_plot(hill(y) ~ y, domain(y = -5:20))
+```
+Enter your expression here:
+
+`r devoirs::devoirs_text("art-1-jdu")`
+
+:::
+ <!-- end of exr-avoid-read-tv -->

@@ -1,0 +1,16 @@
+<!--
+id: "sheep-put-cotton"
+created: "Wed Mar  4 17:08:15 2026"
+attribution: DTK
+status: sketch
+chapter: 16
+mode: discussion
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-sheep-put-cotton}
+
+Curse of dimensionality Divide an n-dimensional cube into blocks with edge length 1/3 that of the cube. For 250-dimensional space, there are roughly `1.9e119` cubes, more than the number of particles in the universe.  A 15 x 20 pixel image is a point in a 300-dimensional space. To fill that space with data is impossible.  
+:::
+ <!-- end of exr-sheep-put-cotton -->

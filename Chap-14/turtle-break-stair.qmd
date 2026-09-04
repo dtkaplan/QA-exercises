@@ -1,0 +1,25 @@
+<!--
+id: "turtle-break-stair"
+created: "Thu Mar 12 08:12:38 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-turtle-break-stair}
+The derivative of a function is itself a function. What are its *inputs* and what is the *output* (in words)?
+
+```{mcq}
+#| label: tbs-1-ale
+1. Inputs: rates of change; output: the original function value.
+2. Inputs: the same as the original function; output: the instantaneous (that is, "marginal") rate of change (slope of the graph) of the original function at that input. [correct]
+3. Inputs: slopes; output: area under the curve.
+4. Inputs: time only; output: position.
+```
+
+:::
+ <!-- end of exr-turtle-break-stair -->

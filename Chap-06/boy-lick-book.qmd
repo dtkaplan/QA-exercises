@@ -1,0 +1,26 @@
+<!--
+id: "boy-lick-book"
+created: "Fri Jan 30 16:54:14 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-boy-lick-book}
+At what input value does `hillside()` produce an output of 0.5 (halfway between its minimum and maximum)?
+
+```{mcq}
+#| label: d06-blb-ckw
+#| inline: true
+1. -1
+2. 0 [correct]
+3. 0.5
+4. 1
+```
+
+:::
+ <!-- end of exr-boy-lick-book -->

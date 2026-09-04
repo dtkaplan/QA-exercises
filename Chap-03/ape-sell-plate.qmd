@@ -1,0 +1,19 @@
+<!--
+id: "ape-sell-plate"
+created: "Wed Dec 31 07:21:53 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 2"
+status: "ready-to-use"
+chapter: 3
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+<!-- ::: {#exr-ape-sell-plate} -->
+The text refers to a conversion factor, such as (60 seconds) / (1 minute), as a "flavor of one."  Explain the reasoning behind calling this fraction "one," even though the numbers 1 and 60 are clearly different.
+
+`r devoirs::devoirs_text("asp-RQ2-vldr")`
+
+<!-- ::: -->
+ <!-- end of exr-ape-sell-plate -->

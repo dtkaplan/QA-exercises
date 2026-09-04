@@ -1,0 +1,17 @@
+<!--
+id: "kitten-light-pantry"
+created: "Wed Oct  8 11:06:58 2025"
+attribution: TBA
+status: "sketch"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-kitten-light-pantry}
+Conversion factors. Show that the different directions of conversion are reciprocals.
+:::
+ <!-- end of exr-kitten-light-pantry -->

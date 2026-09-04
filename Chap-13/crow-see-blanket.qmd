@@ -1,0 +1,33 @@
+<!--
+id: "crow-see-blanket"
+created: "Sun Dec 28 14:15:27 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-crow-see-blanket}
+The sound wave following tapping a tuning fork looks something like this (although the oscillation is much faster than shown):
+
+```{r}
+#| echo: false
+#| label: C13-dmkmy
+fork <- function(t) {
+  ifelse(t < 2, 
+         0,
+        (pnorm(t, mean=2, sd=0.4) - pnorm(t, mean = 10, sd=5)) * sin(2*pi*t/0.5))
+}
+
+slice_plot(fork(t) ~ t, domain(t = 0:20), npts = 1000 )
+```
+
+The tuning-fork function shown is different from any of the core modeling functions. Pick the core modeling function that is most similar and explain how the tuning-fork function differs from it.
+
+`r devoirs::devoirs_text("RQ8-4ys")`
+
+
+:::
+ <!-- end of exr-crow-see-blanket -->

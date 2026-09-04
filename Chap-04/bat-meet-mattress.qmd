@@ -1,0 +1,20 @@
+<!--
+id: "bat-meet-mattress"
+created: "Wed Aug 19 12:40:10 2026"
+attribution: DTK
+uses: rates
+status: "sketch"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bat-meet-mattress}
+The rate *80 Cal per mile* is, like all other rates, a quantity. All quantities have a {{< var dim.dim >}}. 
+The {{< var dim.dim >}} 
+of *80 Cal/mile* is [energy] / L, that is, {{< var dim.force >}}. 
+[Remember that "[energy]" is pronounced, "the {{< var dim.dim >}} 
+of energy.]{.column-margin} In this case, the {{< var dim.dim >}} of the *rate* is different from the {{< var dim.dim >}}s of either of the quantities that formed the rate. POINT OUT THAT THIS IS A FORCE and observe that a force is a good way to describe the difficulty of walking.
+:::
+ <!-- end of exr-bat-meet-mattress -->

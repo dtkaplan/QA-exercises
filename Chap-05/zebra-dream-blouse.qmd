@@ -1,0 +1,117 @@
+<!--
+id: "zebra-dream-blouse"
+created: "Mon Dec  1 12:20:41 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-zebra-dream-blouse}
+The `Engine` data frame contains measurements of many different internal combustion engines of widely varying sizes. For instance, we can graph engine RPM (revolutions per second) versus engine mass (in pounds), as in @fig-rpm-mass1.
+
+```{r echo=FALSE}
+#| label: fig-rpm-mass1
+#| fig-cap: "Engine speed (RPM) versus mass for 39 different engines using *linear axes*. Applications for engines span many magnitudes: compare a small lawn-mower engine to the huge engine in a large ship."
+gf_point(RPM ~ mass, data = Engines) |>
+  gf_theme(theme_minimal())
+```
+
+In the @fig-rpm-mass1, most engines have a mass of... zero. At least, that is how it appears. The scale of the horizontal axis is determined only by the two massive 100,000-pound monster engines plotted at the right end of the graph.
+
+Plotting the magnitude of the engine mass spreads things out, as in @fig-rpm-mass-log.
+
+::: {.column-page-inset-right}
+```{r echo=FALSE}
+#| label: fig-rpm-mass-log
+#| fig-cap: "The engine data plotted with magnitude scales"
+#| fig-subcap: 
+#| - " "
+#| - " "
+#| layout-ncol: 2
+gf_point(RPM ~ mass, data = Engines) |>
+  gf_refine(scale_x_log10()) |>
+  gf_theme(theme_minimal())
+
+gf_point(RPM ~ mass, data = Engines) |>
+  gf_refine(
+    scale_x_log10(),
+    scale_y_log10()
+    ) |> 
+  gf_theme(theme_minimal())
+```
+:::
+
+1. Which of the plots in @fig-rpm-mass-log uses two magnitude axes?
+
+```{mcq}
+#| label: zdb-1-8dw
+#| inline: true
+1. (a)
+2. (b) [correct]
+3. both a and b
+4. neither a nor b
+```
+
+2. On the mass axis in the plots in @fig-rpm-mass-log, there are labels at 1 pound, 10 pounds, and 100 pounds. The vertical grid line between 1 and 10 pounds has no label. Which of these labels would be most appropriate?
+
+```{mcq}
+#| label: zdb-2-kfw3
+#| inline: true
+1. 2
+2. 3 [correct]
+3. 5
+4. no proper label exists
+```
+
+3. In @fig-rpm-mass-log, there is an unlabelled vertical grid line half-way between 100 and 10,000 pounds. What is an appropriate label?
+
+```{mcq}
+#| label: zdb-3-k4s
+#| inline: true
+1. 500
+2. 550
+3. 1000 [correct]
+4. 3000
+```
+
+@fig-zdb-many shows a coordinate system with magnitude scales for both axes. We're interested in the physical spacing (as you would measure with an ordinary ruler) between values. Remember, the grid-line labels are in terms of the quantity itself, not the magnitude of the quantity. However the spacing between grid lines is the same for equal increments in magnitude.
+
+```{r}
+#| echo: false
+#| label: fig-zdb-many
+#| fig-cap: "Finely gridded magnitude scales."
+Pts <- tibble::tibble(
+  x = 1:10,
+  y = x^3
+)
+ggplot(Pts, aes(x=x, y = y)) +
+  geom_blank() +
+  scale_x_log10(breaks = 1:10) +
+  scale_y_log10(n.breaks = 15) +
+  theme_minimal()
+```
+
+4. `r devoirs::devoirsTF(FALSE, id="zdb-4-73sq")` On the x-axis scale in @fig-zdb-many, the labels 1.0, 2.0, and 3.0 refer to equal steps in the quantity value. Are they equally spaced physically?
+
+5. `r devoirs::devoirsTF(TRUE, id = "zdb-5-347s")` On the x-axis scale in @fig-zdb-many, the values 1, 2, 4, 8 are equally spaced in magnitude. (In this case, each is twice as big as the previous.) Are they equally spaced physically?
+
+6. On the y-axis (*vertical*) scale in @fig-zdb-many, the horizontal grid lines labeled 2 and 10 are separated in value by a multiplicative factor of 5. There are several other pairs of labels on the y-axis that are separated by a multiplicative factor of 5, for instance 1 and 5. Write down *all* such pairs of labels. And, for each pair, record the spatial distance between the labels. You can use a ruler to do so, but if one is out of reach, use your fingers as a ruler. 
+
+`r devoirs::devoirs_text("zdb-6-jwlc")`
+
+7. In magnitude plots, a **decade** refers to an order of magnitude range, for instance, from 1 to 10. How many decades are shown in the y-axis scale of @fig-zdb-many?
+
+```{mcq}
+#| label: zdb-7-2se
+#| inline: true
+1. 1
+2. 2
+3. 3 [correct]
+4. 4
+```
+
+:::
+ <!-- end of exr-zebra-dream-blouse -->

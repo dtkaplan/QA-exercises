@@ -1,0 +1,107 @@
+<!--
+id: "pig-think-bolt"
+created: "Mon Dec 22 06:06:02 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pig-think-bolt}
+Usually you read the order of magnitude from the integer following the `e`. For instance, the order of magnitude of `1.56e13` is simply thirteen. But for the devious purposes of this drill problem, we've written some of the numbers in non-standard form.
+
+The standard form for writing a number in scientific notation has, as you know, two components: a mantissa and an exponent. The mantissa is written to have one non-zero digit to the left of the decimal point. The exponent must always be an *integer*, that is $\ldots, -2, -1, 0, 1, 2, 3, \ldots$.
+
+1. Which one of the following is *not* in standard form?
+
+```{mcq}
+#| label: ptb-1-o3f
+#| inline: true
+1. `0.2e-6` [correct]
+2. `1.56e4` 
+3. `-9.2e-2`
+4. `4.5e17`
+```
+
+2. Which one of the following is *not* in standard form?
+
+```{mcq}
+#| label: ptb-2-fdw
+#| inline: true
+1. `7.1e2`
+2. `7.4e-1` 
+3. `7e2.1` [correct]
+4. `7.9e0` [hint:Zero is a perfectly good exponent. Numbers in the range from 1 to 9.999... have order of magnitude zero.]
+```
+
+Suppose you have a number written in non-standard form, e.g. `36.525e1`. To change this to standard form, you need to divide the mantissa by 10, that is, move the decimal point one place to the **left**. To compensate for the division by 10, you need to raise the exponent by 1. This gives `3.6525e2`
+
+Similarly, when the leading digit of the mantissa is zero, for instance `0.0052e1` conversion to standard form requires moving the decimal point to the **right** until the leading digit is non-zero. To compensate for moving the decimal point, you need to subtract the number of places moved from the exponent. So to put `0.0052e1` in standard form we need to move the decimal point three places to the right and, in compensation, subtract 3 from the exponent. This gives `5.2e-2`.
+
+3. For each of these mantissas, how do you have to move the decimal point to place the mantissa in a standard form for scientific notation? (3L means "three places to the left" while 2R means two places to the right.)
+
+3a. `92425.01`
+
+```{mcq}
+#| label: ptb-3a-clse
+#| inline: true
+1. 4L [correct]
+2. 3L 
+3. 2L
+4. 1L
+5. OK as is
+6. 1R
+7. 2R
+8. 3R
+9. 4R
+```
+
+3b. `0.00314e3`
+
+```{mcq}
+#| label: ptb-3b-s3d
+#| inline: true
+1. 4L 
+2. 3L 
+3. 2L
+4. 1L
+5. OK as is
+6. 1R
+7. 2R
+8. 3R [correct]
+9. 4R
+```
+
+3c. `1.00026e-3`
+
+```{mcq}
+#| label: ptb-3c-s3d
+#| inline: true
+1. 4L 
+2. 3L 
+3. 2L
+4. 1L
+5. OK as is [correct]
+6. 1R
+7. 2R
+8. 3R 
+9. 4R
+```
+
+
+4. Three of the following numbers have the same order of magnitude. Which one doesn't?
+
+```{mcq}
+#| label: ptb-4-dkwd
+#| inline: true
+1. 65e5 [hint: Move decimal point on the mantissa one place to the left and, correspondingly, raise the exponent by 1 to get standard form.]
+2. 7.229e6 [hint: Already in standard form. Order of magnitude is 6.]
+3. 659e7 [correct hint: Move decimal point two places to the left and, correspondingly raise the exponent by two. This places the number in proper form from which you can read off the order of magnitude directly from the exponent, 9]
+4. 0.0063e9 [hint: To get standard form, move the decimal point in the mantissa three places to the right. The compensatory change in the exponent is to subtract 3, giving 9-3 = 6 for the order of magnitude.]
+```
+
+
+:::
+ <!-- end of exr-pig-think-bolt -->

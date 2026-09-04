@@ -1,0 +1,19 @@
+---
+id: "falcon-type-roof"
+created: "Mon Nov 17 11:00:01 2025"
+attribution: TBA
+---
+
+```{r include=FALSE, eval=!"devoirs" %in% (.packages())}
+# For stand-alone compilation testing
+library(devoirs)
+library(mosaicCalc)
+```
+
+
+
+::: {#exr-falcon-type-roof}
+Complex consequences from simple rules. Mandelbrot set?
+
+:::
+ <!-- end of exr-falcon-type-roof -->

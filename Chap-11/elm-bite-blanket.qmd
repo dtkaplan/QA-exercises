@@ -1,0 +1,17 @@
+<!--
+id: "elm-bite-blanket"
+created: "Fri Nov  7 07:42:06 2025"
+attribution: TBA
+status: "sketch"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-elm-bite-blanket}
+Maximum likelihood estimation. Give some data. Maybe for a single parameter distribution, e.g. the gaussian with known standard deviation, or the uniform distribution with fixed lower estimate. Or maybe a contour plot of the likelihood as a function of mean and sd for the gaussian.
+:::
+ <!-- end of exr-elm-bite-blanket -->

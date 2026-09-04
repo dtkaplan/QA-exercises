@@ -1,0 +1,36 @@
+<!--
+id: "brother-bid-linen"
+created: "Thu Oct 30 13:57:36 2025"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-brother-bid-linen}
+The figure is a version of  focusing on the domain near the peak of the likelilhood function.
+
+::: {fig-image-for-more-data}
+![](../www/image-for-more-data-exercise.png)
+
+Zooming in near the peak of the likelihood function from `r xf("fig-accidents-likelihood-function")`(b) which was based on data from 10 cars which drove 785,000 in total.
+
+:::
+
+The peak magnitude for the likelihood function is about 1.1. As described in the text, the approximate confidence interval can be read off from the locations of the hypotheses where the magnitude likelihood is down by 2. Here, that will be where the likelihood function crosses the value 1.1 - 2 = -0.9.
+
+Perhaps it's intuitive that increasing the amount of data would decrease uncertainty in the result, that is, narrow the confidence interval. Researchers often collect some preliminary data and then estimate how much more data would be needed make the confidence interval acceptably narrow.
+
+This estimate is based on imagining that the new data would look very much like the preliminary data. That's not necessarily true, which is why we call it an "estimate."
+
+Suppose the researches double the amount of data. So instead of the 785,000 miles of experience used to construct the likelihood function shown in @fig-image-for-more-data, we will have about 1,500,000 miles. We're imagining that the new 750,000 of data will have the same likelihood function as the first 785,000 miles of data. Since the likelihood is the *product* of the individual likelihoods, the likelihood for the full 1,500,000 mile data set will be the the square of the 785,000-mile likelihood.
+
+You may remember from your earlier school work that the magnitude of the square of $L$ (that is, the magnitude of $L^2$) is double the magnitude of $L$ itself. The likelihood function for the doubled data set will look just like @fig-image-for-more-data, but with the numbers on the vertical axis doubled. 
+
+Draw a sketch of @fig-image-for-more-data, but double each of the numbers on the vertical axis. Then, find the confidence interval for the doubled data. (Look where the likelihood is 2 less than the peak.)
+
+That's still a pretty broad interval. Perhaps we want to double the amount of data again, to 3,000,000 miles (40 cars). What would the confidence interval be then?
+:::
+ <!-- end of exr-brother-bid-linen -->

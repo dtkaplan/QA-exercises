@@ -1,0 +1,48 @@
+<!--
+id: "daisy-blow-kitchen"
+created: "Wed Mar  4 18:24:56 2026"
+attribution: TBA
+status: "draft"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-daisy-blow-kitchen}
+```{r}
+#| echo: false
+#| label: C15-dzdau
+f <- doodle_fun(~ x & y, seed = 93822)
+set.seed(101)
+Pts <- tibble::tibble(
+  y = runif(5, -3.5, 3.5),
+  x = runif(5, -3.5, 3.5),
+  labels = LETTERS[5:1]
+)
+contour_plot(f(x, y) ~ x & y, domain(x = -4:4, y = -4:4)) |>
+  gf_text(y ~ x, label = ~ labels, data = Pts, 
+          size = 6, color = "black", inherit = FALSE) |>
+  gf_refine(coord_fixed()) |>
+  gf_theme(theme_minimal())
+  
+
+```
+
+
+Here is a contour plot of a function $f(x, y)$, annotated with several letters. At each of the letters, say what is the direction of the gradient vector. As names for directions, we will use the eight major compass points: N, NE, E, SE, S, SW, W, NW. Choose Zero if the gradient vector is so short that the direction is essentially meaningless.
+
+`r choices <- c("N", "NE", "E", "SE", "S", "SW", "W", "NW", "Zero")`
+
+1. At point A: `r devoirs::devoirs_set(choices, correct = "NW", n = 9, id = "dbk-A-dkws")`
+
+2. At point B: `r devoirs::devoirs_set(choices, correct = "SW", n = 9, id = "dbk-B-dkws")`
+
+3. At point C: `r devoirs::devoirs_set(choices, correct = "S", n = 9, id = "dbk-C-dkws")`
+
+4. At point D: `r devoirs::devoirs_set(choices, correct = "NW", n = 9, id = "dbk-D-dkws")`
+
+5. At point E: `r devoirs::devoirs_set(choices, correct = "Zero", n = 9, id = "dbk-E-dkws")`
+
+:::
+ <!-- end of exr-daisy-blow-kitchen -->

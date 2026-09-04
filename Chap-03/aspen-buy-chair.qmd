@@ -1,0 +1,26 @@
+<!--
+id: "aspen-buy-chair"
+created: "Tue Feb 24 12:57:06 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-aspen-buy-chair}
+The name "horsepower" strongly suggests that it is a unit of power. James Watt's definition of 1 horsepower was made experimentally. A horse was harnessed to a bar to pull against a measured amount of *force*. (The force measurement was made with a spring scale.) The horse walked around a circle, with the bar connected to an axel in the center of the circle. Watt measured the total *distance* traveled by the horse in one hour of *time*.
+
+Which of these calculations of "horsepower" makes sense if the unit is one of power? Remember that the dimension of force is [acceleration] $\times$ [mass] or, L M T^-2^. The dimension of power is L^2^ M T^-3^.
+
+```{mcq}
+#| label: abc-1-xoy
+1. force $\times$ distance $\times$ time
+2. force $\times$ time / distance
+3. force $\times$ distance / time [correct]
+4. distance $\times$ time / force
+```
+
+:::
+ <!-- end of exr-aspen-buy-chair -->

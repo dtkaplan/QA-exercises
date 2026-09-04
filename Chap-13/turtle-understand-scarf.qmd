@@ -1,0 +1,19 @@
+<!--
+id: "turtle-understand-scarf"
+created: "Thu Mar 12 07:35:20 2026"
+attribution: Dorothy Dickmann
+use: RQ 13
+status: "ready-to-use"
+chapter: 13
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-turtle-understand-scarf}
+The marginal tax rate function (`r xf("fig-tax-rate-functions")`a) and the total tax owed function (`r xf("fig-tax-rate-functions")`b) are said to convey “the same information.” What is the relationship between them?
+
+`r devoirs::devoirs_text("RQ13-tus-1")`
+
+:::
+ <!-- end of exr-turtle-understand-scarf -->

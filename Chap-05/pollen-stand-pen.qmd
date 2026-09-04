@@ -1,0 +1,119 @@
+<!--
+id: "pollen-stand-pen"
+created: "Mon Dec 22 10:39:15 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-pollen-stand-pen}
+In everyday speech, a "decade" corresponds to 10 years, "two decades" to 20 years, and so on. In *magnitude graphics*, a decade refers to something different. On a magnitude scale, as on all numerical scales, there is a lowest marked value and a higher marked value. If the higher marked value is 10-times the size of the lowest, that scale covers one decade. If the higher marked value is 100-times the size of the lowest---that is, two orders of magnitude bigger---the scale is said to cover two decades. A span of three orders of magnitude corresponds to three decades, and so on.
+
+1. How many decades are spanned by this interval: [0.01 to 10]?
+
+```{mcq}
+#| label: psp-1-3kdw
+#| inline: true
+1. 0
+2. 1
+3. 2
+4. 3 [correct]
+5. 4
+6. 5 
+7. 6
+```
+
+2. How many decades are spanned by the interval [10 to 1000]?
+
+```{mcq}
+#| label: psp-2-ired
+#| inline: true
+1. 0
+2. 1
+3. 2 [correct]
+4. 3 
+5. 4
+6. 5 
+7. 6
+```
+
+3. How many decades are spanned by the interval [0.3 to 30]?
+
+```{mcq}
+#| label: psp-3-yseld
+#| inline: true
+1. 0
+2. 1
+3. 2 [correct]
+4. 3 
+5. 4
+6. 5 
+7. 6
+```
+
+Sometimes an interval doesn't cover a full order of magnitude. For instance, the in scale [10 to 30], the higher value is not even 10 times the lower. But, when the higher number is 3 times the lower, we way that the interval covers "half a decade." Why "half?" Two half orders of magnitude places the higher value at $3 \times 3 \approx 10$ times the lower value. Since since a factor of 10 is one decade, a factor of 3 is (roughly) half a decade.
+
+4. How many decades are spaned by the interval [10-300]?
+
+```{mcq}
+#| label: psp-5-2ess
+#| inline: true
+1. 0.5
+2. 1
+3. 1.5 [correct]
+4. 2
+3. 2.5
+```
+
+
+```{r}
+#| echo: false
+#| eval: false
+#| label: C05-utfqb
+# create the file then use graphics editor to make separate
+# files for each axis
+ggplot(Engines, aes(x = mass, y = RPM)) + 
+  geom_blank() +
+  scale_x_log10(n.breaks = 15) +
+  scale_y_log10(n.breaks = 8)
+
+ggsave("decades-1.png")
+```
+
+5. How many decades are covered by this scale?
+
+![](../www/decades-h-1.png) 
+
+```{mcq}
+#| label: psp-5-nkvd
+#| inline: true
+1. 3.5 
+2. 4
+3. 4.5
+4. 5 
+5. 5.5 
+6. 6 [correct]
+```
+
+
+6. How many decades are covered by this scale? 
+
+![](../www/decades-v-1.png){height=40mm} 
+
+```{mcq}
+#| label: psp-6-gru
+#| inline: true
+1. 0.5
+2. 1
+3. 1.5 
+4. 2
+3. 2.5 [correct]
+```
+
+:::
+ <!-- end of exr-pollen-stand-pen -->

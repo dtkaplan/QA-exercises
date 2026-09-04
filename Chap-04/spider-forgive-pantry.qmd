@@ -1,0 +1,48 @@
+<!--
+id: "spider-forgive-pantry"
+created: "Wed Aug 19 13:11:00 2026"
+attribution: DTK
+uses: rates
+status: "draft"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spider-forgive-pantry}
+
+One confusing aspect of the way interest rates are specified has to due with "compound interest." Suppose you borrow $1000 on January 1 at an outrageously high interest rate of 10 percent/month. You are to pay back the loan, principal and interest, after six months. How much should you pay?
+
+One approach is to multiply the interest rate by the duration of the loan. This gives 10 percent / month $\times$ 6 months = 60 percent. According to this method, the payback amount is $1600, that is, the $1000 principal plus $600 in interest.
+
+Another approach, called *compound interest* might interpret 10 percent per month in the following way: At the end of each month, that month's interest is added to the principal. Each month, the principal is increased by 10 percent of the previous month's principal.
+
+Date | Principal | increase from previous month
+-------|----------|------------
+Jan 1 | $1000.00 | not applicable
+Feb 1 | $1100.00 | $100.00
+Mar 1 | $1210.00 | $110.00
+Apr 1 | $1321.00 | $121.00
+May 1 | $1474.10 | $132.10
+June 1 | $1610.51  | $147.41
+July 1 | $1771.56   | $161.05
+
+Calculations of this sort are hard to do in one's head. Many consumers would be surprised to hear that six-months interest growth comes to $771.56 rather than $600.
+
+There are good economic reasons to treat interest as compounding. But this means that a loan agreement should specify not just the initial principal ($1000) and the interest rate (10 percent per month), but also the **method of compounding**.
+
+Here are three common methods. Make sure you know which one to apply when making or taking a loan!
+
+- Simple interest: Final payment $1600.00
+- Monthly compounding: Final payment $1771.56
+- Annual compounding: Final payment $1483.24.
+
+Some consumer-protection regimes require that interest rates be stated in a standard format which amounts to an annual rate compounded annually. This is called an "Annual Percentage Rate" (APR). An interest scheme which compounds 10 percent monthly has an APR of 2,138.43% per year, nothing near the 120% that intuition suggests. Perhaps you can see why 10 percent per month is an outrageous interest rate!
+
+Maybe do some COMPUTER CALCULATIONS of APR. For instance, at 1 percent per month, there isn't a huge difference between monthly rate and APR.
+
+Following conventions is important when communicating quantitatively. APR is one such convention. 
+
+:::
+ <!-- end of exr-spider-forgive-pantry -->

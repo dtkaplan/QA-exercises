@@ -1,0 +1,20 @@
+<!--
+id: "frog-get-laundry"
+created: "Thu Sep 25 13:49:19 2025"
+attribution: TBA
+status: "draft"
+chapter: 2
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-frog-get-laundry}
+
+In discussing the formation of new physicians, we combined two facts: the total number of medical students is 100,000 *and* medical school takes four years. This led to our estimate that there will be 25,000 graduates each year. 
+Revisit this model taking into account that not all entering medical students graduate. Assume that attrition in the first year is 10%, then 5% in each of the two successive years. 
+
+If there are 100,000 students all together, how many graduate each year?
+
+:::
+ <!-- end of exr-frog-get-laundry -->

@@ -1,0 +1,40 @@
+<!--
+id: "beech-sleep-canoe"
+created: "Fri Feb 20 07:43:32 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-sleep-canoe}
+![](../www/flows/flow-WSW.png)
+
+1. Which of these best describes the change in the x-component of the state as it moves through this region of state space?
+
+```{mcq}
+#| label: flow-bsc-1-83
+#| inline: true
+1. decreasing quickly [correct]
+2. decreasing slowly 
+3. not changing
+4. increasing slowly
+5. increasing quickly
+```
+
+2. Which of these best describes the change in the y-component of the state as it moves through this region of state space?
+
+```{mcq}
+#| label: flow-bsc-2-p2
+#| inline: true
+1. decreasing quickly 
+2. decreasing slowly [correct]
+3. not changing
+4. increasing slowly
+5. increasing quickly
+```
+
+:::
+ <!-- end of exr-beech-sleep-canoe -->

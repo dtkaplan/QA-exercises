@@ -1,0 +1,17 @@
+<!--
+id: "elbow-drink-dish"
+created: "Fri Nov  7 07:44:50 2025"
+attribution: TBA
+status: "sketch"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-elbow-drink-dish}
+Classroom discussion: Where does `r xf("fig-binary-likelihood")` come from? Interpret the two functions.
+:::
+ <!-- end of exr-elbow-drink-dish -->

@@ -1,0 +1,25 @@
+<!--
+id: "monkey-drive-book"
+created: "Sat Aug 23 13:13:15 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-monkey-drive-book}
+1. Identify some models around you. Explain what real-world object they represent, what operations they make convenient, and what features, properties, or uses of the real-world object they do not capture. State what you think may have been the *purpose* of constructing that model.
+
+`r devoirs_text("mdb-1")`
+
+2. A schedule is a model. Explain what operations/re-configurations a schedule makes it easy to do.
+
+`r devoirs_text("mdb-2")`
+
+3. A commonly heard criticism of a model is that it is too simple. But simplicity is also a virtue, so the too-simple critique ought always to come with a statement about what essential feature the model is leaving out. As best you can, describe one or two elements of a real-world epidemic that the SIR model leaves out and that you suspect might change the conclusions drawn from the model.
+
+`r devoirs_text("mdb-3")`
+:::
+ <!-- end of exr-monkey-drive-book -->

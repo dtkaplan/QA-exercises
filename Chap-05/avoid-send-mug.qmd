@@ -1,0 +1,31 @@
+<!--
+id: "avoid-send-mug"
+created: "Mon Dec  1 10:38:05 2025"
+attribution: DTK
+use: "Exercise Chap 3"
+status: "ready-to-use"
+chapter: 3
+mode: "drill"
+title: "Metric system orders of magnitude"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-avoid-send-mug}
+Food and medicine are measured over a large range. For instance, in the metric system, measurements might be denominated in micrograms, milligrams, grams, kilograms. How many orders of magnitude (that is, factors of 10) are spanned from micrograms to kilograms.
+
+```{mcq}
+#| label: asm-1-wels
+#| inline: true
+1. 3
+2. 4
+3. 6
+4. 8
+5. 9 [correct]
+6. 10
+7. 12
+```
+
+:::
+  
+ <!-- end of exr-avoid-send-mug -->

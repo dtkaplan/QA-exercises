@@ -1,0 +1,103 @@
+<!--
+id: "deer-spend-roof"
+created: "Thu Aug 28 16:07:34 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-deer-spend-roof}
+Writing all numbers in scientific notation, as $1 \times 10^{x}$.
+
+Consider the number $3.814697 \time 10^{-5}$. This is between 1e-4 and 1e-5, as the following calculation demonstrates.
+
+```{r}
+#| label: C14-fueed
+mynum <- 3.814697e-5
+mynum < 1e-4
+mynum > 1e-5
+```
+
+I want to be able to write `mynum` in a format where the mantissa is *always* 1, but where the exponent might not be an integer. For instance, in the example, `mynum` is equal to $1 \times 10^{-4.41854}$. I'll call the exponent when the mantissa is 1 the **magnitude** of the number.
+
+The magnitude of 10 is 1, the magnitude of 1 is 0, the magnitude of 0.1 is -1, and so on.
+
+Given two numbers, the magnitude of their product is the *sum* of the magnitudes of the two numbers. Example: 10 has magnitude 1 and 0.01 has magnitude -2, so $10 \times 0.01 = 0.1$ has magnitude $1 - 2 = -1$.
+
+
+
+```{r}
+#| label: C14-qkscl
+Magnitudes <- tibble::tibble(
+  mag = 1 / (2^(0:10)) 
+)
+
+# initialize using square roots
+num <- rep(10, nrow(Magnitudes))
+for (k in 2:length(num)) num[k] <- sqrt(num[k-1])
+Magnitudes$num <- num
+
+augment <- function(mag_table) {
+  Another <- tibble::tibble(
+    mag = cumsum(mag_table[-1, ]$mag),
+    num = cumprod(mag_table[-1, ]$num)
+  )
+  mag_table <- dplyr::bind_rows(mag_table, Another)
+  And_another <- mag_table |>
+    dplyr::mutate(num = sqrt(num), mag = mag/2)
+  
+  dplyr::bind_rows(mag_table, And_another) |>
+    clean_tab()
+  
+}
+
+pick_some <- function(mag_table, n = nrow(mag_table), pickn = 2L) {
+  result <- tibble::tibble(mag = numeric(n), num = numeric(n))
+  for (k in 1:n) {
+    rows <- base::sample.int(nrow(mag_table), size = pickn)
+    tmp <- mag_table[rows, ]
+    result[k, "num"] <- prod(tmp$num)
+    result[k, "mag"] <- sum(tmp$mag)
+  }
+  
+  dplyr::bind_rows(mag_table, result) |> clean_tab() |> unique()
+}
+
+promote <- function(mag_table) {
+  newtable <- mag_table |> 
+    dplyr::mutate(
+      mag = mag + 1/2,
+      num = num * sqrt(10)
+    ) 
+  
+  dplyr::bind_rows(mag_table, newtable) |> clean_tab()
+}
+
+# get rid of anything bigger than 10
+clean_tab <- function(mag_table) {
+  tmp <- 
+    mag_table |>
+    dplyr::filter(num < 100) |>
+    dplyr::mutate(mag = ifelse(num > 10, mag-1, mag),
+                  num = ifelse(num > 10, num/10, num)) |>
+    dplyr::arrange(desc(num))
+  kill <- which(abs(diff(tmp$num)) < 1e-12)
+  tmp[-kill,]
+}
+
+mtable <- Magnitudes
+for (k in 1:3) {
+  mtable <- augment(promote(mtable))
+  mtable <- pick_some(promote(mtable), pickn = 2)
+  mtable <- promote(mtable)
+}
+```
+
+Now we have a large number of points for log10(x) in the domain 1 <= x <= 10
+
+We can construct extensions by multiplying or dividing the number by 10, adding or subtracting 1 respectively from the mag.
+:::
+ <!-- end of exr-deer-spend-roof -->

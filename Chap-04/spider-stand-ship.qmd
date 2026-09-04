@@ -1,0 +1,81 @@
+<!--
+id: "spider-stand-ship"
+created: "Thu Jan 15 11:37:57 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spider-stand-ship}
+Accounting professionals have a busy quarter year connected to the end of each fiscal year up through the deadline for filing taxes. Large accounting firms typically bring on extra workforce during this period, and recruit college students to work long hours over a couple of months. One recent graduate told me she was paid $25/hr for such work. But, by US Federal law, the wage rate is increased by 150% for any hours worked over 40 per week. (This is called, "time and a half for overtime.") The graduate reported working sometimes 90 hours per week.
+
+Consider these two functions where the input is the number of hours accumulated during a week.
+
+```{r}
+#| label: fig-sss-wage-overtime
+#| echo: false
+#| fig-cap: "Two functions relating to wages."
+#| layout-ncol: 2
+#| fig-subcap:
+#| - "Hourly wage rate"
+#| - "Total earned"
+f <- function(t) {
+  ifelse(t <= 40, 25, 37.50)
+} 
+slice_plot(f(t) ~ t, domain(t=0:100), npts = 400) |>
+  gf_vline(xintercept = 40, color = "white", linewidth = 1.5) |>
+  gf_labs(y = "Wage rate ($/hr)", x = "Time worked in a week (hr)") |>
+  gf_lims(y = c(0, NA)) |>
+  gf_theme(theme_minimal())
+slice_plot(25*t + 12.50*(t-40)*(t>40) ~ t, domain(t = 0:100)) |>
+  gf_labs(y = "Earnings in a week ($)", x = "Time worked in a week (hr)") |>
+  gf_lims(y = c(0, NA)) |>
+  gf_theme(theme_minimal())
+```
+
+1. What is the wage rate at 75 hours? (pick the closest)
+
+`r devoirs::devoirs_set("sss-1-dkwe", choices=c(25.00, 37.50, 1000, 2000), correct = 37.50, n=4 )`
+
+
+2. What is the total earnings (in dollars) at 75 hours? (pick the closest)
+
+`r devoirs::devoirs_set("sss-2-dwe", choices=c(25.00, 37.50, 1000, 2000), correct = 37.50, n=4 )`
+
+The two functions in `r xf("fig-wage-overtime")` are closely related. But their outputs have different dimensions.
+
+3. What's the dimension of the output of the earnings function?
+
+`r devoirs::devoirs_set("sss-3-dkwl", choices=c("W", "W T", "W T^-1^", "T W^-1^"),correct = "W", n=4 )`
+
+4. Consider the *rate of change* of earnings with respect to hours worked. What is the dimension of this rate of change?
+
+`r devoirs::devoirs_set("sss-4-kwl", choices=c("W", "W T", "W T^-1^", "T W^-1^"), correct = "W T^-1^", n=4 )`
+
+5. The rate of change of a function's output with respect to its input is, graphically, the slope of the function's graph. Often, this rate of change is different at different input values. Is that the case for the *rate of change* of earnings with respect to hours worked?
+
+```{mcq}
+#| label: sss-5-kes
+#| inline: false
+1. Yes [correct hint: The slope is different at, say, an input of 20 hours versus an input of 60 hours.]
+2. No  [hint: Make sure you are looking at the graph of earnings versus hours worked.]
+3. Can't tell from the info given. [hint: Not so. The function graph is steeper at 60 hours than at 20.]
+4. The question makes no sense. [hint: It's perfectly sensible to think about the rate of change of a function being different for different input values.]
+```
+
+6. One of these statements is true, the others are false. Which one is true?
+
+```{mcq}
+#| label: sss-6t43w
+#| inline: false
+1. The rate of change of the wage rate with respect to hours worked gives the total earnings. 
+2. The rate of change of the earnings with respect to hours worked gives the wage rate. [correct]
+3. The earnings function is unrelated to the wage rate function.
+4. It makes sense to create a new function by *adding* the outputs function from the two functions in `r xf("fig-wage-overtime")`. [hint: Think again. The outputs have different dimensions. So you can't meaningfully add them.]
+```
+
+:::
+ <!-- end of exr-spider-stand-ship -->

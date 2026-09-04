@@ -1,0 +1,70 @@
+<!--
+id: "elephant-hold-knob"
+created: "Tue Oct  7 14:04:55 2025"
+attribution: TBA
+chapter: 2
+-->
+
+::: {#exr-elephant-hold-knob}
+
+In much of the world, fuel use by individual passenger vehicles is operationalized in units of liters per 100 km with typical values of [5 to 15] liters per 100 km. 
+
+In the US, in contrast, fuel use is operationalized in units of miles per gallon. Typical values are [15 to 40] mpg.
+
+Behind these diverging styles are *choices* made by engineers and others.
+
+1. A convenient feature of any operationalization is that the numerical value go up as the thing being operationalized goes up. Two different names are available: "fuel consumption" and "fuel economy." Which naming scheme is appropriate with this convenience alignment of name and values?
+
+```{mcq}
+#| label: ehk-1-ckse
+1. Both international and US operationalizations ought to be called "fuel economy."
+2. Both operationalizations out to be called "fuel consumption."
+3. US is "fuel economy" while international is "fuel consumption." [correct]
+4. US is "fuel consumption" while international is "fuel economy."
+```
+
+2. Another convenient feature for units that are in everyday use is that the range of typical values be from 1 to 100, that is, use two digits.
+
+If the international style used SI-base units, the measure would be cubic-meters per meter. Keeping in mind that a cubic-meter is exactly 1000 liters, and that a kilometer is exactly 1000 meters, what would be the SI equivalent of the range [5-15] liters per 100 km?
+
+```{mcq}
+#| label: ehk-2-emxl
+1. [500 to 1500] m^2^
+2. [0.05 to 0.15] m^2^
+3. [0.00005 to 0.00015] m^2^
+4. [0.00000005 to 0.00000015] m^2^ [correct]
+``` 
+
+3. What is the {{< var dim.dim >}} of the international style of measurement?
+
+```{mcq}
+#| label: ehk-3-dkck
+#| inline: true
+1. L^-3^
+2. L^-2^
+3. L^-1^
+4. dimensionless
+5. L
+6. L^2^ [correct]
+7. L^3^
+```
+
+4. What is the {{< var dim.dim >}} of the US style of measurement?
+
+```{mcq}
+#| label: ehk-4-ukws
+#| inline: true
+1. L^-3^
+2. L^-2^ [correct]
+3. L^-1^
+4. dimensionless
+5. L
+6. L^2^ 
+7. L^3^
+```
+
+FYI: To develop intuition, it can be useful to have a physical model in mind when interpreting quantities. For fuel consumption, an interesting model is a mini-pipeline. Imagine a car getting its fuel from a pipeline as it goes along. For a typical car, the required pipeline would be 1-2 mm in diameter: think thick fishing line. 
+
+
+:::
+ <!-- end of exr-elephant-hold-knob -->

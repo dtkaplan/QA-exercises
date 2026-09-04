@@ -1,0 +1,18 @@
+<!--
+id: "boy-freeze-piano"
+created: "Mon Nov 24 06:55:49 2025"
+attribution: TBA
+status: "sketch"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-boy-freeze-piano}
+Look at exponential decay---growth reversed in time. This won't run in to the limits of exponential growth since its getting closer and closer to zero.
+
+:::
+ <!-- end of exr-boy-freeze-piano -->

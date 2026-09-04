@@ -1,0 +1,124 @@
+<!--
+id: "pig-become-blouse"
+created: "Tue Dec 23 11:36:08 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pig-become-blouse}
+1. One of these is **not** the name of a core modeling function. Which one?
+
+```{mcq}
+#| label: pbb-1-8ruw
+#| inline: true
+1. hill()
+2. ramp() [correct]
+3. same()
+4. log2()
+5. recip()
+```
+
+2. Consider these four core modeling functions:
+
+    i. flat() which says the output doesn't depend on the input
+    ii. same() where the output increases steadily as the input increases
+    iii. hillside() where the output increases with the input for a while, but looks like `flat()` for very large inputs.
+    iv. hill() where the output increases with the input up to a point, but increasing the input beyond that leads to a reduction in the output.
+
+
+For each of the following settings, choose which of the four functions is the better model.
+
+a. The input is the temperature setting on a heating systems thermostat, the output is the temperature of the house. (Hint: At some point, the heating system is at full blast.)
+
+```{mcq}
+#| label: pbb-2a-ksle
+#| inline: true
+1. flat()
+2. same()
+3. hillside() [correct]
+4. hill()
+```
+
+
+b. The input is the amount of money you spend on groceries, the output is the volume of pantry space those groceries will take up.
+
+```{mcq}
+#| label: pbb-2b-cs3s
+#| inline: true
+1. flat()
+2. same() [correct]
+3. hillside()
+4. hill()
+```
+
+c. The input is the extent to which you push down on a car's accelerator pedal, the output is the speed of a car on a flat road.
+
+```{mcq}
+#| label: pbb-2c-kwld
+#| inline: true
+1. flat()
+2. same()
+3. hillside() [correct]
+4. hill()
+```
+
+d. The input is the amount of food you eat at a meal, the output is your sense of wellbeing after the meal.
+
+```{mcq}
+#| label: pbb-2d-sse
+#| inline: true
+1. flat()
+2. same()
+3. hillside()
+4. hill() [correct]
+```
+
+e. The input is the amount of time you spend vacuuming a rug, the output is the cleanliness of the rug.
+
+```{mcq}
+#| label: pbb-2e-jke
+#| inline: true
+1. flat()
+2. same()
+3. hillside() [correct]
+4. hill()
+```
+
+f. The input is the number of roommates you share a rental with, the output is your sense of value-for-money from your individual rent.
+
+```{mcq}
+#| label: pbb-24-hdw
+#| inline: true
+1. flat()
+2. same()
+3. hillside()
+4. hill() [correct]
+```
+
+g. The input is the amount of time you spend dreaming about having a successful athletic career, the output is the probability of your having such a career.
+
+```{mcq}
+#| label: pbb-2g-ksl
+#| inline: true
+1. flat() [correct]
+2. same()
+3. hillside()
+4. hill()
+```
+
+h. The input is the amount of rainfall in your garden, the output is the harvest from the garden.
+
+```{mcq}
+#| label: pbb-2h-kle
+#| inline: true
+1. flat()
+2. same()
+3. hillside()
+4. hill() [correct]
+```
+:::
+ <!-- end of exr-pig-become-blouse -->

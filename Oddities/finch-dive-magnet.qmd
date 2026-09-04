@@ -1,0 +1,16 @@
+---
+id: "finch-dive-magnet"
+created: "Thu Mar  5 08:42:39 2026"
+attribution: TBA
+---
+
+```{r include=FALSE, eval=!"devoirs" %in% (.packages())}
+# For stand-alone compilation testing
+library(devoirs)
+library(mosaicCalc)
+```
+
+::: {#exr-finch-dive-magnet}
+SHOW THE numerical value of the "alignment" (that is, cos(theta)) Then mention how it is very closely related to the "correlation coefficient". ALIGNMENT AND ANGLE are very closely related. The cosine of the ANGLE is the ALIGNMENT.  PERPENDICULAR is an alignment of 0. Parallel is an alignment of 1. Anti-parallel is an alignment of -1. 
+:::
+ <!-- end of exr-finch-dive-magnet -->

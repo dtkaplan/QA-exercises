@@ -1,0 +1,23 @@
+<!--
+id: "hamster-hear-radio"
+created: "Sun Feb  1 08:37:24 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 9
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-hamster-hear-radio}
+The text compares a linear combination of functions to a chocolate-chip cookie recipe. In this analogy, what corresponds to the "ingredients" and what corresponds to the "amount" of each ingredient?
+
+```{mcq}
+#| label: hhr-1-hsld
+1. The individual functions are the ingredients and the coefficients say in what order to mix them.
+2. The individual functions are the ingredients and the coefficients specify what amount of each ingredient. [correct]
+3. Each chocolate chip is a coefficient. The dough is what holds everything together.
+4. The functions tell you the amounts while to coefficients refer to the names of the functions.
+```
+:::
+ <!-- end of exr-hamster-hear-radio -->

@@ -1,0 +1,18 @@
+<!--
+id: "finger-dig-fridge"
+created: "Fri Jan  9 17:37:40 2026"
+attribution: Dave Ruth
+use: Chapter 3 reading question
+status: "ready-to-use"
+chapter: 3
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-finger-dig-fridge}
+The text discusses the "MPG Illusion," where increasing fuel economy from 10 to 20 mpg saves much more gas than increasing it from 30 to 40 mpg. Why does the European unit of Liters per 100 km (L/100km) avoid this confusion?
+
+`r devoirs::devoirs_text("fdf-3kse")`
+:::
+ <!-- end of exr-finger-dig-fridge -->

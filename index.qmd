@@ -1,0 +1,26 @@
+---
+title: "Quantitative Argumentation"
+subtitle: "Instructors' Materials"
+author: "Daniel T Kaplan"
+date: "2026-09-03"
+---
+
+
+![](../www/JJohns-cover1.png){width=50%}
+
+-----
+
+This website is for instructors, providing them access to exercises, drill questions, reading questions, student activities, and in-class discussion guidance.
+
+It is organized by chapter, with each chapter containing a catalog displaying the available materials for that chapter.
+
+Each file is also a stand-along resource accessible by link. Users can navigate directly to the content they need without going through the catalog. This may be convenient for setting assignments for students.
+
+-----
+
+1. [Chapter 1 Catalog](Chap-01/Catalog-01.qmd)
+2. [Chapter 2 Catalog](Chap-02/Catalog-02.qmd)
+3. [Chapter 3 Catalog](Chap-03/Catalog-03.qmd)
+4. [Chapter 4 Catalog](Chap-04/Catalog-04.qmd)
+5. [Chapter 5 Catalog](Chap-05/Catalog-05.qmd)
+6. [Chapter 6 Catalog](Chap-06/Catalog-06.qmd)

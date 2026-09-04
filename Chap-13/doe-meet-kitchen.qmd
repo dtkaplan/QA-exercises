@@ -1,0 +1,148 @@
+<!--
+id: "doe-meet-kitchen"
+created: "Sat Jan 31 11:49:48 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-doe-meet-kitchen}
+The R chunk contains a computer expression to create and plot a linear combination of two functions `osc(x)` and `same(x)`, each multiplied by a numerical coefficient. Use this as a template to re-create the requested plots. Keep in mind that you need to replace `osc()` and `same()` with core modeling functions appropriate for the task.
+
+When you have successfully reconstructed the function displayed, cut-and-paste the line `newf <- ...` 
+
+```{webr}
+#| echo: false
+#| autorun: true
+
+
+
+```
+
+
+```{webr}
+#| caption: Plot a linear combination
+# Change the values of the coefficients and the function names as appropriate
+newf <- function(x) 2 * osc(x) - 3 * same(x)
+
+# You can use this line as is, no changes needed
+slice_plot(newf(x) ~ x, domain(x = -4:4))
+```
+
+-----
+
+:::: {.callout-note}
+## Functions to reconstruct
+
+::: {.panel-tabset}
+
+## A.
+
+Reconstruct the function graphed below as a linear combination of two core modeling functions.
+```{r}
+#| echo: false
+#| label: C13-denfb
+newf <- function(x) osc(x) - 2 * hillside(x)
+slice_plot(newf(x) ~ x, domain(x = -4:4), npts = 500) |>
+  gf_theme(theme_minimal(base_size = 14))
+```
+
+`r devoirs::devoirs_text("dmk-A-d7w")`
+
+::: {.callout-tip collapse=true}
+## Hints:
+
+1. One of the functions is `hillside()`. 
+2. The half-way up level for the other function is at 0 to the left and -2 to the right.
+:::
+
+::: {.callout-tip collapse=true}
+## Answer
+[`1 * osc - 2 * hillside(x)`]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Dcf-2wS"}
+:::
+
+
+## B.
+
+Reconstruct the function graphed below as a linear combination of two core modeling functions.
+```{r}
+#| echo: false
+#| label: C13-ukzop
+newf <- function(x) 0.5 * hillside(x) + 3 * hill(x)
+slice_plot(newf(x) ~ x, domain(x = -4:4), npts = 500) |>
+  gf_theme(theme_minimal(base_size = 14))
+```
+
+`r devoirs::devoirs_text("dmk-B-x7d")`
+
+::: {.callout-tip collapse=true}
+## Hint:
+One of the functions is `hillside()`. 
+
+:::
+
+::: {.callout-tip collapse=true}
+## Answer
+[`0.5 * hillside(x) + 3 * hill(x)`]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Gsf-2wS"}
+:::
+
+## C.
+
+Reconstruct the function graphed below as a linear combination of two core modeling functions.
+```{r}
+#| echo: false
+#| label: C13-riysx
+newf <- function(x) 4 * flat(x) + 3 * osc(x)
+slice_plot(newf(x) ~ x, domain(x = -4:4), npts = 500) |>
+  gf_theme(theme_minimal(base_size = 14))
+```
+
+`r devoirs::devoirs_text("dmk-C-klwd")`
+
+::: {.callout-tip collapse=true}
+## Hint:
+Obviously, one of the function is `osc()`. But on its own, the output of `osc()` is bounded by -1 and 1.
+
+:::
+
+::: {.callout-tip collapse=true}
+## Answer
+[`4 * flat(x) + 3 * osc(x)`]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: JEf-2wS"}
+:::
+
+## D.
+
+Reconstruct the function graphed below as a linear combination of two core modeling functions.
+```{r}
+#| echo: false
+#| label: C13-uateu
+newf <- function(x) 1*exp2(x) - 3*same(x)
+slice_plot(newf(x)~ x, domain(x = -4:4), npts = 500) |>
+  gf_theme(theme_minimal(base_size = 14))
+```
+
+`r devoirs::devoirs_text("dmk-D-sws")`
+
+::: {.callout-tip collapse=true}
+## Hint:
+On the left side, the output is more or less a straight line, but sloping downward. `same()` is our straight-line core modeling function, but ordinarily it slopes upward.
+
+:::
+
+::: {.callout-tip collapse=true}
+## Answer
+[`1 * exp2(x) - 3 * same(x)`]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: JEf-2wS"}
+:::
+
+
+
+
+:::
+
+::::
+
+:::
+ <!-- end of exr-doe-meet-kitchen -->

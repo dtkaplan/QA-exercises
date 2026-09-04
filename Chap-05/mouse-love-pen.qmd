@@ -1,0 +1,16 @@
+<!--
+id: "mouse-love-pen"
+created: "Mon Dec  1 17:34:20 2025"
+attribution: DTK
+status: sketch
+chapter: 5
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-mouse-love-pen}
+Phenomena where measurements are usually reported on a magnitude scale: sound, earthquakes, acidity (pH), information
+:::
+ <!-- end of exr-mouse-love-pen -->

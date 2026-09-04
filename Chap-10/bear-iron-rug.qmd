@@ -1,0 +1,28 @@
+<!--
+id: "bear-iron-rug"
+created: "Fri Jan 30 16:54:43 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "sketch"
+chapter: 10
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bear-iron-rug}
+For the `exp2()` function:
+
+a. What is the output when the input is 0?
+
+`r devoirs::devoirs_set(choices = c(0, 0.5, 1, 2, 4), correct = 1, id = "d06-bir-zero")`
+
+b. What is the output when the input is 3?
+
+`r devoirs::devoirs_set(choices = c(3, 6, 8, 9), correct = 8, id = "d06-bir-three")`
+
+c. What is the output when the input is -1?
+
+`r devoirs::devoirs_set(choices = c(-2, -1, 0.5, 1), correct = 0.5, id = "d06-bir-neg")`
+:::
+ <!-- end of exr-bear-iron-rug -->

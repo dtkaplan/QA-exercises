@@ -1,0 +1,22 @@
+<!--
+id: "duck-pitch-chair"
+created: "Tue Oct 28 06:29:29 2025"
+attribution: TBA
+status: "sketch"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-duck-pitch-chair}
+A little drill with three or four data points: Calculate likelihood by hand for a given distribution. Maybe have them do both normal and exponential for a few points to show that both distributions are compatible. 
+
+Contrast maximum likelihood parameters with likelihoods that are some distance away. Contour plot for likelihood for mean and sd. Add more data points, then see how the likelihood contracts.
+
+It's the *magnitude* of the likelihood that we usually work with. Often, we can calculate the magnitude but not so much the actual value which suffers from computer round-off.
+
+:::
+ <!-- end of exr-duck-pitch-chair -->

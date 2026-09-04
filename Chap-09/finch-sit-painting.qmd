@@ -1,0 +1,19 @@
+<!--
+id: "finch-sit-painting"
+created: "Thu Nov 13 13:49:00 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 9
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-finch-sit-painting}
+An example from physics, engineering, and acoustics: a common problem is modeling an object's response to a shock. Think of a car tire hitting a pot-hole, an electrical circuit responding to nearby lightning, the pluck of a guitar string, or the striking of a tuning fork by a small hammer. The response is an oscillation whose amplitude diminishes in time. An appropriate model is multiplying osc() multiplied by exp2() in this way:
+
+$$\text{response}(t) \equiv \text{osc}(\omega\, t) \times \text{double}(-k\, t)$$
+:::
+ <!-- end of exr-finch-sit-painting -->

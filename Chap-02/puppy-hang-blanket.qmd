@@ -1,0 +1,23 @@
+<!--
+id: "puppy-hang-blanket"
+created: "Wed Dec 31 07:20:54 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 2"
+status: "ready-to-use"
+chapter: 2
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-puppy-hang-blanket}
+For each of the following four dimensions, list at least three different *unit* names that correspond to that dimension:
+
+i. Length (e.g., meter...)
+ii. Time
+iii. Volume
+iv. Mass
+
+`r devoirs::devoirs_text("phb-RQ2-qlds")`
+:::
+ <!-- end of exr-puppy-hang-blanket -->

@@ -1,0 +1,15 @@
+<!--
+id: "maple-bet-teacup"
+created: "Tue Sep 30 12:59:46 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-maple-bet-teacup}
+What to do about acceleration,  e.g. pendulum, 
+:::
+ <!-- end of exr-maple-bet-teacup -->

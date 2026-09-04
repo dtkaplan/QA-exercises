@@ -1,0 +1,18 @@
+<!--
+id: "mouse-bathe-dress"
+created: "Wed Oct 29 07:15:58 2025"
+attribution: TBA
+status: "draft"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-mouse-bathe-dress}
+A NON-BAYES problem. Calculate the number of accidents per million miles in the `Crash_data` record. [[It comes to 5.1 per million miles]]
+One of the two (fictional) activists in the text claimed, *before the experiment started*, that the accident rate for self-driving cars would be 1 per million miles, the other held for 10 million miles. Are the actual data compatible with either or both of these two priors? Could the differences between either of the priors and the data be just due to chance. What kind of analysis would let you make an authoritative statement. 
+:::
+ <!-- end of exr-mouse-bathe-dress -->

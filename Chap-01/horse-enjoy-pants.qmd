@@ -1,0 +1,19 @@
+<!--
+id: "horse-enjoy-pants"
+created: "Fri Aug 14 14:31:41 2026"
+attribution: DTK
+uses: "For formal reasoning"
+status: "sketch"
+chapter: 1
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-horse-enjoy-pants}
+Proofiness
+
+Causal reasoning and the reasons why generations of students have been deceived about correlation and causation.
+
+:::
+ <!-- end of exr-horse-enjoy-pants -->

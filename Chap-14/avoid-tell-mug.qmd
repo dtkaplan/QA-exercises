@@ -1,0 +1,130 @@
+<!--
+id: "avoid-tell-mug"
+created: "Sat Dec 20 09:34:32 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-avoid-tell-mug}
+AI generated: In business and economics, the Optimal Stop point (or profit maximization point) occurs when the rate at which you gain (Marginal Revenue) exactly equals the rate at which you spend (Marginal Cost). If the rate of change for your benefit is higher than the rate of change for your cost, you should keep going. Once they flip, you are losing value on every additional unit.
+
+Question 14: The Optimal Harvest
+
+Scenario: You run a small organic apple orchard. You are deciding how many workers to hire for the harvest.
+
+Revenue Function: Your total revenue (R) based on the number of workers (w) is R(w)=100 
+w
+
+​	
+ .
+
+Cost Function: Each worker costs you a flat rate of $10 per hour. Since you are hiring them for a standard shift, your cost function is C(w)=10w.
+
+To find the best number of workers, you look at the rate of change functions:
+
+Marginal Revenue (Rate of Gain): R 
+′
+ (w)= 
+w
+
+​	
+ 
+50
+​	
+ 
+
+Marginal Cost (Rate of Spend): C 
+′
+ (w)=10
+
+The Question: At what point should you stop hiring additional workers to ensure you are maximizing your total profit?
+
+A) At 5 workers, because the rate of gain (R 
+′
+ ) is 22.36, which is higher than the rate of spend (10).
+
+B) At 25 workers, because at this point the rate of gain (2 units/worker) is lower than the cost.
+
+C) At 25 workers, because the rate of gain (R 
+′
+ = 
+5
+50
+​	
+ =10) exactly matches the rate of spend (C 
+′
+ =10).
+
+D) At 100 workers, because more workers always mean more apples harvested.
+
+Professor’s Quantitative Breakdown
+
+We are looking for the point where the Marginal Benefit equals the Marginal Cost. This is where your profit "peaks" before diminishing returns make additional hiring a net loss.
+
+Set the Rate of Change Functions equal to each other:
+
+w
+
+​	
+ 
+50
+​	
+ =10
+Solve for w:
+
+50=10 
+w
+
+​	
+ 
+5= 
+w
+
+​	
+ 
+w=25
+Correct Answer: C At 25 workers, your "profit per additional worker" becomes zero. If you hire a 26th worker, the rate of change function R 
+′
+ (26) would be approximately 9.80, which is less than the 10 you are paying them. You would be losing 0.20 cents of profit by hiring that extra person!
+
+Visualizing the Profit Peak in R
+
+R
+library(ggplot2)
+
+# Define functions
+revenue <- function(w) 100 * sqrt(w)
+cost <- function(w) 10 * w
+profit <- function(w) revenue(w) - cost(w)
+
+# Generate data
+w_vals <- seq(1, 50, length.out = 500)
+df <- data.frame(
+  workers = w_vals,
+  revenue = revenue(w_vals),
+  cost = cost(w_vals),
+  profit = profit(w_vals)
+)
+
+# Plotting Profit
+ggplot(df, aes(x = workers, y = profit)) +
+  geom_line(color = "darkgreen", size = 1.2) +
+  geom_vline(xintercept = 25, linetype = "dashed", color = "red") +
+  annotate("text", x = 28, y = 240, label = "Optimal Stop: 25 Workers", color = "red") +
+  labs(title = "Total Profit vs. Number of Workers",
+       subtitle = "Profit peaks where Marginal Revenue = Marginal Cost",
+       x = "Number of Workers (w)",
+       y = "Total Profit ($)") +
+  theme_minimal()
+The "Golden Rule" of Quantitative Reasoning
+
+Always look at the rate of change (the slope) rather than just the total values. The total revenue keeps going up as you hire more people, but the profit eventually goes down because the rate of gain is diminishing while the rate of cost is constant.
+
+:::
+ <!-- end of exr-avoid-tell-mug -->

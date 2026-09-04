@@ -1,0 +1,120 @@
+<!--
+id: "pony-rise-boat"
+created: "Tue Oct  7 14:04:32 2025"
+attribution: DTK
+status: "ready-to-use"
+chapter: 8
+mode: "exercise"
+-->
+
+
+::: {#exr-pony-rise-boat}
+
+Everyone is in favor of reducing deaths due to pollution, illness and disease. It makes sense then to *measure* the reduction in deaths. In everyday speech and in the media, reduction in deaths is operationalized by *lives saved*.
+
+BEFORE MOVING ON, answer question 1 without looking at the remainder of this exercise.
+
+1. Do you see any flaws in measuring lives saved? What are they? Or, feel free to anticipate a claimed flaw and argue that it isn't a flaw at all.
+
+`r devoirs::devoirs_text("prb-flaw-62ks")`
+
+.
+
+.
+
+Blank space to keep you from looking ahead.
+
+.
+
+.
+
+
+2. Suppose---a nasty hypothetical ethics problem---there are two people, A and B, whose lives you could save. But you can only save one of them. Whether this is a realistic scenario is not at issue here; we'll see in later chapters that it often arises, with "you" replaced by "society." 
+    
+    Further suppose that person A is twenty years old and person B is eighty years old. 
+    
+    Which of these actions would you take?
+        a. Save the younger person.
+        b. Save the older person.
+        c. Flip a coin to determine whom to save.
+
+    We're not suggesting that there is a *right* answer but we want you to think about whether some choices are better than others. 
+    
+    Explain (briefly) whether you think the coin flip option is better than either (a) or (b). Justify your answer.
+    
+`r devoirs::devoirs_text("prb-action-elxl")`
+
+For those of you who selected option (a), we want to provide a means to operationalize avoiding deaths. But, since everyone dies, let's turn things around: operationalizing life. In particular, we will measure the impact of your intervention in terms of `r xf_definition("life-years")`.
+
+A catch is that its hard to know when the saved person will eventually die, so its hard to know at the decision time how many life-years will be gained. As an expedient, we'll do the calculation based on life expectancy, a statistical measure of the average number of years that a cohort of people are expected to survive. For instance, for the 20-year old, the life-years will be "life expectancy at age 20." @tbl-2021-expectancy-by-age shows life expectancy as a function of age in the US.
+
+::: {#tbl-2021-expectancy-by-age}
+Age | Overall | Males | Females 
+---:|------:|------:|-------:
+0   | 76.4 | 73.5 | 79.3
+1   | 75.8 | 73.0 | 78.7
+5   | 71.9 | 69.1 | 74.8
+10  | 66.9 | 64.1 | 69.8
+15  | 62.0 | 59.2 | 64.9
+20  | 57.1 | 54.4 | 60.0
+25  | 52.5 | 49.8 | 55.2
+30  | 47.8 | 45.4 | 50.4
+35  | 43.3 | 41.0 | 45.7
+40  | 38.8 | 36.6 | 41.1
+45  | 34.4 | 32.3 | 36.5
+50  | 30.1 | 28.2 | 32.1
+55  | 26.0 | 24.2 | 27.8
+60  | 22.1 | 20.5 | 23.7
+65  | 18.4 | 17.0 | 19.7
+70  | 14.9 | 13.7 | 16.0
+75  | 11.6 | 10.6 | 12.5
+80  |  8.7 |  7.9 |  9.4
+85  |  6.3 |  5.6 |  6.7
+90  |  4.4 |  3.9 |  4.6
+95  |  3.0 |  2.7 |  3.2
+100 |  2.2 |  1.9 |  2.2
+ 
+Life expectancy in the US as it depends on age. Tabulated in 2021. Source: [US CDC](https://www.cdc.gov/nchs/data/nvsr/nvsr72/nvsr72-12.pdf) 
+:::
+
+3. Let's assume that our hypothetical 20-year old and 80-year old are both female. 
+
+How many life years would saving the 20-year old produce?
+
+```{mcq}
+#| label: prb-20-elxl
+#| inline: true
+1. 40.0 [hint: You subtracted the age from the life expectancy.]
+2. 50.4 [hint: You accessed the wrong entry in the table.]
+3. 60.0 [correct]
+4. 63.1 
+```
+
+How many life years would saving the 80-year old produce?
+
+```{mcq}
+#| label: prb-80-elxl
+#| inline: true
+1. 9.4 [correct]
+2. 12.4
+3. 15.8
+```
+
+Suppose you could save multiple 80-year olds, but only one 20-year old. How many 80-year olds would correspond in life years to the 20-year old?
+
+```{mcq}
+#| label: prb-num-pldw
+#| inline: true
+1. 3 to 4
+2. 6 to 7 [correct]
+3. 9 to 11
+4. 21 to 24
+```
+  
+How comfortable or uncomfortable would you be making decisions on such a basis? 
+  
+`r devoirs::devoirs_text("prb-comf-fjek")`
+
+A "refined" operationalization of lives saved takes into account the "quality" of life. This is called "[Quality Adjusted Life Years](https://en.wikipedia.org/wiki/Quality-adjusted_life_year)," or QALYs for short.
+  
+ <!-- end of exr-pony-rise-boat -->

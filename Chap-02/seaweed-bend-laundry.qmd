@@ -1,0 +1,16 @@
+<!--
+id: "seaweed-bend-laundry"
+created: "Thu Aug 28 15:42:19 2025"
+attribution: TBA
+status: "sketch"
+chapter: 2
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seaweed-bend-laundry}
+EXERCISE: GDP as an operationalization of the size of the economy, unemployment (which has a specific definition and can do odd things like go down when people give up on looking for work), labor-force participation, consumer confidence, market capitalization of a company
+
+:::
+ <!-- end of exr-seaweed-bend-laundry -->

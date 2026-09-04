@@ -1,0 +1,17 @@
+<!--
+id: "puppy-win-gloves"
+created: "Sun Dec 28 14:12:49 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 8
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-puppy-win-gloves}
+How does a relative probability distribution describe uncertainty in the value of a quantity?
+
+`r devoirs::devoirs_text("RQ7-03")`
+:::
+ <!-- end of exr-puppy-win-gloves -->

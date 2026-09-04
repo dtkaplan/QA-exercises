@@ -1,0 +1,18 @@
+<!--
+id: "reptile-beat-window"
+created: "Wed Dec 31 07:15:51 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 2"
+status: "ready-to-use"
+chapter: 2
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-reptile-beat-window}
+The chapter states that "per" is shorthand for a specific mathematical operation. What is that operation?
+
+`r devoirs::devoirs_text("rbw-RQ2-sedd")`
+:::
+ <!-- end of exr-reptile-beat-window -->

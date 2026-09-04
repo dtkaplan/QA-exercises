@@ -1,0 +1,18 @@
+<!--
+id: "puppy-fly-fridge"
+created: "Thu Oct 30 17:07:20 2025"
+attribution: TBA
+status: "draft"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-puppy-fly-fridge}
+Calculate the posterior if the prior chooses to include all seven successes from the previous tests, but only two of the failures. [[Need to give them the software.]]
+
+:::
+ <!-- end of exr-puppy-fly-fridge -->

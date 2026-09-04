@@ -1,0 +1,21 @@
+<!--
+id: "puppy-break-mattress"
+created: "Sun Dec 28 13:50:24 2025"
+attribution: DTK
+use: "Reading Question Chap 1"
+status: "ready-to-use"
+chapter: 1
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-puppy-break-mattress}
+What is meant by "operationalization?"
+
+`r devoirs::devoirs_text("RQ-models-4")`
+
+:::
+ <!-- end of exr-puppy-break-mattress -->

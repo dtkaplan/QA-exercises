@@ -1,0 +1,25 @@
+<!--
+id: "ant-dream-boat"
+created: "Thu Mar 12 08:09:21 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: "ready-to-use"
+chapter: 14
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ant-dream-boat}
+We approximate the rate of change of f() at input t by the function 
+$$d\!f(t) \equiv \frac{f(t+h) − f(t)]}{h}\ .$$ Why can't we use h = 0? In practice, how do we choose h?
+
+```{mcq}
+#| label: adb-1-dles
+1. If h = 0, the numerator $f(t + h) - f(t)$ is zero. Likewise, the denominator ($h$) is 0. But 0/0 is undefined. We choose h "small enough" so that using an even smaller h doesn't change the result meaningfully (e.g., we can test on a computer). [correct]
+2. h = 0 would make the numerator zero, so the rate would always be zero. We choose h as large as possible to avoid this. [hint: Sorry. We don't want to set h to be zero, but it should be small.]
+3. h = 0 is not allowed because the function f(t) might not be defined at t=0. We choose h randomly. [hint: No. There's no term f(h) in the formula for df(), so it hardly matters whether f(0) is defined.]
+4. Actually, we can use h = 0; it gives the exact derivative. So we don't need to choose h.
+```
+:::
+ <!-- end of exr-ant-dream-boat -->

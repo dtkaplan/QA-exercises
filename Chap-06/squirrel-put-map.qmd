@@ -1,0 +1,27 @@
+<!--
+id: "squirrel-put-map"
+created: "Fri Jan 16 09:03:25 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-squirrel-put-map}
+
+
+Which core modeling functions have a positive rate of change everywhere?
+
+
+`r devoirs::devoirsTF(FALSE, leed="recip()", id="spm-1-3se")`
+
+`r devoirs::devoirsTF(TRUE, leed="log2()", id="spm-2-se")`
+
+`r devoirs::devoirsTF(FALSE, leed="hill()", id="spm-3-dse")`
+
+`r devoirs::devoirsTF(TRUE, leed="hillside()", id="spm-4-y23")`
+
+:::
+ <!-- end of exr-squirrel-put-map -->

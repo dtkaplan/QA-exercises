@@ -1,0 +1,36 @@
+<!--
+id: "falcon-have-book"
+created: "Sun Dec 28 14:00:24 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-falcon-have-book}
+Explain why calling a conversion factor a "factor of one" is justified or is misleading.
+
+`r devoirs::devoirs_text("RQ-units-flavor")`
+
+<!-- Opening answer: Reading-questions-3mc -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+Time: second, minute, hour, year, decade, femtosecond
+
+Length: meter, cm, parsec, light-year, mile
+
+Temperature: degree F, degree C, degree Kelvin, degree Rankine, and more obscurely, Réaumur
+
+Mass: gram, kilogram, (metric) tonne, slug, microgram
+
+Money: USD, Euro, Remnimbi, Yuan, Pound, Peso, Franc, Boliviano
+
+[..id..]{data-tooltip="Ans id: Reading-questions-3mc"}
+:::
+<!-- closing answer Reading-questions-3mc -->
+
+:::
+ <!-- end of exr-falcon-have-book -->

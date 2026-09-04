@@ -1,0 +1,18 @@
+<!--
+id: "boy-begin-shirt"
+created: "Fri Jan 16 11:23:42 2026"
+attribution: "Dorothy Dickmann"
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-boy-begin-shirt}
+Consider the function monthly_payment(principal, interest_rate, years). If you wanted to find out how the monthly payment changes when you vary the loan duration, what would you do? 
+
+`r devoirs::devoirs_text("bbs-1-3kd")`
+
+:::
+ <!-- end of exr-boy-begin-shirt -->

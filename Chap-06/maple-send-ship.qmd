@@ -1,0 +1,20 @@
+<!--
+id: "maple-send-ship"
+created: "Sat Aug 22 08:41:14 2026"
+attribution: DTK
+uses: functions Chap 6
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-maple-send-ship}
+Heavier individuals burn more calories due to the increased energy needed to move their bodies, while faster paces and inclines require more exertion, boosting calorie expenditure. More fit individuals tend to be more efficient, burning fewer calories at a given activity level than less fit individuals.
+
+Translate the previous paragraph into a list of the inputs to and output from a function. You don't have to build the function, but you should give plausible units for the input and output quantities.
+
+`r devoirs::devoirs_text("mss-elxd")`
+:::
+ <!-- end of exr-maple-send-ship -->

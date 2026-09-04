@@ -1,0 +1,30 @@
+<!--
+id: "beech-freeze-roof"
+created: "Tue Sep  1 13:11:00 2026"
+attribution: DTK
+status: sketch 
+chapter: 6
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-freeze-roof}
+
+DO I WANT SOME SKILL BUILDING EXERCISES FOR FUNCTIONS?
+
+
+```{verbatim .number-lines}
+heat_index <- function(       <!-- <1> -->
+    temperature,  <!-- <2> -->
+    humidity      <!-- <3> -->
+  ) {             <!-- <4> -->
+    # Algorithm will go here
+}
+```
+1. Signals that we are defining a function which will have the name `heat_index()`.
+2. First arg is named temperature
+3. Second arg is named humidity
+4. Close the parenthesis after `function()` and use curly braces to provide a place for the algorithm.
+
+:::
+ <!-- end of exr-beech-freeze-roof -->

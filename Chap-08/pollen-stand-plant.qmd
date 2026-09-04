@@ -1,0 +1,14 @@
+<!--
+id: "pollen-stand-plant"
+created: "Mon Sep 15 18:18:33 2025"
+attribution: DTK
+status: sketch
+chapter: 8
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pollen-stand-plant}
+Exercise showing that convert_to_odds() and convert_to_prob() are inverses.
+:::
+ <!-- end of exr-pollen-stand-plant -->

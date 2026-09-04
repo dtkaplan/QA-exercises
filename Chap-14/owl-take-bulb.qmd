@@ -1,0 +1,16 @@
+<!--
+id: "owl-take-bulb"
+created: "Fri Dec 19 07:54:03 2025"
+attribution: DTK
+chapter: 14
+status: sketch
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-owl-take-bulb}
+Partial derivatives
+:::
+ <!-- end of exr-owl-take-bulb -->

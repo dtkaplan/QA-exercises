@@ -1,0 +1,97 @@
+<!--
+id: "jellyfish-open-socks"
+created: "Sun Oct 19 08:27:10 2025"
+attribution: DTK
+use: "Chapter 5 exercise"
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-jellyfish-open-socks}
+
+```{mermaid}
+graph LR
+  X(X)
+  Y(Y)
+  Z(Z)
+  U(U)
+  V(V)
+  W(W)
+
+  X --> W
+  Z --> W
+  W --> U
+  Y --> U
+  U --> V
+  Y --> V
+
+  
+{{< include ../mermaid-classes.txt >}}
+
+class X exogenous
+class Y exogenous
+class Z exogenous
+```
+
+1. Which quantities are *exogenous*?
+
+```{mcq}
+#| label: jos-1-ekf
+#| inline: true
+1. X Y Z [correct]
+2. U V W
+3. X W U V
+4. V
+```
+
+For the endogenous quantities, each of the round-cornered, shaded boxes is a function. The *output* of the function is the quantity named in the box. The inputs to the function are the names of the quantities that are connected to the box by incoming arrows.
+
+2. What are the inputs to the function V()?
+
+```{mcq}
+#| label: jos-2-hgw
+#| inline: true
+1. U
+2. W & U & Y
+3. U & Y [correct]
+4. none. V is exogenous
+```
+
+3. What are the inputs to the function W()?
+
+```{mcq}
+#| label: jos-3-s4w
+#| inline: true
+1. U
+2. X only
+3. X & Z [correct]
+4. none. W is exogenous
+```
+
+4. `r devoirsTF(TRUE, id="jos-4-dw")` Is this collection of functions consistent with the system diagram?
+    i. U(W, Y)
+    ii. V(U, Y)
+    iii. W(X, Z)
+
+5. Consider a new system consisting of these functions and their inputs.
+    i. B(A, E)
+    ii. D(B, F)
+    iii. F(B)
+    iv. C(F, A)
+    
+Which are the exogenous quantities?
+    
+```{mcq}
+#| label: jos-5-was
+1. C & A
+2. B & F
+3. A & E [correct]
+4. C & F
+```
+    
+:::
+ <!-- end of exr-jellyfish-open-socks -->

@@ -1,0 +1,121 @@
+<!--
+id: "doe-meet-bedroom"
+created: "Sat Jan 31 11:49:48 2026"
+attribution: DTK
+use: Chap 8 drill
+status: "ready-to-use"
+chapter: 13
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-doe-meet-bedroom}
+This set of problems involves a linear combination of two core modeling functions, but there is an added twist: One or both of the functions has been input scaled to move it to the right or the left.
+
+When you have successfully reconstructed the function displayed, cut-and-paste the line `newf <- ...` 
+
+```{webr}
+#| echo: false
+#| autorun: true
+
+
+
+```
+
+
+```{webr}
+#| caption: Plot a linear combination
+# Change the values of the coefficients and the function names as appropriate
+newf <- function(x) osc(x) + 2 * hillside(x - 2)
+
+# You can use this line as is, no changes needed
+slice_plot(newf(x) ~ x, domain(x = -5:5))
+```
+
+-----
+
+:::: {.callout-note}
+## Functions to reconstruct
+
+::: {.panel-tabset}
+
+## A.
+
+Reconstruct the function graphed below as a linear combination of two core modeling functions.
+```{r}
+#| echo: false
+#| label: C13-auzgx
+newf <- function(x) hillside(x + 2) + 0.1 * same(x)
+slice_plot(newf(x) ~ x, domain(x = -5:5), npts = 500) |>
+  gf_theme(theme_minimal(base_size = 14))
+```
+
+`r devoirs::devoirs_text("dmk-A-3ks")`
+
+::: {.callout-tip collapse=true}
+## Hints:
+
+One of the functions is `hillside()`. 
+:::
+
+::: {.callout-tip collapse=true}
+## Answer
+[`hillside(x + 2) + 0.1 * same(x)`]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: TYf-yds"}
+:::
+
+
+## B.
+
+Reconstruct the function graphed below as a linear combination of two core modeling functions.
+```{r}
+#| echo: false
+#| label: C13-lkhze
+newf <- function(x) hillside(x + 3) + 2 * hillside(x - 3)
+slice_plot(newf(x) ~ x, domain(x = -5:5), npts = 500) |>
+  gf_theme(theme_minimal(base_size = 14))
+```
+
+`r devoirs::devoirs_text("dmk-B-8473")`
+
+::: {.callout-tip collapse=true}
+## Hint:
+Both of the functions are `hillside()`. 
+
+:::
+
+::: {.callout-tip collapse=true}
+## Answer
+[`hillside(x + 3) + 2 * hillside(x - 3)`]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: GOf-2wS"}
+:::
+
+## C. 
+
+Reconstruct the function graphed below as a linear combination of two core modeling functions.
+```{r}
+#| echo: false
+#| label: C13-yuceq
+newf <- function(x) -hill(x + 2) + 2 * hill(x - 1)
+slice_plot(newf(x) ~ x, domain(x = -5:5), npts = 500) |>
+  gf_theme(theme_minimal(base_size = 14))
+```
+
+`r devoirs::devoirs_text("dmk-C-d92")`
+
+::: {.callout-tip collapse=true}
+## Hint:
+One goes down, one goes up.
+
+:::
+
+::: {.callout-tip collapse=true}
+## Answer
+[`hill(x + 2) - 2 * hill(x - 1)`]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: KID-2wS"}
+:::
+
+:::
+
+::::
+
+:::
+ <!-- end of exr-doe-meet-bedroom -->

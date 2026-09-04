@@ -1,0 +1,30 @@
+<!--
+id: "buck-hang-pantry"
+created: "Tue Feb 24 12:40:26 2026"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-buck-hang-pantry}
+Units for *force* include pounds (lbs.) and Newtons (N). The unit kilogram (kg) is actually a unit of mass, not force. There are many units for *energy*, including btu, barrels of oil, kilowatt hours (kWh), and Newton-meters. Based on this information, what's the relationship between force and energy?
+
+```{mcq}
+#| label: bhp-1-wids
+1. Energy is proportional to force.
+2. Energy is the derivative of force with respect to time.
+3. Energy is the accumulation of force with respect to time. 
+4. Energy is the derivative of force with respect to distance.
+5. Energy is the accumulation of force with respect to distance. [correct]
+6. Energy and force have unrelated dimensions.
+```
+
+::: {.callout-tip collapse=true}
+It's easier to see the relationship if you picture yourself carrying a 10 pound bar bell up a flight of stairs. If you drop the bar bell from the top of the stairs, it will accelerate and, when it hits the floor, dissipate its energy in the form of noise (and a dented floor). A pound is a unit of force, a "flight of stairs" is a unit of vertical distance. "Carrying up" is equivalent to multiplying the vertical distance times the amount of force. Instead of multiplying, we could say "accumulating." 
+:::
+
+:::
+ <!-- end of exr-buck-hang-pantry -->

@@ -1,0 +1,14 @@
+<!--
+id: "kid-hit-coat"
+created: "Mon Sep 15 18:17:26 2025"
+attribution: DTK
+status: sketch
+chapter: 7
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kid-hit-coat}
+Exercise showing that log2(exp2(x)) = x and likewise that exp2(log2(y)) = y.  Functions that pipeline this way are called **inverse functions**.
+:::
+ <!-- end of exr-kid-hit-coat -->

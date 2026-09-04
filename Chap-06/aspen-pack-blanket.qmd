@@ -1,0 +1,27 @@
+<!--
+id: "aspen-pack-blanket"
+created: "Wed Jan 28 09:51:09 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 5"
+status: "ready-to-use"
+chapter: 6
+mode: "drill"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-aspen-pack-blanket}
+The words used to identify the various inputs to a function are called ____.
+
+```{mcq}
+#| label: apb-1-hes
+1.  abstractions
+1.  algorithms
+1.  analyses
+1.  arguments [correct]
+1.  asymptotes
+1.  axes
+```
+
+:::
+ <!-- end of exr-aspen-pack-blanket -->

@@ -1,0 +1,95 @@
+<!--
+id: "rabbit-fight-ring"
+created: "Thu Dec 11 16:35:00 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-rabbit-fight-ring}
+"*The global rise in CO_2_ has nearly leveled off.*" --- BBC News, Nov. 6, 2025
+
+The meaning of the above sentence seems plain. Or is it? 
+
+1. Which of these do you think is closest to the meaning of the BBC quote?
+```{mcq}
+#| label: ml1
+1. The atmospheric concentration of CO_2_ shows nearly no increase now from year to year.
+2. The atmospheric concentration of CO_2_ is still growing from year to year. [correct]
+3. Neither of the above.
+```
+
+The BBC news item is based on measurements of CO_2_ at the Mauna Loa observatory in Hawaii from March 1958 through October 2025. The data are available [here](https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.txt). The graphic below shows the average measurement each year. The data have been annotated with "slope roses," a visual key for measuring a rate of change. (The units are ppm-per-year.)
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: C14-phfme
+CO2 <- readr::read_csv("www/mauna_loa_CO2.csv")
+foo <- CO2 |> summarize(concentration = mean(average), .by = year) 
+foo |> gf_line(concentration ~ year) |>
+  LSTbook::add_slope_rose(keepers = "pos", x = 1958, y = 315) |>
+  LSTbook::add_slope_rose(keepers = "pos", x = 2000, y = 370) |>
+  gf_line(concentration ~ year) |>
+  gf_labs(y = "CO2 Concentration (ppm)", x = "Year") |>
+  gf_theme(theme_minimal())
+```
+
+2. What is the rate of change of CO_2_ concentration with respect to time in 1970? Pick the closest answer.
+
+```{mcq}
+#| label: ml2
+#| inline: true
+1. 0.5 ppm/year
+2. 1.0 ppm/year [correct]
+3. 1.5 ppm/year
+4. 2.0 ppm/year
+5. 2.5 ppm/year
+``` 
+
+3. If the rate of change in (2) had held from 1970 through all the intervening time up to 2025, what would the current CO_2_ concentration be? Pick the closest answer.
+
+```{mcq}
+#| label: ml3
+#| inline: true
+1. 325 ppm
+2. 340 ppm
+3. 380 ppm [correct hint]
+4. 420 ppm
+```
+
+4. In year 2000, what was the rate of change in CO_2_ concentration with respect to time?
+
+#| label: ml4
+#| inline: true
+1. 0.5 ppm/year
+2. 1.0 ppm/year 
+3. 1.5 ppm/year
+4. 2.0 ppm/year [correct]
+5. 2.5 ppm/year
+``` 
+
+5. Estimate the rate of change in CO_2_ in 2020-2025.
+
+```{mcq}
+#| label: ml5
+#| inline: true
+1. 0.5 ppm/year
+2. 1.0 ppm/year 
+3. 1.5 ppm/year
+4. 2.0 ppm/year
+5. 2.5 ppm/year [correct]
+``` 
+
+6. Explain, as best you can, how the BBC quote is reflected in the actual data.
+
+`r devoirs::devoirs_text(" -bbc")`
+
+:::
+ <!-- end of exr-rabbit-fight-ring -->

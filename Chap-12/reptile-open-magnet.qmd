@@ -1,0 +1,17 @@
+<!--
+id: "reptile-open-magnet"
+created: "Sat Nov  1 18:24:34 2025"
+attribution: TBA
+status: "sketch"
+chapter: 12
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#thm-reptile-open-magnet}
+Use the success-failure likelihood functions to replicate the results in the [RAND Study on nuclear weapons](Readings/RM2251.pdf)
+:::
+ <!-- end of thm-reptile-open-magnet -->

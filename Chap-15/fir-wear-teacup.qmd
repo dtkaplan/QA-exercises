@@ -1,0 +1,17 @@
+<!--
+id: "fir-wear-teacup"
+created: "Sun Nov 23 10:20:15 2025"
+attribution: TBA
+status: "draft"
+chapter: 15
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-fir-wear-teacup}
+Discussion of the housing example, starting with the "new housing" graph, discussing why it shows a rate of change and how to accumulate to get the total number change (per 1000 people) over the period since 2008 accumulation, the need to have a baseline level of houses (essentially, the constant of integration), comparing to the number of households, household growth, destruction of housing.
+:::
+ <!-- end of prp-fir-wear-teacup -->

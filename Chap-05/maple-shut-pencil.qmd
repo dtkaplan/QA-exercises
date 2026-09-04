@@ -1,0 +1,32 @@
+<!--
+id: "maple-shut-pencil"
+created: "Wed Aug  6 15:49:24 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-maple-shut-pencil}
+Write out an algorithm to compare any two numbers in scientific notation. Scientific notation numbers have the form $m \times 10^{\ p}$ where $m$ is called the *mantissa* and $p$ the exponent. The format you will work with is the two mantissas and the two exponents. We'll call them $m_1$, $m_2$, $p_1$, and $p_2$ respectively.
+
+You have been given an algorithm `compare(x, y)` which given any two numbers `x` and `y` will return either "gt", "eq", or "lt" depending on whether `x` is greater than, equal to, or less than `y`. You also have a three-way if else, which you can use like this:
+
+```{r eval=FALSE}
+#| label: C05-rojkn
+comp <- compare(x, y)
+if (comp == "gt) {
+  # handle gt case 
+} else if (comp == "eq) {
+  # handle eq case
+} else {
+  # handle lt case
+}
+```
+
+Hint: Start by comparing the exponents $p_1$ and $p_2$. This comparison will give you the overall answer except in one case, where you will have to look at the mantissas $m_1$ and $m_2$.
+
+:::
+ <!-- end of exr-maple-shut-pencil -->

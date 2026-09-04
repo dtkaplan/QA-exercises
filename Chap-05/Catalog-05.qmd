@@ -1,0 +1,386 @@
+---
+title: "Chapter 05 Catalog"
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+<style>
+.theorem-title {
+  display: none;
+}
+
+.panel-tabset {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20%) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.panel-tabset > .nav-tabs {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-tabset > .tab-content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .panel-tabset {
+    display: block;
+  }
+
+  .panel-tabset > .nav-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  .panel-tabset > .nav-tabs .nav-link {
+    width: auto;
+  }
+}
+</style>
+{{< include ../exercise-header.qmd >}}
+
+::: {.callout-note collapse="true" title="Group: unclassified"}
+::: {.panel-tabset collapse=true}
+## ash-sit-pot
+
+
+> File: Chap-05/ash-sit-pot.qmd
+
+{{< include ash-sit-pot.qmd >}}
+
+## avoid-ride-radio
+
+
+> File: Chap-05/avoid-ride-radio.qmd
+
+{{< include avoid-ride-radio.qmd >}}
+
+## avoid-send-mug
+
+
+> File: Chap-05/avoid-send-mug.qmd
+
+{{< include avoid-send-mug.qmd >}}
+
+## bear-leave-tv
+
+
+> File: Chap-05/bear-leave-tv.qmd
+> Status: sketch
+
+
+{{< include bear-leave-tv.qmd >}}
+
+## beech-bid-plate
+
+
+> File: Chap-05/beech-bid-plate.qmd
+> Status: sketch
+
+
+{{< include beech-bid-plate.qmd >}}
+
+## bobcat-fight-room
+
+
+> File: Chap-05/bobcat-fight-room.qmd
+> Status: sketch
+
+
+{{< include bobcat-fight-room.qmd >}}
+
+## brother-lose-scarf
+
+
+> File: Chap-05/brother-lose-scarf.qmd
+> Status: sketch
+
+
+{{< include brother-lose-scarf.qmd >}}
+
+## cheetah-feel-teacup
+
+
+> File: Chap-05/cheetah-feel-teacup.qmd
+> Status: sketch
+
+
+{{< include cheetah-feel-teacup.qmd >}}
+
+## child-lick-canoe
+
+
+> File: Chap-05/child-lick-canoe.qmd
+> Status: sketch
+
+
+{{< include child-lick-canoe.qmd >}}
+
+## cow-walk-pantry
+
+
+> File: Chap-05/cow-walk-pantry.qmd
+> Status: sketch
+
+
+{{< include cow-walk-pantry.qmd >}}
+
+## duck-lay-shelf
+
+
+> File: Chap-05/duck-lay-shelf.qmd
+> Status: sketch
+
+
+{{< include duck-lay-shelf.qmd >}}
+
+## duck-see-magnet
+
+
+> File: Chap-05/duck-see-magnet.qmd
+> Status: sketch
+
+
+{{< include duck-see-magnet.qmd >}}
+
+## duck-wish-blouse
+
+
+> File: Chap-05/duck-wish-blouse.qmd
+> Status: sketch
+
+
+{{< include duck-wish-blouse.qmd >}}
+
+## finch-bite-closet
+
+
+> File: Chap-05/finch-bite-closet.qmd
+> Status: draft
+
+
+{{< include finch-bite-closet.qmd >}}
+
+## finger-make-scarf
+
+
+> File: Chap-05/finger-make-scarf.qmd
+> Status: sketch
+
+
+{{< include finger-make-scarf.qmd >}}
+
+## fly-spend-gloves
+
+
+> File: Chap-05/fly-spend-gloves.qmd
+
+{{< include fly-spend-gloves.qmd >}}
+
+## giraffe-meet-cotton
+
+
+> File: Chap-05/giraffe-meet-cotton.qmd
+
+{{< include giraffe-meet-cotton.qmd >}}
+
+## goldfish-cost-bed
+
+
+> File: Chap-05/goldfish-cost-bed.qmd
+
+{{< include goldfish-cost-bed.qmd >}}
+
+## goldfish-jump-scarf
+
+
+> File: Chap-05/goldfish-jump-scarf.qmd
+> Status: sketch
+
+
+{{< include goldfish-jump-scarf.qmd >}}
+
+## jellyfish-open-socks
+
+
+> File: Chap-05/jellyfish-open-socks.qmd
+
+{{< include jellyfish-open-socks.qmd >}}
+
+## kitten-close-coat
+
+
+> File: Chap-05/kitten-close-coat.qmd
+
+{{< include kitten-close-coat.qmd >}}
+
+## lamb-speak-radio
+
+
+> File: Chap-05/lamb-speak-radio.qmd
+
+{{< include lamb-speak-radio.qmd >}}
+
+## maple-shut-pencil
+
+
+> File: Chap-05/maple-shut-pencil.qmd
+
+{{< include maple-shut-pencil.qmd >}}
+
+## mouse-love-pen
+
+
+> File: Chap-05/mouse-love-pen.qmd
+> Status: sketch
+
+
+{{< include mouse-love-pen.qmd >}}
+
+## owl-tug-room
+
+
+> File: Chap-05/owl-tug-room.qmd
+> Status: sketch
+
+
+{{< include owl-tug-room.qmd >}}
+
+## pig-think-bolt
+
+
+> File: Chap-05/pig-think-bolt.qmd
+
+{{< include pig-think-bolt.qmd >}}
+
+## pine-fall-drawer
+
+
+> File: Chap-05/pine-fall-drawer.qmd
+> Status: sketch
+
+
+{{< include pine-fall-drawer.qmd >}}
+
+## pollen-stand-pen
+
+
+> File: Chap-05/pollen-stand-pen.qmd
+
+{{< include pollen-stand-pen.qmd >}}
+
+## seahorse-pitch-teacup
+
+
+> File: Chap-05/seahorse-pitch-teacup.qmd
+
+{{< include seahorse-pitch-teacup.qmd >}}
+
+## seal-form-glasses
+
+
+> File: Chap-05/seal-form-glasses.qmd
+
+{{< include seal-form-glasses.qmd >}}
+
+## seal-ride-book
+
+
+> File: Chap-05/seal-ride-book.qmd
+
+{{< include seal-ride-book.qmd >}}
+
+## seaweed-build-jacket
+
+
+> File: Chap-05/seaweed-build-jacket.qmd
+
+{{< include seaweed-build-jacket.qmd >}}
+
+## sheep-tear-bed
+
+
+> File: Chap-05/sheep-tear-bed.qmd
+
+{{< include sheep-tear-bed.qmd >}}
+
+## snail-say-clock
+
+
+> File: Chap-05/snail-say-clock.qmd
+
+{{< include snail-say-clock.qmd >}}
+
+## snake-begin-stove
+
+
+> File: Chap-05/snake-begin-stove.qmd
+> Status: sketch
+
+
+{{< include snake-begin-stove.qmd >}}
+
+## spruce-talk-sheet
+
+
+> File: Chap-05/spruce-talk-sheet.qmd
+
+{{< include spruce-talk-sheet.qmd >}}
+
+## tiger-lick-window
+
+
+> File: Chap-05/tiger-lick-window.qmd
+
+{{< include tiger-lick-window.qmd >}}
+
+## titmouse-let-saw
+
+
+> File: Chap-05/titmouse-let-saw.qmd
+
+{{< include titmouse-let-saw.qmd >}}
+
+## titmouse-sit-chair
+
+
+> File: Chap-05/titmouse-sit-chair.qmd
+
+{{< include titmouse-sit-chair.qmd >}}
+
+## toe-understand-glasses
+
+
+> File: Chap-05/toe-understand-glasses.qmd
+> Status: sketch
+
+
+{{< include toe-understand-glasses.qmd >}}
+
+## walrus-hang-kitchen
+
+
+> File: Chap-05/walrus-hang-kitchen.qmd
+
+{{< include walrus-hang-kitchen.qmd >}}
+
+## zebra-dream-blouse
+
+
+> File: Chap-05/zebra-dream-blouse.qmd
+
+{{< include zebra-dream-blouse.qmd >}}
+
+:::
+:::
+

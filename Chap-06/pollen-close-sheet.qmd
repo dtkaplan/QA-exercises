@@ -1,0 +1,25 @@
+<!--
+id: "pollen-close-sheet"
+created: "Fri Jan 30 16:59:22 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pollen-close-sheet}
+If a quantity is measured in miles per gallon and you need to create a dimensionless input for a core modeling function using the transformation $a(q - q_0)$, what are the units of parameter $a$?
+
+```{mcq}
+#| label: d06-pcs-1
+1. miles per gallon
+2. gallons per mile [correct]
+3. dimensionless
+4. miles
+```
+
+:::
+ <!-- end of exr-pollen-close-sheet -->

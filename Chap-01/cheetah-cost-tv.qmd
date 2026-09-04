@@ -1,0 +1,23 @@
+<!--
+id: "cheetah-cost-tv"
+created: "Mon Jul  6 16:36:20 2026"
+attribution: DTK
+uses: optimization
+status: "sketch"
+chapter: 1
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cheetah-cost-tv}
+## Too many options
+
+Pairwise comparison is practically impossible. 
+
+Use travelling salesman as an example. Show that evaluation within a pair is easy. 
+
+There can be sophisticated mathematics behind algorithms to find an optimum or near-to-optimum option. 
+
+:::
+ <!-- end of exr-cheetah-cost-tv -->

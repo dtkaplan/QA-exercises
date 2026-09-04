@@ -1,0 +1,39 @@
+<!--
+id: "pony-do-suitcase"
+created: "Mon Feb 16 08:42:08 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pony-do-suitcase}
+There are only two horses in the race: Valentine and Epitaph. Valentine's odds are 9 to 6.
+
+1. What are Epitaph's odds?
+
+```{mcq}
+#| label: pds-1-dkse
+#| inline: true
+1. 3 to 2
+2. 6 to 9 [correct]
+3. 33%
+4. Not enough information is given.
+```
+
+2. Which of these is a correct statement of the *relative* probabilities for Valentine and Epitaph respectively?
+
+```{mcq}
+#| label: pds-2-dkse
+#| inline: true
+1. 6/9 = 2/3 = 0.33 [hint: Sorry. There need to be *two* relative probabilities, not just one.]
+2. 6 and 9 
+3. 9 and 6 [correct]
+4. Not enough information is given.
+```
+
+
+:::
+ <!-- end of exr-pony-do-suitcase -->

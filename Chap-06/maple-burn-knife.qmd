@@ -1,0 +1,114 @@
+<!--
+id: "maple-burn-knife"
+created: "Fri Jan 16 10:42:07 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-maple-burn-knife}
+**Of twos and tens**
+
+exp2() is an exponential function, but it is by no means the only one. The characteristic of exp2() that makes it exponential is that increasing the input by one *always* produces an output that is bigger by a factor of two. For instance:
+
+```{r}
+exp2(3.5)
+exp2(4.5)
+exp2(5.5)
+```
+
+The other exponential functions behave similarly. That is, increasing the input by 1 increases the output by a factor of ____? The blank (___) is the number that characterizes the exponential function. 
+
+For instance, we can imagine an exponential function where an increase in the input by 1 produces an increase in output by 10-fold. There is no standard name for this 10-fold exponential function, so we will invent one just for this problem: the "tenfold()" function.
+
+```{r}
+#| echo: false
+decuple <- tenfold <- function(x) 10^x
+tenfoldings <- function(x) log10(x)
+expings <- function(x) log(x)
+```
+
+```{r}
+tenfold(0.7)
+tenfold(1.7)
+tenfold(2.7)
+```
+
+a. Based on the pattern you observe above for tenfold(), what will be the output when the input is 4.7?
+
+`r devoirs::devoirs_set(choices = c(501.1872, 5011.872, 50118.72, 501187.2), correct=50118.72, n=4, id = "mbk-b-nbld")`
+
+b. As you know, 0.7 - 1 = -0.3. Keeping that in mind, what will be the output from tenfold(-0.3)?
+
+`r devoirs::devoirs_set(choices = c(0.005011872, 0.05011872, 0.5011872, 5.011872),  correct=0.5011872, n=4, id = "mbk-b-isld")`
+
+All the exponential functions are merely input scaled versions of doubling(). For instance, tenfold(x) is the same as doubling(3.3219281 * x):
+
+```{r}
+tenfold(4.2)
+exp2(3.3219281 * 4.2)
+```
+
+Things work out the other way, too.
+
+```{r}
+exp2(6.92)
+tenfold(6.92 / 3.3219281)
+```
+
+What's special about 3.3219281? It is the amount of doublings that leads to an output of 10:
+
+```{r}
+exp2(3.3219281)
+```
+
+We can find the special number just by asking how many doublings lead to a ten-fold increase:
+
+```{r}
+log2(10)
+```
+
+
+History might have followed a path where tenfold() would be the standard exponential function. But there is no strong reason to change now, since exp2() and log2() do everything that tenfold() and tenfoldings() can do. Calculations with paper and pencil would be easier with tenfold() and tenfoldings(). For example,
+
+```{r}
+log2(1000)
+tenfoldings(1000)
+```
+
+c. What is the output of tenfoldings(1000000)?
+`r devoirs::devoirs_set(choices = c(2, 3,5,6,9),  correct=6, n=5, id = "mbk-c-dwld")`
+
+While everyday people might find it easier to work with tenfold() and tenfoldings(), mathematicians and many scientists routinely use another exponential function named exp(), whose output increases by 2.71828182846-fold whenever the input increases by 1. 
+
+Using 2.71828182846-fold might seem crazy, but there are good reasons for it, at least for those heavily involved with quantitative thinking. For instance, the *rate of change* of exp(x) with respect to x is exactly exp(x). And, delving into the world of "imaginary" numbers used by mathematicians, physicists, and some engineers, there is the remarkable fact that exp(3.1415926535i) gives -1.
+
+Just as exp2() has log2() to convert output into input, and tenfold() has tenfoldings() to do the same job, exp() has a function that we might call "expings()". For instance:
+
+```{r}
+exp(-2.302585)
+expings(0.1)
+```
+
+The official name for the expings() function is the "natural logarithm function," written $\ln()$ in print and `log()` in almost all computer languages. The official names for log2() and tenfoldings() are, in computer languages, `log2()` and `log10()`. 
+
+There's no right answer to the following question. We're just interested in your opinion on the matter.
+
+In your heart, which would you like to be the standard exponential function?
+
+```{mcq}
+#| label: mbk-in-your-heart
+#| inline: true
+1. exp() [correct]
+2. exp2() [correct]
+3. tenfold() [correct]
+```
+
+Keep in mind that these are all exponential functions and differ only by the amount of input scaling.
+
+
+:::
+ <!-- end of exr-maple-burn-knife -->

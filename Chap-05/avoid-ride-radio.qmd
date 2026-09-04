@@ -1,0 +1,65 @@
+<!--
+id: "avoid-ride-radio"
+created: "Wed Aug 19 18:05:11 2026"
+attribution: DTK
+uses: magnitudes discussion
+status: "ready-to-use"
+chapter: 5
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-avoid-ride-radio}
+
+In the algebraic theory of logarithms, there are infinitely many logarithm values for any given number. To specify one or another of the various logarithmic values, you need to state the **base** of the logarithm.  Let's illustrate by looking at the given number 100, that is, `1e2` in scientific notation. We'll let the computer do the calculation.
+
+We like base-10 since that logarithm has a simple relationship to scientific notation and is the one most commonly used in graphics.
+
+```{r}
+#| label: C05-myosx
+our_number <- 1e2
+log(our_number, base = 10)
+```
+
+You can use any positive number as a base, for instance:
+
+```{r}
+#| label: C05-xzswg
+log(our_number, base = 2)
+log(our_number, base = 2.01)
+log(our_number, base = 324.23)
+log(our_number, base = pi)
+log(our_number, base = 0.05)
+```
+
+Fun as this is, it suffices for all purposes other than theory to use base-10. Sometimes base-2 is convenient, especially when working with computers or dynamical processes involving half-lives or doubling-times, as in radioactive decay or the unfettered growth of bacterial colonies.
+
+Perhaps you remember enough about the algebra of logarithms to figure out why this is:
+
+```{r}
+#| label: C05-ribha
+log(our_number, base = our_number)
+```
+
+Mathematicians and other mathematically-adjacent professionals like physicists have an affection for a particular base: 2.71828182845905.... This is called "Euler's Number" after an important 18th-century mathematician. It is one of the handful of numbers that have been given a letter as a name, like $\pi$. Euler's number is written $e$ in his honor. 
+
+Computer scientists like to let mathematicians have their way, so if you fail to specify a base for the `log()` function, it will use base-$e$.
+
+```{r}
+#| label: C05-cckoe
+log(our_number)
+log(our_number, base = 2.71828182845905)
+```
+
+As a concession to the large number of people who use logarithms for important purposes and aren't interested in mathematical generalizations, computer languages usually provide a way to calculate logs without needing the word "base." A typical name for such a computer function that produces logarithms (base-10) is `log10()`.
+
+```{r}
+#| label: C05-hxsjf
+log10(our_number)
+log(our_number, base = 10)
+```
+
+
+:::
+ <!-- end of exr-avoid-ride-radio -->

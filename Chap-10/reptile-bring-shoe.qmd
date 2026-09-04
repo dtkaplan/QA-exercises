@@ -1,0 +1,19 @@
+<!--
+id: "reptile-bring-shoe"
+created: "Thu Jul  9 16:27:50 2026"
+attribution: DTK
+uses: Choices, but really about graphics.
+status: "sketch"
+chapter: 10
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-reptile-bring-shoe}
+EXERCISE: Why not make a contour plot of the restaurant data? [Contour plots related three quantities, but the restaurant data has only two quantities (cost and meal quality) plus a categorical variable (the restaurant ID).]
+
+
+
+:::
+ <!-- end of exr-reptile-bring-shoe -->

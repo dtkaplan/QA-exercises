@@ -1,0 +1,48 @@
+<!--
+id: "calf-pitch-stair"
+created: "Mon Nov 17 13:08:39 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-calf-pitch-stair}
+TURN THIS INTO THE CIRCLE MODEL of circadian rhythms. I tried the VDP system, but really I should just show the simplified approximate model.
+
+
+Van der Pol
+
+$\mu = 5.25, P = 2.1$ gives a 25 hour internal day.
+
+```{r}
+#| label: C14-tgmfm
+vdp <- makeODE(dx ~ mu*(x - x^3/3 - y)/P, 
+               dy ~ (x / mu)/P, 
+               mu = 5.25, P = 2.1)
+streamlines(vdp, domain(x = -2:2, y = -.5:.5), npts = 20, nsteps=10)
+vdp_soln <- integrateODE(vdp, domain(t = 0:26), x=0.25, y=0.25)
+traj_plot(x(t) ~ y(t), vdp_soln, nt = 27)
+```
+
+
+
+```{r}
+#| label: C14-aezqq
+# Need to write functions to set initial values of x and y from r, theta, and Pval
+Pval = 25
+orbit <- makeODE(dtheta ~ 2*pi/P, dr ~ r*(1-r),
+                 dx ~ r*(1-r)*cos(theta) - r*sin(theta)*2*pi/P,
+                 dy ~ r*(1-r)*sin(theta) + r*cos(theta)*2*pi/P,
+                 P = Pval)
+orbit_soln <- integrateODE(orbit, domain(t = 0:26), 
+                           theta = 0, r = 1, x=0, y=1*2*pi/Pval)
+traj_plot(x(t) ~ y(t), orbit_soln, nt = 27)
+```
+
+:::
+ <!-- end of exr-calf-pitch-stair -->

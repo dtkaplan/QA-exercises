@@ -1,0 +1,33 @@
+<!--
+id: "aspen-let-shelf"
+created: "Sat Dec 20 08:22:22 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-aspen-let-shelf}
+AI Generated Exercise: The Freelance Consultant's Dilemma
+
+Scenario: Lydia is a freelance graphic designer who is trying to determine her "Productivity Rate" to better quote future clients. Last week, she spent 15 hours designing a 60-page annual report for a local non-profit. This week, she spent 12 hours creating a 40-page brand style guide for a startup.
+
+The Question: Which of the following statements correctly compares Lydia’s rates of production between the two projects?
+
+```{mcq}
+#| label: als-1-krfis
+1. Lydia was more efficient during the brand style guide project because she spent 3 fewer hours on it than the annual report. [hint: The AI's explanation for why this answer is wrong is, "This choice looks at the absolute difference in time, but fails to account for the volume of work (the pages), which is why we use rates to normalize data for a fair comparison." But in reality, it might be that the volume of work doesn't really contribute to the value. Indeed, shorter reports are often preferred by knowledgable people.]
+2. Lydia’s rate for the annual report was 4.0 pages per hour, while her rate for the brand style guide was 3.33 pages per hour, making her more efficient on the annual report. [correct]
+3. Lydia’s rate for the annual report was 0.25 hours per page, while her rate for the brand style guide was 0.30 hours per page, making the annual report the slower project. [hint: Interesting that the AI offers this choice. Perhaps it picked up on items in its database that exploited the misconception that "slower" always means a lower rate. This is true if the rate is pages per hour, but not if the rate is hours per page, as here.]
+4.  The rates cannot be compared because "annual reports" and "style guides" are different types of products. [hint: The AI is being a little silly here. There is nothing in the problem statement to suggest that annual reports and style guides have the same value or even the same value per page. So in real life this might be an appropriate answer.]
+```
+
+Note from human: This is the kind of problem familiar from textbooks where knowing what chapter the question refers to tells the student the kind of answer that is expected. This chapter is about "rates," so rates must be part of the answer! A more authentic question might leave it to the student to decide whether a rate provides a good approach. For instance, if the length of the report were irrelevant, the overall time spent might be the correct measure of productivity (or, rather, "unproductivity."). Page count is easy to measure, but not clearly related to the purpose at hand. Often, a high page count is a mechanism to *hide* information.
+
+President Woodrow Wilson (1856-1924) is reported to have said, "If I am to speak ten minutes, I need a week for preparation; if fifteen minutes, three days; if half an hour, two days; if an hour, I am ready now."
+:::
+ <!-- end of exr-aspen-let-shelf -->

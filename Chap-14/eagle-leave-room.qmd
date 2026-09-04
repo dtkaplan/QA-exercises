@@ -1,0 +1,27 @@
+<!--
+id: "eagle-leave-room"
+created: "Wed Jan 28 09:49:33 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 5"
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-leave-room}
+Functions with multiple inputs can be analyzed using a technique called "slicing." Which of the following statements accurately describes this process? Select any correct answer.
+
+```{mcq}
+#| label: elr-1-jse
+1.  It involves holding one or more input variables constant at a fixed value. [correct]
+1.  It requires setting the function's output to zero to solve for the intercepts.
+1.  It allows you to visualize the relationship between the output and a single input on a standard input vs output graph. [correct]
+1.  It calculates the average rate of change for all inputs simultaneously.
+1.  It enables some analysis of a multi-variable function as a single-variable function. [correct]
+1.  It combines all input variables into a single sum to determine the total magnitude.
+```
+
+:::
+ <!-- end of exr-eagle-leave-room -->

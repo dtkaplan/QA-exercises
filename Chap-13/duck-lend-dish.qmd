@@ -1,0 +1,17 @@
+<!--
+id: "duck-lend-dish"
+created: "Fri Dec  5 09:41:15 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-duck-lend-dish}
+Dynamical rules for systems with a single state quantity. The skeleton will look like $a + b P + c P^2$. Enumerate the possibilities. For simplicity, let's consider first $a=0$ and look at positive, negative, and zero values for $b$ and $c$.
+:::
+ <!-- end of exr-duck-lend-dish -->

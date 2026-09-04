@@ -1,0 +1,141 @@
+<!--
+id: "maple-shut-pantry"
+created: "Mon Dec 22 13:15:23 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-maple-shut-pantry}
+Consider the data on the body mass (kg) and brain mass (gm) for 62 species of mammals shown in @fig-mammal-mass. (You can hover the cursor over a point to see the species name.)
+
+```{r}
+#| echo: false
+#| label: fig-mammal-mass
+#| warning: false
+library(ggformula)
+library(ggiraph)
+mammals <- read.csv("../www/mammals.csv")
+P <- mammals |> 
+  ggformula:::gf_point_interactive(brain_weight ~ body_weight,
+                       tooltip = paste("Species: ", mammals$species)) |>
+  gf_refine(
+    scale_y_log10(),
+    scale_x_log10(),
+    coord_fixed()
+  ) |>
+  gf_lm(interval = "prediction", level = 0.67) |>
+  gf_labs(y = "Brain mass (gm)", x = "Body mass (kg)") |>
+  gf_theme(theme_minimal())
+P |> gf_girafe()
+```
+
+1. The lesser short-tailed shrew has both the smallest body mass and brain mass. What is the brain mass of the short-tailed shrew? (Pick the answer that's closest.)
+
+```{mcq}
+#| label: msp-1-4lse
+#| inline: true
+1. 0.03 gm
+2. 0.14 gm [correct]
+3. 0.52 gm
+```
+
+2. The water opposum, arctic fox, nine-banded armadillo, and rock hyrax (in the middle of the cloud of points) all have about the same body mass. What is that body mass? (Pick the answer that's closest.) 
+
+```{mcq}
+#| label: msp-2-sddo
+#| inline: true
+1. 1-2 kg
+2. 3-4 kg [correct]
+3. 6-7 kg
+4. 8-9 kg
+```
+
+3. Which of these animals has a body mass closest to 10 kg?
+
+```{mcq}
+#| label: msp-3-fhsl
+#| inline: true
+1. raccoon
+1. baboon [correct]
+2. roe deer
+4. vervet
+```
+
+4. Of the mammals in the range of body masses from 10 to 100 kg, which has the smallest brain size?
+
+```{mcq}
+#| label: msp-4-le4
+#| inline: true
+1. water opposum [hint: It's smaller than 10 kg, so not the answer to the question.]
+2. giant armadillo
+3. goat
+4. kangaroo [correct]
+```
+
+5. The gray bar surrounding the blue line in @fig-mammal-mass contains about 2/3 of the 62 mammals plotted. Which animal has the smallest ratio of brain mass compared its range of body masses?
+
+```{mcq}
+#| label: msp-5-odr
+#| inline: true
+1. water opposum [correct]
+2. tenrec
+3. musk shrew
+4. desert hedgehog
+```
+
+@fig-mammal-sleep shows the daily sleeping time versus lifetime for the 62 mammals. The level of danger from predation that the animal is exposed to is shown by color.
+
+```{r}
+#| echo: false
+#| label: fig-mammal-sleep
+#| warning: false
+library(ggformula)
+library(ggiraph)
+mammals <- read.csv("../www/mammals.csv")
+P <- mammals |> 
+  ggformula:::gf_point_interactive(total_sleep ~ lifespan, color = ~ danger,
+                       tooltip = paste("Species: ", mammals$species, "<br>Danger", mammals$danger)) |>
+  gf_refine(
+    scale_x_log10(),
+    scale_color_viridis_c()
+  ) |>
+  gf_labs(y = "Sleep (hrs per day)", x = "Lifespan (yr)") |>
+  gf_theme(theme_minimal())
+P |> gf_girafe()
+```
+
+6. The mammal who sleeps the least sleeps how many hours per day?
+
+```{mcq}
+#| label: msp-6-kew
+1. 2.5 [correct]
+2. 2.9
+3. 3.5
+4. Can't tell the difference on this scale.
+```
+
+7. A chinchilla lives about 7 years. What level of danger does the chinchilla face?
+
+```{mcq}
+#| label: msp-7-ese
+#| inline: true
+1. 1
+2. 2
+3. 3
+4. 4 [correct]
+5. 5
+```
+
+
+8. The Sleep axis is linear, while the Lifespan axis is magnitude. Explain why this choice makes sense (or if it doesn't).
+
+`r devoirs::devoirs_text("msp-8-klj")`
+
+:::
+ <!-- end of exr-maple-shut-pantry -->

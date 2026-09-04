@@ -1,0 +1,105 @@
+<!--
+id: "rhinosaurus-buy-screen"
+created: "Wed Nov 12 13:05:08 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-rhinosaurus-buy-screen}
+
+In `r xf("sec-dynamics")` we referred to the *state* of a dynamical system. It would be more accurate to use the term  "**instantaneous state**" for the purpose; the state at each particular instant of time. 
+It's intuitive to think about the instantaneous state as the system as you would see it in a photograph, frozen in time. The inventors of the mathematical methods behind the modeling of dynamical systems were [Isaac Newton and Gottfried Willhelm Leibnitz](https://en.wikipedia.org/wiki/Leibniz%E2%80%93Newton_calculus_controversy) in the decades around 1700. But photography was not invented until around 1850 so they could not draw on this intuition. They developed their methods using the tools of geometry and algebra.
+
+Although it's intuitive to think of the instantaneous state by analogy to a photograph, this analogy is critically flawed. To see why, consider the photo of a pendulum clock in @fig-pendulum-photos(a). It's easy to see the *position* of the pendulum, but you can't tell from the photo which way the pendulum is swinging. The instantaneous state of the pendulum involves *both* the position *and* velocity. The photograph doesn't capture the *velocity*. 
+
+::: {#fig-pendulum-photos}
+#| layout-ncol: 2
+#| fig-cap: "Photographs of a pendulum clock. Source: (a) shutterstock.com#193799621; (b) stock.adobe.com/search?k=pendulum+clock "
+#| fig-subcap:
+#| - Still photo
+#| - Time exposure
+
+![](../www/clock-pendulum-still.png)
+
+![](../www/clock-photograph-time-exposure.png)
+:::
+
+@fig-pendulum-photos(b), a time exposure, gives a better sense of the velocity, but it would be very difficult to measure the velocity at any instant from the blurry view of the pendulum.
+
+About 200 years after Newton and Leibniz, another technology was invented: the *motion picture*. This technology involves taking a *sequence* of still photographs separated by small intervals of time. Each of the photographs is called a **frame**. The frames are typically separated by 33 milliseconds. 
+
+::: {#fig-clock-video}
+
+{{< video https://www.youtube.com/watch?v=z0DATRGrBtc >}}
+
+Video of a pendulum clock. Set the playback speed to the slowest possible to be able to discern the individual frames. 
+
+:::
+
+You can measure the pendulum's position from a single frame, but to find the velocity you need *two* frames. Measure the position in each of two successive frames. You *calculate* the velocity by taking the change in position between the frames and dividing by the change in time (e.g. 33 milliseconds). Picking up on the language in `r xf("sec-rates-of-change-brief")`, velocity is the *rate of change* in position with respect to time.
+
+Because a *calculation* is required to measure the *rate of change*, the mathematical methods came to be called **calculus**. Courses in calculus are usually presented in terms of algebra, which makes them inaccessible to many students. But the methods can also be represented arithmetically. We will emphasize the arithmetic approach.
+
+@sec-rates-of-change-brief introduced the notion of *rate of change*. The situation addressed by rates of change involves two quantities. One is the *primary quantity*, typically a quantity that is of particular interest to us. The other is the *context-setting* quantity. We take two snapshots of the system that relates these quantities. We'll call these snapshots **from** and **to**.
+
+If we label the primary quantity as ${\cal P}$ the two snapshots give us two values for $\cal P$, which we'll write as ${\cal P}_\text{from}$ and ${\cal P}_\text{to}$. The *change in $\cal P$* between the two snapshots is 
+$${\cal P}_\text{to} - {\cal P}_\text{from}\ .$$
+
+The context-setting quantity---we'll call it $\cal C$---similarly has a value in each of the snapshots. The change in $\cal C$ is $${\cal C}_\text{to} - {\cal C}_\text{from} .$$
+
+The *rate of change of ${\cal P}$ with respect to ${\cal C}$* is a conversion factor that tells us how to convert a change in ${\cal C}$ into the corresponding change in ${\cal P}$. But a rate of change is a different kind of beast than the conversion factors we examined in @sec-quantity-framework when looking how to change one unit into another unit---say feet to meters, or Euros to USD. Those @sec-quantity-framework were *dimensionless* because the *to* and *from* quantities always have the same dimensions and are "flavors of one." But a rate of change is different: the *primary* and *context setting* quantities need not (and generally don't) have the same dimension. A *rate of change* is a conversion *between* dimensions. We go from the dimension of the *from* quantity into the dimension of the *to* quantity.
+
+
+
+For the sake of discussion, let's image a system that uses several different factors to account for a person's *mood*. 
+
+```{mermaid}
+graph LR
+  A(Day of year)
+  A --> C[Sun's brightness]
+  A --> D[Length of daylight]
+  D --> J(Change in length of daylight)
+  E[Work-related stress]
+  F[Romantic situation]
+  L[Family situation]
+  G[Concern about global issues]
+  K[Personal stress]
+  H[Mood]
+  D --> H
+  C --> H
+  E --> H
+  G --> H
+  J --> H
+  F --> K
+  L --> K
+  A --> L
+  K --> H
+  H --> F
+  
+{{< include ../mermaid-classes.txt >}}
+
+class A exogenous
+class E exogenous
+class F exogenous
+class G exogenous
+```
+
+Note the four *endogenous* quantities: Day of year, romantic situation, work-related stress, global issues. None of these have any input arrows. Then there are the links between quantities. We won't be concerned about most of these, and some are tongue-in-cheek such as the holiday-induced family stress. 
+
+Focus on the connections between sunlight and mood. The model has a direct link between brightness, which varies over the year, and mood. There's also a link between length of daylight---winter short, summer long---and mood. And still another link of sunlight to mood: the *change* in the length of daylight. At the time of the Spring equinox (in March), the days are getting longer fast. At the time of the Autumnal equinox (In September) the days are getting shorter fast. (In mid-summer and mid-winter, day length changes only slowly.)
+
+Suppose you are building a model for the purpose of studying SAD ([Seasonal Affective Disorder](https://www.mayoclinic.org/diseases-conditions/seasonal-affective-disorder/symptoms-causes/syc-20364651)), a form of depression associated with the changing seasons. Many SAD sufferers feel the onset of symptoms in the Fall and recover toward Spring.
+
+IN BOTH FALL AND SPRING the sun's brightness and the length of day are the same, yet SAD onset is associated with Fall, not Spring. WHATS GOING ON? It's the DERIVATIVE of length of day that distinguishes FALL FROM SPRING.
+
+SHOW GRAPHS OF BRIGHTNESS AND LENGTH OF DAY. 
+
+
+:::
+ <!-- end of exr-rhinosaurus-buy-screen -->

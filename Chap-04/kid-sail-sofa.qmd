@@ -1,0 +1,20 @@
+<!--
+id: "kid-sail-sofa"
+created: "Wed Aug 19 13:03:46 2026"
+attribution: DTK
+uses: rates
+status: "sketch"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kid-sail-sofa}
+
+SIMPLE EXERCISE RELATING to the walking examples.
+
+Taking into account that a person uses about 2000 Cal in an ordinary day's activities, the *excess* energy available for the marathon is only 1000 Cal. That supports about 12.5 miles of walking.
+
+:::
+ <!-- end of exr-kid-sail-sofa -->

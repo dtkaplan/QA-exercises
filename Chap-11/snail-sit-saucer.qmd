@@ -1,0 +1,44 @@
+<!--
+id: "snail-sit-saucer"
+created: "Tue Dec  9 16:41:39 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 11
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-snail-sit-saucer}
+In-class activity.
+
+Give each student a piece of paper with several number lines drawn on it. The number lines should have ticks, but no numerical labels.
+
+1. For an in-class discussion, use a simulation to display values one at a time of a random variable. Showing 20 of these to the students, and having them mark each value on a number line, ask the students to sketch a relative probability distribution for the random quantity.
+
+2. For a discussion about parameters for the distributions, ask them to estimate the parameters of the uniform distribution that capture numbers secretly generated, one at a time, from a uniform distribution. They should mark the successive numbers on one of their number lines. Have them remark each time a new random number causes them to revise their estimate of the max and min parameters.
+
+```{r}
+#| label: C11-chwlt
+# don't let them see this.
+process1 <- function() {runif(1, min = 2, max = 10)}
+process1() # repeat many times 
+```
+
+3. Very much like (2), put use `process2()` to generate the numbers.
+
+```{r}
+#| label: C11-dboaw
+# don't let them see this.
+process2 <- function() 4 + rexp(1, rate=1/3)
+process2()
+```
+
+Since the numbers are not actually from a uniform distribution (but don't tell them this!) the estimate of the max parameter will not be stable. Generate a score of values, so that at least one is pretty much an outlier compared to the others. 
+
+Ask whether they think we should reconsider the uniform distribution as the model for `process2()`. What makes them think that a uniform distribution in unlikely to be a good description of these data. (We are leading up to the concept of "likelihood." The problem with the uniform distribution for the `process2()` data is that it leaves a lot of the probability mass over parts of the domain that are empty.)
+
+:::
+ <!-- end of prp-snail-sit-saucer -->

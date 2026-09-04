@@ -1,0 +1,20 @@
+<!--
+id: "boy-speak-dish"
+created: "Thu Mar 12 07:34:20 2026"
+attribution: Dorothy Dickmann
+use: RQ 13
+status: "sketch"
+chapter: 4
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-boy-speak-dish}
+In the US population example, the chapter gets a forecast of future population by “accumulating the rate of change” over future years. In plain language, what quantity is being accumulated and what is the with-respect-to quantity?
+
+`r devoirs::devoirs_text("RQ13-bsd-3")`
+
+
+:::
+ <!-- end of exr-boy-speak-dish -->

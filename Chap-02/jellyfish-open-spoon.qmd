@@ -1,0 +1,18 @@
+<!--
+id: "jellyfish-open-spoon"
+created: "Sat Aug 15 10:06:46 2026"
+attribution: DTK
+uses: "Systems chapter"
+status: "sketch"
+chapter: 2
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-jellyfish-open-spoon}
+Using the broad sense of "dimension" introduced in this chapter, write down 10 familiar dimensions of an automobile. Remember that "dimension" covers not just spatial extent but also other properties of the car.
+
+ADD OTHER VERSIONS, E.G. a chair, a computer, a flowering plant
+:::
+ <!-- end of exr-jellyfish-open-spoon -->

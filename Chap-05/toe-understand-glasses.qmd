@@ -1,0 +1,18 @@
+<!--
+id: "toe-understand-glasses"
+created: "Fri Aug 29 10:38:46 2025"
+attribution: TBA
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-toe-understand-glasses}
+EXERCISE: Calculate the scientific notation form of several numbers presented in decimal form, digital form or as non-standard scientific notation (e.g. `542e8`).
+
+For several numbers, calculate the exponent that is equivalent to the $1 \times 10^\color{magenta}{\fbox{x}}$ style of scientific notation (using `log10()`.)
+
+:::
+ <!-- end of exr-toe-understand-glasses -->

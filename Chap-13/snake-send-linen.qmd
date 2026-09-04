@@ -1,0 +1,19 @@
+<!--
+id: "snake-send-linen"
+created: "Thu Mar 12 07:33:38 2026"
+attribution: Dorothy Dickmann
+use: RQ 13
+status: "ready-to-use"
+chapter: 13
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-snake-send-linen}
+The chapter says the main point is to know “whether the derivative or the anti-derivative might be a better form ... for the purpose a model is being built for.” Give one example from the chapter where the *marginal* (derivative) form is more useful to work with, and one where the *accumulated* (anti-derivative) form is more useful.
+
+`r devoirs::devoirs_text("RQ13-ssl-4")`
+
+:::
+ <!-- end of exr-snake-send-linen -->

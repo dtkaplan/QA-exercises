@@ -1,0 +1,28 @@
+<!--
+id: "duck-get-futon"
+created: "Thu Jan 22 09:58:28 2026"
+attribution: Dave Ruth
+use: Chap 5 Drill
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-duck-get-futon}
+You are examining a function `Projectile_Distance(speed, angle)` which calculates how far a ball travels based on the angle it is thrown and the speed at release.
+
+If you slice this function at a fixed release `speed`, you will have created a function of just one input: `angle`. A graph of the function can be read to find the input `angle` required to hit a target exactly 50 meters away. 
+
+How many possible answers for angle should you expect to find?
+
+```{mcq}
+#| label: dgf-10eks
+a. Exactly 1 [hint: Not really. This is a very attractive answer, but there doesn't need to be any angle that will do the job, as with a ping-pong ball.]
+b. Exactly 2 [hint: Might be, but doesn't need to be. How might it be? A very shallow angle might work, with the ball skimming the target. At the same time, a steep angle might send the ball up high in the air, giving enough time for its slight horizontal speed to carry it to the target. ]
+c. Exactly 0 [hint: This might be the case, but it might not. For instance, you are unlikely to be able to send a ping-pong ball 50 meters no matter what the initial speed and launch angle. Even for a heavier ball, the fixed value of `speed` in the slice might be inadequate. But if the speed were high enough, a heavier ball could well be aimed to reach the target.]
+d. It might be any of the above [correct]
+```
+:::
+ <!-- end of exr-duck-get-futon -->

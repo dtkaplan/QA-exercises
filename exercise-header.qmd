@@ -1,0 +1,71 @@
+```{r}
+#| include: false
+
+local({
+  find_project_root <- function(start_dir) {
+    current_dir <- normalizePath(start_dir, winslash = "/", mustWork = TRUE)
+
+    repeat {
+      startup_file <- file.path(current_dir, "_exercise_startup.R")
+      if (file.exists(startup_file)) return(current_dir)
+
+      parent_dir <- dirname(current_dir)
+      if (identical(parent_dir, current_dir)) {
+        stop("Could not find _exercise_startup.R above the current exercise.")
+      }
+
+      current_dir <- parent_dir
+    }
+  }
+
+  if (!isTRUE(getOption("QRA.exercise_startup_loaded"))) {
+    project_root <- find_project_root(knitr::current_input(dir = TRUE))
+
+    options(QRA.exercise_project_root = project_root)
+
+    source(
+      file.path(project_root, "_exercise_startup.R"),
+      local = knitr::knit_global(),
+      chdir = TRUE
+    )
+
+    options(QRA.exercise_startup_loaded = TRUE)
+  }
+})
+```
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r}
+#| echo: false
+#| results: asis
+
+read_exercise_metadata <- function(exercise_file) {
+  lines <- readLines(exercise_file, warn = FALSE)
+  if (length(lines) < 3 || lines[[1]] != "<!--") {
+    return(list())
+  }
+
+  closing_delimiter <- which(lines[-1] == "-->")[1]
+  if (is.na(closing_delimiter)) {
+    return(list())
+  }
+
+  yaml::yaml.load(paste(lines[2:closing_delimiter], collapse = "\n"))
+}
+
+metadata <- read_exercise_metadata(knitr::current_input(dir = TRUE))
+
+if (
+  identical(metadata$status, "ready-to-use") &&
+    metadata$mode %in% c("exercise", "drill")
+) {
+  cat(
+    knitr::knit_child(
+      file.path(getOption("QRA.exercise_project_root"), "_devoirs.qmd"),
+      quiet = TRUE
+    ),
+    sep = "\n"
+  )
+}
+```

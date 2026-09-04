@@ -1,0 +1,23 @@
+<!--
+id: "girl-sleep-linen"
+created: "Fri Jan 30 13:57:23 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-girl-sleep-linen}
+Which core modeling function has an output bounded by -1 and 1?
+
+```{mcq}
+#| label: gsl-1-cjs
+1. `hillside()`
+2. `osc()` [correct]
+3. `log2()`
+4. `same()`
+```
+:::
+ <!-- end of exr-girl-sleep-linen -->

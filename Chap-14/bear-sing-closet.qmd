@@ -1,0 +1,134 @@
+<!--
+id: "bear-sing-closet"
+created: "Wed Nov 12 13:02:44 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+Turn this material into exercises 
+
+::: {#exr-bear-sing-closet}
+
+## Quantities and functions (snapshots and movies) {#sec-snapshot-movie}
+
+We start by turning the tables to show how a *rate* is a special case of a *rate of change*. The context to illustrate our discussion will be *prices*: why they are what they are.
+
+In many cultures, such as those in rich countries, consumers almost always deal with prices as they are. We are used to looking at a price tag (or its electronic equivalent) then judging whether the price suits the value of the thing being considered and making a decision to buy or pass. But there are exceptions, for example coupons. Most of us have encountered another exception: haggling over a price. (Most professionals prefer a more dignified term than "haggling": *negotiating*.)
+
+Two common situations where there is not a price tag are air travel and university education. When shopping for an airplane ticket you are likely to encounter many different prices for similar or identical services. We'll use that situation as our first example of the application of rates of change.
+
+First, it's important to identify an intuition held by many or most people about *price* and *value*. People tend to think that a given object or service has a corresponding value. Philosophers of economics such as Adam Smith or Karl Marx offered a "theory of value" and attempted to calculate values by looking at the inputs required to produce the object.^[Although Smith and Marx are regarded as occupying opposing extremes of politics, their theories of value are very similar and reduce the value of *all* inputs into the labor required to generate those inputs: the "labor theory of value."] Let's use such a theory to try to understand airline ticket prices.
+
+The service provided is, more or less, transporting people from location A to B. To provide that service, the airline needs to purchase or lease an airplane, pilots, stewards, support personnel, and, importantly, fuel. Imagine that the inputs needed to provide the service of a single flight from A to B cost $100,000. Naturally, this isn't the service price because there are many passengers. According to a simple theory of value, the ticket price should be a rate: the cost of providing the single flight divided by the number of passengers. If there are 100 passengers, the ticket price should be around $1000 per passenger.
+
+Notice the units of ticket price: dollars per passenger. That's the clue that we are dealing with a rate. By convention, ticket prices are quoted in terms of money, say 1000 dollars. But that convention obscures where the price is coming from. 
+
+We can draw a picture of the situation, as in @fig-ticket-price-1.
+
+```{r}
+#| label: fig-ticket-price-1
+#| echo: false
+#| warning: false
+Points1 <- tibble::tribble(
+  ~ passengers, ~ cost,
+  0, 0,
+  100, 1e5
+)
+Points1 |> 
+  gf_point(cost ~ passengers, color = "blue") |>
+  gf_line(cost ~ passengers, color = "black") |>
+  gf_text(0.54e5 ~ 50, label="Ticket price is slope", angle = 33) |>
+  gf_theme(theme_minimal()) |>
+  gf_labs(y = "Revenue", x = "# of passengers")
+```
+
+To calculate the ticket price, we divide total cost by the number of passengers. On the graph of cost versus passengers, the ticket price is the *slope* connecting *two* points. For the right-most point, we need data: the cost of providing the service and the number of passengers. But for the left-most point, we do not need any data: the position will always be (0,0). In terms of the photography analogy, we take a snapshot of the situation when there are 100 passengers. But we can equally well see the situation as comparing two frames of a movie: a frame taken at zero passengers and a frame taken at 100 passengers. The ticket price, which we described as a *rate*, is also a *rate of change*. Indeed, every rate can be seen as a rate of change, comparing one frame at the actual coordinate (cost = $100000, passengers = 100) configuration and a second frame at the fictitious (cost = 0, passengers = 0) value.
+
+@fig-ticket-price-1 looks like the graph of a function: cost as a function of the number of passengers. At first, this may seem unrealistic. The cost of providing the service is fixed, it doesn't vary (much) with the number of passengers.
+
+There are a few reasons why it's worthwhile to conceptualize cost as a function of passengers. Here are three, but there are more:
+
+- The airline could replace the aircraft with a smaller one, for instance a 40-passenger "commuter" plane. This would considerably lower the cost.
+
+- The airline still has to pay for the plane, even if its not being flown. So the additional cost of actually flying is only a fraction of the total cost. 
+
+- The plane is needed for additional services. In the simplest case, the plane is needed for the return flight from B to A. Even if there are few passengers flying on the A to B leg, there might be many more people who want to fly from B to A on the particular day of the week. 
+
+Since this isn't the place to get into details of the airline business, let's focus on just one issue: the passengers.
+
+Some passengers are willing to pay quite a lot for the flight. This includes some business passengers who don't pay directly for the flight and also those people who have so much money that they aren't concerned with the cost. These are the people who you walk past in first- and business-classes when you board the plane to get to your seat far in the back near the bathrooms. For the sake of discussion, let's imagine that there of 10 passengers who are willing to pay $5000 for the flight A -> B and another 15 who are willing to pay $2000. Such passengers are rewarded by more space and comfort as well as other status symbols. (Airport gate agent: "First we open boarding to the Emerald Class passengers.")
+
+A similar story goes for another class of passengers: the people whose schedules are uncertain but pressing. Such passengers want a refundable ticket. This allows them to reserve several flights just in case, but pay for only one flight. For our example, let's put this at 10 passengers who payed $1500 for the refundable tickets, but ended up on our A -> B flight.
+
+These three hypothetical types of passengers let us fix points on the graph of cost versus passenger numbers. We'll arrange them in the order they are likely to board the plane: First class, business class, coach but refundable.
+
+Class | Number | Ticket price | Revenue from class | Cumulative passengers |  Cumulative revenue
+------|--------|--------------|---------------|---------| -------
+First | 10     | $5000 | $50,000 | 10 | $50,000
+Business | 15  | $2000 | $30,000 | 25 | $80,000
+Refundable | 10 | $1500 | $15,000 | 35 | $95,000
+
+```{r}
+#| label: fig-airline-curve
+#| echo: false
+#| warning: false
+Fares <- tibble::tribble(
+  ~ npassengers, ~ price, 
+  0, 0,
+  10, 5000,
+  15, 2000,
+  10, 1500, 
+  65, 80
+)
+Fares <- Fares |>
+  dplyr::mutate(onboard = cumsum(npassengers),
+                revenue = npassengers * price,
+                cumulative = cumsum(revenue))
+
+Tags <- tibble::tribble(
+  ~ y, ~ x, ~ label, ~ angle,
+  25000, 5-1.5, "$5000", 68,
+  65000, 17.5-1.5, "$2000", 51,
+  89000, 30-1.5, "$1500", 41
+)
+Classes <- tibble::tribble(
+  ~ x, ~ x2, ~ y, ~ label, ~ylabel, 
+  0, 10, 0, " First class", 60000, 
+  10, 25, 5000, " Business class", 33000, 
+  25, 35, 0, " Refundable", 60000
+) |>
+  mutate(midx = (x + x2)/2)
+  
+head(Fares, -1) |>
+  gf_point(cumulative ~ onboard, color = "blue") |>
+  gf_line(cumulative ~ onboard, color = "black" ) |> 
+  gf_text(y ~ x, label = ~label, angle = ~ angle, data = Tags) |>
+  gf_lims(x = c(0,100), y = c(0, 105000)) |> 
+  gf_line(cumulative ~ onboard, 
+          linetype = 2, color = "blue",
+          data = tail(Fares, 2), inherit = FALSE) |>
+  gf_text(102000 ~ 67, label = "Discount fare =  $77", 
+          color = "blue", angle = 3) |>
+  gf_labs(y = "Revenue", x = "# of passengers") |>
+  gf_point(100000 ~ 100, color = "blue") |>
+  gf_errorbar(y ~ x + x2, data = Classes, color = "brown", inherit = FALSE) |>
+  gf_text(ylabel ~ midx, color = "brown", data = Classes,
+          label = ~label, inherit = FALSE, angle = 90)
+
+```
+
+@fig-airline-curve shows the total revenue from tickets versus the number of tickets. There is one segment for each class of passenger. The vertical change of each segment is the revenue generated by the corresponding class. The horizontal change for each segment is the number of passengers in each class. The *slope*---that is, the *rate of change*---is the ticket price for each class. 
+
+The blue dashed line shows the situation for the remaining 65 seats. To reach the $100,000 in revenue, only an additional $5000 is needed from those seats. The fare for those seats is the slope of the blue segment: $77 per passenger. Naturally, the airline prefers to make a profit. The $77 per passenger is the minimum fare in order to break even. Suppose they charge $250 per passsenger for the blue seats, a quarter of the price compared to @fig-ticket-price-1. The total revenue raised will be $111,000, providing room for $11,000 in profit while still giving passengers a low fare.
+
+
+[[In-class discussion or example: College tuition?? pony-draw-laundry]]
+
+:::
+ <!-- end of exr-bear-sing-closet -->

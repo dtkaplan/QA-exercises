@@ -1,0 +1,42 @@
+<!--
+id: "bear-pay-fork"
+created: "Tue Oct 14 10:55:26 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-bear-pay-fork}
+To illustrate, consider @fig-nhanes-height which shows height versus age for a sample of about 5,000 people in the US. To guide the eye, a smooth curve has been drawn through the data to show the average height at each age.
+
+::: {#fig-nhanes-height}
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: C13-xisix
+NHANES::NHANES |>
+  filter(Age <= 35) |>
+  point_plot(Height ~ splines::ns(Age,3), point_ink = 0.5, 
+             model_ink = 0.8, size = 0,
+             jitter = "x", annot = "model") |>
+             gf_labs(y = "Height (cm)", x = "Age (years)")
+```
+
+Height versus age for a sample of about 5,000 people in the US. The smooth blue curve has been added to guide the eye to the average height at each age.
+:::
+
+[[MAYBE PLOT OUT THE GROWTH **rate** for each person, to contrast it with the rate of change, which instead changes with time.]]
+
+It pays to look carefully at @fig-nhanes-height to understand the different aspects of the graphic. First, each small, black dot gives the height and age of a single individual. There are 5000 dots corresponding to the 5000 different people in the sample. In contrast, the blue curve shows *aggregate* features across all 5000 people. Only a handful of individual dots fall on the curve. The curve indicates the average height for each year. 
+
+Each individual person appears only once @fig-nhanes-height. It is impossible, therefore, to look at the change in height with respect to age for an individual. 
+
+HAVE THEM CALCULATE THE RATE OF CHANGE AT DIFFERENT AGES.
+:::
+ <!-- end of exr-bear-pay-fork -->

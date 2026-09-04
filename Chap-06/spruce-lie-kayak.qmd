@@ -1,0 +1,25 @@
+<!--
+id: "spruce-lie-kayak"
+created: "Fri Jan 30 13:56:38 2026"
+attribution: DTK
+use: Chap 06 drill
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spruce-lie-kayak}
+Which core modeling function has an output bounded by 0 and 1?
+
+```{mcq}
+#| label: slk-1-cjs
+1. `hillside()` [correct]
+2. `osc()` 
+3. `log2()`
+4. `same()`
+```
+
+:::
+ <!-- end of exr-spruce-lie-kayak -->

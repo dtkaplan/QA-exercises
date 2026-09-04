@@ -1,0 +1,44 @@
+<!--
+id: "fawn-buy-ring"
+created: "Thu Mar  5 16:07:31 2026"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fawn-buy-ring}
+```{r}
+#| label: C14-aovwr
+library(nnet)
+
+## An example for gradient descent
+# See how much the error is reduced for each step.
+
+ir <- rbind(iris3[,,1],iris3[,,2],iris3[,,3])
+targets <- class.ind( c(rep("s", 50), rep("c", 50), rep("v", 50)) )
+samp <- c(sample(1:50,25), sample(51:100,25), sample(101:150,25))
+ir1 <- nnet(ir[samp,], targets[samp,], size = 2, rang = 0.1,
+            decay = 5e-4, maxit = 200)
+test.cl <- function(true, pred) {
+  true <- max.col(true)
+  cres <- max.col(pred)
+  table(true, cres)
+}
+test.cl(targets[-samp,], predict(ir1, ir[-samp,]))
+
+
+Res <- list()
+
+for (k in 1:50) {
+  set.seed(101) # start it at the same point each time.
+  net <- nnet(ir, targets, size = 10, maxit = k)
+  Res[[k]] <- test.cl(targets, predict(net, ir))
+  
+}
+```
+
+:::
+ <!-- end of exr-fawn-buy-ring -->

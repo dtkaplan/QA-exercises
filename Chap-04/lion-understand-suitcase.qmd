@@ -1,0 +1,17 @@
+<!--
+id: "lion-understand-suitcase"
+created: "Sun Dec 28 14:07:39 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 4
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lion-understand-suitcase}
+Consider the range of weights of these mammalian species: bat, cat, human, cow, whale. (You may have to do a web search to get typical values.) How many orders of magnitude are spanned between a bat and a whale?
+
+`r devoirs::devoirs_text("RQ-mag-mammals")`
+:::
+ <!-- end of exr-lion-understand-suitcase -->

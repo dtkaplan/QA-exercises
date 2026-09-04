@@ -1,0 +1,48 @@
+<!--
+id: "spruce-refer-bulb"
+created: "Fri Jan 16 09:08:34 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spruce-refer-bulb}
+For the exp2() function ... 
+
+a. What is the output value when the input is 0?
+`r devoirs::devoirs_set(choices = c(-1, -0.5, 0, 0.5, 1, 2, 4, 8), correct = 1, n=8, id = "srb-a-32ld")`
+
+b. What is the output value when the input is 1?
+`r devoirs::devoirs_set(choices = c(-1, -0.5, 0, 0.5, 1, 2, 4, 8), correct = 2, n=8, id = "srb-b-32ld")`
+
+
+c. What is the output value when the input is 2?
+`r devoirs::devoirs_set(choices = c(-1, -0.5, 0, 0.5, 1, 2, 4, 8), correct = 4, n=8, id = "srb-c-32ld")`
+
+
+d. What is the output value when the input is -1?
+`r devoirs::devoirs_set(choices = c(-1, -0.5, 0, 0.5, 1, 2, 4, 8), correct = -0.5, n=8, id = "srb-d-32ld")`
+
+
+e. At what **input** will the output of exp2() be 1/2?
+`r devoirs::devoirs_set(choices = c(-1, -0.5, 0, 0.5, 1, 2, 4, 8), correct = -1, n=8, id = "srb-e-32le")`
+
+Now turn to the closely related log2() function. (Remember that log2() is related to exp2() but they are different functions.)
+
+f. When the input to log2() is 8, what is the output?
+`r devoirs::devoirs_set(choices = c(-4, -3, -2, -1, 0, 1, 2, 3, 4), correct = 3, n=9, id = "srb-f-32ld")`
+
+g. When the input to log2() is 4, what is the output?
+`r devoirs::devoirs_set(choices = c(-4, -3, -2, -1, 0, 1, 2, 3, 4), correct = 2, n=9, id = "srb-g-32ld")`
+
+h. When the input to log2() is 1/2, what is the output?
+`r devoirs::devoirs_set(choices = c(-4, -3, -2, -1, 0, 1, 2, 3, 4), correct = -1, n=9, id = "srb-h-32ld")`
+
+i. When the **output** from log2() is -2, what is the input?
+`r devoirs::devoirs_set(choices = c("1/4", "1/2", "1", "2", "4"), correct = "1/4", n=5, id = "srb-i-32ld")`
+
+:::
+ <!-- end of exr-spruce-refer-bulb -->

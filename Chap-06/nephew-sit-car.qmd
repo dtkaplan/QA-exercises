@@ -1,0 +1,15 @@
+<!--
+id: "nephew-sit-car"
+created: "Sat Aug 30 09:55:42 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-nephew-sit-car}
+Show how functions can be used to implement a relationship and then, if you decide the relationship is different, you can change just the algorithm of the function without having to examine everywhere you use that function.
+:::
+ <!-- end of exr-nephew-sit-car -->

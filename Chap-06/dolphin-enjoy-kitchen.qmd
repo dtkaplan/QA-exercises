@@ -1,0 +1,110 @@
+<!--
+id: "dolphin-enjoy-kitchen"
+created: "Thu Oct 23 07:58:37 2025"
+attribution: DTK
+use: "Chapter 5 exercises"
+status: "ready-to-use"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-dolphin-enjoy-kitchen}
+
+Consider this plot of the hillside function:
+
+::: {#fig-first-plot}
+```{webr}
+#| caption: "Graphing a function"
+#| autorun: true
+slice_plot(hillside(z) ~ z, domain(z = -2:4))
+```
+
+:::
+
+1. What R function is being used to make the plot?
+
+```{mcq}
+#| label: dek-1-gmek
+#| inline: true
+1. plot()
+2. slice_plot() [correct]
+3. plotfun()
+4. sliceplot() [hint: The actual name has an underscore character in it.]
+5. plot_fun()
+```
+
+2. Immediately following the name of the function, there is an opening parenthesis. The matching closing parenthesis is at the very end of the command. In R (as in many computer languages) the *arguments* to the function are contained inside the parentheses. If there is more than one argument, successive arguments are separated by commas. How many arguments are there to `slice_plot()`?
+
+```{mcq}
+#| label: dek-2-z38d
+#| inline: true
+1. 1
+2. 2  [correct]
+3. 3
+4. 4
+```
+
+The first argument to `slice_plot()` tells which function you want to graph. In the example, the first argument is `hillside(z) ~ z`. This is called a `r xf_definition("tilde expression")` so named because the tilde character (`~`) appears. 
+
+Left | Middle | Right
+-----|--------|-------
+`hillside(z)` |  `~` (tilde) | `z`
+
+i. The left part of the tilde expression is a *formula* written in more or less conventional algebraic form. Other examples for this formula: `2*z + 3`, `osc(z)`, `hillside(z) * osc(z)`.
+
+ii. The right part of the tilde expression gives the *name* of the input variable. In the example, the name is `z`, but you can use whatever name you think appropriate. Note that the formula in (i) must be written in terms of the input-variable name.
+
+iii. The middle part of the tilde expression is merely punctuation, but it is essential punctuation. Among other things, the tilde makes clear what are the left and right sides of the tilde expression. 
+
+3. Suppose that you want to call the input quantity `x`. You can easily modify the command to do this, just substitute `x` for `z`. In how many places do you have to make the change?
+
+```{mcq}
+#| label: dek-3-jwkd
+#| inline: true
+1. 1
+2. 2
+3. 3 [correct]
+4. 4
+```
+
+Focus now on the graphic itself---@fig-first-plot. The name of the input variable appears as a label on the horizontal axis. The label on the vertical axis, in contrast, is just a reminder that we are plotting the *output* of the function versus the input quantity.
+
+The vertical scale will be created automatically by `slice_plot()`, taking into account the range of function output values. But the horizontal axis is different: the user specifies this. The numerical extent of the horizontal axis is called the **graphics domain**. 
+
+The second argument to `slice_plot()` is used for the graphics domain specification. 
+
+4. What is the graphics domain in @fig-first-plot?
+
+```{mcq}
+#| label: dek-4-p3n2
+#| inline: true
+1. 0 to 4
+2. -2 to 2
+3. -2 to 4 [correct]
+4. -4 to 4
+```
+
+In the example, the second argument is `domain(z = -2:4)`. The graphics domain specification will always look like this, and uses the R function `domain()`.
+
+5. How many arguments does `domain()` take in this example?
+
+```{mcq}
+#| label: dek-4-7s2r
+#| inline: true 
+1. 0 [hint: Since there is something inside the domain() parentheses, there must be at least one argument.]
+2. 1 [correct]
+3. 2 [hint: While it is true that the argument has several components, if there were multiple arguments they would be separated by commas. There are no commas inside the dom() parentheses.]
+4. 3 [hint: While it is true that the argument has several components, if there were multiple arguments they would be separated by commas. There are no commas inside the dom() parentheses.]
+```
+
+There are two punctuation symbols in the argument to `domain()`. The colon (:) is placed between the two limits to be used for the domain. `-2:4` means "minus 2 to 4." The graphics domain zero to ten would be `0:10`. The other punctuation mark is `=`. To the left of the `=` goes the name of the input variable. The expression `z = -2:4` means "the graphics domain of `z` is to be -2 to 4.
+
+6. Using the "graphing a function" interactive R chunk, write an expression to plot out the function `osc()` over the graphics domain 0 to 5. Use whatever you like as the input name. After checking that your expression works, copy the expression into the following answer block.
+
+`r devoirs::devoirs_text("dek-6-ex", rows = 2)`
+
+
+:::
+ <!-- end of exr-dolphin-enjoy-kitchen -->

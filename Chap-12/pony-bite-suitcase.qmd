@@ -1,0 +1,78 @@
+<!--
+id: "pony-bite-suitcase"
+created: "Fri May 29 12:02:05 2026"
+attribution: DTK
+uses: "modeling based on derivatives"
+status: "ready-to-use"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pony-bite-suitcase}
+The sort of functions presented in `r xf("fig-QALY-vs-cost")` are almost always an idealization, something created by a process of modeling. The observed facts that go into the models often come from common sense. For instance, in the Natal Initiative, a start would be to estimate the yearly cost of running a pre-natal clinic and the number of patients who can be served in a year. From this, the ratio cost per patient can be calculated, with cost in the numerator and patients in the denominator. 
+
+1. The two components of the ratio have dimension W T^-1^ for the numerator and C T^-1^ for the denominator. What will be the dimension of the ratio?
+
+```{mcq}
+#| label: c12-QALY-ratio-1
+#| inline: true
+1. W T / C
+2. C / W [hint: Sorry. Remember that the numerator is the top of the ratio and the denominator is the bottom.]
+3. W / C [correct]
+4. C T^2^ / W
+5. Not enough information.
+```
+
+Even though a clinic might serve thousands of patients per year, a skilled quantitative reasoner who knows about derivatives would look to the cost for an individual patient. This is an idealization, since one does not establish an entire clinic for a single patient. Instead, the *average* cost per patient is the rate we seek. The units in `r xf("c12-QALY-ratio-1")` reflect this.
+
+Knowing the cost per patient is not sufficient to establish the cost per QALY. we also need to know the QALYs per patient served. Let's call this the *efficacy* of the pre-natal care provided. For most patients, the pre-natal care will not change the outcome; the large majority of births in rich countries have positive outcomes. But for some patients---we don't necessarily know which ones in advance of their being seen in clinic---the care will lead to an intervention which might prevent a miscarriage or still birth or the morbidity associated with problematic pregnancy. To estimate this, you might need to look at a completely different source of data, for instance infant mortality rates for those who do versus those who do not receive prenatal care. Such information could be gained from comparing birth outcomes for mothers served by existing clinic versus those in areas where clinics have not yet been set up.
+
+2. Which of these ratios would be informative about the cost-to-benefit of pre-natal care?
+
+```{mcq}
+#| label: c12-QALY-ratio-2
+#| inline: true
+1. Divide QALYs per patient served by number of patients served.
+2. Divide QALYs per patient served by the cost per patient served. 
+3. Divide cost per patient by the total QALYs provided by the network of clinics. [hint: Remember, we're interested in cost per QALY. The number of patients won't be in the dimension of the result.]
+4. Divide cost per patient served by the QALYs per patient. [correct hint: Right, the patients in the numerator and denominator cancel out.]
+```
+
+Suppose that it costs $1 million per year to operate a pre-natal clinic that can serve 5000 patients per year and that the efficacy of treatment is 0.01 QALYs per patient. (These numbers are made up.) 
+
+3. What is the rate of QALYs per dollar (according to the given information)?
+
+```{mcq}
+#| label: c12-QALY-ratio-3
+1. 0.000005 QALYs per dollar [correct]
+2. 0.0002 QALYs per dollar
+3. 0.5 QALYs per dollar
+4. 2 QALYs per dollar
+```
+
+4. Explain whether 0.01 QALYs per patient is reasonable as an order of magnitude. For example, consider this sequence of possibilities: 
+    - 100 QALYs/patient
+    - 10 QALYs/patient
+    - 1 QALYs/patient
+    - 0.1 QALYs/patient
+    - 0.01 QALYs/patient
+    - 0.001 QALYs/patient
+    - 0.0001 QALYs/patient
+Identify, using common sense and your general knowledge about risk in pregnancy, those in the list that seem outrageous over- or under-estimates. Explain your reasoning. "Outrageous" might be taken to mean two or more orders of magnitude away from the true value.
+
+`r devoirs::devoirs_text("c12-QALY-ratio-4")`
+
+5. The function in `r xf("fig-QALY-vs-cost")`(a) has two main features: A curved segment for small amounts of expenditure and a constant rate of growth for larger expenditures. Which, if either, of these segments is based on the QALYs per dollar estimate this problem has been about?
+
+```{mcq} 
+#| label: c12-QALY-ratio-4
+#| inline: true
+1. The curved segment.
+2. The constant rate of growth segment. [correct]
+3. Neither.
+```
+
+:::
+ <!-- end of exr-pony-bite-suitcase -->

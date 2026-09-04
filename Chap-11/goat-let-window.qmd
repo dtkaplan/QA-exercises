@@ -1,0 +1,18 @@
+<!--
+id: "goat-let-window"
+created: "Fri Dec  5 09:41:26 2025"
+attribution: TBA
+status: "sketch"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-goat-let-window}
+[[Population with predation]]
+
+:::
+ <!-- end of exr-goat-let-window -->

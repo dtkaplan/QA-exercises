@@ -1,0 +1,16 @@
+<!--
+id: "eagle-lay-rug"
+created: "Fri Sep 19 15:11:17 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-lay-rug}
+EXERCISE (for integration): Referring to the lognormal distribution in "Uncertainty" chapter, find out what fraction of the income goes to the top 10% or 1% of income earners, modeling income as a lognormal distribution.
+
+:::
+ <!-- end of exr-eagle-lay-rug -->

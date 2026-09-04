@@ -1,0 +1,16 @@
+<!--
+id: "seal-ring-scarf"
+created: "Mon Oct 27 07:16:44 2025"
+attribution: DTK
+status: sketch
+chapter: 9
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-seal-ring-scarf}
+Demonstrate linear regression as a mechanism for specifying a set of functions then determining values for their coefficients in a linear combination by matching as closely as possible patterns detected in the data. 
+:::
+ <!-- end of exr-seal-ring-scarf -->

@@ -1,0 +1,19 @@
+<!--
+id: "nephew-dig-lamp"
+created: "Wed Dec 31 07:14:08 2025"
+attribution: Dave Ruth
+use: "Reading Question Chap 2"
+status: "ready-to-use"
+chapter: 2
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-nephew-dig-lamp}
+The text distinguishes between a "unit" and a "dimension.” Explain in your own words how a dimension differs from a unit. Why is it possible to have multiple different units that all correspond to the single dimension of "Length"?
+
+`r devoirs::devoirs_text("ndl-RQ2-4dioe")`
+
+:::
+ <!-- end of exr-nephew-dig-lamp -->

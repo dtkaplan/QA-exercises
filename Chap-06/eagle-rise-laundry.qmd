@@ -1,0 +1,23 @@
+<!--
+id: "eagle-rise-laundry"
+created: "Sun Aug 30 08:21:39 2026"
+attribution: DTK
+uses: "core functions how to draw a graph on the computer"
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-rise-laundry}
+
+HOW TO DRAW GRAPHICS
+
+The anatomy of a function graph. 
+- Graphics frame
+    - graphics domain
+
+Using the slice_plot() command to make graphs over various domains and with different input and output scaling.
+:::
+ <!-- end of exr-eagle-rise-laundry -->

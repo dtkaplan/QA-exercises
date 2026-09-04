@@ -1,0 +1,20 @@
+<!--
+id: "cat-come-door"
+created: "Wed May 13 09:33:45 2026"
+attribution: DTK
+use: extra credit
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cat-come-door}
+DRAFT: Comparing two functions: using contour plots. Find locations where the outputs take on specific values.
+
+DRAFT: Introduce the gradient vector and a gradient-field plot superimposed on the contour plot.
+
+DRAFT: Show a vector-field plot and ask the student to trace out a path that follows the vectors.
+:::
+ <!-- end of exr-cat-come-door -->

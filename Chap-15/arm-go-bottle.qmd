@@ -1,0 +1,27 @@
+<!--
+id: "arm-go-bottle"
+created: "Tue Jul  1 16:54:14 2025"
+attribution: TBA
+status: "draft"
+chapter: 15
+mode: "exercise"
+-->
+
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-arm-go-bottle}
+The `sum()` function adds up the numbers in a collection. `cumsum()` does something similar. 
+
+```{webr}
+numbers <- c(6, 4, 8, 2, 1)
+sum(numbers)
+cumsum(numbers)
+```
+
+Explain in everyday English what `cumsum()` does.
+
+`r devoirs_text("agb-cumsum")`
+
+:::
+ <!-- end of exr-arm-go-bottle -->

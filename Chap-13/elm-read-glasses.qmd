@@ -1,0 +1,25 @@
+<!--
+id: "elm-read-glasses"
+created: "Fri Jan 30 08:29:22 2026"
+attribution: prompted by AI
+use: Chap 7 drill
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-elm-read-glasses}
+Which core modeling function introduced in previous chapters is mathematically equivalent to the normal (a.k.a. Gaussian) distribution?
+
+```{mcq}
+#| label: erg-1-ue2
+#| inline: true
+1. exp2()
+2. log2()
+3. hill() [correct]
+4. hillside()
+```
+:::
+ <!-- end of exr-elm-read-glasses -->

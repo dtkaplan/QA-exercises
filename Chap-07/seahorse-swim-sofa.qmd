@@ -1,0 +1,16 @@
+<!--
+id: "seahorse-swim-sofa"
+created: "Sat Aug 29 10:23:46 2026"
+attribution: DTK
+uses: "Core modeling functions"
+status: "sketch"
+chapter: 7
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seahorse-swim-sofa}
+Exercises on remembering the distinctive points on the various functions. 
+:::
+ <!-- end of exr-seahorse-swim-sofa -->

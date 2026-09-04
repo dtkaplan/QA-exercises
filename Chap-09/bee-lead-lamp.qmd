@@ -1,0 +1,16 @@
+<!--
+id: "bee-lead-lamp"
+created: "Mon Jul  6 16:35:43 2026"
+attribution: DTK
+uses: optimization
+status: "sketch"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bee-lead-lamp}
+minimums, local extreme points
+:::
+ <!-- end of exr-bee-lead-lamp -->

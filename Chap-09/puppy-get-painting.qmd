@@ -1,0 +1,26 @@
+<!--
+id: "puppy-get-painting"
+created: "Sun Dec 28 14:15:03 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 9
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-puppy-get-painting}
+Imagine you have three functions $f()$, $g()$, and $h()$ each of which takes a single argument. (They might, for instance, be input-scaled core modeling functions.) Here are some different ways of composing a new function out of them:
+
+a. $one( ) \equiv f(x) g(y) + h(z)$
+b. $two( ) \equiv g(h(y)) + f(y)$
+c. $three( )  \equiv g(y) (h(x) + f(y))$
+d. $four(z, y) \equiv f(g(z)) h(y)$
+    
+We have given names to the newly constructed functions: $one()$, $two()$, $three()$ and $four$. But the definitions are incomplete for the first three functions since there are no argument names given in the parentheses on the left side of $\equiv$. On the other hand, $four()$ is defined with argument names.
+
+For each of $one()$, $two()$, and $three()$, say what the argument names should be to have a sensible function definition.
+
+`r devoirs::devoirs_text("RQ8-2ui")`
+:::
+ <!-- end of exr-puppy-get-painting -->

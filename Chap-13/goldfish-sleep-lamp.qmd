@@ -1,0 +1,43 @@
+<!--
+id: "goldfish-sleep-lamp"
+created: "Fri Feb 20 08:33:57 2026"
+attribution: TBA
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-goldfish-sleep-lamp}
+```{r}
+#| echo: false
+#| label: C13-nazbd
+vectorfield_plot(y ~ 1.5 - x, x ~ x - y , 
+                 domain(y = 0:5, x = 0:5),
+                 npts = 9,
+                 stretch = 0.6) |>
+  gf_theme(theme_minimal(base_size = 14)) |>
+  gf_refine(coord_fixed())
+```
+
+
+1. `r devoirsTF(TRUE, id="flow-gsl-1-k3")` The y-component of the flow depends strongly on the value of x.
+
+::: {.callout-tip collapse=true}
+Focus, for instance, on the column of flow arrows stacked up at y = 0. For different values of x in that column, the flow arrows have different y components.
+:::
+
+2. `r devoirsTF(TRUE, id="flow-gsl-2-ws")` The x-component of the flow depends strongly on the value of y.
+
+::: {.callout-tip collapse=true}
+Focus, for instance, on the row of flow arrows where x = 0. Moving left to right along the y axis, the x-component of the flow goes from zero to strongly negative.
+:::
+
+3. `r devoirsTF(TRUE, id="flow-gsl-3-8d")` The x-component of the flow depends strongly on the value of x.
+
+4. `r devoirsTF(FALSE, id="flow-gsl-4-is")` The y-component of the flow depends strongly on the value of y.
+
+
+:::
+ <!-- end of exr-goldfish-sleep-lamp -->

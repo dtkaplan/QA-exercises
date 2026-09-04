@@ -1,0 +1,20 @@
+<!--
+id: "croc-come-blanket"
+created: "Sun Dec 28 14:00:00 2025"
+attribution: DTK
+use: Chapter 3 reading questions
+status: "ready-to-use"
+chapter: 3
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-croc-come-blanket}
+In the context of quantities and *{{< var dim.dim >}}s*, what does the word "*per*" mean?
+
+`r devoirs::devoirs_text("RQ-per")`
+
+["divided by"]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Reading-questions-4Eh"}
+:::
+ <!-- end of exr-croc-come-blanket -->

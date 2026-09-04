@@ -1,0 +1,26 @@
+<!--
+id: "horse-ride-ring"
+created: "Thu Nov  6 10:56:05 2025"
+attribution: TBA
+status: "sketch"
+chapter: 10
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-horse-ride-ring}
+You can use this model to gain insight about which policy interventions are helpful or not in stemming the epidemic.
+
+1. Impose border restrictions that reduce the number of initial outside cases that come into the territory. Lax restrictions correspond to a large number of initial cases.
+
+2. Social distancing. The higher the index, the less contact there is between people.
+
+3. Testing for and isolating the infectives. The index controls the extent to which infectives are removed from contact with susceptibles.
+
+Try different settings for the policy parameters to discover which ones are most effective for limiting the outbreak.
+
+:::
+ <!-- end of exr-horse-ride-ring -->

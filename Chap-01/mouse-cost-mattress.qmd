@@ -1,0 +1,44 @@
+<!--
+id: "mouse-cost-mattress"
+created: "Sun Aug 16 17:20:36 2026"
+attribution: DTK
+uses: "To illustrate chains of reasoning"
+status: "ready-to-use"
+chapter: 1
+mode: discussion
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-mouse-cost-mattress}
+We can imagine a mechanism that might be behind the reasoning process. Think of each of the three beliefs as a packet, like a social media post, that contains hashtags. And it's not just these three packets that are present in our mind, there are others that relate to driving. For instance: 
+
+a. #safe_driving #display_brakelights The car is slowing down quickly.
+b. #safe_driving #speed_control To avoid collisions, match your speed to the car ahead of you.
+c. #safe_driving #lane_change Changing lanes can help to avoid a collision.
+d. #driving #speed_control To slow down quickly, press the brake pedal.
+e. #driving #speed_control To slow down gradually, lighten the pressure on the accelerator pedal.
+f. #safe_driving Avoid collisions!
+g. #safe_driving #lane_change Don’t change lanes if there is a vehicle near the space you will occupy.
+h. #safe_driving #lane_change Check your side-view mirror to see if the adjacent left lane is unoccupied.
+
+Your observation of the brake-lights activates packet (a). This invokes a process of chain making that involves comparing the hashtags and other words in each packet. The #safe_driving hashtag in (a) aligns with several other packets such as (f), which says to avoid collisions. “Avoid collisions” in (f) in turn aligns with two packets: (b) and (c). You could follow a path from either (b) or (c). Let’s say you follow (b), perhaps because the mechanism for measuring alignment carries the reference to speed in the starting packet (a). From (b), the speed-control hashtag could activate either (d) or (e), perhaps (d) being preferred because of the “slow down quickly” aspect of both (a) and (d), or perhaps because you are a nervous driver whose anxiety directs you to use the brake. All this successive alignment of packets produces a chain:
+
+Chain 1.  (a) $\rightarrow$ (f) $\rightarrow$ (b) $\rightarrow$ (d)
+
+The packet (d) contains an inference: Press the brake pedal! That is, the alignment-detection mechanism transforms an observation into an action along the sequence of Chain 1.
+
+There are other paths you could have taken from (a), for instance:
+
+Chain 2. (a) $\rightarrow$ (f) $\rightarrow$ (b) $\rightarrow$ (c) $\rightarrow$ (h)$\rightarrow$ (g) $\rightarrow$ …
+
+Following Chain 2 could lead you to change lanes if the adjacent lane is unoccupied—same observation, a different reasonable inferences.
+
+::: {.callout-note}
+## Mechanisms of intelligence
+
+I do not mean to suggest that the chain-of-reasoning analogy is the way people actually think. We need to await the eventual findings of neuroscientists to gain insight into that. But computer scientists are also strongly interested in models of reasoning, a field of study called artificial intelligence. The alignment of “packets” analogy is inspired by the mechanisms behind AI’s “Large Language Models.” These models draw from a large body of training data, largely drawn from text and other documents. For instance, LLMs break textual training data into a collecton of relatively short segments, then convert each segment into a numerical *vector*, which you can think of as a packet of information. An important basic mechanism of reasoning in an LLM involves calculating a number describing  the alignment between vectors in the training data then chaining through other closely aligned vectors. The output of the LLM is synthesized by seeking new packets which align closely with the steps in the chain.
+:::
+
+:::
+ <!-- end of exr-mouse-cost-mattress -->

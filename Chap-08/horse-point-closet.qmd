@@ -1,0 +1,51 @@
+<!--
+id: "horse-point-closet"
+created: "Fri Jan 30 08:15:29 2026"
+attribution: prompted by AI
+use: Chap 7 drill
+status: "ready-to-use"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-horse-point-closet}
+Each of the following graphics, except one, can be interpretted as a relative probability function. Which is the exception?
+
+```{r}
+#| label: fig-hpc-1-u23
+#| echo: false
+#| layout-ncol: 4
+#| fig-cap: "Functions that might be relative probability distributions"
+#| fig-subcap:
+#| - " "
+#| - " "
+#| - " "
+#| - " " 
+r1 <- doodle_fun(~ x, seed = 8382)
+r2 <- doodle_fun(~ x, seed = 7482)
+r3 <- doodle_fun(~ x, seed = 6382)
+r4 <- doodle_fun(~ x, seed = 44482)
+
+slice_plot((r1(6-rainfall) + 8)/3 ~ rainfall, domain(rainfall = 0:6) ) |> gf_labs(x = "Rainfall (in)") |>
+  gf_lims(y = c(0, NA)) |>
+  gf_theme(theme_minimal(base_size = 18))
+
+slice_plot((abs(r2(rainfall)))/300 ~ rainfall, domain(rainfall = 0:6) ) |> gf_labs(x = "Rainfall (in)") |>
+  #gf_lims(y = c(NA, NA)) |>
+  gf_theme(theme_minimal(base_size = 18))  
+
+slice_plot(((r4((temperature+30)/25))/3 - 1) ~ temperature, domain(temperature = -20:80) ) |> gf_labs(x = "Temperature (deg)") |>
+  gf_lims(y = c(-1, NA)) |>
+  gf_theme(theme_minimal(base_size = 18))  
+
+slice_plot((abs(r3((direction+80)/60)))/3 ~ direction, domain(direction = -180:180) ) |> gf_labs(x = "Direction (deg)") |>
+  gf_lims(y = c(0, NA)) |>
+  gf_theme(theme_minimal(base_size = 18))  
+```
+
+`r devoirs::devoirs_set("hpc-1-67s", choices=c("a", "b", "c", "d"), correct = "c")`
+
+:::
+ <!-- end of exr-horse-point-closet -->

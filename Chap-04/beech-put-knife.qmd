@@ -1,0 +1,20 @@
+<!--
+id: "beech-put-knife"
+created: "Sun Nov 23 11:20:28 2025"
+attribution: DTK
+status: "ready-to-use"
+chapter: 3
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-beech-put-knife}
+Housing in New York City is famously unaffordable. Civic leaders argue that the solution to the unaffordability "crisis" is to build new housing. 
+
+As of 2025, New York City has an "ambitious" plan to add 50,000 new housing units each year. There are currently about 3,750,000 units in the city. The example about new housing in the text suggests that existing stock falls by about 1% per year and that the number of households in the US is increasing by about 1% per year. Use these numbers to calculate whether 50,000 new units per year will solve the housing shortage.
+
+:::
+ <!-- end of exr-beech-put-knife -->

@@ -1,0 +1,18 @@
+<!--
+id: "fly-type-pantry"
+created: "Fri Dec  5 09:02:08 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-fly-type-pantry}
+Continuous-time Solow growth model. See www/CEdmond_SolowModel.pdf
+
+:::
+ <!-- end of exr-fly-type-pantry -->

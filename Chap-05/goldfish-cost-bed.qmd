@@ -1,0 +1,129 @@
+<!--
+id: "goldfish-cost-bed"
+created: "Tue Oct 21 09:44:26 2025"
+attribution: DTK
+use: "Chapter 5 exercise"
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-goldfish-cost-bed}
+Consider an everyday kind of question: Which is more to blame for discomfort in hot weather, the temperature or the humidity? 
+
+The blame question makes sense only if we think that humidity and temperature have something to do with comfort. Everyday experience strongly suggests that they do. For quantitative understanding, we can translate "something to do with ..." into a mathematical framework: that comfort is a **function** of humidity and temperature. Functions are not the only way to represent the idea of "something to do with," but experience has shown that they are powerful ways to do so. Knowing how functions are constructed and how to extract information from them is an essential component of quantitative analysis.
+
+In Steadman's model, sultriness is constructed as a function of temperature and relative humidity. That is, the inputs to the function are temperature and humidity. The output is sultriness. You can calculate the sultriness corresponding to the values of the inputs in @fig-heat-index-sliders.
+
+```{webr}
+#| autorun: true
+#| runbutton: false
+#| warning: false
+#| echo: false
+# Note: need the sources from  QR-A/www/software/heat_index.R
+```
+
+::: {#fig-heat-index-sliders}
+Inputs:
+
+```{ojs}
+//| echo: false
+viewof temp = Inputs.range(
+  [20, 50],
+  {value: 35, step: 0.1, label: "Temperature (deg C)"}
+)
+
+viewof humid = Inputs.range(
+  [0, 100],
+  {value: 55, step: 1, label: "Humidity (%)"}
+)
+```
+
+------------------------------------------------------------------------
+
+```{webr}
+#| autorun: true
+#| runbutton: false
+#| warning: false
+#| echo: false
+#| caption: "Heat Index function"
+#| input: 
+#|   - temp
+#|   - humid
+paste("Output:", heat_index(temp, humid)) |> cat()
+```
+
+The sultriness function. Set the inputs with the sliders and the corresponding output is shown below.
+:::
+
+@fig-heat-index-sliders shows three values. When you change the inputs, the output changes accordingly. That is the characteristic of a function. The presentation in @fig-heat-index-sliders is adequate for someone who wants to compute the sultriness for given weather conditions. We gain more insight into sultriness if we present the output of the function for *many different* sets of inputs. Steadman's paper displayed the function as a printed **table**, which was the only practical way of communicating such a complicated function in 1979 (that is, before the widespread availability of calculators or computers).
+:::
+
+1. True or false: there are temperature/humidity combinations at which the output temperature (that is, the sultriness index) is *lower* than the input ambient temperature? `r devoirs::devoirsTF(TRUE, id="gcb-1-kwe")`
+
+2. At an input temperature of 37 C (that is, body temperature) what is the highest humidity level for which the inputs are in bounds?
+
+```{mcq}
+#| label: gcb-2-e4kf
+#| inline: true
+1. 60
+2. 62 [correct]
+3. 64
+4. 65
+```
+
+3. Set the inputs to 37 degrees C and zero humidity. Note the function output. 
+
+3a. What's the greatest amount you can change the humidity input without changing the function output?
+```{mcq}
+#| label: gcb-3a-ekxe
+1. 9 percentage points
+2. 11 percentage points
+3. 13 percentage points [correct]
+4. 15 percentage points
+```
+    
+3b. At 0% humidity, there is some input temperature where the output temperature is greater than the input. `r devoirs::devoirsTF(FALSE, id="gcb-3b-2se")`
+    
+3c. At 50% humidity, there is some input temperature where the output temperature is greater than the input. `r devoirs::devoirsTF(TRUE, id="gcb-3c-2se")`
+    
+4. At 50% humidity, what's the highest possible value for the output?
+
+```{mcq}
+#| label: gcb-4-chsle
+#| inline: true
+1. 49
+2. 51
+3. 53  [correct]
+4. 55
+```
+
+5. At 100% humidity, set the input temperature to 20 deg C. The output will be 15 deg C. Now raise the input temperature *slowly*. Use the up-and-down triangles in the box showing the input temperature, so that you can change temperature by 0.1 deg C each click.
+    
+5a. How many clicks are required to raise the output temperature to 16 deg C?
+    
+```{mcq}
+#| label: gcb-5a-oeie
+#| inline: true
+1. 4 [correct]
+2. 5
+3. 6
+4. 7
+```
+    
+5b. What is the rate of change of output temperature with respect to the input temperature at with the inputs (20 C, 100%)?
+    
+```{mcq}
+#| label: gcb-5b-oeie
+1. 0.4 deg C
+2. 2.5 deg C per percentage point
+3. 2.5 (dimensionless) [correct]
+4. 2.5 deg C
+```
+
+
+ <!-- end of exr-goldfish-cost-bed -->
+
+

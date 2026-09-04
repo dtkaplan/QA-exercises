@@ -1,0 +1,24 @@
+<!--
+id: "pig-say-pen"
+created: "Fri Jan 30 13:54:03 2026"
+attribution: DTK
+use: Chap 06 drill
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pig-say-pen}
+Which core modeling functions produce output 1 when the input is zero?
+
+```{mcq}
+#| label: psp-1-32do
+1. hillside() & flat() [hint: No, the output of hillside() is 1/2 when the input is zero]
+2. flat() & exp2() [correct]
+3. flat() & log2() [hint: log2() is heading off to minus infinity as the input gets close to zero.]
+4. osc() & flat() [hint: Sorry. osc(0) is zero.]
+```
+:::
+ <!-- end of exr-pig-say-pen -->

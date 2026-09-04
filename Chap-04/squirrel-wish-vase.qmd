@@ -1,0 +1,20 @@
+<!--
+id: "squirrel-wish-vase"
+created: "Wed Aug 19 12:44:15 2026"
+attribution: DTK
+uses: rates
+status: "sketch"
+chapter: 4
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-squirrel-wish-vase}
+PUT THIS IN AN EXERCISE
+[In fraction notation we could write this as $$\frac{\text{1 mile}}{\text{80 Cal}}\ \text{is the same as}\ \  \frac{1}{80}\frac{\text{mile}}{\text{Cal}} = 0.0125\  \frac{\text{mile}}{\text{Cal}}$$
+Whether to write the numerical part of the rate in quotient or in decimal form is a matter of style.]{.column-margin}
+
+
+:::
+ <!-- end of exr-squirrel-wish-vase -->

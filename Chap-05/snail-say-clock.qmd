@@ -1,0 +1,51 @@
+<!--
+id: "snail-say-clock"
+created: "Mon Dec  1 09:43:24 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-snail-say-clock}
+There are many situations in which we adopt units so that commonly encountered measurements have just two or three digits. Both the Fahrenheit and Celsius temperature scales have the nice feature that commonly encountered outdoor temperatures have two digits. Those familiar with the Fahrenheit scale know that temperatures on weather maps tend to range from -30 to 120°F. For Celsius, the range -20°C to 40°C does the job. Students in the US learn that atmospheric pressure is about 14.7 pounds per square inch.
+
+Tire pressures for cars and bicycles are frequently denominated in one of three units: pounds-per-square inch (psi), bar, and pascal (P). If you are unfamiliar with tire pressure, you might have to do a tiny bit of web research to answer these questions.
+
+1. Which of the three units gives pressures that can be expressed with two or three digits?
+
+```{mcq}
+#| label: ssc-1-cksw
+#| inline: true
+1. psi
+2. bar
+3. pascal
+```
+
+2. Which of the three units uses 3 digits, and even then has to be modified by an order-of-magnitude prefix?
+
+```{mcq}
+#| label: ssc-2-gdiw
+#| inline: true
+1. psi
+2. bar
+3. pascal [correct]
+```
+
+3. Which of the three units requires a decimal point to denominate car tire pressures to a suitable precision of $\pm$ 10%?
+
+```{mcq}
+#| label: ssc-3-edke
+#| inline: true
+1. psi
+2. bar  [correct]
+3. pascal
+```
+
+
+
+(The unit "pounds per square inch" is often abbreviated "psi," but this obscures that we are *dividing* by square inches, not multiplying). Inflate a car tire to about 35 psi, a bicycle tire to about 60-100 psi. The metric unit of pressure is a *pascal* (P), but it is poorly suited to representing everyday pressures: bike tires are in the range 400 to 700 kPa. Instead of pascal, people in the metric world tend to use a different unit: *bar*. Inflate a car tire to 2.5 bar, a bicycle tire to 4-8 bar.
+:::
+ <!-- end of exr-snail-say-clock -->

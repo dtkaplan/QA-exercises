@@ -1,0 +1,48 @@
+<!--
+id: "snake-show-knife"
+created: "Mon Aug 25 15:25:02 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-snake-show-knife}
+*The Economist* is considered one of the world's leading news magazines. Here is part of an article entitled "[Fear the deficit-populism doom loop](https://www.economist.com/finance-and-economics/2025/08/24/fear-the-deficit-populism-doom-loop)" from Aug 24, 2025. 
+
+> You are a finance minister after a decade of meagre economic growth, shocks from a financial crisis, a pandemic and sky-high energy prices. Public debt is worth more than your country’s gross domestic product, interest rates are at their highest in years and merely servicing outstanding debt is taking up an ever-greater share of tax revenue. Inflation is stubborn. America's profligacy is satisfying much of the world’s appetite for government bonds, meaning your debt must pay more to attract investors. You lie awake worrying about how to make the numbers add up. 
+
+a. What are the {{< var dim.dim >}}s of *public debt*? [S in units of whatever is the relevant currency.]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: ssk-1ss"}
+
+`r devoirs::devoirs_text("ssk-a-94ls", rows = 1)`
+
+b. What are the {{< var dim.dim >}}s of *gross domestic product*?  [S T^-1^]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: ssk-1NQ"}
+
+`r devoirs::devoirs_text("ssk-b-94ls", rows = 1)`
+
+c. It's quantitatively incorrect to compare *public debt* with *gross domestic product*. 
+
+    i. What {{< var dim.dim >}} must the quantity be that multiplies *gross domestic product* in order to convert it to a quantity that is directly comparable with *public debt*?
+    ii. Let's give the name B to the quantity in (i). You know the dimension of B, but to perform the multiplication you need to choose a *value* for B. Is there a value for B that is obviously correct? If you say "no," explain why not. If you say "yes," explain the reasoning behind its being obvious.
+    
+    `r devoirs::devoirs_text("ssk-c-94ls", rows = 4)`
+
+The *Economist* article continues:
+
+> This is the bind facing governments in much of the rich world. The average fiscal deficit in the OECD, a club of mostly rich countries, hit 4.6% of GDP last year, up from an average of 2.9% in the four years before the covid-19 pandemic; interest payments on outstanding debt came to 3.3% of GDP, only just below the amount Nato members hope to spend on defence by 2035. The political-science literature offers some comfort---austerity is not usually a barrier to re-election---but also a warning. Research shows a link between spending cuts and populist success. Indeed, in Britain, France and Germany such parties are already ascendant. Call it the deficit-populism doom loop: ministers face both big deficits and voter revolts, and there is little way of satisfying both the bond markets and the barbarians at the gate.
+
+d. If *fiscal deficit* can be stated as a percentage of GDP, what does that say about the {{< var dim.dim >}} of *fiscal deficit*?
+
+`r devoirs::devoirs_text("ssk-d-94ls", rows = 2)`
+
+e. Explain what's different between *fiscal deficit* and *debt*.
+
+`r devoirs::devoirs_text("ssk-e-94ls", rows = 2)`
+
+f. *Fiscal deficit* can be reckoned as the sum of 1) *interest payments* on the debt (3.3%) and 2) the amount of other spending (on education, pensions, military, etc.) in excess of government income (taxes, etc.) By what percentage would spending need to decrease or taxes need to increase in order to eliminate the fiscal deficit?
+
+`r devoirs::devoirs_text("ssk-f-94ls", rows = 1)`
+:::
+ <!-- end of exr-snake-show-knife -->

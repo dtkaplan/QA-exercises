@@ -1,0 +1,18 @@
+<!--
+id: "fawn-lend-ring"
+created: "Mon Nov  3 11:30:42 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-fawn-lend-ring}
+Show arrows for SIR and ask what's going on at that point in the epidemic.
+
+:::
+ <!-- end of exr-fawn-lend-ring -->

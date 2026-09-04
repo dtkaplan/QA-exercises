@@ -1,0 +1,38 @@
+<!--
+id: "seaweed-build-jacket"
+created: "Wed Jan 28 09:53:10 2026"
+attribution: Dave Ruth
+uses: "Quiz Ch 5"
+status: "ready-to-use"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seaweed-build-jacket}
+1. Recall the `monthly_payment()` function.  xf("fig-payment-r-slice")` is a slice plot that holds `principal` constant. Which of the following correctly describes the plot?
+
+```{mcq}
+#| label: sbj-1-keiw
+1.  `interest_rate` as input, `years`  as output.
+1.  `years`  as input, `interest_rate` as output.
+1.  `years`  as input, `monthly_payment` as output.
+1.  `monthly_payment` as input, `years`  as output.
+1.  `interest_rate` as input, `monthly_payment` as output. [correct]
+1.  `monthly_payment` as input, `interest_rate` as output.
+```
+
+2. `r xf("fig-payment-years-slice")` is a similar slice plot. that holds `principal` constant. Which of the following correctly describes that plot?
+
+```{mcq}
+#| label: sbj-2-keiw
+1.  `interest_rate` as input, `years`  as output.
+1.  `years`  as input, `interest_rate` as output.
+1.  `years`  as input, `monthly_payment` as output. [correct]
+1.  `monthly_payment` as input, `years`  as output.
+1.  `interest_rate` as input, `monthly_payment` as output. 
+1.  `monthly_payment` as input, `interest_rate` as output.
+```
+:::
+ <!-- end of exr-seaweed-build-jacket -->

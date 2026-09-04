@@ -1,0 +1,38 @@
+<!--
+id: "daisy-do-bed"
+created: "Sat Aug 15 08:45:13 2026"
+attribution: DTK
+uses: Activity early in the course
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-daisy-do-bed}
+Conclusions from the epidemic model
+
+Link to the interactive form of the model. You can set three quantities in the model:
+
+1. The initial number of infectives. There must be at least one infective in order for the epidemic to take root. Presumably, this person originated in another outbreak and travelled to the location that the model simulates. (This leaves unstated how that other outbreak started.)
+    
+    Policy makers consider whether they should restrict travel, for instance by closing borders, after a new outbreak has been detected. In the model, you can simulate restrictive and open travel policies by changing the number of initial infectives. So, you can run the simulation multiple times with different initial numbers of infectives to assess the effectiveness of such policies.
+
+2. People falling ill often skip work or retreat to a bedroom or such in order to aid recovery and limit contact with other people who might be susceptible to catching the illness. We call this isolation. Ordinarily, it is a personal or family choice. But public health officials can also encourage or enforce isolation. The policies can be as mild as publicity campaigns to increase awareness of the benefits of isolation for the population, or as severe as subjecting people to house arrest or institutionalizing them.
+    
+    The isolation parameter in the model is a percentage---so ranging from 0 to 100. A low value can correspond to the usual level of self-isolation. A high value might result from an enforced isolation policy. You can run the simulation with several values of isolation: low, medium, high. You don't have to concern yourself with what sorts of public health policies might produce these levels, although it can be interesting to speculate about this.
+
+3. Social distancing. Whereas *isolation* is applicable to people believed to have already caught the illness, *social distancing* involves healthy people as well. The parameter is denominated in feet. During COVID-19, common social distancing policies involved closing theaters and schools, mandating or encouraging the wearing of N-95 masks, frequent cleaning of surfaces such as hand rails, placing transparent barriers at checkout counters or service desks, or advising the public to maintain a physical distance from others. (During COVID-19, a physical distance of 6 feet was a common recommendation.)
+    
+    Although the social distancing parameter in the model is denominated in feet, understand that many of the social distancing policy possibilities, e.g. barriers at check-out counters, do not naturally correspond to distance between people. So treat the social-distance parameter as an indicator: small means little or no unusual social distancing, large means strong and effective distancing. 
+
+After each run of the model, the graph will show the daily numbers of infective and susceptible people over time. Think about what features of the graph might be relevant to assessing the effectiveness of public health policies. For instance, you might be inclined to look at how steeply the graph of infectives rises, the peak level of infectives, the long-term trend in the number of infectives or of susceptibles. Be thoughtful about how these features, or others that occur to you, might or might not be useful indicators of the success or failure of the health policies you simulate. 
+
+a. Make a list of four graph features you might consider, including at least one that you think will give a meaningful sense of the impact of the simulated epidemic and one that you think will provide little or no useful information. For each feature, explain your reasoning about the overall utility and what specific aspects of the outbreak (for instance, deaths or hospital overcrowding) the feature captures.
+
+b. Work through the three policy parameters---initial cases, isolation percentage, social distancing---and determine which ones are effective in making a substantial impact on the course of the epidemic. 
+
+GIVE ACCESS TO THE MODEL HERE
+:::
+ <!-- end of exr-daisy-do-bed -->

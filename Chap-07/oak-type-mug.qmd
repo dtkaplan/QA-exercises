@@ -1,0 +1,37 @@
+<!--
+id: "oak-type-mug"
+created: "Tue Jul  1 16:24:16 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-oak-type-mug}
+Fix these commands so that they store the numbers properly.
+
+```{webr}
+#| caption: Fixing names
+#| min-lines: 5
+1st_place_score <- 103
+first day <- Sys.Date() + 20
+second-day <- Sys.Date() + 21
+```
+
+<!-- Opening answer: otm-2MS -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+The problem in each case is with the name on the left-hand side of the storage arrow.
+
+i. Names must start with a character. So, `first_place_score` would be a sensible replacement, as would `place_1_score`.
+ii. Spaces are not allowed in names. By convention, an underscore (`-`) is used to separate words in names: `first_day`.
+iii. Hyphens are not allowed in names. Use an underscore instead: `second_day`.
+
+
+[..id..]{data-tooltip="Ans id: otm-2MS"}
+:::
+<!-- closing answer otm-2MS -->
+:::
+ <!-- end of exr-oak-type-mug -->

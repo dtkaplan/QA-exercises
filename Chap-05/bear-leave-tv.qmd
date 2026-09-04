@@ -1,0 +1,17 @@
+<!--
+id: "bear-leave-tv"
+created: "Tue Jul 29 10:49:28 2025"
+attribution: TBA
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bear-leave-tv}
+Name five units for energy. Remember that "power" has a different {{< var dim.dim >}} than energy.
+
+`r devoirs_text("blt-energy-units")`
+:::
+ <!-- end of exr-bear-leave-tv -->
