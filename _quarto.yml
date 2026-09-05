@@ -2,6 +2,7 @@ project:
   output-dir: docs
   type: website
   render:
+    - index.html
     - Chap-01/*-*-*.qmd
     - Chap-02/*-*-*.qmd
     - Chap-03/*-*-*.qmd
