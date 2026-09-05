@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>pony-meet-window – Quantitative Argumentation</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -32,15 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7a9f06792e729f6a12ae79ab1eb40b9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bf8f49345ee328fa78402b74928d9a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -89,7 +94,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Quantitative Argumentation
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -103,15 +110,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      <div class="sidebar-tools-main">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Quantitative Argumentation</a> 
+        <div class="sidebar-tools-main">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -171,6 +179,11 @@ status: "ready-to-use"
 chapter: 2
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -340,7 +353,8 @@ Clear memory
 </div>
 </div>
 <div id="exr-pony-meet-window" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1</strong></span> <img src="../www/drill-5-wxyz.png" class="img-fluid"></p>
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> &nbsp;</p>
+<!-- ![](../www/drill-5-wxyz.png) -->
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -373,7 +387,7 @@ class D exogenous
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="dddd-hintarea" class="hintarea">dddd</small>
 <form id="dddd-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-1" w="16" name="dddd" hint="Correct! It's in a sharp-cornered box." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x" id="dddd-2" w="87" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y" id="dddd-3" w="32" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z" id="dddd-4" w="32" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-5" w="87" name="dddd" hint="Nope." show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd" id="dddd.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-1" w="14" name="dddd" hint="Correct! It's in a sharp-cornered box." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x" id="dddd-2" w="19" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y" id="dddd-3" w="3" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z" id="dddd-4" w="19" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-5" w="3" name="dddd" hint="Try again!" show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd" id="dddd.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -409,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="dddd-2-hintarea" class="hintarea">dddd-2</small>
 <form id="dddd-2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="dddd-2-1" w="19" name="dddd-2" hint="You might think so, but ..." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1" id="dddd-2-1" w="29" name="dddd-2" hint="Right! There's only one sharp-cornered box." show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2 " id="dddd-2-2" w="87" name="dddd-2" hint="Boo!" show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3 " id="dddd-2-3" w="3" name="dddd-2" hint="Not on target." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4 " id="dddd-2-4" w="23" name="dddd-2" hint="Not quite." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-2" id="dddd-2.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="dddd-2-1" w="19" name="dddd-2" hint="Not quite right." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1" id="dddd-2-1" w="5" name="dddd-2" hint="Right! There's only one sharp-cornered box." show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2 " id="dddd-2-2" w="32" name="dddd-2" hint="Not so!" show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3 " id="dddd-2-3" w="32" name="dddd-2" hint="Untrue!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4 " id="dddd-2-4" w="23" name="dddd-2" hint="This is wide of the mark." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-2" id="dddd-2.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -445,7 +459,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="dddd-3-hintarea" class="hintarea">dddd-3</small>
 <form id="dddd-3-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-3-1" w="41" name="dddd-3" hint="Good! The square box stands for a function with the inputs being indicated by the inward-pointing arrows." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x " id="dddd-3-2" w="32" name="dddd-3" hint="You might think so, but ..." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y " id="dddd-3-3" w="87" name="dddd-3" hint="You might think so, but ..." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z " id="dddd-3-4" w="32" name="dddd-3" hint="This is wide of the mark." show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-3-5" w="7" name="dddd-3" hint="Nope." show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-3" id="dddd-3.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-3-1" w="41" name="dddd-3" hint="Good! The square box stands for a function with the inputs being indicated by the inward-pointing arrows." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x " id="dddd-3-2" w="32" name="dddd-3" hint="This is wide of the mark." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y " id="dddd-3-3" w="23" name="dddd-3" hint="You're wrong here." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z " id="dddd-3-4" w="3" name="dddd-3" hint="Incorrect." show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-3-5" w="7" name="dddd-3" hint="Nope." show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-3" id="dddd-3.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {

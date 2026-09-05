@@ -13,7 +13,7 @@ mode: "exercise"
 
 ::: {#exr-pony-meet-window}
 
-![](../www/drill-5-wxyz.png)
+<!-- ![](../www/drill-5-wxyz.png) -->
 
 ```{mermaid}
 graph RL
