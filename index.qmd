@@ -18,9 +18,9 @@ Each file is also a stand-along resource accessible by link. Users can navigate 
 
 -----
 
-1. [Chapter 1 Catalog](Chap-01/Catalog-01.qmd)
-2. [Chapter 2 Catalog](Chap-02/Catalog-02.qmd)
-3. [Chapter 3 Catalog](Chap-03/Catalog-03.qmd)
-4. [Chapter 4 Catalog](Chap-04/Catalog-04.qmd)
-5. [Chapter 5 Catalog](Chap-05/Catalog-05.qmd)
-6. [Chapter 6 Catalog](Chap-06/Catalog-06.qmd)
+1. [Chapter 1 Catalog](Chap-01/Catalog-01.html)
+2. [Chapter 2 Catalog](Chap-02/Catalog-02.html)
+3. [Chapter 3 Catalog](Chap-03/Catalog-03.html)
+4. [Chapter 4 Catalog](Chap-04/Catalog-04.html)
+5. [Chapter 5 Catalog](Chap-05/Catalog-05.html)
+6. [Chapter 6 Catalog](Chap-06/Catalog-06.html)

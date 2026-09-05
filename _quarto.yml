@@ -2,7 +2,7 @@ project:
   output-dir: docs
   type: website
   render:
-    - index.html
+    - index.qmd
     - Chap-01/*-*-*.qmd
     - Chap-02/*-*-*.qmd
     - Chap-03/*-*-*.qmd
@@ -16,6 +16,18 @@ project:
 website: 
   title: "Quantitative Argumentation"
   reader-mode: true
+  sidebar:
+    contents:
+      - section: Fundamentals
+        contents:
+        - text: "1. Argument and reasoning"
+          href: "Chap-01/Catalog-01.qmd"
+
+        - text: "2. Models"
+          href: "Chap-02/Catalog-02.qmd"
+
+        - text: "3. Quantities"
+          href: "Chap-03/Catalog-03.qmd"
 
 format:
   live-html:
