@@ -5,7 +5,7 @@ attribution: Dave Ruth
 use: "Reading Question Chap 1"
 status: "draft"
 chapter: 1
-mode: "discussion"
+mode: "discussion" 
 -->
 
 {{< include ../exercise-header.qmd >}}
