@@ -1,0 +1,19 @@
+<!--
+id: "tiger-sharpen-car"
+created: "Fri Sep 11 11:04:12 2026"
+attribution: DTK
+mode: drill
+status: sketch
+group: x_drafts
+topic: drug_dosing
+chapter: 9
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-tiger-sharpen-car}
+Drill: Point to the individual contributions of each pill in the overall drug concentration profile.
+
+:::
+ <!-- end of exr-tiger-sharpen-car -->

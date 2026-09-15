@@ -1,0 +1,82 @@
+---
+number-offset: 6
+crossref:
+  exr-title: "Exercise 7."
+---
+
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+<!-- not needed: 
+include _use_webr.qmd
+-->
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+# Exercises: Uncertainty in quantities {#sec-uncertainty-in-quantities-exercises}
+
+
+The chapter discusses the distinction between an (absolute) probability and a relative probability.
+
+
+{{< include _exercises/sister-freeze-map.qmd >}}
+
+File ID: sister-freeze-map
+
+-----
+
+
+
+
+{{< include _exercises/monkey-lose-knife.qmd >}}
+
+File ID: monkey-lose-knife
+
+-----
+
+{{< include _exercises/panda-type-closet.qmd >}}
+
+File ID: panda-type-closet
+
+-----
+
+{{< include _exercises/doe-keep-glasses.qmd >}}
+
+File ID: doe-keep-glasses
+
+-----
+
+{{< include _exercises/fish-draw-bolt.qmd >}}
+
+File ID: fish-draw-bolt
+
+-----
+
+{{< include _exercises/daisy-blow-kitchen.qmd >}}
+
+File ID: daisy-blow-kitchen
+
+-----
+
+
+### AI questions
+
+{{< include _exercises/fly-hide-mattress.qmd >}}
+
+
+
+
+
+
+
+
+## Drafty
+
+
+
+
+{{< include _devoirs.qmd >}}
+

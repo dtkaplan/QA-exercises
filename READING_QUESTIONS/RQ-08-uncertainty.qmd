@@ -1,0 +1,32 @@
+---
+title: "An Analysis Approach: Chap 8" 
+subtitle: "Reading Questions"
+crossref:
+  exr-title: "Reading Question 8."
+  fig-title: "RQ-RQ8."
+  fig-prefix: "Fig-RQ8."
+  tbl-title: "Table-RQ8."
+---
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+
+{{< include _exercises/lobster-serve-sofa.qmd >}}
+
+-----
+
+{{< include _exercises/fox-throw-knob.qmd >}}
+
+-----
+
+{{< include _exercises/puppy-win-gloves.qmd >}}
+
+-----
+
+{{< include _exercises/ash-buy-rug.qmd >}}
+
+-----
+

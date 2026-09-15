@@ -1,0 +1,75 @@
+---
+number-offset: 4
+crossref:
+  exr-title: "Exercise 5."
+  fig-title: "Figure E5."
+  fig-prefix: "Fig E5."
+  tbl-title: "Table E5."
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+{{< include _use_webr.qmd >}}
+
+```{r include=FALSE}
+source("_start-up.R")
+library(mosaicCalc)
+```
+
+```{webr}
+#| echo: false
+#| autorun: true
+
+```
+
+{{< include _devoirs.qmd >}}
+
+# Exercises: Functions {#sec-functions-exercises}
+
+
+{{< include _exercises/jellyfish-open-socks.qmd >}}
+
+-----
+
+{{< include _exercises/calf-freeze-saw.qmd >}}
+
+----- 
+
+{{< include _exercises/goldfish-cost-bed.qmd >}}
+
+-----
+
+{{< include _exercises/titmouse-sit-chair.qmd >}}
+
+-----
+
+{{< include _exercises/giraffe-meet-cotton.qmd >}}
+
+-----
+
+{{< include _exercises/dolphin-enjoy-kitchen.qmd >}}
+
+--------
+
+{{< include _exercises/daisy-blow-kitchen.qmd >}}
+
+-----
+
+{{< include _exercises/spider-stand-ship.qmd >}}
+
+-----
+
+
+{{< include _exercises/kitten-close-coat.qmd >}}
+
+-----
+
+{{< include _exercises/cat-come-door.qmd >}}
+
+-----
+
+
+:::
+
+
+

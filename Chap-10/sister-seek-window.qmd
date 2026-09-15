@@ -1,0 +1,18 @@
+<!--
+id: "sister-seek-window"
+created: "Tue Sep 15 11:02:51 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: discussion
+topic: muscle movement
+chapter: 10
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-sister-seek-window}
+WHAT'S THE right FORCE TO APPLY TO THE PEDALS of a bicycle. Not a well-stated problem. But insofar as it makes sense, it forces us to model what we are trying to accomplish in selecting such a force.
+:::
+ <!-- end of exr-sister-seek-window -->

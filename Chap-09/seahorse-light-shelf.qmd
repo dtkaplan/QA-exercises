@@ -1,0 +1,57 @@
+<!--
+id: "seahorse-light-shelf"
+created: "Fri Sep 11 11:00:42 2026"
+attribution: DTK
+mode: "computing exercise"
+status: sketch
+group: computing_exercises
+topic: mortgages
+chapter: 9
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-seahorse-light-shelf}
+**Slicing a function**
+
+In the slicing technique, we select a single arg for investigation. When a function has multiple args, we fix the values for all the others. To illustrate, let us look at the monthly payment function and how the payment depends on the interest rate. Common sense suggests that we examine the function's output for different values of the interest rate. Picking up from the earlier example, we will set the `principal` to 200,000 and the `duration` to 30 years. For instance, the following computer expressions direct the computer to calculate the monthly payment at each of three interest rates: 5% per year, 6% per year, and 7% per year.
+
+::: {.content-hidden unless-format="html"}
+```{webr}
+#| label: chk-three-interest-rates
+#| caption: "Monthly payment at 5% per year"
+#| autorun: true
+monthly_payment(200000, 5, 30)
+```
+
+```{webr}
+#| label: chk-three-interest-rates2
+#| caption: "Payment at 6% per year"
+#| autorun: true
+monthly_payment(200000, 6, 30)
+```
+
+```{webr}
+#| label: chk-three-interest-rates3
+#| caption: "Payment at 6% per year"
+#| autorun: true
+monthly_payment(200000, 7, 30)
+```
+:::
+
+::: {.content-hidden unless-format="pdf"}
+
+```{r}
+#| label: ch06-r-2b639b1c
+monthly_payment(200000, 5, 30)
+monthly_payment(200000, 6, 30)
+monthly_payment(200000, 7, 30)
+```
+
+:::
+
+
+
+:::
+ <!-- end of exr-seahorse-light-shelf -->

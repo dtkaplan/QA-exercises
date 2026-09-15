@@ -1,0 +1,52 @@
+<!--
+id: "rhinosaurus-send-plate"
+created: "Mon Sep 14 09:18:22 2026"
+attribution: DTK
+mode: computing-exercise
+status: sketch
+group: computing-exercises
+topic: regression
+chapter: 9
+-->
+
+{< include ../exercise-header.qmd >}
+
+TURN THIS INTO A COMPUTING EXERCISE ABOUT REGRESSION
+
+::: {#exr-rhinosaurus-send-plate}
+As an example, @lst-score-lin-comb shows what the linear combination model would look like if written by hand in R code. 
+
+::: {#fig-score-lin-comb}
+```{r eval=FALSE}
+score <- function(performance, education, income, size) {
+    a * same(performance) + 
+    b * same(education) + 
+    c * same(income) + 
+    d * same(size) +
+    e * flat()
+}
+```
+
+
+:::
+
+
+The multipliers on the `same()` and `flat()` functions---`a`, `b`, `c`, `d`, and `e`---are called the `r xf_definition("coefficients")` of the linear combination. The process of finding good values for the coefficients that approximate the data is called `r xf_definition("linear regression")`.
+
+Practically all statistical software packages provide functions to perform linear regression. To build the function the modeler merely specifies which input quantities to use in the model (and which will be the output quantity). The software then finds values for the coefficients automatically.
+
+Such software is universally used by modelers who are trying to build model functions based on data. The job of the modeler is to choose which input quantities to use in the model and which quantity will be the output. 
+
+A popular interface to the model building statistical software provided by R uses special notation to name the output quantity and the input quantities. For the example above, the model specification corresponding to the function in @lst-score-lin-comb is:
+
+```{r eval=FALSE}
+score ~ performance + education + income + size
+```
+
+This shorthand can be confusing at first, since it seems that the coefficients are not specified. However, the `+` in the notation doesn't mean literal addition; it is just a separator between the names of the input quantities.
+The process is simple, deceptively so. A careful choice of input quantities can make all the difference in the usability of the resulting model. Statistical techniques and questions of what causes what should play an important role in guiding these choices.
+
+The purpose of the computer notation is still to build functions by adding scaled copies of simpler functions; regression is just a way to estimate the scales from data.
+
+:::
+ <!-- end of exr-rhinosaurus-send-plate -->

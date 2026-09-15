@@ -1,0 +1,612 @@
+---
+number-offset: 6
+crossref:
+  exr-title: "Drill 7."
+---
+
+## Suggested question 1
+
+Consider a function whose horizontal axis is labeled `temperature` and whose vertical axis is labeled `comfort`. Which statement is correct?
+
+```{mcq}
+#| label: d06-input-output-01
+1. Temperature is the output and comfort is the input.
+2. Comfort is the output and temperature is the input. [correct]
+3. Both temperature and comfort are outputs.
+4. The graph does not show either input or output.
+```
+
+## Suggested question 2
+
+A function has two inputs, `temperature` and `humidity`, and one output, `heat index`. How many arguments does the function have?
+
+`r devoirs::devoirs_set(choices = c(1, 2, 3, 4), correct = 2, id = "d06-input-output-02")`
+
+## Suggested question 3
+
+A slice plot shows monthly mortgage payment on the vertical axis and interest rate on the horizontal axis. The curve rises from left to right. What happens to the monthly payment as the interest rate increases?
+
+```{mcq}
+#| label: d06-input-output-03
+1. It decreases.
+2. It stays constant.
+3. It increases. [correct]
+4. It first increases and then decreases.
+```
+
+## Suggested question 4
+
+A contour plot has one input on each axis. What does movement along a single contour represent?
+
+```{mcq}
+#| label: d06-input-output-04
+1. The output remains constant. [correct]
+2. The first input remains constant.
+3. Both inputs remain constant.
+4. The output changes at the fastest possible rate.
+```
+
+## Suggested question 5
+
+A function's graph rises as the input increases, but its slope becomes less steep. Which description best fits the graph?
+
+```{mcq}
+#| label: d06-input-output-05
+1. The function is decreasing.
+2. The function is increasing with diminishing slope. [correct]
+3. The function is constant.
+4. The function has no output.
+```
+
+:::
+::::
+
+:::: {.callout-note collapse=true}
+## Function interfaces, algorithms, and models
+
+
+
+# Drill Questions: Basic Functions
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+::: {#fig-core-modeling-gallery-832 layout-ncol=4}
+![`flat()`](www/flat_graph.png)
+
+![`same()`](www/same-graph.png)
+
+![`exp2()`](www/double_graph.png)
+
+![`log2()`](www/log2(_graph.png)
+
+![`hillside()`](www/hillside_graph.png)
+
+![`hill()`](www/hill_graph.png)
+
+![`osc`](www/osc_graph.png)
+
+![`recip()`](www/recip_graph.png)
+
+
+"Official" portraits of the core modeling functions.
+:::
+
+:::: {.callout-note collapse=true}
+## Shapes
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d07"`
+
+::: {.panel-tabset}
+## `r cc()`
+
+{{< include _exercises/pig-say-pen.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/lion-have-boat.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/avoid-refer-fridge.qmd >}}
+
+## `r cc()` 
+
+{{< include _exercises/squirrel-type-sofa.qmd >}}
+
+## `r cc()` 
+
+{{< include _exercises/girl-sleep-linen.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/spruce-lie-kayak.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/tiger-blow-shoe.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/sister-bite-gloves.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/finch-ring-magnet.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/reptile-take-socks.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/monkey-meet-laundry.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/gator-trim-bed.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/shark-choose-bed.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/bee-light-kayak.qmd >}}
+
+:::
+
+::::
+
+:::: {.callout-note collapse=true}
+## Function properties
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d06"`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+{{< include _exercises/seal-talk-room.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/girl-keep-hamper.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/boy-lick-book.qmd >}}
+
+
+## `r cc()`
+
+{{< include _exercises/bear-iron-rug.qmd >}}
+
+
+
+## `r cc()`
+
+{{< include _exercises/sheep-write-jacket.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/fox-burn-spoon.qmd >}}
+
+
+:::
+
+::::
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d06c"`
+
+
+:::: {.callout-note collapse=true}
+## Input & output scaling
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+{{< include _exercises/bat-send-chair.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/boy-serve-kitchen.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/kangaroo-hurt-bowl.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/ash-hang-saw.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/pollen-close-sheet.qmd >}}
+
+
+## `r cc()`
+
+{{< include _exercises/eagle-love-radio.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/kitten-sing-ring.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/spider-hit-fork.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/pine-sail-kitchen.qmd >}}
+
+:::
+
+::::
+
+:::: {.callout-note collapse=true}
+## Recognizing Functions from Graphs
+
+`r cc <- drill::new_drill_counter(style = "ROMAN")`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+{{< include _exercises/snail-dig-pen.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/pig-speak-closet.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/boy-light-pot.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/toe-dig-pencil.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/nephew-toss-gloves.qmd >}}
+
+:::
+::::
+
+:::: {.callout-note collapse=true}
+## Function input and output
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d06"`
+
+::: {.panel-tabset}
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 22), 
+  seed = 6, 
+  domain(x = -5:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 242), 
+  seed = 18, 
+  domain(x = 0:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+## `r cc()`. 
+
+With respect to the following plot ... 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 122), 
+  seed = 68, 
+  domain(x = -5:5), 
+  id = cc(id))
+```
+
+`r Prob$Q`
+
+```{r}
+#| echo: false
+Prob$P
+```
+
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 642), 
+  seed = 12, 
+  domain(x = 0:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 942), 
+  seed = 218, 
+  domain(x = 0:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 1122), 
+  seed = 118, 
+  domain(x = 0:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+
+
+
+
+
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 1642), 
+  seed = 121, 
+  domain(x = 0:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 1942), 
+  seed = 2180, 
+  domain(x = 0:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+## `r cc()`. 
+
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 9122), 
+  seed = 818, 
+  domain(x = 0:5), 
+  id = cc(id))
+Prob$P
+```
+
+`r Prob$Q`
+
+
+
+:::
+:::: 
+
+<!-- end of functions block -->
+
+:::: {.callout-note collapse=true}
+# Rates of change
+
+`r cc <- drill::new_drill_counter(style = "ALPHA")`
+
+::: {.panel-tabset}
+## Explanation
+
+Rates of change, introduced in `r xf("sec-rates-of-change-brief")`, are an important way of summarizing the relationships between quantities. Numerically, a rate of change is a *quantity* that relates two quantities of interest. Let's call them A and B. The rate of change of A *with respect to* B is the ratio of the change in B divided into the corresponding change in A.
+
+Rates of change are an important way of summarizing a model used in many circumstances. For example, the economists' concepts of "marginal cost" or "elasticity" are rates of change.  
+
+Graphically, the rate of change of a *function* *with respect to* an input is the **slope** of the graph. 
+
+Each of the graphs in this section displays a function along with a set of red annotations that give the quantitative value of several different slopes.
+
+```{r}
+#| echo: false
+#| label: fig-slope-example
+#| fig-cap: "A function annotated with slope lines"
+drill::slope_question(8325)
+```
+
+There are six slopes in the red annotation. You can measure the rate of change of the function with respect to the input by comparing the function to the slope annotations. For instance, near y=0 the function's slope is about -1. The slope 0 is not shown in the annotation. It corresponds to a horizontal line.
+
+Notice that the slope changes along with y. This is typical of functions used for modeling. So we can speak of the slope of a function **at** a particular input. Sometimes this "at a particular input" is called the "instantaneous" slope." But we'll get to that later in the course. 
+
+
+
+
+
+
+## `r cc()`.
+
+```{r}
+#| echo: false
+drill::slope_question(55)
+```
+
+a. What is the most positive rate of change for the function?
+
+`r devoirs::devoirs_set(c(-4, -2, 0, 2, 4), correct = 4, id=cc(id, "a"))`
+
+b. At which of these inputs does that most positive rate of change occur?
+
+`r devoirs::devoirs_set(c(-2, -1, 0, 1), correct = 1, id=cc(id, "b"))`
+
+
+c. For what input is the rate of change practically zero?
+
+`r devoirs::devoirs_set(c(-2, -1, 0, 1, 2, 3), correct = 0, id=cc(id, "c"))`
+
+## `r cc()`.
+
+```{r}
+#| echo: false
+drill::slope_question(78)
+```
+
+a. What is the rate of change when y = -2?
+
+`r devoirs::devoirs_set(c(-6, -4, -2, 0, 2, 4, 6), correct = -6, id=cc(id, "a"))`
+
+b. What is the rate of change when y = 3?
+
+`r devoirs::devoirs_set(c(-6, -2, 0, 2, 6), correct = 6, id=cc(id, "b"))`
+
+
+c. For what input is the rate of change practically zero?
+
+`r devoirs::devoirs_set(c(-3, -2.5, -1, 0, 1.5, 2.5, 3), correct = 1.5, id=cc(id, "c"))`
+
+
+## `r cc()`.
+
+```{r}
+#| echo: false
+drill::slope_question(718)
+```
+
+a. What is the rate of change when y = 0?
+
+`r devoirs::devoirs_set(c(-6, -4, 4, 6, "greater than 6"), correct = "greater than 6", id=cc(id, "a"), sort = TRUE)`
+
+b. At what value of the input is the function output the greatest?
+
+`r devoirs::devoirs_set(c(-1.5, -0.5, 0.5, 1.5 ), correct = 1.5, id=cc(id, "b"))`
+
+c. What is the rate of change of the function when the input is at the value in question (b)?
+
+`r devoirs::devoirs_set(c(-4, -2, 0, 2, 4), correct = 0, id=cc(id, "c"))`
+
+d. At what value of the input is the function output the smallest?
+
+`r devoirs::devoirs_set(c(-1.5, -0.5, 0.5, 1.5 ), correct = -1.5, id=cc(id, "d"))`
+
+e. What is the rate of change of the function when the input is at the value in question (b)?
+
+`r devoirs::devoirs_set(c(-4, -2, 0, 2, 4), correct = 0, id=cc(id, "e"))`
+
+
+## `r cc()`.
+
+```{r}
+#| echo: false
+drill::slope_question(718, mosaicCalc::domain(y = 0:10))
+```
+
+a. Reading the graph from left to right, at what value of the input does the function's slope change from positive to negative?
+
+`r devoirs::devoirs_set(c(1.75, 2.75, 5.5, 7.5), correct = 1.75, id=cc(id, "a"), sort = TRUE)`
+
+b. Still reading from left to right, at what value of the input does the function's slope change from negative to positive?
+
+`r devoirs::devoirs_set(c(1.5, 2.5, 5.5, 7.5), correct = 5.5, id=cc(id, "b"), sort = TRUE)`
+
+c. For which input is the slope of the function close to -1.5?
+
+`r devoirs::devoirs_set(c(1, 2, 3, 4, 5), correct = 3, id=cc(id, "c"))`
+
+## `r cc()`.
+
+```{r}
+#| echo: false
+drill::slope_question(2187, mosaicCalc::domain(y = -5:5))
+```
+
+a. Is there any input for which the function's rate of change is -1? (Think before answering.)
+
+`r devoirs::devoirs_set(c("yes", "no"), correct = "yes", id=cc(id, "a"), sort = TRUE)`
+
+b. At what input does the rate of change of the function go from negative to positive?
+
+`r devoirs::devoirs_set(c(-2.4, -1, -0.5, 1.25), correct = -0.5, id=cc(id, "b"), sort = TRUE)`
+
+## `r cc()`.
+
+```{r}
+#| echo: false
+drill::slope_question(4817, mosaicCalc::domain(y = -5:5))
+```
+
+a. For what input is the rate of change of the function about -1?
+
+`r devoirs::devoirs_set(c(-4.5, -3, 0, 3), correct = 3, id=cc(id, "a"), sort = TRUE)`
+
+b. For what input is the rate of change of the function about +1?
+
+`r devoirs::devoirs_set(c(-2, -1, 0, 0.5, 2), correct = 0.5, id=cc(id, "b"), sort = TRUE)`
+
+
+
+
+
+:::
+::::
+<!-- end of rates of change -->

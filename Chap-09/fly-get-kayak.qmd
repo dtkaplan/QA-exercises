@@ -1,0 +1,19 @@
+<!--
+id: "fly-get-kayak"
+created: "Fri Sep 11 11:03:05 2026"
+attribution: DTK
+mode: computing_exercises
+chapter: 9
+status: sketch
+group: computing_exercises
+topic: drug_dosing
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-fly-get-kayak}
+Find the dose needed for the once-a-day plan to keep drug concentration above the therapeutic dose (the magenta line).
+
+:::
+ <!-- end of exr-fly-get-kayak -->

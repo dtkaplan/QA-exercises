@@ -1,0 +1,211 @@
+---
+number-offset: 8
+crossref:
+  exr-title: "Drill 9."
+---
+
+# Drill Questions: Customizing Functions
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+`r devoirs::push_answer_style("block")` 
+
+::: {.callout-note collapse=true}
+## Linear combination
+
+{{< include _exercises/doe-meet-kitchen.qmd >}}
+
+:::
+
+::: {.callout-note collapse=true}
+## Combine and shift left or right
+
+{{< include _exercises/doe-meet-bedroom.qmd >}}
+
+:::
+
+
+:::: {.callout-note collapse=true}
+## Contour plots
+
+`r cc <- drill::new_drill_counter(style = "roman")`
+`r id <- "d05-cp"`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+How is the output value represented on a contour plot?
+
+```{mcq}
+#| label: d05-output-rep
+1. As the position along the horizontal axis. [hint: No, that's one of the inputs.]
+2. As the position along the vertical axis. [hint: No, that's one of the inputs.]
+3. By the labels along the contour lines. [correct]
+4. The output isn't shown.
+```
+
+## `r cc()`
+
+```{r}
+#| echo: false
+f <- doodle_fun(~ x & z, seed = 400)
+contour_plot(f(x, z) ~ x & z, domain(x = -3:3, z = -3:3)) |>
+  gf_refine(coord_fixed()) |>
+  gf_theme(theme_minimal())
+```
+
+For the function plotted just above ...
+
+1. What is the output spacing between adjacent contours?
+
+`r devoirs::devoirs_set(choices = c(1, 2, 3, 4, 5, 6), correct = 2, id = "cp-space-3kws")`
+
+2. What is the output spacing between adjacent **labelled** contours?
+
+`r devoirs::devoirs_set(choices = c(1, 2, 3, 4, 5, 6), correct = 4, id = "cp-labels-ekx")`
+
+
+3. What is the minimum possible value for the function output on the input space shown. (Pick the closest answer.)
+
+`r devoirs::devoirs_set(choices = c(-3, -2, -1, 0, 1, 2, 3), correct = -3, id = "cp-min-3kws")`
+
+4. What is the maximum possible value for the function output in the input space shown. (Pick the closest answer.)
+
+`r devoirs::devoirs_set(choices = c(12, 13.5, 15, 17.5), correct = 13.5, id = "cp-max-34s")`
+
+5. Consider an input close to x = -3, z = 0, on the left side of the input space. Which of these is the best statement about the possible output for that input?
+
+```{mcq}
+#| label: cp-sure-382
+1. The output is less than 2.
+2. The output is greater than 2.
+3. The output is greater than 2 and less than 3.
+4. The output is greater than 2 and less than 4. [correct]
+```
+
+## `r cc()`
+
+```{r}
+#| echo: false
+f <- doodle_fun(~ temp & pressure, seed = 403)
+Pts <- tibble::tribble(
+  ~ temp, ~ pressure, ~ label,
+  0.5, 1.5, "A", 
+  -2, 0, "B",
+  3, -3, "C",
+  -0.5, 2, "D",
+  -0.5, -0.4, "E",
+  2, 0, "F"
+)
+contour_plot(f(temp, pressure) ~ temp & pressure, domain(temp = -3:3, pressure = -3:3)) |>
+  gf_text(pressure ~ temp, label = ~ label, color = "magenta", data = Pts) |>
+  gf_refine(coord_fixed()) |>
+  gf_theme(theme_minimal())
+```
+
+1. Is the landscape near point A a hilltop or the bottom of a bowl?
+
+```{mcq}
+#| label: d05-A-dkwe
+#| inline: true
+1. hilltop
+2. bowl [correct]
+```
+
+2. Which point is at the lowest output value of the function shown?
+
+`r devoirs::devoirs_set(choices = c("A", "B", "C", "D", "E"), correct = "B", id = "d05-2-low")`
+
+3. Which point is at the highest output value of the function shown?
+
+`r devoirs::devoirs_set(choices = c("A", "B", "C", "D", "E"), correct = "C", id = "d05-3-high")`
+
+4. If you went on a walk on a straight path between points D and E, which of the following is an output value you would never see?
+
+`r devoirs::devoirs_set(choices = c(-10.3, -9.8, -8.6, -8.1), correct = -10.3, id = "d05-4-high")`
+
+5. If the output is the elevation of the landscape, walking from point C to E which of these is true?
+
+```{mcq}
+#| label: d05-5-ew22
+1. You are walking uphill.
+2. You are walking on the level.
+3. You are walking downhill. [correct]
+4. Neither of the above.
+```
+
+6. Walking from point F in a southwest (↙) direction, which is the best description for how your elevation is changing.
+
+```{mcq}
+#| label: d05-6-ewu2
+1. You are walking uphill.
+2. You are walking on the level. [correct]
+3. You are walking downhill. 
+4. You are going up and down.
+```
+
+
+## `r cc()`
+
+Suppose you have set the input values so that the corresponding point lies exactly on some contour. Now you change the input values in such a way so that they always correspond to other points on the same contour. Let's call this "moving along the contour."
+
+How does the output value change as the input moves along a contour?
+
+```{mcq}
+#| label: d05-move
+1. The output is unchanged. [correct]
+2. The output always goes up.
+3. The output always goes down.
+4. The output goes up or down depending on whether the movement is clockwise or counter-clockwise.
+```
+
+:::
+
+::::
+
+
+
+:::: {.callout-note collapse=true}
+## Motivated by AI
+
+The instructors fed an AI the chapter text and asked for some simple questions based on the text. We made some small modifications to fit into the multiple-choice format. Many of the AI-generated questions ask small algebra questions. Algebra is not an important topic of this course, but the AI is presumably drawing from problems that appear in conventional textbooks. The feedback for wrong answers was written by the instructors.
+
+::: {.panel-tabset}
+## i.
+
+{{< include _exercises/hamster-hear-radio.qmd >}}
+
+## ii.
+
+{{< include _exercises/lamb-fly-clock.qmd >}}
+
+## iii.
+
+{{< include _exercises/calf-swim-painting.qmd >}}
+
+## iv.
+
+{{< include _exercises/oak-close-window.qmd >}}
+
+## v.
+
+{{< include _exercises/dolphin-go-oven.qmd >}}
+
+## vi.
+
+{{< include _exercises/brother-blow-futon.qmd >}}
+
+:::
+
+::::
+
+
+
+

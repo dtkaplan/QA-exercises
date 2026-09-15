@@ -1,0 +1,97 @@
+---
+number-offset: 2
+crossref:
+  exr-title: "Exercise 3."
+  fig-title: "Figure E3."
+  fig-prefix: "Fig E3."
+  tbl-title: "Table E3."
+---
+
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+<!-- not needed: 
+include _use_webr.qmd
+include ./_extensions/r-wasm/live/_knitr.qmd 
+-->
+
+
+{{< include _devoirs.qmd >}}
+
+# Chap 3. Exercises {.unnumbered #sec-rates-exercises}
+
+
+{{< include _exercises/seahorse-bathe-knife.qmd >}}
+
+{{< include _exercises/deer-form-stove.qmd >}}
+
+{{< include _exercises/rhinosaurus-shut-fork.qmd >}}
+
+{{< include _exercises/duck-sleep-lamp.qmd >}}
+
+{{< include _exercises/falcon-iron-pants.qmd >}}
+
+{{< include _exercises/aspen-let-shelf.qmd >}}
+
+{{< include _exercises/sheep-feel-tv.qmd >}}
+
+{{< include _exercises/deer-burn-fridge.qmd >}}
+
+{{< include _exercises/cheetah-leave-fork.qmd >}}
+
+{{< include _exercises/ant-tell-saw.qmd >}}
+
+{{< include _exercises/bee-begin-gloves.qmd >}}
+
+{{< include _exercises/elephant-have-knife.qmd >}}
+
+{{< include _exercises/deer-trim-coat.qmd >}}
+
+  
+<!--
+## Drafty 
+
+Or not yet in a form suitable for exercises.
+
+{{< include _exercises/avoid-send-painting.qmd >}}
+
+File ID: avoid-send-painting
+
+
+
+{{< include _exercises/kitten-light-pantry.qmd >}}
+
+File ID: kitten-light-pantry
+
+-----
+
+{{< include _exercises/lobster-tear-clock.qmd >}}
+
+File ID: lobster-tear-clock
+
+-----
+
+
+{{< include _exercises/duck-see-magnet.qmd >}}
+
+File ID: duck-see-magnet
+
+-----
+
+{{< include _exercises/girl-choose-piano.qmd >}}
+
+File ID: girl-choose-piano
+
+-----
+
+{{< include _exercises/reptile-speak-piano.qmd >}}
+
+File ID: reptile-speak-piano
+
+-----
+
+-->
+

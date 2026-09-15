@@ -1,0 +1,229 @@
+---
+number-offset: 1
+crossref:
+  exr-title: "Drill 2."
+filters:
+  - live
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r include=FALSE}
+library(drill)
+```
+
+# Drill Questions: Systems, dimensions, and data {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+:::: {.callout-note collapse=true}
+## Systems and dimensions
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d01"`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+A system is a collection of elements that interact with one another.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+In this book, what technical word is used for the elements in a system? that interact with one another.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+
+
+
+## `r cc()`
+
+In this book, the word **dimension** refers only to a spatial measurement such as length, width, or height.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Here, dimension means an aspect, characteristic, or property of a system. It is not restricted to spatial dimensions.")`
+
+## `r cc()`
+
+Which of the following is a dimension of a system in the sense used in this chapter?
+
+```{mcq}
+#| label: d01-dimension
+#| inline: true
+1. A property or aspect of the system [correct]
+2. Only a numerical measurement
+3. Only a spatial direction
+4. Only a column in a data frame
+```
+
+## `r cc()`
+
+Which statement best distinguishes a dimension from a quantity?
+
+```{mcq}
+#| label: d01-dimension-quantity
+#| inline: true
+1. A dimension is an aspect of a system; a quantity is a measurable way of representing that aspect. [correct]
+2. A quantity is an aspect of a system; a dimension is always a number.
+3. Dimension and quantity mean exactly the same thing.
+4. A dimension must be measured in meters.
+```
+
+## `r cc()`
+
+Which example illustrates **operationalization**?
+
+```{mcq}
+#| label: d01-operationalization
+#| inline: true
+1. Calling anxiety a dimension of personality.
+2. Using a blood-pressure measurement as one way to quantify health. [correct]
+3. Saying that health is important.
+4. Listing several people in a data frame.
+```
+
+## `r cc()`
+
+Operationalization is the process of converting a dimension into a quantity that can be measured.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+A good operationalization must be a perfect and complete representation of the dimension it measures.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="The chapter emphasizes that operationalizations can be imperfect. The relevant question is whether an operationalization is good enough for the purpose at hand.")`
+
+## `r cc()`
+
+Why is the heat index used in the chapter as an example of operationalization?
+
+```{mcq}
+#| label: d01-heat-index
+#| inline: true
+1. It provides a quantitative indicator related to comfort in hot, humid weather. [correct]
+2. It measures every aspect of human comfort.
+3. It is simply another word for temperature.
+4. It eliminates the need for a model.
+```
+
+:::
+::::
+
+:::: {.callout-note collapse=true}
+## Data frames and data
+
+`r cc <- drill::new_drill_counter(style = "ALPHA")`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+In this chapter, a **data frame** is a rectangular array of cells organized into rows and columns.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+In a data frame, each row represents one specimen. Every row should represent a specimens of the same object type.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+Which statement about a variable in a data frame is consistent with the terminology used in this book?
+
+```{mcq}
+#| label: d01-variable
+#| inline: true
+1. A variable is a column of a data frame. [correct]
+2. A variable is always an unknown number.
+3. A variable is always a continuous numerical measurement.
+4. A variable is the entire data frame.
+```
+
+## "between"
+
+A good test for whether a variable in a data frame should be represented *quantitatively* is that the idea of "between" makes natural sense for values. Keeping this in mind, consider these following situations and decide whether "between" is meaningful.
+
+## `r cc()`
+
+Danish is meaningfully between Chinese and English.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Although 'D' is alphabetically between 'C' and 'E', this has nothing to do with the nature of the three languages.")`
+
+
+## `r cc()`
+
+A column containing student ID numbers is necessarily a quantitative variable because its values are written as digits.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="An ID can be a categorical variable even when its values consist of digits. The important feature of 'betweenness' doesn't have meaning for ID numbers.")`
+
+## `r cc()`
+
+Which of the following could be the **object type** of a data frame?
+
+```{mcq}
+#| label: d01-object-type
+#| inline: true
+1. Individual houses for sale [correct]
+2. The column named price
+3. The number 250
+4. The spreadsheet software used to display the data
+```
+
+## `r cc()`
+
+In the terminology of this book, what is a **value** in a data frame?
+
+```{mcq}
+#| label: d01-value
+#| inline: true
+1. The entry at the intersection of a variable and a row. [correct]
+2. The name of the data frame.
+3. The object type of the data frame.
+4. The entire column.
+```
+
+## `r cc()`
+
+Which statement best describes a **sample**?
+
+```{mcq}
+#| label: d01-sample
+#| inline: true
+1. A smaller collection selected from a larger population. [correct]
+2. Any single example of an object.
+3. A synonym for a variable.
+4. A data frame containing exactly one specimen.
+```
+
+## `r cc()`
+
+A population, in the statistical terminology used in this chapter, must consist of people.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Here, population can refer to any source of specimens, such as people, stars, or events.")`
+
+## `r cc()`
+
+Suppose a data frame contains measurements of 898 adult children, with variables for mother's height, father's height, sex, and the child's height. A smaller data frame containing some of those children can be described as:
+
+```{mcq}
+#| label: d01-data-frame-sample
+#| inline: true
+1. A sample from the larger data frame. [correct]
+2. A new object type.
+3. A dimension of the original data frame.
+4. A conversion factor.
+```
+
+:::
+::::

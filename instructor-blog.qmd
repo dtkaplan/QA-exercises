@@ -1,0 +1,9 @@
+---
+title: "Instructor's Blog"
+listing:
+  contents: instructor-posts
+  sort: "date desc"
+  type: default
+  categories: true
+---
+

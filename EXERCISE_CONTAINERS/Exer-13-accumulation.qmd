@@ -1,0 +1,99 @@
+---
+number-offset: 12
+crossref:
+  exr-title: "Exercise 13."
+  fig-title: "Figure E13."
+  fig-prefix: "Fig E13."
+  tbl-title: "Table E13."
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+<!-- not needed: 
+include _use_webr.qmd
+include ./_extensions/r-wasm/live/_knitr.qmd 
+-->
+
+{{< include _devoirs.qmd >}}
+
+
+# Exercises: Accumulation {#sec-accumulation-exercises}
+
+::: {.panel-tabset}
+
+## kitten-serve-lamp
+
+{{< include _exercises/kitten-serve-lamp.qmd >}}
+
+## eagle-lay-rug
+
+{{< include _exercises/eagle-lay-rug.qmd >}}
+
+## jaquar-mean-hamper
+
+{{< include _exercises/jaquar-mean-hamper.qmd >}}
+
+## oak-form-futon
+
+{{< include _exercises/oak-form-futon.qmd >}}
+
+## ant-become-window
+
+{{< include _exercises/ant-become-window.qmd >}}
+
+
+## boy-freeze-piano
+
+{{< include _exercises/boy-freeze-piano.qmd >}}
+
+## elm-take-window
+
+{{< include _exercises/elm-take-window.qmd >}}
+
+## walrus-hang-kitchen
+
+{{< include _exercises/walrus-hang-kitchen.qmd >}}
+
+## zebra-wear-socks
+  
+{{< include _exercises/zebra-wear-socks.qmd >}}
+
+## turtle-speak-pencil
+
+{{< include _exercises/turtle-speak-pencil.qmd >}}
+
+## deer-break-chair
+
+{{< include _exercises/deer-break-chair.qmd >}}
+
+## dingo-dig-suitcase
+
+{{< include _exercises/dingo-dig-suitcase.qmd >}}
+
+## panda-draw-shirt
+
+{{< include _exercises/panda-draw-shirt.qmd >}}
+
+## beech-put-knife
+
+{{< include _exercises/beech-put-knife.qmd >}}
+
+## giraffe-tear-book
+
+{{< include _exercises/giraffe-tear-book.qmd >}}
+
+## arm-begin-door
+
+{{< include _exercises/arm-begin-door.qmd >}}
+
+## Still needed
+
+An exercise for net present value.
+
+
+:::
+
+

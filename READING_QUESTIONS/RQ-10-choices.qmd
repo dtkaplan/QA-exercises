@@ -1,0 +1,19 @@
+---
+title: "An Analysis Approach: Chap 10" 
+subtitle: "Reading Questions"
+crossref:
+  fig-title: "Figure R10-"
+  fig-prefix: "Fig RQ10-"
+  tbl-title: "Table RQ10"
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+{{< include _devoirs.qmd >}}
+
+
+
+

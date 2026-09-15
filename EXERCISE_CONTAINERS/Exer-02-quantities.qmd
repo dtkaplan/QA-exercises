@@ -1,0 +1,114 @@
+---
+number-offset: 1
+crossref:
+  exr-title: "Exercise 2."
+  fig-title: "Figure E2."
+  fig-prefix: "Fig E2."
+  tbl-title: "Table E2."
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+<!-- not needed
+include ./_extensions/r-wasm/live/_knitr.qmd
+include _use_webr.qmd 
+-->
+
+
+{{< include _devoirs.qmd >}}
+
+# Exercises: Quantities {#sec-quantities-exercises}
+
+{{< include _exercises/beech-find-pot.qmd >}}
+
+{{< include _exercises/bear-leave-tv.qmd >}}
+
+{{< include _exercises/crow-pull-laundry.qmd >}}
+
+{{< include _exercises/cow-walk-pantry.qmd >}}
+
+{{< include _exercises/titmouse-leave-shelf.qmd >}}
+
+{{< include _exercises/snake-show-knife.qmd >}}
+
+{{< include _exercises/panda-refer-window.qmd >}}
+
+{{< include _exercises/pony-rise-boat.qmd >}}
+
+{{< include _exercises/elephant-hold-knob.qmd >}}
+
+{{< include _exercises/titmouse-let-saw.qmd >}}
+
+{{< include _exercises/beech-bid-plate.qmd >}}
+
+
+
+## Drafty or too technical
+
+::: {.callout-warning}
+## Either promote or delete ...
+the following.
+:::
+
+
+
+{{< include _exercises/croc-pull-table.qmd >}}
+
+File ID: croc-pull-table Luminous intensity
+
+-----
+
+## Drafty
+
+{{< include _exercises/bird-run-roof.qmd >}}
+
+File ID: bird-run-roof
+
+-----
+
+{{< include _exercises/avoid-put-socks.qmd >}}
+
+File ID: avoid-put-socks
+
+-----
+
+{{< include _exercises/seaweed-bend-laundry.qmd >}}
+
+File ID: seaweed-bend-laundry
+
+-----
+
+{{< include _exercises/seal-tug-kitchen.qmd >}} 
+
+File ID: seal-tug-kitchen physics quantities
+
+-----
+
+{{< include _exercises/kitten-bend-door.qmd >}}
+
+File ID: kitten-bend-door
+
+-----
+
+{{< include _exercises/arm-bring-clock.qmd >}}
+
+File ID: arm-bring-clock
+
+-----
+
+
+DO WE REALLY NEED THIS? Revisions to SI system
+
+{{< include _exercises/doe-feel-closet.qmd >}}
+
+File ID: doe-feel-closet
+
+-----
+
+DO WE REALLY NEED SOMETHING about lumens, a dimension that we won't use.
+
+include _exercises/girl-lose-hamper.qmd
+
+

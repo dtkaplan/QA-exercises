@@ -1,0 +1,36 @@
+---
+title: "Quantitative Reasoning for Our Time"
+subtitle: "Is this book for me?"
+description: "Answers questions for those not sure that this book is at the right level for them."
+author: "Daniel Kaplan"
+date: "2026-05-15"
+categories: [gentle]
+---
+
+"Is this book for me?" This is my first question when perusing a new book. It leads to other questions. Is the author good? Can you tell the book from its cover?
+
+In my experience, for books with "quantitative" in the title, potential readers approach from two oppposite perspectives. 
+
+- Is this book too advanced for me? After all, it's been a long time since I studied any math. Or perhaps, I'm just in high school, or in college trying to avoid extending my high-school math experience.
+- Is this book too basic for me? Perhaps you took calculus already, or even higher level courses. You might be an engineer, economist, or a scientist. You might still be wondering what was the purpose of the math you studied in college. 
+
+Too advanced or too basic? You want to know how the **level** of the book matches your own mathematical level.
+
+Thinking about *levels* of math is an unfortunate by product of the organization of the high-school and university-level curriculum. In that curriculum, you need to pass one course in order to take the next, higher-level course.
+
+This isn't the way things work in most other subjects. To take a history course, say, in early American history, you aren't expected to have taken a previous course about medieval England. Preparing for a literature course including Toni Morrison's *Beloved* likely doesn't require that you have first mastered Dickens.
+
+The history and literature courses always have an implicit pre-requisite: that you have a reasonable facility with English. For typical late high-school and early college math courses, you also need facility with a language: algebra. Algebra is the language of most math courses from high-school onward. Unlike English, you didn't learn Algebra on your mother's knee, even though your mother may well have taken an algebra course. (Parents are famously unable to communicate with their high-school aged children in algebra.)
+
+Algebra is difficult, which is why you keep studying it as you take math courses. It's difficult for several reasons. It's abstract. It's a sprawling language that uses notation inconsistently and mixes together elements from three-thousand years of history. The examples used in class---think of them as dialogs when learning a natural language---are rarely compelling. You're asked to perform tasks---e.g., finding roots of polynomials--- without knowing why. Usually, these tasks were invented as puzzles five-hundred or a thousand years ago, a world where people routinely held beliefs a modern person would see as various naïve or bizaare.
+
+This book tells about quantitative reasoning without much recourse to algebra. I can do that because of the development of easy-to-use modes of communication developed hundreds of years after algebra took its present form. You'll encounter these, one at a time, as you read through this book.
+
+What baseline knowledge must you have? First, you should have a good general education, the sort gained by everyday business people, lawyers, doctors, politicians, and elementary-school teachers already. You should know arithmetic, that is, what sorts of tasks multiplication is for and how those tasks differ from ones suited to subtraction. You should know how to read a graph: the kind with x- and y-axes filled in with data points or lines or other squiggles. You should be open to simple notation, for example remembering that L^2^ is just shorthand for L $\times$ L or that M^-1^ is another way of saying 1/M. You should also be willing to learn a few dozen technical words and distinguish them from one another. (An example: "quantity" versus "number.")
+
+Now you are worried that this book will be too basic. Not so. We're going to be talking about quantitative reasoning at a high-level, suitable for taking on complex problems in planning or public policy or health decision-making. Some of the topics are more "advanced" than even most quantitative professionals have encountered. Said another way, we'll deal with topics that are difficult to access when using algebra as the language. But, surprisingly, they are not beyond the range of people speaking in the language of common sense. Even if you are an engineer or scientist, you will meet ideas that you might have encountered in your college math studies and---if you remember them---see them in a new way. 
+
+
+
+
+

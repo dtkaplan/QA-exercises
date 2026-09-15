@@ -1,0 +1,13 @@
+---
+title: "Short Demography: Chap 5" 
+subtitle: "Reading Questions"
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _status/draft_DTK.qmd >}}
+
+{{< include _devoirs.qmd >}}
+

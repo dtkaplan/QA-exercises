@@ -1,0 +1,45 @@
+---
+title: "Following the car ahead"
+description: "Behavior of a feedback system"
+author: "Daniel Kaplan"
+date: "2026-02-08"
+categories: [feedback, dynamics]
+---
+
+```{r include=FALSE}
+library(mosaicCalc)
+```
+
+
+{{< include ../../_extensions/r-wasm/live/_knitr.qmd >}}
+
+Variables:
+
+- D, distance to car ahead
+- D0, setpoint for distance
+- V, velocity of following car
+- V0, velocity of car ahead
+
+## Acceleration proportional to error
+
+```{r}
+Follow <- makeODE(dV ~ k*(D - D0), 
+                  dD ~ -(V - V0),
+                  k = 1)
+
+Traj <- integrateODE(Follow, D = 200, V = 10, D0 = 100, V0 = 10, domain(t = 0:10))
+traj_plot(D(t) ~ t, Traj, domain(t=0:10))
+```
+
+## Acceleration proportional to error - velocity difference
+
+```{r}
+Follow2 <- makeODE(dV ~ k*(D - D0) - 1.5*(V - V0) - 0.*E, 
+                   dE ~ 0.1*(D - D0) - 0.05*E,
+                   dD ~ - (V - V0),
+                   k = 0.5, dt = 0.01)
+
+Traj2 <- integrateODE(Follow2, D = 110, V = 10, D0 = 100, V0 = 10, E = 0, domain(t = 0:40))
+traj_plot(V(t) ~ D(t), Traj2, domain(t=0:40), nt = 10, npts=1000)
+```
+

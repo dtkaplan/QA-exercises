@@ -1,0 +1,37 @@
+---
+crossref:
+  exr-title: "Reading Question 1."
+  fig-title: "RQ-RQ1."
+  fig-prefix: "Fig-RQ1."
+  tbl-title: "Table-RQ1."
+---
+
+# Reading Questions: Chap 1 Models {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/ant-catch-roof.qmd >}}
+
+-----
+
+{{< include _exercises/seahorse-enjoy-closet.qmd >}}
+
+-----
+
+{{< include _exercises/giraffe-read-coat.qmd >}}
+
+-----
+
+{{< include _exercises/eagle-seek-clock.qmd >}}
+
+-----
+<!-- Library for RQ 1
+_exercises/bear-choose-linen.qmd
+_exercises/child-tug-stove.qmd
+_exercises/frog-dig-pot.qmd
+_exercises/puppy-break-mattress.qmd
+-->

@@ -1,0 +1,144 @@
+---
+number-offset: 10
+crossref:
+  exr-title: "Exercise 11."
+  fig-title: "Figure E11."
+  fig-prefix: "Fig E11."
+  tbl-title: "Table E11."
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+<!-- not needed: 
+include _use_webr.qmd
+include ./_extensions/r-wasm/live/_knitr.qmd 
+-->
+
+
+# Exercises: Dynamics {#sec-dynamics-exercises}
+
+{{< include _exercises/kid-ring-screen.qmd >}}
+
+File ID: kid-ring-screen
+
+-----
+
+{{< include _exercises/aspen-dig-laundry.qmd >}}
+
+File ID: aspen-dig-laundry
+
+-----
+
+{{< include _exercises/beech-lead-stove.qmd >}}
+
+File ID: beech-lead-stove
+
+-----
+
+{{< include _exercises/fawn-lend-ring.qmd >}}
+
+File ID: fawn-lend-ring
+
+-----
+
+{{< include _exercises/frog-get-laundry.qmd >}}
+
+File ID: frog-get-laundry
+
+-----
+
+{{< include _exercises/lobster-beat-plate.qmd >}}
+
+File ID: lobster-beat-plate
+
+-----
+
+{{< include _exercises/wolf-choose-stove.qmd >}}
+
+File ID: wolf-choose-stove
+
+-----
+
+{{< include _exercises/fawn-shut-bulb.qmd >}}
+
+File ID: fawn-shut-bulb
+
+-----
+
+{{< include _exercises/dolphin-bring-knob.qmd >}}
+
+File ID: dolphin-bring-knob
+
+-----
+
+{{< include _exercises/fox-sleep-fork.qmd >}}
+
+File ID: fox-sleep-fork
+
+-----
+
+{{< include _exercises/maple-bet-teacup.qmd >}}
+
+File ID: maple-bet-teacup
+
+-----
+
+{{< include _exercises/elm-cost-pencil.qmd >}}
+
+File ID: elm-cost-pencil
+
+-----
+
+{{< include _exercises/calf-pitch-stair.qmd >}}
+
+File ID: calf-pitch-stair
+
+-----
+
+{{< include _exercises/hyena-tear-magnet.qmd >}}
+
+File ID: hyena-tear-magnet
+
+-----
+
+{{< include _exercises/goat-let-window.qmd >}}
+
+File ID: goat-let-window
+
+-----
+
+{{< include _exercises/nephew-sleep-fork.qmd >}}
+
+File ID: nephew-sleep-fork
+
+-----
+
+{{< include _exercises/duck-lend-dish.qmd >}}
+
+File ID: duck-lend-dish
+
+-----
+
+{{< include _exercises/calf-mean-shoe.qmd >}}
+
+File ID: calf-mean-shoe
+
+-----
+
+{{< include _exercises/fly-type-pantry.qmd >}}
+
+File ID: fly-type-pantry
+
+-----
+
+### AI generated:
+
+{{< include _exercises/pig-teach-oven.qmd >}}
+
+
+
+{{< include _devoirs.qmd >}}
+

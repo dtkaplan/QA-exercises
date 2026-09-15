@@ -1,0 +1,32 @@
+---
+title: "An Analysis Approach: Chap 9" 
+subtitle: "Reading Questions"
+crossref:
+  exr-title: "Reading Question 9."
+  fig-title: "RQ-RQ9."
+  fig-prefix: "Fig-RQ9."
+  tbl-title: "Table-RQ9."
+---
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/snail-get-futon.qmd >}}
+
+-----
+
+{{< include _exercises/puppy-get-painting.qmd >}}
+
+-----
+
+{{< include _exercises/snail-leave-saw.qmd >}}
+
+-----
+
+{{< include _exercises/crow-see-blanket.qmd >}}
+
+-----
+
+

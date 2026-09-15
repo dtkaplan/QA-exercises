@@ -1,0 +1,19 @@
+---
+title: "Quantitative Reasoning for Our Time"
+description: "Draft of a trade book about QR-1/2"
+author: "Daniel Kaplan"
+date: "2026-05-15"
+categories: [gentle]
+---
+
+[Is this book for me?](00-for-me.html)
+
+[Why do bicycles have gears?](bicycle-gears.html)
+
+[Poverty, operationalized](poverty-operationalized.html)
+
+[Radon risk](radon-risk.html)
+
+[Choices](choices.html)
+
+

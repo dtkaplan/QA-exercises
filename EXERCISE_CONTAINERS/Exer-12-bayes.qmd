@@ -1,0 +1,71 @@
+---
+number-offset: 9
+crossref:
+  exr-title: "Exercise 10."
+  fig-title: "Figure E10."
+  fig-prefix: "Fig E10."
+  tbl-title: "Table E10."
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+::: {.panel-tabset}
+
+## jaquar-shut-pot
+
+{{< include _exercises/jaquar-shut-pot.qmd >}}
+
+## buck-chew-dress
+
+{{< include _exercises/buck-chew-dress.qmd >}}
+
+## monkey-talk-pants
+
+{{< include _exercises/monkey-talk-pants.qmd >}}
+
+## dingo-eat-saw
+
+{{< include _exercises/dingo-eat-saw.qmd >}}
+
+## turtle-seek-linen in DRAFT
+
+{{< include _exercises/turtle-seek-linen.qmd >}}
+
+:::
+
+
+-----
+
+## Activities
+
+::: {.panel-tabset}
+
+## pollen-cut-lamp
+
+{{< include _exercises/pollen-cut-lamp.qmd >}}
+
+## mouse-bathe-dress
+
+{{< include _exercises/mouse-bathe-dress.qmd >}}
+
+## puppy-fly-fridge
+
+{{< include _exercises/puppy-fly-fridge.qmd >}}
+
+## brother-bid-linen
+
+{{< include _exercises/brother-bid-linen.qmd >}}
+
+## arm-hurt-blouse
+
+{{< include _exercises/arm-hurt-blouse.qmd >}}
+
+:::
+
+

@@ -1,0 +1,153 @@
+---
+number-offset: 14
+crossref:
+  exr-title: "Drill 15."
+---
+
+# Drill Questions: Accumulation
+
+```{r include=FALSE}
+source("_start-up.R")
+source("_software/slope_rose.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+
+:::: {.callout-note collapse=true}
+## A. Units of Accumulation 
+
+::: {.panel-tabset}
+
+## Explain
+
+As you know, different kinds of quantities have different dimensions. The operations of accumulating or differentiation change dimension. This provides an important clue about which operation is appropriate to change a quantity of one kind into another kind.
+
+Both accumulation and differentiation involve a *with-respect-to* quantity. For instance, we might be interested in the amount of harvestable wood from a planted forest. The dimension of harvestable wood is L^3^: a volume. Trees grow over time: dimension T. Naturally, before reaching maturity a tree grows, increasing its volume. The everyday meaning of "grows" suggests a change with respect to time. Differentiating a tree's volume with respect to time produces a volume "growth" rate with dimension L^3^ T^-1^, say, cubic meters per year.
+
+Suppose we have a quantity Q with dimension [Q]. We also have another quantity P with dimension [P]. The derivative of Q with respect to P will have dimension [Q] [P]^-1^. In the growing-tree example, Q was volume of wood and P was time.
+
+The accumulation of Q with respect to P works in a similar way. The result of the accumulation will have dimension [Q] [P]. In other words, accumulation involves *multiplication* by the with-respect-to quantity, while differentation corresponds to *division* by the with-respect-to-quantity.
+
+In addition to relationship shaped by accumulation or differentiation, there is a simpler kind of relationship: *proportionality*. For example, the height (dimension L) of a tree is proportional to the girth (dimension L).  
+
+In the following questions, you are to figure out whether the relationship between two given quantities is accumulation, differentiation, or proportionality.
+
+Remember that we are using L, M, and T as the dimension of length, mass, and time, respectively. For our purposes we have extended this with two dimensions not included in science courses.
+
+- C is the [person], following the Latin *capita*.
+- W is the [worth] or value. We typically measure worth using units of currency, e.g. USD, Euros, etc. But it's more meaningful, if long periods of time are involved, to measure worth as as an index, say "constant dollars" which refers to the dollar value of something at a particular moment in time, adjusting earlier or later values according to account for inflation. 
+
+## 1.
+
+{{< include _exercises/aspen-sing-pan.qmd >}}
+
+## 2.
+
+{{< include _exercises/child-break-jacket.qmd >}}
+
+## 3.
+
+{{< include _exercises/buck-tug-painting.qmd >}}
+
+## 4.
+
+{{< include _exercises/lamb-point-saucer.qmd >}}
+
+
+## 5.
+
+{{< include _exercises/fawn-draw-radio.qmd >}}
+
+## 6.
+
+{{< include _exercises/maple-freeze-hat.qmd >}}
+
+## 7.
+
+{{< include _exercises/buck-hang-pantry.qmd >}}
+
+## 8.
+
+{{< include _exercises/aspen-buy-chair.qmd >}}
+
+## 9.
+
+{{< include _exercises/sister-pay-candy.qmd >}}
+
+## 10.
+
+{{< include _exercises/spider-bid-plate.qmd >}}
+
+
+:::
+
+::::
+
+
+## Still in draft
+
+:::: {.callout-note collapse=true}
+## B. Core modeling functions
+
+::: {.panel-tabset}
+## Explain
+
+An partial motivation for the choice of our core modeling functions is that, often, a core modeling function has a derivative or anti-derivative that is another core modeling function. With enough practice, finding the derivative or anti-derivative of core modeling functions becomes second nature. This greatly facilitates modeling, since if you know either the derivative or the anti-derivative of the function you are ultimately interest in, you can easy know the shape of that function of interest.
+
+We are not planning for you to commit to heart more than a very few of these pairs. Instead, these drill questions in this section will give you a quick introduction.
+
+Each of the following questions plots out *two* functions, side-by-side. At least one of the functions come from the core modeling collection. As well, the functions will always be a derivative/anti-derivative pair. Your job is to identify which is the anti-derivative function and say whether *both* of the functions have shapes from core modeling collection.
+
+`r core_modelings <- c("same()", "flat()", "hill()", "hillside()", "osc()", "recip()", "exp2()", "log2()")`
+
+
+## 1.
+
+{{< include _exercises/duck-swim-candy.qmd >}}
+
+## 2. 
+
+
+## 3.
+
+
+{{< include _exercises/ash-talk-pen.qmd >}}
+
+-----
+
+:::
+
+::::
+
+
+
+
+:::: {.callout-note collapse=true}
+## B. Slopes and anti-derivativess
+
+::: {.panel-tabset}
+
+## Explain
+
+
+{{< include _exercises/squirrel-light-scarf.qmd >}}
+
+## 1.
+
+Show some graphs of f(x) as well as slope segments. Are they for the same function?
+
+Show some graphs of F(x) as well as slope segments. Are they for the same function?
+
+Show some slope segments and ask the student to reconstitute $F()$ and say which core modeling function it is.
+
+
+:::
+
+::::
+
+
+
+

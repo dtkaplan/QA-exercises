@@ -1,0 +1,25 @@
+<!--
+id: "croc-bet-painting"
+created: "Wed Sep  9 10:25:50 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+topic: polynomials
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-croc-bet-painting}
+High school students spend a lot of time working with `r xf_definition("polynomials")`. Most famous is the *quadratic polynomial*, written algebraically as $a x^2 + b x + c$. Polynomials are always linear combinations of simpler functions. The quadratic polynomial involves flat(), same(x), and the product same(x) $\times$ same(x). The "poly" in polynomials means "many." Many of what? The functions that go into the linear combination are called "monomials" and consist of flat(), same(x), same(x) $\times$ same(x), same(x) $\times$ same(x) $\times$ same(x), and so on.
+
+Quadratics and other polynomials played an outsized role in the history of algebra. This is in part a legacy of classical geometric shapes such as squares and cubes. Another historical reason behind the ubiquity of polynomials in mathematics classes is the importance of a mathematical operation called *zero-finding*, which we will meet in `r xf("sec-moving-past-two-inputs")`. Zero-finding is one of a small set of basic operations that are used to transform the information present in a model into a different, more directly useful form.
+
+It used to be that zero-finding was hard to apply to functions generally. Polynomials, particularly the quadratic polynomial, lend themselves to standard, formulaic approaches. Many former math students recognize the most famous of these zero-finding formulas, even if they have no idea what it is for. The formula involves the coefficients on the polynomial:  $x_0 = \frac{b \pm \sqrt{b^2 - 4 a c}}{2 a}$. ($x_0$ stands for the *zeros* of the function $a x^2 + b x + c$.)
+
+Nowadays, there are general computational methods that find zero for just about any function, polynomial or not. These have a long history, but one of the most famous methods, still in use today, was invented by Isaac Newton. (The importance of the method is evidence by the very simple name given to it: "Newton's method.")
+
+Because polynomials have been part of the curriculum for hundreds of years, many people use them to build models. (In part, this is because the standard math curriculum fails to cover other methods that may be more suitable in any given circumstance.) For the model builder, they provide a useful tool, serving more or less like "modeling clay" for mathematics. For the reader or the interpreter of a model, the polynomial itself carries little information about specific mechanisms. In `r xf("sec-rates-of-change")` we will look at more general ways of analyzing models to understand what is happening inside. 
+:::
+ <!-- end of exr-croc-bet-painting -->

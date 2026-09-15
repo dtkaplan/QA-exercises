@@ -1,0 +1,64 @@
+---
+title: "Quantitative Reasoning for Our Time"
+subtitle: "Poverty, operationalized?"
+description: "How the US government defines poverty as a financial measure"
+author: "Daniel Kaplan"
+date: "2026-06-11"
+categories: [gentle]
+---
+
+In 1964, US President Lyndon Johnson declared the "War on Poverty." The war was fought by a variety of programs, some of which are still, sixty years later, components today of the US social safety net: Medicaid, Food Stamps (now SNAP), Head Start. Each program works by providing services and financial aid to eligible individuals and families. 
+
+To determine eligibility, the government takes translate imprecise but plausible notions of poverty into one or more quantities that can be measured. In other words, an individual's or family's state of poverty is a *variable* that gets *operationalized* into a measurable quantity. This quantity can then be used in a *model* of what constitutes being in poverty. Let's call this the poverty model.
+
+In creating a model, choices need to be made. Depending on the context, different choices are appropriate. [Hans Rosling](https://en.wikipedia.org/wiki/Hans_Rosling) (1948-2017) was a physician, global health researcher, and founder of the Gapminder Foundation. Some of his fame stems from his statistical graphics comparing vital statistics of the world's countries, as in @fig-gapminder.
+
+::: {#fig-gapminder}
+![](www/Gapminder-World-2015.png)
+The Gapminder display of 2015 data from many countries comparing average income and life expectancy.
+:::
+
+The variables compared in @fig-gapminder are health and income. I think these are good examples of variables in the sense of QRA, that is, aspects of the real world. The graph itself displays two quantities, each of which is an *operationalization* of the real-world situation. For instance, "Health" is operationalized by *life expectancy at birth* which summarizes the mortality rate at different ages. It doesn't capture other aspects of "Health," for example illness, disability, dependency, activity, and so on. Similarly, "Income" is operationalized by "per capita gross domestic product adjusted for purchasing power."
+
+For an individual person, "income" is generally taken to be the amount of money that flows through that person's hands and accounts. But the quality of the living conditions of any individual are shaped also by social and family arrangements and all sorts of housing and environmental elements. At a national level, "gross domestic product" measures the amount of goods and services produced by the economy *and exchanged for money*. Most of the goods and services we rely on---examples: dinner---are provided only partly by goods and services produced for sale.
+
+The Income scale in @fig-gapminder is marked with two directions: "poor" pointing leftward, "rich" pointing rightward. No income level is given as defining poverty. 
+
+Rosling's definition of poverty is not based on income. He uses observable actions of people to define their poverty status. For example, extreme poverty is characterized by people spending much of the day fetching water and collecting firewood, cooking over open fires, and spending any money they do encounter mainly on food. Children do not generally go to school. This is "Level I" poverty. 
+
+Less extreme, "Level II" poverty is marked by the ability of families to purchase a bicycle and a gas stove, greatly reducing the time needed to collect water and firewood. But there is no access to tap water and no electricity reliable enough to run a refrigerator. Children go to school. 
+
+When President Johnson declared the "War on Poverty," there were still large numbers of Americans living in Level I and II poverty. In 1935, about 20% of the urban population did not have access to safe water. In rural areas, however, 90% lacked such access. Today, about 1% of Americans live in housing without running water. In 1935, about 90% of rural Americans did not have access to electricity. Federal programs in the late 1930s through 1950 vastly reduced this number and, today, it's practically zero. 
+
+Anti-poverty programs like Medicaid, SNAP, and Head Start don't define eligibility based on Rosling's criteria or even based on access to safe water, electricity, and refrigeration. Instead, in 1965, soon after Johnson's declaration of war, a quantitative measure of poverty called the "Official Poverty Level" (OPL) was developed. @fig-poverty-level-2025 shows the 2025 statement of the OPL.
+
+::: {#fig-poverty-level-2025}
+![](www/2025-poverty-level-table.png)
+
+The Official Poverty Level from the US Federal Government for 2025. Each five-digit number is the highest income at which a family of that configuration is deemed to be in poverty. For example, a family consisting of a single mother with two children is the poverty-level income is $25,938.
+:::
+
+Where did the OPL numbers come from? The US Department of Agriculture had a survey estimating the weekly cost (per person) of a nutritionally adequate, "low cost" diet, recognizing that at this cost only a well-informed homemaker could achieve adequate nutrition. The cost depended on age and sex. Food is not the only cost of living, of course. It was assumed that the food expenditures would constitute one-third of total income. The poverty level was therefore set at three times the Department of Agriculture's low cost diet, with some adjustments made for very small households with only one or two persons. (For more details, see M. Orshansky (1963) "Counting the Poor: Another Look at the Poverty Profile" Bulletin of the Social Security administration. [link](https://www.ssa.gov/policy/docs/ssb/v28n1/v28n1p3.pdf)
+
+The Department of Agriculture's estimate of the cost of an adequate diet did not depend on geography. Consequently, neither do the poverty-level numbers derived from it.
+
+There are other, more modern approaches to the problem. The Economic Policy Institute has put together a Family Budget Calculator to estimate for each county in the US the cost of an "adequate but modest" lifestyle including "decent shelter, food, high-quality child care, transportation, health care, and life’s other necessities." The calculator is available at <https://www.epi.org/resources/budget/> and lets the user specify the country as well as the number of adults and the number of children in the household. For the New York City metropolitan area, the 2026 estimate is $83,000 for a 1-person household. By way of contrast, for Austin, Texas (Travis county) the estimate is $57,000. 
+
+
+
+
+DRAW ON THIS FOR EXERCISES LATER. 
+
+- Using the pattern on the diagonal, extrapolate the table for families with two adults and 8, 9, 10, and 11 children. (Simpler, 1 adult and that many children.)
+
+- According to the table, when a child turns 18 how does the poverty level change?
+
+- Summarize the table as a simple function taking into account number of people, number of children, whether the householder is over 65.
+
+
+---
+
+Discussion question: @fig-gapminder is divided into four vertical bands according to per capita GDP. Each band is labeled with a Level. According to Rosling the personal income of people in Level I is about $500 per year. For Level II the personal income is about $1500 per year. But the divisions between levels are made at a much higher level of country-wide per capita GDP. What might account for the difference? Might it matter that per capita GDP is an average across all the people in a country?
+
+
+

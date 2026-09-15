@@ -1,0 +1,102 @@
+---
+number-offset: 11
+crossref:
+  exr-title: "Drill 13."
+---
+
+# Drill Questions: Dynamics 
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+:::: {.callout-note collapse=true}
+## A. Instantaneous flow
+
+::: {.panel-tabset}
+
+## Explain
+
+The *dynamical rule* describes for each location in the state space how fast and in what direction the state will move from that location. For each of these questions, a very small region of state space is shown with one or two arrows indicating which way the flow moves from the circle at the root of the arrow.
+
+## 1.
+
+{{< include _exercises/cheetah-ring-clock.qmd >}}
+
+## 2.
+
+{{< include _exercises/gator-walk-piano.qmd >}}
+
+## 3.
+
+{{< include _exercises/beech-sleep-canoe.qmd >}}
+
+## 4.
+
+{{< include _exercises/lamb-rise-kitchen.qmd >}}
+
+## 5.
+
+{{< include _exercises/oak-ring-socks.qmd >}}
+
+## 6.
+
+{{< include _exercises/cow-sharpen-linen.qmd >}}
+
+## 7.
+
+{{< include _exercises/nephew-do-screen.qmd >}}
+
+::::
+
+
+:::: {.callout-note collapse=true}
+## B. Do state variables influence one another?
+
+::: {.panel-tabset}
+
+## Explain
+
+In each of the following questions, a flow field is shown. In general, the rate of change of one component of the state can vary (or not) depending on itself or the other components of the state. (Here we have just two components.) 
+
+## 1.
+
+{{< include _exercises/turtle-sing-socks.qmd >}}
+
+## 2. 
+
+{{< include _exercises/goldfish-sleep-lamp.qmd >}}
+
+## 3. 
+
+{{< include _exercises/fish-toss-boat.qmd >}}
+
+:::
+
+::::
+
+:::: {.callout-note collapse=true}
+## C. Flows and trajectories
+
+
+
+::: {.panel-tabset}
+
+## 1.
+
+{{< include _exercises/fox-tell-dress.qmd >}}
+
+## 2.
+
+{{< include _exercises/rabbit-lead-socks.qmd >}}
+
+-----
+
+:::
+
+::::
+

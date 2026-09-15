@@ -1,0 +1,88 @@
+---
+title: "An Analysis Approach: Chap 12" 
+subtitle: "Reading Questions"
+crossref:
+  fig-title: "Figure RQ12-"
+  fig-prefix: "Fig RQ12-"
+  tbl-title: "Table RQ12"
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+{{< include _devoirs.qmd >}}
+
+@fig-exp-three-likelihood shows three *hypotheses* about the time between so-called hundred-year storms. Of course, there is no fixed time; the time from the last big storm to the next big storm is uncertain. ("Hundred-year" storms are identified by the storm magnitude, not timing, based on statistical analysis of past storms and the intervals between them.) 
+
+We express the uncertainty with a *probability distribution*, as described in `r xf("sec-uncertainty")`. The exponential distribution is the standard model for the time until the next event. So all three hypotheses in @fig-exp-three-likelihood have the exponential form. Where they differ is in the *rate* of the storms. Hypothesis N (for neutral) says the rate for hundred-year storms is 1 per 100 years, just what you would expect from the name "hundred-year storm." Hypothesis S (for "sceptic") is that the rate for hundred-year storms is actually one per one-hundred fifty years. Hypothesis C (for "climate") is that, with climate change, the rate for hundred-year storms is 1 per 50 years. 
+
+```{r}
+#| label: fig-exp-three-likelihood
+#| echo: false
+#| warning: false
+#| fig-cap: "Three competing hypotheses for the interval until the next so-called 100-year storm."
+Curves <- tibble::tibble(
+  interval = 0:200
+)
+N <- Curves |>
+  mutate(prob = dexp(interval, rate = 1/100), hypothesis = "N (100yr)")
+S <- Curves |>
+  mutate(prob = dexp(interval, rate = 1/150), hypothesis = "S (150yr)")
+C <- Curves |>
+  mutate(prob = dexp(interval, rate = 1/50), hypothesis = "C (50yr)")
+All <- bind_rows(N, S, C)
+All |>
+  gf_line(prob ~ interval, color = ~ hypothesis) |>
+  gf_labs(y = "Relative probability", x = "Interval between storms (yr)") |> 
+  gf_theme(theme_minimal())
+```
+1. @fig-exp-three-likelihood is just about hypotheses. A likelihood is not a hypothesis, but rather something calculated in the context of a specific hypothesis. What is that "something"?
+
+`r devoirs::devoirs_text("RQ9-something")`
+
+2. Assign a likelihoood to each of the hypotheses in @fig-exp-three-likelihood in the context of having just observed the next "100-year"-magnitude storm, which arrived only 0 years after the previous one. (Hint: You can read the answer directly from @fig-exp-three-likelihood.) 
+
+`r devoirs::devoirs_text("RQ9-L-for-50")`
+
+3. Similarly to (2), assign a likelihood to each of the hypothesis in @fig-exp-three-likelihood in the context of having just observed the next "100-year"-magnitude storm, which arrived 150 years after the previous one. (Hint: Same as in (2).)
+
+`r devoirs::devoirs_text("RQ9-L-for-150")`
+
+4. @fig-exp-three-L-function shows the *likelihood function* for a different observation: a "100-year" magnitude storm that comes **30** years after the last one. There is an exact correspondence between the colored *curves* in @fig-exp-three-likelihood and the colored *points* in @fig-exp-three-L-function. Explain why the colored points are where they are. (Hint: Remember, the observed storm came after an interval of 30 years.)
+
+```{r}
+#| label: fig-exp-three-L-function
+#| echo: false
+#| warning: false
+#| fig-cap: "Likelihood function for the observation of a 30-year interval before the just-observed \"100-year\" amplitude storm."
+Pts <- tibble::tibble(
+  rate = 30,
+  theory = c(100, 150, 50), 
+  prob = dexp(30, rate = 1/theory), hypothesis = c("N(100yr)", "S(150yr)", "C(50yr)")
+  )
+slice_plot(dexp(30, rate = 1/rate) ~ rate, domain(rate = 0:200), npts = 300, alpha = 0.5) |>
+  gf_point(prob ~ theory, color = ~ hypothesis, data = Pts, size = 2) |> 
+  gf_theme(theme_minimal())
+```
+
+5. The *likelihood ratio* between the C and S hypotheses, as evidenced by the observed 30-year interval, is 2.015. Explain what features in @fig-exp-three-L-function indicates this value for the likelihood ratio.
+
+`r devoirs::devoirs_text("RQ9-Lfun")`
+
+6. Translate the likelihood ratio of 2.015 into a verbal description of the "strength" of the C hypothesis compared to the S hypothesis.
+
+`r devoirs::devoirs_text("RQ9-words")`
+
+7. The likelihood ratio and verbal description in (5) and (6) are based on only *one observation*: a 30-year interval between so-called "100-year" storms. Refer to @fig-exp-three-likelihood, is there *any* possible observation that would give even "moderate" evidence for a preference for one of the three hypotheses.
+
+`r devoirs::devoirs_text("RQ9-any")`
+
+Note: It's hard to draw conclusions from just a single observation. Instead, the likelihoods from each of many observations would be combined to form a conclusion. Importantly, those observations need to take the form of not just observed intervals between storms, but also observations for places that have not yet had a storm. For such no-storm-yet locales, the relative probability functions under the three hypotheses would have a different shape than in @fig-exp-three-likelihood. In order to explain that new shape, we will need techniques from `r xf("sec-accumulation")`. Stay tuned!
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+---
+title: "Topics for Quantitative Reasoning at UATX"
+description: "Choosing topics for the Quantitative Reasoning courses"
+author: "Daniel Kaplan"
+date: "2025-12-22"
+categories: [instructors, topics]
+---
+
+The Quantitative Reasoning component (QR) of the UATX Intellectual Foundations core consists of two, three-credit courses. The two courses are required for all first-year students (with some exceptions to be noted below). That's six credits required for all students. It's hard to think of a non-engineering school that has such an extensive requirement for *all* students. If there is any math requirement at all, it's usually one class from a long list of unconnected possibilities.
+
+But QR is not designed as a math requirement. It is intended to provide students with the quantitative skills needed to make sense of the world---especially the "social" aspects of the world: economy, health care, policy, etc.---and to support drawing informed conclusions and making decisions. (The reader is invited to contemplate for themself whether traditional math requirements such as algebra or calculus serve this purpose. I think the answer is, "not much.")
+
+At the broadest level, the QR topics ought to address the intentions for having the requirement. 
+
+1. Making sense of the world.
+2. Drawing informed conclusions.
+3. Decision making.
+
+To meet these intentions, we have designated two overarching themes.
+
+a. Data and inference, that is, figuring out what you can rightly claim to know based on the data you have or could get.
+b. Systems and modeling, that is, constructing a framework for expressing the mechanisms at play in the systems we work with. 
+
+COHERENCE as the measure of the centrality of a topic. Contributing to helpful habits of mind. 
+
+NOT SO MUCH: mathematical optimization or technical problems such as the travelling salesman problem. Things that are of interest for their own sake but without much applicability. Topics that don't contribute directly and realistically to the intentions for the course.
+
+DAGS
+
+```{mermaid}
+graph LR
+  X(X)
+  Y(Y)
+  Z(Z)
+  U(U)
+  V(V)
+  W(W)
+
+  X --> W
+  Z --> W
+  W --> U
+  Y --> U
+  U --> V
+  Y --> V
+
+  
+{{< include ../../mermaid-classes.txt >}}
+
+class X exogenous
+class Y exogenous
+class Z exogenous
+```
+
+Prime factorization and public/private key encryption. You'll never have an adequate understanding to do anything beyond what the existing apps do for you, you'll never be able to check that the system architecture is secure.
+
+Discrete optimization---
+
+Limits and real analysis---appeals only to people who are concerned about edge cases. No evidence that a general student can learn it.
+

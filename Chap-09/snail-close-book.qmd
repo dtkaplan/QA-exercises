@@ -1,0 +1,20 @@
+<!--
+id: "snail-close-book"
+created: "Wed Sep  9 10:13:52 2026"
+attribution: DTK
+chapter: 9
+mode: discussion/exercise
+status: sketch
+group: x_drafts
+topic: "regression to the mean"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-snail-close-book}
+
+Regression to the mean.
+
+:::
+ <!-- end of exr-snail-close-book -->

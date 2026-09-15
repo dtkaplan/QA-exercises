@@ -1,0 +1,20 @@
+<!--
+id: "seaweed-understand-blouse"
+created: "Mon Sep 14 09:38:42 2026"
+attribution: DTK
+mode: drill
+status: sketch
+chapter: 9
+group: drills
+topic: "linear combination"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-seaweed-understand-blouse}
+Drawing on the school performance example, find the units and dimension of each of the coefficients `A`, `B`, `C`, `D`, and `E` in the linear combination
+
+
+:::
+ <!-- end of exr-seaweed-understand-blouse -->

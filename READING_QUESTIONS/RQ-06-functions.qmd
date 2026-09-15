@@ -1,0 +1,39 @@
+---
+crossref:
+  exr-title: "Reading Questions 6."
+  fig-title: "RQ-RQ6."
+  fig-prefix: "Fig-RQ6."
+  tbl-title: "Table-RQ6."
+---
+
+# Reading Questions: Chap 6 Functions {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/aspen-talk-pantry.qmd >}}
+
+-----
+
+{{< include _exercises/brother-lose-scarf.qmd >}}
+
+-----
+
+{{< include _exercises/boy-begin-shirt.qmd >}}
+
+-----
+
+{{< include _exercises/seal-form-glasses.qmd >}}
+
+-----
+
+{{< include _exercises/leg-fight-stair.qmd >}}
+
+-----
+
+
+
+
+

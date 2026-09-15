@@ -1,0 +1,23 @@
+---
+title: "An Analysis Approach: Chap 14" 
+subtitle: "Reading Questions"
+crossref:
+  exr-title: "Reading Question 14."
+  fig-title: "Figure RQ14-"
+  fig-prefix: "Fig RQ14-"
+  tbl-title: "Table RQ14"
+---
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/cheetah-stand-mattress.qmd >}}
+
+-----
+
+
+
+
+

@@ -118,3 +118,19 @@
   mode: exercise
   group: dimensions
   rank: 1
+- file: elephant-hold-knob.qmd
+  status: ready-to-use
+  mode: exercise
+  group: dimensions
+  rank: 1.0
+- file: puppy-hang-blanket.qmd
+  status: ready-to-use
+  mode: exercise
+  group: units
+  rank: 1.0
+- file: reptile-beat-window.qmd
+  status: ready-to-use
+  mode: reading-question
+  group: reading-questions
+  rank: 1.0
+

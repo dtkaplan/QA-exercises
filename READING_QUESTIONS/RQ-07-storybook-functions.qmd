@@ -1,0 +1,45 @@
+---
+crossref:
+  exr-title: "Reading Question 7."
+  fig-title: "RQ-RQ7."
+  fig-prefix: "Fig-RQ7."
+  tbl-title: "Table-RQ7."
+---
+
+# Reading Questions: Chap 7 Basic Functions {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+
+1. What is the distinction between the `exp2()` and `log2()` functions?
+
+`r devoirs::devoirs_text("rq06-double")`
+
+2. What does "periodic" mean in terms of a function?
+
+`r devoirs::devoirs_text("rq06-periodic")`
+
+3. Which of the core modeling functions comes closest to giving as output the *magnitude* of the input?
+
+`r devoirs::devoirs_text("rq06-magnitude")`
+
+4. Which of the core modeling functions never has the output zero? (Hint: There might be more than one.)
+
+`r devoirs::devoirs_text("rq06-zero")`
+
+5. What is the point of constructing a function by scaling the input of a core modeling function?
+
+`r devoirs::devoirs_text("rq06-input-scaling") `
+
+
+
+
+
+
+
+
+

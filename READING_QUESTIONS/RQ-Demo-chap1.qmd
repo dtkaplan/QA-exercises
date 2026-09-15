@@ -1,0 +1,32 @@
+---
+title: "Short Demography: Chap 1" 
+subtitle: "Reading Questions"
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _status/draft_DTK.qmd >}}
+
+{{< include _devoirs.qmd >}}
+
+{{< include _status/refine_DR.qmd >}}
+
+(Not really assigned to DR, but just to illustrate how the status system works.)
+
+1. Give a compelling example of how "demography is destiny," preferably one not listed in the chapter.
+
+`r devoirs::devoirs_text("RQ-Demo-1-a")`
+
+2. According to the chapter, who were the primary figures in the emergence of demography as a discipline starting in the 17th and 18th centuries?
+
+`r devoirs::devoirs_text("RQ-Demo-1-b")`
+
+3. What is meant by the "*demographic transition*?"
+
+`r devoirs::devoirs_text("RQ-Demo-1-c")`
+
+4. The chapter states that world population increased from 5 million to 1 billion in the 7000 years leading up to 1800. Was this a faster or slower growth than has occurred since 1930?
+
+`r devoirs::devoirs_text("RQ-Demo-1-d")`

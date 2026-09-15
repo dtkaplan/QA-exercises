@@ -1,0 +1,28 @@
+---
+number-offset: 15
+crossref:
+  exr-title: "Drill 16."
+---
+
+# Drill Questions: Operations
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+::: {.panel-tabset}
+## 1.
+
+{{< include _exercises/toe-lose-pen.qmd >}}
+
+## 2.
+
+{{< include _exercises/daisy-blow-kitchen.qmd >}}
+
+
+:::
+

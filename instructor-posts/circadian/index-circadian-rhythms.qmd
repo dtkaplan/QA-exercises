@@ -1,0 +1,136 @@
+---
+title: "Dynamics of Circadian Rhythms"
+description: "The mechanism of waking up at about the same time every day."
+author: "Daniel Kaplan"
+date: "2026-02-22"
+categories: [circadian, dynamics]
+---
+
+Sleep is a universal human trait, and not just for humans, for all mammals. And not just mammals. Even single-cell plankton show a 24-hour cycle of rising and falling from the ocean surface.
+
+Naturally, sleep is an important cultural organizer. Most people wake up in the early morning and would do so even without an alarm clock. Our work and school life are organized to take advantage of the hours when we are most alert. People can be night owls or earlybirds and there is a strong moral vein in western society (at least) of treating an early-morning wake time as praiseworthy and disparaging those who struggle to get up on time, that is, most teenagers. (Very young kids are reknown for waking up early, to their parent's distress.)
+
+Almost everybody finds it easy to stay up an extra hour or two in the evening. But equally, almost everybody finds it hard to wake up an hour to two earlier in the morning.
+
+When we travel long east-west distances by jet, we suffer from "jet lag." It takes more or less one day per hour of time shift to recover. It appeaars that the severity of jet lag depends on the time of day at our arrival destination, morning being best.
+
+What mechanisms are behind this rich array of sleep-wake phenomena? Biologically, humans (and other creatures) have a built-in circadian rhythm. The word "circadian" combines the Latin *circa* meaning "about" or "approximately," and *dia* for day. Left to our own devices, that is, without the cues of changing daylight and darkness and without social prompts (such as meals) or other time-giving cues, almost everyone will enter a sleep-wake cycle that is about 25 hours long.^[In situations which are absolutely without time cues, people will shift back and forth for periods of about a week from having 25-hour days to having 50-hour days. The experimental subjects who have volunteered for a regime without time cues to not generally notice the switch, except for reporting that their meals seem to have gotten smaller when on the 50-day rhythm. But we will stick here with the less extreme circadian phenomena of those who participate in daily life.]
+
+The other biological phenomenon that's highly relevant is that our body surface is sensitive to light. This is true even for most blind people. 
+
+We are going to put together the circadian and light sensitivity mechanisms into a model to account for why people of different ages wake up earlier or later in the solar day. 
+
+First, however, let's consider a mathematical fact about dynamical systems, at least those with a state space that is one- or two-dimensional. Those system are, to be honest, a little boring. For one-dimensional systems, there are only two eventual outcomes:
+
+i. The state settles down to a "fixed point" where it rests, forever.
+ii. The state heads off to infinity. 
+
+For two-dimensional dynamical systems, there is a third possible outcome:
+
+iii. The system enters into a cycle, where the trajectory comes back to itself periodically.
+
+This state of affairs stems from the rule that at each point in state space, the dynamical rule uniquely specifies the direction in which the trajectory will pass that point. In other words, a trajectory can never cross itself.
+
+An pencil-and-paper exercise will quickly reveal the consequences that stem from the prohibition of on trajectory crossing itself. We won't have to define an explicit dynamical rule, you'll be making that up consciously or subconsciously as the exercise proceeds.
+
+1. Place a pencil tip whereever you like on a clean piece of paper.
+
+2. Move the pencil continuously, never lifting the tip from the paper. Doing this will, of course, make a track on the paper. This is the trajectory that results from your dynamical system.
+
+3. Keep moving the pencil but be careful. YOU MAY NEVER cross over a previously existing track. You are welcome to bring the pencil tip parallel or anti-parallel to an existing track, or even to merge the pencil tip with an existing track in a manner similar to how cars entering a highway merge with the cars already on it. But you can't cross traffic, just merge with it. Naturally, you can't merge with ongoing traffic since then the flow would have two different directions at one point. 
+
+It is likely that you will draw yourself into a cul-de-sac created by early parts of the trajectory. When this happens, you will need to find a way out that doesn't cross the previously created trajectory.
+
+If you find yourself cornered with no way out, feel free to start anew on a fresh piece of paper, after you've strategized how to avoid such difficulties. Take heed, however. You won't be able to keep the pencil moving on the paper without eventually trapping yourself in your own history.
+
+The point of this exercise is to convince you that dynamics in two dimensional state spaces either reach a periodic orbit or must eventually stop at a fixed point. That's not how life works, however.
+
+We've been limited to studying dynamics in a two-dimensional state space because that's the space in which we can draw pictures of trajectories and flow fields. But in order to produce non-repetitive, interesting dynamics, we need a larger state space. A three-dimensional state space will do.
+
+@fig-lorenz-trajectory, taken from a Wikipedia page, shows an example of a dynamical system with a three-dimensional state. The dynamics are demonstrated by a little black dot. 
+
+::: {#fig-lorenz-trajectory}
+
+![](../../www/Lorenz_Attractor.gif)
+
+The Lorenz dynamical system. [[Source](https://commons.wikimedia.org/wiki/File:A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif) ]
+
+:::
+
+Although it may at first appear that the dot is crossing previous trajectories, this is an illusion of drawing the three-dimensional trajectory on a two-dimensional surface.
+
+This particularly dynamical system, originally devised as simplification of convection in a weather model, has been incredibly influential. It is, together with Ray Bradbury, the source of the so-called "butterfly effect." A lot of interesting mathematics has emerged from studying it. For instance, the ball moves on an object that contains the trajectory infinitely far into the future. That object is a *fractal*. In this case, the fractal---the object---is not three dimensional, it is $2.06\pm 0.01$ dimensional. An important practical consequence of the never-repeating trajectory is the realization that weather forecasting models will never get much better than they are today: the butterfly effect in action. Watch the movie for a while and you'll see that the ball *seemingly* randomly moves from the left butterfly wing to the right wing. It's not actually random, but it's practically impossible to say which side the ball will be on far in the future.
+
+Returning to circadian rhythms ... We want to show a simple model that combines the two mechanisms described previously in a way that accounts for many of the phenomena that are seen in circadian rhythms. The model is "mostly" two dimensional: a flow field that carries the state in a period orbit. The period is that of the circadian rhythm, about 25 hours. (The rhythm we are modeling governs activity/sleep/wake.)
+
+::: {#fig-circadian-1 layout-ncol=2}
+![Initial state](../../www/circadian/a2.png){width=150}
+
+![3 circadian hours later](../../www/circadian/a3.png){width=150}
+
+![5 circadian hours later](../../www/circadian/a4.png){width=150}
+
+The dynamics of the circadian state: simple progression through the hours. The dots are spaced by one *circadian* hour. The *solar* time of day is another oscillator with a period of 24 hours (not shown). The blue circle represents one *circadian day*, longer than 24 hours for mammals.
+:::
+
+The part of the dynamics that's not two dimensional is another component that itself has a perfectly regular period of 24 hours: the length of the solar day. Those two simple two-dimensional periodic oscillators are combined (in the model) in a simple way. At a certain time in the 24-hour period, say 6 am, the state of the circadian oscillator is lifted up and moved straight to the left. Then the circadian oscillator continues on its regular, simple way until the solar oscillator once again reaches 6am.
+
+::: {#fig-circadian-2 layout-ncol=2}
+![2 hours after solar morning](../../www/circadian/a5.png){width=150}
+
+![6 hours later](../../www/circadian/a6.png){width=150}
+
+![Solar morning the next day.](../../www/circadian/a7.png){width=150}
+
+ When the solar oscillator reaches morning (e), the *circadian* position is moved directly to the left and continues in the usual way. The next morning (f) the circadian phase is again moved to the left.
+
+:::
+
+Frame F shows the shift after two successive mornings. The second morning occurs *later* in the circadian cycle. (Morning is always the same time in the solar cycle.) Effectively, the person woke up later on the second day than on the first. We use the name "circadian wake-up" to refer the circadian time when solar morning occurs
+
+## Animation
+
+Following the progression of the system over many days helps to establish whether circadian wake-up is phase-locked to the solar cycle or drifts over the days. An animation is a good way to show the movement of the wake-up time.
+
+The R function copied below, `circadian()`, creates an animation. Using it has four steps:
+
+1. Copy the R code from this document into the RStudio console and run it to create the function. (This is needed only once in each R session.)
+
+2. Move to the console and give the command `circadian()`. A picture will appear in the RStudio "Plots" tab.
+
+3. Making sure the cursor is in the console tab, press RETURN to move on to the next frame of the animation. Holding RETURN down will advance quickly through many frames. 
+
+4. When finished, press the ESC key to return to the R prompt. 
+
+## Exploring
+
+The state of the system is shown each *solar* hour. The phase of the circadian rhythm is the position of the leading dot on the circle. (The following dots are just to give a better visual sense of motion.) 
+
+There are two parameters you can set to explore a range of circadian patterns.
+
+- `human` is the length of the circadian cycle, denominated in solar hours. By default it's set to 25.6, which is reasonable for typical humans.
+- `pulse` is the size of the solar morning pulse that resets the circadian time. It is shown graphically in the animation as the length of the horizontal line. 
+
+Two points to note after running the animation over many solar days:
+
+1. Do the morning events (marked by the horizontal lines) line up at the same circadian phase? If so, the person is phase locked to the solar day. If not, the wake-up time drifts. That is, wake-up each day comes at a different physiological time. 
+
+2. If phase-locked, what is the phase in the circadian cycle when solar morning occurs? The size of the pulse influences when in the circadian cycle the phase locking occurs. Teenagers, who often find solar or social morning comes too early in their circadian cycle for them to easily wake up, are modeled by a pulse near 0.5. Older adults, for whom solar morning comes later in the circadian cycle, are ready to wake up.
+
+You can also explore the effects of jet lag, for instance whether the response to jet lag depends on the time in the circadian cycle when the travel occurs. To take a trip *eastwards* across six time zones, press the **e** key (followed by RETURN), then go back to pressing RETURN repeatedly without any other key. The **w** key will send you on a western trip.
+
+This simple model replicates several circadian phenomena, and points out that the teenage preference to sleep in can be explained by biology rather than morality. More realistic models involve two coupled physiological oscillators with different periods: the activity/sleep oscillator shown here and a faster oscillator associated with body temperature. One consequence of severe jet lag is that the oscillators coupling breaks down and is re-established only when the two oscillators once more come close to one another in phase.
+
+## The `circadian()` function 
+
+```{r}
+
+{{< include ../../_software/circadian.R >}}
+
+```
+
+
+
+
+
+

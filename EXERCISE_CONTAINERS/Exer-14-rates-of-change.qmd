@@ -1,0 +1,102 @@
+---
+number-offset: 11
+crossref:
+  exr-title: "Exercise 12."
+  fig-title: "Figure E12."
+  fig-prefix: "Fig E12."
+  tbl-title: "Table E12."
+---
+
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+<!-- not needed: 
+include _use_webr.qmd
+include ./_extensions/r-wasm/live/_knitr.qmd 
+-->
+
+# Chapter 12 Exercises {#sec-rates-of-change-exercises}
+
+
+{{< include _exercises/rabbit-fight-ring.qmd >}}
+
+File ID: rabbit-fight-ring
+
+-----
+
+
+{{< include _exercises/bear-pay-fork.qmd >}}
+
+File ID: bear-pay-fork
+
+-----
+
+{{< include _exercises/bear-sing-closet.qmd >}}
+
+File ID: bear-sing-closet
+
+-----
+
+{{< include _exercises/ash-ride-window.qmd >}}
+
+File ID: as-ride-window
+
+-----
+
+{{< include _exercises/rhinosaurus-buy-screen.qmd >}}
+
+File ID: rhinosaurus-buy-screen
+
+-----
+
+{{< include _exercises/sister-make-scarf.qmd >}}
+
+File ID: sister-make-scarf
+
+-----
+
+{{< include _exercises/hamster-say-blouse.qmd >}}
+
+File ID: hamster-say-blouse
+-----
+
+
+{{< include _exercises/owl-take-bulb.qmd >}}
+
+File ID: owl-take-bulb
+
+-----
+
+{{< include _exercises/pig-sit-room.qmd >}}
+
+File ID: big-sit-room
+
+-----
+
+{{< include _exercises/pony-bite-suitcase.qmd >}}
+
+-----
+
+NOW USE THE DIALOGUE in Farmer as a realistic source of the rate information given.
+
+## In-class project?
+
+{{< include _exercises/pine-teach-mug.qmd >}}
+
+File ID: 
+
+-----
+
+
+### AI generated
+
+{{< include _exercises/dog-tear-radio.qmd >}}
+
+
+
+
+{{< include _devoirs.qmd >}}
+

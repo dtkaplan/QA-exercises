@@ -1,0 +1,62 @@
+---
+number-offset: 8
+crossref:
+  exr-title: "Exercise 9."
+  fig-title: "Figure E9."
+  fig-prefix: "Fig E9."
+  tbl-title: "Table E9."
+---
+
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+<!-- not needed: 
+include _use_webr.qmd
+include ./_extensions/r-wasm/live/_knitr.qmd 
+-->
+
+
+
+# Exercises: Likelihood {#sec-likelihood-exercises}
+
+:::: {.panel-tabset}
+## brother-lead-sheet
+
+{{< include _exercises/pollen-wish-hamper.qmd >}}
+
+## brother-lead-sheet
+
+{{< include _exercises/brother-lead-sheet.qmd >}}
+
+## elbow-leave-jacket
+
+{{< include _exercises/elbow-leave-jacket.qmd >}}
+
+## duck-pitch-chair
+
+{{< include _exercises/duck-pitch-chair.qmd >}}
+
+## snake-hold-ring
+
+{{< include _exercises/snake-hold-ring.qmd >}}
+
+## camel-break-futon
+
+{{< include _exercises/camel-break-futon.qmd >}}
+
+## owl-go-sofa
+
+{{< include _exercises/owl-go-sofa.qmd >}}
+
+## arm-think-sheet
+
+{{< include _exercises/arm-think-sheet.qmd >}}
+
+::::
+
+
+

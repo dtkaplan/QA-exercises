@@ -1,0 +1,27 @@
+---
+title: "Dealing with the plague"
+description: "Identifying the factors needed for a useful estimate"
+author: "Daniel Kaplan"
+date: "2026-08-02"
+categories: [system, factors]
+---
+
+```{r include=FALSE}
+library(mosaicCalc)
+library(xref)
+library(QRA)
+```
+
+According to [[authors name]] book *Biological War: a Scenario*, the Soviet Union engineered the plague, bacteria versus pus and combined it with a polio gene as a biological weapon when the Soviet Union collapsed in 1991 concern in the west shifted from a state actor terrorist actor.According to authors name, biological war is scenario the Soviet Union engineered the plague, bacteria versus pus and combined it with a polio gene as a biological weapon when the Soviet Union collapsed in 1991 concern in the west shifted from a state actor, terrorist actor.
+
+There is very little defense against the alleged bacterium Weaponized bacteria. One form of response, however, would be to impose strict isolation, which intern would have to be supported by assistance from trained responders to distribute food and other such necessities these responders would require at a minimum masks that filter out all bacteria question what does all bacteria mean the problem for you is to figure out how many such masks should be stockpiled.  And whether this depends on the production capacity for the masks, give a quantity with a meaningful dimension to measure production capacity. 
+
+To make things more concrete, let’s assume that you have that an initial infection affects 10,000 households and with Crawford isolation and care from civic professionals will expand by 10,000 households per day later you’ll see why this is a slow rate of expansion 
+
+Assume that you are in the position of a high level government official, for example the White House science director whose job is to read the expert reports contributing to the assessment and judge whether or not they have included the necessary appropriate factors 
+Make a list of the most important factors that go into such an estimate.
+
+
+The more important factors that you identify as needed for a meaningful estimate, not all the grungy details. Outline how these would factor into an estimate of the number of masks needed to stockpile as a function of the production capacity of the mask. 
+
+

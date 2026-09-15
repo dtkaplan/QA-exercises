@@ -1,0 +1,24 @@
+---
+title: "An Analysis Approach: Chap 13" 
+subtitle: "Reading Questions"
+crossref:
+  exr-title: "Reading Question 13."
+  fig-title: "Figure RQ13-"
+  fig-prefix: "Fig RQ13-"
+  tbl-title: "Table RQ13"
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/oak-swim-bed.qmd >}}
+
+{{< include _exercises/cheetah-feel-teacup.qmd >}}
+
+
+
+

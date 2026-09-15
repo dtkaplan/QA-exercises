@@ -1,0 +1,163 @@
+---
+number-offset: 3
+crossref:
+  exr-title: "Drill 4."
+---
+# Drill Questions: Chap 3 Rates {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+:::: {.callout-note collapse=true}
+## Dimensions
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d04"`
+::: {.panel-tabset}
+
+## `r cc()`
+
+
+`r devoirs::devoirsTF(correct = TRUE, id="R-3-11")` A rate is a quantity.
+
+
+## `r cc()`
+
+The dimension of a rate is:
+```{mcq}
+#| label: R-3-12
+1. The dimension of the numerator (the quantity on top).
+2. The dimension of the denominator (the quantity on the bottom).
+3. The dimension of the numerator divided by the dimension of the denominator. [correct]
+4. Rates do not have a dimension. [hint: Wrong. A rate is a quantity. Quantities *always* have a dimension!]
+```
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))` A *compound rate* is a quantity.
+
+## `r cc()`
+What is the conversion factor ("flavor of one") for converting an angle measured in radians into degrees?
+
+```{mcq}
+#| label: R-3-14
+1. 0.01745 radian/degree [hint: Sorry. We're converting *to* degrees, so that must be on top.]
+2. 57.30 degree/radians [correct]
+3. 0.01745 degree [hint: Sorry, this isn't a flavor of one.]
+4. 57.30 radians [hint: Sorry, this isn't a flavor of one.]
+```
+
+<!-- Opening answer: Drill-questions-9Hx -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+The angle spanning a half circle has *180 degrees* or, the same thing, *3.14159 radians*. Since the two are the same, dividing one by the other gives a flavor of one. Since we are converting *to degrees* from radians, degrees need to be be on top and radians on the bottom: $$\frac{180}{3.14159} \ \frac{\text{degree}}{\text{radian}} = 57.30 \frac{\text{degree}}{\text{radian}}\ .$$
+
+[..id..]{data-tooltip="Ans id: Drill-questions-9Hx"}
+:::
+<!-- closing answer Drill-questions-9Hx -->
+
+
+## `r cc()`
+
+A student wrote, "Multiplying the km value by 0.621371 turns kilometers into miles." Conversion factors between units with the same dimension always take the form of a flavor of one. 
+
+Which of these quantities is a flavor of one?
+
+```{mcq}
+#| label: d03-km-mi
+#| inline: true
+1. 0.621371 [hint: No. The number 0.621371 is obviously *less* than 1, so it cannot be a flavor of one.]
+2. 0.621371 km per mile [hint: On the plus side, this quantity has units that are both of the same dimension, namely, L. However it's not a flavor of one because 0.621371 km is not equal to 1 mile. 0.621371 km is roughly one-third of a mile.]
+3. 0.621371 mile per km [correct hint: A km is less than a mile. So we take only part of a mile (0.621371 miles, to be exact) to reach a km.]
+```
+
+:::
+
+::::
+
+
+:::: {.callout-note collapse=true}
+## Rates of change
+
+`r cc <- drill::new_drill_counter(style = "ROMAN")`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+`r drill::rate_of_change("m", "hour", id = cc(id), seed = 92)`
+
+## `r cc()`
+
+`r drill::rate_of_change("m/s", "kg", id = cc(id), seed = 82)`
+
+## `r cc()`
+
+`r drill::rate_of_change("pint", "dollar", id = cc(id), seed = 892)`
+
+## `r cc()`
+
+`r drill::rate_of_change("acre-ft", "hour", id = cc(id), seed = 89)`
+
+## `r cc()`
+
+`r drill::rate_of_change("cars per capita", "million USD", id = cc(id), seed = 8)`
+
+## `r cc()`
+
+You're thinking about going into business hauling packages in your car. Naturally, you want to know if adding cargo weight will cost you extra in gasoline. So you did an experiment.
+
+1. You measured your van's fuel economy *without* cargo: 25 mpg
+2. You added 500 lbs cargo and again measured fuel economy: 23 mpg
+
+**Questions**:
+
+a) What is the rate of change of fuel economy with respect to cargo weight?
+
+```{mcq}
+#| label: d03-fuel-a
+#| inline: false
+1. -0.46 mpg per lb. [hint: Sorry. Remember to look at the *change* in each quantity, not the absolute amount of the quantity.]
+2. -0.004 mpg per lb. [correct]
+3. 0.004 mpg per lb. [hint: Think again. Extra cargo cause fuel economy to go down, so the rate of change should be *negative*.]
+4. -0.004 lb per mpg [hint: The units are upside down. The units of the with-respect-to quantity should be on the bottom.]
+```
+
+-----
+
+Oops! You charge shipping using a rate of dollars per (pound mile). But you forgot to weight the cargo before heading out. You drive 100 miles and consume 4.8 gallons of fuel. The same trip without cargo would consume 4.1 gallons of fuel. What is the weight of your cargo (in lbs.)? (Hint: You'll need the rate of change from question (a), or maybe you need its reciprocal.)
+
+(b) What's your miles per gallon without cargo, according to your measurements? (All the choices below have units of miles per gallon.)
+
+`r devoirs::devoirs_set(choices = c(24.4, 20.8, 0.041, 0.48, round(runif(5, min = 20, max = 30), 1)), correct = 24.4, id = cc("d03-b"), n=5)`
+
+-----
+
+(c) What's your miles per gallon with cargo, according to your measurement? (All the choices below have units of miles per gallon.)
+
+`r devoirs::devoirs_set(choices = c(24.4, 20.8, 0.041, 0.48, round(runif(5, min = 20, max = 30), 1)), correct = 20.8, id = cc("d03-c"), n=5)`
+
+-----
+
+(d) What's the change in miles per gallon produced by the cargo weight? (All the choices below have units of miles per gallon.)
+
+`r devoirs::devoirs_set(choices = round(runif(10, min = -4.7, max = 4.7)), correct = -3.6, id = cc("d03-d"), n=5)`
+
+-----
+
+(e) To convert the change in miles per gallon to a cargo weight, will you divide or multiply by the rate of change in part (a)?
+
+`r devoirs::devoirs_set(choices=c("multiply", "divide", "neither"), correct = "divide", n = 3, id = cc("d03-e"))`
+:::
+::::
+
+## DRAFT IDEAS
+
+From the rates from two numbers. 
+[In the first paragraph of this chapter, we observed that a rate is a quantity.]{.smallcaps} Remember that a quantity is an organized packet of information: a pure number as well as the units referred to. 

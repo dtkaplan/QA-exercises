@@ -1,0 +1,17 @@
+---
+title: "An Analysis Approach: Chap 16" 
+subtitle: "Reading Questions"
+crossref:
+  exr-title: "Reading Question 16."
+  fig-title: "Figure RQ16-"
+  fig-prefix: "Fig RQ16-"
+  tbl-title: "Table RQ16"
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+UNDER CONSTRUCTION

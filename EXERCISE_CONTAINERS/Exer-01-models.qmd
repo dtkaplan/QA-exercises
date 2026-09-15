@@ -1,0 +1,44 @@
+---
+number-offset: 0
+crossref:
+  exr-title: "Exercise 1."
+  fig-title: "Figure E1."
+  fig-prefix: "Fig E1."
+  tbl-title: "Table E1."
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+<!-- not needed: 
+include _use_webr.qmd
+include ./_extensions/r-wasm/live/_knitr.qmd 
+-->
+
+# Exercises: Models {#sec-models-exercises}
+
+{{< include _exercises/hamster-hurt-lamp.qmd >}}
+
+File ID: hamster-hurt-lamp
+
+-----
+
+{{< include _exercises/pig-forgive-saw.qmd >}}
+
+File ID: pig-forgive-saw
+
+-----
+
+{{< include _exercises/panda-spend-pen.qmd >}}
+
+File ID: panda-spend-pen
+
+------
+
+{{< include _exercises/doe-teach-chair.qmd >}}
+
+-----
+{{< include _devoirs.qmd >}}
+

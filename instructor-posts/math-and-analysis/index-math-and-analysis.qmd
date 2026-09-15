@@ -1,0 +1,31 @@
+---
+title: "Mathematics and 'analysis'"
+description: "How the mathematician's take on analysis differs from the meaning in QR-A"
+author: "Daniel Kaplan"
+date: "2026-01-01"
+categories: [analysis, mathematics]
+---
+
+Mathematicians will recognize the definition for "analysis" provided by [Wikipedia](https://en.wikipedia.org/wiki/Mathematical_analysis):
+
+analysis
+: Analysis is the branch of mathematics dealing with continuous functions, limits, and related theories, such as differentiation, integration, measure, infinite sequences, series, and analytic functions. ... Analysis evolved from calculus, which involves the elementary concepts and techniques of analysis.
+
+For someone with this definition in mind, the title *Quantitative Reasoning: An Analysis Perspective* (QR-A)suggests that the book is about calculus. However, the word "analysis" in the title is in reality more aligned with this general-purpose definition of analysis, also from [Wikipedia](https://en.wikipedia.org/wiki/Analysis):
+
+analysis
+: Analysis is the process of breaking a complex topic or substance into smaller parts in order to gain a better understanding of it.
+
+This book has a "systems modeling" emphasis. For us, a system is simply a collection of elements that interact with one another. A model is a representation of some system of interest to the modeler. Analysis then consists of identifying the elements that will go in to the model of the system. I say "identify," but I don't want to imply that those elements are inherent in any reality other than the modeler's mind. (Of course, the model's mind is often aligned with his or her conception of reality.) 
+
+Chapters 1 through 4 of *QR-A* introduce important foundations for quantitative reasoning: quantities and how they may differ from numbers, rates, and the mathematical language that helps when dealing simultaneously with quantities that are of vastly different size, say, the mass of a mouse versus the mass of an elephant.
+
+Chapters 5 through 8 deal with functions, a particularly powerful and useful way of modeling the interactions between the elements of a system. In the high-school curriculum, students encounter functions in algebra and trigonometry courses. Functions also play a central role in calculus. In order to work fluently with functions, some concepts and tools from calculus are useful. So much so, that it should be a laudable goal of a "quantitative reasoning" course to introduce some elements of calculus to *all* students, including those whose experience with algebra and trigonometry has not set them up for success in the consensus calculus course that is ubiquitous in high-school advanced placement and colleges and university. The exposition in chapters 1 through 8, although not primarily about calculus, are setting the stage. For example, Chapter 3 introduces rates of change. 
+
+Chapters 11 through 14 focus on elements of calculus: differentiation (rates of change), integration (accumulation), and dynamics (parts of which are covered in courses on differential equations). The mathematicians perusing chapters 11 through 14 will note that important elements of the consensus calculus course are missing; e.g. limits, infinite sequences, series. This is intentional. Even if, say, derivatives and integrals are technically defined in terms of limits, limits are not important (and often get in the way) of student learning. As a society, we have an immense body of experience teaching calculus in the consensus manner. From the point of view of that large majority of students who have limited high-school preparation, studying consensus calculus is often fruitless and frustrating. It leaves students wondering, "What is this calculus stuff for?" That is no basis for quantitative reasoning.
+
+For the mathematician who sees calculus as "involv[ing] the elementary concepts and techniques of analysis," this omission of limits, etc. will seem like throwing the baby out with the bathwater. Do keep in mind, however, that our aim in QR-A is not to teach the mathematician's analysis, but to focus on those mathematical ideas that powerfully support quantitative reasoning and systems modeling. Like Newton and Leibniz and for 200 years after, we can use ideas like "instantaneous change" or "marginal change" without introducing mathematical analysis.
+
+
+
+

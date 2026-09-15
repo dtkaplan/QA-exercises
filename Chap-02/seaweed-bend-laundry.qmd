@@ -2,15 +2,26 @@
 id: "seaweed-bend-laundry"
 created: "Thu Aug 28 15:42:19 2025"
 attribution: TBA
-status: "sketch"
+status: "ready-to-use"
 chapter: 2
 mode: "discussion"
+group: discussions
 -->
 
 {{< include ../exercise-header.qmd >}}
 
 ::: {#exr-seaweed-bend-laundry}
-EXERCISE: GDP as an operationalization of the size of the economy, unemployment (which has a specific definition and can do odd things like go down when people give up on looking for work), labor-force participation, consumer confidence, market capitalization of a company
+Many dimensions of the economy are in the news each month: The total size, the employment situation, consumer confidence, the worth of various large companies. 
+
+Using the internet, find out what's behind these operationalizations of the above dimension:
+
+- GDP as an operationalization of the size of the economy, 
+- unemployment rate (which has a specific definition and can do odd things like go down when people give up on looking for work) 
+- labor-force participation 
+- consumer confidence 
+- market capitalization of a company
+
+`r devoirs::devoirs_text("sbl-econ-ckse")`
 
 :::
  <!-- end of exr-seaweed-bend-laundry -->

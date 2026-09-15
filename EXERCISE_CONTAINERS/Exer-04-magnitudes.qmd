@@ -1,0 +1,81 @@
+---
+number-offset: 3
+crossref:
+  exr-title: "Exercise 4."
+  fig-title: "Figure E4."
+  fig-prefix: "Fig E4."
+  tbl-title: "Table E4."
+---
+
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+{{< include _use_webr.qmd >}}
+
+{{< include _devoirs.qmd >}}
+
+# Exercises: Magnitudes {#sec-magnitudes}
+
+{{< include _exercises/maple-shut-pantry.qmd >}}
+
+{{< include _exercises/snail-say-clock.qmd >}}
+
+{{< include _exercises/zebra-dream-blouse.qmd >}}
+
+{{< include _exercises/avoid-send-mug.qmd >}}
+
+{{< include _exercises/seahorse-pitch-teacup.qmd >}}
+
+-----
+
+
+## Drafty, or other problems
+
+
+Theoretical about logarithms. Maybe an enhancement for extra credit.
+{{< include _exercises/deer-spend-roof.qmd >}}
+
+File ID: deer-spend-roof
+
+-----
+
+
+
+
+{{< include _exercises/niece-seek-lamp.qmd >}}
+
+File ID: niece-seek-lamp
+
+-----
+
+{{< include _exercises/seahorse-eat-door.qmd >}}
+
+File ID: seahorse-eat-door
+
+-----
+
+
+
+
+{{< include _exercises/bee-spend-magnet.qmd >}}
+
+File ID: bee-spend-magnet
+
+-----
+
+{{< include _exercises/mouse-love-pen.qmd >}}
+
+File ID: mouse-love-pen
+
+-----
+
+
+
+<!-- not needed 
+ include _exercises/bat-make-dress.qmd 
+-->
+
+

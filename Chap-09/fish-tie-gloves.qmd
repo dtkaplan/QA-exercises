@@ -1,0 +1,40 @@
+<!--
+id: "fish-tie-gloves"
+created: "Wed Sep  9 10:27:34 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+topic: pipelining
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-fish-tie-gloves}
+We will illustrate multiplication and pipelining using two generic names for single input functions: $f()$ and $g()$. (We haven't given a name to the arg because there is just a single arg.) Multiplication of these two functions can be done in two different ways:
+
+- A single arg: $h(x) \equiv f(x) g(x)$. The function created has just a single arg. Multiplication is straightforward.
+- Two args: $j(x, z) \equiv f(x) g(z)$.
+
+The newly created functions, $h(x)$ or $j(x, z)$ can be used in a linear combination or can participate in yet another multiplication or pipelining.
+
+`r fixit_link(8, 4)`
+
+For pipelining, the two functions are combined by taking the output of one function and feeding it as the input to the other function (just as a pipeline takes material from an upstream segment and injects it into a downstream segment). Using again our generic function names $f()$ and $g()$, there are two distinct forms for the pipeline, depending on which function is used in the *interior* position and which in the *exterior*:
+
+- $f\left(g(x)\right)$ where $g()$ is the interior function.
+- $g\left(f(x)\right)$ where $f()$ is the interior function.
+
+Make sure to note the distinction between multiplication and pipelining: $f(x) g(x)$ is not the same thing as $f(g(x))$. As mentioned above, function multiplication can produce a function with multiple inputs. But pipelining never can. There is only one slot for an arg, in the parentheses of the *interior* function.
+
+EMPHASIZE THIS ...
+We have already encountered a use for pipelining: the `r xf_to_def("input transformation")` where the interior function is the simple linear combination $g(x) \equiv a x + b$ and the exterior function was any of the core modeling functions. (The output transformation is itself just a linear combination.)
+
+In the Exercises, we will create a whole menagerie of functions by multiplication or pipelining (or both) of the core modeling functions. This will give you a sense of how diverse (and sometimes rare and exotic) shapes can be formed. More important for our purposes is to point out a handful of simple forms that appear in a huge variety of modeling contexts. 
+For multiplication, the most common functional forms are built out of our simple friend `same()` and look like same() $\times$ same(). There are two varieties:
+
+- same(x) $\times$ same(x), which has just a single input. In algebraic nomenclature, this function is called the *square of x* and written $x^2$.
+- same(x) $\times$ same(z), which has two different inputs. The algebraic name for this form is hardly ever used, but statistics provides a much more evocative name, justified by how often the form is used in modeling. Steady(x) $\times$ same(z) is called the `r xf_definition("interaction term")`, and it is used in just about situation where the effect of x depends on the size of z. We will see it at work in `r xf("sec-dynamics")`.
+:::
+ <!-- end of exr-fish-tie-gloves -->

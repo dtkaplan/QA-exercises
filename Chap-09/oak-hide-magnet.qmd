@@ -1,0 +1,18 @@
+<!--
+id: "oak-hide-magnet"
+created: "Fri Sep 11 10:56:04 2026"
+attribution: DTK
+mode: exercise
+status: sketch
+group: x_drafts
+chapter: 9
+topic: "heat index"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-oak-hide-magnet}
+EXERCISE: Note that at humidities of 100%, the wet bulb temperature corresponds to a heat index of about the same temperature. What feature of the graphic indicates this relationship?  fig-sultriness-contour
+:::
+ <!-- end of exr-oak-hide-magnet -->

@@ -1,0 +1,176 @@
+---
+title: "Goal seeking and control"
+description: "Feedback: The technology of reaching toward a goal"
+author: "Daniel Kaplan"
+date: "2026-02-012"
+categories: [feedback]
+---
+
+```{r include=FALSE}
+library(mosaicCalc)
+library(xref) # a package for managing cross references.
+```
+
+{{< include ../../_extensions/r-wasm/live/_knitr.qmd >}}
+
+Many individuals and organizations use *goals* to motivate their planning and work. Our particular interest is to learn about successful techniques used to reach an already established goal. We will draw on a large body of experience building automatic mechanisms to move toward a goal. In engineering, such mechanisms are call `r anchor_definition("control systems")` and the underlying knowledge is `r anchor_definition("control theory")`. 
+
+Consider some everyday experiences that involve automatic control systems. You set the oven to 350 deg F in order to bake some cookies. You turn on cruise control to keep your car at a steady 65 mph for highway driving. You rely on a thermostat to keep indoor temperature at a desirable level, say 75 deg F in the summer or 68 F deg in the winter.
+
+All the systems have important elements in common. Each operates with a `r anchor_definition("setpoint")` which is selected by the human operator. The point of the automatic control system is to bring reality---oven temperature, highway speed, room temperature---into conformance with the setpoint. 
+
+Each of our example control systems also involves an `r anchor_definition("actuator")`. In the oven, this is the electric heating coil (or gas burner). In the car, the actuators for speed is the throttle and to some extent the brake. For room temperature, the actuator is the furnace, air conditioner, or heat pump. (There are also non-automatic actuators, for instance regulating room temperature by opening a window or closing a window blind.)
+
+`r anchor_definition("Sensors")` are also important to control systems, but let's first. look at what we can and cannot do without them.
+
+## A (too) simple control system
+
+There are many contexts for using control systems. We will continue to focus on the three examples---oven, speed, climate-control---described in the previous section. These examples were selected in part to help us abstract from the particular to the general.
+
+An *actuator* is a general, abstract concept, but all three of our examples involve *fuel* so we can link them all with a simple, familiar actuator mechanism: a faucet. 
+
+::: {#fig-hand-faucet layout-ncol=2}
+![Faucet mechanism](../../www/faucet.png)
+
+![Faucet with guide](../../www/faucet-dial.png)
+
+A faucet. The left end is connected to a supply of water, the handle on top opens or closes an apurture which governs the amount of flow through the right end. 
+:::
+
+Garden faucets don't typically come with dials, but imagine fitting one on so that the handle can reliably and repeatedly be set to a position. 
+
+With the dial in place, it is a relatively simple matter to `r anchor_definition("calibrate")` it, perhaps by putting a bucket under the faucet and measuring for each dial mark how long it takes to fill the bucket. The result might be presented as a *function* that takes dial mark as the input and gives flow (gallons per minute) as the output.
+
+```{r}
+#| echo: false
+#| label: fig-faucet-with-dial
+#| fig-cap: "A faucet with a numbered dial."
+Dial <- tibble::tribble(
+  ~ dial, ~ flow,
+  0, 0,
+  1, 0.7,
+  2, 1.5,
+  3, 2.1,
+  4, 2.6,
+  5, 3.0,
+  6, 3.4,
+  7, 3.8
+)
+Dial |> gf_line(flow ~ dial) |> 
+  gf_theme(theme_minimal(base_size = 16)) |>
+  gf_labs(y = "Flow (gal per minute", x = "Setting")
+```
+
+Once calibration has been performed, the device is simple to use. First, choose a setpoint and look it up on the vertical axis in @fig-faucet-with-dial. Then read from the graph the corresponding input on the horizontal axis. For instance a desired flow rate of 3 gal/min corresponds to a dial marking of 5. Turn the handle to the five mark and the water will flow at 3 gallons per minute.
+
+This type of control is called `r anchor_definition("open-loop control")`. That name can be confusing to the uninitiated because it is a *retronym*^[From Oxford Languages: "A new term created from an existing word in order to distinguish it from the meaning that has emerged through progress or technological development (e.g., cloth diaper is a retronym necessitated by the fact that diaper now more commonly refers to a disposable diaper)."]. In a bit, we'll introduce `r anchor_definition("closed loop control")` which addresses a major flaw found in open-loop systems.
+
+One flaw in the open-loop faucet control is that the faucet characteristics may change over time, for instance with calcium deposits choking the input. Similarly, you may want to use the control system in a way that wasn't considered by the calibration process, for instance by attaching a long hose to direct the flow to the far end of the garden. The calibration, in contrast, was done with the bucket right under the faucet, without the resistence imposed by the hose.
+
+Anyone who has used a faucet and hose knows that in practice we don't need a calibrated dial. Instead, we combine calibration and operation. Set the handle to a likely position, then walk to the end of the hose to see how much water is coming out. If the flow rate is too high, walk back to the faucet and turn it down a bit. If the flow rate is too low, turn the faucet up. This is an effective technique even if it does involve a lot of walking back and forth to set and confirm the setting of the handle. 
+
+In the above scenario, the human provides a *sensor* to measure the outcome as well as a way to adjust the *actuator*. The process of walking from the faucet to the end of the hose and back again (and again, as needed) is called `r anchor_definition("feedback control")`.
+
+To apply the feedback technique to the oven temperature, car speed, or climate-control systems requires different sensors: a thermometer for the oven or climate-control system, a speedometer for the cruise-control system.
+
+::: {.callout-note}
+## Lessons for General Use: I
+
+The simple faucet and hose system suggests lessons that are useful in a wide variety of circumstances. 
+
+1. You need a sensor. To reach a goal, you need a *sensor* to *measure* the output that has thus far been achieved. 
+
+2. There needs to be an *actuator* that influences the output.
+
+3. Compare the measured output to the goal---in other words, the setpoint---and *change the actuator position* accordingly. 
+
+If these lessons seem obvious, look around you to note how many systems work without a setpoint, sensor, or actuator. Higher education provides an example. How do colleges measure their output? To be sure, they measure all sorts of output-like things: alumni giving, fellowships earned by graduating students, and graduate school placement rates. Schools to give students grades, but nobody uses those grades to measure the institution's productivity.^["Grade inflation" is admitted as a perenial problem. Nobody sees grade inflation as an indicator that the institution is accomplishing more. And, even though inflation is seen as a problem, few administrators are willing to create the actuators that might keep it under control.] But mainly they measure the inputs: admissions selectivity, average class size, credentials of faculty, and so on. Colleges routinely use the standardized test scores of incoming students, but have you ever heard of a school that publishes the outgoing students' scores on standardized tests? Simimlarly, there are usually no setpoints for the output (except, often, by comparison to similar schools). Even if they did measure output and compare it to setpoints, they haven't established what actuators to use.
+
+:::
+
+## The feedback loop
+
+@fig-faucet-cartoon contrasts in cartoon form the "open-loop" control system from the *closed-loop* system. In the open-loop system (a), there is really no loop at all. The gardener sets the faucet, perhaps based on experience and the output is unmeasured.
+
+The closed-loop system (b) involves observing the output, comparing it to the setpoint in the person's mind, and returning to the faucet to adjust it up or down ($\pm$) depending on whether the output is below or above the setpoint. 
+
+::: {#fig-faucet-cartoon}
+![Open loop control](../../www/open-loop-faucet.png)
+
+![Closed loop control](../../www/walking-loop.png)
+
+Open-loop versus closed-loop versions of the gardener's control system. 
+:::
+
+It's more conventional to diagram control systems with arrows and labels, as in @fig-faucet-diagram. In open-loop control (a), the setpoint feeds directly into the actuator. The actuator position, however, is not the only thing that determines the eventual output. For instance, the length and condition of the hose influences the flow. As well, there may be outside influences---water pressure? a twist in the hose?---which do their part. So even if the actuator faithfully reflects the setpoint, the output may not match the setpoint.
+
+::: {#fig-faucet-diagram}
+![Open-loop control](../../www/open-loop-diagram.png)
+
+![Closed-loop control](../../www/closed-loop-diagram.png)
+
+Diagrams showing the flow of information from setpoint to output.
+
+:::
+
+The closed-loop control system includes several additional components:
+
+1. A sensor, which measures the actual output (or something close to it)
+2. A mechanism, indicated by ![](../../www/feedback-gain.png) which performs arithmetic. Specifically, it subtracts the measurement from the setpoint then uses multiplication to amplify the result. The amount of multiplication is called the `r anchor_definition("gain")`.
+
+In addition, the actuator is set up so that its output is proportional to its input.
+
+In the closed-loop system, the input to the actuator is not the setpoint, but the arithmetically determined quantity in (2) which reflects the deviation of the measured output from the setpoint. If the measured output is below the setpoint, the arithmetic quantity will be positive and the actuator---the faucet---will be turned up. Conversely, a measured output above the setpoint leads to the arithmetic quantity being negative which in turn leads to the actuator being turned down. If the measured output matches the setpoint, the zero input to the actuator means "leave things as they are."
+
+## Equilibrium analysis
+
+We don't yet have the quantitative concepts needed to describe the control system as it adjusts itself to produce an output at an appropriate level. However, using arithmetic, we can look at what the system will look like when it is in balance, that is, in `r anchor_definition("equilibrium")`.
+
+Recall that in the open-loop system, we needed to *calibrate* the actuator making sure that its output matches the setpoint. Since there is a hose as part of the system, the calibration needs to be done with the hose attached. This way, what comes out of the hose will be---thanks to calibration---the same as the setpoint. 
+
+In reality, however, the hose may change from its configuration during calibration. We can model the state of the hose as a number $H$ that is 1 during calibration, but might change to some other value due to blockage or some other factor. For instance, a partially clogged hose might correspond to $H = 1/2$---the actual flow is only half what it was during calibration. Or, if the hose is placed in a low point in the garden, the effect of gravity will be to increase the flow, perhaps $H = 1.1$.
+
+Before comparing the open-loop and closed-loop systems algebraically, we'll describe the situation in words. In the open-loop system, if the output is wrong for whatever reason, there is no mechanism to move the control to improved the output. In the closed-loop system, if the output is wrong, the feedback changes the input to the actuator to move it in the right direction. But if the original control setting does not produce the right output, can we expect the feedback to set things completely right? No. If things were completely right, the difference between the sensor reading and the setpoint would be zero, which puts the input to the actuator back to the original setting, which means that the output is wrong. So the feedback control can't completely eliminate in all circumstances any difference between the setpoint and the output.
+
+For those readers comfortable with algebra, the following shows how closely the closed-loop control will bring the output to the setpoint and what happens to the outside disturbances.
+Calling the setpoint $x$ and the actual output $y$, there is a very simple relationship for the open-loop system:
+
+$$y = H x + d$$
+
+where $d$ is some outside factor or disturbance such as the gardener's dog lying down on the hose. The gardener's remedy is to chase the dog away, restoring the system to its former, calibrated state. But if $H$ departs from 1, perhaps because an additional length of hose was added to it, then even without a disturbance the output will not match the input.
+
+Closed-loop control changes things. The output is being monitored. Let's call the measured level of output $m$. The input to the actuator has been set up to be $G(x - m)$. And the actuator has been set up so that for zero input the flow is some quantity $F$. The response to a positive input is to turn down the actuator, a positive input turns the output up. Overall, the output of the actuator will be $F - G(x - m)$. What has not changed, however, is the effect of the hose. 
+
+In equilibrium, the output $y$ will be
+
+$$y = H(F + G(x -m)) + d\ .$$
+
+
+Arranged differently, this is $$y =  H G(x -m) + HF + d$$
+
+Ideally, the sensor has been adjusted to faithfully reflect the output $y$. In other words, $m = y$. This gives
+
+$$y = H G(x - y) + HF + d =  H G x - H G y + HF + d\ .$$
+
+Re-arranging, we get $$y + HGy = (1 + HG) y = HG x + HF + d$$ which implies that $$y = \frac{HG}{1 + HG} x + \frac{HF + d}{1 + HG}\ .$$
+
+The ingenuity comes in when choosing the value of the gain, $G$. No great care is needed except to make $G$ large. At a minimum, $G$ should be set so that $HG > 1$ regardless of the actual value of $H$. In other words, make $G$ very large.
+
+Large G accomplishes two things. First, it makes the term $\frac{HG}{1 + HG}$ very close to 1. The bigger is $G$, the closer the term is to 1. Second, large G makes the term $1/(1+HG)$ close to zero. This gives
+
+$$y = x\, \cancelto{\text{close to 1}}{\frac{HG}{1 + HG}} + \cancelto{0}{\frac{HF + d}{1 + HG}}\ .$$
+
+In other words, closed-loop feedback with high gain makes the output closely match the setpoint and diminishes the impact of outside disturbances. 
+
+The control engineer can do little to influence the effect of the hose, H, or the amount of disturbance. Still, by making the gain G large, the product $H\,G$ can be made large. This will make the multiplier on the disturbance $d$ very small, more or less eliminating the effect of outside disturbances. Similarly, $\frac{H\,G}{1 + H\,G}$ will be very close to 1 with the delightful consequence that $y$ will be almost the same as $x$. 
+
+
+
+::: {.callout-note}
+## Lessons for General Use: II
+
+In the feedback control system, there is no need to calibrate the actuator. Instead, it is set up so that for an input of zero the actuator is at some arbitrary level. What makes the system work is that when the input is negative the actuator is turned up from that level and when the input is positive the actuator is turned down from that level. 
+
+The overall effect of the feedback mechanism is to attenuate any undue influence of the hose or the outside disturbances. To achieve this, we require only that the measurement faithfully reflect the system output. In other words, you will get what you measure. So make sure that what you are measuring is the thing you want to get!
+:::
+

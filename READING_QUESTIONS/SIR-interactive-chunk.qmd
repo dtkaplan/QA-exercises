@@ -1,0 +1,44 @@
+:::: {.content-hidden when-format=“pdf”}
+
+```{r}
+#| echo: false
+#| context: setup
+run_SIR_model <- function(isolation, initial, social) {
+  SIR <- mosaicCalc::makeODE(dS~ -a*S*I, dI ~ a*S*I - b*I,
+                 a=0.0003/social, b=0.6*80/(100-isolation),
+                 S=100000, I=initial)
+
+  
+  Traj <- suppressMessages(mosaicCalc::integrateODE(SIR, mosaicCalc::domain(t=0:50)))
+  Points <- tibble::tibble(
+    days = seq(0, 50, by = 0.1),
+    infectives = Traj$I(days/2)/1000,
+    susceptibles = Traj$S(days/2)/1000
+  )
+  
+  Points |> gf_line(infectives ~ days, color = "red") |>
+    gf_line(susceptibles ~ days, color = "black") |>
+    gf_labs(y = "Persons (1000s)", x = "Days") |>
+    gf_theme(theme_minimal())
+}
+```
+
+:::
+
+::: {#fig-SIR-interactive}
+
+```{r}
+#| caption: "Run the SIR model"
+#| autorun: true
+run_SIR_model(
+  initial = 1,   # initial cases
+  social = 20,   # social distance (ft effective)
+  isolation = 10 # patient isolation (%)
+  )
+```
+
+You can change the number of initial cases and implement social distancing and isolation to see how they influence the progression of the epidemic. (You need to “run” the code to regenerate the graph.)
+:::
+
+::::
+

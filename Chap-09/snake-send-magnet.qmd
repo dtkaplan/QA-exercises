@@ -1,0 +1,139 @@
+<!--
+id: "snake-send-magnet"
+created: "Fri Sep 11 10:59:16 2026"
+attribution: DTK
+mode: computing exercise
+status: sketch
+group: computing_exercises
+chapter: 9
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-snake-send-magnet}
+
+TURN THIS INTO A COMPUTER TUTORIAL about making graphics.
+
+
+
+```{r}
+
+INTRODUCE FUNCTION GRAPHICS with function with two inputs. Show the contour plots for both S + I and S + I + SI.
+
+Then point out that contour plots work only for visualizing functions of two inputs. For functions with more than two inputs, other visualization techniques, such as slice plots, are needed.
+
+
+Pick up weather/osc example from core-modeling functions chapter. "Similarly, seasonal temperatures rise and fall throughout the year, repeating each year." Create a model of seasonal temperature variation for Austin TX.
+
+## Contour graphics
+
+The horizontal axis in @fig-payment-years-slice represents the function input, the vertical axis represents the output. Such graphs are familiar to many students from high-school mathematics. They are well suited to functions with only a single input.
+
+In building models, however, we often need to represent a relationship with two inputs, such as for solar production output in @fig-solar-diag1, which gets input from *both* the sun's position and the level of cloudiness. More complicated situations often arise. To stick with the solar production example, the output also depends on time of day, latitude of the installation, and even temperature. 
+
+It is practically impossible to draw effective function graphics when there are many inputs. The eye's *retina*---the layer of photoreceptors that translate incoming light into neural signals---is like a sheet of paper: two-dimensional. [Other features of our visual system, for instance the perception of color, the detection of movement, and interpretation of shadows and patterns of perspective learned by artists, allow us to construct a more complicated visual representation of the world.]{.column-margin}
+
+Evolution has not equipped us to work visually with functions of many inputs. Instead, we rely on other invented techniques and concepts. The typical reader may not be acquainted with these. A major goal of this book is to bring readers to the point where they can begin to understand these techniques. We will gradually build up the tools required and then outline the multi-input techniques at the end of the book: @sec-moving-past-two-inputs.
+
+To start down the path to understanding functions with multiple inputs, we will work with an intermediate case: two inputs. In this intermediate case, we can draw effective graphics and then, later as in @sec-dynamics, annotate them with the objects that will serve our ultimate goal of working with many inputs.
+
+There are many ways to represent graphically functions with two inputs (and, as always, one output). Notice that in this setting, there are three quantities to be represented: the first input, the second input, and the output. It is natural, therefore, to draw graphics that exploit our natural ability to navigate a three-dimensional world. Especially with interactive graphics where we can change perspective this can be an effective tool for gaining insight. @fig-three-d-plot gives an example in the interactive, online version of this book. For the printed version, however, @fig-three-d-plot can only show a non-interactive snapshot.
+
+:::: {.content-hidden unless-format="html"}
+```{r}
+#| label: fig-three-d-plot
+#| echo: false
+f <- doodle_fun(~ x & y, seed = 78)
+surface_plot(f(x, y) ~ x & y, domain(x=-4:4, y = -5:5))
+```
+
+An interactive graphic showing a function with two inputs.
+
+::::
+
+:::: {.content-hidden unless-format="pdf"}
+::: {#fig-three-d-plot}
+![](www/fig-three-d-plot-snapshot.png)
+
+For this printed version of the book, a snapshot of an interactive plot of a function with two inputs, $x$ and $y$.
+:::
+::::
+
+Graphs such as in @fig-three-d-plot can be pretty and fun. They rely for their effectiveness on interactivity, but also on some other features of our human visual system. Note the use of *color* to emphasize where the function output is low and where it is high. Also, the axes and grids have been drawn with the tricks of perspective art. For instance, grid lines that are parallel in 3-D space diverge from one another as the z-value increases.
+
+In this book, we will make use of plots of functions with multiple inputs that don't rely on perspective and movement. To start, we will work with `r xf_definition("contour plots")`. [In @sec-dynamics we'll introduce two additional plot types: vector-fields and trajectories.]
+
+In a contour plot, there are just two axes: one for the first input and the other for the second. The value of the output is presented using a method invented by cartographers. In cartography this is called a `r xf_definition("topographical map")`. @fig-saint-john shows an example.
+
+
+
+@fig-saint-john shows a rich, varied landscape. The functions we graph using contour plots will typically be much simpler. @fig-first-contour shows an example.
+
+::: {#fig-first-contour}
+
+```{r}
+#| label: ch06-r-6c2fcf26
+#| echo: false
+contour_plot(f(x, y) ~ x & y, domain(x=-4:4, y = -5:5)) |>
+  gf_refine(coord_fixed())
+```
+
+A contour plot of the same two-input function shown in @fig-three-d-plot. The two axes represent the inputs. The output is indicated by the contours. (Color is also used to show the input, but very lightly just to give a visual aid in interpreting the contours.)
+:::
+
+For any one function, the graphics styles in both @fig-first-contour and @fig-three-d-plot are both useful. [In fact, @fig-three-d-plot contains a contour plot to assist in interpretation.]{.column-margin} In learning to read contour plots, 3-D plots like @fig-three-d-plot can be useful. 
+
+It takes a while to get comfortable reading contour plots, but there is a big upside to their simplicity. Later, when we start to encounter the objects that enable us to work with functions with many inputs, we will be able to annotate the contour graphics with visual representations of those objects, at least for functions of two inputs.
+
+------
+
+A suitable graphics mode for a function slice is the `r xf_definition("slice plot")`, such as that in @fig-payment-r-slice.
+
+::: {#fig-payment-r-slice}
+```{r}
+#| label: ch06-r-b9c0a1c6
+#| echo: false
+slice_plot(monthly_payment(200000, r, 30) ~ r,
+           domain(r = 3:12)) |>
+  gf_labs(x = "Interest rate (% per year)",
+          y = "Monthly payment (USD)") |>
+  gf_lims(y = c(0, 2100))
+```
+
+A slice through the `monthly_payment()` function with respect to the `interest_rate` input. The other inputs are being held constant: `principal` at $200,000 and `duration` at 30.
+:::
+
+A trivial use for a slice plot is to look up the output value for a given input. For instance, when the input interest rate is 7.5 percent, the output value is 1400. To communicate with someone using a static display, such as print, the slice plot enables the reader to evaluate the function at the input value of interest to them. (In an interactive display, as here, it is just as effective to evaluate the function directly, as in @chk-three-interest-rates. Try that now, setting the interest rate to 7.5% to confirm.)
+
+When it comes to quantitative reasoning, however, a slice plot has a much more important role: it helps us understand the *relationship* between an input and the output. More specifically, a slice plot characterizes the change in the output *with respect to* one of the inputs. (`r xf("sec-change-as-a-quantity")` introduced the phrase "with respect to.")
+
+
+The *shape* of the slice plot in @fig-payment-r-slice is, more or less, a straight line. This simple relationship shape is ubiquitous. 
+
+The relationship between output and `years` (@fig-payment-years-slice) shows a different progression and shape. 
+
+::: {#fig-payment-years-slice}
+```{r}
+#| label: ch06-r-efa43346
+#| echo: false
+#| warning: false
+slice_plot(monthly_payment(200000, 7.5, duration) ~ duration, 
+           domain(duration = 5:50)) |>
+  gf_labs(x = "Duration of loan (years)",
+          y = "Monthly payment ($)") |>
+  gf_lims(y = c(0,4000))
+```
+
+The relationship between the monthly payment and the mortgage's duration in years. The slice holds fixed the principal and interest rate at $200,000 and 7.5% per year, respectively.
+:::
+
+Reading, as always, from left to right, the *progression* is downward: the payment *decreases* as the duration of the loan increases. That makes sense. A homebuyer seeking to reduce the monthly payment can do so by obtaining a long-term loan.
+
+
+
+The *shape* is nonlinear: a curve. This particular type of curve decreases steeply for short-duration loans but has a shallow slope for long-duration loans. This shape has important implications for mortgages. Although a 30-year loan is conventional (in the US), the monthly payment would hardly go down if you extended it to 50 years. [In late 2025, proposals to offer [50-year mortgages](https://www.npr.org/2025/11/12/nx-s1-5604384/50-year-mortgage-trump-housing-explainer) were proposed as a way to make housing more affordable. Judge for yourself from @fig-payment-years-slice the extent to which such proposals make sense.]{.column-margin} To put this in human, generational terms, the homebuyer who is encumbering his children and grandchildren with a 60-year mortgage is decreasing the monthly payment by a trivial amount. Economists often use the word `r xf_definition("marginal")` to refer to the rate of change---e.g. the `r xf_definition("slope")` of the graph---when the input is changed just a little. In this terminology, the homeowner suffers from `r xf_definition("diminishing marginal returns")` as the loan duration increases. 
+
+
+:::
+ <!-- end of exr-snake-send-magnet -->

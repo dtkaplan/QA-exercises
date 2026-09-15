@@ -1,0 +1,22 @@
+<!--
+id: "octopus-beat-plant"
+created: "Wed Sep  9 10:29:54 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: x_drafts
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-octopus-beat-plant}
+**A foundry for new functions**
+
+In @sec-linear-combinations we presented examples of some functions used in linear combination: flat(), same(), magnitude(), hillside(). The linear combination strategy is like Lego: build a potentially complicated structure by adding blocks to one another. Almost all children are familiar with the basic Lego bricks, such as ![](www/M3004.png){width=8mm}, ![](www/M3003.png){width=8mm}, ![](www/M3009.png){width=17mm}, and ![](www/M3036.png){width=12mm}. These are analogous to our core modeling functions.
+
+Notwithstanding the popularity of the basic Lego bricks, there are some shapes that cannot be constructed by putting the basic ones together. There are many examples, such as ![](www/M3046.png){width=8mm}, ![](www/M30414.png){width=11mm}, and ![](www/M4600.png){width=11mm}. To make such shapes, one needs to visit the Lego *foundry*, where new blocks are cast. There is an analogous foundry for functions, where it's possible to build entirely new shapes not seen in the core modeling functions.
+
+There is an infinite variety of such special-purpose shapes. This makes the task of choosing one daunting, like looking through the entire Lego catalog; so many possibilities, but which ones to choose? Happily, these special-purpose functions usually appear in only a small variety. And instead of having to set up a furnace to melt down and reshape functions, you can accomplish much by applying just two techniques: `r xf_definition("function multiplication")` and `r xf_definition("pipelining functions")`
+:::
+ <!-- end of exr-octopus-beat-plant -->

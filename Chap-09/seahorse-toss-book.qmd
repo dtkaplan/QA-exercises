@@ -1,0 +1,18 @@
+<!--
+id: "seahorse-toss-book"
+created: "Mon Sep 14 09:43:17 2026"
+attribution: DTK
+mode: computer-exercise
+status: sketch
+group: computing-exercises
+chapter: 9
+topic: interaction
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-seahorse-toss-book}
+Another kind of function that's often used in linear combinations is the *interaction* between two of the input quantities. For instance, `income * size` is itself a quantity, different from either `income` or `size` individually. 
+:::
+ <!-- end of exr-seahorse-toss-book -->

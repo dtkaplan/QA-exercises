@@ -1,0 +1,395 @@
+---
+number-offset: 2
+crossref:
+  exr-title: "Drill 3."
+filters:
+  - live
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r include = FALSE}
+library(drill)
+```
+
+# Drill Questions: Quantities {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+`r id <- "d03"`
+
+::: {.callout-tip collapse=true}
+## Calculator 
+
+You can use this R chunk to perform any arithmetic operations called for. 
+
+```{webr}
+#| caption: "For scratch work"
+
+
+```
+:::
+
+:::: {.callout-note collapse="true"}
+## Basics
+
+`r cc <- drill::new_drill_counter()`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+All but one of these is a pure number. Which is the exception?
+
+```{mcq}
+#| label: d03-dls
+#| inline: true
+1. 7
+2. $\pi$
+3. 7 meters [correct]
+4. 0.25
+```
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = FALSE, id=cc(id))` As you know, you can add or subtract any two pure *numbers*. 
+
+`r devoirs::devoirsTF(correct = FALSE, id=cc(id), wrong.hint = "The quantities must be commensurate. For example, 3 cups + 2 pints is meaningful, but 3 cups + 2 seconds is not.")` Can you always add two *quantities* by adding together their numerical parts? 
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = FALSE, id=cc(id), wrong.hint = "Multiplication and division can produce derived dimensions. For example, length / time has the dimension of velocity, and length × length has the dimension of area.")` Two quantities must have the same dimension before they can be multiplied.
+
+## `r cc()`
+
+Question: Which statement is correct?
+
+```{mcq}
+#| label: d03-lxew
+1. Meter is a dimension and length is a unit.
+2. Length is a dimension and meter is a unit. [correct]
+3. Length and meter are two names for the same thing. [hint: A meter is a specific length.]
+4. Neither length nor meter is a dimension or unit.
+```
+
+## `r cc()`
+
+A quantity has units of kilograms per second squared. What is its dimension?
+
+```{mcq}
+#| label: d03-qukss
+#| inline: true
+1. M/T
+2. M/T^2^ [correct]
+3. MT^2^
+4. T^2^ / M
+```
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = TRUE, id=cc(id), right.hint = "The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit.")` The ratio of two quantities with the same dimension is always dimensionless.
+
+## `r cc()`
+
+Which of the following is a flavor of one?
+
+```{mcq}
+#| label: d03-flv1
+#| inline: true
+1. 12 inches [hint: Flavors of 1 are always dimensionless. The dimension here is L.]
+2. 1 foot [hint: Flavors of 1 are always dimensionless. The dimension here is L.]
+3. 12 inches / 1 foot [correct]
+```
+
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = FALSE, id=cc(id), wrong.hint = "The dimensions cancel out, but 1 inch is not the same amount as 1 foot.")` Is 1 inch / 1 foot a flavor of 1?
+
+## `r cc()`
+
+A quantity has a value of 18 m/s at the "from" setting and 11 m/s at the "to" setting. What is the change?
+
+```{mcq}
+#| label: d03-fto1
+#| inline: true
+1. 7 m/s [hint: The change is always "to minus from." The sign matters!]
+2. -7 m/s[correct]
+3. 7 [hint: The units are important!]
+4. -7 [hint: The units are important!]
+5. 0
+6. No valid answer.
+```
+
+## `r cc()`
+
+A quantity has a value of 36 deg F at the "from" setting and 43 deg F at the "to" setting. What is the change?
+
+```{mcq}
+#| label: d03-fto2
+#| inline: true
+1. 7 deg F[correct]
+2. -7 deg F [hint: The change is always "to minus from." The sign matters!]
+3. 7 [hint: The units are important!]
+4. -7 [hint: The units are important!]
+5. 0
+6. No valid answer.
+```
+
+## `r cc()`
+
+A quantity has a value of 106 kg / s at the "from" setting and 99 kg at the "to" setting. What is the change?
+
+```{mcq}
+#| label: d03-fto3
+#| inline: true
+1. 7 kg / s
+2. -7 kg / s
+3. 7 s 
+4. -7 kg
+5. 0
+6. No valid answer. [hint: The units and dimensions  are incommensurate. Subtraction is not a valid operation.]
+```
+
+## `r cc()`
+
+Suppose we want to understand how the dosage of a medication changes a person's blood pressure. Which is the *primary* dimension and which is the *context-setting* dimension?
+
+```{mcq}
+#| label: d03-wrt1
+1. Blood pressure; dosage [correct]
+2. Dosage; blood pressure [hint: An experiment might try different doses and observe the corresponding blood pressure. Dosage is the context-setting dimension.]
+3. Blood pressure; time [hint: Obviously, time is involved. But it's dosage that we want to understand.]
+4. They are both primary dimensions. 
+```
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = TRUE, id=cc(id), wrong.hint = "You might wonder how it's possible to hold time of day constant, but think of comparing two day's sales at the same time of day.", right.hint = "'Holding constant' is the hallmark of partial change.")`  Suppose an ice-cream shop's sales depend on temperature, price, and time of day. Studying the change in sales with respect to temperature while holding price and time of day constant is an example of partial change.
+
+
+
+:::
+
+
+
+
+::::
+
+:::: {.callout-note collapse=true}
+## Dimensions
+
+`r cc <- drill::new_drill_counter()`
+
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = TRUE, id=cc(id))` You can add or subtract any two *numbers*.
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Only if they have the same dimension.")` You can add or subtract any two *quantities*.
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = TRUE, id=cc(id))` You can multiply or divide any two *numbers* (excepting zero)
+
+## `r cc()`
+
+`r devoirs::devoirsTF(correct = TRUE, id=cc(id), wrong.hint="Anything goes! (When it comes to multiplication and division.)")` You can multiply or divide any two *quantities* (excepting zero)?
+
+## `r cc()`
+
+Recall that the notation [ x ] means "the dimension of x."
+
+`r devoirs::devoirsTF(correct = TRUE, id=cc(id))` [Pints] is the same as [gallons].
+
+## `r cc()`
+
+Is [acceleration] is the same as [velocity]?
+`r devoirs::devoirsTF(correct = FALSE, id=cc(id), format="Yes or No")` 
+
+## `r cc()`
+
+`r drill::what_is_the_dimension_of("[2 hours]", "T", id = cc(id), seed = 9)`
+
+## `r cc()`
+
+`r drill::what_is_the_dimension_of("[acre-feet]", "L^2^", id = cc(id), seed = 29)`
+
+## `r cc()`
+
+`r drill::what_is_the_dimension_of("[[13]]", "【1】", id = cc(id), seed = 19)`
+
+## `r cc()`
+
+`r drill::what_is_the_dimension_of("[2.65]", "【1】", id = cc(id), seed = 99)`
+
+## `r cc()`
+
+`r drill::what_is_the_dimension_of("[miles per hour]", "L T^-1^", id = cc(id), seed = 95)`
+
+## `r cc()`
+
+`r drill::what_is_the_dimension_of("[kilometers per mile]", "【1】", id = cc(id), seed = 95)`
+
+## `r cc()`
+
+`r drill::what_is_the_dimension_of("[𝜋]", "【1】", id = cc(id), seed = 964)`
+
+## `r cc()`
+
+We measure one property of food using the unit Calorie (Cal, for short). Use a web search to look up the definition of Cal to answer this question: What is the dimension of the unit Cal?
+
+```{mcq}
+#| label: d03-cal
+#| inline: true
+1. 〖volume〗
+2. 〖mass〗
+3. 〖energy〗 [hint: correct]
+4. 〖power〗 [hint: The correct answer is 〖energy〗. Power is 〖energy〗 / T.]
+```
+
+## `r cc()`
+
+What's wrong with this statement:
+
+> The [velocity] is miles-per-hour.
+
+```{mcq}
+#| label: d03-vel
+1. It should be hours-per-mile. [hint: Sorry, miles-per-hour is correct as a unit of velocity. ]
+2. Velocity has no dimension. 
+3. "Miles per hour" is a unit, not a dimension. [correct]
+4. Nothing is wrong.
+```
+
+## `r cc()` 
+Write down the names of five base dimensions. As well, give the symbol for each of those dimensions.
+
+`r devoirs::devoirs_text(cc(id))`
+
+<!-- Opening answer: D0q-9kP -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+- Length (L)
+- Mass (M)
+- Time (T)
+- Temperature ($\Theta$, the Greek letter "theta")
+- Money (W, for "worth")
+- People (C, for "capita")
+- Dimensionless ([1])
+
+[..id..]{data-tooltip="Ans id: D0q-9kP"}
+
+:::
+::::
+::::
+
+
+:::: {.callout-note collapse=true}
+## Unit conversion
+
+`r cc <- drill::new_drill_counter(style = "ALPHA")`
+::: {.panel-tabset}
+
+
+
+`r devoirs::push_answer_style("block")`
+
+## Instructions
+
+::: {.callout-tip #tip-flavor-of-one}
+## Instructions
+
+In this problem, a putative conversion factor is presented for a requested conversion. For example:
+
+To convert from yards to inches multiply by 36 inches per yard.
+
+Your job is to figure out if the putative conversion factor (36 inches per yard in this example) is correct for performing the conversion requested.
+
+1. Check whether any conversion any conversion at all is possible between the two units. If not, you are done. Otherwise, ...
+
+2. Look at the units to determine if it corresponds to the requested conversion. If not, you are done. Otherwise, ...
+
+3. Check whether the ratio given has the approriate units in the numerator and  denominator. If not, you are done.
+
+4. The conversion factor has passed the first three tests. Check---perhaps using the internet---whether the numeric part of the ratio is correct. If not, then select "correct" as your answer. 
+::: 
+
+`r for_flavors <- c("Impossible", "Wrong units", "Upside down", "Not a flavor of one", "Correct")`
+
+## `r cc()`
+
+To convert from yards to mm, multiply yards by 914.4 yards per mm.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[3], id = cc(id), inline=FALSE)`
+
+## `r cc()`
+
+[Instructions](#tip-flavor-of-one)
+
+To convert from pints to cubic meters, multiply pints by 2113.38 meters^3^ per pint.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[5], id = cc(id), inline=FALSE)`
+
+## `r cc()` 
+
+To convert from *meters per second* to miles, multiply by 0.000621371 miles per meter.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[1], id = cc(id), inline=FALSE)`
+
+## `r cc()` 
+
+To convert from seconds to hours, multiply by seconds per hour.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[3], id = cc(id), inline=FALSE)`
+
+## `r cc()`
+
+To convert from *acre-feet* to *cubic meters*, multiply by 1233.48 meters per foot.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[2], id = cc(id), inline=FALSE)`
+
+## `r cc()`
+
+To convert from *cc* to *liters*, multiply by 0.001 liters per cc.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[5], id = cc(id), inline=FALSE)`
+
+## `r cc()`
+
+To convert from *meters per second* to *miles per second*, multiply by 0.000621371 miles per meter.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[5], id = cc(id), inline=FALSE)`
+
+## `r cc()`
+
+To convert from *GDP dollars per capita* to *total GDP dollars*, multiply by 365 capita per dollar.
+
+`r devoirs::devoirs_set(for_flavors, for_flavors[1], id = cc(id), inline=FALSE)`
+
+## `r cc()`
+
+Which of these units is used to measure information?
+
+```{mcq}
+#| inline: true
+#| label: info-unit
+1. Hertz [hint: Sorry. This is *per second*, that is, inverse seconds]
+2. Parsec [hint: Sorry. This unit measures distance]
+3. Bit [correct hint: Right! A byte is 8 bits, a Gigabyte is one-billion bits. Computers are information machines, thus the use of bits when describing their memory capacity.]
+4. Erg [hint: Sorry. This unit measures energy]
+```
+
+:::
+::::

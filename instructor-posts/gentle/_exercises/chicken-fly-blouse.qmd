@@ -1,0 +1,54 @@
+---
+id: "chicken-fly-blouse"
+created: "Mon Jul  6 13:57:07 2026"
+attribution: DTK 
+use: Supplement to Choices chapter
+---
+
+```{r include=FALSE, eval=!"devoirs" %in% (.packages())}
+# For stand-alone compilation testing
+library(devoirs)
+library(mosaicCalc)
+```
+
+::: {#exr-chicken-fly-blouse}
+-------
+
+
+MOVE THE FOLLOWING TO AN EXERCISE OR ACTIVITY:
+
+To illustrate, consider a set of six options: A, B, C, D, E, F. Pick any of the options, even at random. Let's suppose we picked B. Now consider every other option, noting how it compares to B. List those options that are preferred to B on the right side and those options that B is preferred to on the left side. For instance, suppose we prefer D to B, but we prefer B to C. Considering all the other options, we might end up with this description:
+
+F C A | B | D E
+
+The notation with the bar (|) indicates that the preference is known compared to the options on the right or left. Any options within the same pair of bars are, so far as we can tell, tied with each other. The notation F C A | B | D E means that we have not yet made a decision among options F C and A, except that we know already that we prefer B to any of them. Similarly, we haven't yet stated whether D is perferred to E or *vice versa*, but we know that we prefer either of them to B.
+
+Now pull out the set of options on either side of the enclosed | B |. That is F, C, A on the left and D, E on the right. Separately apply the procedure to those two lists. To illustrate, suppose we randomly choose to start with A in the F C A list. We compare each of the remaining options---F and C---to A. This might produce the ordering A | F C. Take this somewhat ordered list to replace the F C A from the previous list. This gives
+
+A | F C | B | D E
+
+Do the same sort of substitution on the right side, perhaps producing
+
+A | F C | B | E | D
+
+Exercise: how to handle a tie:  C A | B F | D E. Use = instead of | when there is a tie.
+
+There is now only one enclosure that has two options: | F C |. Apply the pairwise procedure to those options. Suppose it turns out that we prefer F to C, that is F | C. Replace the options in original enclosure | F C | with the now ordered options F | C. 
+
+The result will put every option in its own enclosure. 
+
+A | C | F | B | E | D
+
+Now for the last step. Go from left to right, assigning the numbers 1, 2, ... 6 in turn to the option:
+
+```{verbatim}
+A | C | F | B | E | D
+1   2   3   4   5   6
+```
+
+Now there is a numerical value for each option that respects the (transitive) pairwise preferences among the options. You could have used other numerical values than 1-6. Any numbers will do so long as they are increasing from left to right.
+
+
+-----
+:::
+ <!-- end of exr-chicken-fly-blouse -->

@@ -1,65 +1,45 @@
 - file: avoid-put-socks.qmd
   status: sketch
   mode: outline
-  group: unclassified
-  rank: 1.0
-- file: elephant-hold-knob.qmd
-  status: ~
-  mode: ~
-  group: unclassified
-  rank: 1.0
-- file: frog-get-laundry.qmd
-  status: draft
-  mode: exercise
-  group: unclassified
+  group: x-drafts
   rank: 1.0
 - file: girl-lose-hamper.qmd
   status: sketch
   mode: exercise
-  group: unclassified
+  group: x-drafts
   rank: 1.0
 - file: jellyfish-lay-bolt.qmd
   status: sketch
-  mode: outline
-  group: unclassified
+  mode: sketch
+  group: data
   rank: 1.0
 - file: jellyfish-open-spoon.qmd
-  status: sketch
-  mode: outline
-  group: unclassified
+  status: ready-to-use
+  mode: exercise
+  group: dimensions
   rank: 1.0
 - file: kitten-bend-door.qmd
   status: draft
-  mode: outline
-  group: unclassified
+  mode: exercise
+  group: operationalization
   rank: 1.0
 - file: nephew-dig-lamp.qmd
   status: ready-to-use
   mode: reading-question
-  group: unclassified
+  group: reading-question
   rank: 1.0
 - file: pony-meet-window.qmd
   status: ready-to-use
   mode: exercise
-  group: unclassified
-  rank: 1.0
-- file: puppy-hang-blanket.qmd
-  status: ready-to-use
-  mode: reading-question
-  group: unclassified
-  rank: 1.0
-- file: reptile-beat-window.qmd
-  status: ready-to-use
-  mode: reading-question
-  group: unclassified
+  group: systems
   rank: 1.0
 - file: seaweed-bend-laundry.qmd
-  status: sketch
+  status: ready-to-use
   mode: discussion
-  group: unclassified
+  group: discussions
   rank: 1.0
 - file: seaweed-hang-ring.qmd
   status: ready-to-use
   mode: reading-question
-  group: unclassified
+  group: reading-questions
   rank: 1.0

@@ -1,0 +1,10 @@
+:::: {.callout-note collapse=true}
+## Function input, output, and graphical interpretation
+
+::: {.panel-tabset}
+
+
+::: {.panel-tabset}
+
+
+

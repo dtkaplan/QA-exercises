@@ -1,0 +1,31 @@
+# Drill Questions
+
+## Notes to authors {-}
+
+`r devoirs::push_answer_style("block")` <!-- turns on the display of answers -->
+
+1. Drill questions should always have answers provided.
+    
+    In the `{devoirs}` markup language, answers are given as "hints." See the examples for how to install a hint.
+
+2. Every question item should have a unique ID. You can make this up at random, but a good idea is to tie the ID to the chapter.
+
+3. You also can give narrative answers in both *short* and *long* form. 
+[This is an example of a short answer. See the markup in the source document.]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Drill-questions-6NN"}
+
+<!-- Opening answer: Drill-questions-5cC -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+Here is a long-form answer. This is useful if
+
+- you have bullet points
+- or images, math markup, and so on.
+
+
+[..id..]{data-tooltip="Ans id: Drill-questions-5cC"}
+:::
+<!-- closing answer Drill-questions-5cC -->
+
+4. The block labeled "Remember to hand in your work ..." is inserted automatically on a document by document basis. You do not need to enter this as a question. 
+

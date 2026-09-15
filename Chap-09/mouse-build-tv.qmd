@@ -1,0 +1,25 @@
+<!--
+id: "mouse-build-tv"
+created: "Wed Sep  9 10:23:28 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+topic: algebra 
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-mouse-build-tv}
+Recall that same() and flat() have very simple algebraic definitions:
+
+$\text{steady}(x) \equiv x\ \ \ \ \text{and}\ \ \ \ \ \text{flat}( ) \equiv 1$
+
+Flat() is so simple that it does not even require an arg! The simplicity means that we can write @eq-lc-fghz in a more compact form: 
+
+$$h(x, z) \equiv a\, x + b\, z + c .$$ {#eq-lc-fghz2}
+
+The conciseness of @eq-lc-fghz2, unfortunately, hides something important: same() and flat() are a modeler's choice, usually just an approximation. When this choice is not appropriate, remember that a modeler can use other functions instead of same().
+:::
+ <!-- end of exr-mouse-build-tv -->

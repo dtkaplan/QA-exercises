@@ -1,0 +1,87 @@
+---
+title: "Topics for Quantitative Reasoning at UATX"
+description: "Marginal and Total Tax Rates"
+author: "Daniel Kaplan"
+date: "2025-12-22"
+categories: [taxes, derivatives, anti-differentiation]
+---
+
+```{r include=FALSE}
+library(mosaicCalc)
+
+source("../../_software/core-modeling-profiles.R")
+```
+
+r xf("sec-rates-of-change") showed how to calculate, for any original function, the corresponding *rate of change* function. Here, the problem is reversed: we know the rate of change function and we want to find out the corresponding original function.
+
+The idea of a *function* is central to quantitative reasoning. Recall that a function describes a **relationship** between one or more inputs and an output quantity. We have mostly worked with functions with either one or two inputs. It's relatively easy to develop an intuition for these because you can *visualize them* using graphics. In the next chapter we will consider the uses of functions of many inputs as well techniques for working with them to extract information.
+
+In this book, we started work with a handful of basic functions which we called the *core modeling* functions. (See r xf("sec-basic-functions").) As a reminder, the eight core modeling functions are listed in the leftmost column of @fig-derivs-core modeling.
+
+```{r include=FALSE}
+# Taken out as redundant with the later figure.
+#| label: ffig-core modeling-collection
+#| eval: false
+#| echo: false
+#| warning: false
+#| layout-ncol: 4
+# fig-cap: "Portraits of the core modeling functions"
+#| fig-subcap:
+#| - flat()
+#| - same()
+#| - hill()
+#| - hillside()
+#| - exp2()
+#| - log2()
+#| - osc_graph()
+#| - recip_graph()
+flat_graph()
+
+same-graph()
+
+hill_graph()
+
+hillside_graph()
+
+exp2_graph()
+
+log2(_graph()
+
+osc_graph()
+
+recip_graph()
+```
+
+Although the eight core modeling functions often appear as models of simple phenomena, they do not tell the story of *all* relationships between an input and an output. As well, none of them are functions with two or more inputs. Consequently, we introduced several techniques *to build new customized functions* out of the core modeling functions or other functions that we have already created. Just to mention their names:
+
+- input and output scaling of one function
+- linear combination of multiple functions
+- multiplication of two functions
+- pipelining functions
+
+Modern quantitative methods include several other techniques for constructing functions which are often grouped together under the name r xf_definition("machine learning").^[Examples are splines, smoothers, support vector machines, random forests, and neural networks. Tossing one of these names into a conversation is a good way to make others believe that you are, as the French say, [*au courant*](https://www.merriam-webster.com/dictionary/au%20courant).]
+
+## Review of differentiation
+
+r xf("sec-rates-of-change") introduced another way of constructing a new function out of an old one: calculating for each input to the old function the *rate of change* of that function with respect to the input. The process of doing this is called *differentiation*. The new function created is called the *derivative* of the old function. @fig-derivs-core modeling shows the derivatives of the core modeling functions. 
+
+::: {#fig-derivs-core modeling}
+Name | Original function |  Derivative function | Looks like
+-----|------------------|--------------------|--------------------
+same() | ![](../www/same-graph.png)  | ![](../www/dsame-graph.png) | = flat()
+flat()  | ![](../www/flat_graph.png)     | ![](../www/dflat_graph.png) | = 0
+exp2() | ![](../www/exp2_graph.png)  | ![](../www/dexp2_graph.png) | exp2()
+hillside() | ![](../www/hillside_graph.png)   | ![](../www/dhillside_graph.png) | = hill()
+log2() | ![](../www/log2(_graph.png) | ![](../www/recip_graph.png) | recip()
+osc() | ![](../www/osc_graph.png) | ![](../www/dosc_graph.png) | osc()
+hill() | ![](../www/hill_graph.png) | ![](../www/dhill_graph.png) | ??
+recip() | ![](../www/recip_graph) | ![](../www/drecip_graph.png) | ??
+
+The core modeling functions and their derivative functions.
+
+:::
+
+Calculus students memorize a great many function-derivative pairs. We won't need to do this. What's important here:
+
+- The derivative of a function is itself a function. Differentiation creates new functions from old.
+- Just about any function, including the ones created by the methods mentioned above, can be differentiated using a relatively straightforward process that is well suited to computers.

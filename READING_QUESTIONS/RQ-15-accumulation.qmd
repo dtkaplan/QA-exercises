@@ -1,0 +1,31 @@
+---
+title: "An Analysis Approach: Chap 15" 
+subtitle: "Reading Questions"
+crossref:
+  exr-title: "Reading Question 15."
+  fig-title: "Figure RQ15-"
+  fig-prefix: "Fig RQ15-"
+  tbl-title: "Table RQ15"
+---
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+{{< include _devoirs.qmd >}}
+
+
+
+<!-- {{< include _exercises/Chap-15/turtle-understand-scarf.qmd >}} -->
+
+
+<!-- {{< include _exercises/Chap-15/camel-win-pen.qmd >}} -->
+
+
+<!-- {{< include _exercises/Chap-15/boy-speak-dish.qmd >}} -->
+
+
+<!-- {{< include _exercises/Chap-15/snake-send-linen.qmd >}} -->
+
+
+

@@ -3,9 +3,10 @@ id: "jellyfish-open-spoon"
 created: "Sat Aug 15 10:06:46 2026"
 attribution: DTK
 uses: "Systems chapter"
-status: "sketch"
+status: "ready-to-use"
 chapter: 2
-mode: "outline"
+mode: exercise
+group: dimensions
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,6 +14,19 @@ mode: "outline"
 ::: {#exr-jellyfish-open-spoon}
 Using the broad sense of "dimension" introduced in this chapter, write down 10 familiar dimensions of an automobile. Remember that "dimension" covers not just spatial extent but also other properties of the car.
 
-ADD OTHER VERSIONS, E.G. a chair, a computer, a flowering plant
+`r devoirs::devoirs_text("jos-car-8dkw")`
+
+Do the same for these other familiar objects:  
+
+- A chair
+`r devoirs::devoirs_text("jos-chair-8dkw")`
+
+- A computer
+`r devoirs::devoirs_text("jos-computer-8dkw")`
+
+- A flowering plant
+`r devoirs::devoirs_text("jos-flowering-plant-8dkw")`
+
+
 :::
  <!-- end of exr-jellyfish-open-spoon -->

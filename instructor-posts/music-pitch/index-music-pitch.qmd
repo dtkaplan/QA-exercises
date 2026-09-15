@@ -1,0 +1,185 @@
+---
+title: "Music and pitch"
+description: "`Osc()` and `exp2()` produce pitch, `log2()` translates to musical note."
+author: "Daniel Kaplan"
+date: "2026-02-06"
+categories: [music, osc(), exp2()]
+---
+
+```{r include=FALSE}
+library(mosaicCalc)
+library(xref)
+library(QRA)
+```
+
+
+{{< include ../../_extensions/r-wasm/live/_knitr.qmd >}}
+
+
+Almost everyone enjoys listening to music, many people can play an instrument, whistle or hum, or read the notation for musical notes. The piano keyboard provides a simple index into successive notes that corresponds exactly to the position of marks in musicial notation. 
+
+::: {#fig-keyboard-notes}
+![](../../www/notes-piano.png)
+
+A piano keyboard marked with the notes of a scale. Successive notes are evenly spaced both on the keyboard and in musical notation. "Concert A" is the rightmost "A" on the keyboard.
+:::
+
+Sound is carried through the air by pressure waves. If you place a small pressure detector---that is, a microphone---you can read pressure out as a function of time. What the function looks like depends on the context. To illustrate, @fig-human-voice-4 shows short recordings of human voice for four different vocal sounds.
+
+::: {#fig-human-voice-4}
+
+
+![](../../www/voice-recording.png)
+"Close-up (40 ms) views of the waveforms of one voiceless fricative (/h/) and 3 vowel tokens." [Source](https://www.mq.edu.au/faculty-of-medicine-health-and-human-sciences/departments-and-schools/department-of-linguistics/our-research/phonetics-and-phonology/speech/acoustics/speech-waveforms/the-waveforms-of-speech) The /h/ is the brief sound in words like "hat" that preceeds the vowel sound. The vertical black bars are not part of the waveform.
+
+:::
+
+These are fast oscillations. In the slow-looking oscillations for /i:/, each large hump takes about 5-thousands of a second. In describing sounds, it's conventional to refer to the `r xf_definition("frequency")` rather than the duration `r xf_to_def("period")`. The core modeling function osc() with appropriate input scaling is an excellent choice for modeling such (voiced) waveforms, but not so much for the irregular waveform /h/. The units of "period" are secs or millisecs: both have dimension T. The units of "frequency" are `r xf_definition("Hz (Hertz)")` and has dimension T^-1^.
+
+`osc(200 * t)` produces a waveform of 200 Hz, exactly equivalent to a period of 5 millisecs. 
+::: {.callout-note}
+## Listening to `osc()`
+
+The site [https://onlinetonegenerator.com/](https://onlinetonegenerator.com/) lets you play `osc(200 * t)` (or any other audio frequency). Set the "Hertz" box to the frequency you want to hear.
+:::
+
+
+
+@fig-sine-sounds shows three waveform models that correspond to the /h/.
+
+```{r}
+#| label: fig-sine-sounds
+#| echo: false
+#| layout-ncol: 1
+#| fig-cap: "Models of /h/ produced by linear combinations of osc()"
+#| fig-subcap:
+#| - "`osc(204 * t)`"
+#| - "`0.2 * osc(102 * t) + osc(204 * t)`"
+#| - "`0.2 * osc(102 * t) + osc(204 * t) + 0.1 * osc(12 * 204 * t)`"
+fundamental <- 204 # Hertz
+slice_plot(osc(fundamental * t + 0.22)  ~ t, 
+           domain(t=0:0.040), npts = 500)
+
+slice_plot(
+  osc(fundamental * t + 0.22) + 
+   0.2* osc(fundamental * t / 2 + 0.22) ~ t,
+  domain(t = 0:0.040), npts = 500)
+
+slice_plot(
+  osc(fundamental * t + 0.22) + 
+    0.2* osc(fundamental * t / 2 + 0.22) +
+    0.1* osc(fundamental * t * 12 + 0.22)~ t,
+  domain(t = 0:0.040), npts = 500)
+```
+
+::: {.callout-note}
+## Listening to linear combinations of osc()
+
+Direct your browser to [https://onlinetonegenerator.com/multiple-tone-generator.html](https://onlinetonegenerator.com/multiple-tone-generator.html) and set up the control panel like this:
+
+![](../../www/linear-combs-of-osc.png)
+
+Judge for yourself which vowel the result sounds like. 
+:::
+
+## Frequency spacing of notes
+
+A single `osc()` sounds artificial, not so much like a musical note from any instrument. The simple sound is called a `r xf_definition("pure tone")`. 
+
+Let us turn to the issue of how the perceived pitch of an `osc()` depends on the frequency.
+[`r xf_definition("Concert pitch")`](https://en.wikipedia.org/wiki/Concert_pitch) has a frequency of 440 Hz. On the piano, this is the frequency of A note (marked in yellow in @fig-keyboard-numbered).
+
+The next higher version of A, near the right in @fig-keyboard-numbered, has a higher frequency. It is exactly twice that of concert A, that is, 880 Hz. This difference in frequency by a factor of 2 defines an "octave." 
+
+::: {#fig-keyboard-numbered}
+![](../../www/keyboard-numbered.png)
+Two octaves of piano keys, labeled by note starting at Middle C (in [cyan]{style="color: cyan;"}). A standard piano has 88 keys, which can be numbered from 1 to 88. Middle C (in [cyan]{style="color: cyan;"}) is key 40, the numbers increasing by linear progression from left to right. Notice that each black key is 1 number step up  from Middle C (in [cyan]{style="color: cyan;"})
+
+:::
+
+Each piano key has its own frequency. @fig-note-frequency shows the relationship. Notice the on a logarithmic scale, frequency is a simple, `same()` function of key number. 
+
+
+
+
+
+```{r}
+#| label: fig-note-frequency
+#| echo: false
+#| layout-ncol: 1
+#| fig-cap: "Frequency versus piano key number. Concert A is marked by a dashed line. The blue horizontal lines mark the frequency of the A key in each octave."
+#| fig-subcap:
+#| - Linear scale
+#| - Logarithmic scale
+note_cycle <- c("w", "b", "w", "b", "w", "w", "b", "w", "b", "w", "w", "b")
+Notes <- tibble::tibble(n = 1:88,
+                        freq = 440*exp2((n-49)/12),
+                        note_num = 1 + (n %% 12 + 8)%% 12,
+                        color = note_cycle[1+ (n%%12  + 8)%%12 ],
+                        symbol = ifelse(color == "w", 1L, 16L))
+P1 <- Notes |> 
+  gf_hline(yintercept = c(27.5, 55, 110, 220, 440, 880, 1720, 3440), 
+           color = "dodgerblue") |>
+  gf_point(freq ~ n, shape = Notes$symbol) |>
+  # gf_refine(scale_y_log10()) |> 
+  gf_vline(xintercept = 49, linetype = "dashed", alpha = 0.5) |>
+  gf_theme(theme_minimal(base_size = 16)) |>
+  gf_labs(y = "Frequency (Hz)", x = "Piano key number (1-88)")
+
+P2 <- Notes |> 
+  gf_hline(yintercept = c(27.5, 55, 110, 220, 440, 880, 1720, 3440), 
+           color = "dodgerblue") |>
+  gf_point(freq ~ n, shape = Notes$symbol) |>
+  gf_refine(scale_y_log10()) |> 
+  gf_vline(xintercept = 49, linetype = "dashed", alpha = 0.5) |>
+  gf_theme(theme_minimal(base_size = 16)) |>
+  gf_labs(y = "Frequency (Hz)", x = "Piano key number (1-88)")
+
+P1
+P2
+```
+
+As a function of piano key number, the frequency is given by the formula in the R chunk. Similarly, key number can be calculated from the frequency. Not that `exp2()` and `log2()` are a key part of the relationship.
+
+```{webr}
+#| echo: false
+#| autorun: true
+#| 
+note_cycle <- c("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
+note_name <- function(frequency) {
+  n <- round(keynum(frequency))
+  ref_freq <- freq(n)
+  sharp_flat <- ifelse(ref_freq > frequency, "flat", "sharp")
+  off <- abs(ref_freq-frequency)
+  m <- ""
+  if (off != 0) m <- paste(" but", sharp_flat, "by", round(off), "Hz")
+  paste0(note_cycle[1+ (n %% 12  + 8) %% 12 ], m)
+}
+osc <- function(t) sin(2*pi*t)
+hillside <- function(t) pnorm(t)
+hill <- function(t) dnorm(t)
+flat <- unity <- function(x) 1.0
+steady <- id <- function(x) x
+double <- function(t) 2^t
+doublings( <- function(x) log2(x)
+freq <- function(keynumber) 440 * exp2((keynumber - 49)/12)
+keynum <- function(frequency) 12 * log2( frequency / 440 )  + 49 # Frequency in Hz
+```
+
+
+```{webr}
+freq <- function(keynumber) 440 * exp2((keynumber - 49)/12)
+keynum <- function(frequency) 12 * log2( frequency / 440 ) + 49 # Frequency in Hz
+
+freq(keynumber = 49)
+keynum(frequency = 880)
+note_name(frequency = 450)
+```
+
+
+1. What is the difference in frequency (in Hz) between key 50 and key 49?
+
+2. What is the ratio (dimensionless) of frequencies of key 50 to 49?
+
+3. The next higher A above concert A is key 61. What is the difference (in Hz) and ratio (dimensionless) to the frequency of key 62?
+

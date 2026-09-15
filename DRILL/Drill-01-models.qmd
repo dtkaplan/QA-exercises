@@ -1,0 +1,189 @@
+---
+number-offset: 1
+crossref:
+  exr-title: "Drill 1."
+filters:
+  - live
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r include=FALSE}
+library(drill)
+```
+
+# Drill Questions: Argument and reasoning {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+:::: {.callout-note collapse=true}
+## Argument and reasoning
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d01"`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+For purposes of this book, **reasoning** is the transformation of givens into new beliefs and understandings.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+Which of the following can be a **given** at the start of a reasoning process?
+
+```{mcq}
+#| label: d01-givens
+#| inline: true
+1. An observation [correct]
+2. Only a mathematical equation
+3. Only a fact known with certainty
+4. Only a numerical measurement
+```
+
+## `r cc()`
+
+Hearing a rooster crow is a direct observation that it is dawn.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="The rooster sound is a given. 'It is dawn' is a belief reached by reasoning from the given.")`
+
+## `r cc()`
+
+What links the observation of a rooster sound to the reasoned belief that it is dawn?
+
+```{mcq}
+#| label: d01-rooster-link
+#| inline: true
+1. The heuristic rule that roosters crow at dawn. [correct]
+2. The fact that dawn always occurs when a rooster makes a sound.
+3. A formal proof that dawn has occurred.
+4. A measurement of the time of day.
+```
+
+## `r cc()`
+
+A **heuristic** is a reasoning link that is useful but is not guaranteed to be correct.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+Which statement best describes **formal reasoning** as used in this chapter?
+
+```{mcq}
+#| label: d01-formal
+#| inline: true
+1. It uses links governed by rules that are accepted as certain. [correct]
+2. It is reasoning based only on common sense.
+3. It is always about real-world situations.
+4. It cannot contain human errors.
+```
+
+## `r cc()`
+
+A premise is a statement assumed to be true for the purpose of formal reasoning.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+Why can formal reasoning give misleading results when it is applied to a real-world situation?
+
+```{mcq}
+#| label: d01-premises
+#| inline: true
+1. The premises used in the formal reasoning may not accurately represent the real-world situation. [correct]
+2. Formal reasoning is never reliable.
+3. Formal reasoning always uses numerical data.
+4. Formal reasoning cannot be carried out by a computer.
+```
+
+:::
+::::
+
+:::: {.callout-note collapse=true}
+## Models as bridges
+
+`r cc <- drill::new_drill_counter(style = "ALPHA")`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+A model is a **representation** of an item, process, or setting of interest.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+Which statement best expresses the role of a quantitative model in this book?
+
+```{mcq}
+#| label: d01-model-bridge
+#| inline: true
+1. It bridges real-world givens and the power of formal reasoning. [correct]
+2. It replaces the real world with a mathematically exact copy.
+3. It guarantees that conclusions about the real world are true.
+4. It eliminates the need for heuristic reasoning.
+```
+
+## `r cc()`
+
+Building a quantitative model is itself an exercise in formal reasoning.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Model construction uses knowledge, understanding, and belief about real-world matters together with heuristic reasoning. The completed model can then serve as a premise for formal reasoning.")`
+
+## `r cc()`
+
+Suppose a model is used to predict the effect of an intervention in a real-world situation, for instance, a medical treatment. The model produces a logically correct result, but the model itself leaves out an important feature of the real situation. Which conclusion is most consistent with the chapter?
+
+```{mcq}
+#| label: d01-model-fault
+#| inline: true
+1. The formal calculation can be correct even though the conclusion is not useful for the real-world situation. [correct]
+2. The formal calculation must contain an arithmetic error.
+3. The model must therefore be a fact rather than a representation.
+4. Formal reasoning cannot be used with models.
+```
+
+## `r cc()`
+
+The usefulness of a model depends in part on the purpose for which the model is built.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+Which statement best describes the iterative nature of modeling?
+
+```{mcq}
+#| label: d01-iterative
+#| inline: true
+1. Build a model, examine how well it captures important aspects of reality, and improve it when needed. [correct]
+2. Build a model once and then treat it as permanently correct.
+3. Replace heuristic reasoning with formal reasoning before building the model.
+4. Avoid checking a model against reality because models are representations.
+```
+
+## `r cc()`
+
+In the epidemic example, the SIR model is used to represent the connections among **susceptible**, **infective**, and **recovered** people.
+
+`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+
+## `r cc()`
+
+In the epidemic example, the computer simulation is itself the model; the SIR model is merely the software used to run it.
+
+`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="The SIR description is the model. The computer program implements the model's bookkeeping and formal calculations.")`
+
+:::
+::::

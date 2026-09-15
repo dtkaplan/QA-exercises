@@ -1,0 +1,194 @@
+---
+number-offset: 4
+crossref:
+  exr-title: "Drill 5."
+---
+
+# Drill Questions: Magnitudes {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+library(drill)
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+`r id = "d05"`
+
+:::: {.callout-note collapse=true}
+## Scientific notation
+
+`r cc <- drill::new_drill_counter(style = "numeric")`
+
+## `r cc()` 
+
+IN DRAFT: Ask the reader to compare the two standard notation numbers to determine which is bigger. E.g. 0.0132 and 0.0089
+
+1. The leading digit
+2. The second digit
+3. The third digit
+4. A digit in position four or beyond
+
+## `r cc()`
+
+IN DRAFT: Ask the reader to compare the two scientific notation numbers given to determine which is bigger and which is smaller. 
+
+ANSWER FORM
+
+1. Compare the exponents
+2. Compare the first digit of the mantissa
+3. Compare the second digit of the mantissa
+4. Compare the third digit of the mantissa.
+
+## `r cc()`
+
+Write `0.00056` in scientific notation. The expected answer is `5.6e-4`.
+
+Write `7.2e5` in ordinary decimal notation. The expected answer is `720,000`.
+
+Two positive quantities have scientific-notation exponents 4 and 7. By how many orders of magnitude do their sizes differ, approximately? The expected answer is 3.
+
+MAYBE MOVE THIS TO AN EXERCISE: Make up two scientific notation numbers, one with and exponent of 4 and the other an exponent of 7. Your job is to select mantissas that
+
+a. will make the order of magnitude difference almost exactly 3.
+
+b. will make the order of magnitude difference practically 4.
+
+c. will make the order of magnitude difference practically 2.
+
+d. Are there mantissas in the conventional format (with one digit to the left of decimal point) that can make the order of magnitude 5? (Hint: Think about the signs.)
+
+e. Are there mantissas in the conventional format (with one digit to the left of decimal point) that can make the order of magnitude 6?
+
+::::
+
+
+:::: {.callout-note collapse=true}
+## Logarithms
+
+`r cc <- drill::new_drill_counter(style = "numeric")`
+
+::: {.panel-tabset}
+
+
+## `r cc()`
+
+True or false: `log10(5e8)` is between 8 and 9.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "d05-log-04")`
+
+## `r cc()`
+
+True or false: The logarithm of `5 kg` is a quantity with dimension `[mass]`.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "d05-unit-02", wrong.hint="The logarithm applies to only the number part of a quantity. The unit is lost.")`
+
+## `r cc()`
+
+True or false: The logarithm of `5 kg` is a quantity with dimension `[log mass]`.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "d05-unit-5628", wrong.hint="[log mass] is not a dimension. Logarithms of a quantity do not carry a dimension in the framework we are using for units and dimensions")`
+
+
+::::
+
+
+:::: {.callout-note collapse=true}
+## Magnitudes
+
+
+
+`r cc <- drill::new_drill_counter(style = "numeric")`
+
+
+
+::: {.panel-tabset}
+
+## `r c()`
+
+A population rises from `2,000` to `20,000`. How many orders of magnitude larger is the new population?
+
+```{mcq}
+#| label: d05-order-01
+#| inline: true
+1. `1` [correct]
+2. `2`
+3. `10`
+4. `18`
+```
+
+## `r cc()`
+
+A sound level changes from `10^-6 W/m^2` to `10^-3 W/m^2`. By how many orders of magnitude did the power density increase? 
+
+```{mcq}
+#| label: d05-order-02
+#| inline: true
+1. `1`
+2. `2`
+3. `3`  [correct]
+4. `4`
+```
+
+
+## `r cc()`
+
+`r drill::what_is_the_magnitude(digits = 1, mag = 4, id = cc(id), seed = 32)`
+
+## `r cc()`
+
+`r drill::what_is_the_magnitude(digits = 2, mag = 8, id = cc(id), seed = 67)`
+
+## `r cc()`
+
+`r drill::what_is_the_magnitude(digits = 1, mag = 1, id = cc(id), seed = 89)`
+
+## `r cc()`
+
+`r drill::what_is_the_magnitude(digits = 4, mag = -4, id = cc(id), seed = 101)`
+
+## `r cc()`
+
+`r drill::what_is_the_magnitude(digits = 1, mag = 0, id = cc(id), seed = 362)`
+
+## `r cc()`
+
+`r drill::what_is_the_magnitude(digits = 1, mag = -7, id = cc(id), seed = 80923)`
+
+:::
+
+.
+
+::::
+
+:::: {.callout-note collapse=true}
+## Misc
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include _exercises/pig-think-bolt.qmd >}}
+
+
+## 2 
+
+{{< include _exercises/lamb-speak-radio.qmd >}}
+
+
+## 3
+
+{{< include _exercises/pollen-stand-pen.qmd >}}
+
+## 4
+
+`r devoirs::devoirsTF(correct = FALSE, id = "d05-graphics-02")` A magnitude axis changes the underlying values of the quantities begin plotted.
+
+
+
+:::
+
+::::
+

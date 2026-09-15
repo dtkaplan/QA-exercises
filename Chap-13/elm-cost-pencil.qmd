@@ -21,7 +21,7 @@ ii. What are the expected patterns of change?
 
 These two types of information draw on different sources. Quantifying the current state of the situation can be based on existing records, e.g., how many nurses and other licensed medical professionals are currently active. In contrast, describing the pattern of change often involves figuring out what is the **mechanism** of change. For instance, the change in the number of available medical professionals comes primarily from two sources: the number of students enrolled in appropriate training programs and the retirement or burn-out rates of existing professionals.
 
-Consider one aspect of health-care provision: the number of active physicians. Government statistics provide indicators of the present state: as of 2025, there are very close to one-million active physicians and about 100,000 medical students in the US. 
+Consider one aspect of health-care provision: the number of active physicians. Government statistics provide indicators of the present state: as of 2025, there are very close to one million active physicians and about 100,000 medical students in the US. 
 
 The change in state is another matter; we have to know about the mechanisms. For instance, medical school is typically four years long. (Med school is followed by additional years of training, but those people are usually already providing medical care.) So, a reasonable estimate is that there will be roughly 25,000 new physicians per year entering the system. 
 

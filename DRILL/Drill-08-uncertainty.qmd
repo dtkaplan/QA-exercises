@@ -1,0 +1,92 @@
+---
+number-offset: 7
+crossref:
+  exr-title: "Drill 8."
+---
+
+# Drill Questions: Uncertain Quantities
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+
+```{webr}
+#| echo: false
+#| context: setup
+
+```
+
+
+:::: {.callout-note collapse=true}
+## A. Relative probability
+
+::: {.panel-tabset}
+
+## 1.
+
+{{< include _exercises/shark-dream-linen.qmd >}}
+
+## 2. 
+
+{{< include _exercises/horse-point-closet.qmd >}}
+
+## 3.
+
+{{< include _exercises/hamster-cut-tv.qmd >}}
+
+## 4. 
+
+{{< include _exercises/frog-choose-knife.qmd >}}
+
+:::
+
+::::
+
+
+:::: {.callout-note collapse=true}
+## B. Named distributions
+
+
+
+::: {.panel-tabset}
+
+## A.
+
+{{< include _exercises/birch-throw-bowl.qmd >}}
+
+
+## B.
+
+{{< include _exercises/fox-fly-bottle.qmd >}}
+
+## C.
+
+{{< include _exercises/oak-eat-pan.qmd >}}
+
+## D. 
+
+{{< include _exercises/elm-read-glasses.qmd >}}
+
+## E.
+
+{{< include _exercises/cat-run-screen.qmd >}}
+
+
+
+::: 
+
+
+::::
+
+
+
+
+
+

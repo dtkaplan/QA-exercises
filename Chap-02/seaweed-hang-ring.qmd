@@ -11,7 +11,11 @@ mode: "reading-question"
 {{< include ../exercise-header.qmd >}}
 
 ::: {#exr-seaweed-hang-ring}
-The text notes that there is no equivalent English word for the operation of multiplication in units. How are units formed by multiplication typically written or spoken compared to those formed using "per"?
+We use the word "per" to indicate a unit of measurement that is formed by division. For example, "miles per hour" is a unit of speed formed by dividing distance (miles) by time (hours).
+
+For units formed by multiplication, we typically write down the units being multiplied with a hyphen between them. Examples: acre-feet (a volume).
+
+Find three more examples of units formed by multiplication. Hints: labor effort, transportation services, torque, electrical energy, ....
 
 `r devoirs::devoirs_text("shr-RQ2-732k")`
 

@@ -1,0 +1,129 @@
+---
+number-offset: 7
+crossref:
+  exr-title: "Exercise 8."
+  fig-title: "Figure E8."
+  fig-prefix: "Fig E8."
+  tbl-title: "Table E8."
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+<!-- not needed: 
+include _use_webr.qmd
+-->
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+
+## Exercises: Customizing functions {#sec-customizing-functions-exercises}
+
+{{< include _exercises/seal-ring-scarf.qmd >}}
+
+File ID: seal-ring-scarf
+
+-----
+
+{{< include _exercises/snail-hang-tv.qmd >}}
+
+File ID: snail-hang-tv
+
+-----
+
+{{< include _exercises/aspen-love-hamper.qmd >}}
+
+File ID: aspen-love-hamper
+
+-----
+
+{{< include _exercises/horse-hide-ship.qmd >}}
+
+File ID: horse-hide-ship
+
+-----
+
+{{< include _exercises/calf-hear-bulb.qmd >}}
+
+File ID: calf-hear-bulb
+
+-----
+
+{{< include _exercises/boy-forgive-pen.qmd >}}
+
+File ID: boy-forgive-pen
+
+-----
+
+{{< include _exercises/kangaroo-eat-oven.qmd >}}
+
+File ID: kangaroo-eat-oven
+
+-----
+
+{{< include _exercises/doe-give-table.qmd >}}
+
+File ID: doe-give-table
+
+-----
+
+{{< include _exercises/finger-talk-clock.qmd >}}
+
+File ID: finger-talk-clock
+
+-----
+
+{{< include _exercises/finch-sit-painting.qmd >}}
+
+File ID: finch-sit-painting
+
+-----
+
+{{< include _exercises/goat-forget-hat.qmd >}}
+
+File ID: goat-forget-hat
+
+-----
+
+{{< include _exercises/tiger-build-stair.qmd >}}
+
+File ID: tiger-build-stair
+
+-----
+
+{{< include _exercises/beech-sharpen-shirt.qmd >}}
+
+
+
+## Enrichment:
+
+- Combining different sources of risk.
+
+{{< include _exercises/combining-sources-of-risk.qmd >}}
+
+File ID: combining-sources-of-risk
+
+-----
+
+
+- Graphics of functions with two inputs
+
+{{< include _exercises/contour-plots-and-basis-functions.qmd >}}
+
+File ID: contour-plots-and-basis-functions
+
+-----
+
+- Piecewise smoothness
+
+{{< include _exercises/beech-pack-stove.qmd >}}
+
+File ID: beech-pack-stove
+
+-----
+
+
+{{< include _devoirs.qmd >}}
+

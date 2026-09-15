@@ -1,0 +1,49 @@
+---
+crossref:
+  exr-title: "Reading Question 3."
+  fig-title: "RQ-RQ3."
+  fig-prefix: "Fig-RQ3."
+  tbl-title: "Table-RQ3."
+---
+
+# Reading Questions: Chap 3 Quantities {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/nephew-dig-lamp.qmd >}}
+
+-----
+
+{{< include _exercises/reptile-beat-window.qmd >}}
+
+-----
+
+{{< include _exercises/seaweed-hang-ring.qmd >}}
+
+-----
+
+{{< include _exercises/puppy-hang-blanket.qmd >}}
+
+-----
+
+{{< include _exercises/ape-sell-plate.qmd >}}
+
+-----
+
+
+<!-- Library for RQ2
+
+exercises/beech-understand-cotton.qmd
+exercises/croc-come-blanket.qmd
+exercises/deer-put-cotton.qmd
+exercises/falcon-have-book.qmd
+
+-->
+
+
+
+

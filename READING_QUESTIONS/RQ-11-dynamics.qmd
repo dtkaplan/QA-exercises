@@ -1,0 +1,38 @@
+---
+title: "An Analysis Approach: Chap 11" 
+subtitle: "Reading Questions"
+crossref:
+  exr-title: "Reading Question 11."
+  fig-title: "Figure RQ11-"
+  fig-prefix: "Fig RQ11-"
+  tbl-title: "Table RQ11"
+---
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/ant-put-room.qmd >}}
+
+-----
+
+{{< include _exercises/lion-hold-hamper.qmd >}}
+
+-----
+
+{{< include _exercises/deer-iron-cotton.qmd >}}
+
+-----
+
+{{< include _exercises/spider-bite-suitcase.qmd >}}
+
+-----
+
+{{< include _exercises/dog-stand-plant.qmd >}}
+
+-----
+
+
+
+

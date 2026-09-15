@@ -1,0 +1,73 @@
+---
+number-offset: 13
+crossref:
+  exr-title: "Exercise 14."
+  fig-title: "Figure E14."
+  fig-prefix: "Fig E14."
+  tbl-title: "Table E14."
+---
+
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+{{< include _devoirs.qmd >}}
+
+
+<!-- not needed: 
+include _use_webr.qmd
+include ./_extensions/r-wasm/live/_knitr.qmd 
+-->
+
+# Exercises: Moving past two inputs {#sec-moving-past-two-inputs-exercises}
+
+NOTE: These are all just idea sketches.
+
+::: {.panel-tabset}
+## fir-wish-kayak
+{{< include _exercises/fir-wish-kayak.qmd >}}
+
+## sheep-put-cotton
+{{< include _exercises/sheep-put-cotton.qmd >}}
+
+## maple-ride-pencil
+{{< include _exercises/maple-ride-pencil.qmd >}}
+
+## cat-know-scarf
+{{< include _exercises/cat-know-scarf.qmd >}}
+
+## elbow-leave-jacket
+{{< include _exercises/elbow-leave-jacket.qmd >}}
+
+## beech-refer-hat
+{{< include _exercises/beech-refer-hat.qmd >}}
+
+## beech-refer-hat
+{{< include _exercises/giraffe-bite-ring.qmd >}}
+
+## finch-dive-magnet
+
+{{< include _exercises/finch-dive-magnet.qmd >}}
+
+## croc-lead-hat
+
+{{< include _exercises/croc-lead-hat.qmd >}}
+
+## beech-bring-coat
+
+{{< include _exercises/beech-bring-coat.qmd >}}
+
+## fawn-buy-ring
+
+{{< include _exercises/fawn-buy-ring.qmd >}}
+
+## sheep-put-cotton
+
+{{< include _exercises/sheep-put-cotton.qmd >}}
+
+## lion-let-stair
+
+{{< include _exercises/lion-let-stair.qmd >}}
+

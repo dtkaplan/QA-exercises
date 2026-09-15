@@ -1,0 +1,36 @@
+---
+crossref:
+  exr-title: "Reading Question 5."
+  fig-title: "RQ-RQ5."
+  fig-prefix: "Fig-RQ5."
+  tbl-title: "Table-RQ5."
+---
+
+# Reading Questions: Chap 5 Rates {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/croc-come-blanket.qmd >}}
+
+-----
+
+{{< include _exercises/fly-spend-gloves.qmd >}}
+
+-----
+
+{{< include _exercises/ant-spend-shoe.qmd >}}
+
+-----
+
+{{< include _exercises/eagle-grow-tv.qmd >}}
+
+-----
+
+{{< include _exercises/finger-dig-fridge.qmd >}}
+
+-----

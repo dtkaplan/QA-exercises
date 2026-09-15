@@ -1,0 +1,223 @@
+---
+number-offset: 5
+crossref:
+  exr-title: "Exercise 6."
+  fig-title: "Figure E6."
+  fig-prefix: "Fig E6."
+  tbl-title: "Table E6."
+---
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+{{< include _use_webr.qmd >}}
+
+{{< include _why-drill.qmd >}}
+
+```{webr}
+#| echo: false
+#| context: setup
+
+```
+
+`r devoirs::push_answer_style("block")`
+
+
+
+
+The core modeling functions are osc(), hill(), hillside(), flat(), same(), exp2(), log2(), recip(). When you need to remind yourself what the shape is, you can plot any of the functions here. You can also evaluate the function for a given input here. 
+```{webr}
+#| caption: "Plot any core modeling function"
+slice_plot( osc(x) ~ x, domain(x = -3:3))  # plot
+osc(2) # evaluate for a given input
+```
+
+:::: {.callout-note collapse=true}
+## Core modeling functions
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d06"`
+
+::: {.panel-tabset}
+## `r cc()`.
+
+{{< include _exercises/squirrel-put-map.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/cheetah-lend-coat.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/spruce-refer-bulb.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/elephant-buy-car.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/maple-burn-knife.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/pig-become-blouse.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/dolphin-enjoy-kitchen.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/cheetah-think-tv.qmd >}}
+
+## `r cc()`.
+
+{{< include _exercises/avoid-read-tv.qmd >}}
+
+----
+
+{{< include _exercises/ash-sit-pot.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/child-break-spoon.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/fir-wish-table.qmd >}}
+
+## `r cc()`
+
+
+{{< include _exercises/seahorse-lose-plyer.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/brother-sleep-radio.qmd >}}
+
+
+:::
+
+::::
+
+
+### Drafty
+
+
+{{< include _exercises/titmouse-let-sofa.qmd >}}
+
+File ID: titmouse-let-sofa
+
+-----
+
+{{< include _exercises/mouse-bathe-knob.qmd >}}
+
+File ID: mouse-bathe-knob
+
+-----
+{{< include _exercises/pine-fall-drawer.qmd >}}
+
+-----
+
+-----
+{{< include _exercises/fawn-go-blanket.qmd >}}
+
+File ID: fawn-go-blanket
+
+-----
+
+{{< include _exercises/kid-spend-hamper.qmd >}}
+
+File ID: kid-spend-hamper
+
+-----
+
+{{< include _exercises/birch-cost-stove.qmd >}}
+
+File ID: birch-cost-stove
+
+-----
+
+{{< include _exercises/nephew-sit-car.qmd >}}
+
+File ID: nephew-sit-car
+
+-----
+
+{{< include _exercises/walrus-dive-painting.qmd >}}
+
+File ID: walrus-dive-painting
+
+-----
+
+
+
+{{< include _exercises/daisy-blow-lamp.qmd >}}
+
+File ID: daisy-blow-lamp
+
+-----
+
+{{< include _exercises/lamb-speak-rug.qmd >}}
+
+File ID: lamb-speak-rug
+
+-----
+
+
+
+{{< include _exercises/titmouse-let-sofa.qmd >}}
+
+File ID: titmouse-let-sofa
+
+-----
+
+{{< include _exercises/elm-tear-plate.qmd >}}
+
+File ID: elm-tear-plate
+
+-----
+
+{{< include _exercises/frog-wish-bolt.qmd >}}
+
+File ID: frog-wish-bolt
+
+----
+
+{{< include _exercises/elephant-sail-mug.qmd >}}
+
+File ID: elephant-sail-mug
+
+----
+
+{{< include _exercises/hyena-dig-pencil.qmd >}}
+
+File ID: hyena-dig-pencil
+
+-----
+
+
+{{< include _devoirs.qmd >}}
+
+## Activities
+
+{{< include _exercises/goat-dive-painting.qmd >}}
+
+{{< include _exercises/finger-speak-ship.qmd >}}
+
+## Computing lab
+
+[Note: multiple quantities as inputs and how they relate to a *single* output quantity. Naturally, those input quantities may also be related to one another, in which case more functions come into SHOW AN INFLUENCE DIAGRAM and each of the functions involved. Each quantity has one function that comprises all of the inputs to that quantity.]
+
+[Note: Include interpolation and graphing in the computer lab for functions. In the text, include a description of *interpolation* (with illustrative graphic) and contrast it to *fitting*.]
+
+[Functions as algorithms. Splining, smoothing, fitting, iteration.]
+
+[Put in the Heron algorithm for square roots (from MC3/algorithms).]
+

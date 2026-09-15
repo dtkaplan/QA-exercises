@@ -1,0 +1,49 @@
+---
+number-offset: 13
+crossref:
+  exr-title: "Drill 14."
+---
+
+# Drill Questions: Rates of change
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+`r devoirs::push_answer_style("block")`
+
+{{< include _devoirs.qmd >}} 
+
+:::: {.callout-note collapse=true}
+## Rates of change and derivatives
+
+::: {.panel-tabset}
+
+## 1.
+
+{{< include _exercises/niece-eat-pot.qmd >}}
+
+## 2.
+
+{{< include _exercises/spider-mean-bolt.qmd >}}
+
+## 3.
+
+{{< include _exercises/ant-dream-boat.qmd >}}
+
+## 4.
+
+{{< include _exercises/turtle-break-stair.qmd >}}
+
+## 5.
+
+{{< include _exercises/kid-hurt-dress.qmd >}}
+
+## 6.
+
+{{< include _exercises/camel-sharpen-futon.qmd >}}
+
+:::
+::::
+
+

@@ -1,0 +1,37 @@
+---
+crossref:
+  exr-title: "Reading Question 4."
+  fig-title: "RQ-RQ4."
+  fig-prefix: "Fig-RQ4."
+  tbl-title: "Table-RQ4."
+---
+
+# Reading Questions: Chap 4 Magnitudes {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+{{< include _exercises/titmouse-hide-clock.qmd >}}
+
+-----
+
+{{< include _exercises/sheep-tear-bed.qmd >}}
+
+-----
+
+{{< include _exercises/duck-wish-blouse.qmd >}}
+
+-----
+
+{{< include _exercises/bobcat-fight-room.qmd >}}
+
+-----
+
+{{< include _exercises/lion-understand-suitcase.qmd >}}
+
+-----
+
+

@@ -1,0 +1,57 @@
+---
+number-offset: 10
+crossref:
+  exr-title: "Drill 11."
+---
+
+# Drill Questions: Likelihood 
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+`r devoirs::push_answer_style("block")`
+
+{{< include _devoirs.qmd >}}
+
+:::: {.callout-note collapse=true}
+## A. Relative and absolute probability
+
+::: {.panel-tabset}
+## 1.
+
+{{< include _exercises/walrus-sharpen-boat.qmd >}}
+
+## 2. 
+
+{{< include _exercises/bird-engage-saw.qmd >}}
+
+## 3.
+
+{{< include _exercises/panda-mean-pen.qmd >}}
+
+## 4.
+
+{{< include _exercises/nephew-find-drawer.qmd >}}
+
+:::
+
+::::
+
+
+
+:::: {.callout-note collapse=true}
+## B. Calculating likelihood using data
+
+::: {.panel-tabset}
+
+
+## 1.
+
+{{< include _exercises/titmouse-refer-laundry.qmd >}}
+
+:::
+
+::::
+
+

@@ -1,0 +1,19 @@
+<!--
+id: "frog-lay-plate"
+created: "Mon Sep 14 09:54:50 2026"
+attribution: DTK
+mode: computer-exercise
+chapter: 9  
+status: sketch
+group: computer-exercises
+topic: nonlinear-regression
+-->
+
+{< include ../exercise-header.qmd >}
+
+::: {#exr-frog-lay-plate}
+TURN THIS INTO AN ILLUSTRATION OF NONLINEAR REGRESSION/Machine learning.
+
+Linear regression continues to be a useful technique, particularly when working with modest-sized data frames with tens to thousands of rows. With the advent of modern data technologies, much larger data from science, government, and commerce has become routine. Linear regression is still applicable, but much interest has developed in more flexible, nonlinear approaches, collectively known as machine learning. These have the potential to tease out subtle patterns in data that are invisible to linear regression, particularly in situations where there are many potential input variables. However, except for the simplest techniques, machine learning models often require careful statistical analysis to interpret.
+:::
+ <!-- end of exr-frog-lay-plate -->

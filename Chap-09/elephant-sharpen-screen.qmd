@@ -1,0 +1,20 @@
+<!--
+id: "elephant-sharpen-screen"
+created: "Wed Sep  9 15:49:21 2026"
+attribution: DTK
+mode: reading-question
+status: sketch
+group: x_drafts
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-elephant-sharpen-screen}
+1. What is the difference between an argument and a proof?
+2. What is the difference between quantitative and qualitative?
+3. What is the difference between an argument and a quarrel?
+
+
+:::
+ <!-- end of exr-elephant-sharpen-screen -->
