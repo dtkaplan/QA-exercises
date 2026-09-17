@@ -1,0 +1,24 @@
+<!--
+id: "shark-bite-suitcase"
+created: "Thu Sep 17 11:57:13 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "examples of optimization"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-shark-bite-suitcase}
+Examples:
+
+1. Angle of parking spaces.
+
+2. Getting the most power from your muscles.
+
+3. Fitting a function. Training an AI.
+:::
+ <!-- end of exr-shark-bite-suitcase -->

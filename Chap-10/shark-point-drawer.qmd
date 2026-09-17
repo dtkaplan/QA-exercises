@@ -1,0 +1,25 @@
+<!--
+id: "shark-point-drawer"
+created: "Thu Sep 17 11:46:23 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "business"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-shark-point-drawer}
+How much to invest in a factory to maximize production?
+
+NOTE THAT the argmax is infinity. This is not a good model of the situation. It's not production so much as profit that needs maximizing.
+
+Cobb Douglass production function 
+
+Just saying how much to produce to minimize the unit cost is an incomplete objective function.
+
+:::
+ <!-- end of exr-shark-point-drawer -->

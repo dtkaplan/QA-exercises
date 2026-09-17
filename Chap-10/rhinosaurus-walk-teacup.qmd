@@ -1,0 +1,158 @@
+<!--
+id: "rhinosaurus-walk-teacup"
+created: "Thu Sep 17 11:54:15 2026"
+attribution: DTK
+mode: conversation
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "transitivity of preferences"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-rhinosaurus-walk-teacup}
+
+
+```{r echo=FALSE}
+#| label: ch10-r-a9d66c6c
+source("_software/influence-diagrams.R")
+```
+
+
+
+```{r}
+#| label: ch10-r-c2960eaa
+#| echo: false
+#| results: asis
+#| cache: false
+
+my_elements <- c("A", "B", "C", "D", "E", "F")
+
+# It seems to be random whether the graph is acyclic or not.
+
+set.seed(163)
+
+tikz_output <- generate_perfect_tikz_graph(my_elements, acyclic = FALSE)
+
+writeLines(tikz_output, "generated_network.tikz")
+```
+
+```{r echo=FALSE}
+#| label: ch10-r-8ec90e5d
+set.seed(163)
+tikz_output <- generate_perfect_tikz_graph(my_elements, acyclic = TRUE)
+writeLines(tikz_output, "generated_network2.tikz")
+```
+
+```{tikz}
+%| echo: false
+%| file: "generated_network.tikz"
+%| fig-cap: "A textbook system diagram composed of connected elements."
+```
+
+```{tikz}
+%| echo: false
+%| file: "generated_network2.tikz"
+%| fig-cap: "A textbook system diagram composed of connected elements."
+```
+
+Everyday, in varied situations, we make choices. Some situations are personal: selecting a meal in a restaurant, buying clothing, accepting an invitation for a date. This is so familiar to us that we don't This chapter is about a quantitative framework for informing many of the choices we make in any of these roles. I use the word "informing" intentionally. As you'll see, many choices involve personal preferences, ethics, and moral values. It's hard---many would say, impossible---to quantify these. It may be that the quantitative framework we introduce can help to guide thinking about the choices, but using it is not a matter of turning the decision-making over to an AI.
+
+There are two basic types of choice-making situations: **straightforward** settings have a structure where everyone can agree on the best choice. **Value-laden** situations involve trade-offs between competing goals and involve value judgments. The best choice in a value-laden situation can be a matter of opinion, but quantitative modeling can help open up opinion to informed discussion. 
+
+A typical choice-making situation involves a set of options. Choosing among them is a matter of figuring out which option produces the best result. Consider selecting a dish for dinner from a restaurant menu. Based on our previous experience, tastes, and current appetite or cravings, we have in our head an idea of the *value* of each menu item. This is usually not an explicit number. We need only have a notion of how any two possibilities compare. If there are just two menu choices, say, A and B, we need only know which one is preferred to make a good choice. But if, as is typically the case, there are more than two options, we have a bit of work to do to make the best choice. 
+
+Imagine that the menu provides a large number of options: A, B, C, D, E, and so on. A rational choice making procedure---but not necessary the way people actually think---is to compare A to B, choosing the winner according to our opinions. Take the winner, and compare it to the next option, C. Again, take the winner and compare it to the next option, repeating this process until we have considered all the options. The overall winner is the best choice.
+
+The point here is that being able to select the winner from any two options provides the basis for choosing among any number of options. We'll call a situation where such a *pair-wise procedure* is feasible a **straightforward** choice. There is also the possibility that two or more choices might be tied for best. In everyday language we often think of this as a "difficult" decision but in our framework it is still *straightforward*. Why? If two or more options are tied then it doesn't matter which one we select. Choosing at random or on a whim will suffice to produce as good an outcome as possible.
+
+We occasionally encounter situations where the pair-wise method does not work. To illustrate, consider a choice among three options: A, B, and C, where we prefer A to B, and prefer B to C. So far, it is an straightforward choice, with A as the winner. But it sometimes happens that people prefer C to A. Then there is no best choice.
+
+Perhaps intuition tells you that if you prefer A to B, and B to C, then you *must* prefer A to C. In such a situation the preferences are said the be **transitive**. A **non-transitive** preference arises when *despite* preferring A to B and B to C, you judge that C is better than A.
+
+Many people would say that the non-transitive setting is impossible. And, indeed, non-transitivity can defeat the pair-wise procedure. But it is not for me to say that you are not allowed to have non-transitive preferences. You choices---especially in personal or trivial matters---are for you to set however you like. Rather than ruling out as invalid non-transitive preferences, we take the presence of non-transitivity as a clue to look into the matter more deeply, The quantitative framework provides ways to do this. We'll consider them later.
+
+## Options as numbers
+
+The straightforward situation, with transitive preferences, supports a way to translate *qualitative options* such as choosing between restaurant menu items, to a numerical scale without loss of critical information. 
+
+```{r}
+#| label: ch10-r-a576661b
+#| echo: false
+# Generate a random set of k pairings from n objects
+# Gets overwhelmed for n > 10
+# but that's good enough for my purpose
+rprefs <- function(n=5, tokens = letters[1:n], k=10, swap = 0, seed = 101 ) {
+  set.seed(seed)
+  inds <- combn(n, 2) |> t()
+  keepers <- sample(nrow(inds), min(k, nrow(inds)))
+  foo <- tokens[inds[keepers, ]] 
+  pairs <- foo |> matrix(nrow = length(foo)/2, ncol = 2, byrow = FALSE)
+  # perform some random swaps
+  if (swap > (nrow(pairs)/2)) {
+    stop(glue::glue("Too many swaps requested. Use swap = {floor(k/2} or fewer."))
+  } else if (swap > 0) {
+    swap_inds <- sample(1:nrow(pairs), swap)
+    left <- pairs[,1]
+    pairs[swap_inds,1] <- pairs[swap_inds,2]
+    pairs[swap_inds,2] <- left[swap_inds]
+  }
+  
+  pairs <- pairs[sample(1:nrow(pairs)), ]
+  paste(pairs[,1], ">", pairs[,2],sep = " ", collapse = ";\t") 
+}
+```
+
+
+By way of illustration, consider this set of preferences, where "C > D" means that option C is preferred to option D.
+
+<!-- generated by rprefs(4, k=6, tokens = LETTERS) -->
+
+A > B;	C > D;	A > C;	A > D;	B > D;	B > C
+
+Starting with the first preference, A > B, we can assign numbers to B and A that respect the order in the preference. Any numbers will do, so we will arbitrarily set the value of option B to 10 and option A to 20.
+
+Next, the second preference, C > D. Any number we assign to C or D will place it in an order with A and B. We haven't yet encountered any information to justify a placement, so we move on to the third preference, A > C. This tells us that C must be less than 20, but we still don't have information about the relationship between B and C. Looking down the list of preferences, we find in the last one that B > C. So we know that the value of C must be less than 10. Let's set it arbitrarily to 5. 
+
+With this Now that we have a numerical value for option C, we look for other preferences that relate to C and involve an option that has not yet received a value. There are two: A > D and C > D. We need to satisfy both of these; the value D = 2 accomplishes this. Now we have assigned a numerical value to each option:
+
+```{tikz}
+%| label: fig-number-line
+%| fig-cap: Representing the option preferences on the number line.
+%| echo: false
+%| fig-align: center
+
+
+\begin{tikzpicture}[x=0.4cm, y=1cm]
+    % Draw the main number line with arrows
+    \draw[latex-latex, thick] (-1, 0) -- (26, 0);
+
+    % Draw tick marks and integer numbers
+    \foreach \x in {0, 1, ..., 25} {
+        \draw (\x, 3pt) -- (\x, -3pt);
+        \node[below, font=\tiny] at (\x, -0.2) {\x};
+    }
+
+    % Define specific coordinates and label them with letters
+    % D at 2, C at 5, B at 10, A at 20
+    \foreach \val/\char in {2/D, 5/C, 10/B, 20/A} {
+        % Draw a small dot or thicker tick for the labeled points
+        \filldraw[black] (\val,0) circle (2pt);
+        % Place the letter above the dot
+        \node[above, font=\large\bfseries] at (\val, 0.2) {\char};
+    }
+\end{tikzpicture}
+```
+
+There can be substantial advantages to ranking the options numerically. The size of the number can be used to express *how much better* one option is than another. For instance, if we have several options with roughly the same numerical value, we can conclude that the choice among them is not important. 
+
+
+EXERCISE: Assigning the value 10 to option B in @fig-number-line is arbitrary, but not completely arbitrary. What other values could have been used instead that preserve the perference ordering of the options.
+
+EXERCISE: Show another number line with preferences, then ask whether the following newly expressed preference is sufficient to place a new option.
+
+EXERCISE: Show a non-transitive set of preferences. How can you tell that it's non-transitive. (Use `swap=1` when generating the preferences.)
+:::
+ <!-- end of exr-rhinosaurus-walk-teacup -->

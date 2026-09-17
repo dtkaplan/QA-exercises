@@ -1,0 +1,21 @@
+<!--
+id: "finch-lick-shelf"
+created: "Thu Sep 17 11:48:36 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "health care"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+Should this be a discussion?
+
+::: {#exr-finch-lick-shelf}
+Examples of ill-stated objective functions. How much to spend on health care. 
+
+:::
+ <!-- end of exr-finch-lick-shelf -->

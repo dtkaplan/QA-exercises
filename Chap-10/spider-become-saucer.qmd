@@ -1,0 +1,283 @@
+<!--
+id: "spider-become-saucer"
+created: "Thu Sep 17 12:13:50 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "optimal frontier"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-spider-become-saucer}
+An everyday example: you and your friend want to celebrate some accomplish with a restaurant meal. Of course, you want the best food possible. But you also want to avoid spending too much money. As individuals, we deal with such situations using common sense, perhaps aided by the proverb, "You can't have your cake and eat it too."
+
+Let's extend the restaurant example to make it more like the situations faced by organizational or social decision making. Imagine an online restaurant reviewer visits 26 restaurants, labeled A to Z. For each, she takes note of the total bill and her subjective assessment of the meal quality. @tbl-restaurant-scores shows her recorded data.
+
+::: {#tbl-restaurant-scores}
+Restaurant | Cost | Quality
+----|---:|--:
+A | $47.71 | 40
+B | $103.30| 83
+C | $87.44 | 89
+D | $71.53 | 80
+ $\vdots$ | $\vdots$ | $\vdots$
+X | $63.13 | 86
+Y | $28.27 | 49
+Z | $92.09 | 65
+
+<!-- E | $53.93 | 79
+F | $52.82 | 50
+G | $49.51 | 30
+H | $67.28 | 63
+I | $41.31 | 54
+J | $29.79 | 59
+K | $33.66 | 28
+L | $60.20 | 30
+M | $44.50 | 72
+N | $58.31 | 58
+O | $24.03 | 16
+P | $14.53 | 40
+Q | $93.28 | 78
+R | $45.89 | 63
+S | $83.00 | 98
+T | $78.68 | 63
+U | $86.73 | 56
+V | $69.98 | 96
+W | $63.26 | 49 -->
+
+The raw restaurant data.
+:::
+
+These are the basic facts recorded by the reviewer. Now suppose that her intention is to make it straightforward for her readers quickly to select the best restaurant for an occasion. @tbl-restaurant-scores is not a good format for comparing between restaurants. (Indeed, we left out 19 of the restaurants because it is so hard to extract information from the table.)
+
+Translating the data from the table into a graphical format as in @fig-restaurant-objective-fun makes this a little easier. The meal costs are plotted in panel (a), the meal quality in panel (b). At a glance, you can read off the restaurant with the lowest meal cost (restaurant O) and the one with the highest meal quality (restaurant S). 
+
+The reviewer's data collection effort has produced *two* objective functions. The input to each of the two functions is a restaurant ID (the letters A-Z). The output of the first objective function is the value of the input restaurant in terms of meal cost. With that objective function in hand, the reader can easily pick the *best* restaurant---that is, the restaurant with the lowest meal cost. Similarly, the objective function in @fig-restaurant-sub2 makes it easy to find the restaurant with the best meal quality. In terms of the vocabulary from easier in this chapter, restaurant O is the argmin for meal cost and restaurant S is the argmax for meal quality. 
+
+
+:::: {#fig-restaurant-objective-fun layout-nrow=2}
+
+::: {#fig-restaurant-sub1}
+```{tikz}
+%| echo: false
+\begin{tikzpicture}[
+    dot/.style={circle, fill=blue, inner sep=1.5pt, draw=none},
+    axis/.style={thick, ->, >=stealth, draw=black},
+    tick/.style={thin, draw=black},
+    trend/.style={thin, blue}
+]
+
+    % 1. Horizontal 11.5 and Vertical 6.0 constraints for a 1/2 aspect ratio
+    \draw [axis] (0,0) -- (11.5,0) node[right, font=\sffamily\small] {Restaurant};
+    \draw [axis] (0,0) -- (0,6.0) node[above, font=\sffamily\small] {Meal cost};
+
+    % 2. Map coordinates with vertical scaling (0.5 * Cost Coordinate)
+    \coordinate (P-A) at (0.5, 4.77*0.5);
+    \coordinate (P-B) at (0.9, 10.33*0.5);
+    \coordinate (P-C) at (1.3, 8.74*0.5);
+    \coordinate (P-D) at (1.7, 7.15*0.5);
+    \coordinate (P-E) at (2.1, 5.39*0.5);
+    \coordinate (P-F) at (2.5, 5.28*0.5);
+    \coordinate (P-G) at (2.9, 4.95*0.5);
+    \coordinate (P-H) at (3.3, 6.72*0.5);
+    \coordinate (P-I) at (3.7, 4.13*0.5);
+    \coordinate (P-J) at (4.1, 2.97*0.5);
+    \coordinate (P-K) at (4.5, 3.36*0.5);
+    \coordinate (P-L) at (4.9, 6.02*0.5);
+    \coordinate (P-M) at (5.3, 4.45*0.5);
+    \coordinate (P-N) at (5.7, 5.83*0.5);
+    \coordinate (P-O) at (6.1, 2.40*0.5);
+    \coordinate (P-P) at (6.5, 1.45*0.5);
+    \coordinate (P-Q) at (6.9, 9.32*0.5);
+    \coordinate (P-R) at (7.3, 4.58*0.5);
+    \coordinate (P-S) at (7.7, 8.30*0.5);
+    \coordinate (P-T) at (8.1, 7.86*0.5);
+    \coordinate (P-U) at (8.5, 8.67*0.5);
+    \coordinate (P-V) at (8.9, 6.99*0.5);
+    \coordinate (P-W) at (9.3, 6.32*0.5);
+    \coordinate (P-X) at (9.7, 6.31*0.5);
+    \coordinate (P-Y) at (10.1, 2.82*0.5);
+    \coordinate (P-Z) at (10.5, 9.20*0.5);
+
+    % 3. Horizontal tick marks and restaurant names
+    \foreach \label [count=\i from 0] in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} {
+        \draw [tick] (0.5 + \i*0.4, 0) -- ++(0, -0.15) node[below, font=\sffamily\scriptsize] {\label};
+    }
+
+    % 4. Draw alphabetical progressive trend lines
+    \draw [trend] (P-A) -- (P-B) -- (P-C) -- (P-D) -- (P-E) -- (P-F) -- (P-G) -- (P-H) -- 
+                  (P-I) -- (P-J) -- (P-K) -- (P-L) -- (P-M) -- (P-N) -- (P-O) -- (P-P) -- 
+                  (P-Q) -- (P-R) -- (P-S) -- (P-T) -- (P-U) -- (P-V) -- (P-W) -- (P-X) -- 
+                  (P-Y) -- (P-Z);
+
+    % 5. Overlay node dots over the line joints
+    \foreach \label in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} {
+        \node [dot] at (P-\label) {};
+    }
+
+\end{tikzpicture}
+```
+
+Meal cost at each restaurant
+:::
+
+::: {#fig-restaurant-sub2}
+```{tikz}
+%| echo: false
+\begin{tikzpicture}[
+    dot/.style={circle, fill=blue, inner sep=1.5pt, draw=none},
+    axis/.style={thick, ->, >=stealth, draw=black},
+    tick/.style={thin, draw=black},
+    trend/.style={thin, blue}
+]
+
+    % 1. Horizontal 11.5 and Vertical 6.0 constraints for a 1/2 aspect ratio
+    \draw [axis] (0,0) -- (11.5,0) node[right, font=\sffamily\small] {Restaurant};
+    \draw [axis] (0,0) -- (0,6.0) node[above, font=\sffamily\small] {Meal quality};
+
+    % 2. Map coordinates with vertical scaling (0.5 * Quality Coordinate)
+    \coordinate (P-A) at (0.5, 3.95*0.5);
+    \coordinate (P-B) at (0.9, 8.55*0.5);
+    \coordinate (P-C) at (1.3, 8.92*0.5);
+    \coordinate (P-D) at (1.7, 7.95*0.5);
+    \coordinate (P-E) at (2.1, 7.88*0.5);
+    \coordinate (P-F) at (2.5, 5.03*0.5);
+    \coordinate (P-G) at (2.9, 3.02*0.5);
+    \coordinate (P-H) at (3.3, 6.31*0.5);
+    \coordinate (P-I) at (3.7, 5.41*0.5);
+    \coordinate (P-J) at (4.1, 5.88*0.5);
+    \coordinate (P-K) at (4.5, 2.85*0.5);
+    \coordinate (P-L) at (4.9, 2.97*0.5);
+    \coordinate (P-M) at (5.3, 7.22*0.5);
+    \coordinate (P-N) at (5.7, 5.78*0.5);
+    \coordinate (P-O) at (6.1, 1.63*0.5);
+    \coordinate (P-P) at (6.5, 4.05*0.5);
+    \coordinate (P-Q) at (6.9, 7.84*0.5);
+    \coordinate (P-R) at (7.3, 6.26*0.5);
+    \coordinate (P-S) at (7.7, 9.78*0.5);
+    \coordinate (P-T) at (8.1, 6.29*0.5);
+    \coordinate (P-U) at (8.5, 5.60*0.5);
+    \coordinate (P-V) at (8.9, 9.57*0.5);
+    \coordinate (P-W) at (9.3, 4.91*0.5);
+    \coordinate (P-X) at (9.7, 8.64*0.5);
+    \coordinate (P-Y) at (10.1, 4.91*0.5);
+    \coordinate (P-Z) at (10.5, 6.53*0.5);
+
+    % 3. Horizontal tick marks and restaurant names
+    \foreach \label [count=\i from 0] in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} {
+        \draw [tick] (0.5 + \i*0.4, 0) -- ++(0, -0.15) node[below, font=\sffamily\scriptsize] {\label};
+    }
+
+    % 4. Draw alphabetical progressive trend lines
+    \draw [trend] (P-A) -- (P-B) -- (P-C) -- (P-D) -- (P-E) -- (P-F) -- (P-G) -- (P-H) -- 
+                  (P-I) -- (P-J) -- (P-K) -- (P-L) -- (P-M) -- (P-N) -- (P-O) -- (P-P) -- 
+                  (P-Q) -- (P-R) -- (P-S) -- (P-T) -- (P-U) -- (P-V) -- (P-W) -- (P-X) -- 
+                  (P-Y) -- (P-Z);
+
+    % 5. Overlay node dots over the line joints
+    \foreach \label in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} {
+        \node [dot] at (P-\label) {};
+    }
+
+\end{tikzpicture}
+```
+
+Meal quality at each restaurant
+:::
+
+The restaurant data forms two objective functions.
+
+::::
+
+As we saw in earlier in this chapter, it is generally easy to find the argmin or argmax of an objective function. But that is not really the issue when choosing a restaurant. Our goal is not just to pick the cheapest restaurant or the one with the best cooking. We want to accomplish *both* at the same time: find the restaurant with really good cooking that is also relatively inexpensive. 
+
+The format for the objective functions in @fig-restaurant-objective-fun follows our usual layout for graphing functions with one input. The input is given by position on the horizontal axis and the output is shown on the vertical axis. But this format is not well suited for finding the restaurant that is best for *both* cost and quality.
+
+ include _exercises/reptile-bring-shoe.qmd
+
+We need another graphical format to show the two objective functions at the same time, as in @fig-meal-distribution. This format puts the the *outputs* of the two objective functions on the two axes. The input, instead of being marked on an axis, is shown by the position of the restaurant ID on the frame defined by the two axes.
+
+
+```{tikz}
+%| label: fig-meal-distribution
+%| fig-cap: "Expense and quality of 26 restaurants. Low expense is preferred to high expense (obviously). Similarly, high quality is preferred to low quality. The choice options on the *preference frontier* are marked by the red line."
+%| echo: false
+
+\begin{tikzpicture}[
+    labelnode/.style={
+        draw=none, 
+        fill=none, 
+        text=blue, 
+        font=\sffamily\bfseries\small, 
+        inner sep=0pt, 
+        anchor=center
+    },
+    axis/.style={thick, ->, >=stealth, draw=black}
+]
+
+    % 1. Cartesian frame spanning 12.0 units
+    \draw [axis] (0,0) -- (12.0,0) node[right, font=\sffamily] {Meal quality};
+    \draw [axis] (0,0) -- (0,12.0) node[above, font=\sffamily] {Meal cost};
+
+    % 2. 26 Repulsion-spaced coordinates (A to Z) forming a 45-degree elliptical cloud
+    \path (3.95, 4.77) node (A) [labelnode] {A};
+    \path (8.55, 10.33) node (B) [labelnode] {B};
+    \path (8.92, 8.74) node (C) [labelnode] {C};
+    \path (7.95, 7.15) node (D) [labelnode] {D};
+    \path (7.88, 5.39) node (E) [labelnode] {E};
+    \path (5.03, 5.28) node (F) [labelnode] {F};
+    \path (3.02, 4.95) node (G) [labelnode] {G};
+    \path (6.31, 6.72) node (H) [labelnode] {H};
+    \path (5.41, 4.13) node (I) [labelnode] {I};
+    \path (5.88, 2.97) node (J) [labelnode] {J};
+    \path (2.85, 3.36) node (K) [labelnode] {K};
+    \path (2.97, 6.02) node (L) [labelnode] {L};
+    \path (8.22, 4.45) node (M) [labelnode] {M};
+    \path (5.78, 5.83) node (N) [labelnode] {N};
+    \path (1.63, 2.40) node (O) [labelnode] {O};
+    \path (5.05, 1.45) node (P) [labelnode] {P};
+    \path (7.84, 9.32) node (Q) [labelnode] {Q};
+    \path (6.26, 4.58) node (R) [labelnode] {R};
+    \path (9.78, 8.30) node (S) [labelnode] {S};
+    \path (6.29, 7.86) node (T) [labelnode] {T};
+    \path (5.60, 8.67) node (U) [labelnode] {U};
+    \path (9.57, 6.99) node (V) [labelnode] {V};
+    \path (4.91, 6.32) node (W) [labelnode] {W};
+    \path (8.64, 6.31) node (X) [labelnode] {X};
+    \path (6.91, 3.12) node (Y) [labelnode] {Y};
+    \path (6.53, 9.20) node (Z) [labelnode] {Z};
+
+    % 3. Hull Floor: Profile closer to origin (Thin Gray Line)
+    \draw [thin, magenta] (P.center) -- (J.center) -- (Y.center) -- (M.center) -- (X.center) -- (V.center) -- (S.center);
+
+\end{tikzpicture}
+```
+
+
+The format @fig-meal-distribution may already be familiar with you. In statistics terminology, this is called a `r xf_definition("point plot")`. (Another common term for the format of @fig-meal-distribution is `r xf_definition("scatter plot")`, but this name misleading suggests that the data are scattered at random.)
+
+ACTIVITY: Can you use @fig-meal-distribution to identify the *best* restaurant in terms of both objectives: minimizing cost and maximizing meal quantity? If you can, say how you decided. If not, explain what problems you ran in to.
+
+That the axes in @fig-meal-distribution are the *outputs* of objective functions has important consequences for making good choices. An important concept will be `r xf_definition("domination")`. 
+
+Consider the pair of restaurants G and A. Restaurant A is unambiguously to be preferred to G. How do we know? A has both a higher meal quality and a lower total cost than G; A wins according to both the cost and meal quality criteria. We say that restaurant A **dominates** restaurant G. Similarly, A *dominates* L. 
+
+When an option dominates one or more other options, the dominating option is unambiguously better than all of the dominated options. In terms of restaurants A, G, and L, there is no good reason to choose either G or L: A is better. But A is dominated by several other restaurants: P, I, J, Y, and M.
+
+There are also `r xf_definition("non-dominating")` relationships. For instance, restaurants I and R have a non-dominating relationship. R is more expensive than I, but R also has better food than I. That's a trade-off. Similarly, the pair S and P are in a non-dominating relationship. 
+
+For a non-dominating pair, it is a matter of opinion which of the two options might be better. Someone who is economically minded might reasonably prefer P over S, even though S has much better food. Another person, looking for a gourmet experience and unconcerned about cost might think it obvious to choose S over P.
+
+IN A BIT, we'll introduce some ways to think about preferences in a non-dominating pair, but for a pair in a dominating relationship the choice is easy and automatic.
+
+We can apply this sort of dominating-based automatic preferences systematically. Suppose you went through all 26 restaurants. Cross off a restaurant as a good choice if **any** other restaurant dominates it. For example, restaurant E is dominated by restaurant M. So remove E from further consideration. Doing this systematically reveals that only seven restaurants---P, J, Y, M, X, V, and S---are not dominated by some other restaurant. Therefore we can remove all the other restaurants from consideration and limit our choice among the seven non-dominated restaurants. The set of non-dominated options is called the `r xf_definition("preference frontier")`. Optimal choices should always be on the preference frontier. To guide the eye, a thin red line has been added to mark the frontier options.
+
+Which should we prefer among the options on the preference frontier? There is no automatic choice. Which one is best for you depends on the relative value to you of saving money versus eating well. Still, just by thinking about dominating relationships, we have elimated from further consideration 19 of the 26 restaurants. 
+
+GO INTO THE CHOICE AMONG choices on the preference frontier. Maybe it is sensible to prefer restaurant Y to J. Y has much better food and is only a little more expensive than J. But there is no automatic way to show that Y is better than J for everybody. Sometimes you have to choose based on your "gut," or maybe based on your bank-account balance.
+:::
+ <!-- end of exr-spider-become-saucer -->

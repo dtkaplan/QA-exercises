@@ -1,0 +1,22 @@
+<!--
+id: "seahorse-let-drawer"
+created: "Thu Sep 17 12:01:33 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "multiple objectives"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-seahorse-let-drawer}
+1. Sensitivity and specificity
+
+2. Time value of money
+
+3. Investing in capital: cost is both capital and labor, more capital means less labor needed (e.g. factory robot). What is the ongoing expense for capital (needs an interest rate)? Are we interested in creating jobs? Bringing benefits to the community?
+:::
+ <!-- end of exr-seahorse-let-drawer -->

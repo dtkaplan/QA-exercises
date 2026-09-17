@@ -1,0 +1,21 @@
+<!--
+id: "leg-lay-kitchen"
+created: "Thu Sep 17 12:05:34 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "multiple objectives"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+This is about why strictly mathematical approaches are unlikely to capture all the nuances involved in making choices with multiple objectives.
+
+
+::: {#exr-leg-lay-kitchen}
+4. Roasting a chicken. Crispy skin, fully cooked, juicy meat, simplicity, robustness to oven variation. Hard-boiling an egg. How much time do you have to observe it? What equipment do you have to measure temperatures? How to adjust for the size of the chicken or of the egg? [Sous vide]
+:::
+ <!-- end of exr-leg-lay-kitchen -->

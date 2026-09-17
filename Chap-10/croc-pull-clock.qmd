@@ -1,0 +1,71 @@
+<!--
+id: "croc-pull-clock"
+created: "Thu Sep 17 12:16:20 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "Objective Functions"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-croc-pull-clock}
+
+At the center of the quantitative framework for making choices is a familiar mathematical concept: functions. An `r xf_definition("objective function")` takes as input any of the choices being considered and returns as output a quantity representing the *merit* or *worth* of the input. 
+
+The particular form for this function depends on the situation in which the choice is being made. To demonstrate the structure of the framework, we will at first work with two made-up functions that demonstrate important aspect of the framework. One of the functions, $h(x)$, will take a single input, the other, $g(y, z)$ will take two inputs.
+
+```{r}
+#| label: fig-obj-fun-2
+#| echo: false
+#| layout: [[40, 60]]
+#| fig-cap: "Two functions serving as examples of objective functions. The output of the objective function is, in both cases, the quantitative merit assigned to each of the available choices." 
+#| fig-subcap: 
+#| - "Function with one input"
+#| - "Function with two inputs"
+h <- doodle_fun(~ x, seed = 765)
+g <- doodle_fun(~ y + z, seed = 766)
+slice_plot(h(x+0.2) + 1.35~ x, domain(x = -4:4)) |>
+  gf_labs(x = "Available choices for x", y = "Output: Merit",
+          subtitle="Choice space (x)") |>
+  .bigger_text() 
+contour_plot(g(y, z) ~ y + z, domain(y = -4:4, z = -4:4)) |>
+  gf_labs(subtitle="Choice space (y, z)",
+          x = "Available choices for y",
+          y = "Available choices for z") |>
+  .bigger_text() |>
+  gf_refine(coord_fixed())
+```
+
+
+
+It is absolutely critical to make sure you understand what spaces are being represented in these two graphs of objective functions in @fig-obj-fun-2. Keep in mind, you are trying to make a choice among the available options. On a restaurant menu, the choices are the various dishes on offer. For an objective function, however, the choices are the values in the `xf_definition("domain")` of the function. (The domain is the set of allowable inputs.) For instance, in the graph of $f(x)$ in panel (a), the domain is $-4 \leq x \leq 4$. This means that your choice might be a value like 2.8 or -1.3 or any other single value of $x$ in $-4 \leq x \leq 4$.
+
+The output of the objective function is the value assigned to each possible choice. For instance, if your choice were the value $x=0$, then the resulting value from that choice will be $f(x=0) \approx 7.5$.
+
+Typically, when making a choice among alternatives, we want to make the *best* choice, or at least something that is very close to best. Is $x=0$ the best choice. No. You can see that selecting $x = -1$ would produce a higher output value, around 12.5. There is no higher value available given the $x$ options available.
+
+The peak of the function $f(x)$, which we know is an output of 12.5 when the input is set to $x = -1$, is called the `r xf_definition("maximum")` of the function. You always read out the maximum as a value on the output axis.
+
+The input value that produces the maximum output is called the `r xf("argmax")` of the function. You always read out the argmax as a value on the input axis. [The word "argmax" is a contraction of "**argument** producing the **maximum** output value. "Argument" is merely another word for "input."]
+
+Question: Suppose that only *positive* values of $x$ were allowed as legitimate choices. From the graph, find the argmax and max for that situation.
+
+Now turn to panel (b) of @fig-obj-fun-2. In this case, the input space is two-dimensional. In terms of the *best* choice, we need to pick values of both inputs, $y$ and $z$. That is, the choice will take the form of a point in the rectangular domain $(y, z)$. The output of the function is indicated by the labelled contours. 
+
+The *argmax* in panel (b) is the location specified by $(y=1, z = -2)$ or thereabouts. The function output at that argmax is about 9 or a little higher.
+
+When you are making a choice, you are---if you are interested in the *best* choice---finding the *argmax* of the objective function. To help remember this, think about two people *arguing* over what's the best choice. Having a graph of the objective function would let them settle the matter pretty quickly.
+
+Generations of students learned an algebraic way to locate argmaxes in their calculus course. This is useful only if you have an algebraic formula for the objective function. In general, you will not have such a formula unless the whole sitation for the objective function is simple to model. In any event, so long as the objective function has just one or two inputs, drawing a graph is an effective way to make the argmax-finding task easy. 
+
+When the objective function takes many more than two inputs, graphical argmax finding is not feasible. Many such situations involve highly technical problems. At the extreme end, training an AI involves finding argmaxes for functions that can have *billions* of inputs. But even a simple-sounding task, for instance, an electric utility company deciding which source of power to draw on over the course of a day, can easily involve hundreds of inputs.
+
+With computing technology, even large-scale choice problems involving an objective function with many, many inputs are *easy*. Here, "easy" doesn't mean "child's play." Sophisticated technical expertise may be needed to find argmaxes in large-scale problems. A good way to define "easy" in this context is that an easy problem has an answer that everyone can agree on, an answer determined only by the objective function. We turn next to *hard* problems of making the best choice. 
+
+
+:::
+ <!-- end of exr-croc-pull-clock -->

@@ -1,0 +1,62 @@
+<!--
+id: "dog-refer-futon"
+created: "Thu Sep 17 12:14:56 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "Miscellaneous"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-dog-refer-futon}
+`r xf_definition("Commensurate objectives")` are those where there is an agreed up conversion on one value scale to another. For example, you MIGHT THINK THAT one increased point of meal quality is worth $10 of meal cost. WORK THROUGH THE CONSEQUENCES OF THIS in one plot. Draw lines with slope 10 cost/quality: You are indifferent between these. But you aren't indifferent about different lines. You prefer the lines to the right.
+
+
+
+The reviewer wants to write an article: "Top restuarants for the budget-minded consumer." Which restaurants should she include in the review.
+
+EXPLAIN THIS.
+
+Environmental toxins ... sustainability ... 
+
+Maximizing the use of renewable energy but avoiding high costs. (In the last decade, solar panels have become one of the cheapest forms of electricity generation but they come with an implicit burden of providing electricity even when the sun is not shining. Batteries or plants that use fossil fuels to produce electricity are expensive. The utility wants to maximize return.)
+
+Example: Should I install a photo-voltaic system? My wife and I turned this into a "can I afford to" problem rather than a revenue maximization problem. We were happy to forgo a couple of vacations in order to reduce our impact on the climate by a little; a personal choice. But what about social choices? The electric utility gives us an outstanding deal: we stay hooked up to the electrical distribution system (so power is available reliably) and effectively sell back to the utility the retail value of our solar production. The utility takes a hit here. The sell-back program is a subsidy to encourage households to install solar electricity. People who lack an opportunity to install solar are essentially subsidizing those who can. 
+
+
+
+
+one seeks to make the mean outcome as large as possible and the standard deviation of the outcome as small as possible.
+
+What makes a choice hard. Not the number of options (although this influences the amount of work needed to make an informed choice). 
+
+1. Uncertainty
+2. Non-transitivity
+
+GRAPH SIX OPTIONS on two numerical scales. explore dominance. 
+
+A situation where one option dominates the others is still easy. One source of non-transitivity comes from switching between the two object functions when doing pairwise comparisons.  
+
+So if you face non-transitivity, explore whether there are two more more objective functions involved.
+
+## Continuous options
+
+Objective functions with multiple inputs but a single output.
+
+Max and argmax
+
+Pairs of objective functions. How to resolve the ambiguity about the numerical scales, which are essentially arbitrary for each objective.
+
+## Uncertainty
+
+Watchful waiting. 
+
+
+Exercise about Heuristics. Example: Choose first between vegan, fish, meat, then look only within your favorite category. This won't necessarily identify the absolute best option, but it's a lot less work.  
+
+:::
+ <!-- end of exr-dog-refer-futon -->

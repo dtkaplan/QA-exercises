@@ -2,7 +2,10 @@
 id: "chicken-fly-blouse"
 created: "Mon Jul  6 13:57:07 2026"
 attribution: DTK 
+mode: exercise
 use: Supplement to Choices chapter
+chapter: 10
+topic: "Graphical exercise"
 ---
 
 ```{r include=FALSE, eval=!"devoirs" %in% (.packages())}

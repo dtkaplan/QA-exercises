@@ -1,0 +1,44 @@
+<!--
+id: "elephant-bend-hamper"
+created: "Thu Sep 17 11:32:04 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: discussion
+chapter: 10
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-elephant-bend-hamper}
+Talk about the trade-off between engine sweet spot and wind resistence.
+
+From AI:
+
+The most fuel-efficient speed for a Subaru Outback on the highway is typically between 55 and 65 miles per hour (mph), though absolute peak efficiency happens at slightly lower speeds around 45 to 55 mph before wind resistance overtakes the engine's sweet spot.Factors Affecting Outback Fuel EconomyAerodynamic Drag: Air resistance increases exponentially as you go faster. Driving an all-wheel-drive crossover like the Outback at 75 or 80 mph significantly increases fuel consumption compared to cruising at 60 mph.Speed Penalties: According to general efficiency studies and driver tracking, fuel economy drops noticeably for every 5 mph you increase your speed past 60 mph.
+
+From https://www.dot.ny.gov/programs/climate-change/ecodriving/drive-more-efficiently ...
+
+"Jack-rabbit" starts and hard braking can increase fuel consumption by 40 percent but reduce travel time by only 4 percent.
+
+Keep it close to 60 mph on the highway.
+Highway driving that exceeds 60 miles per hour uses more fuel. According to the U.S. Environmental Protection Agency (EPA), every 5 miles driven above the 60 mph level is equivalent to paying 20 extra cents per gallon for gas.
+
+[Need to convert the above to a cost per minute per mph. Let's call it 10% increase in fuel cost per 5 mph above 60.]
+
+Observing the speed limit and not exceeding 60 mph (where legally allowed) can improve mileage by 7-23 percent.
+
+Avoid idling.
+With today’s advanced vehicles, turning the engine off and on again is no longer hard on your starter and you no longer need to warm up your engine. An automobile may burn more than a half-gallon of fuel for every hour spent idling. Unless you are simply dropping off or picking up someone, make it a habit to turn your engine off when waiting at the curb even if it’s just for a short period, and avoid drive-throughs.
+
+Use AC only at higher speeds. Drive Green Logo
+Air conditioning can reduce mileage significantly, by as much as 20 percent. In fact, your air conditioner can consume up to one gallon of gas per tank to cool the vehicle. But driving with your windows open can produce aerodynamic drag, which reduces fuel economy. What's a driver to do? When driving at slower speeds (less than 40 mph), such as driving in urban areas, open windows are better. At higher speeds (more than 40 mph), close the windows and turn on the air conditioner because it uses less fuel.
+
+Use cruise control.
+Using cruise control on 10,000 miles driven in a year could save you nearly $200 and save more than 60 gallons of fuel, according to the U.S. Department of Transportation (assuming $3 a gallon for fuel, 20 mpg, and 15,000 miles driven annually).
+
+Keep on rolling in traffic.
+Slow-and-go is always better than stop-and-go and not just to reduce traffic congestion woes. Maintaining a constant speed in your commute increases fuel economy, because it takes much more energy to move a stopped vehicle than to keep a vehicle moving. In fact, it can take 20 percent more fuel to accelerate from a full stop than from 5 miles per hour. Try to anticipate stops and coast as much as possible.
+:::
+ <!-- end of exr-elephant-bend-hamper -->

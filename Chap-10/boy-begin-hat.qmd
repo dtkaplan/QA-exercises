@@ -1,0 +1,20 @@
+<!--
+id: "boy-begin-hat"
+created: "Thu Sep 17 12:10:28 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "optimization in uncertainty"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-boy-begin-hat}
+Decision-making often occurs in a context where there is *uncertainty* about the result of the choice. In terms of objective functions, rather than the objective function having a value for each available option, there is instead a **range** of possible outcomes.  In `r xf("sec-uncertainty")` we introduced a simple way to quantify uncertainty as a pair of numbers: the mean outcome and the standard deviation of possible outcomes. The mean gives the `r xf_definition("expected outcome")` while the standard deviation is a description of the `r xf_definition("risk")`.
+
+This means that when making a choice, there are **two objective functions** involved: one function that gives the mean for any input and a second function whose output is the standard deviation. You might think that, in searching for the argmax when making a choice under uncertainty, one could find inputs to the objective functions that *simultaneously* make the mean as large as possible and the standard deviation as small as possible. However, this is rarely possible, and we are faced with a trade-off between the mean and the risk of the outcome.
+:::
+ <!-- end of exr-boy-begin-hat -->
