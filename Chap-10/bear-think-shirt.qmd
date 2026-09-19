@@ -1,0 +1,21 @@
+<!--
+id: "bear-think-shirt"
+created: "Sat Sep 19 09:47:06 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: discussions
+chapter: 10
+topic: "budget constraints"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-bear-think-shirt}
+Argue that a budget constraint is another way to imply a shadow price. That helps in identifying whether off-budget items are worthwhile. 
+
+Heuristics, e.g. budget constraint. Many people simplify their choices by setting a budget over several different categories and paying extra attention/skepticism when a proposal is made to exceed a budget. Unexpected gains (e.g. tax refunds) are outside of the budget system and can be spent on wish-list items. Unexpected costs: have a contingency fund. The credit trap. Example: Buying a house. How much down payment do we have? What's our budget for housing?
+
+:::
+ <!-- end of exr-bear-think-shirt -->

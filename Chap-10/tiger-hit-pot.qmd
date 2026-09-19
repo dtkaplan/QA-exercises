@@ -1,0 +1,19 @@
+<!--
+id: "tiger-hit-pot"
+created: "Sat Sep 19 09:45:05 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: discussion
+chapter: 10
+topic: "using shadow prices to combine the two objectives"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-tiger-hit-pot}
+Use the shadow price to convert one objective into the units of the other and add them into a single objective. Then the optimization problem is easy. 
+
+:::
+ <!-- end of exr-tiger-hit-pot -->

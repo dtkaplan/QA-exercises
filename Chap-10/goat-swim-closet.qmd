@@ -1,0 +1,22 @@
+<!--
+id: "goat-swim-closet"
+created: "Sat Sep 19 09:41:44 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: x_drafts
+chapter: 10
+topic: "prices, shadow-price and optimal choice"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-goat-swim-closet}
+
+Use `r xf("fig-both-objectives")` to argue that a negative sloping line corresponds to a price of one objective in terms of the other. 
+
+Then show that, once you have agreed on a price, point on the curve that is optimal can be identified as the one where the slope of the curve matches the agreed-upon price.
+
+:::
+ <!-- end of exr-goat-swim-closet -->

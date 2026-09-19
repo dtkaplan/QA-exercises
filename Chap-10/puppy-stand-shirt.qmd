@@ -1,0 +1,24 @@
+<!--
+id: "puppy-stand-shirt"
+created: "Sat Sep 19 09:34:00 2026"
+attribution: DTK
+mode: exercise
+status: sketch
+group: shadow-price
+chapter: 10
+topic: "shadow-price and domination
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-puppy-stand-shirt}
+EXPLAIN DOMINATION in terms of a negative shadow price.
+
+ESTIMATE the shadow price implied by a dispute between F and E partisans. It will be negative. That is, the price is better than free; you can have more tons at no loss in score. If a store selling cookies offered to give you a bag and also a dollar, would you take the deal? Of course. 
+
+
+
+
+:::
+ <!-- end of exr-puppy-stand-shirt -->
