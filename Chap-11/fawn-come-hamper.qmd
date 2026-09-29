@@ -1,0 +1,19 @@
+<!--
+id: "fawn-come-hamper"
+created: "Sun Sep 27 08:37:06 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 11
+topic: "confidence intervals"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-fawn-come-hamper}
+Explain why doubling the amount of data results in squaring the likelihood ratio.
+
+:::
+ <!-- end of exr-fawn-come-hamper -->

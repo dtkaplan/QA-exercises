@@ -1,0 +1,18 @@
+<!--
+id: "sheep-tie-stove"
+created: "Tue Sep 22 08:18:35 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 11
+topic: normalizing-to-one
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-sheep-tie-stove}
+A technical detail. So long as we are putting together likelihoods from the same likelihood distribution, it is fine to treat it as a relative probability. But whenever we compare likelihoods from different distributions, we need all the distributions to be scaled correctly to one another. Accomplish this by normalizing each distribution so that its total probability sums to one. As we'll see in `r xf("sec-accumulation")` this can easily be done by scaling each of the distributions so that the area under the curve totals one. 
+:::
+ <!-- end of exr-sheep-tie-stove -->

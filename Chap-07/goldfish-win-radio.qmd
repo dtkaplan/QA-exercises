@@ -1,0 +1,32 @@
+<!--
+id: "goldfish-win-radio"
+created: "Thu Sep 24 07:37:57 2026"
+attribution: DTK
+mode: computing skills
+status: sketch
+group: x_drafts
+chapter: 7
+topic: "output scaling"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-goldfish-win-radio}
+Take these facts about the relationship between the blue axes and black grid marks and plug them into a formula. Note that the function in @fig-scaling-2-panels is `hillside()`.
+
+```{r}
+modelfun <- function(Qin) {
+  5 * hillside((Qin - 100) / 50) + 2
+}
+```
+
+Using `modelfun()` is effectively using the blue labels for the inputs and outputs. For instance:
+
+```{r}
+modelfun(75)
+modelfun(125)
+```
+
+:::
+ <!-- end of exr-goldfish-win-radio -->

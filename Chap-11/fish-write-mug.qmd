@@ -1,0 +1,18 @@
+<!--
+id: "fish-write-mug"
+created: "Tue Sep 22 08:40:46 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 11
+topic: combining-probabilities
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-fish-write-mug}
+Contrast the use of *addition* when combining probabilities in an "or" situation to the use of *multiplication* in an "an" situation. This with relevance to the "hasn't yet happened" likelihood distribution. That we get by integrating the probability distribution up to year y and then subtracting it from 1.
+:::
+ <!-- end of exr-fish-write-mug -->

@@ -69,15 +69,6 @@ title: "Chapter 02 Catalog"
 
 {{< include elephant-hold-knob.qmd >}}
 
-## frog-get-laundry
-
-
-> File: Chap-02/frog-get-laundry.qmd
-> Status: draft
-
-
-{{< include frog-get-laundry.qmd >}}
-
 ## girl-lose-hamper
 
 
@@ -127,20 +118,6 @@ title: "Chapter 02 Catalog"
 > File: Chap-02/pony-meet-window.qmd
 
 {{< include pony-meet-window.qmd >}}
-
-## puppy-hang-blanket
-
-
-> File: Chap-02/puppy-hang-blanket.qmd
-
-{{< include puppy-hang-blanket.qmd >}}
-
-## reptile-beat-window
-
-
-> File: Chap-02/reptile-beat-window.qmd
-
-{{< include reptile-beat-window.qmd >}}
 
 ## seaweed-bend-laundry
 

@@ -1,0 +1,19 @@
+<!--
+id: "daisy-win-futon"
+created: "Mon Sep 21 15:20:45 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 11
+topic: AIC
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-daisy-win-futon}
+
+There are several approaches to fairly comparing the two hypotheses. Without going into the details of the ways of doing this, we merely *name* some approaches so that the reader can readily interpret the somewhat technical literature of "likelihood."  Two quantitative embodiments of Occam's razor are implemented as formulas: the Akaike Information Criterion (AIC) and the Bayesian Information Criterion (BIC). Both take into account the number of model parameters. Another approach, `r xf_definition("cross-validation")`, uses randomly selected subsets of the data to estimate parameters, then evaluates how well the estimates perform by looking at the likelihood of the remaining data. 
+:::
+ <!-- end of exr-daisy-win-futon -->

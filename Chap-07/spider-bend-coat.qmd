@@ -1,0 +1,18 @@
+<!--
+id: "spider-bend-coat"
+created: "Thu Sep 24 08:02:09 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 7
+topic: "output scaling"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-spider-bend-coat}
+Compare the hillside (upside down) to recip() for modeling the onset of the ice age.
+:::
+ <!-- end of exr-spider-bend-coat -->

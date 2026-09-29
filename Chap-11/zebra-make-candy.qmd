@@ -1,0 +1,18 @@
+<!--
+id: "zebra-make-candy"
+created: "Wed Sep 23 09:40:05 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: x_drafts
+chapter: 11
+topic: "likelihood increases as the hypothesis is a better match to the data"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-zebra-make-candy}
+DISCUSSION. Go through `r xf("tab-several-rates")`. Translate the hypothesized rate into an average interval between events, e.g. 0.05 per year corresponds to an average interval of twenty years. Pick on column (say, the observation of the 14-year interval) and look at how the likelihoods for that observation change as the hypothesized average interval gets closer to and further from the observed interval. Try to develop an intuition for why the likelihood behaves this way.
+:::
+ <!-- end of exr-zebra-make-candy -->

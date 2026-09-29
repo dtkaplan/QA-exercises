@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Chapter 01 Catalog – Quantitative Argumentation</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -32,15 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7a9f06792e729f6a12ae79ab1eb40b9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bf8f49345ee328fa78402b74928d9a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -74,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -129,15 +134,16 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      <div class="sidebar-tools-main">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Quantitative Argumentation</a> 
+        <div class="sidebar-tools-main">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -248,6 +254,11 @@ window.Quarto = {
   }
 }
 </style>
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div class="callout callout-style-default callout-note callout-titled" title="Group: activities">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -276,6 +287,11 @@ status: "ready-to-use"
 chapter: 1
 mode: "activity"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-frog-dig-pot" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1</strong></span> In the SIR model presented in the chapter, leave the “social distance” and “isolation percent” parameters at 20, and set the “initial cases” to 1. Then, by pressing repeatedly the “up” control in the initial cases box, see how the epidemic plays out and how the pattern of each simulated epidemic changes as the number of initial cases increases.</p>
 <ol type="a">
@@ -336,6 +352,11 @@ status: "ready-to-use"
 chapter: 1
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-hamster-hurt-lamp" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2</strong></span> Many people experience the symptoms of a housing shortage: splitting up apartments to accomodate roommate groups; financial stress due (in part) to high rents; deferring life decisions such as having children; living in deteriorating, aging buildings, and so on.</p>
 <p>We’re used to thinking about people in terms of lifespan, but it is also useful to think about buildings that way. City and local governments keep detailed information about the housing stock, largely for tax purposes. Services like &lt;zillow.com&gt; have data readily available to the public.</p>
@@ -434,6 +455,11 @@ status: "ready-to-use"
 chapter: 1
 mode: discussion
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-mouse-cost-mattress" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3</strong></span> We can imagine a mechanism that might be behind the reasoning process. Think of each of the three beliefs as a packet, like a social media post, that contains hashtags. And it’s not just these three packets that are present in our mind, there are others that relate to driving. For instance:</p>
 <ol type="a">
@@ -480,6 +506,11 @@ use: this is really an example or discussion point.
 mode: discussion
 chapter: 1
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-rabbit-hang-pan" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4</strong></span> Heuristics often appear in political debate and rhetoric. Indeed, one strategy for getting agreement with your point of view is to repeat a point often enough that the listener installs it as a heuristic. For instance, in ongoing discussions about the unaffordability of health care, it is often stated, “Health care is a right!” However heartfelt your views on this matter, I think people can agree that for the statement to be correct, “health care” must be carefully defined and that not all people will agree on an appropriate definition. (For instance, is cosmetic surgery a component of health care that should be treated as a right in all circumstances? Is there a right to a hip replacement for people in the advanced stages of congestive heart failure?) So, “health care is a right” is a heuristic.</p>
 <p>Often, rights are protected by government action. This statement is really a second heuristic, sometimes true and sometimes not. Combining the two heuristics leads to a conclusion, “Government should act to make health care affordable to all.” Your agreement with this conclusion depends in part on whether you regard the two heuristics involved as reliable.</p>
@@ -499,6 +530,11 @@ chapter: 1
 status: ready-to-go
 mode: discussion
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-snail-stand-oven" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5</strong></span> [From AI] cognitive bias is a predictable, systematic error in thinking that occurs when the brain tries to simplify complex information. It acts like an automated mental filter, causing people to misinterpret data, make irrational judgments, and draw faulty conclusions despite evidence to the contrary.</p>
 <p>Why They Happen</p>
@@ -551,6 +587,11 @@ status: "draft"
 chapter: 1
 mode: "discussion" 
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-ant-catch-roof" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 6</strong></span> The text discusses a set of blueprints as a model of a building. Explain why a blueprint fits the technical definition of a model. Specifically, propose two purposes for which the blueprint model is a more convenient representation that than the building itself. In addition, describe a purpose for which the blueprint model is completely unsuited.</p>
 <script type="text/javascript">
@@ -594,6 +635,11 @@ status: "ready-to-use"
 chapter: 1
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-giraffe-read-coat" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 7</strong></span> The reading states, “A common criticism of quantitative analysis is that any particular quantitative operationalization is imperfect and incomplete.” What are some merits of this criticism? Shortcomings?</p>
 <script type="text/javascript">
@@ -630,6 +676,11 @@ status: "ready-to-use"
 chapter: 1
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-monkey-drive-book" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 8</strong></span> &nbsp;</p>
 <ol type="1">
@@ -714,6 +765,11 @@ status: "ready-to-use"
 chapter: 1
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-puppy-break-mattress" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 9</strong></span> What is meant by “operationalization?”</p>
 <script type="text/javascript">
@@ -751,6 +807,11 @@ status: "ready-to-use"
 chapter: 1
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-seahorse-enjoy-closet" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 10</strong></span> The reading makes a distinction between a “variable” and a “quantity.” What is the specific difference between these two terms?</p>
 <script type="text/javascript">
@@ -793,7 +854,7 @@ mode: "reading-question"
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="tabset-margin-container"></div><div class="panel-tabset" data-collapse="true">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">camel-leave-kitchen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">cheetah-cost-tv</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">deer-break-bowl</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">dingo-dig-suitcase</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">eagle-seek-clock</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-6" role="tab" aria-controls="tabset-4-6" aria-selected="false" href="">horse-enjoy-pants</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">camel-leave-kitchen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">deer-break-bowl</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">dingo-dig-suitcase</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">eagle-seek-clock</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">horse-enjoy-pants</a></li></ul>
 <div class="tab-content" data-collapse="true">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <blockquote class="blockquote">
@@ -807,32 +868,17 @@ status: "sketch"
 chapter: 1
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-camel-leave-kitchen" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 11</strong></span> &nbsp;</p>
 </div>
 <p><!-- end of exr-camel-leave-kitchen --></p>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<blockquote class="blockquote">
-<p>File: Chap-01/cheetah-cost-tv.qmd Status: sketch</p>
-</blockquote>
-<!--
-id: "cheetah-cost-tv"
-created: "Mon Jul  6 16:36:20 2026"
-attribution: DTK
-uses: optimization
-status: "sketch"
-chapter: 1
-mode: "outline"
--->
-<div id="exr-cheetah-cost-tv" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 12 (Too many options)</strong></span> Pairwise comparison is practically impossible.</p>
-<p>Use travelling salesman as an example. Show that evaluation within a pair is easy.</p>
-<p>There can be sophisticated mathematics behind algorithms to find an optimum or near-to-optimum option.</p>
-</div>
-<p><!-- end of exr-cheetah-cost-tv --></p>
-</div>
-<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
 <blockquote class="blockquote">
 <p>File: Chap-01/deer-break-bowl.qmd Status: sketch</p>
 </blockquote>
@@ -844,12 +890,17 @@ status: "sketch"
 chapter: 1
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-deer-break-bowl" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 13</strong></span> UNRESOLVED car-expt-discussion</p>
+<p><span class="theorem-title"><strong>Exercise 12</strong></span> UNRESOLVED car-expt-discussion</p>
 </div>
 <p><!-- end of exr-deer-break-bowl --></p>
 </div>
-<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
 <blockquote class="blockquote">
 <p>File: Chap-01/dingo-dig-suitcase.qmd Status: sketch</p>
 </blockquote>
@@ -861,8 +912,13 @@ status: "sketch"
 chapter: 1
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-dingo-dig-suitcase" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14</strong></span> In the new-housing example in the text, a claim was made that the number of new households increases by about 1% a year. <a href="#fig-household-formation" class="quarto-xref">Figure&nbsp;2</a> shows the data on which this claim was made.</p>
+<p><span class="theorem-title"><strong>Exercise 13</strong></span> In the new-housing example in the text, a claim was made that the number of new households increases by about 1% a year. <a href="#fig-household-formation" class="quarto-xref">Figure&nbsp;2</a> shows the data on which this claim was made.</p>
 <div id="fig-household-formation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-household-formation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -896,7 +952,7 @@ Figure&nbsp;2: Number of US households versus time. <a href="https://ycharts.com
 </div>
 <p><!-- end of exr-dingo-dig-suitcase --></p>
 </div>
-<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
 <blockquote class="blockquote">
 <p>File: Chap-01/eagle-seek-clock.qmd Status: sketch</p>
 </blockquote>
@@ -909,8 +965,13 @@ status: "sketch"
 chapter: 1
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-eagle-seek-clock" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 15</strong></span> In a footnote, the text contrasts the definition of a “variable” in Algebra versus its definition in Statistics/Quantitative Reasoning. What is the primary difference in how these two approaches define a variable?</p>
+<p><span class="theorem-title"><strong>Exercise 14</strong></span> In a footnote, the text contrasts the definition of a “variable” in Algebra versus its definition in Statistics/Quantitative Reasoning. What is the primary difference in how these two approaches define a variable?</p>
 <script type="text/javascript">
       //save entered info
       document.addEventListener('DOMContentLoaded', function() {
@@ -933,7 +994,7 @@ mode: "exercise"
 </div>
 <p><!-- end of exr-eagle-seek-clock --></p>
 </div>
-<div id="tabset-4-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-6-tab">
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
 <blockquote class="blockquote">
 <p>File: Chap-01/horse-enjoy-pants.qmd Status: sketch</p>
 </blockquote>
@@ -946,8 +1007,13 @@ status: "sketch"
 chapter: 1
 mode: "discussion"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-horse-enjoy-pants" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 16</strong></span> Proofiness</p>
+<p><span class="theorem-title"><strong>Exercise 15</strong></span> Proofiness</p>
 <p>Causal reasoning and the reasons why generations of students have been deceived about correlation and causation.</p>
 </div>
 <p><!-- end of exr-horse-enjoy-pants --></p>

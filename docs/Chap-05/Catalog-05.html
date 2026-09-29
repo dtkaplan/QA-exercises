@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Chapter 05 Catalog – Quantitative Argumentation</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -67,15 +73,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7a9f06792e729f6a12ae79ab1eb40b9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bf8f49345ee328fa78402b74928d9a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -117,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/girafe-binding-0.9.2/girafe.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -158,7 +163,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapter 05 Catalog</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Quantitative Argumentation
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -172,15 +179,16 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      <div class="sidebar-tools-main">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Quantitative Argumentation</a> 
+        <div class="sidebar-tools-main">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -291,6 +299,11 @@ window.Quarto = {
   }
 }
 </style>
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div class="callout callout-style-default callout-note callout-titled page-columns page-full" title="Group: unclassified">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -318,6 +331,11 @@ status: "ready-to-use"
 chapter: 3
 mode: "drill"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <p>A <em>bit</em> is a unit of information. In computer hardware, one bit refers to a (tiny) device that can be in either an “on” or “off” state, that is, either of two different states.</p>
 <p>With two bits, the computer can represent four different states, with three bits eight, with four bits sixteen. Notice that each additional bit <em>doubles</em> the number of possible states that can be represented.</p>
 <p>One bit is a tiny amount of information. The word “byte” refers to a larger amount of information, the equivalent of eight bits.</p>
@@ -327,7 +345,7 @@ mode: "drill"
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="BF-byte-hintarea" class="hintarea">BF-byte</small>
 <form id="BF-byte-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="8" id="BF-byte-1" w="32" name="BF-byte" hint="Nope." show_hints="TRUE"> 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="16" id="BF-byte-2" w="19" name="BF-byte" hint="Think again." show_hints="TRUE"> 16 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="64" id="BF-byte-3" w="7" name="BF-byte" hint="Sorry!" show_hints="TRUE"> 64 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="256" id="BF-byte-4" w="18" name="BF-byte" hint="Yeah!" show_hints="TRUE"> 256 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="BF-byte" id="BF-byte.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="8" id="BF-byte-1" w="7" name="BF-byte" hint="Wrong." show_hints="TRUE"> 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="16" id="BF-byte-2" w="19" name="BF-byte" hint="Incorrect choice." show_hints="TRUE"> 16 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="64" id="BF-byte-3" w="87" name="BF-byte" hint="Not quite." show_hints="TRUE"> 64 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="256" id="BF-byte-4" w="18" name="BF-byte" hint="Bullseye!" show_hints="TRUE"> 256 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="BF-byte" id="BF-byte.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -365,7 +383,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="BF-million-hintarea" class="hintarea">BF-million</small>
 <form id="BF-million-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="9 doublings" id="BF-million-1" w="19" name="BF-million" hint="Untrue!" show_hints="TRUE"> 9 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="9.5 doublings" id="BF-million-2" w="87" name="BF-million" hint="Incorrect choice." show_hints="TRUE"> 9.5 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="9.9 doublings" id="BF-million-3" w="7" name="BF-million" hint="Not quite right." show_hints="TRUE"> 9.9 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="approx 9.9 ...  doublings" id="BF-million-4" w="19" name="BF-million" hint="Incorrect choice." show_hints="TRUE"> approx 9.9432 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="approx 9.9 ...  doublings" id="BF-million-5" w="18" name="BF-million" hint="Right." show_hints="TRUE"> approx 9.965784 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="BF-million" id="BF-million.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="9 doublings" id="BF-million-1" w="7" name="BF-million" hint="Not quite right." show_hints="TRUE"> 9 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="9.5 doublings" id="BF-million-2" w="3" name="BF-million" hint="Better luck next time." show_hints="TRUE"> 9.5 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="9.9 doublings" id="BF-million-3" w="32" name="BF-million" hint="This is wide of the mark." show_hints="TRUE"> 9.9 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="approx 9.9 ...  doublings" id="BF-million-4" w="32" name="BF-million" hint="Not on target." show_hints="TRUE"> approx 9.9432 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="approx 9.9 ...  doublings" id="BF-million-5" w="14" name="BF-million" hint="You've got it!" show_hints="TRUE"> approx 9.965784 doublings &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="BF-million" id="BF-million.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -419,6 +437,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "discussion"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-avoid-ride-radio" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1</strong></span> In the algebraic theory of logarithms, there are infinitely many logarithm values for any given number. To specify one or another of the various logarithmic values, you need to state the <strong>base</strong> of the logarithm. Let’s illustrate by looking at the given number 100, that is, <code>1e2</code> in scientific notation. We’ll let the computer do the calculation.</p>
 <p>We like base-10 since that logarithm has a simple relationship to scientific notation and is the one most commonly used in graphics.</p>
@@ -500,12 +523,17 @@ chapter: 3
 mode: "drill"
 title: "Metric system orders of magnitude"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-avoid-send-mug" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2</strong></span> Food and medicine are measured over a large range. For instance, in the metric system, measurements might be denominated in micrograms, milligrams, grams, kilograms. How many orders of magnitude (that is, factors of 10) are spanned from micrograms to kilograms.</p>
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="asm-1-wels-hintarea" class="hintarea">asm-1-wels</small>
 <form id="asm-1-wels-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="3" id="asm-1-wels-1" w="3" name="asm-1-wels" hint="Not quite right." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4" id="asm-1-wels-2" w="87" name="asm-1-wels" hint="Boo!" show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="6" id="asm-1-wels-3" w="19" name="asm-1-wels" hint="Nope." show_hints="TRUE"> 6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="8" id="asm-1-wels-4" w="87" name="asm-1-wels" hint="You're mistaken" show_hints="TRUE"> 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="9" id="asm-1-wels-5" w="16" name="asm-1-wels" hint="Spot on!" show_hints="TRUE"> 9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="10" id="asm-1-wels-6" w="32" name="asm-1-wels" hint="Not on target." show_hints="TRUE"> 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="12" id="asm-1-wels-7" w="23" name="asm-1-wels" hint="Incorrect." show_hints="TRUE"> 12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="asm-1-wels" id="asm-1-wels.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="3" id="asm-1-wels-1" w="19" name="asm-1-wels" hint="Think again." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4" id="asm-1-wels-2" w="3" name="asm-1-wels" hint="Better luck next time." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="6" id="asm-1-wels-3" w="87" name="asm-1-wels" hint="You're wrong here." show_hints="TRUE"> 6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="8" id="asm-1-wels-4" w="19" name="asm-1-wels" hint="Oops!" show_hints="TRUE"> 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="9" id="asm-1-wels-5" w="18" name="asm-1-wels" hint="Right." show_hints="TRUE"> 9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="10" id="asm-1-wels-6" w="32" name="asm-1-wels" hint="Incorrect." show_hints="TRUE"> 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="12" id="asm-1-wels-7" w="23" name="asm-1-wels" hint="Boo!" show_hints="TRUE"> 12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="asm-1-wels" id="asm-1-wels.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -550,6 +578,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-bear-leave-tv" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3</strong></span> Name five units for energy. Remember that “power” has a different <em>dimension</em> than energy.</p>
 <script type="text/javascript">
@@ -586,6 +619,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-beech-bid-plate" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4</strong></span> The exponents on each element of a dimension, say L T<sup>-1</sup>, must always be integers, that is <span class="math inline">\(\ldots, -2, -1, 0, 1, 2, 3, \ldots\)</span>.</p>
 <ol type="1">
@@ -614,7 +652,7 @@ mode: "exercise"
 <ol start="2" type="1">
 <li><p>[square root of length]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-2-hintarea" class="hintarea">bbp-723-2</small></span></p>
 <form id="bbp-723-2-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-2-1" w="3" name="bbp-723-2" hint="You might think so, but ..." show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-2-2" w="8" name="bbp-723-2" hint="Correct." show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-2" id="bbp-723-2.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
+<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-2-1" w="32" name="bbp-723-2" hint="Try again!" show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-2-2" w="5" name="bbp-723-2" hint="Right-O!" show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-2" id="bbp-723-2.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -645,7 +683,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p></p></li>
 <li><p>[square root of velocity]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-3-hintarea" class="hintarea">bbp-723-3</small></span></p>
 <form id="bbp-723-3-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-3-1" w="23" name="bbp-723-3" hint="Not quite right." show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-3-2" w="20" name="bbp-723-3" hint="Score!" show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-3" id="bbp-723-3.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
+<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-3-1" w="3" name="bbp-723-3" hint="Incorrect choice." show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-3-2" w="5" name="bbp-723-3" hint="You've got it!" show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-3" id="bbp-723-3.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -676,7 +714,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p></p></li>
 <li><p>[square root of energy]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-4-hintarea" class="hintarea">bbp-723-4</small></span></p>
 <form id="bbp-723-4-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-4-1" w="7" name="bbp-723-4" hint="This is wide of the mark." show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-4-2" w="20" name="bbp-723-4" hint="Good job!" show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-4" id="bbp-723-4.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
+<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-4-1" w="23" name="bbp-723-4" hint="Wrong." show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-4-2" w="8" name="bbp-723-4" hint="Right." show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-4" id="bbp-723-4.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -707,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p></p></li>
 <li><p>[square root of (energy/mass)]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-5-hintarea" class="hintarea">bbp-723-5</small></span></p>
 <form id="bbp-723-5-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or" id="bbp-723-5-1" w="5" name="bbp-723-5" hint="Yup!" show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not " id="bbp-723-5-2" w="32" name="bbp-723-5" hint="You're wrong here." show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-5" id="bbp-723-5.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
+<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or" id="bbp-723-5-1" w="18" name="bbp-723-5" hint="Nice." show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not " id="bbp-723-5-2" w="19" name="bbp-723-5" hint="Not quite." show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-5" id="bbp-723-5.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -752,6 +790,11 @@ status: "sketch"
 chapter: 1
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-bobcat-fight-room" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5</strong></span> What is the non-mantissa part of a number in scientific notation. (If you earlier learned another name, give that. But also give the one used in the chapter.)</p>
 <script type="text/javascript">
@@ -788,6 +831,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-brother-lose-scarf" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 6</strong></span> The chapter discusses the distinction between understanding the steps of an algorithm in detail, and understanding enough about the algorithm to be able to operate it. What do you need to understand in order to operate an algorithm?</p>
 <script type="text/javascript">
@@ -824,6 +872,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-cheetah-feel-teacup" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 7</strong></span> Your prototype, autonomous, flying drone taxi has a maximum range of 100 miles. After two days of non-stop lab work in Bastrop, you direct your drone taxi to fly you to the roof of your Austin apartment building. You fall asleep. When you wake up, the taxi has landed in the middle of nowhere, batteries drained. Evidently, you are in the midst of a massive, AI-generated, apocalypse-movie-like cyber attack, which not only scrambles the navigation of your taxi, but has also silenced all forms of communication and caused everyone else to hunker down in whatever building they are closest to. You need to get back in touch in order to do something of movie importance: feed your puppy, forestall a global nuclear war, provide the antidote (which you just finished developing in Bastrop and are carrying to Austin) to a global bio-toxin outbreak, etc. All you have is a magnetic compass and the map below, which you printed out when your puppy asked you by text message where is Bastrop.</p>
 <p>From your vast familiarity with the lost-in-the-desert genre of literary endeavor, you know that it is best to pick a direction, then walk steadily in that direction until you encounter a major road (such as the ones shown on the map). You walk east. After 20 miles, you still have not come to a major road. What are the locations on the map which are most consistent with the information given. (Mark the map with several possibilities.)</p>
@@ -873,6 +926,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-child-lick-canoe" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 8</strong></span> BUILD AN EXERCISE OUT OF THIS The use of factors of 10 in counting orders of magnitude is arbitrary. A person walking and a person jogging are on the edge of being qualitatively different, although their speeds differ by a factor of only 2. Aircraft that cruise at 600 mph and 1200 mph are qualitatively different in design, although the speeds are only a factor of 2 apart. A professional basketball player (height 2 meters or more) is qualitatively different from a third grader (height about 1 meter).</p>
 </div>
@@ -890,6 +948,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-cow-walk-pantry" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 9</strong></span> Perhaps unsurprisingly, the power of an automobile engine has the dimension of power.</p>
 <p>Imagine a car with a 100 horsepower engine. What is the equivalent value in units of watts.</p>
@@ -897,13 +960,13 @@ mode: "exercise"
 <span> <small style="color: grey;" id="light-bulb-e3-hintarea" class="hintarea">light-bulb-e3</small>
 <form id="light-bulb-e3-form">
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="735.5 watts" id="light-bulb-e3-1" w="32" name="light-bulb-e3" hint="Boo!" show_hints="TRUE"> 735.5 watts</p>
+</p><p><input type="radio" class="devoirs-mcq" value="735.5 watts" id="light-bulb-e3-1" w="7" name="light-bulb-e3" hint="Hmmm ..." show_hints="TRUE"> 735.5 watts</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="7355 watts" id="light-bulb-e3-2" w="87" name="light-bulb-e3" hint="Boo!" show_hints="TRUE"> 7355 watts</p>
+</p><p><input type="radio" class="devoirs-mcq" value="7355 watts" id="light-bulb-e3-2" w="87" name="light-bulb-e3" hint="Oops!" show_hints="TRUE"> 7355 watts</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="73,550 watts" id="light-bulb-e3-3" w="18" name="light-bulb-e3" hint="You're right!" show_hints="TRUE"> 73,550 watts</p>
+</p><p><input type="radio" class="devoirs-mcq" value="73,550 watts" id="light-bulb-e3-3" w="35" name="light-bulb-e3" hint="Exactly." show_hints="TRUE"> 73,550 watts</p>
 <p></p>
 <input type="radio" class="devoirs-mcq" name="light-bulb-e3" id="light-bulb-e3.null" style="display: none;" w="skipped" checked="">
 </form>
@@ -951,6 +1014,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-duck-lay-shelf" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 10</strong></span> Grab the P2 graphic from Chap-05-magnitudes.qmd. This is the one with black lines connecting a country in 1960 to the same country in 2020.</p>
 <div class="cell">
@@ -1023,6 +1091,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-duck-see-magnet" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 11</strong></span> The rate of energy while running captured the “amount of running” in units of mile-pounds. But doesn’t speed enter into it? It’s common sense that running faster involves a larger “amount of running.” If this were the case, the units for the amount of running would be mile-pounds-mile/hour or miles<sup>2</sup>-pound/hour. That’s a strange-looking unit. It turns out, however, that running speed is not an important factor in determining the amount of energy used to run a mile-pound. Instead, the increased effort for running fast is due to higher <em>power</em> use, where power is energy per time.</p>
 </div>
@@ -1040,6 +1113,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-duck-wish-blouse" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 12</strong></span> Explain what is meant by a <em>mantissa</em> and the rule for formating one.</p>
 <script type="text/javascript">
@@ -1078,6 +1156,11 @@ status: "draft"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <p>NEED TO IMPORT THE mortality-v-GDP GRAPHICS</p>
 <div id="exr-finch-bite-closet" class="theorem exercise page-columns page-full">
 <p><span class="theorem-title"><strong>Exercise 13</strong></span> <a href="#fig-log-axes" class="quarto-xref">Figure&nbsp;2</a> shows an example based on the mortality versus GDP data. Note that the data points are spread out in the same way as when magnitude is used for the labels; only the labels and tick-mark positions differ.</p>
@@ -1134,6 +1217,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-finger-make-scarf" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 14</strong></span> Something about economists using a rate of change of magnitudes for describing the relationship between two financial dimensions. When the underlying ratio reflects <em>prices</em> of a good, the magnitude rate of change is called an elasticity.</p>
 </div>
@@ -1151,6 +1239,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-fly-spend-gloves" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 15</strong></span> Are these two quantities the same (e.g.&nbsp;the same dimension) or different.</p>
 <ul>
@@ -1193,6 +1286,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-giraffe-meet-cotton" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 16</strong></span> We have defined for your convenience several one-input functions named <code>f1()</code> through <code>f5()</code>. Graph each of them, one at a time, on the domain -5 to 5 and, from the graph, read off the requested information. (Hint: All you need is the <em>name</em> of the function, you don’t have to worry about how we constructed it.)</p>
 <div class="cell" data-autorun="true">
@@ -1221,7 +1319,7 @@ eyJhdHRyIjp7ImNhcHRpb24iOiJNYWtlIHlvdXIgcGxvdHMgaGVyZS4iLCJlZGl0Ijp0cnVlLCJldmFs
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gmc-1-lesle-hintarea" class="hintarea">gmc-1-lesle</small>
 <form id="gmc-1-lesle-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-4" id="gmc-1-lesle-1" w="23" name="gmc-1-lesle" hint="Better luck next time." show_hints="TRUE"> -4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-3" id="gmc-1-lesle-2" w="23" name="gmc-1-lesle" hint="Not on target." show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-2" id="gmc-1-lesle-3" w="16" name="gmc-1-lesle" hint="You've got it!" show_hints="TRUE"> -2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 0" id="gmc-1-lesle-4" w="87" name="gmc-1-lesle" hint="Untrue!" show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 2" id="gmc-1-lesle-5" w="32" name="gmc-1-lesle" hint="Better luck next time." show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 3" id="gmc-1-lesle-6" w="87" name="gmc-1-lesle" hint="Untrue!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 4" id="gmc-1-lesle-7" w="87" name="gmc-1-lesle" hint="Sorry!" show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-1-lesle" id="gmc-1-lesle.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="-4" id="gmc-1-lesle-1" w="87" name="gmc-1-lesle" hint="Incorrect." show_hints="TRUE"> -4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-3" id="gmc-1-lesle-2" w="7" name="gmc-1-lesle" hint="Think again." show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-2" id="gmc-1-lesle-3" w="5" name="gmc-1-lesle" hint="Nice." show_hints="TRUE"> -2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 0" id="gmc-1-lesle-4" w="7" name="gmc-1-lesle" hint="Nope." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 2" id="gmc-1-lesle-5" w="7" name="gmc-1-lesle" hint="Untrue!" show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 3" id="gmc-1-lesle-6" w="3" name="gmc-1-lesle" hint="Oops!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 4" id="gmc-1-lesle-7" w="32" name="gmc-1-lesle" hint="Nope." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-1-lesle" id="gmc-1-lesle.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1257,7 +1355,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gmc-2-loie-hintarea" class="hintarea">gmc-2-loie</small>
 <form id="gmc-2-loie-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-3" id="gmc-2-loie-1" w="23" name="gmc-2-loie" hint="You might think so, but ..." show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-1" id="gmc-2-loie-2" w="14" name="gmc-2-loie" hint="Right!" show_hints="TRUE"> -1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0 " id="gmc-2-loie-3" w="23" name="gmc-2-loie" hint="Not quite." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 1" id="gmc-2-loie-4" w="23" name="gmc-2-loie" hint="Incorrect choice." show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 3" id="gmc-2-loie-5" w="19" name="gmc-2-loie" hint="Better luck next time." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-2-loie" id="gmc-2-loie.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="-3" id="gmc-2-loie-1" w="19" name="gmc-2-loie" hint="Oops!" show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-1" id="gmc-2-loie-2" w="16" name="gmc-2-loie" hint="Good job!" show_hints="TRUE"> -1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0 " id="gmc-2-loie-3" w="87" name="gmc-2-loie" hint="Not quite." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 1" id="gmc-2-loie-4" w="7" name="gmc-2-loie" hint="Try again!" show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 3" id="gmc-2-loie-5" w="7" name="gmc-2-loie" hint="Incorrect." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-2-loie" id="gmc-2-loie.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1293,7 +1391,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gmc-3-yee-hintarea" class="hintarea">gmc-3-yee</small>
 <form id="gmc-3-yee-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="gmc-3-yee-1" w="7" name="gmc-3-yee" hint="Untrue!" show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-10" id="gmc-3-yee-2" w="19" name="gmc-3-yee" hint="You're wrong here." show_hints="TRUE"> -10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-20" id="gmc-3-yee-3" w="87" name="gmc-3-yee" hint="Incorrect choice." show_hints="TRUE"> -20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-30" id="gmc-3-yee-4" w="14" name="gmc-3-yee" hint="Exactly." show_hints="TRUE"> -30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-3-yee" id="gmc-3-yee.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="gmc-3-yee-1" w="19" name="gmc-3-yee" hint="Think again." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-10" id="gmc-3-yee-2" w="3" name="gmc-3-yee" hint="Oops!" show_hints="TRUE"> -10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-20" id="gmc-3-yee-3" w="32" name="gmc-3-yee" hint="Sorry!" show_hints="TRUE"> -20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-30" id="gmc-3-yee-4" w="16" name="gmc-3-yee" hint="That's right." show_hints="TRUE"> -30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-3-yee" id="gmc-3-yee.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1329,7 +1427,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gmc-4-rwsle-hintarea" class="hintarea">gmc-4-rwsle</small>
 <form id="gmc-4-rwsle-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-4" id="gmc-4-rwsle-1" w="7" name="gmc-4-rwsle" hint="Better luck next time." show_hints="TRUE"> -4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-3" id="gmc-4-rwsle-2" w="87" name="gmc-4-rwsle" hint="Wrong." show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-2 " id="gmc-4-rwsle-3" w="87" name="gmc-4-rwsle" hint="Not so!" show_hints="TRUE"> -2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 0" id="gmc-4-rwsle-4" w="23" name="gmc-4-rwsle" hint="Not quite right." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 2" id="gmc-4-rwsle-5" w="23" name="gmc-4-rwsle" hint="Sorry!" show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 3" id="gmc-4-rwsle-6" w="29" name="gmc-4-rwsle" hint="Right!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 4" id="gmc-4-rwsle-7" w="87" name="gmc-4-rwsle" hint="Not quite right." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-4-rwsle" id="gmc-4-rwsle.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="-4" id="gmc-4-rwsle-1" w="87" name="gmc-4-rwsle" hint="Not quite right." show_hints="TRUE"> -4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-3" id="gmc-4-rwsle-2" w="23" name="gmc-4-rwsle" hint="Not quite." show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-2 " id="gmc-4-rwsle-3" w="19" name="gmc-4-rwsle" hint="Wrong." show_hints="TRUE"> -2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 0" id="gmc-4-rwsle-4" w="19" name="gmc-4-rwsle" hint="Not so!" show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 2" id="gmc-4-rwsle-5" w="32" name="gmc-4-rwsle" hint="Think again." show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 3" id="gmc-4-rwsle-6" w="35" name="gmc-4-rwsle" hint="Excellent!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value=" 4" id="gmc-4-rwsle-7" w="23" name="gmc-4-rwsle" hint="This is wide of the mark." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-4-rwsle" id="gmc-4-rwsle.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1365,7 +1463,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gmc-5-qdr-hintarea" class="hintarea">gmc-5-qdr</small>
 <form id="gmc-5-qdr-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="gmc-5-qdr-1" w="32" name="gmc-5-qdr" hint="Nope." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1" id="gmc-5-qdr-2" w="87" name="gmc-5-qdr" hint="Not so!" show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2 " id="gmc-5-qdr-3" w="7" name="gmc-5-qdr" hint="Nope." show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3" id="gmc-5-qdr-4" w="41" name="gmc-5-qdr" hint="Certainly." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4" id="gmc-5-qdr-5" w="23" name="gmc-5-qdr" hint="Better luck next time." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-5-qdr" id="gmc-5-qdr.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="gmc-5-qdr-1" w="7" name="gmc-5-qdr" hint="Nope." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1" id="gmc-5-qdr-2" w="32" name="gmc-5-qdr" hint="This is wide of the mark." show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2 " id="gmc-5-qdr-3" w="87" name="gmc-5-qdr" hint="Not on target." show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3" id="gmc-5-qdr-4" w="5" name="gmc-5-qdr" hint="Good job!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4" id="gmc-5-qdr-5" w="7" name="gmc-5-qdr" hint="Untrue!" show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gmc-5-qdr" id="gmc-5-qdr.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1411,6 +1509,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-goldfish-cost-bed" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 17</strong></span> Consider an everyday kind of question: Which is more to blame for discomfort in hot weather, the temperature or the humidity?</p>
 <p>The blame question makes sense only if we think that humidity and temperature have something to do with comfort. Everyday experience strongly suggests that they do. For quantitative understanding, we can translate “something to do with …” into a mathematical framework: that comfort is a <strong>function</strong> of humidity and temperature. Functions are not the only way to represent the idea of “something to do with,” but experience has shown that they are powerful ways to do so. Knowing how functions are constructed and how to extract information from them is an essential component of quantitative analysis.</p>
@@ -1476,7 +1579,7 @@ Figure&nbsp;3: The sultriness function. Set the inputs with the sliders and the 
 <ol type="1">
 <li><p>True or false: there are temperature/humidity combinations at which the output temperature (that is, the sultriness index) is <em>lower</em> than the input ambient temperature? &nbsp;&nbsp; <span> <small style="color: grey;" id="gcb-1-kwe-hintarea" class="hintarea">gcb-1-kwe</small></span></p>
 <form id="gcb-1-kwe-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="gcb-1-kwe-1" w="18" name="gcb-1-kwe" hint="Right-O!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="gcb-1-kwe-2" w="7" name="gcb-1-kwe" hint="Not on target." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-1-kwe" id="gcb-1-kwe.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
+<p><span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="gcb-1-kwe-1" w="18" name="gcb-1-kwe" hint="Right on the nose!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="gcb-1-kwe-2" w="3" name="gcb-1-kwe" hint="You're mistaken" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-1-kwe" id="gcb-1-kwe.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1510,7 +1613,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gcb-2-e4kf-hintarea" class="hintarea">gcb-2-e4kf</small>
 <form id="gcb-2-e4kf-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="60" id="gcb-2-e4kf-1" w="87" name="gcb-2-e4kf" hint="Incorrect choice." show_hints="TRUE"> 60 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="62" id="gcb-2-e4kf-2" w="18" name="gcb-2-e4kf" hint="Correct." show_hints="TRUE"> 62 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="64" id="gcb-2-e4kf-3" w="3" name="gcb-2-e4kf" hint="Better luck next time." show_hints="TRUE"> 64 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="65" id="gcb-2-e4kf-4" w="32" name="gcb-2-e4kf" hint="Sorry!" show_hints="TRUE"> 65 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-2-e4kf" id="gcb-2-e4kf.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="60" id="gcb-2-e4kf-1" w="19" name="gcb-2-e4kf" hint="Not quite." show_hints="TRUE"> 60 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="62" id="gcb-2-e4kf-2" w="18" name="gcb-2-e4kf" hint="Score!" show_hints="TRUE"> 62 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="64" id="gcb-2-e4kf-3" w="19" name="gcb-2-e4kf" hint="Hmmm ..." show_hints="TRUE"> 64 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="65" id="gcb-2-e4kf-4" w="32" name="gcb-2-e4kf" hint="Oops!" show_hints="TRUE"> 65 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-2-e4kf" id="gcb-2-e4kf.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1548,16 +1651,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <span> <small style="color: grey;" id="gcb-3a-ekxe-hintarea" class="hintarea">gcb-3a-ekxe</small>
 <form id="gcb-3a-ekxe-form">
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="9 percentage points" id="gcb-3a-ekxe-1" w="19" name="gcb-3a-ekxe" hint="Wrong." show_hints="TRUE"> 9 percentage points</p>
+</p><p><input type="radio" class="devoirs-mcq" value="9 percentage points" id="gcb-3a-ekxe-1" w="3" name="gcb-3a-ekxe" hint="You're mistaken" show_hints="TRUE"> 9 percentage points</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="11 percent ... age points" id="gcb-3a-ekxe-2" w="3" name="gcb-3a-ekxe" hint="Hmmm ..." show_hints="TRUE"> 11 percentage points</p>
+</p><p><input type="radio" class="devoirs-mcq" value="11 percent ... age points" id="gcb-3a-ekxe-2" w="23" name="gcb-3a-ekxe" hint="Think again." show_hints="TRUE"> 11 percentage points</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="13 percent ... age points" id="gcb-3a-ekxe-3" w="18" name="gcb-3a-ekxe" hint="Right." show_hints="TRUE"> 13 percentage points</p>
+</p><p><input type="radio" class="devoirs-mcq" value="13 percent ... age points" id="gcb-3a-ekxe-3" w="16" name="gcb-3a-ekxe" hint="Yeah!" show_hints="TRUE"> 13 percentage points</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="15 percent ... age points" id="gcb-3a-ekxe-4" w="19" name="gcb-3a-ekxe" hint="Think again." show_hints="TRUE"> 15 percentage points</p>
+</p><p><input type="radio" class="devoirs-mcq" value="15 percent ... age points" id="gcb-3a-ekxe-4" w="87" name="gcb-3a-ekxe" hint="Better luck next time." show_hints="TRUE"> 15 percentage points</p>
 <p></p>
 <input type="radio" class="devoirs-mcq" name="gcb-3a-ekxe" id="gcb-3a-ekxe.null" style="display: none;" w="skipped" checked="">
 </form>
@@ -1591,7 +1694,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </span></div>
 3b. At 0% humidity, there is some input temperature where the output temperature is greater than the input. &nbsp;&nbsp; <span> <small style="color: grey;" id="gcb-3b-2se-hintarea" class="hintarea">gcb-3b-2se</small>
 <form id="gcb-3b-2se-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or " id="gcb-3b-2se-1" w="32" name="gcb-3b-2se" hint="Untrue!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="gcb-3b-2se-2" w="41" name="gcb-3b-2se" hint="Nice." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-3b-2se" id="gcb-3b-2se.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or " id="gcb-3b-2se-1" w="3" name="gcb-3b-2se" hint="Untrue!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="gcb-3b-2se-2" w="41" name="gcb-3b-2se" hint="Excellent!" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-3b-2se" id="gcb-3b-2se.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1622,7 +1725,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p></p>
 3c. At 50% humidity, there is some input temperature where the output temperature is greater than the input. &nbsp;&nbsp; <span> <small style="color: grey;" id="gcb-3c-2se-hintarea" class="hintarea">gcb-3c-2se</small>
 <form id="gcb-3c-2se-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="gcb-3c-2se-1" w="5" name="gcb-3c-2se" hint="You've got it!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="gcb-3c-2se-2" w="23" name="gcb-3c-2se" hint="No." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-3c-2se" id="gcb-3c-2se.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="gcb-3c-2se-1" w="20" name="gcb-3c-2se" hint="Right on the nose!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="gcb-3c-2se-2" w="87" name="gcb-3c-2se" hint="Think again." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-3c-2se" id="gcb-3c-2se.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1657,7 +1760,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gcb-4-chsle-hintarea" class="hintarea">gcb-4-chsle</small>
 <form id="gcb-4-chsle-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="49" id="gcb-4-chsle-1" w="19" name="gcb-4-chsle" hint="Oops!" show_hints="TRUE"> 49 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="51" id="gcb-4-chsle-2" w="7" name="gcb-4-chsle" hint="Not quite right." show_hints="TRUE"> 51 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="53 " id="gcb-4-chsle-3" w="18" name="gcb-4-chsle" hint="A hit!" show_hints="TRUE"> 53 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="55" id="gcb-4-chsle-4" w="7" name="gcb-4-chsle" hint="Boo!" show_hints="TRUE"> 55 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-4-chsle" id="gcb-4-chsle.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="49" id="gcb-4-chsle-1" w="3" name="gcb-4-chsle" hint="Think again." show_hints="TRUE"> 49 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="51" id="gcb-4-chsle-2" w="7" name="gcb-4-chsle" hint="Nope." show_hints="TRUE"> 51 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="53 " id="gcb-4-chsle-3" w="8" name="gcb-4-chsle" hint="Exactly." show_hints="TRUE"> 53 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="55" id="gcb-4-chsle-4" w="32" name="gcb-4-chsle" hint="Not quite." show_hints="TRUE"> 55 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-4-chsle" id="gcb-4-chsle.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1694,7 +1797,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="gcb-5a-oeie-hintarea" class="hintarea">gcb-5a-oeie</small>
 <form id="gcb-5a-oeie-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="4" id="gcb-5a-oeie-1" w="35" name="gcb-5a-oeie" hint="You're right!" show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="5" id="gcb-5a-oeie-2" w="23" name="gcb-5a-oeie" hint="Incorrect choice." show_hints="TRUE"> 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="6" id="gcb-5a-oeie-3" w="19" name="gcb-5a-oeie" hint="Wrong." show_hints="TRUE"> 6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="7" id="gcb-5a-oeie-4" w="87" name="gcb-5a-oeie" hint="Think again." show_hints="TRUE"> 7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-5a-oeie" id="gcb-5a-oeie.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="4" id="gcb-5a-oeie-1" w="8" name="gcb-5a-oeie" hint="Score!" show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="5" id="gcb-5a-oeie-2" w="19" name="gcb-5a-oeie" hint="Untrue!" show_hints="TRUE"> 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="6" id="gcb-5a-oeie-3" w="19" name="gcb-5a-oeie" hint="Hmmm ..." show_hints="TRUE"> 6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="7" id="gcb-5a-oeie-4" w="19" name="gcb-5a-oeie" hint="Sorry!" show_hints="TRUE"> 7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="gcb-5a-oeie" id="gcb-5a-oeie.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1729,16 +1832,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <span> <small style="color: grey;" id="gcb-5b-oeie-hintarea" class="hintarea">gcb-5b-oeie</small>
 <form id="gcb-5b-oeie-form">
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="0.4 deg C" id="gcb-5b-oeie-1" w="87" name="gcb-5b-oeie" hint="Oops!" show_hints="TRUE"> 0.4 deg C</p>
+</p><p><input type="radio" class="devoirs-mcq" value="0.4 deg C" id="gcb-5b-oeie-1" w="87" name="gcb-5b-oeie" hint="Not quite right." show_hints="TRUE"> 0.4 deg C</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="2.5 deg C  ... tage point" id="gcb-5b-oeie-2" w="32" name="gcb-5b-oeie" hint="You're wrong here." show_hints="TRUE"> 2.5 deg C per percentage point</p>
+</p><p><input type="radio" class="devoirs-mcq" value="2.5 deg C  ... tage point" id="gcb-5b-oeie-2" w="7" name="gcb-5b-oeie" hint="Wrong." show_hints="TRUE"> 2.5 deg C per percentage point</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="2.5 (dimensionless)" id="gcb-5b-oeie-3" w="16" name="gcb-5b-oeie" hint="Yeah!" show_hints="TRUE"> 2.5 (dimensionless)</p>
+</p><p><input type="radio" class="devoirs-mcq" value="2.5 (dimensionless)" id="gcb-5b-oeie-3" w="41" name="gcb-5b-oeie" hint="Yes!" show_hints="TRUE"> 2.5 (dimensionless)</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="2.5 deg C" id="gcb-5b-oeie-4" w="7" name="gcb-5b-oeie" hint="No." show_hints="TRUE"> 2.5 deg C</p>
+</p><p><input type="radio" class="devoirs-mcq" value="2.5 deg C" id="gcb-5b-oeie-4" w="7" name="gcb-5b-oeie" hint="Incorrect choice." show_hints="TRUE"> 2.5 deg C</p>
 <p></p>
 <input type="radio" class="devoirs-mcq" name="gcb-5b-oeie" id="gcb-5b-oeie.null" style="display: none;" w="skipped" checked="">
 </form>
@@ -1785,6 +1888,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-goldfish-jump-scarf" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 18</strong></span> With reference to the log graphics in the Magnitudes chapter.</p>
 <p>The question is, how to do it? Understanding which dimensions of the situation contribute to low mortality, and which do not, can help us figure out what to do.</p>
@@ -1806,6 +1914,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-jellyfish-open-socks" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 19</strong></span> &nbsp;</p>
 <div class="cell" data-layout-align="default">
@@ -1848,7 +1961,7 @@ class Z exogenous
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="jos-1-ekf-hintarea" class="hintarea">jos-1-ekf</small>
 <form id="jos-1-ekf-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="X Y Z" id="jos-1-ekf-1" w="5" name="jos-1-ekf" hint="Nice." show_hints="TRUE"> X Y Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="U V W" id="jos-1-ekf-2" w="3" name="jos-1-ekf" hint="Try again!" show_hints="TRUE"> U V W &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="X W U V" id="jos-1-ekf-3" w="19" name="jos-1-ekf" hint="Boo!" show_hints="TRUE"> X W U V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="V" id="jos-1-ekf-4" w="19" name="jos-1-ekf" hint="No." show_hints="TRUE"> V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-1-ekf" id="jos-1-ekf.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="X Y Z" id="jos-1-ekf-1" w="35" name="jos-1-ekf" hint="Yeah!" show_hints="TRUE"> X Y Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="U V W" id="jos-1-ekf-2" w="3" name="jos-1-ekf" hint="Sorry!" show_hints="TRUE"> U V W &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="X W U V" id="jos-1-ekf-3" w="7" name="jos-1-ekf" hint="Not quite." show_hints="TRUE"> X W U V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="V" id="jos-1-ekf-4" w="32" name="jos-1-ekf" hint="Try again!" show_hints="TRUE"> V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-1-ekf" id="jos-1-ekf.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1885,7 +1998,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="jos-2-hgw-hintarea" class="hintarea">jos-2-hgw</small>
 <form id="jos-2-hgw-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="U" id="jos-2-hgw-1" w="7" name="jos-2-hgw" hint="You might think so, but ..." show_hints="TRUE"> U &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="W &amp; U &amp; Y" id="jos-2-hgw-2" w="19" name="jos-2-hgw" hint="Sorry!" show_hints="TRUE"> W &amp; U &amp; Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="U &amp; Y" id="jos-2-hgw-3" w="8" name="jos-2-hgw" hint="Right-O!" show_hints="TRUE"> U &amp; Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="none. V is ...  exogenous" id="jos-2-hgw-4" w="3" name="jos-2-hgw" hint="Not so!" show_hints="TRUE"> none. V is exogenous &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-2-hgw" id="jos-2-hgw.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="U" id="jos-2-hgw-1" w="87" name="jos-2-hgw" hint="You're mistaken" show_hints="TRUE"> U &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="W &amp; U &amp; Y" id="jos-2-hgw-2" w="87" name="jos-2-hgw" hint="You're mistaken" show_hints="TRUE"> W &amp; U &amp; Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="U &amp; Y" id="jos-2-hgw-3" w="14" name="jos-2-hgw" hint="Good job!" show_hints="TRUE"> U &amp; Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="none. V is ...  exogenous" id="jos-2-hgw-4" w="32" name="jos-2-hgw" hint="Not quite right." show_hints="TRUE"> none. V is exogenous &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-2-hgw" id="jos-2-hgw.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1921,7 +2034,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="jos-3-s4w-hintarea" class="hintarea">jos-3-s4w</small>
 <form id="jos-3-s4w-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="U" id="jos-3-s4w-1" w="3" name="jos-3-s4w" hint="You're mistaken" show_hints="TRUE"> U &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="X only" id="jos-3-s4w-2" w="87" name="jos-3-s4w" hint="Incorrect choice." show_hints="TRUE"> X only &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="X &amp; Z" id="jos-3-s4w-3" w="35" name="jos-3-s4w" hint="You're right!" show_hints="TRUE"> X &amp; Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="none. W is ...  exogenous" id="jos-3-s4w-4" w="19" name="jos-3-s4w" hint="Not quite." show_hints="TRUE"> none. W is exogenous &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-3-s4w" id="jos-3-s4w.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="U" id="jos-3-s4w-1" w="3" name="jos-3-s4w" hint="You might think so, but ..." show_hints="TRUE"> U &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="X only" id="jos-3-s4w-2" w="7" name="jos-3-s4w" hint="Try again!" show_hints="TRUE"> X only &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="X &amp; Z" id="jos-3-s4w-3" w="41" name="jos-3-s4w" hint="Bullseye!" show_hints="TRUE"> X &amp; Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="none. W is ...  exogenous" id="jos-3-s4w-4" w="87" name="jos-3-s4w" hint="Try again!" show_hints="TRUE"> none. W is exogenous &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-3-s4w" id="jos-3-s4w.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -1954,7 +2067,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ol start="4" type="1">
 <li>&nbsp;&nbsp; <span> <small style="color: grey;" id="jos-4-dw-hintarea" class="hintarea">jos-4-dw</small>
 <form id="jos-4-dw-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="jos-4-dw-1" w="29" name="jos-4-dw" hint="Right!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="jos-4-dw-2" w="7" name="jos-4-dw" hint="Wrong." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-4-dw" id="jos-4-dw.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="jos-4-dw-1" w="8" name="jos-4-dw" hint="That's right." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="jos-4-dw-2" w="32" name="jos-4-dw" hint="Incorrect choice." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="jos-4-dw" id="jos-4-dw.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -2001,16 +2114,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <span> <small style="color: grey;" id="jos-5-was-hintarea" class="hintarea">jos-5-was</small>
 <form id="jos-5-was-form">
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="C &amp; A" id="jos-5-was-1" w="87" name="jos-5-was" hint="You're wrong here." show_hints="TRUE"> C &amp; A</p>
+</p><p><input type="radio" class="devoirs-mcq" value="C &amp; A" id="jos-5-was-1" w="7" name="jos-5-was" hint="Hmmm ..." show_hints="TRUE"> C &amp; A</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="B &amp; F" id="jos-5-was-2" w="3" name="jos-5-was" hint="Not quite." show_hints="TRUE"> B &amp; F</p>
+</p><p><input type="radio" class="devoirs-mcq" value="B &amp; F" id="jos-5-was-2" w="87" name="jos-5-was" hint="Incorrect." show_hints="TRUE"> B &amp; F</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="A &amp; E" id="jos-5-was-3" w="16" name="jos-5-was" hint="Score!" show_hints="TRUE"> A &amp; E</p>
+</p><p><input type="radio" class="devoirs-mcq" value="A &amp; E" id="jos-5-was-3" w="18" name="jos-5-was" hint="Certainly." show_hints="TRUE"> A &amp; E</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="C &amp; F" id="jos-5-was-4" w="87" name="jos-5-was" hint="Wrong." show_hints="TRUE"> C &amp; F</p>
+</p><p><input type="radio" class="devoirs-mcq" value="C &amp; F" id="jos-5-was-4" w="87" name="jos-5-was" hint="You're mistaken" show_hints="TRUE"> C &amp; F</p>
 <p></p>
 <input type="radio" class="devoirs-mcq" name="jos-5-was" id="jos-5-was.null" style="display: none;" w="skipped" checked="">
 </form>
@@ -2057,6 +2170,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-kitten-close-coat" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 20</strong></span> Home chefs are advised that there is a safe temperature for cooking poultry: a thermometer inserted into the deepest part of the flesh should reach 165 deg F. This often leads to dry meat. In contrast, “rotisserie chicken,” the sort of fresh, pre-cooked chicken sold by grocery stores, is almost always moist and tasty. How does the rotisserie method achieve this?</p>
 <p>There is actually a wide range of temperatures at which chicken can be cooked safely. The key is to hold the meat at that temperature for long enough. At 165 deg F, safety is achieved <em>instantly</em>.<br>
@@ -2086,7 +2204,7 @@ Figure&nbsp;4
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="kcc-1-kes-hintarea" class="hintarea">kcc-1-kes</small>
 <form id="kcc-1-kes-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="25 minutes" id="kcc-1-kes-1" w="7" name="kcc-1-kes" hint="Think again." show_hints="TRUE"> 25 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="30 minutes" id="kcc-1-kes-2" w="19" name="kcc-1-kes" hint="Boo!" show_hints="TRUE"> 30 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="35 minutes" id="kcc-1-kes-3" w="35" name="kcc-1-kes" hint="Right on the nose!" show_hints="TRUE"> 35 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="40 minutes" id="kcc-1-kes-4" w="23" name="kcc-1-kes" hint="You might think so, but ..." show_hints="TRUE"> 40 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No such time." id="kcc-1-kes-5" w="32" name="kcc-1-kes" hint="No." show_hints="TRUE"> No such time. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="kcc-1-kes" id="kcc-1-kes.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="25 minutes" id="kcc-1-kes-1" w="7" name="kcc-1-kes" hint="Incorrect choice." show_hints="TRUE"> 25 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="30 minutes" id="kcc-1-kes-2" w="7" name="kcc-1-kes" hint="You might think so, but ..." show_hints="TRUE"> 30 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="35 minutes" id="kcc-1-kes-3" w="29" name="kcc-1-kes" hint="Yeah!" show_hints="TRUE"> 35 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="40 minutes" id="kcc-1-kes-4" w="7" name="kcc-1-kes" hint="Nope." show_hints="TRUE"> 40 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No such time." id="kcc-1-kes-5" w="7" name="kcc-1-kes" hint="Untrue!" show_hints="TRUE"> No such time. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="kcc-1-kes" id="kcc-1-kes.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -2124,7 +2242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="kcc-2-kes-hintarea" class="hintarea">kcc-2-kes</small>
 <form id="kcc-2-kes-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="40 minutes" id="kcc-2-kes-1" w="19" name="kcc-2-kes" hint="Wrong." show_hints="TRUE"> 40 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="60 minutes" id="kcc-2-kes-2" w="7" name="kcc-2-kes" hint="This is wide of the mark." show_hints="TRUE"> 60 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="80 minutes " id="kcc-2-kes-3" w="87" name="kcc-2-kes" hint="Oops!" show_hints="TRUE"> 80 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No such ti ...  in graph." id="kcc-2-kes-4" w="35" name="kcc-2-kes" hint="Right-O!" show_hints="TRUE"> No such time shown in graph. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="kcc-2-kes" id="kcc-2-kes.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="40 minutes" id="kcc-2-kes-1" w="3" name="kcc-2-kes" hint="This is wide of the mark." show_hints="TRUE"> 40 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="60 minutes" id="kcc-2-kes-2" w="87" name="kcc-2-kes" hint="Better luck next time." show_hints="TRUE"> 60 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="80 minutes " id="kcc-2-kes-3" w="3" name="kcc-2-kes" hint="Not quite." show_hints="TRUE"> 80 minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No such ti ...  in graph." id="kcc-2-kes-4" w="14" name="kcc-2-kes" hint="You're right." show_hints="TRUE"> No such time shown in graph. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="kcc-2-kes" id="kcc-2-kes.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -2169,6 +2287,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-lamb-speak-radio" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 21</strong></span> &nbsp;</p>
 <ol type="1">
@@ -2423,6 +2546,11 @@ status: "ready-to-use"
 chapter: 3
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-maple-shut-pencil" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 22</strong></span> Write out an algorithm to compare any two numbers in scientific notation. Scientific notation numbers have the form <span class="math inline">\(m \times 10^{\ p}\)</span> where <span class="math inline">\(m\)</span> is called the <em>mantissa</em> and <span class="math inline">\(p\)</span> the exponent. The format you will work with is the two mantissas and the two exponents. We’ll call them <span class="math inline">\(m_1\)</span>, <span class="math inline">\(m_2\)</span>, <span class="math inline">\(p_1\)</span>, and <span class="math inline">\(p_2\)</span> respectively.</p>
 <p>You have been given an algorithm <code>compare(x, y)</code> which given any two numbers <code>x</code> and <code>y</code> will return either “gt”, “eq”, or “lt” depending on whether <code>x</code> is greater than, equal to, or less than <code>y</code>. You also have a three-way if else, which you can use like this:</p>
@@ -2451,6 +2579,11 @@ attribution: DTK
 status: sketch
 chapter: 5
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-mouse-love-pen" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 23</strong></span> Phenomena where measurements are usually reported on a magnitude scale: sound, earthquakes, acidity (pH), information</p>
 </div>
@@ -2467,6 +2600,11 @@ attribution: DTK
 status: sketch
 chapter: 5
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-owl-tug-room" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 24</strong></span> Show how the magnitude corresponds to the amount of data needed. Doubling the amount of data means, effectively, squaring the likelihood. If you start with “limited evidence”, you need to double the amount of data to get to Magnitude 2. Another doubling (that is, to four times the amount of data) brings you to Magnitude 4.</p>
 </div>
@@ -2484,6 +2622,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-pig-think-bolt" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 25</strong></span> Usually you read the order of magnitude from the integer following the <code>e</code>. For instance, the order of magnitude of <code>1.56e13</code> is simply thirteen. But for the devious purposes of this drill problem, we’ve written some of the numbers in non-standard form.</p>
 <p>The standard form for writing a number in scientific notation has, as you know, two components: a mantissa and an exponent. The mantissa is written to have one non-zero digit to the left of the decimal point. The exponent must always be an <em>integer</em>, that is <span class="math inline">\(\ldots, -2, -1, 0, 1, 2, 3, \ldots\)</span>.</p>
@@ -2735,6 +2878,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-pollen-stand-pen" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 27</strong></span> In everyday speech, a “decade” corresponds to 10 years, “two decades” to 20 years, and so on. In <em>magnitude graphics</em>, a decade refers to something different. On a magnitude scale, as on all numerical scales, there is a lowest marked value and a higher marked value. If the higher marked value is 10-times the size of the lowest, that scale covers one decade. If the higher marked value is 100-times the size of the lowest—that is, two orders of magnitude bigger—the scale is said to cover two decades. A span of three orders of magnitude corresponds to three decades, and so on.</p>
 <ol type="1">
@@ -2971,6 +3119,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-seahorse-pitch-teacup" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 28</strong></span> Official standards for bacterial cleanliness are set on a scale measuring what proportion of bacteria may survive a cleaning. For instance, the Mr.&nbsp;Clean bottle claims to eliminate 99.9% of bacteria, that is, that only one in a thousand bacteria will survive.</p>
 <p><img src="../www/mr-clean.png" class="img-fluid"></p>
@@ -3024,8 +3177,13 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-seal-form-glasses" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 29</strong></span> Look at Figure 5.5 showing the relationship between a mortgage’s monthly payment and loan duration in years. What story does this figure tell? What do you think the author means when he says “the homeowner suffers from “diminishing marginal returns” as the loan duration increases?”</p>
+<p><span class="theorem-title"><strong>Exercise 29</strong></span> Look at Figure 5.5 showing the relationship between a mortgage’s monthly payment and loan duration in years. What story does this figure tell? What do you think the author means when he says “the homeowner suffers from “diminishing marginal returns ” as the loan duration increases?”</p>
 <script type="text/javascript">
       //save entered info
       document.addEventListener('DOMContentLoaded', function() {
@@ -3061,6 +3219,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-seal-ride-book" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 30</strong></span> In the text’s example about sun position, cloudiness, and production, select the correct description:</p>
 <div class="cell">
@@ -3124,6 +3287,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-seaweed-build-jacket" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 31</strong></span> &nbsp;</p>
 <ol type="1">
@@ -3249,6 +3417,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-sheep-tear-bed" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 32</strong></span> What units do you habitually use to measure speed, either walking or biking or driving or flying? In those units, how many digits are needed across the spectrum encounted in everyday movement?</p>
 <script type="text/javascript">
@@ -3285,6 +3458,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-snail-say-clock" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 33</strong></span> There are many situations in which we adopt units so that commonly encountered measurements have just two or three digits. Both the Fahrenheit and Celsius temperature scales have the nice feature that commonly encountered outdoor temperatures have two digits. Those familiar with the Fahrenheit scale know that temperatures on weather maps tend to range from -30 to 120°F. For Celsius, the range -20°C to 40°C does the job. Students in the US learn that atmospheric pressure is about 14.7 pounds per square inch.</p>
 <p>Tire pressures for cars and bicycles are frequently denominated in one of three units: pounds-per-square inch (psi), bar, and pascal (P). If you are unfamiliar with tire pressure, you might have to do a tiny bit of web research to answer these questions.</p>
@@ -3413,6 +3591,11 @@ status: "sketch"
 chapter: 5
 mode: "outline"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-snake-begin-stove" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 34</strong></span> YOU WERE HERE.</p>
 <p>Introduce contour plots and ask questions about features in several doodle_fun functions.</p>
@@ -3432,6 +3615,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-spruce-talk-sheet" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 35</strong></span> Consider a function <code>Profit(price, weather)</code> used by an ice cream shop owner to predict daily earnings.</p>
 <ul>
@@ -3489,6 +3677,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-tiger-lick-window" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 36</strong></span> According to <a href="Chap-05-functions.html#sec-intro-to-functions">Chapter 5</a>, what is the definition of a mathematical function?</p>
 <div class="cell">
@@ -3557,6 +3750,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-titmouse-let-saw" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 37</strong></span> <a href="Exer-02-quantities.html#fig-gdp-mortality2">Figure 2.1</a> displays child mortality versus gross domestic product (GDP) on a country-by-country basis. Child mortality is operationalized as the number of children who die between birth and their fifth birthday. It is a “rate” because the number given is a ratio of the number of deaths in this group to the total number of children in this group, but is given in units of “deaths per 1000 children.” That is, the ratio is dimensionless with dimension C C<sup>-1</sup> = [1], (Strictly speaking, the rate should be called “Under-five mortality.”)</p>
 <p>GDP is often presented as the value of goods and services produced by a country in one year. The quantity shown here is also a rate, described in the label of the graph as “GDP per capita.” The dimension of the GDP is W T<sup>-1</sup> C<sup>-1</sup>. The operationalization of GDP is defined in a way that makes it relatively easy to measure from government and commercial records. All goods and services for which money is exchanged are included. No goods and services for which money is not exchanged are included. Thus, GDP ignores the value provided by, for instance, home child care and home meal preparation. A country which switched from home-cooked meals to fast food would see a sharp <em>increase</em> in GDP but, perhaps, a decrease in nutrition. Paid work need not be productive to be included in GDP. No adjustment is made for losses due to accidents, disasters, or depreciation of buildings and other capital.</p>
@@ -3659,6 +3857,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div class="cell" data-autorun="true">
 <div>
 <div id="webr-6" class="exercise-cell">
@@ -3732,6 +3935,11 @@ status: "sketch"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-toe-understand-glasses" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 39</strong></span> EXERCISE: Calculate the scientific notation form of several numbers presented in decimal form, digital form or as non-standard scientific notation (e.g.&nbsp;<code>542e8</code>).</p>
 <p>For several numbers, calculate the exponent that is equivalent to the <span class="math inline">\(1 \times 10^\color{magenta}{\fbox{x}}\)</span> style of scientific notation (using <code>log10()</code>.)</p>
@@ -3750,6 +3958,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-walrus-hang-kitchen" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 40</strong></span> The <a href="https://www.nytimes.com/2025/11/30/magazine/e-bikes-accidents-safety-legislation-california.html?smid=nytcore-ios-share"><em>New York Times Magazine</em></a> (Nov.&nbsp;30, 2025) reported on a surge in e-bike injuries. The article sensibly pointed to the rapid increase in e-bikes sales as a factor in the surge.</p>
 <blockquote class="blockquote">
@@ -4210,6 +4423,11 @@ status: "ready-to-use"
 chapter: 5
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-zebra-dream-blouse" class="theorem exercise page-columns page-full">
 <p><span class="theorem-title"><strong>Exercise 41</strong></span> The <code>Engine</code> data frame contains measurements of many different internal combustion engines of widely varying sizes. For instance, we can graph engine RPM (revolutions per second) versus engine mass (in pounds), as in <a href="#fig-rpm-mass1" class="quarto-xref">Figure&nbsp;6</a>.</p>
 <div class="cell">

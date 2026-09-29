@@ -12,6 +12,7 @@ project:
     - Chap-04/Catalog-04.qmd
     - Chap-05/Catalog-05.qmd
     - Chap-06/Catalog-06.qmd
+    - Apps/App-113.qmd
   
 website: 
   title: "Quantitative Argumentation"

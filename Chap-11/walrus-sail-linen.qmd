@@ -1,0 +1,18 @@
+<!--
+id: "walrus-sail-linen"
+created: "Mon Sep 21 16:46:05 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: x_drafts
+chapter: 11
+topic: "Memoryless Property of Exponential Distribution"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-walrus-sail-linen}
+DISCUSSION: Imagine two gamblers. One has been at the table for a long time without winning. The other has just arrived. Are the gamblers justified in having different expectations about how likely is a win in the near future? Suppose the newly-arrived gambler doesn't know how long the other gambler has been playing.  Does that make a difference? Wouldn't this suggest that after a win, the gambler should leave the table and move to another where a win hasn't happened in a while?
+:::
+ <!-- end of exr-walrus-sail-linen -->

@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Chapter 02 Catalog – Quantitative Argumentation</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -32,15 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7a9f06792e729f6a12ae79ab1eb40b9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bf8f49345ee328fa78402b74928d9a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -103,15 +108,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      <div class="sidebar-tools-main">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Quantitative Argumentation</a> 
+        <div class="sidebar-tools-main">
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
 </a>
 </div>
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -222,6 +228,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }
 </style>
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div class="callout callout-style-default callout-note callout-titled" title="Group: unclassified">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -235,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="tabset-margin-container"></div><div class="panel-tabset" data-collapse="true">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">avoid-put-socks</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">elephant-hold-knob</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">frog-get-laundry</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">girl-lose-hamper</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">jellyfish-lay-bolt</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">jellyfish-open-spoon</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">kitten-bend-door</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">nephew-dig-lamp</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">pony-meet-window</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false" href="">puppy-hang-blanket</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" role="tab" aria-controls="tabset-1-11" aria-selected="false" href="">reptile-beat-window</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-12" role="tab" aria-controls="tabset-1-12" aria-selected="false" href="">seaweed-bend-laundry</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-13-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-13" role="tab" aria-controls="tabset-1-13" aria-selected="false" href="">seaweed-hang-ring</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">avoid-put-socks</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">elephant-hold-knob</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">girl-lose-hamper</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">jellyfish-lay-bolt</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">jellyfish-open-spoon</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">kitten-bend-door</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">nephew-dig-lamp</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">pony-meet-window</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">seaweed-bend-laundry</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false" href="">seaweed-hang-ring</a></li></ul>
 <div class="tab-content" data-collapse="true">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <blockquote class="blockquote">
@@ -249,6 +260,11 @@ status: "sketch"
 chapter: 2
 mode: "outline"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-avoid-put-socks" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1</strong></span> EXERCISE: Windy. How to operationalize windiness. Sea state, Beauford scale, Richter Scale, Tornado and hurricane scales.</p>
 </div>
@@ -275,16 +291,16 @@ chapter: 2
 <span> <small style="color: grey;" id="ehk-1-ckse-hintarea" class="hintarea">ehk-1-ckse</small>
 <form id="ehk-1-ckse-form">
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="Both inter ...  economy.&quot;" id="ehk-1-ckse-1" w="19" name="ehk-1-ckse" hint="Oops!" show_hints="TRUE"> Both international and US operationalizations ought to be called “fuel economy.”</p>
+</p><p><input type="radio" class="devoirs-mcq" value="Both inter ...  economy.&quot;" id="ehk-1-ckse-1" w="19" name="ehk-1-ckse" hint="Nope." show_hints="TRUE"> Both international and US operationalizations ought to be called “fuel economy.”</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="Both opera ... sumption.&quot;" id="ehk-1-ckse-2" w="19" name="ehk-1-ckse" hint="Not quite right." show_hints="TRUE"> Both operationalizations out to be called “fuel consumption.”</p>
+</p><p><input type="radio" class="devoirs-mcq" value="Both opera ... sumption.&quot;" id="ehk-1-ckse-2" w="19" name="ehk-1-ckse" hint="Nope." show_hints="TRUE"> Both operationalizations out to be called “fuel consumption.”</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="US is &quot;fue ... sumption.&quot;" id="ehk-1-ckse-3" w="20" name="ehk-1-ckse" hint="That's right." show_hints="TRUE"> US is “fuel economy” while international is “fuel consumption.”</p>
+</p><p><input type="radio" class="devoirs-mcq" value="US is &quot;fue ... sumption.&quot;" id="ehk-1-ckse-3" w="8" name="ehk-1-ckse" hint="Bingo!" show_hints="TRUE"> US is “fuel economy” while international is “fuel consumption.”</p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="US is &quot;fue ...  economy.&quot;" id="ehk-1-ckse-4" w="19" name="ehk-1-ckse" hint="Think again." show_hints="TRUE"> US is “fuel consumption” while international is “fuel economy.”</p>
+</p><p><input type="radio" class="devoirs-mcq" value="US is &quot;fue ...  economy.&quot;" id="ehk-1-ckse-4" w="3" name="ehk-1-ckse" hint="Not so!" show_hints="TRUE"> US is “fuel consumption” while international is “fuel economy.”</p>
 <p></p>
 <input type="radio" class="devoirs-mcq" name="ehk-1-ckse" id="ehk-1-ckse.null" style="display: none;" w="skipped" checked="">
 </form>
@@ -324,16 +340,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <span> <small style="color: grey;" id="ehk-2-emxl-hintarea" class="hintarea">ehk-2-emxl</small>
 <form id="ehk-2-emxl-form">
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="[500 to 1500] m^2^" id="ehk-2-emxl-1" w="87" name="ehk-2-emxl" hint="Yes!" show_hints="TRUE"> [500 to 1500] m<sup>2</sup></p>
+</p><p><input type="radio" class="devoirs-mcq" value="[500 to 1500] m^2^" id="ehk-2-emxl-1" w="32" name="ehk-2-emxl" hint="Good job!" show_hints="TRUE"> [500 to 1500] m<sup>2</sup></p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="[0.05 to 0.15] m^2^" id="ehk-2-emxl-2" w="87" name="ehk-2-emxl" hint="You're right." show_hints="TRUE"> [0.05 to 0.15] m<sup>2</sup></p>
+</p><p><input type="radio" class="devoirs-mcq" value="[0.05 to 0.15] m^2^" id="ehk-2-emxl-2" w="23" name="ehk-2-emxl" hint="You've got it!" show_hints="TRUE"> [0.05 to 0.15] m<sup>2</sup></p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="[0.00005 t ... 0015] m^2^" id="ehk-2-emxl-3" w="7" name="ehk-2-emxl" hint="Right on the nose!" show_hints="TRUE"> [0.00005 to 0.00015] m<sup>2</sup></p>
+</p><p><input type="radio" class="devoirs-mcq" value="[0.00005 t ... 0015] m^2^" id="ehk-2-emxl-3" w="7" name="ehk-2-emxl" hint="Certainly." show_hints="TRUE"> [0.00005 to 0.00015] m<sup>2</sup></p>
 <p></p>
 <p>
-</p><p><input type="radio" class="devoirs-mcq" value="[0.0000000 ... 0015] m^2^" id="ehk-2-emxl-4" w="29" name="ehk-2-emxl" hint="A win!" show_hints="TRUE"> [0.00000005 to 0.00000015] m<sup>2</sup></p>
+</p><p><input type="radio" class="devoirs-mcq" value="[0.0000000 ... 0015] m^2^" id="ehk-2-emxl-4" w="18" name="ehk-2-emxl" hint="Yes!" show_hints="TRUE"> [0.00000005 to 0.00000015] m<sup>2</sup></p>
 <p></p>
 <input type="radio" class="devoirs-mcq" name="ehk-2-emxl" id="ehk-2-emxl.null" style="display: none;" w="skipped" checked="">
 </form>
@@ -371,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="ehk-3-dkck-hintarea" class="hintarea">ehk-3-dkck</small>
 <form id="ehk-3-dkck-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L^-3^" id="ehk-3-dkck-1" w="19" name="ehk-3-dkck" hint="Not so!" show_hints="TRUE"> L<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-2^" id="ehk-3-dkck-2" w="87" name="ehk-3-dkck" hint="You might think so, but ..." show_hints="TRUE"> L<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^" id="ehk-3-dkck-3" w="32" name="ehk-3-dkck" hint="Think again." show_hints="TRUE"> L<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="dimensionless" id="ehk-3-dkck-4" w="32" name="ehk-3-dkck" hint="Incorrect choice." show_hints="TRUE"> dimensionless &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="ehk-3-dkck-5" w="87" name="ehk-3-dkck" hint="You're wrong here." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^" id="ehk-3-dkck-6" w="5" name="ehk-3-dkck" hint="A hit!" show_hints="TRUE"> L<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^3^" id="ehk-3-dkck-7" w="3" name="ehk-3-dkck" hint="Incorrect choice." show_hints="TRUE"> L<sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="ehk-3-dkck" id="ehk-3-dkck.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="L^-3^" id="ehk-3-dkck-1" w="32" name="ehk-3-dkck" hint="Not so!" show_hints="TRUE"> L<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-2^" id="ehk-3-dkck-2" w="19" name="ehk-3-dkck" hint="Incorrect." show_hints="TRUE"> L<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^" id="ehk-3-dkck-3" w="7" name="ehk-3-dkck" hint="Not on target." show_hints="TRUE"> L<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="dimensionless" id="ehk-3-dkck-4" w="23" name="ehk-3-dkck" hint="Not quite." show_hints="TRUE"> dimensionless &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="ehk-3-dkck-5" w="7" name="ehk-3-dkck" hint="Not on target." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^" id="ehk-3-dkck-6" w="5" name="ehk-3-dkck" hint="You're right." show_hints="TRUE"> L<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^3^" id="ehk-3-dkck-7" w="32" name="ehk-3-dkck" hint="No." show_hints="TRUE"> L<sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="ehk-3-dkck" id="ehk-3-dkck.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -407,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="ehk-4-ukws-hintarea" class="hintarea">ehk-4-ukws</small>
 <form id="ehk-4-ukws-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L^-3^" id="ehk-4-ukws-1" w="19" name="ehk-4-ukws" hint="Think again." show_hints="TRUE"> L<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-2^" id="ehk-4-ukws-2" w="35" name="ehk-4-ukws" hint="You've got it!" show_hints="TRUE"> L<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^" id="ehk-4-ukws-3" w="3" name="ehk-4-ukws" hint="Try again!" show_hints="TRUE"> L<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="dimensionless" id="ehk-4-ukws-4" w="7" name="ehk-4-ukws" hint="Sorry!" show_hints="TRUE"> dimensionless &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="ehk-4-ukws-5" w="3" name="ehk-4-ukws" hint="This is wide of the mark." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ " id="ehk-4-ukws-6" w="87" name="ehk-4-ukws" hint="Hmmm ..." show_hints="TRUE"> L<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^3^" id="ehk-4-ukws-7" w="87" name="ehk-4-ukws" hint="Oops!" show_hints="TRUE"> L<sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="ehk-4-ukws" id="ehk-4-ukws.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="L^-3^" id="ehk-4-ukws-1" w="23" name="ehk-4-ukws" hint="Sorry!" show_hints="TRUE"> L<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-2^" id="ehk-4-ukws-2" w="5" name="ehk-4-ukws" hint="Score!" show_hints="TRUE"> L<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^" id="ehk-4-ukws-3" w="3" name="ehk-4-ukws" hint="Wrong." show_hints="TRUE"> L<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="dimensionless" id="ehk-4-ukws-4" w="87" name="ehk-4-ukws" hint="Not quite right." show_hints="TRUE"> dimensionless &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="ehk-4-ukws-5" w="3" name="ehk-4-ukws" hint="Incorrect." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ " id="ehk-4-ukws-6" w="7" name="ehk-4-ukws" hint="Untrue!" show_hints="TRUE"> L<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^3^" id="ehk-4-ukws-7" w="19" name="ehk-4-ukws" hint="Oops!" show_hints="TRUE"> L<sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="ehk-4-ukws" id="ehk-4-ukws.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -443,24 +459,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <blockquote class="blockquote">
-<p>File: Chap-02/frog-get-laundry.qmd Status: draft</p>
-</blockquote>
-<!--
-id: "frog-get-laundry"
-created: "Thu Sep 25 13:49:19 2025"
-attribution: TBA
-status: "draft"
-chapter: 2
-mode: "exercise"
--->
-<div id="exr-frog-get-laundry" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3</strong></span> In discussing the formation of new physicians, we combined two facts: the total number of medical students is 100,000 <em>and</em> medical school takes four years. This led to our estimate that there will be 25,000 graduates each year. Revisit this model taking into account that not all entering medical students graduate. Assume that attrition in the first year is 10%, then 5% in each of the two successive years.</p>
-<p>If there are 100,000 students all together, how many graduate each year?</p>
-</div>
-<p><!-- end of exr-frog-get-laundry --></p>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<blockquote class="blockquote">
 <p>File: Chap-02/girl-lose-hamper.qmd Status: sketch</p>
 </blockquote>
 <!--
@@ -471,15 +469,20 @@ status: "sketch"
 chapter: 2
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-girl-lose-hamper" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> &nbsp;</p>
 <ul>
 <li>luminous intensity (light) L as the last of the formal SI dimensions.</li>
 </ul>
 </div>
 <p><!-- end of exr-girl-lose-hamper --></p>
 </div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <blockquote class="blockquote">
 <p>File: Chap-02/jellyfish-lay-bolt.qmd Status: sketch</p>
 </blockquote>
@@ -491,12 +494,17 @@ status: "sketch"
 chapter: 2
 mode: "outline"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-jellyfish-lay-bolt" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5</strong></span> meta-data synonyms: codebook, data dictionary, documentation</p>
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> meta-data synonyms: codebook, data dictionary, documentation</p>
 </div>
 <p><!-- end of exr-jellyfish-lay-bolt --></p>
 </div>
-<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <blockquote class="blockquote">
 <p>File: Chap-02/jellyfish-open-spoon.qmd Status: sketch</p>
 </blockquote>
@@ -505,17 +513,104 @@ id: "jellyfish-open-spoon"
 created: "Sat Aug 15 10:06:46 2026"
 attribution: DTK
 uses: "Systems chapter"
-status: "sketch"
+status: "ready-to-use"
 chapter: 2
-mode: "outline"
+mode: exercise
+group: dimensions
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-jellyfish-open-spoon" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6</strong></span> Using the broad sense of “dimension” introduced in this chapter, write down 10 familiar dimensions of an automobile. Remember that “dimension” covers not just spatial extent but also other properties of the car.</p>
-<p>ADD OTHER VERSIONS, E.G. a chair, a computer, a flowering plant</p>
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Using the broad sense of “dimension” introduced in this chapter, write down 10 familiar dimensions of an automobile. Remember that “dimension” covers not just spatial extent but also other properties of the car.</p>
+<script type="text/javascript">
+      //save entered info
+      document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for jos-car-8dkw.');
+      const form = document.getElementById('jos-car-8dkw');
+      form.addEventListener("input", function () {
+        var todo = document.getElementById('jos-car-8dkw').value;
+        localStorage.setItem("jos-car-8dkw-contents", todo);
+        console.log("Saving value of jos-car-8dkw.")
+      }, false);
+
+      //on page load, read in the old value
+      const savedValue = localStorage.getItem("jos-car-8dkw-contents");
+      if (savedValue) {
+        document.getElementById('jos-car-8dkw').value = savedValue;
+      }
+})
+</script>
+<textarea id="jos-car-8dkw" name="jos-car-8dkw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID jos-car-8dkw)"></textarea>
+<p>Do the same for these other familiar objects:</p>
+<ul>
+<li>A chair
+<script type="text/javascript">
+    //save entered info
+    document.addEventListener('DOMContentLoaded', function() {
+    console.log('Adding event listener for jos-chair-8dkw.');
+    const form = document.getElementById('jos-chair-8dkw');
+    form.addEventListener("input", function () {
+      var todo = document.getElementById('jos-chair-8dkw').value;
+      localStorage.setItem("jos-chair-8dkw-contents", todo);
+      console.log("Saving value of jos-chair-8dkw.")
+    }, false);
+
+    //on page load, read in the old value
+    const savedValue = localStorage.getItem("jos-chair-8dkw-contents");
+    if (savedValue) {
+      document.getElementById('jos-chair-8dkw').value = savedValue;
+    }
+})
+</script>
+<textarea id="jos-chair-8dkw" name="jos-chair-8dkw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID jos-chair-8dkw)"></textarea></li>
+<li>A computer
+<script type="text/javascript">
+    //save entered info
+    document.addEventListener('DOMContentLoaded', function() {
+    console.log('Adding event listener for jos-computer-8dkw.');
+    const form = document.getElementById('jos-computer-8dkw');
+    form.addEventListener("input", function () {
+      var todo = document.getElementById('jos-computer-8dkw').value;
+      localStorage.setItem("jos-computer-8dkw-contents", todo);
+      console.log("Saving value of jos-computer-8dkw.")
+    }, false);
+
+    //on page load, read in the old value
+    const savedValue = localStorage.getItem("jos-computer-8dkw-contents");
+    if (savedValue) {
+      document.getElementById('jos-computer-8dkw').value = savedValue;
+    }
+})
+</script>
+<textarea id="jos-computer-8dkw" name="jos-computer-8dkw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID jos-computer-8dkw)"></textarea></li>
+<li>A flowering plant
+<script type="text/javascript">
+    //save entered info
+    document.addEventListener('DOMContentLoaded', function() {
+    console.log('Adding event listener for jos-flowering-plant-8dkw.');
+    const form = document.getElementById('jos-flowering-plant-8dkw');
+    form.addEventListener("input", function () {
+      var todo = document.getElementById('jos-flowering-plant-8dkw').value;
+      localStorage.setItem("jos-flowering-plant-8dkw-contents", todo);
+      console.log("Saving value of jos-flowering-plant-8dkw.")
+    }, false);
+
+    //on page load, read in the old value
+    const savedValue = localStorage.getItem("jos-flowering-plant-8dkw-contents");
+    if (savedValue) {
+      document.getElementById('jos-flowering-plant-8dkw').value = savedValue;
+    }
+})
+</script>
+<textarea id="jos-flowering-plant-8dkw" name="jos-flowering-plant-8dkw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID jos-flowering-plant-8dkw)"></textarea></li>
+</ul>
 </div>
 <p><!-- end of exr-jellyfish-open-spoon --></p>
 </div>
-<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
 <blockquote class="blockquote">
 <p>File: Chap-02/kitten-bend-door.qmd Status: draft</p>
 </blockquote>
@@ -527,14 +622,19 @@ status: "draft"
 chapter: 2
 mode: "outline"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-kitten-bend-door" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7</strong></span> DO WE WANT TO BRING IN mass vs weight as different operationalizations?</p>
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> DO WE WANT TO BRING IN mass vs weight as different operationalizations?</p>
 <p>Mass as operationalized on a scale by the force on a spring, or the force produced by a leveraged counterweight on a balance.</p>
 <p>Similarly, you may recall that weight (M L T<sup>-2</sup>) is not the same kind of thing as mass ({{ var dim.mass &gt;}}). The idea of weight goes back to antiquity, but “mass” is much more recent, emerging from Newton’s work with gravity in the late 1600s.</p>
 </div>
 <p><!-- end of exr-kitten-bend-door --></p>
 </div>
-<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
 <blockquote class="blockquote">
 <p>File: Chap-02/nephew-dig-lamp.qmd</p>
 </blockquote>
@@ -547,8 +647,13 @@ status: "ready-to-use"
 chapter: 2
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-nephew-dig-lamp" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 8</strong></span> The text distinguishes between a “unit” and a “dimension.” Explain in your own words how a dimension differs from a unit. Why is it possible to have multiple different units that all correspond to the single dimension of “Length”?</p>
+<p><span class="theorem-title"><strong>Exercise 7</strong></span> The text distinguishes between a “unit” and a “dimension.” Explain in your own words how a dimension differs from a unit. Why is it possible to have multiple different units that all correspond to the single dimension of”Length”?</p>
 <script type="text/javascript">
       //save entered info
       document.addEventListener('DOMContentLoaded', function() {
@@ -571,7 +676,7 @@ mode: "reading-question"
 </div>
 <p><!-- end of exr-nephew-dig-lamp --></p>
 </div>
-<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
 <blockquote class="blockquote">
 <p>File: Chap-02/pony-meet-window.qmd</p>
 </blockquote>
@@ -583,8 +688,14 @@ status: "ready-to-use"
 chapter: 2
 mode: "exercise"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-pony-meet-window" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9</strong></span> <img src="../www/drill-5-wxyz.png" class="img-fluid"></p>
+<p><span class="theorem-title"><strong>Exercise 8</strong></span> &nbsp;</p>
+<!-- ![](../www/drill-5-wxyz.png) -->
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -617,7 +728,7 @@ class D exogenous
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="dddd-hintarea" class="hintarea">dddd</small>
 <form id="dddd-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-1" w="16" name="dddd" hint="Correct! It's in a sharp-cornered box." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x" id="dddd-2" w="23" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y" id="dddd-3" w="87" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z" id="dddd-4" w="7" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-5" w="7" name="dddd" hint="You're wrong here." show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd" id="dddd.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-1" w="14" name="dddd" hint="Correct! It's in a sharp-cornered box." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x" id="dddd-2" w="3" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y" id="dddd-3" w="3" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z" id="dddd-4" w="87" name="dddd" hint="Sorry. A round-cornered box indicates an exogenous quantity." show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-5" w="3" name="dddd" hint="You might think so, but ..." show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd" id="dddd.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -653,7 +764,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="dddd-2-hintarea" class="hintarea">dddd-2</small>
 <form id="dddd-2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="dddd-2-1" w="3" name="dddd-2" hint="Try again!" show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1" id="dddd-2-1" w="14" name="dddd-2" hint="Right! There's only one sharp-cornered box." show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2 " id="dddd-2-2" w="7" name="dddd-2" hint="Incorrect choice." show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3 " id="dddd-2-3" w="32" name="dddd-2" hint="Incorrect." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4 " id="dddd-2-4" w="23" name="dddd-2" hint="Oops!" show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-2" id="dddd-2.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="0" id="dddd-2-1" w="87" name="dddd-2" hint="You're wrong here." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1" id="dddd-2-1" w="41" name="dddd-2" hint="Right! There's only one sharp-cornered box." show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2 " id="dddd-2-2" w="32" name="dddd-2" hint="Not on target." show_hints="TRUE"> 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3 " id="dddd-2-3" w="7" name="dddd-2" hint="Not so!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="4 " id="dddd-2-4" w="19" name="dddd-2" hint="You might think so, but ..." show_hints="TRUE"> 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-2" id="dddd-2.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -689,7 +800,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cell" data-inline="true">
 <span> <small style="color: grey;" id="dddd-3-hintarea" class="hintarea">dddd-3</small>
 <form id="dddd-3-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-3-1" w="14" name="dddd-3" hint="Good! The square box stands for a function with the inputs being indicated by the inward-pointing arrows." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x " id="dddd-3-2" w="87" name="dddd-3" hint="You might think so, but ..." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y " id="dddd-3-3" w="32" name="dddd-3" hint="Wrong." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z " id="dddd-3-4" w="3" name="dddd-3" hint="Try again!" show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-3-5" w="23" name="dddd-3" hint="Incorrect." show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-3" id="dddd-3.null" style="display: none;" w="skipped" checked=""> </span> </span>
+<span> <span> <input type="radio" class="devoirs-mcq" value="w" id="dddd-3-1" w="14" name="dddd-3" hint="Good! The square box stands for a function with the inputs being indicated by the inward-pointing arrows." show_hints="TRUE"> w &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="x " id="dddd-3-2" w="32" name="dddd-3" hint="You're wrong here." show_hints="TRUE"> x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="y " id="dddd-3-3" w="19" name="dddd-3" hint="Incorrect choice." show_hints="TRUE"> y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="z " id="dddd-3-4" w="19" name="dddd-3" hint="Wrong." show_hints="TRUE"> z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="None of them." id="dddd-3-5" w="87" name="dddd-3" hint="Think again." show_hints="TRUE"> None of them. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="dddd-3" id="dddd-3.null" style="display: none;" w="skipped" checked=""> </span> </span>
 </form>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
@@ -722,87 +833,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <p><!-- end of exr-pony-meet-window --></p>
 </div>
-<div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
-<blockquote class="blockquote">
-<p>File: Chap-02/puppy-hang-blanket.qmd</p>
-</blockquote>
-<!--
-id: "puppy-hang-blanket"
-created: "Wed Dec 31 07:20:54 2025"
-attribution: Dave Ruth
-use: "Reading Question Chap 2"
-status: "ready-to-use"
-chapter: 2
-mode: "reading-question"
--->
-<div id="exr-puppy-hang-blanket" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 10</strong></span> For each of the following four dimensions, list at least three different <em>unit</em> names that correspond to that dimension:</p>
-<ol type="i">
-<li>Length (e.g., meter…)</li>
-<li>Time</li>
-<li>Volume</li>
-<li>Mass</li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for phb-RQ2-qlds.');
-      const form = document.getElementById('phb-RQ2-qlds');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('phb-RQ2-qlds').value;
-        localStorage.setItem("phb-RQ2-qlds-contents", todo);
-        console.log("Saving value of phb-RQ2-qlds.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("phb-RQ2-qlds-contents");
-      if (savedValue) {
-        document.getElementById('phb-RQ2-qlds').value = savedValue;
-      }
-})
-</script>
-<textarea id="phb-RQ2-qlds" name="phb-RQ2-qlds" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID phb-RQ2-qlds)"></textarea>
-</div>
-<p><!-- end of exr-puppy-hang-blanket --></p>
-</div>
-<div id="tabset-1-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-11-tab">
-<blockquote class="blockquote">
-<p>File: Chap-02/reptile-beat-window.qmd</p>
-</blockquote>
-<!--
-id: "reptile-beat-window"
-created: "Wed Dec 31 07:15:51 2025"
-attribution: Dave Ruth
-use: "Reading Question Chap 2"
-status: "ready-to-use"
-chapter: 2
-mode: "reading-question"
--->
-<div id="exr-reptile-beat-window" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 11</strong></span> The chapter states that “per” is shorthand for a specific mathematical operation. What is that operation?</p>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for rbw-RQ2-sedd.');
-      const form = document.getElementById('rbw-RQ2-sedd');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('rbw-RQ2-sedd').value;
-        localStorage.setItem("rbw-RQ2-sedd-contents", todo);
-        console.log("Saving value of rbw-RQ2-sedd.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("rbw-RQ2-sedd-contents");
-      if (savedValue) {
-        document.getElementById('rbw-RQ2-sedd').value = savedValue;
-      }
-})
-</script>
-<textarea id="rbw-RQ2-sedd" name="rbw-RQ2-sedd" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID rbw-RQ2-sedd)"></textarea>
-</div>
-<p><!-- end of exr-reptile-beat-window --></p>
-</div>
-<div id="tabset-1-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-12-tab">
+<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
 <blockquote class="blockquote">
 <p>File: Chap-02/seaweed-bend-laundry.qmd Status: sketch</p>
 </blockquote>
@@ -810,16 +841,49 @@ mode: "reading-question"
 id: "seaweed-bend-laundry"
 created: "Thu Aug 28 15:42:19 2025"
 attribution: TBA
-status: "sketch"
+status: "ready-to-use"
 chapter: 2
 mode: "discussion"
+group: discussions
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-seaweed-bend-laundry" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 12</strong></span> EXERCISE: GDP as an operationalization of the size of the economy, unemployment (which has a specific definition and can do odd things like go down when people give up on looking for work), labor-force participation, consumer confidence, market capitalization of a company</p>
+<p><span class="theorem-title"><strong>Exercise 9</strong></span> Many dimensions of the economy are in the news each month: The total size, the employment situation, consumer confidence, the worth of various large companies.</p>
+<p>Using the internet, find out what’s behind these operationalizations of the above dimension:</p>
+<ul>
+<li>GDP as an operationalization of the size of the economy,</li>
+<li>unemployment rate (which has a specific definition and can do odd things like go down when people give up on looking for work)</li>
+<li>labor-force participation</li>
+<li>consumer confidence</li>
+<li>market capitalization of a company</li>
+</ul>
+<script type="text/javascript">
+      //save entered info
+      document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for sbl-econ-ckse.');
+      const form = document.getElementById('sbl-econ-ckse');
+      form.addEventListener("input", function () {
+        var todo = document.getElementById('sbl-econ-ckse').value;
+        localStorage.setItem("sbl-econ-ckse-contents", todo);
+        console.log("Saving value of sbl-econ-ckse.")
+      }, false);
+
+      //on page load, read in the old value
+      const savedValue = localStorage.getItem("sbl-econ-ckse-contents");
+      if (savedValue) {
+        document.getElementById('sbl-econ-ckse').value = savedValue;
+      }
+})
+</script>
+<textarea id="sbl-econ-ckse" name="sbl-econ-ckse" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID sbl-econ-ckse)"></textarea>
 </div>
 <p><!-- end of exr-seaweed-bend-laundry --></p>
 </div>
-<div id="tabset-1-13" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-13-tab">
+<div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
 <blockquote class="blockquote">
 <p>File: Chap-02/seaweed-hang-ring.qmd</p>
 </blockquote>
@@ -832,8 +896,15 @@ status: "ready-to-use"
 chapter: 2
 mode: "reading-question"
 -->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
 <div id="exr-seaweed-hang-ring" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 13</strong></span> The text notes that there is no equivalent English word for the operation of multiplication in units. How are units formed by multiplication typically written or spoken compared to those formed using “per”?</p>
+<p><span class="theorem-title"><strong>Exercise 10</strong></span> We use the word “per” to indicate a unit of measurement that is formed by division. For example, “miles per hour” is a unit of speed formed by dividing distance (miles) by time (hours).</p>
+<p>For units formed by multiplication, we typically write down the units being multiplied with a hyphen between them. Examples: acre-feet (a volume).</p>
+<p>Find three more examples of units formed by multiplication. Hints: labor effort, transportation services, torque, electrical energy, ….</p>
 <script type="text/javascript">
       //save entered info
       document.addEventListener('DOMContentLoaded', function() {

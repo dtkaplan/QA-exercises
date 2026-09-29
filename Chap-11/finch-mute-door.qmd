@@ -1,0 +1,36 @@
+<!--
+id: "finch-mute-door"
+created: "Sun Sep 20 18:53:50 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 11
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-finch-mute-door}
+
+**Example: A modeling dispute**
+
+This was originally intended to be an introduction to the comparison of hypotheses. But it's long winded and tangential to the main discussion. LET'S MODIFY IT TO BE A SPECIFIC NUMERICAL EXAMPLE of likelihood, comparing the likelihoods of two competing hypotheses, one that you can do no better than a fixed probability of enrollment/yield and the other that enrollment/yield can be influenced by factors such as scholarship discounts.
+
+At colleges and universities in the US, a constant concern is how to attract and retain students. Partly this is because educating students is central to the mission of these institutions. Also important, however, is the money brought in through the tuition paid by students and their families. Shortfalls in attracting students lead to budget cuts. 
+
+Many prospective students apply to several or many institutions hoping to be accepted by at least one and preferable many. If accepted by multiple institutions, the student and their family must decide which school to attend.
+
+This situation, familiar to college-bound students, presents a challenge for the institutions. A student who has to choose among multiple offers will decline all but one. Consequently, when a college admits an applicant, they are in some sense admitting a *fraction* of a student. That fraction is the probability that the student will choose that particular college.
+
+To bring in sufficient tuition money, a college tries to operate at or close to full capacity. Consider a hypothetical college that has space for 500 first-year students. How many students should the college admit to achieve this goal? Given the possibility that an admitted applicant will not enroll, the number to be admitted has to be higher than 500. Figuring out how much higher is critical. Too low and the college faces budget problems. Too high and the college will be operating above capacity, causing all manner of problems.
+
+College administrators manage the situation by estimating the probability that an admitted applicant will actually enroll. For some decades, when college's faced only slow changes in demographic and economic conditions, the previous years' fraction accepting was a reliable guide for predicting future enrollment behavior.
+
+For all sorts of reasons, this is no longer the case. Part of this is the declining numbers in the college-age population. There is also the increasing cost of tuition, the availability of scholarships, competition from other schools, and even increases in the number of applications submitted by a typical student, among other factors. Consequently, colleges are interested in developing better models to predict enrollment behavior.
+
+So many things go into a prospective student's choice that it might seem impossible to model. The modeler is not a mind reader. However, a successful model does not always need to mimic the real-world process. Instead of examining the psychological factors behind a student's decision, the model merely hypothesized that many students and their families would prefer a lower-cost college, all else being equal. That hypothesis might seem obvious, but some college officials worked under another hypothesis: that each family has its own "affordability" threshold and that, so long as a scholarship discount reached that threshold, any additional discount would not influence decision-making.  
+
+
+:::
+ <!-- end of exr-finch-mute-door -->

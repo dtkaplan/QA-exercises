@@ -1,0 +1,44 @@
+<!--
+id: "reptile-sell-pencil"
+created: "Sun Sep 27 14:27:15 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 12
+topic: "Car safety"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-reptile-sell-pencil}
+
+
+MAKE THIS INTO A SIMULATION of many cars based on a simulated assumption of an accident rate of 2 accidents per million miles. How much data is needed to estimate the rate in a way that would support a claim that self-driving cars are safer.
+(REMEMBER, this is simulated data. )
+
+
+The experiment starts. After about a year, we have collected some data. (See `r xf("tbl-car-crash-table")`.) 
+
+::: {#tbl-car-crash-table}
+car $i$   | Status    | Mileage
+------|-----------|--------:
+1     | on road   | 85,300
+2     | on road   | 65,200
+3     | accident  | 13,495
+4     | on road   | 131,200
+5     | on road   | 96,000
+6     | accident  | 54,682
+7     | accident  | 105,200
+8     | on road   | 53,900
+9     | accident  | 86,000
+10    | on road   | 94,300
+
+Data from 10 cars about a year into the experiment. These are made-up data, for illustration purposes only.
+:::
+
+
+
+:::
+ <!-- end of exr-reptile-sell-pencil -->

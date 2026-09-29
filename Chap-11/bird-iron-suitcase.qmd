@@ -1,0 +1,101 @@
+<!--
+id: "bird-iron-suitcase"
+created: "Tue Sep 22 09:56:28 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 11
+topic: "relative merits of normal vs exponential distributions"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+TURN THIS INTO A DISCUSSION ABOUT THE RELATIVE MERITS OF USING the
+normal versus the exponential in modeling times between random events.
+
+::: {#exr-bird-iron-suitcase}
+
+```{r}
+#| label: fig-exp-20-model
+#| echo: false
+#| fig-cap: "The likelihood of an interval being observed under the exponential hypothesis with a rate of 0.05 per year."
+slice_plot(dexp(year-1990, rate = 0.05) ~ year,
+domain(year = 1990:2050)) |>
+gf_labs(x = "Year", y = "Relative probability") |>
+  gf_theme(theme_minimal(base_size = 14)) |>
+  gf_vline(xintercept = 2027, color = "magenta")
+```
+```
+
+Take a moment to look at the two models in `r xf("fig-two-interval-models")`. Which do you think better captures the as-yet-unknown timing of the next event?
+
+The normal distribution has one nice property: the probability of the event happening increases each year as we approach the 20 year interval since the last event, reaching a peak in 2010. But there is a flip side to this nice property: the probability starts to decrease year by year after the peak. There's something wrong with this. Suppose, for the sake of illustration, that we have reached 2027 without the event occurring. There is now a low probability of the event happening in 2027 or thereafter. This sounds almost as if the event get cancelled if it doesn't happen more or less on time.
+
+The normal distribution reflected our knowledge as of 1990, when the last even occurred. By 2027, however, our knowledge has changed; we know that the interval from 1990 to the next event will be at least 37 years. How are we to fold this new knowledge into the model?
+
+On way would be take the new knowledge and reset to zero the relative probability of the event happening before 2027. The updated relative probability function looks like a ski jump with a start in 2027 and heading down thereafter. Every subsequent year without an event moves the start of the ski jump further along the timeline, but it still looks like a ski jump.
+
+The exponential model has a special property. Looking forward from 1990 it looks like a ski jump. And whatever year we reach without an event, the remaining time to the next event still looks like a ski jump. In fact, the shape of the function from 2027 onward is identical to the original shape. Whereas the normal distribution model has a *memory* of how long it's been since the last event, the exponential model is *memoryless*.
+
+Gamblers often fall for a fallacy. They might believe that if an winning event hasn't occurred for a while, it is "due" to happen soon. The exponential model gives a more realistic depiction; the probability of a winning event in the next interval remains constant, no matter how long has been the drought since the last win.
+
+Thus, we have arrived at a hypothesis about the timing of the next event.
+
+Hypothesis: 0.05
+: The data come from an *exponential distribution* with a rate parameter of 0.05 per year (corresponding to an average of 20 years between events).
+
+Is there any other hypothesis that we should entertain? Actually, there is an infinity of hypotheses we could put in competition with the 0.05 hypothesis: we can have a 0.01 hypothesis, a 0.3239 hypothesis, and so on, covering all possible values for the rate parameter of the exponential distribution.
+
+How to choose which is the *best* hypothesis? We can look for the specific hypothesis which is most consistent with what we know from the observed data: intervals 
+
+::: {.column-page-inset-right}
+```{r}
+#| label: fig-normal-vs-exp
+#| echo: false
+#| layout-ncol: 2
+#| fig-cap: "Two hypotheses competing to account for the observed inter-event intervals of 17, 23, and 31 years. The length of the black line gives the probability for each event, according to the hypothesis."
+#| fig-cap-location: bottom
+#| fig-subcap:
+#| - "Exponential distribution with rate of 0.04 per year."
+#| - "Normal distribution with mean 25 years and standard deviation 10 years."
+Intervals <- tibble::tibble(
+  delta = c(17, 23, 31), 
+  exp_prob = dexp(delta, rate = 0.04),
+  norm_prob = dnorm(delta, mean = 25, sd=10))
+slice_plot(dexp(delta, rate = 0.04) ~ delta, 
+           domain(delta = 1:100),
+           color = "blue") |>
+  gf_segment(0 + exp_prob ~ delta + delta, data = Intervals,
+             color = "black") |>
+  gf_point(exp_prob ~ delta, color = "black",
+           data = Intervals) |>
+  gf_refine(scale_x_continuous(breaks = c(0, 17, 23, 31, 50, 75, 100))) |>
+  gf_theme(theme_minimal(base_size = 14))
+  
+slice_plot(dnorm(delta, mean = 25, sd=10) ~ delta,
+           domain(delta = 1:100),
+           color = "magenta")  |> 
+  gf_segment(0 + norm_prob ~ delta + delta, data = Intervals,
+             color = "black") |>
+  gf_point(norm_prob ~ delta, color = "black",
+           data = Intervals) |>
+  gf_refine(scale_x_continuous(breaks = c(0, 17, 23, 31, 50, 75, 100)))
+
+```
+:::
+
+
+
+Note that the two hypotheses tell different stories about the possibility of future events. For instance, the exponential-distribution hypothesis gives a fairly large probability that a future inter-event duration will be less than 10 years, much larger than given by the probability under the normal-distribution hypothesis. Likewise, the normal distribution indicates that inter-event intervals longer than 50 years are rare, whereas the exponential distribution gives them a substantial probability. 
+
+The data seem to favor the normal-distribution hypothesis. For example, the data contains no intervals longer than 31 years or shorter than 17 years. The likelihood calculation quantifies the vague "seem to favor." Now to compute the likelihood for each hypothesis *given* the observed data. To find the likelihood of a hypothesis, compute the product of the relative probabilities that the hypothesis assigns to each individual observed event. For the *exponential* hypothesis, @fig-normal-vs-exp (a) shows that those relative probabilities are approximately 0.020, 0.016, and 0.012. The likelihood is the product of these individual probabilities:
+$$0.020 \times 0.016 \times 0.012 = 0.00000374\ .$$
+
+For the normal distribution, shown in @fig-normal-vs-exp (b), the relative probabilities are 0.029, 0.039, and 0.033. Correspondingly, the likelihood for the normal distribution is
+$$0.029 \times 0.039 \times 0.033 = 0.0000377\ .$$
+
+The normal distribution wins! Its likelihood value is about 10 times higher than that of the exponential distribution. In the terminology of statistics, the `r xf_definition("likelihood ratio")` is 0.0000377 / 0.00000374 = 10.1. 
+:::
+ <!-- end of exr-bird-iron-suitcase -->

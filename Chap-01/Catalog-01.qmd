@@ -151,14 +151,6 @@ title: "Chapter 01 Catalog"
 
 {{< include camel-leave-kitchen.qmd >}}
 
-## cheetah-cost-tv
-
-
-> File: Chap-01/cheetah-cost-tv.qmd
-> Status: sketch
-
-
-{{< include cheetah-cost-tv.qmd >}}
 
 ## deer-break-bowl
 

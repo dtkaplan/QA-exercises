@@ -1,0 +1,152 @@
+<!--
+id: "arm-build-bolt"
+created: "Sun Sep 27 11:14:29 2026"
+attribution: DTK
+mode: discussion
+status: in-process
+group: x_drafts
+chapter: 12
+topic: "Ballistic missile defense"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-arm-build-bolt}
+
+REVAMP THIS AS AN ARGUMENT FOR USING BAYES, the military should be using a probability distribution for the success rate, not just the results of a handful of recent tests. Allow the Pentagon a reasonable claim that the new systems are different from the old ones and that the old ones should not be taken into consideration. But apply Bayes theorem to the new data.
+
+World events in 2026, especially in Ukraine and the Middle East, highlighted the important role of defenses against drones, cruise missiles, and ballistic missiles. The reliability of such defenses is a major factor in making informed policy decisions. 
+
+NOW HIGHLIGHT THE ISSUE WITH RESPECT TO NUCLEAR WEAPONS. OUTLINE THE PLOT LINE OF the movie "House of Dynamite" with a global nuclear war starting from the failure to intercept a single incoming ICBM. "House of Dynamite" was intended to be a highly realitic portrayal of a possible scenario, corresponding to a reliability of individual interceptors of about 60%, so a roughly 16% chance of failure for two interceptors. A probability of 16% makes the failure unlikely, but hardly unrealistic. The Pentagon argued ....
+
+
+that  defenses against intercontinental ballistic missiles (ICBM), an article in *The Atlantic* [Tom Nichols, October 27, 2025, "The Military’s Missile-Defense System Cannot Be as Good as It Says" *The Atlantic*]{.column-margin} reported that an office in the Pentagon claims that anti-ballistic missiles "have displayed a 100% accuracy rate in testing for more than a decade." This statement was offered in response to a well-founded claim in the popular movie "House of Dynamite" that the accuracy rate is about 60%. The Pentagon based its claim on the results of the last four tests, only two of which involved an actual ICBM. The movie's claim considered all 20 tests conducted since 1999. 
+
+Who is right? In the Bayesian framework, we do not demand right-or-wrong answers. Instead, we frame a prior, compute the likelihood function from the new data, and multiply the prior by the likelihood function to obtain the posterior.
+
+We can form a prior based on the 16 tests that preceded the four most recent tests. Seven of those 16 tests were successful, a success rate of about 44%. Thus, a sensible prior for interpreting the last four tests should center on 44%. 
+
+To find that sensible prior, go back to the time *before* the first 16 tests.  Lacking tests, we have no information. However, "no information" reasonably corresponds to a prior that assigns equal weight to every reliability value between 0% and 100%. In other words, the original prior, before the 16 tests, is a uniform distribution. 
+
+The prior for the last four tests of the 20 tests is the *posterior* after the first 16. Calculating that posterior means multiplying, for each of the 16 tests, by the likelihood corresponding to a success or failure. The success and failure likelihoods have simple forms.
+
+
+::: {.column-page-inset-right}
+```{r}
+#| label: fig-binary-likelihood 
+#| echo: false
+#| warning: false
+#| layout-ncol: 2
+#| fig-cap: "Likelihood functions for the outcome of a yes/no test."
+#| fig-cap-location: bottom
+#| fig-subcap:
+#| - A successful test.
+#| - An unsuccessful test.
+slice_plot(x ~ x, domain(x = 0:1)) |>
+  gf_labs(y = "Likelihood", x = "Hypothesized reliability") |>
+  gf_refine(scale_x_continuous(breaks = seq(0,1, by = 0.2), labels = c("0", "20%", "40%", "60%", "80%", "100%")))
+
+slice_plot(1-x ~ x, domain(x = 0:1)) |>
+  gf_labs(y = "", x = "Hypothesized reliability") |>
+  gf_refine(scale_x_continuous(breaks = seq(0,1, by = 0.2), labels = c("0", "20%", "40%", "60%", "80%", "100%")))
+```
+:::
+
+
+
+With the likelihood functions for each of the first 16 tests applied, we can calculate a reasonable prior to use when analyzing the last four tests.
+
+
+
+We start with a prior for our beliefs before performing any tests. It may sound odd to calculate a prior by assuming a prior. But remember that the purpose of `r xf_definition("Bayesian multiplication")` is to update a prior to a posterior. That posterior then becomes a new prior for analyzing new data. @fig-first-16-tests shows snapshots of the posteriors at several points in the 16 tests. 
+
+::: {.column-page-inset-right}
+```{r}
+#| label: fig-first-16-tests
+#| echo: false
+#| warning: false
+#| layout-ncol: 3
+#| fig-cap: "The initial prior for the success rate and posteriors calculated at several points in the string of 16 tests (which had 7 successes)."
+#| fig-cap-location: bottom
+#| fig-subcap:
+#| - "No tests yet."
+#| - "First test: Success!"
+#| - "After second test: 1 success, 1 failure"
+#| - "After 8th test: 3 successes"
+#| - "After 10th test: 4 successes"
+#| - "After 16th test: 7 successes"
+posterior <- function(successes, failures) {
+  if (successes == 0) {
+    if (failures == 0) function(x) {1}
+    else function(x) {function(x) (1-x)^failures}
+  } else {
+    if (failures == 0) function(x) {x^successes}
+    else function(x) (x^successes) * ((1-x)^failures)
+  }
+}
+draw_posterior <- function(successes, failures) {
+  f <- posterior(successes, failures)
+  slice_plot(
+    f(x) ~ x, domain(x = 0:1)) |>
+  gf_labs(y = "", x = "Reliability") |>
+  gf_refine(
+    scale_x_continuous(breaks = seq(0,1, by = 0.2), 
+                       labels = c("0", "20%", "40%", "60%", "80%", "100%"))) |>
+    gf_lims(y = c(0, NA)) 
+}
+## Initial prior, no data
+draw_posterior(0, 0) 
+
+draw_posterior(1, 0) 
+
+draw_posterior(1, 1) 
+
+draw_posterior(3, 5) 
+
+draw_posterior(4, 6) 
+
+draw_posterior(7, 9) 
+```
+:::
+
+We set the initial prior to be flat: all levels of reliability are equally probable. Thereafter, each new test is the posterior from the previous test multiplied by one of @fig-binary-likelihood (a) or (b), depending on whether that test was a success or failure.
+
+On to the next four tests, which were all successful. What kind of reliability claim does this support? @fig-last-four-tests shows some reasonable possibilities. 
+
+Using the posterior from the first 16 tests as the prior, the next 4 successful tests lead us to the posterior in @fig-last-four-tests(d).
+
+It wouldn't be outrageous to argue for a different prior. Perhaps the Pentagon insists, "This new technology is completely different and much better from the old stuff used in the earlier 16 tests. Let's start fresh with a flat prior." This produces the posterior in @fig-last-four-tests(e).
+
+Or perhaps the Pentagon is more aggressive. "The new stuff is really good. Simulations show it working all the time. We propose the prior in @fig-last-four-tests(e)." The resulting posterior is shown in @fig-last-four-tests(f).
+
+::: {.column-page-inset-right}
+```{r}
+#| label: fig-last-four-tests
+#| echo: false
+#| warning: false
+#| layout-ncol: 3
+#| fig-cap: "Posteriors after the last 4 ICBM successful interceptor tests. Three different priors are considered."
+#| fig-cap-location: bottom
+#| fig-subcap:
+#| - Prior is posterior from first 16 tests.
+#| - Flat prior.
+#| - Enthusiastic prior.
+#| - Posterior with prior (a)
+#| - Posterior with prior (b)
+#| - Posterior with prior (c)
+draw_posterior(7, 9) 
+draw_posterior(0,0) 
+draw_posterior(2, 0) 
+draw_posterior(11, 9) 
+draw_posterior(4,0) 
+draw_posterior(6, 0) 
+```
+:::
+
+
+It can be unsettling at first to express the success rate as a distribution rather than a single number. A single number would sound more authoritative. But such authority is unjustified: the data cannot support an isolated claim of a success rate. The novelist [F. Scott Fitzgerald](https://www.special-dictionary.com/quotes/authors/f/f._scott_fitzgerald/the_test_of_a_first-rate_intelligence_is_the_ability_to_hold_two_opposed_ideas_i.htm) wrote a line that reflects the genuine uncertainty: "The test of a first-rate intelligence is the ability to hold ... opposed ideas in the mind at the same time, and still retain the ability to function." Even the most favorable prior (@fig-last-four-tests(c)) gives some credibility to the belief that the reliability is around 60%. The posterior from that prior (@fig-last-four-tests(f)) continues to assign a probability of one-fourth to the possibility that the reliability is 80% or lower.
+
+The Pentagon's claim of 100% reliability does indeed find some support from the posterior distribution. However, "some support" does not constitute effective planning for dealing with the possibility of an attack. [The reliability of survival in one round of Russian Roulette is 80%. It is wild to count on even one round, let alone to contemplate survival after several rounds.]{.column-margin}
+:::
+ <!-- end of exr-arm-build-bolt -->
