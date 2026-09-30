@@ -458,5 +458,19 @@
     "title": "App-113",
     "section": "",
     "text": "This is merely a placeholder, to help me resolve where the links should go to the home-brew apps."
+  },
+  {
+    "objectID": "Apps/App-rotations.html",
+    "href": "Apps/App-rotations.html",
+    "title": "App-rotations",
+    "section": "",
+    "text": "Figure 14.7\nTwo vectors: blue and gray. You can position the cursor over the scene and press/drag to rotate the vectors in three dimensions.\n\n\n\n\n\n\n\n\n\nFigure 14.8\nA two-dimensional subspace of a three-dimensional space. The black vector is not in the subspace.\n\n\n\n\n\n\n\n\n\nFigure 14.9\nThe black vector consists of a part entirely within the subspace and a part entirely outside the subspace.\n\n\n\n\n\n\n\n\n\nFigure 14.10\nRepresenting the penguin data as points in space."
+  },
+  {
+    "objectID": "Apps/App-rotations.html#figure-14.7",
+    "href": "Apps/App-rotations.html#figure-14.7",
+    "title": "App-rotations",
+    "section": "",
+    "text": "Two vectors: blue and gray. You can position the cursor over the scene and press/drag to rotate the vectors in three dimensions.\n\n\nglX \n  2 \n\n\n\n\n\n\n\n\n\n\nRepresenting the penguin data as points in space.\n\n\nglX \n  4"
   }
 ]

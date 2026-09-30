@@ -1,0 +1,99 @@
+---
+title: "App-rotations"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+library(rgl)
+setupKnitr(autoprint = TRUE) 
+# knitr::knit_hooks$set(webgl = hook_webgl)
+# This is recommended by the documentation for automatic rendering:
+source("../../../QuantitativeArgumentation/_software/rgl.R")
+```
+
+
+### `r xf("fig-blue-gray")`
+
+Two vectors: blue and gray. You can position the cursor over the scene and press/drag to rotate the vectors in three dimensions.
+
+```{r dss, echo=FALSE, results="hide", eval=knitr::is_html_output()}
+open3d()
+rgl_vscene(cbind(rbind(.7, .4, 0), rbind(-0.15, -0.4, 0)),
+           color = c("blue", "gray"))
+close3d()
+```
+
+-----
+
+### `r xf("fig-decomp-1")`
+
+A two-dimensional subspace of a three-dimensional space. The black vector is not in the subspace.
+
+
+```{r duws, results="hide", echo=FALSE, eval=knitr::is_html_output()}
+open3d()
+M <- cbind(rbind(0.2, 0.2, 0.3), rbind(-0.15, -0.4, -0.1))
+black <- rbind(-.5, -.6, .7)
+fitted <- black %onto% M
+resid <- black %perp% M
+rgl_vscene(cbind(M, black),
+           color = c("green","green", "black", "darkgray", "red"), alpha = 1)
+close3d()
+```
+
+-----
+
+### `r xf("fig-decomp-2")`
+
+The black vector consists of a part entirely *within* the subspace and a part entirely outside the subspace. 
+
+```{r duws2, results="hide", echo=FALSE, eval=knitr::is_html_output()}
+open3d()
+M <- cbind(rbind(0.2, 0.2, 0.3), rbind(-0.15, -0.4, -0.1))
+black <- rbind(-.5, -.6, .7)
+fitted <- black %onto% M
+resid <- black %perp% M
+rgl_vscene(cbind(M, black, fitted, resid),
+           color = c("green","wheat", "black", "darkgray", "red"), alpha = 1)
+close3d()
+```
+
+
+-----
+
+### `r xf("fig-penguins-3d")`
+
+Representing the penguin data as points in space.
+  
+```{r l3sd, results="hide"}
+#| echo: false
+  
+library(palmerpenguins)
+  # open3d(userMatrix = VP)
+open3d()
+  
+x = penguins$bill_length_mm
+y = penguins$body_mass_g # bill_depth_mm
+z = penguins$flipper_length_mm
+x = (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE)
+y = (y - mean(y, na.rm = TRUE)) / sd(y, na.rm = TRUE)
+z = (z - mean(z, na.rm = TRUE)) / sd(z, na.rm = TRUE)
+species <- penguins$species
+color = ifelse(species == "Adelie", "blue", 
+                 ifelse(species == "Chinstrap", "green", "red"))
+mod <- lm(z ~ x + y)
+coefs <- coef(mod)
+points3d(x = x, y = y, z = z, col = color)
+planes3d(coefs["x"], coefs["y"], -1, coefs["(Intercept)"], alpha = 0.25)
+view3d(40, 41, fov=0, zoom = 0.5 )
+zoom<-par3d()$zoom
+userMatrix<-par3d()$userMatrix
+windowRect<-par3d()$windowRect
+  
+close3d() # prevents from being drawn twice
+```
+  
+  
+
+
+    

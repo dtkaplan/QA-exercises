@@ -1,0 +1,19 @@
+<!--
+id: "titmouse-pitch-hamper"
+created: "Tue Sep 29 13:51:50 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-titmouse-pitch-hamper}
+Then on to population and the inflow/outflow. FOCUS on the UNITS, which will be babies per year or deaths per year or net immigration per year.
+
+Momentum and force. Candidates gaining or losing momentum due to supporting or opposing forces. Candidate support over time. Rate of change is the amount of supporting or opposing force. It's really a combination of both, with the net force accounting for how the candidate is doing.
+:::
+ <!-- end of exr-titmouse-pitch-hamper -->
