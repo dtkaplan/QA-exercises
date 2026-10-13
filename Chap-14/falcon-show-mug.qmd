@@ -1,0 +1,74 @@
+<!--
+id: "falcon-show-mug"
+created: "Wed Oct  7 08:54:35 2026"
+attribution: DTK
+mode: "computing skills"
+status: sketch
+group: x_drafts
+chapter: 14
+topic: instantaneous
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-falcon-show-mug}
+We can experiment with this idea using the computer. Since we are going to be trying out different proposals for small, it helps to give a name to the increment in input being used. We will call it `h`. In the following chunk, we have set `h <- 0.2`, matching the situation shown in @fig-f-of-t. We will calculate the rate of change in two different ways: one using the value of `h`, the other using an smaller value, say, `h/10`. In both cases, we calculate the change in the output divided by the change in the input.
+
+::: {.content-include unless-format="html"}
+```{webr}
+#| context: setup
+#| autorun: true
+#| echo: false
+raw <- mosaicCalc::doodle_fun(~ t, seed = 937)
+f <- makeFun((raw((t-2.5)*2 ) + 10)/2 ~ t)
+```
+
+```{webr}
+h <- 0.2
+(f(3 + h) - f(3)) / (h)  # "small"
+(f(3 + h/10) - f(3)) / (h/10) # smaller
+```
+:::
+
+::: {.content-include unless-format="pdf"}
+The following R statements calculate the rate of change of the function $f(t)$ for input $t=3$.
+
+
+```{r}
+#| label: ch14-r-1dcb1f93
+#| echo: false
+raw <- mosaicCalc::doodle_fun(~ t, seed = 937)
+f <- makeFun((raw((t-2.5)*2 ) + 10)/2 ~ t)
+```
+
+```{r}
+#| label: ch14-r-ca3bba41
+h <- 0.2
+(f(3 + h) - f(3)) / (h)  # "small"
+(f(3 + h/10) - f(3)) / (h/10) # smaller
+```
+:::
+
+When `h <- 0.2`, the "small" calculation and the "smaller" calculation give discernibly different results. This means that 0.2 is *not* a small value for `h`, or at least is not small enough to meet the second criterion.
+
+::: {.content-include unless-format="html"}
+We can search for "small enough" `h`. Run the above chunk with a smaller starting `h`, say `h <- 0.01`. If that's not small enough, try even smaller: `h <- 0.001`. Continue, as needed, until the "small" and "smaller" rates of change are not discernibly different.
+:::
+
+::: {.content-include unless-format="pdf"}
+We can search for "small enough" `h`. Let's try $h = 0.001$.
+
+```{r}
+#| label: ch14-r-a0703d37
+# Try a smaller h
+h <- 0.001
+(f(3 + h) - f(3)) / (h)  # even smaller
+(f(3 + h/10) - f(3)) / (h/10) # smaller still
+```
+
+Now the rates of change for $h=0.001$ and $h = 0.0001$ are virtually the same. Using even smaller values for $h$ would give even closer results.  
+:::
+
+:::
+ <!-- end of exr-falcon-show-mug -->

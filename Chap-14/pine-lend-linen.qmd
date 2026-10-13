@@ -1,0 +1,29 @@
+<!--
+id: "pine-lend-linen"
+created: "Tue Oct  6 07:46:43 2026"
+attribution: DTK
+mode: discussion
+status: sketch
+group: x_drafts
+chapter: 14
+topic: "Grandmother analogy"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-pine-lend-linen}
+Here is the analogy made explicit. $f(t)$ is the mother function. The child function is a new function called the derivative of $f(t)$ with respect to $t$. To make the notation more concise, we'll give a name to the derivative that reminds us of who the mother is. For a mother function $f(t)$, we will write the derivative function as $\partial_t f(t)$. The new notation, $\partial_t$ can be pronounced "the derivative of _____ with respect to $t$." When we write $\partial_t f(t)$, we are filling in the blank with the name of the mother function.
+
+Family member | Math name | Formula
+----|----|-----------
+Mother        | function  | $f(t)$
+  |  |
+Child         | derivative | $\partial_t f(t) \equiv \frac{f(t+h) - f(t)}{h}$
+  |  |
+Grandchild    | second derivative | $\partial f_{tt}(t) \equiv \frac{\partial_t f(t + h) - \partial_t f(t)}{h^2}$
+
+Continuing with the generational analogy ... although $\partial_t f(t)$ is the child of $f(t)$, such children can also have their own children. The notation we use for this is $\partial_{tt}$, which can be pronounced the "child of the child of _______ ," or more simply, the "grandchild of ______ ."
+When we write $\partial_{tt} f(t)$, we are filling in the blanks in the previous sentence. As you might expect, words like "child" and "grandchild" are not used when talking about derivatives. Instead, we say $\partial_t f(t)$ is the `r xf_definition("first derivative")` of $f(t)$, and $\partial_{tt} f(t)$ is the `r xf_definition("second derivative")`. And just as human families span many generations, there are also "third" and "fourth" and higher derivatives: great-grandchild and great-great grandchild and so in into progeny.
+:::
+ <!-- end of exr-pine-lend-linen -->

@@ -1,0 +1,46 @@
+---
+title: "My Interactive Serverless R Document"
+format:
+  html:
+    embed-resources: false
+engine: knitr
+filters:
+  - ../_extensions/quarto-ext/shinylive/shinylive.lua
+webr:
+  packages:
+    - ggplot2
+    - dplyr
+    - mosaicCalc
+---
+
+
+Modifying the file just a little. And a little more.
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 600
+
+library(shiny)
+
+ui <- fluidPage(
+  selectInput(
+    "SIRinitial", 
+    "Initial number of cases",
+    choices = c(0,1,2,5,10,25,100,500,1000,5000,10000, 50000),
+    selected = 1),
+  sliderInput("SIRisolation", "Isolation (%)", min = 0, max = 50,
+              value = 0, step = 2),
+  sliderInput("obs", "Number of observations:", min = 10, max = 500, value = 100),
+  sliderInput("SIRsocial", "Social distance (ft)", min=3, max=50,
+              value = 5, step = 2),
+  plotOutput("distPlot")
+)
+
+server <- function(input, output) {
+  output$distPlot <- renderPlot({
+    hist(rnorm(input$obs), col = 'darkgray', border = 'white')
+  })
+}
+
+shinyApp(ui = ui, server = server)
+```

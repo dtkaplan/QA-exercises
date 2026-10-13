@@ -1,7 +1,7 @@
 <!--
 id: "seaweed-bend-laundry"
 created: "Thu Aug 28 15:42:19 2025"
-attribution: TBA
+attribution: DTK
 status: "ready-to-use"
 chapter: 2
 mode: "discussion"

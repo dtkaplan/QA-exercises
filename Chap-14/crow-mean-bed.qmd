@@ -1,0 +1,39 @@
+<!--
+id: "crow-mean-bed"
+created: "Wed Oct  7 08:20:49 2026"
+attribution: DTK
+mode: "computer skills"
+status: sketch
+group: x_drafts
+chapter: 14
+topic: "computing derivatives"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-crow-mean-bed}
+Using computer notation, show how to set up a function that computes the finite-difference rate of change of a function. 
+
+```r
+df <- function(f, x, h = 1e-5) {   
+  (f(x + h) - f(x)) / h
+}   
+
+# Now have it return a function
+deriv <- function(f, h = 1e-5) {
+  function(x) {
+    df(f, x, h)
+  }
+}
+
+# Show how to use these two different forms.
+
+```
+
+
+Have students explore it at different step sizes. (Maybe ask them to look for regions where the function is approximately flat.)
+
+THAT RAISES THE QUESTION OF WHAT APPROXIMATELY FLAT MEANS. The second derivative is very small. WITH RESPECT TO WHAT?
+:::
+ <!-- end of exr-crow-mean-bed -->

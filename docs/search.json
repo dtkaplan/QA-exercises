@@ -472,5 +472,26 @@
     "title": "App-rotations",
     "section": "",
     "text": "Two vectors: blue and gray. You can position the cursor over the scene and press/drag to rotate the vectors in three dimensions.\n\n\nglX \n  2 \n\n\n\n\n\n\n\n\n\n\nRepresenting the penguin data as points in space.\n\n\nglX \n  4"
+  },
+  {
+    "objectID": "Apps/Shiny.html",
+    "href": "Apps/Shiny.html",
+    "title": "Simulating an epidemic",
+    "section": "",
+    "text": "The SIR model briefly described in Chapter 1 of Quantitative Argumentation, and followed up in Chapter 13 is implemented here. You can set the parameters as described in the text and observe the consequences in the graphic.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 600\n\nlibrary(shiny)\nlibrary(mosaicCalc)\nlibrary(tibble)\nlibrary(ggplot2)\nlibrary(munsell)\n\nui &lt;- fluidPage(\n  selectInput(\n    \"SIRinitial\",  \n    \"Initial number of cases\",\n    choices = c(0,1,2,5,10,25,100,500,1000,5000,10000, 50000),\n    selected = 1),\n  sliderInput(\"SIRisolation\", \"Isolation (%)\", min = 0, max = 50,\n              value = 0, step = 2),\n  sliderInput(\"SIRsocial\", \"Social distance (ft)\", min=3, max=50,\n              value = 5, step = 2),\n  plotOutput(\"SIRplot\")\n)\n\nrun_SIR_model &lt;- function(isolation, initial, social) {\n  SIR &lt;- makeODE(dS~ -a*S*I, dI ~ a*S*I - b*I, \n                 a=0.0003/social, b=0.6*80/(100-isolation), \n                 S=100000, I=initial)\n  \n  Traj &lt;- suppressMessages(integrateODE(SIR, domain(t=0:50)))\n  Points &lt;- tibble::tibble(\n    days = seq(0, 50, by = 0.1),\n    infectives = Traj$I(days/2)/1000,\n    susceptibles = Traj$S(days/2)/1000\n  ) \n  plot(susceptibles ~ days, data = Points, type = \"l\", \n       ylim = c(0,100),\n       ylab = \"Number of people (thousands)\",\n       xlab = \"Time since initial cases (days)\"\n  )\n  lines(Points$days, Points$infectives, col = \"red\")\n  \n  # ggplot(Points, aes(x = days, y=susceptibles)) +\n  #   geom_line()\n}\n\n\n\nserver &lt;- function(input, output) {\n  output$SIRplot &lt;- renderPlot({\n  run_SIR_model(\n    input$SIRisolation, \n    as.numeric(input$SIRinitial), \n    input$SIRsocial)\n})\n}\n\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "Chap-02/oak-find-dish.html",
+    "href": "Chap-02/oak-find-dish.html",
+    "title": "Quantitative Argumentation",
+    "section": "",
+    "text": "{&lt; include ../exercise-header.qmd &gt;}\n\nExercise 1 Talk about acyclic graphs for systems and raise the question of cyclic graphs."
+  },
+  {
+    "objectID": "Apps/App-SIR.html",
+    "href": "Apps/App-SIR.html",
+    "title": "Simulating an epidemic",
+    "section": "",
+    "text": "COMPILE WITH quarto preview Apps/App-SIR.qmd\nThe SIR model briefly described in Chapter 1 of Quantitative Argumentation, and followed up in Chapter 13 is implemented here. You can set the parameters as described in the text and observe the consequences in the graphic.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 600\n\nlibrary(shiny)\nlibrary(mosaicCalc)\nlibrary(tibble)\nlibrary(ggplot2)\nlibrary(munsell)\n\nui &lt;- fluidPage(\n  selectInput(\n    \"SIRinitial\",  \n    \"Initial number of cases\",\n    choices = c(0,1,2,5,10,25,100,500,1000,5000,10000, 50000),\n    selected = 1),\n  sliderInput(\"SIRisolation\", \"Isolation (%)\", min = 0, max = 50,\n              value = 0, step = 2),\n  sliderInput(\"SIRsocial\", \"Social distance (ft)\", min=3, max=50,\n              value = 5, step = 2),\n  plotOutput(\"SIRplot\")\n)\n\nrun_SIR_model &lt;- function(isolation, initial, social) {\n  SIR &lt;- makeODE(dS~ -a*S*I, dI ~ a*S*I - b*I, \n                 a=0.0003/social, b=0.6*80/(100-isolation), \n                 S=100000, I=initial)\n  \n  Traj &lt;- suppressMessages(integrateODE(SIR, domain(t=0:50)))\n  Points &lt;- tibble::tibble(\n    days = seq(0, 50, by = 0.1),\n    infectives = Traj$I(days/2)/1000,\n    susceptibles = Traj$S(days/2)/1000\n  ) \n  plot(susceptibles ~ days, data = Points, type = \"l\", \n       ylim = c(0,100),\n       ylab = \"Number of people (thousands)\",\n       xlab = \"Time since initial cases (days)\"\n  )\n  lines(Points$days, Points$infectives, col = \"red\")\n  \n  # ggplot(Points, aes(x = days, y=susceptibles)) +\n  #   geom_line()\n}\n\n\n\nserver &lt;- function(input, output) {\n  output$SIRplot &lt;- renderPlot({\n  run_SIR_model(\n    input$SIRisolation, \n    as.numeric(input$SIRinitial), \n    input$SIRsocial)\n})\n}\n\nshinyApp(ui = ui, server = server)"
   }
 ]

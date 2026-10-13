@@ -1,10 +1,11 @@
 <!--
 id: "kitten-bend-door"
 created: "Sat Nov 29 08:37:10 2025"
-attribution: TBA
+attribution: DTK
 status: "draft"
 chapter: 2
 mode: "outline"
+topic: "Mass vs Weight"
 -->
 
 {{< include ../exercise-header.qmd >}}

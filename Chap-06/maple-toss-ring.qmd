@@ -1,0 +1,42 @@
+<!--
+id: "maple-toss-ring"
+created: "Thu Oct  1 13:10:29 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 6
+topic: "cyclic diagrams"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-maple-toss-ring}
+The influence diagrams in `r xf("sec-functions")` all had connections leading from one node to another, but in no case would following the connections bring you back in a loop to an earlier node.
+
+To illustrate such a cycle, consider this *cyclic* influence diagram:
+
+```{mermaid}
+graph LR
+  A (A)
+  B (B)
+  C (C)
+  A --> B
+  B --> C
+  C --> A
+  
+{{< include mermaid-classes.txt >}}
+```
+
+In such a system, the output from each node depends, indirectly, on itself. In order to figure out the value of node A, for instance, you must already know the value of A. 
+
+Such a circular pattern intermixes inputs and outputs and undercuts the idea of using functions to represent connections.
+
+Yet it is common in the real world to encounter systems with feedback loops, where the output of one component eventually influences its own input. For instance, in the macro economy, unemployment influences consumer spending which in turn influences unemployment. 
+
+In `r xf("sec-dynamics")` we will explore a technique used to model such feedback loops. It involves introducing a new kind of connection between nodes. You experience such connections in your everyday life, for example, the connection between the speed of a car and its location on the road. Location is not exactly a function of speed, but speed influences location over time.
+
+We will introduce the concepts needed for such "modeling of dynamics" starting in `r xf("sec-dynamics")`. Historically, the discovery of these concepts in the late 1600s led to the emergence of modern science.
+:::
+ <!-- end of exr-maple-toss-ring -->

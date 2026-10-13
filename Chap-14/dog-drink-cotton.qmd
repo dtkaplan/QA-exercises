@@ -1,0 +1,20 @@
+<!--
+id: "dog-drink-cotton"
+created: "Tue Oct  6 09:00:59 2026"
+attribution: DTK
+mode: "instructor note"
+status: sketch
+group: x_drafts
+chapter: 14
+topic: "Partial and total derivatives"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-dog-drink-cotton}
+NOTE FOR INSTRUCTORS: Is $\frac{df}{dt}$ the same as $\frac{\partial f}{\partial t}$? There is a distinction to be made. If $f()$ is a function of two inputs, say $f(x, t)$, then $\frac{df}{dt}$ can be interpreted as the "total derivative" with respect to $t$, with the idea that the other input $x$ is also a function of $t$. So $f(x, t)$ really represents $f(x(t), t)$ which is a function of the single input $x$.
+
+From a modeling perspective, it's well to think of a function of a single input, say $g(t)$, as being shorthand for a more complete model, $g(t, x, y, z, \ldots)$ where the modeler has selected to simplify out the other inputs. So $d g(t, x, y, z, \ldots$ is not really about the "total" derivative. It seems unnecessarily confusing to insert a distinction between $\partial$ and $d$ just to leave open the possibility for a total derivative, which can be indicated more explicitly by writing $f(x(t), t)$
+:::
+ <!-- end of exr-dog-drink-cotton -->

@@ -1,0 +1,18 @@
+<!--
+id: "oak-find-dish"
+created: "Wed Oct  7 10:56:43 2026"
+attribution: DTK
+mode: undetermined
+status: sketch
+group: x_drafts
+chapter: 2
+topic: "Cyclic graphs"
+-->
+
+{< include ../exercise-header.qmd >}
+
+
+::: {#exr-oak-find-dish}
+Talk about acyclic graphs for systems and raise the question of cyclic graphs. 
+:::
+ <!-- end of exr-oak-find-dish -->
