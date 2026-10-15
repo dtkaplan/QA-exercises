@@ -9,7 +9,7 @@ chapter: 2
 topic: "Cyclic graphs"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-oak-find-dish}

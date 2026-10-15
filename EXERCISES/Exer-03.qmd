@@ -1,0 +1,50 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 3 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../Chap-03/beech-find-pot.qmd >}}
+
+## 2
+
+{{< include ../Chap-05/bear-leave-tv.qmd >}}
+
+## 3
+
+{{< include ../Chap-14/crow-pull-laundry.qmd >}}
+
+## 4
+
+{{< include ../Chap-05/cow-walk-pantry.qmd >}}
+
+## 5
+
+{{< include ../Chap-03/titmouse-leave-shelf.qmd >}}
+
+## 6
+
+{{< include ../Chap-03/snake-show-knife.qmd >}}
+
+## 7
+
+{{< include ../Chap-04/panda-refer-window.qmd >}}
+
+## 8
+
+{{< include ../Chap-02/elephant-hold-knob.qmd >}}
+
+## 9
+
+{{< include ../Chap-05/beech-bid-plate.qmd >}}
+
+:::

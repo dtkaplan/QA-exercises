@@ -5,7 +5,8 @@ attribution: DTK
 uses: rates
 status: "draft"
 chapter: 4
-mode: "exercise"
+mode: "computer skills"
+topic: "growth"
 -->
 
 {{< include ../exercise-header.qmd >}}

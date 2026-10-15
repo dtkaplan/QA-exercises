@@ -9,7 +9,7 @@ chapter: 14
 topic: instantaneous
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-falcon-show-mug}

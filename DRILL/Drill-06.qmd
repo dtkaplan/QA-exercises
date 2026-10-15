@@ -1,0 +1,157 @@
+---
+number-offset: 5
+crossref:
+  exr-title: "Drill 6."
+---
+
+{{< include _why-drill.qmd >}}
+
+# Drill Questions: Functions {-}
+
+```{r include=FALSE}
+source("_start-up.R")
+library("drill")
+```
+
+{{< include _devoirs.qmd >}}
+
+
+
+`r devoirs::push_answer_style("block")`
+
+`r cc <- drill::new_drill_counter(style = "ROMAN")`
+`r id <- "d05-misc"`
+
+:::: {.callout-note collapse=true}
+## Function basics
+
+::: {.panel-tabset}
+
+## Suggested question 1
+
+Consider a function defined as follows:
+
+```r
+heat_index <- function(temperature, humidity) {
+  # algorithm
+}
+```
+
+Which function invocation correctly supplies the arguments by name rather than by position?
+
+```{mcq}
+#| label: d06-interface-01
+1. `heat_index(30, 0.80)`
+2. `heat_index(temperature = 30, humidity = 0.80)` [correct]
+3. `heat_index(30 = temperature, 0.80 = humidity)`
+4. `heat_index(temperature, humidity)`
+```
+
+
+## Suggested question 3
+
+What is the main purpose of an algorithm in a function?
+
+```{mcq}
+#| label: d06-algorithm-03
+1. To give the function a memorable name.
+2. To list the inputs without describing what happens to them.
+3. To provide the operational steps that turn inputs into an output. [correct]
+4. To guarantee that the model represents every feature of the real system.
+```
+
+
+## Suggested question 2
+
+The function `heat_index(temperature, humidity)` expects temperature in degrees Celsius and humidity as a decimal between 0 and 1. Which invocation follows that documentation for 30 degrees Celsius and 80% humidity?
+
+```{mcq}
+#| label: d06-interface-02
+1. `heat_index(30, 80)`
+2. `heat_index(80, 30)`
+3. `heat_index(30, 0.80)` [correct]
+4. `heat_index(0.30, 80)`
+```
+
+
+## Suggested question 4
+
+In the solar-panel diagram, cloudiness and sun position are shown as inputs taken as given, while production is produced within the model. Which classification is correct?
+
+```{mcq}
+#| label: d06-model-04
+1. Cloudiness and sun position are endogenous; production is exogenous.
+2. Cloudiness and sun position are exogenous; production is endogenous. [correct]
+3. All three dimensions are endogenous.
+4. All three dimensions are exogenous.
+```
+
+## Suggested question 5
+
+A monthly-payment function uses only principal, interest rate, and loan duration. Which is the best reason to treat its output as a model rather than a complete description of a real mortgage payment?
+
+```{mcq}
+#| label: d06-model-05
+1. The function has inputs and therefore cannot be mathematical.
+2. Real mortgages may also involve fees, insurance, or other dimensions not included in the function. [correct]
+3. A model can never produce a numerical output.
+4. The output must always be unrelated to the inputs.
+```
+
+:::
+
+
+::::
+
+
+:::: {.callout-note collapse=true}
+## Misc.
+
+`r cc <- drill::new_drill_counter(style = "ROMAN")`
+`r id <- "d05-misc"`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+{{< include _exercises/spruce-talk-sheet.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/duck-get-futon.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/ape-teach-spoon.qmd >}}
+
+
+## `r cc()`
+
+{{< include _exercises/pony-meet-window.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/tiger-lick-window.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/seal-ride-book.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/eagle-leave-room.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/aspen-pack-blanket.qmd >}}
+
+## `r cc()`
+
+{{< include _exercises/seaweed-build-jacket.qmd >}}
+
+-----
+
+
+
+:::
+::::

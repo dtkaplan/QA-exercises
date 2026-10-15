@@ -4,7 +4,8 @@ created: "Sat Dec 20 08:22:22 2025"
 attribution: TBA
 status: "ready-to-use"
 chapter: 4
-mode: "exercise"
+mode: "drill"
+topic: "AI created"
 -->
 
 {{< include ../exercise-header.qmd >}}

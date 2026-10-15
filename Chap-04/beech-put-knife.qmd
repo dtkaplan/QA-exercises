@@ -3,8 +3,9 @@ id: "beech-put-knife"
 created: "Sun Nov 23 11:20:28 2025"
 attribution: DTK
 status: "ready-to-use"
-chapter: 3
+chapter: 4
 mode: "discussion"
+topic: "housing"
 -->
 
 {{< include ../exercise-header.qmd >}}

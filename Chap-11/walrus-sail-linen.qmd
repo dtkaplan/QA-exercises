@@ -9,7 +9,7 @@ chapter: 11
 topic: "Memoryless Property of Exponential Distribution"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-walrus-sail-linen}

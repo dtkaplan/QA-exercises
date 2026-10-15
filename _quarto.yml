@@ -16,23 +16,14 @@ project:
     - Apps/App-rotations.qmd
     - Apps/App-GDP-Mortality.qmd
     - Apps/App-SIR.qmd
-    
-  
+    - DRILL/Drill-01.qmd
+    - READING_QUESTIONS/RQ-01.qmd
+    - EXERCISES/Exer-??.qmd
+
+
 website: 
   title: "Quantitative Argumentation"
   reader-mode: true
-  sidebar:
-    contents:
-      - section: Fundamentals
-        contents:
-        - text: "1. Argument and reasoning"
-          href: "Chap-01/Catalog-01.qmd"
-
-        - text: "2. Models"
-          href: "Chap-02/Catalog-02.qmd"
-
-        - text: "3. Quantities"
-          href: "Chap-03/Catalog-03.qmd"
 
 format:
   live-html:

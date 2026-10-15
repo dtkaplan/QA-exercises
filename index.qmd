@@ -1,8 +1,8 @@
 ---
 title: "Quantitative Argumentation"
-subtitle: "Instructors' Materials"
+subtitle: "Supplemental Materials"
 author: "Daniel T Kaplan"
-date: "2026-09-03"
+date: "`r Sys.Date()`"
 ---
 
 
@@ -15,6 +15,12 @@ This website is for instructors, providing them access to exercises, drill quest
 It is organized by chapter, with each chapter containing a catalog displaying the available materials for that chapter.
 
 Each file is also a stand-along resource accessible by link. Users can navigate directly to the content they need without going through the catalog. This may be convenient for setting assignments for students.
+
+- Chapter 1: [Reading Questions](READING_QUESTIONS/RQ-01.html) [Drill Questions](DRILL/Drill-01.html) [Exercises](EXERCISES/Exer-01.html)
+- Chapter 2: [Reading Questions](READING_QUESTIONS/RQ-02.html) [Drill Questions](DRILL/Drill-02.html) [Exercises](EXERCISES/Exer-02.html)
+- Chapter 3: [Reading Questions](READING_QUESTIONS/RQ-03.html) [Drill Questions](DRILL/Drill-03.html) [Exercises](EXERCISES/Exer-03.html)
+- Chapter 4: [Reading Questions](READING_QUESTIONS/RQ-04.html) [Drill Questions](DRILL/Drill-04.html) [Exercises](EXERCISES/Exer-04.html)
+- Chapter 5: [Reading Questions](READING_QUESTIONS/RQ-05.html) [Drill Questions](DRILL/Drill-05.html) [Exercises](EXERCISES/Exer-05.html)
 
 -----
 

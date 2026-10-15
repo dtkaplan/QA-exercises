@@ -12,8 +12,7 @@ mode: "reading-question"
 ::: {#exr-titmouse-hide-clock}
 1. What units do you habitually use to measure body weight? 
 
-2. In your 
-preferred unit, how many digits (before the decimal point)correspond to a very small person?
+2. In your preferred unit, how many digits (before the decimal point)correspond to a very small person?
 
 3. How many to a very large person? 
 

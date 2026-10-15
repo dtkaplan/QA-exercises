@@ -9,7 +9,7 @@ topic: mortgages
 chapter: 9
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-seahorse-light-shelf}

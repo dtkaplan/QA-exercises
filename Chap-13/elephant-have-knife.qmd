@@ -91,7 +91,6 @@ We can multiply and divide dimensions in whatever way we like. For instance,
 5. What's the way to combine [Rate A] and [Rate B] to end up with [target]?
 ```{mcq}
 #| label: ehk-5-eks
-#| inline: false
 1. dim(Rate A) $\times$ dim(Rate B) [correct]
 2. dim(Rate A)/dim(Rate B)
 3.  1/(dim(Rate A)$\times$ dim(Rate B))
@@ -104,7 +103,6 @@ This dimensional analysis tells us how to combine the quantities Rate A and Rate
 6. What is the quantity of the combination:
 ```{mcq}
 #| label: ehk-6-kr3e
-#| inline: false
 1. $\frac{\text{L}}{8\,\text{hr}} \frac{10\ \text{gtts}}{\text{mL}}$ [correct]
 2. $\frac{\text{L}}{8\ \text{hr}} \frac{\text{mL}}{\text{gtts}}$
 3. $\frac{8\ \text{hr}}{\text{L}} \frac{\text{mL}}{10\ \text{gtts}}$

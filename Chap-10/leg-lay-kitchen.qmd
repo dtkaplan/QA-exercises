@@ -9,7 +9,7 @@ chapter: 10
 topic: "multiple objectives"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 This is about why strictly mathematical approaches are unlikely to capture all the nuances involved in making choices with multiple objectives.

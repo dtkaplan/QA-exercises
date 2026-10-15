@@ -1,0 +1,18 @@
+<!--
+id: "zebra-forget-candy"
+created: "Thu Oct 15 12:08:25 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-zebra-forget-candy}
+A **heuristic** is a reasoning link that is useful but is not guaranteed to be correct.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "D-01-dig")`
+:::
+ <!-- end of exr-zebra-forget-candy -->

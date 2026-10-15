@@ -1,0 +1,20 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 1 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+None yet.
+
+:::
+
+

@@ -1,0 +1,18 @@
+<!--
+id: "kid-lick-pants"
+created: "Thu Oct 15 12:18:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-kid-lick-pants}
+In the epidemic example, the computer simulation is itself the model; the SIR model is merely the software used to run it.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "D-01-rig", wrong.hint="The SIR description is the model. The computer program implements the model's bookkeeping and formal calculations.")`
+:::
+ <!-- end of exr-kid-lick-pants -->

@@ -1,0 +1,106 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 1 Drill Questions"
+filters:
+  - live
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r include=FALSE}
+library(drill)
+```
+
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+:::: {.callout-note collapse=true}
+## Argument and reasoning
+
+`r cc <- drill::new_drill_counter()`
+`r id <- "d01"`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+{{< include ../Chap-01/lobster-sleep-magnet.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/squirrel-speak-canoe.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/bobcat-beat-suitcase.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/dingo-iron-rug.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/zebra-forget-candy.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/maple-forgive-socks.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/cow-lie-bed.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/puppy-think-hat.qmd >}}
+
+:::
+::::
+
+:::: {.callout-note collapse=true}
+## Models as bridges
+
+`r cc <- drill::new_drill_counter(style = "ALPHA")`
+
+::: {.panel-tabset}
+
+## `r cc()`
+
+{{< include ../Chap-01/dingo-wish-piano.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/goat-shut-pen.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/elephant-walk-fridge.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/leg-forget-pencil.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/falcon-bite-shelf.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/toe-say-roof.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/snake-speak-sofa.qmd >}}
+
+## `r cc()`
+
+{{< include ../Chap-01/kid-lick-pants.qmd >}}
+
+:::
+::::

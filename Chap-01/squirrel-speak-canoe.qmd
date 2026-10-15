@@ -1,0 +1,24 @@
+<!--
+id: "squirrel-speak-canoe"
+created: "Thu Oct 15 12:03:42 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-squirrel-speak-canoe}
+Which of the following can be a **given** at the start of a reasoning process?
+
+```{mcq}
+#| label: d01-givens
+1. An observation [correct]
+2. Only a mathematical equation
+3. Only a fact known with certainty
+4. Only a numerical measurement
+```
+:::
+ <!-- end of exr-squirrel-speak-canoe -->

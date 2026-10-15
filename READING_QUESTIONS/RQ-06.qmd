@@ -1,0 +1,40 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 6 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+
+{{< include ../Chap-06/aspen-talk-pantry.qmd >}}
+
+## 2
+
+{{< include ../Chap-06/brother-lose-scarf.qmd >}}
+
+## 3
+
+{{< include ../Chap-06/boy-begin-shirt.qmd >}}
+
+## 4
+
+{{< include ../Chap-06/seal-form-glasses.qmd >}}
+
+## 5
+
+{{< include ../Chap-06/leg-fight-stair.qmd >}}
+
+:::
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!--
+id: "puppy-think-hat"
+created: "Thu Oct 15 12:11:59 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-puppy-think-hat}
+Why can formal reasoning give misleading results when it is applied to a real-world situation?
+
+```{mcq}
+#| label: d01-premises
+1. The premises used in the formal reasoning may not accurately represent the real-world situation. [correct]
+2. Formal reasoning is never reliable.
+3. Formal reasoning always uses numerical data.
+4. Formal reasoning cannot be carried out by a computer.
+```
+
+:::
+ <!-- end of exr-puppy-think-hat -->

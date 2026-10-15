@@ -2,9 +2,8 @@
 id: "reptile-beat-window"
 created: "Wed Dec 31 07:15:51 2025"
 attribution: Dave Ruth
-use: "Reading Question Chap 2"
 status: "ready-to-use"
-chapter: 2
+chapter: 3
 mode: "reading-question"
 -->
 

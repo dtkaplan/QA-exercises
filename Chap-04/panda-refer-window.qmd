@@ -1,10 +1,11 @@
 <!--
 id: "panda-refer-window"
 created: "Tue Oct  7 14:01:47 2025"
-attribution: TBA
+attribution: DTK
 status: "ready-to-use"
 chapter: 4
-mode: "exercise"
+mode: "drill"
+topic: "transportation"
 -->
 
 {{< include ../exercise-header.qmd >}}

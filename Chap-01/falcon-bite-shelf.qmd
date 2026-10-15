@@ -1,0 +1,19 @@
+<!--
+id: "falcon-bite-shelf"
+created: "Thu Oct 15 12:15:44 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-falcon-bite-shelf}
+The usefulness of a model depends in part on the purpose for which the model is built.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "D-01-yak")`
+
+:::
+ <!-- end of exr-falcon-bite-shelf -->

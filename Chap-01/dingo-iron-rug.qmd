@@ -1,0 +1,24 @@
+<!--
+id: "dingo-iron-rug"
+created: "Thu Oct 15 12:07:21 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-dingo-iron-rug}
+What links the observation of a rooster sound to the reasoned belief that it is dawn?
+
+```{mcq}
+#| label: d01-rooster-link
+1. The heuristic rule that roosters crow at dawn. [correct]
+2. The fact that dawn always occurs when a rooster makes a sound.
+3. A formal proof that dawn has occurred.
+4. A measurement of the time of day.
+```
+:::
+ <!-- end of exr-dingo-iron-rug -->

@@ -1,0 +1,19 @@
+<!--
+id: "cow-lie-bed"
+created: "Thu Oct 15 12:10:51 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-cow-lie-bed}
+A premise is a statement assumed to be true for the purpose of formal reasoning.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "D-01-jar")`
+
+:::
+ <!-- end of exr-cow-lie-bed -->

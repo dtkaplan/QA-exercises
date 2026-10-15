@@ -1,10 +1,11 @@
 <!--
 id: "rhinosaurus-shut-fork"
 created: "Mon Dec 15 13:16:51 2025"
-attribution: TBA
+attribution: DTK
 status: "ready-to-use"
 chapter: 4
-mode: "exercise"
+mode: "drill"
+topic: "health"
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,25 +14,77 @@ mode: "exercise"
 
 ::: {#exr-rhinosaurus-shut-fork}
 
-Write a problem about "mortality" versus "mortality rate." 
+As you know, "mortality" refers to the state of being subject to death as in, "All men are mortal." In contrast, "mortality rate" refers to the *frequency* of death in a *given* population or group *over* a specified period of time.
 
-1. The mortality rate is 100% for people. What is the "with respect to" variable that makes sense of this claim? 
+Notice the three words: "frequency," "given," and "over." 
+
+Frequency on its own is ambiguous. With respect to mortality, it can mean any of three things; the number of deaths, the proportion of the population that dies, or (less commonly) the number of deaths during a time interval.
+
+1. What is the dimension of the *number of deaths*?
 
 ```{mcq}
-#| label: rsf-1-eks
+#| label: rsf-ckse-1
 #| inline: true
-1. per year
-2. per decade
-3. per capita [correct hint: "This is what 'All men are mortal' means!"]
+1. Dimensionless [hint: This is a reasonable choice, but in the context of counting people, we are using "capita."]
+2. C (capita) [correct]
+3. T
+4. C/T
 ```
 
-2. Mortality in the Civil War Battle of Chickamauga was about 25%. This is much lower than the mortality of 100% experienced by the population at large. Explain.
+2. What is the dimension of the *proportion of the population that dies*?
 
-`r devoirs::devoirs_text("rsf-2-udjw")`
+```{mcq}
+#| label: rsf-ckse-2
+#| inline: true
+1. 1/C
+2. Dimensionless [correct hint: It's the ratio C/C.]
+3. C 
+4. C/T
+```
 
-3. According to the US Census Bureau, the mortality rate for middle-aged men and women is about 0.5. What must be the units and with respect to variable for this to make sense?
+3. What is the dimension of the *number of deaths per unit time*?
 
-`r devoirs::devoirs_text("rsf-3-vskd")`
+```{mcq}
+#| label: rsf-ckse-3
+#| inline: true
+1. Dimensionless
+2. C (capita)
+3. T
+4. C/T [correct]
+```
+
+4. Perhaps the most widely used form for "mortality rate" is the proportion of people dying in a given group per unit time. What is the dimension of this quantity?
+
+```{mcq}
+#| label: rsf-ckse-4
+#| inline: true
+1. C 
+2. T
+3. C/T
+4. (C/C)/T = 1/T [correct hint: C/C is the proportion, dividing by T gives the rate with respect to time.]
+```
+
+5. According to the answer to (4), which one of the following could be an appropriate unit for mortality rate?
+
+```{mcq}
+#| label: rsf-ckse-5
+#| inline: true
+1. year
+2. per year [correct]
+3. person
+4. per person
+```
+
+6. The correct answer to (5) can be confusing to many people because "per year" is familiar only in the context "*something* per year." It's common when discussing mortality rates to substitute "percent" in place of the "something," as in "percent per year." What is the dimension of *percent*?
+
+```{mcq}
+#| label: rsf-ckse-6
+#| inline: true
+1. Dimensionless [correct hint: Percent is a ratio, like C/C, which is dimensionless.]
+2. C 
+3. T
+4. per T
+```
 
 :::
  <!-- end of exr-rhinosaurus-shut-fork -->

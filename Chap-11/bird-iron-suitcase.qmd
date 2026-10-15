@@ -9,7 +9,7 @@ chapter: 11
 topic: "relative merits of normal vs exponential distributions"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 TURN THIS INTO A DISCUSSION ABOUT THE RELATIVE MERITS OF USING the

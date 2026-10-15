@@ -1,10 +1,11 @@
 <!--
 id: "spider-stand-ship"
 created: "Thu Jan 15 11:37:57 2026"
-attribution: TBA
+attribution: DTK
 status: "ready-to-use"
 chapter: 4
-mode: "exercise"
+mode: "discussion"
+topic: "money"
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -18,7 +19,7 @@ Consider these two functions where the input is the number of hours accumulated 
 #| label: fig-sss-wage-overtime
 #| echo: false
 #| fig-cap: "Two functions relating to wages."
-#| layout-ncol: 2
+#| layout-ncol: 1
 #| fig-subcap:
 #| - "Hourly wage rate"
 #| - "Total earned"
@@ -29,11 +30,11 @@ slice_plot(f(t) ~ t, domain(t=0:100), npts = 400) |>
   gf_vline(xintercept = 40, color = "white", linewidth = 1.5) |>
   gf_labs(y = "Wage rate ($/hr)", x = "Time worked in a week (hr)") |>
   gf_lims(y = c(0, NA)) |>
-  gf_theme(theme_minimal())
+  gf_theme(theme_minimal(base_size = 12))
 slice_plot(25*t + 12.50*(t-40)*(t>40) ~ t, domain(t = 0:100)) |>
   gf_labs(y = "Earnings in a week ($)", x = "Time worked in a week (hr)") |>
   gf_lims(y = c(0, NA)) |>
-  gf_theme(theme_minimal())
+  gf_theme(theme_minimal(base_size = 12))
 ```
 
 1. What is the wage rate at 75 hours? (pick the closest)
@@ -45,7 +46,7 @@ slice_plot(25*t + 12.50*(t-40)*(t>40) ~ t, domain(t = 0:100)) |>
 
 `r devoirs::devoirs_set("sss-2-dwe", choices=c(25.00, 37.50, 1000, 2000), correct = 37.50, n=4 )`
 
-The two functions in `r xf("fig-wage-overtime")` are closely related. But their outputs have different dimensions.
+The two functions in `r xf("fig-sss-wage-overtime")` are closely related. But their outputs have different dimensions.
 
 3. What's the dimension of the output of the earnings function?
 
@@ -59,7 +60,6 @@ The two functions in `r xf("fig-wage-overtime")` are closely related. But their 
 
 ```{mcq}
 #| label: sss-5-kes
-#| inline: false
 1. Yes [correct hint: The slope is different at, say, an input of 20 hours versus an input of 60 hours.]
 2. No  [hint: Make sure you are looking at the graph of earnings versus hours worked.]
 3. Can't tell from the info given. [hint: Not so. The function graph is steeper at 60 hours than at 20.]
@@ -70,11 +70,10 @@ The two functions in `r xf("fig-wage-overtime")` are closely related. But their 
 
 ```{mcq}
 #| label: sss-6t43w
-#| inline: false
 1. The rate of change of the wage rate with respect to hours worked gives the total earnings. 
 2. The rate of change of the earnings with respect to hours worked gives the wage rate. [correct]
 3. The earnings function is unrelated to the wage rate function.
-4. It makes sense to create a new function by *adding* the outputs function from the two functions in `r xf("fig-wage-overtime")`. [hint: Think again. The outputs have different dimensions. So you can't meaningfully add them.]
+4. It makes sense to create a new function by *adding* the outputs function from the two functions in the figure. [hint: Think again. The outputs have different dimensions. So you can't meaningfully add them.]
 ```
 
 :::

@@ -64,7 +64,6 @@ title: "Chapter 02 Catalog"
 
 
 > File: Chap-02/elephant-hold-knob.qmd
-> Status: null
 
 
 {{< include elephant-hold-knob.qmd >}}
@@ -105,13 +104,6 @@ title: "Chapter 02 Catalog"
 
 {{< include kitten-bend-door.qmd >}}
 
-## nephew-dig-lamp
-
-
-> File: Chap-02/nephew-dig-lamp.qmd
-
-{{< include nephew-dig-lamp.qmd >}}
-
 ## pony-meet-window
 
 
@@ -127,13 +119,6 @@ title: "Chapter 02 Catalog"
 
 
 {{< include seaweed-bend-laundry.qmd >}}
-
-## seaweed-hang-ring
-
-
-> File: Chap-02/seaweed-hang-ring.qmd
-
-{{< include seaweed-hang-ring.qmd >}}
 
 :::
 :::

@@ -1,0 +1,56 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 3 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../Chap-03/nephew-dig-lamp.qmd >}}
+
+## 2
+
+{{< include ../Chap-03/reptile-beat-window.qmd >}}
+
+## 3
+
+{{< include ../Chap-03/seaweed-hang-ring.qmd >}}
+
+## 4
+
+{{< include ../Chap-03/titmouse-hide-clock.qmd >}}
+
+## 5
+
+{{< include ../Chap-03/puppy-hang-blanket.qmd >}}
+
+## 6
+
+{{< include ../Chap-03/ape-sell-plate.qmd >}}
+
+## 7
+
+ {{< include ../Chap-03/sheep-tear-bed.qmd >}}
+
+:::
+
+
+<!-- Library for RQ2
+
+exercises/beech-understand-cotton.qmd
+exercises/croc-come-blanket.qmd
+exercises/deer-put-cotton.qmd
+exercises/falcon-have-book.qmd
+
+-->
+
+
+
+

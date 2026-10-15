@@ -9,7 +9,7 @@ group: computing_exercises
 topic: drug_dosing
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-fly-get-kayak}

@@ -9,7 +9,7 @@ chapter: 7
 topic: "output scaling"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-goldfish-win-radio}

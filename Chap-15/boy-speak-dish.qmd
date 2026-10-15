@@ -1,0 +1,21 @@
+<!--
+id: "boy-speak-dish"
+created: "Thu Mar 12 07:34:20 2026"
+attribution: Dorothy Dickmann
+use: RQ 15
+status: "sketch"
+chapter: 15
+mode: "reading-question"
+topic: "population"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-boy-speak-dish}
+In the US population example in `r xf("sec-peak-population")`, the forecast of future population is calculated by “accumulating the rate of change” over future years. In plain, everyday language, what quantity is being accumulated and what is the with-respect-to quantity?
+
+`r devoirs::devoirs_text("RQ13-bsd-3")`
+
+
+:::
+ <!-- end of exr-boy-speak-dish -->

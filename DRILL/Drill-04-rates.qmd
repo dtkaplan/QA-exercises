@@ -122,7 +122,6 @@ a) What is the rate of change of fuel economy with respect to cargo weight?
 
 ```{mcq}
 #| label: d03-fuel-a
-#| inline: false
 1. -0.46 mpg per lb. [hint: Sorry. Remember to look at the *change* in each quantity, not the absolute amount of the quantity.]
 2. -0.004 mpg per lb. [correct]
 3. 0.004 mpg per lb. [hint: Think again. Extra cargo cause fuel economy to go down, so the rate of change should be *negative*.]

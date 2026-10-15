@@ -9,7 +9,7 @@ chapter: 12
 topic: "Car safety"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-reptile-sell-pencil}

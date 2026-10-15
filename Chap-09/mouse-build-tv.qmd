@@ -8,7 +8,7 @@ group: x_drafts
 topic: algebra 
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-mouse-build-tv}

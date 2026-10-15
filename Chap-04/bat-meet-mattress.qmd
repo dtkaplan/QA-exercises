@@ -3,18 +3,39 @@ id: "bat-meet-mattress"
 created: "Wed Aug 19 12:40:10 2026"
 attribution: DTK
 uses: rates
-status: "sketch"
+status: "ready-to-use"
 chapter: 4
-mode: "exercise"
+mode: "drill"
+topic: "energy"
 -->
 
 {{< include ../exercise-header.qmd >}}
 
 ::: {#exr-bat-meet-mattress}
-The rate *80 Cal per mile* is, like all other rates, a quantity. All quantities have a {{< var dim.dim >}}. 
-The {{< var dim.dim >}} 
-of *80 Cal/mile* is [energy] / L, that is, {{< var dim.force >}}. 
-[Remember that "[energy]" is pronounced, "the {{< var dim.dim >}} 
-of energy.]{.column-margin} In this case, the {{< var dim.dim >}} of the *rate* is different from the {{< var dim.dim >}}s of either of the quantities that formed the rate. POINT OUT THAT THIS IS A FORCE and observe that a force is a good way to describe the difficulty of walking.
+Sometimes the dimension of a quantity points to an unexpected way to interpret that quantity. Consider, for example, energy utilization of walking rate *80 Cal per mile*. The dimension of *80 Cal* is [energy]. The dimension of *mile* is [L]. 
+
+
+1. Which of these is equivalent to [energy]
+```{mcq}
+#| label: bmm-1-t37s
+1. `r bracket("force")` $\div$ `r bracket("length")`
+2. `r bracket("force")` $\div$ `r bracket("mass")`
+3. `r bracket("force")` $\times$ `r bracket("length")` [correct]
+4. `r bracket("mass")` $\times$ `r bracket("time")`
+```
+
+2. What is the dimension of the rate *80 Cal per mile*?
+
+```{mcq}
+#| label: bmm-2-t37s
+1. `r bracket("energy")`
+2. `r bracket("force")` [correct]
+3. `r bracket("energy")` $\div$ `r bracket("time")` 
+4. `r bracket("energy")` $\times$ `r bracket("length")` [hint: notice the *per* in *Cal per mile*.]
+```
+
+3. Briefly state your opinion of whether the (correct) answer to 2 is consistent with your intuition of what energy per mile means. 
+`r devoirs_text("bmm-3-t37s", )
+
 :::
  <!-- end of exr-bat-meet-mattress -->

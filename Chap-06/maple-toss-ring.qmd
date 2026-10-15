@@ -9,7 +9,7 @@ chapter: 6
 topic: "cyclic diagrams"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-maple-toss-ring}

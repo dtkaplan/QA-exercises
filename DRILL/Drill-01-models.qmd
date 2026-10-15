@@ -80,7 +80,6 @@ Which statement best describes **formal reasoning** as used in this chapter?
 
 ```{mcq}
 #| label: d01-formal
-#| inline: true
 1. It uses links governed by rules that are accepted as certain. [correct]
 2. It is reasoning based only on common sense.
 3. It is always about real-world situations.
@@ -128,7 +127,6 @@ Which statement best expresses the role of a quantitative model in this book?
 
 ```{mcq}
 #| label: d01-model-bridge
-#| inline: true
 1. It bridges real-world givens and the power of formal reasoning. [correct]
 2. It replaces the real world with a mathematically exact copy.
 3. It guarantees that conclusions about the real world are true.

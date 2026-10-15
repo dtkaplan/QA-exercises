@@ -1,0 +1,43 @@
+<!--
+id: "seal-form-glasses"
+created: "Fri Jan 16 11:24:35 2026"
+attribution: "Dorothy Dickmann"
+status: "ready-to-use"
+chapter: 6
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seal-form-glasses}
+In 2026, a proposal for reducing costs to homeowners was floated: Increasing the mortgage duration from the typical 30 years to 50 years or more will reduce the monthly payment. @fig-seal-form-glasses shows two graphs of the `monthly_payment()` function.
+
+```{r}
+#| echo: false
+#| label: fig-seal-form-glasses
+#| fig-cap: "Monthly mortgage payment for a principal of $200,000."
+#| layout-ncol: 2
+#| fig-subcap: 
+#| - "at 7% interest."
+#| - "at 30 years duration"
+
+slice_plot(QRA::monthly_payment(200000, 7, duration) ~ duration, domain(duration=10:100)) |>
+gf_theme(theme_minimal(base_size = 12)) |>
+gf_labs(x = "Duration (years)", y = "Monthly Payment ($)") |>
+gf_lims(y=c(0, NA))
+
+slice_plot(QRA::monthly_payment(200000, rate, 30) ~ rate, domain(rate=2:15)) |>
+gf_theme(theme_minimal(base_size = 12)) |>
+gf_labs(x = "Interest rate (%)", y = "Monthly Payment ($)") |>
+gf_lims(y=c(0, NA))
+```
+
+How can one function, `monthly_payment()` have two different graphs? 
+
+`r devoirs::devoirs_text("sfg-1-kr3s")`
+
+Which of the two panels---(a) or (b)---gives insight into the suggested long-duration policy? 
+
+`r devoirs::devoirs_text("sfg-2-kr3s")`
+:::
+ <!-- end of exr-seal-form-glasses -->

@@ -1,0 +1,29 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 4 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../chap-04/fly-spend-gloves.qmd >}}
+
+## 2
+
+{{< include ../chap-04/ant-spend-shoe.qmd >}}
+
+## 3
+
+
+{{< include ../chap-04/finger-dig-fridge.qmd >}}
+
+:::
+
+

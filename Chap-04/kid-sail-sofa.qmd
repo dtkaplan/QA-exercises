@@ -5,7 +5,7 @@ attribution: DTK
 uses: rates
 status: "sketch"
 chapter: 4
-mode: "exercise"
+mode: "drill"
 -->
 
 {{< include ../exercise-header.qmd >}}

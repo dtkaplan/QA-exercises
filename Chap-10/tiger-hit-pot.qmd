@@ -9,7 +9,7 @@ chapter: 10
 topic: "using shadow prices to combine the two objectives"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-tiger-hit-pot}

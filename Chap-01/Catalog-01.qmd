@@ -81,7 +81,6 @@ title: "Chapter 01 Catalog"
 
 
 > File: Chap-01/rabbit-hang-pan.qmd
-> Status: null
 
 
 {{< include rabbit-hang-pan.qmd >}}
@@ -123,16 +122,7 @@ title: "Chapter 01 Catalog"
 
 {{< include monkey-drive-book.qmd >}}
 
-## puppy-break-mattress
-
-
-> File: Chap-01/puppy-break-mattress.qmd
-
-{{< include puppy-break-mattress.qmd >}}
-
 ## seahorse-enjoy-closet
-
-
 > File: Chap-01/seahorse-enjoy-closet.qmd
 
 {{< include seahorse-enjoy-closet.qmd >}}

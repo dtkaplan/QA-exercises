@@ -9,7 +9,7 @@ group: x_drafts
 topic: "regression to the mean"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-snail-close-book}

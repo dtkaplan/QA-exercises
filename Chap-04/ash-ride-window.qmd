@@ -2,7 +2,7 @@
 id: "ash-ride-window"
 created: "Wed Nov 12 13:04:12 2025"
 attribution: TBA
-status: "sketch"
+status: "oddity"
 chapter: 4
 mode: "outline"
 -->

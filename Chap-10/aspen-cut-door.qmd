@@ -9,7 +9,7 @@ chapter: 10
 topic: "tangency and optimality"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 CHECK WHETHER THIS DUPLICATES ANOTHER EXERCISE FILE.
 

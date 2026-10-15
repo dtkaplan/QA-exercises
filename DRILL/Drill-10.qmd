@@ -1,0 +1,16 @@
+---
+number-offset: 09
+crossref:
+  exr-title: "Drill 10."
+---
+
+# Drill Questions: Making good choices
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+`r devoirs::push_answer_style("block")`
+
+{{< include _devoirs.qmd >}}
+

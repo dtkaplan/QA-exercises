@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Quantitative Argumentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quantitative Argumentation</h1>
+<p class="subtitle lead">Chapter 1 drill questions</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="devoirs-docID" style="display: none;">Drill-01.rmarkdown</span> <span><button onclick="devoirsSubmit()">Collect your answers</button></span> <span id="devoirs_summary">No answers yet collected</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<script type="text/javascript">
+ console.log("In devoirs.js")
+
+function devoirsCollectEssays() {
+  var essay_answers = [];
+  var items = document.getElementsByClassName("devoirs-text");
+  for (i = 0; i < items.length; i++) {
+    //console.log("text entry" + i + "being handled");
+    essay_answers[i] = {itemid: items[i].id, contents: items[i].value}
+  }
+
+  return essay_answers;
+}
+
+function devoirsGetDocID() {
+  return document.getElementById("devoirs-docID").innerHTML
+}
+
+function devoirsCollectMC() {
+    let mc_answers = [] // Hold the information
+    var ele = document.getElementsByClassName("devoirs-mcq");
+    var count = 0;
+    for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
+          //console.log("Entering conditional.");
+          let checked_one = ele[i];
+          mc_answers[count++] = {itemid: checked_one.id, w: checked_one.getAttribute("w"), contents: checked_one.text};
+        }
+    }
+    return mc_answers;
+}
+
+console.log("About to define WebR")
+
+function devoirsCollectWebR() {
+  var chunk_contents = []; // placeholder for collecting webr items
+  if (typeof qwebrCellDetails == "undefined") {
+    // There aren't any webr chunks
+    return chunk_contents;
+  }
+  var chunks = qwebrCellDetails;
+  for (i = 0; i < chunks.length; i++) {
+    chunk_contents[i] = {itemid: chunks[i].options["label"], contents: chunks[i].code};
+  }
+
+  return chunk_contents;
+}
+
+console.log("About to define devoirsSubmit")
+
+function devoirsSubmit() {
+  console.log("About to collect history")
+
+  // check if there is any sign of a webr entry
+  // If not, don't try to collect webr entries
+  if (typeof qwebrRCommandHistory === 'undefined') {
+    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays(), WebR: {}, R: {}}
+  } else {
+    console.log("Getting R commands.")
+    var Rhistory = qwebrRCommandHistory.map((x) => x.replace(/Ran code in (.*) at (.*[AP]M).{5}(.*)/, "[chunk: $1, time: $2, code: $3]"))
+
+    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays()} //, WebR: devoirsCollectWebR(), R: Rhistory}
+  }
+
+  navigator.clipboard.writeText(JSON.stringify(items));
+
+  // summarize what's being collected
+  var my_summary = "Answers copied to clipboard. Fixed choice: " + items.MC.length + " Essays: " + items.Essays.length + " WebR chunks: " + items.WebR.length
+
+  document.getElementById("devoirs_summary").innerHTML = my_summary;
+}
+
+console.log("Read devoirsSubmit()")
+
+// Hint handling in Multiple choice
+
+// Still have to add an on/off switch from options
+
+function devoirs_setup_hintarea() {
+  answers = document.getElementsByClassName("devoirs-mcq")
+  for (i=0; i<answers.length; i++) answers[i].addEventListener('click', function(e){document.getElementById(e.target.name + "-hintarea").innerHTML = e.target.getAttribute("hint")})
+}
+
+ window.addEventListener("load", function() {
+  answers = document.getElementsByClassName("devoirs-mcq")
+  for (i=0; i<answers.length; i++) {
+    if (answers[i].getAttribute("show_hints") == "TRUE") {
+        answers[i].addEventListener('click', function(e){
+          console.log("inserting hint")
+        document.getElementById(e.target.name + "-hintarea").innerText = e.target.getAttribute("hint")
+      })
+
+    }
+  }
+})
+
+console.log("Added hint summary.") 
+</script>
+
+</div>
+</div>
+If the answers that have been loaded automatically are not yours, press this button before starting your work:
+<script type="text/javascript">
+      // clear the local storage
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('btnClearStorage');
+      form.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+        console.log("Clearing memory");
+      }, false);
+    }
+    )
+    </script>
+<button id="btnClearStorage">
+Clear memory
+</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Argument and reasoning
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">5</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">6</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">7</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">8</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<!--
+id: "lobster-sleep-magnet"
+created: "Thu Oct 15 11:52:51 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-lobster-sleep-magnet" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> For purposes of this book, <strong>reasoning</strong> is the transformation of givens into new beliefs and understandings.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-yes-hintarea" class="hintarea">D-01-yes</small>
+<form id="D-01-yes-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-yes-1" w="5" name="D-01-yes" hint="Right-O!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-01-yes-2" w="23" name="D-01-yes" hint="Incorrect." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-yes" id="D-01-yes.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-yes.');
+      const form = document.getElementById('D-01-yes-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-yes-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-yes.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-yes.");
+          localStorage.setItem('D-01-yes-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-lobster-sleep-magnet --></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<!--
+id: "squirrel-speak-canoe"
+created: "Thu Oct 15 12:03:42 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-squirrel-speak-canoe" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Which of the following can be a <strong>given</strong> at the start of a reasoning process?</p>
+<div class="cell">
+<span> <small style="color: grey;" id="d01-givens-hintarea" class="hintarea">d01-givens</small>
+<form id="d01-givens-form">
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="An observation" id="d01-givens-1" w="14" name="d01-givens" hint="A win!" show_hints="TRUE"> An observation</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Only a mat ... l equation" id="d01-givens-2" w="3" name="d01-givens" hint="Untrue!" show_hints="TRUE"> Only a mathematical equation</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Only a fac ...  certainty" id="d01-givens-3" w="19" name="d01-givens" hint="Better luck next time." show_hints="TRUE"> Only a fact known with certainty</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Only a num ... easurement" id="d01-givens-4" w="87" name="d01-givens" hint="You're mistaken" show_hints="TRUE"> Only a numerical measurement</p>
+<p></p>
+<input type="radio" class="devoirs-mcq" name="d01-givens" id="d01-givens.null" style="display: none;" w="skipped" checked="">
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for d01-givens.');
+      const form = document.getElementById('d01-givens-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('d01-givens-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for d01-givens.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for d01-givens.");
+          localStorage.setItem('d01-givens-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</div>
+<p><!-- end of exr-squirrel-speak-canoe --></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<!--
+id: "bobcat-beat-suitcase"
+created: "Thu Oct 15 12:06:03 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-bobcat-beat-suitcase" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Hearing a rooster crow is a direct observation that it is dawn.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-elf-hintarea" class="hintarea">D-01-elf</small>
+<form id="D-01-elf-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-elf-1" w="7" name="D-01-elf" hint="The rooster sound is a given. 'It is dawn' is a belief reached by reasoning from the given." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-01-elf-2" w="29" name="D-01-elf" hint="Nice." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-elf" id="D-01-elf.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-elf.');
+      const form = document.getElementById('D-01-elf-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-elf-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-elf.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-elf.");
+          localStorage.setItem('D-01-elf-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-bobcat-beat-suitcase --></p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<!--
+id: "dingo-iron-rug"
+created: "Thu Oct 15 12:07:21 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-dingo-iron-rug" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> What links the observation of a rooster sound to the reasoned belief that it is dawn?</p>
+<div class="cell">
+<span> <small style="color: grey;" id="d01-rooster-link-hintarea" class="hintarea">d01-rooster-link</small>
+<form id="d01-rooster-link-form">
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="The heuris ... w at dawn." id="d01-rooster-link-1" w="14" name="d01-rooster-link" hint="Good job!" show_hints="TRUE"> The heuristic rule that roosters crow at dawn.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="The fact t ... s a sound." id="d01-rooster-link-2" w="32" name="d01-rooster-link" hint="Not on target." show_hints="TRUE"> The fact that dawn always occurs when a rooster makes a sound.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="A formal p ...  occurred." id="d01-rooster-link-3" w="32" name="d01-rooster-link" hint="No." show_hints="TRUE"> A formal proof that dawn has occurred.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="A measurem ... me of day." id="d01-rooster-link-4" w="32" name="d01-rooster-link" hint="Oops!" show_hints="TRUE"> A measurement of the time of day.</p>
+<p></p>
+<input type="radio" class="devoirs-mcq" name="d01-rooster-link" id="d01-rooster-link.null" style="display: none;" w="skipped" checked="">
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for d01-rooster-link.');
+      const form = document.getElementById('d01-rooster-link-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('d01-rooster-link-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for d01-rooster-link.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for d01-rooster-link.");
+          localStorage.setItem('d01-rooster-link-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</div>
+<p><!-- end of exr-dingo-iron-rug --></p>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<!--
+id: "zebra-forget-candy"
+created: "Thu Oct 15 12:08:25 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-zebra-forget-candy" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> A <strong>heuristic</strong> is a reasoning link that is useful but is not guaranteed to be correct.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-dig-hintarea" class="hintarea">D-01-dig</small>
+<form id="D-01-dig-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-dig-1" w="29" name="D-01-dig" hint="Correct." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-01-dig-2" w="3" name="D-01-dig" hint="Incorrect choice." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-dig" id="D-01-dig.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-dig.');
+      const form = document.getElementById('D-01-dig-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-dig-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-dig.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-dig.");
+          localStorage.setItem('D-01-dig-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-zebra-forget-candy --></p>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<!--
+id: "maple-forgive-socks"
+created: "Thu Oct 15 12:09:46 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-maple-forgive-socks" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> Which statement best describes <strong>formal reasoning</strong> as used in this chapter?</p>
+<div class="cell">
+<span> <small style="color: grey;" id="d01-formal-hintarea" class="hintarea">d01-formal</small>
+<form id="d01-formal-form">
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It uses li ... s certain." id="d01-formal-1" w="35" name="d01-formal" hint="Excellent!" show_hints="TRUE"> It uses links governed by rules that are accepted as certain.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It is reas ... mon sense." id="d01-formal-2" w="32" name="d01-formal" hint="Not on target." show_hints="TRUE"> It is reasoning based only on common sense.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It is alwa ... ituations." id="d01-formal-3" w="87" name="d01-formal" hint="You might think so, but ..." show_hints="TRUE"> It is always about real-world situations.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It cannot  ... an errors." id="d01-formal-4" w="7" name="d01-formal" hint="No." show_hints="TRUE"> It cannot contain human errors.</p>
+<p></p>
+<input type="radio" class="devoirs-mcq" name="d01-formal" id="d01-formal.null" style="display: none;" w="skipped" checked="">
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for d01-formal.');
+      const form = document.getElementById('d01-formal-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('d01-formal-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for d01-formal.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for d01-formal.");
+          localStorage.setItem('d01-formal-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</div>
+<p><!-- end of exr-maple-forgive-socks --></p>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<!--
+id: "cow-lie-bed"
+created: "Thu Oct 15 12:10:51 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-cow-lie-bed" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7</strong></span> A premise is a statement assumed to be true for the purpose of formal reasoning.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-jar-hintarea" class="hintarea">D-01-jar</small>
+<form id="D-01-jar-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-jar-1" w="41" name="D-01-jar" hint="Right on the nose!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-01-jar-2" w="19" name="D-01-jar" hint="Not quite right." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-jar" id="D-01-jar.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-jar.');
+      const form = document.getElementById('D-01-jar-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-jar-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-jar.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-jar.");
+          localStorage.setItem('D-01-jar-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-cow-lie-bed --></p>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<!--
+id: "puppy-think-hat"
+created: "Thu Oct 15 12:11:59 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-puppy-think-hat" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8</strong></span> Why can formal reasoning give misleading results when it is applied to a real-world situation?</p>
+<div class="cell">
+<span> <small style="color: grey;" id="d01-premises-hintarea" class="hintarea">d01-premises</small>
+<form id="d01-premises-form">
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="The premis ... situation." id="d01-premises-1" w="8" name="d01-premises" hint="A win!" show_hints="TRUE"> The premises used in the formal reasoning may not accurately represent the real-world situation.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Formal rea ...  reliable." id="d01-premises-2" w="32" name="d01-premises" hint="No." show_hints="TRUE"> Formal reasoning is never reliable.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Formal rea ... ical data." id="d01-premises-3" w="19" name="d01-premises" hint="Oops!" show_hints="TRUE"> Formal reasoning always uses numerical data.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Formal rea ...  computer." id="d01-premises-4" w="32" name="d01-premises" hint="You're mistaken" show_hints="TRUE"> Formal reasoning cannot be carried out by a computer.</p>
+<p></p>
+<input type="radio" class="devoirs-mcq" name="d01-premises" id="d01-premises.null" style="display: none;" w="skipped" checked="">
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for d01-premises.');
+      const form = document.getElementById('d01-premises-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('d01-premises-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for d01-premises.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for d01-premises.");
+          localStorage.setItem('d01-premises-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</div>
+<p><!-- end of exr-puppy-think-hat --></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Models as bridges
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">A</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">B</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">D</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">E</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false" href="">F</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false" href="">G</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-8" role="tab" aria-controls="tabset-2-8" aria-selected="false" href="">H</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<!--
+id: "dingo-wish-piano"
+created: "Thu Oct 15 12:12:57 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-dingo-wish-piano" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9</strong></span> A model is a <strong>representation</strong> of an item, process, or setting of interest.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-lade-hintarea" class="hintarea">D-01-lade</small>
+<form id="D-01-lade-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-lade-1" w="5" name="D-01-lade" hint="You've got it!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-01-lade-2" w="7" name="D-01-lade" hint="You're mistaken" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-lade" id="D-01-lade.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-lade.');
+      const form = document.getElementById('D-01-lade-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-lade-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-lade.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-lade.");
+          localStorage.setItem('D-01-lade-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-dingo-wish-piano --></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<!--
+id: "goat-shut-pen"
+created: "Thu Oct 15 12:13:29 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-goat-shut-pen" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10</strong></span> Which statement best expresses the role of a quantitative model in this book?</p>
+<div class="cell">
+<span> <small style="color: grey;" id="d01-model-bridge-hintarea" class="hintarea">d01-model-bridge</small>
+<form id="d01-model-bridge-form">
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It bridges ... reasoning." id="d01-model-bridge-1" w="41" name="d01-model-bridge" hint="Right!" show_hints="TRUE"> It bridges real-world givens and the power of formal reasoning.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It replace ... xact copy." id="d01-model-bridge-2" w="3" name="d01-model-bridge" hint="Think again." show_hints="TRUE"> It replaces the real world with a mathematically exact copy.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It guarant ...  are true." id="d01-model-bridge-3" w="19" name="d01-model-bridge" hint="Sorry!" show_hints="TRUE"> It guarantees that conclusions about the real world are true.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="It elimina ... reasoning." id="d01-model-bridge-4" w="3" name="d01-model-bridge" hint="Incorrect." show_hints="TRUE"> It eliminates the need for heuristic reasoning.</p>
+<p></p>
+<input type="radio" class="devoirs-mcq" name="d01-model-bridge" id="d01-model-bridge.null" style="display: none;" w="skipped" checked="">
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for d01-model-bridge.');
+      const form = document.getElementById('d01-model-bridge-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('d01-model-bridge-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for d01-model-bridge.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for d01-model-bridge.");
+          localStorage.setItem('d01-model-bridge-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</div>
+<p><!-- end of exr-goat-shut-pen --></p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<!--
+id: "elephant-walk-fridge"
+created: "Thu Oct 15 12:14:08 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-elephant-walk-fridge" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11</strong></span> Building a quantitative model is itself an exercise in formal reasoning.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-dot-hintarea" class="hintarea">D-01-dot</small>
+<form id="D-01-dot-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-dot-1" w="19" name="D-01-dot" hint="Model construction uses knowledge, understanding, and belief about real-world matters together with heuristic reasoning. The completed model can then serve as a premise for formal reasoning." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-01-dot-2" w="5" name="D-01-dot" hint="Yes." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-dot" id="D-01-dot.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-dot.');
+      const form = document.getElementById('D-01-dot-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-dot-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-dot.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-dot.");
+          localStorage.setItem('D-01-dot-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-elephant-walk-fridge --></p>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<!--
+id: "leg-forget-pencil"
+created: "Thu Oct 15 12:15:03 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-leg-forget-pencil" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 12</strong></span> Suppose a model is used to predict the effect of an intervention in a real-world situation, for instance, a medical treatment. The model produces a logically correct result, but the model itself leaves out an important feature of the real situation. Which conclusion is most consistent with the chapter?</p>
+<div class="cell" data-inline="true">
+<span> <small style="color: grey;" id="d01-model-fault-hintarea" class="hintarea">d01-model-fault</small>
+<form id="d01-model-fault-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="The formal ... situation." id="d01-model-fault-1" w="14" name="d01-model-fault" hint="A hit!" show_hints="TRUE"> The formal calculation can be correct even though the conclusion is not useful for the real-world situation. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="The formal ... tic error." id="d01-model-fault-2" w="7" name="d01-model-fault" hint="You might think so, but ..." show_hints="TRUE"> The formal calculation must contain an arithmetic error. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="The model  ... sentation." id="d01-model-fault-3" w="19" name="d01-model-fault" hint="Try again!" show_hints="TRUE"> The model must therefore be a fact rather than a representation. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Formal rea ... th models." id="d01-model-fault-4" w="23" name="d01-model-fault" hint="Incorrect." show_hints="TRUE"> Formal reasoning cannot be used with models. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d01-model-fault" id="d01-model-fault.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for d01-model-fault.');
+      const form = document.getElementById('d01-model-fault-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('d01-model-fault-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for d01-model-fault.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for d01-model-fault.");
+          localStorage.setItem('d01-model-fault-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</div>
+<p><!-- end of exr-leg-forget-pencil --></p>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<!--
+id: "falcon-bite-shelf"
+created: "Thu Oct 15 12:15:44 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-falcon-bite-shelf" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 13</strong></span> The usefulness of a model depends in part on the purpose for which the model is built.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-yak-hintarea" class="hintarea">D-01-yak</small>
+<form id="D-01-yak-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-yak-1" w="41" name="D-01-yak" hint="Correct." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-01-yak-2" w="7" name="D-01-yak" hint="Wrong." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-yak" id="D-01-yak.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-yak.');
+      const form = document.getElementById('D-01-yak-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-yak-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-yak.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-yak.");
+          localStorage.setItem('D-01-yak-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-falcon-bite-shelf --></p>
+</div>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<!--
+id: "toe-say-roof"
+created: "Thu Oct 15 12:16:30 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-toe-say-roof" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 14</strong></span> Which statement best describes the iterative nature of modeling?</p>
+<div class="cell">
+<span> <small style="color: grey;" id="d01-iterative-hintarea" class="hintarea">d01-iterative</small>
+<form id="d01-iterative-form">
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Build a mo ... en needed." id="d01-iterative-1" w="20" name="d01-iterative" hint="Yes." show_hints="TRUE"> Build a model, examine how well it captures important aspects of reality, and improve it when needed.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Build a mo ... y correct." id="d01-iterative-2" w="87" name="d01-iterative" hint="Oops!" show_hints="TRUE"> Build a model once and then treat it as permanently correct.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Replace he ... the model." id="d01-iterative-3" w="32" name="d01-iterative" hint="Better luck next time." show_hints="TRUE"> Replace heuristic reasoning with formal reasoning before building the model.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="Avoid chec ... entations." id="d01-iterative-4" w="3" name="d01-iterative" hint="Not quite right." show_hints="TRUE"> Avoid checking a model against reality because models are representations.</p>
+<p></p>
+<input type="radio" class="devoirs-mcq" name="d01-iterative" id="d01-iterative.null" style="display: none;" w="skipped" checked="">
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for d01-iterative.');
+      const form = document.getElementById('d01-iterative-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('d01-iterative-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for d01-iterative.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for d01-iterative.");
+          localStorage.setItem('d01-iterative-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</div>
+<p><!-- end of exr-toe-say-roof --></p>
+</div>
+<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
+<!--
+id: "snake-speak-sofa"
+created: "Thu Oct 15 12:17:26 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-snake-speak-sofa" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 15</strong></span> In the epidemic example, the SIR model is used to represent the connections among <strong>susceptible</strong>, <strong>infective</strong>, and <strong>recovered</strong> people.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-mair-hintarea" class="hintarea">D-01-mair</small>
+<form id="D-01-mair-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-mair-1" w="35" name="D-01-mair" hint="Spot on!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-01-mair-2" w="87" name="D-01-mair" hint="Incorrect." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-mair" id="D-01-mair.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-mair.');
+      const form = document.getElementById('D-01-mair-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-mair-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-mair.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-mair.");
+          localStorage.setItem('D-01-mair-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-snake-speak-sofa --></p>
+</div>
+<div id="tabset-2-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-8-tab">
+<!--
+id: "kid-lick-pants"
+created: "Thu Oct 15 12:18:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-kid-lick-pants" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 16</strong></span> In the epidemic example, the computer simulation is itself the model; the SIR model is merely the software used to run it.</p>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="D-01-rig-hintarea" class="hintarea">D-01-rig</small>
+<form id="D-01-rig-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-01-rig-1" w="7" name="D-01-rig" hint="The SIR description is the model. The computer program implements the model's bookkeeping and formal calculations." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-01-rig-2" w="20" name="D-01-rig" hint="Spot on!" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-01-rig" id="D-01-rig.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for D-01-rig.');
+      const form = document.getElementById('D-01-rig-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('D-01-rig-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for D-01-rig.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for D-01-rig.");
+          localStorage.setItem('D-01-rig-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p><!-- end of exr-kid-lick-pants --></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

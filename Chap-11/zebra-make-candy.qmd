@@ -9,7 +9,7 @@ chapter: 11
 topic: "likelihood increases as the hypothesis is a better match to the data"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-zebra-make-candy}

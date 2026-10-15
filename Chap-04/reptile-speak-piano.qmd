@@ -1,10 +1,11 @@
 <!--
 id: "reptile-speak-piano"
 created: "Tue Oct 14 17:43:28 2025"
-attribution: TBA
-status: "sketch"
+attribution: DTK
+status: ready-to-use
 chapter: 4
-mode: "outline"
+mode: "drill"
+topic: "motion"
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,6 +13,93 @@ mode: "outline"
 
 
 ::: {#exr-reptile-speak-piano}
-Velocity as a rate of change of position w.r.t. time. Acceleration as a rate of change of velocity w.r.t. time. Velocity has dimension L/T. Acceleration has dimension (L/T)/T or {{< var dim.acceleration >}}
+Consider a bicyclist pedalling along a straight road. There are distance markers every tenth of a mile, so the cyclist can note her position easily.
+
+1. What is the dimension of the biker's position along the road?
+
+```{mcq}
+#| label: rsp-7cks-1
+#| inline: true
+1. L [correct]
+2. L/T
+3. (L/T)/T
+4. None of the above
+```
+
+2. What is the dimension of speed along the road?
+
+```{mcq}
+#| label: rsp-7cks-2
+#| inline: true
+1. L
+2. L/T [correct]
+3. (L/T)/T
+4. None of the above
+```
+
+3. Is speed a simple or compound ratio?
+
+```{mcq}
+#| label: rsp-7cks-3
+#| inline: true
+1. Simple ratio [correct]
+2. Compound ratio
+3. Neither 
+```
+
+4. Speed is a rate of change. Explain why?
+
+```{mcq}
+#| label: rsp-7cks-4
+1. No. Speed is the current position divided by the current time of day.
+2. No. Speed is the change in current position divided by the current time of day.
+3. Yes. Speed is the change in position divided by the change in time over which the position changed. [correct]
+4. Yes. Time is always changing. [hint: It's true that time is always changing, but this alone does not define speed.]
+```
+
+The bicyclist has just crested a hill and is not speeding up. While speed tells how position changes with respect to time, "speeding up" is a synonym for *acceleration*. 
+
+5. Which of these corresponds to acceleration?
+
+```{mcq}
+#| label: rsp-7cks-5
+1. A change in speed. [hint: Acceleration is a *rate of change*.]
+2. A change in position. [hint: Acceleration is specifically about the change in speed, not just position.]
+3. A change in speed *with respect to* a change in time. [correct]
+4. A change in speed *with respect to* a change in position. [hint: While position is changing along with the speed, acceleration specifically refers to the change in speed with respect to the change in time during which the change of speed is accomplished.]
+```
+
+6. What is the dimension of a *change in position*?
+
+```{mcq}
+#| label: rsp-7cks-6
+#| inline: true
+1. L [correct]
+2. L/T 
+3. (L/T)/T 
+4. None of the above
+```
+
+7. What is the dimension of a *change in speed*?
+
+```{mcq}
+#| label: rsp-7cks-7
+#| inline: true
+1. L
+2. L/T [correct]
+3. (L/T)/T 
+4. None of the above
+```
+
+8. What is the dimension of a *change in speed* with respect to a *change in time*?
+
+```{mcq}
+#| label: rsp-7cks-8
+#| inline: true
+1. L [hint: This would be the dimension of a change in position.]
+2. L/T [hint: This would be the dimension of a change in speed.]
+3. (L/T)/T [correct]
+4. None of the above
+```
 :::
  <!-- end of exr-reptile-speak-piano -->

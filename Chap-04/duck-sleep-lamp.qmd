@@ -2,9 +2,10 @@
 id: "duck-sleep-lamp"
 created: "Wed Oct 15 11:31:50 2025"
 attribution: TBA
-status: "draft"
+status: "ready-to-go"
 chapter: 4
-mode: "exercise"
+mode: "discussion"
+topic: "percent"
 -->
 
 {{< include ../exercise-header.qmd >}}

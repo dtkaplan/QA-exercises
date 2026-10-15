@@ -9,7 +9,7 @@ topic: muscle movement
 chapter: 10
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-sister-seek-window}

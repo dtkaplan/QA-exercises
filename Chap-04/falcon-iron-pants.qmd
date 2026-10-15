@@ -1,10 +1,11 @@
 <!--
 id: "falcon-iron-pants"
 created: "Mon Dec 15 16:32:53 2025"
-attribution: TBA
+attribution: DTK
 status: "ready-to-use"
 chapter: 4
 mode: "exercise"
+topic: "cooking"
 -->
 
 {{< include ../exercise-header.qmd >}}

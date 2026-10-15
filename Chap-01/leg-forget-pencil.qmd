@@ -1,0 +1,25 @@
+<!--
+id: "leg-forget-pencil"
+created: "Thu Oct 15 12:15:03 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-leg-forget-pencil}
+Suppose a model is used to predict the effect of an intervention in a real-world situation, for instance, a medical treatment. The model produces a logically correct result, but the model itself leaves out an important feature of the real situation. Which conclusion is most consistent with the chapter?
+
+```{mcq}
+#| label: d01-model-fault
+1. The formal calculation can be correct even though the conclusion is not useful for the real-world situation. [correct]
+2. The formal calculation must contain an arithmetic error.
+3. The model must therefore be a fact rather than a representation.
+4. Formal reasoning cannot be used with models.
+```
+
+:::
+ <!-- end of exr-leg-forget-pencil -->

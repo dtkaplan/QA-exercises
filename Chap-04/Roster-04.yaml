@@ -1,17 +1,17 @@
 - file: ant-spend-shoe.qmd
-  status: draft
+  status: ready-to-use
   mode: exercise
-  group: unclassified
-  rank: 1.0
+  group: exercise
+  rank: 7.0
 - file: ash-ride-window.qmd
-  status: sketch
+  status: oddity
   mode: outline
   group: unclassified
   rank: 1.0
 - file: aspen-let-shelf.qmd
   status: ready-to-use
-  mode: exercise
-  group: unclassified
+  mode: drill
+  group: AI-generated
   rank: 1.0
 - file: avoid-send-painting.qmd
   status: sketch
@@ -19,13 +19,8 @@
   group: unclassified
   rank: 1.0
 - file: bat-meet-mattress.qmd
-  status: sketch
-  mode: exercise
-  group: unclassified
-  rank: 1.0
-- file: bee-spend-magnet.qmd
   status: ready-to-use
-  mode: exercise
+  mode: drill
   group: unclassified
   rank: 1.0
 - file: beech-put-knife.qmd
@@ -33,70 +28,45 @@
   mode: discussion
   group: unclassified
   rank: 1.0
-- file: boy-speak-dish.qmd
-  status: sketch
-  mode: exercise
-  group: unclassified
-  rank: 1.0
-- file: dolphin-see-pants.qmd
-  status: sketch
-  mode: reading-question
-  group: unclassified
-  rank: 1.0
 - file: duck-sleep-lamp.qmd
-  status: draft
-  mode: exercise
-  group: unclassified
-  rank: 1.0
-- file: eagle-blow-blanket.qmd
-  status: sketch
-  mode: exercise
-  group: unclassified
+  status: ready-to-go
+  mode: discussion
+  group: discussion
   rank: 1.0
 - file: falcon-iron-pants.qmd
   status: ready-to-use
   mode: exercise
-  group: unclassified
+  group: exercise
   rank: 1.0
 - file: finger-dig-fridge.qmd
   status: ready-to-use
-  mode: reading-question
-  group: unclassified
+  mode: exercise
+  group: exercise
   rank: 1.0
 - file: kid-sail-sofa.qmd
   status: sketch
-  mode: exercise
-  group: unclassified
-  rank: 1.0
-- file: lion-understand-suitcase.qmd
-  status: ready-to-use
-  mode: reading-question
-  group: unclassified
-  rank: 1.0
-- file: maple-shut-pantry.qmd
-  status: ready-to-use
-  mode: exercise
+  mode: drill
   group: unclassified
   rank: 1.0
 - file: panda-draw-shirt.qmd
   status: ready-to-use
-  mode: exercise
-  group: unclassified
+  mode: discussion
+  group: discussion
   rank: 1.0
 - file: panda-refer-window.qmd
   status: ready-to-use
-  mode: exercise
-  group: unclassified
+  mode: drill
+  group: drill
   rank: 1.0
 - file: reptile-speak-piano.qmd
-  status: sketch
-  mode: outline
-  group: unclassified
+  status: ready-to-use
+  mode: drill
+  group: drill
   rank: 1.0
 - file: rhinosaurus-shut-fork.qmd
   status: ready-to-use
-  mode: exercise
-  group: unclassified
+  mode: drill
+  group: drill
   rank: 1.0
 - file: seahorse-bathe-knife.qmd
   status: ready-to-use
@@ -105,21 +75,16 @@
   rank: 1.0
 - file: sheep-feel-tv.qmd
   status: ~
-  mode: drill
-  group: unclassified
+  mode: ready-to-use
+  group: AI-generated
   rank: 1.0
 - file: spider-forgive-pantry.qmd
   status: draft
-  mode: exercise
-  group: unclassified
+  mode: computer skills
+  group: computer-skills
   rank: 1.0
 - file: spider-stand-ship.qmd
   status: ready-to-use
-  mode: exercise
-  group: unclassified
-  rank: 1.0
-- file: squirrel-wish-vase.qmd
-  status: sketch
-  mode: outline
+  mode: discussion
   group: unclassified
   rank: 1.0

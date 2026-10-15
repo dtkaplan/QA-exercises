@@ -9,7 +9,7 @@ chapter: 11
 topic: normalizing-to-one
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-sheep-tie-stove}

@@ -9,7 +9,7 @@ chapter: 10
 topic: "business"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-shark-point-drawer}

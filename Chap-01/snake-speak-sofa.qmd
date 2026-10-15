@@ -1,0 +1,18 @@
+<!--
+id: "snake-speak-sofa"
+created: "Thu Oct 15 12:17:26 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-snake-speak-sofa}
+In the epidemic example, the SIR model is used to represent the connections among **susceptible**, **infective**, and **recovered** people.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "D-01-mair")`
+:::
+ <!-- end of exr-snake-speak-sofa -->

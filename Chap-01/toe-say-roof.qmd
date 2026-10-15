@@ -1,0 +1,25 @@
+<!--
+id: "toe-say-roof"
+created: "Thu Oct 15 12:16:30 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-toe-say-roof}
+Which statement best describes the iterative nature of modeling?
+
+```{mcq}
+#| label: d01-iterative
+1. Build a model, examine how well it captures important aspects of reality, and improve it when needed. [correct]
+2. Build a model once and then treat it as permanently correct.
+3. Replace heuristic reasoning with formal reasoning before building the model.
+4. Avoid checking a model against reality because models are representations.
+```
+
+:::
+ <!-- end of exr-toe-say-roof -->

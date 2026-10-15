@@ -1,0 +1,18 @@
+<!--
+id: "elephant-walk-fridge"
+created: "Thu Oct 15 12:14:08 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-elephant-walk-fridge}
+Building a quantitative model is itself an exercise in formal reasoning.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "D-01-dot", wrong.hint="Model construction uses knowledge, understanding, and belief about real-world matters together with heuristic reasoning. The completed model can then serve as a premise for formal reasoning.")`
+:::
+ <!-- end of exr-elephant-walk-fridge -->

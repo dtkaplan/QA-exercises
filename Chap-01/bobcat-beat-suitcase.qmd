@@ -1,0 +1,19 @@
+<!--
+id: "bobcat-beat-suitcase"
+created: "Thu Oct 15 12:06:03 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-bobcat-beat-suitcase}
+Hearing a rooster crow is a direct observation that it is dawn.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "D-01-elf", wrong.hint="The rooster sound is a given. 'It is dawn' is a belief reached by reasoning from the given.")`
+:::
+ <!-- end of exr-bobcat-beat-suitcase -->

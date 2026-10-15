@@ -9,7 +9,7 @@ topic: regression
 chapter: 9
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 TURN THIS INTO A COMPUTING EXERCISE ABOUT REGRESSION
 

@@ -9,7 +9,7 @@ chapter: 14
 topic: "Partial and total derivatives"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-dog-drink-cotton}

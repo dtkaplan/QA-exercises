@@ -9,7 +9,7 @@ chapter: 12
 topic: "Ballistic missile defense"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-arm-build-bolt}

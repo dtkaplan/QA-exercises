@@ -1,0 +1,18 @@
+<!--
+id: "dingo-wish-piano"
+created: "Thu Oct 15 12:12:57 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-dingo-wish-piano}
+A model is a **representation** of an item, process, or setting of interest.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "D-01-lade")`
+:::
+ <!-- end of exr-dingo-wish-piano -->

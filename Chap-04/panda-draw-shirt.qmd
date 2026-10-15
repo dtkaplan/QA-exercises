@@ -1,33 +1,55 @@
 <!--
 id: "panda-draw-shirt"
 created: "Tue Feb 24 13:23:11 2026"
-attribution: TBA
+attribution: DTK
 status: "ready-to-use"
-chapter: 3
-mode: "exercise"
+chapter: 4
+mode: "discussion"
+topic: "finance"
 -->
 
 {{< include ../exercise-header.qmd >}}
 
 ::: {#exr-panda-draw-shirt}
-The US government debt (usually called the "National Debt") is approximately $40 trillion as of early 2026. Written out, that's $40,000,000,000,000. Or, $`4e13`.
+The US government debt (usually called the "National Debt") is approximately $40 trillion as of early 2026. Written out, that's $40,000,000,000,000. Or, $4e13.
 
-The "gross domestic product" (GDP) of the US is about $30 trillion per year. The per-year is important. It's the same as $2.5 trillion per month, or $1 million per second, or $3000 trillion per century. 
+The "gross domestic product" (GDP) of the US is about $30 trillion per year. The per-year is important. It's the same quantity as $2.5 trillion per month, or $1 million per second, or $3000 trillion per century. 
 
 Economic journalists often describe the debt condition of a country as ratio of debt to GDP. For instance, looking at the amounts $40 and $30 trillion, they would measure the US debt is 125% of GDP. A journalist's rule of thumb is that ratios above 100% are a sign of trouble.
 
-But, since GDP can also be measured as $3000 trillion per century, wouldn't it be right to say that the ratio of debt to GDP is 1%?  Explain why or why not the 125% figure is meaningful.
+1. What is the dimension of the quantity Debt/GDP?
 
-`r devoirs::devoirs_text("pds-hgl")`
+```{mcq}
+#| label: pds-1-dimension
+#| inline: true
+1. Dimensionless 
+2. Time [correct]
+3. Money^-1^
+4. Time^-1^
+```
 
-::: {.callout-tip collapse=true}
-Comparing GDP (dimension W T^-1^) with government debt (dimension W) only makes sense if we are interested in extracting the T component. The ratio Debt/GDP has dimension T. Whichever way we choose to denominate GDP (per year, per second, per centure), Debt/GDP will be a measure of time. The 125% should really be stated as 1.25 years, or using the per century denomination, 0.0125 centuries. Same thing.
 
-It's not clear what the proper quantity, 1.25 years, tells us about the economic situation. It's not like we are going to make everybody work for 1.25 years with zero take-home pay in order to pay off the debt. It's not even clear whether the debt needs to be paid down.
+Comparing GDP (dimension W T^-1^) with government debt (dimension W) makes sense only if we are interested in extracting the T component. The journalists' ratio of "125%" should really be stated as 1.25 years.
 
-Maybe it would be better to think of debt in terms of how much it costs to carry it. For instance, at an interest rate of 5%, it costs $\$30 $\times 0.05 = \$1.5$ trillion each year to "pay for" the debt. If this money could be invested in the economy or in human capital, it would be a big deal. But we also benefit in an ongoing way from the historical investment of $1.5 trillion/year that was enabled by the debt.
+It is unclear what fundamental justification there is for treating a ratio of 1 year as the threshold for concern. Among other things, there are many other forms of debt: state and local government debt ($4 trillion in 2026), corporate debt ($16 trillion in 2026), and consumer debt ($18 trillion in 2026), which are not captured in the national debt figure. Add to this about $5 trillion in unfunded liabilities for state and local public pensions, $8 trillion for Federal civil and military pensions, and $25 trillion in the net present value of unfunded Social Security benefits. These figures total $76 trillion, about double the so-called "national debt."
 
-:::
+More fundamentally, the Dept/GDP ratio says little about how expensive the debt is, that is, how much it costs to service the debt each year. `r xf("fig-pds-23s")` shows a fairly stable pattern of Dept/GDP over the last 15 years (excluding the 2020 spike in the COVID-19 pandemic). But the interest-expense/GDP ratio shows substantial changes over the last five years.
+
+```{r}
+#| label: fig-pds-23s
+#| echo: false
+#| fig-cap: "US National Debt to GDP Ratio with Interest Expense (2010-2026). [Data source](https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/)"
+library(ggplot2)
+USstats <- readr::read_csv("../www/US_Debt_2010_2026.csv")
+ggplot(USstats, aes(x = FY, y = Debt/GDP)) +
+  geom_line() +
+  geom_line(aes(y = 20*InterestExpense/GDP), color="blue") +
+  theme_minimal(base_size = 14 ) +
+  scale_y_continuous(limits=c(0,2), sec.axis = sec_axis(~./20, name = "Interest Expense/GDP")) +
+  geom_text(aes(label = "Interest Expense", y = 0.6, x = 2015), color = "blue") +
+  geom_text(aes(label = "National Debt", y = 1.5, x = 2015)) +
+  labs(x = "Year", y = "Debt/GDP")
+```
 
 :::
  <!-- end of exr-panda-draw-shirt -->

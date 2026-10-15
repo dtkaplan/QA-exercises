@@ -9,7 +9,7 @@ chapter: 10
 topic: "shadow-price and domination
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-puppy-stand-shirt}

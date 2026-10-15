@@ -1,0 +1,42 @@
+---
+number-offset: 11
+crossref:
+  exr-title: "Drill 12."
+---
+
+# Drill Questions: Bayesian reasoning 
+
+```{r include=FALSE}
+source("_start-up.R")
+```
+
+{{< include _devoirs.qmd >}}
+
+`r devoirs::push_answer_style("block")`
+
+:::: {.callout-note}
+## B. Odds and probabilities
+
+::: {.panel-tabset}
+
+## 1. 
+
+{{< include _exercises/finch-teach-kayak.qmd >}}
+
+## 2.
+
+{{< include _exercises/pony-do-suitcase.qmd >}}
+
+## 3.
+
+{{< include _exercises/panda-cost-door.qmd >}}
+
+
+
+:::
+
+::::
+
+
+
+

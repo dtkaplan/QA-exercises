@@ -9,7 +9,7 @@ group: computer-exercises
 topic: nonlinear-regression
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 ::: {#exr-frog-lay-plate}
 TURN THIS INTO AN ILLUSTRATION OF NONLINEAR REGRESSION/Machine learning.

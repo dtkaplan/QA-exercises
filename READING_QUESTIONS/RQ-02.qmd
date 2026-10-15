@@ -1,0 +1,19 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 2 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../Chap-02/puppy-break-mattress.qmd >}}
+
+
+:::

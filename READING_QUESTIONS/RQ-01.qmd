@@ -1,0 +1,40 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 1 Reading Questions"
+---
+
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../Chap-01/ant-catch-roof.qmd >}}
+
+## 2
+
+{{< include ../Chap-01/seahorse-enjoy-closet.qmd >}}
+
+## 3
+
+{{< include ../Chap-01/giraffe-read-coat.qmd >}}
+
+## 4
+
+{{< include ../Chap-01/eagle-seek-clock.qmd >}}
+
+## 5
+
+{{< include ../Chap-01/frog-dig-pot.qmd >}}
+
+## 6
+
+
+
+
+:::

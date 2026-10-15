@@ -9,7 +9,7 @@ chapter: 10
 topic: "multiple objectives"
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-sheep-seek-radio}

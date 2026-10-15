@@ -2,16 +2,24 @@
 id: "finger-dig-fridge"
 created: "Fri Jan  9 17:37:40 2026"
 attribution: Dave Ruth
-use: Chapter 3 reading question
 status: "ready-to-use"
-chapter: 3
-mode: "reading-question"
+chapter: 4
+mode: "exercise"
+topic: "energy"
 -->
 
 {{< include ../exercise-header.qmd >}}
 
 ::: {#exr-finger-dig-fridge}
-The text discusses the "MPG Illusion," where increasing fuel economy from 10 to 20 mpg saves much more gas than increasing it from 30 to 40 mpg. Why does the European unit of Liters per 100 km (L/100km) avoid this confusion?
+
+Sometimes two rates with different dimensions are in use to describe the same phenomenon. This can lead to confusion and conflicts with intuition.
+For example, miles per gallon (MPG) and liters per 100 kilometers (L/100km) both measure fuel efficiency, but they behave differently when comparing improvements.
+
+MPG is said to measure "fuel economy" whereas L/100km measures "fuel efficiency," but it's easy to confuse these two, similar-sounding phrases.
+
+With fuel efficiency, a change from 6 L/100km to 5 L/100km represents an improvement. It reduces gas consumption by the same amount as a change from 5 L/100km to 4 L/100km.
+
+Is the same true for "fuel economy?" Does a change from 10 to 20 mpg correspond to the same savings as increasing it from 30 to 40 mpg? Explain your reasoning.
 
 `r devoirs::devoirs_text("fdf-3kse")`
 :::

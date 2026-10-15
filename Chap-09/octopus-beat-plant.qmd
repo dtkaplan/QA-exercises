@@ -7,7 +7,7 @@ status: sketch
 group: x_drafts
 -->
 
-{< include ../exercise-header.qmd >}
+{{< include ../exercise-header.qmd >}}
 
 
 ::: {#exr-octopus-beat-plant}
