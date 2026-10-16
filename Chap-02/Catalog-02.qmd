@@ -104,13 +104,6 @@ title: "Chapter 02 Catalog"
 
 {{< include kitten-bend-door.qmd >}}
 
-## pony-meet-window
-
-
-> File: Chap-02/pony-meet-window.qmd
-
-{{< include pony-meet-window.qmd >}}
-
 ## seaweed-bend-laundry
 
 

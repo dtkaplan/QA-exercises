@@ -1,0 +1,30 @@
+<!--
+id: "girl-sleep-candy"
+created: "Fri Oct 16 11:50:09 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-girl-sleep-candy}
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 942), 
+  seed = 218, 
+  domain(x = 0:5), 
+  id = "D-07-desk")
+Prob$P
+```
+
+`r Prob$Q`
+
+:::
+ <!-- end of exr-girl-sleep-candy -->

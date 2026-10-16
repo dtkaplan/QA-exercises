@@ -1,0 +1,26 @@
+<!--
+id: "dolphin-hit-mattress"
+created: "Fri Oct 16 10:30:36 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-dolphin-hit-mattress}
+A population rises from `2,000` to `20,000`. How many orders of magnitude larger is the new population?
+
+```{mcq}
+#| label: d05-order-01
+#| inline: true
+1. `1` [correct]
+2. `2`
+3. `10`
+4. `18`
+```
+:::
+ <!-- end of exr-dolphin-hit-mattress -->

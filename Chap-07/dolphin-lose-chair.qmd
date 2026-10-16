@@ -1,0 +1,29 @@
+<!--
+id: "dolphin-lose-chair"
+created: "Fri Oct 16 12:06:54 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-dolphin-lose-chair}
+```{r}
+#| echo: false
+drill::slope_question(2187, mosaicCalc::domain(y = -5:5))
+```
+
+a. Is there any input for which the function's rate of change is -1? (Think before answering.)
+
+`r devoirs::devoirs_set(c("yes", "no"), correct = "yes", id="D-07-hog", sort = TRUE)`
+
+b. At what input does the rate of change of the function go from negative to positive?
+
+`r devoirs::devoirs_set(c(-2.4, -1, -0.5, 1.25), correct = -0.5, id="D-07-dot", sort = TRUE)`
+
+:::
+ <!-- end of exr-dolphin-lose-chair -->

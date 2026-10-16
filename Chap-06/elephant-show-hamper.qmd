@@ -1,0 +1,34 @@
+<!--
+id: "elephant-show-hamper"
+created: "Fri Oct 16 11:19:45 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 06
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-elephant-show-hamper}
+Consider a function defined as follows:
+
+```r
+heat_index <- function(temperature, humidity) {
+  # algorithm
+}
+```
+
+Which function invocation correctly supplies the arguments by name rather than by position?
+
+```{mcq}
+#| label: d06-interface-01
+1. `heat_index(30, 0.80)`
+2. `heat_index(temperature = 30, humidity = 0.80)` [correct]
+3. `heat_index(30 = temperature, 0.80 = humidity)`
+4. `heat_index(temperature, humidity)`
+```
+
+:::
+ <!-- end of exr-elephant-show-hamper -->

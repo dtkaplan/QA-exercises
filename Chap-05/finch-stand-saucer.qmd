@@ -1,0 +1,26 @@
+<!--
+id: "finch-stand-saucer"
+created: "Fri Oct 16 10:30:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-finch-stand-saucer}
+A sound level changes from `10^-6 W/m^2` to `10^-3 W/m^2`. By how many orders of magnitude did the power density increase? 
+
+```{mcq}
+#| label: d05-order-02
+#| inline: true
+1. `1`
+2. `2`
+3. `3`  [correct]
+4. `4`
+```
+:::
+ <!-- end of exr-finch-stand-saucer -->

@@ -1,0 +1,58 @@
+<!--
+id: "lobster-get-hamper"
+created: "Fri Oct 16 10:19:27 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 04
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-lobster-get-hamper}
+You're thinking about going into business hauling packages in your car. Naturally, you want to know if adding cargo weight will cost you extra in gasoline. So you did an experiment.
+
+1. You measured your van's fuel economy *without* cargo: 25 mpg
+2. You added 500 lbs cargo and again measured fuel economy: 23 mpg
+
+**Questions**:
+
+a) What is the rate of change of fuel economy with respect to cargo weight?
+
+```{mcq}
+#| label: d03-fuel-a
+1. -0.46 mpg per lb. [hint: Sorry. Remember to look at the *change* in each quantity, not the absolute amount of the quantity.]
+2. -0.004 mpg per lb. [correct]
+3. 0.004 mpg per lb. [hint: Think again. Extra cargo cause fuel economy to go down, so the rate of change should be *negative*.]
+4. -0.004 lb per mpg [hint: The units are upside down. The units of the with-respect-to quantity should be on the bottom.]
+```
+
+-----
+
+Oops! You charge shipping using a rate of dollars per (pound mile). But you forgot to weight the cargo before heading out. You drive 100 miles and consume 4.8 gallons of fuel. The same trip without cargo would consume 4.1 gallons of fuel. What is the weight of your cargo (in lbs.)? (Hint: You'll need the rate of change from question (a), or maybe you need its reciprocal.)
+
+(b) What's your miles per gallon without cargo, according to your measurements? (All the choices below have units of miles per gallon.)
+
+`r devoirs::devoirs_set(choices = c(24.4, 20.8, 0.041, 0.48, round(runif(5, min = 20, max = 30), 1)), correct = 24.4, id = "D-04-cat", n=5)`
+
+-----
+
+(c) What's your miles per gallon with cargo, according to your measurement? (All the choices below have units of miles per gallon.)
+
+`r devoirs::devoirs_set(choices = c(24.4, 20.8, 0.041, 0.48, round(runif(5, min = 20, max = 30), 1)), correct = 20.8, id = "D-04-bat", n=5)`
+
+-----
+
+(d) What's the change in miles per gallon produced by the cargo weight? (All the choices below have units of miles per gallon.)
+
+`r devoirs::devoirs_set(choices = round(runif(10, min = -4.7, max = 4.7)), correct = -3.6, id = "D-04-men", n=5)`
+
+-----
+
+(e) To convert the change in miles per gallon to a cargo weight, will you divide or multiply by the rate of change in part (a)?
+
+`r devoirs::devoirs_set(choices=c("multiply", "divide", "neither"), correct = "divide", n = 3, id = "D-04-fair")`
+:::
+ <!-- end of exr-lobster-get-hamper -->

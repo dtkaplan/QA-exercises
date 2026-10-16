@@ -1,0 +1,29 @@
+<!--
+id: "finger-dive-oven"
+created: "Fri Oct 16 11:51:15 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-finger-dive-oven}
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 1642), 
+  seed = 121, 
+  domain(x = 0:5), 
+  id = "D-07-east")
+Prob$P
+```
+
+`r Prob$Q`
+:::
+ <!-- end of exr-finger-dive-oven -->

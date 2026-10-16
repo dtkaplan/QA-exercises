@@ -19,6 +19,10 @@ project:
     - DRILL/Drill-01.qmd
     - DRILL/Drill-02.qmd
     - DRILL/Drill-03.qmd
+    - DRILL/Drill-04.qmd
+    - DRILL/Drill-05.qmd
+    - DRILL/Drill-06.qmd
+    - DRILL/Drill-07.qmd
     - READING_QUESTIONS/RQ-01.qmd
     - EXERCISES/Exer-??.qmd
 

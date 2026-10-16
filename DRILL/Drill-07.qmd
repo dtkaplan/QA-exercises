@@ -1,166 +1,109 @@
 ---
-number-offset: 6
-crossref:
-  exr-title: "Drill 7."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 7 Drill Questions"
 ---
 
-## Suggested question 1
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-Consider a function whose horizontal axis is labeled `temperature` and whose vertical axis is labeled `comfort`. Which statement is correct?
-
-```{mcq}
-#| label: d06-input-output-01
-1. Temperature is the output and comfort is the input.
-2. Comfort is the output and temperature is the input. [correct]
-3. Both temperature and comfort are outputs.
-4. The graph does not show either input or output.
+```{r include = FALSE}
+library(mosaicCalc)
+library(QRA)
+library(drill)
 ```
-
-## Suggested question 2
-
-A function has two inputs, `temperature` and `humidity`, and one output, `heat index`. How many arguments does the function have?
-
-`r devoirs::devoirs_set(choices = "D-07-made", correct = 2, id = "d06-input-output-02")`
-
-## Suggested question 3
-
-A slice plot shows monthly mortgage payment on the vertical axis and interest rate on the horizontal axis. The curve rises from left to right. What happens to the monthly payment as the interest rate increases?
-
-```{mcq}
-#| label: d06-input-output-03
-1. It decreases.
-2. It stays constant.
-3. It increases. [correct]
-4. It first increases and then decreases.
-```
-
-## Suggested question 4
-
-A contour plot has one input on each axis. What does movement along a single contour represent?
-
-```{mcq}
-#| label: d06-input-output-04
-1. The output remains constant. [correct]
-2. The first input remains constant.
-3. Both inputs remain constant.
-4. The output changes at the fastest possible rate.
-```
-
-## Suggested question 5
-
-A function's graph rises as the input increases, but its slope becomes less steep. Which description best fits the graph?
-
-```{mcq}
-#| label: d06-input-output-05
-1. The function is decreasing.
-2. The function is increasing with diminishing slope. [correct]
-3. The function is constant.
-4. The function has no output.
-```
-
-:::
-::::
-
-:::: {.callout-note collapse=true}
-## Function interfaces, algorithms, and models
-
-
-
-# Drill Questions: Basic Functions
 
 ```{r include=FALSE}
-source("_start-up.R")
+source("../_exercise_startup.R")
 ```
 
-
-
-{{< include _devoirs.qmd >}}
+{{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
 
+:::: {.panel-tabset collapse=true}
+## Core Modeling Functions Reference
+
 ::: {#fig-core-modeling-gallery-832 layout-ncol=4}
-![`flat()`](www/flat_graph.png)
 
-![`same()`](www/same-graph.png)
+![`flat()`](../www/flat_graph.png)
 
-![`exp2()`](www/double_graph.png)
+![`same()`](../www/same_graph.png)
 
-![`log2()`](www/log2(_graph.png)
+![`exp2()`](../www/exp2_graph.png)
 
-![`hillside()`](www/hillside_graph.png)
+![`log2()`](../www/log2_graph.png)
 
-![`hill()`](www/hill_graph.png)
+![`hillside()`](../www/hillside_graph.png)
 
-![`osc`](www/osc_graph.png)
+![`hill()`](../www/hill_graph.png)
 
-![`recip()`](www/recip_graph.png)
+![`osc`](../www/osc_graph.png)
+
+![`recip()`](../www/recip_graph.png)
 
 
 "Official" portraits of the core modeling functions.
 :::
+::::
 
 :::: {.callout-note collapse=true}
 ## Shapes
 
-`r cc <- drill::new_drill_counter()`
-`r id <- "d07"`
-
 ::: {.panel-tabset}
-## `r cc()`
+## a.
 
-{{< include _exercises/pig-say-pen.qmd >}}
+{{< include ../Chap-07/pig-say-pen.qmd >}}
 
-## `r cc()`
+## b.
 
-{{< include _exercises/lion-have-boat.qmd >}}
+{{< include ../Chap-07/lion-have-boat.qmd >}}
 
-## `r cc()`
+## c.
 
-{{< include _exercises/avoid-refer-fridge.qmd >}}
+{{< include ../Chap-07/avoid-refer-fridge.qmd >}}
 
-## `r cc()` 
+## d. 
 
-{{< include _exercises/squirrel-type-sofa.qmd >}}
+{{< include ../Chap-07/squirrel-type-sofa.qmd >}}
 
-## `r cc()` 
+## e.
 
-{{< include _exercises/girl-sleep-linen.qmd >}}
+{{< include ../Chap-07/girl-sleep-linen.qmd >}}
 
-## `r cc()`
+## f.
 
-{{< include _exercises/spruce-lie-kayak.qmd >}}
+{{< include ../Chap-07/spruce-lie-kayak.qmd >}}
 
-## `r cc()`
+## g.
 
-{{< include _exercises/tiger-blow-shoe.qmd >}}
+{{< include ../Chap-07/tiger-blow-shoe.qmd >}}
 
-## `r cc()`
+## h.
 
-{{< include _exercises/sister-bite-gloves.qmd >}}
+{{< include ../Chap-07/sister-bite-gloves.qmd >}}
 
-## `r cc()`
+## i.
 
-{{< include _exercises/finch-ring-magnet.qmd >}}
+{{< include ../Chap-07/finch-ring-magnet.qmd >}}
 
-## `r cc()`
+## j.
 
-{{< include _exercises/reptile-take-socks.qmd >}}
+{{< include ../Chap-07/reptile-take-socks.qmd >}}
 
-## `r cc()`
+## k.
 
-{{< include _exercises/monkey-meet-laundry.qmd >}}
+{{< include ../Chap-07/monkey-meet-laundry.qmd >}}
 
-## `r cc()`
+## l.
 
-{{< include _exercises/gator-trim-bed.qmd >}}
+{{< include ../chap-07/gator-trim-bed.qmd >}}
 
-## `r cc()`
+## m.
 
-{{< include _exercises/shark-choose-bed.qmd >}}
+{{< include ../Chap-07/shark-choose-bed.qmd >}}
 
-## `r cc()`
+## n.
 
-{{< include _exercises/bee-light-kayak.qmd >}}
+{{< include ../Chap-07/bee-light-kayak.qmd >}}
 
 :::
 
@@ -169,45 +112,37 @@ source("_start-up.R")
 :::: {.callout-note collapse=true}
 ## Function properties
 
-`r cc <- drill::new_drill_counter()`
-`r id <- "d06"`
-
 ::: {.panel-tabset}
 
-## `r cc()`
+## 
 
-{{< include _exercises/seal-talk-room.qmd >}}
+{{< include ../Chap-07/seal-talk-room.qmd >}}
 
-## `r cc()`
+## 
 
-{{< include _exercises/girl-keep-hamper.qmd >}}
+{{< include ../Chap-07/girl-keep-hamper.qmd >}}
 
-## `r cc()`
+## 
 
-{{< include _exercises/boy-lick-book.qmd >}}
+{{< include ../Chap-07/boy-lick-book.qmd >}}
 
+## 
 
-## `r cc()`
+{{< include ../Chap-07/bear-iron-rug.qmd >}}
 
-{{< include _exercises/bear-iron-rug.qmd >}}
+## 
 
+{{< include ../Chap-07/sheep-write-jacket.qmd >}}
 
+## 
 
-## `r cc()`
-
-{{< include _exercises/sheep-write-jacket.qmd >}}
-
-## `r cc()`
-
-{{< include _exercises/fox-burn-spoon.qmd >}}
+{{< include ../Chap-07/fox-burn-spoon.qmd >}}
 
 
 :::
 
 ::::
 
-`r cc <- drill::new_drill_counter()`
-`r id <- "d06c"`
 
 
 :::: {.callout-note collapse=true}
@@ -215,42 +150,41 @@ source("_start-up.R")
 
 ::: {.panel-tabset}
 
-## `r cc()`
+## 1.
 
-{{< include _exercises/bat-send-chair.qmd >}}
+{{< include ../Chap-07/bat-send-chair.qmd >}}
 
-## `r cc()`
+## 2.
 
-{{< include _exercises/boy-serve-kitchen.qmd >}}
+{{< include ../Chap-07/boy-serve-kitchen.qmd >}}
 
-## `r cc()`
+## 3.
 
-{{< include _exercises/kangaroo-hurt-bowl.qmd >}}
+{{< include ../Chap-07/kangaroo-hurt-bowl.qmd >}}
 
-## `r cc()`
+## 4.
 
-{{< include _exercises/ash-hang-saw.qmd >}}
+{{< include ../Chap-07/ash-hang-saw.qmd >}}
 
-## `r cc()`
+## 5.
 
-{{< include _exercises/pollen-close-sheet.qmd >}}
+{{< include ../Chap-07/pollen-close-sheet.qmd >}}
 
+## 6.
 
-## `r cc()`
+{{< include ../Chap-07/eagle-love-radio.qmd >}}
 
-{{< include _exercises/eagle-love-radio.qmd >}}
+## 7.
 
-## `r cc()`
+{{< include ../Chap-07/kitten-sing-ring.qmd >}}
 
-{{< include _exercises/kitten-sing-ring.qmd >}}
+## 8.
 
-## `r cc()`
+{{< include ../Chap-07/spider-hit-fork.qmd >}}
 
-{{< include _exercises/spider-hit-fork.qmd >}}
+## 9.
 
-## `r cc()`
-
-{{< include _exercises/pine-sail-kitchen.qmd >}}
+{{< include ../Chap-07/pine-sail-kitchen.qmd >}}
 
 :::
 
@@ -259,29 +193,27 @@ source("_start-up.R")
 :::: {.callout-note collapse=true}
 ## Recognizing Functions from Graphs
 
-`r cc <- drill::new_drill_counter(style = "ROMAN")`
-
 ::: {.panel-tabset}
 
-## `r cc()`
+## i.
 
-{{< include _exercises/snail-dig-pen.qmd >}}
+{{< include ../Chap-07/snail-dig-pen.qmd >}}
 
-## `r cc()`
+## ii.
 
-{{< include _exercises/pig-speak-closet.qmd >}}
+{{< include ../Chap-07/pig-speak-closet.qmd >}}
 
-## `r cc()`
+## iii.
 
-{{< include _exercises/boy-light-pot.qmd >}}
+{{< include ../Chap-07/boy-light-pot.qmd >}}
 
-## `r cc()`
+## iv.
 
-{{< include _exercises/toe-dig-pencil.qmd >}}
+{{< include ../Chap-07/toe-dig-pencil.qmd >}}
 
-## `r cc()`
+## v.
 
-{{< include _exercises/nephew-toss-gloves.qmd >}}
+{{< include ../Chap-07/nephew-toss-gloves.qmd >}}
 
 :::
 ::::
@@ -289,163 +221,42 @@ source("_start-up.R")
 :::: {.callout-note collapse=true}
 ## Function input and output
 
-`r cc <- drill::new_drill_counter()`
-`r id <- "d06"`
-
 ::: {.panel-tabset}
-## `r cc()`. 
+## A.
 
-Consider the following plot: 
+{{< include ../Chap-07/toe-cut-shelf.qmd >}}
 
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 22), 
-  seed = 6, 
-  domain(x = -5:5), 
-  id = "D-07-map")
-Prob$P
-```
+## B.
 
-`r Prob$Q`
+{{< include ../Chap-07/oak-become-bolt.qmd >}}
 
-## `r cc()`. 
+## C.
 
-Consider the following plot: 
+{{< include ../Chap-07/maple-lose-door.qmd >}}
 
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 242), 
-  seed = 18, 
-  domain(x = 0:5), 
-  id = "D-07-mail")
-Prob$P
-```
+## D.
 
-`r Prob$Q`
+{{< include ../Chap-07/pony-iron-pot.qmd >}}
 
-## `r cc()`. 
+## E.
 
-With respect to the following plot ... 
+{{< include ../Chap-07/girl-sleep-candy.qmd >}}
 
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 122), 
-  seed = 68, 
-  domain(x = -5:5), 
-  id = "D-07-ken")
-```
+## F.
 
-`r Prob$Q`
+{{< include ../Chap-07/snake-see-window.qmd >}}
 
-```{r}
-#| echo: false
-Prob$P
-```
+## G.
 
-## `r cc()`. 
+{{< include ../Chap-07/finger-dive-oven.qmd >}}
 
-Consider the following plot: 
+## H.
 
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 642), 
-  seed = 12, 
-  domain(x = 0:5), 
-  id = "D-07-oil")
-Prob$P
-```
+{{< include ../Chap-07/elm-bite-door.qmd >}}
 
-`r Prob$Q`
+## I.
 
-## `r cc()`. 
-
-Consider the following plot: 
-
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 942), 
-  seed = 218, 
-  domain(x = 0:5), 
-  id = "D-07-desk")
-Prob$P
-```
-
-`r Prob$Q`
-
-## `r cc()`. 
-
-Consider the following plot: 
-
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 1122), 
-  seed = 118, 
-  domain(x = 0:5), 
-  id = "D-07-off")
-Prob$P
-```
-
-`r Prob$Q`
-
-
-
-
-
-
-## `r cc()`. 
-
-Consider the following plot: 
-
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 1642), 
-  seed = 121, 
-  domain(x = 0:5), 
-  id = "D-07-east")
-Prob$P
-```
-
-`r Prob$Q`
-
-## `r cc()`. 
-
-Consider the following plot: 
-
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 1942), 
-  seed = 2180, 
-  domain(x = 0:5), 
-  id = "D-07-kemp")
-Prob$P
-```
-
-`r Prob$Q`
-
-## `r cc()`. 
-
-Consider the following plot: 
-
-```{r}
-#| echo: false
-Prob <- fun_output_vals(
-  mosaicCalc::doodle_fun(~ x, seed = 9122), 
-  seed = 818, 
-  domain(x = 0:5), 
-  id = "D-07-lamb")
-Prob$P
-```
-
-`r Prob$Q`
-
+{{< include ../Chap-07/ant-dive-stair.qmd >}}
 
 
 :::
@@ -455,8 +266,6 @@ Prob$P
 
 :::: {.callout-note collapse=true}
 # Rates of change
-
-`r cc <- drill::new_drill_counter(style = "ALPHA")`
 
 ::: {.panel-tabset}
 ## Explanation
@@ -480,133 +289,56 @@ There are six slopes in the red annotation. You can measure the rate of change o
 
 Notice that the slope changes along with y. This is typical of functions used for modeling. So we can speak of the slope of a function **at** a particular input. Sometimes this "at a particular input" is called the "instantaneous" slope." But we'll get to that later in the course. 
 
+## I.
 
+{{< include ../Chap-07/toe-bet-ring.qmd >}}
 
+## II.
 
+{{< include ../Chap-07/fawn-type-knife.qmd >}}
 
+## III.
 
-## `r cc()`.
+{{< include ../Chap-07/elm-have-clock.qmd >}}
 
-```{r}
-#| echo: false
-drill::slope_question(55)
-```
+## IV.
 
-a. What is the most positive rate of change for the function?
+{{< include ../Chap-07/calf-keep-fridge.qmd >}}
 
-`r devoirs::devoirs_set("D-07-bed", correct = 4, id="D-07-disk")`
+## V.
 
-b. At which of these inputs does that most positive rate of change occur?
+{{< include ../Chap-07/dolphin-lose-chair.qmd >}}
 
-`r devoirs::devoirs_set("D-07-hug", correct = 1, id="D-07-pie")`
+## VI.
 
-
-c. For what input is the rate of change practically zero?
-
-`r devoirs::devoirs_set("D-07-call", correct = 0, id="D-07-net")`
-
-## `r cc()`.
-
-```{r}
-#| echo: false
-drill::slope_question(78)
-```
-
-a. What is the rate of change when y = -2?
-
-`r devoirs::devoirs_set("D-07-gin", correct = -6, id="D-07-lip")`
-
-b. What is the rate of change when y = 3?
-
-`r devoirs::devoirs_set("D-07-pan", correct = 6, id="D-07-led")`
-
-
-c. For what input is the rate of change practically zero?
-
-`r devoirs::devoirs_set("D-07-par", correct = 1.5, id="D-07-ape")`
-
-
-## `r cc()`.
-
-```{r}
-#| echo: false
-drill::slope_question(718)
-```
-
-a. What is the rate of change when y = 0?
-
-`r devoirs::devoirs_set("D-07-fake", correct = "greater than 6", id="D-07-back", sort = TRUE)`
-
-b. At what value of the input is the function output the greatest?
-
-`r devoirs::devoirs_set("D-07-fail", correct = 1.5, id="D-07-aura")`
-
-c. What is the rate of change of the function when the input is at the value in question (b)?
-
-`r devoirs::devoirs_set("D-07-pal", correct = 0, id="D-07-fir")`
-
-d. At what value of the input is the function output the smallest?
-
-`r devoirs::devoirs_set("D-07-fair", correct = -1.5, id="D-07-jog")`
-
-e. What is the rate of change of the function when the input is at the value in question (b)?
-
-`r devoirs::devoirs_set("D-07-odd", correct = 0, id="D-07-mair")`
-
-
-## `r cc()`.
-
-```{r}
-#| echo: false
-drill::slope_question(718, mosaicCalc::domain(y = 0:10))
-```
-
-a. Reading the graph from left to right, at what value of the input does the function's slope change from positive to negative?
-
-`r devoirs::devoirs_set("D-07-nit", correct = 1.75, id="D-07-saw", sort = TRUE)`
-
-b. Still reading from left to right, at what value of the input does the function's slope change from negative to positive?
-
-`r devoirs::devoirs_set("D-07-cop", correct = 5.5, id="D-07-edit", sort = TRUE)`
-
-c. For which input is the slope of the function close to -1.5?
-
-`r devoirs::devoirs_set("D-07-jags", correct = 3, id="D-07-echo")`
-
-## `r cc()`.
-
-```{r}
-#| echo: false
-drill::slope_question(2187, mosaicCalc::domain(y = -5:5))
-```
-
-a. Is there any input for which the function's rate of change is -1? (Think before answering.)
-
-`r devoirs::devoirs_set("D-07-oar", correct = "yes", id="D-07-hog", sort = TRUE)`
-
-b. At what input does the rate of change of the function go from negative to positive?
-
-`r devoirs::devoirs_set("D-07-pack", correct = -0.5, id="D-07-dot", sort = TRUE)`
-
-## `r cc()`.
-
-```{r}
-#| echo: false
-drill::slope_question(4817, mosaicCalc::domain(y = -5:5))
-```
-
-a. For what input is the rate of change of the function about -1?
-
-`r devoirs::devoirs_set("D-07-navy", correct = 3, id="D-07-zap", sort = TRUE)`
-
-b. For what input is the rate of change of the function about +1?
-
-`r devoirs::devoirs_set("D-07-man", correct = 0.5, id="D-07-gaol", sort = TRUE)`
-
-
-
-
+{{< include ../Chap-07/pine-see-closet.qmd >}}
 
 :::
 ::::
-<!-- end of rates of change -->
+
+:::: {.callout-note collapse=true}
+## Word use
+
+::: {.panel-tabset}
+## 1.
+
+{{< include ../Chap-07/boy-walk-stair.qmd >}}
+
+## 2.
+
+{{< include ../Chap-07/deer-spend-laundry.qmd >}}
+
+## 3.
+
+{{< include ../Chap-07/hyena-fall-plant.qmd >}}
+
+## 4.
+
+{{< include ../Chap-07/pig-see-pan.qmd >}}
+
+## 5.
+
+{{< include ../Chap-07/pony-look-magnet.qmd >}}
+
+:::
+::::  

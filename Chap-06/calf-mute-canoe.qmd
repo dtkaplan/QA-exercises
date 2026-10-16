@@ -1,0 +1,25 @@
+<!--
+id: "calf-mute-canoe"
+created: "Fri Oct 16 11:23:05 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 06
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-calf-mute-canoe}
+A monthly-payment function uses only principal, interest rate, and loan duration. Which is the best reason to treat its output as a model rather than a complete description of a real mortgage payment?
+
+```{mcq}
+#| label: d06-model-05
+1. The function has inputs and therefore cannot be mathematical.
+2. Real mortgages may also involve fees, insurance, or other dimensions not included in the function. [correct]
+3. A model can never produce a numerical output.
+4. The output must always be unrelated to the inputs.
+```
+:::
+ <!-- end of exr-calf-mute-canoe -->

@@ -21,6 +21,8 @@ Each file is also a stand-along resource accessible by link. Users can navigate 
 - Chapter 3: [Reading Questions](READING_QUESTIONS/RQ-03.html) [Drill Questions](DRILL/Drill-03.html) [Exercises](EXERCISES/Exer-03.html)
 - Chapter 4: [Reading Questions](READING_QUESTIONS/RQ-04.html) [Drill Questions](DRILL/Drill-04.html) [Exercises](EXERCISES/Exer-04.html)
 - Chapter 5: [Reading Questions](READING_QUESTIONS/RQ-05.html) [Drill Questions](DRILL/Drill-05.html) [Exercises](EXERCISES/Exer-05.html)
+- Chapter 6: [Reading Questions](READING_QUESTIONS/RQ-06.html) [Drill Questions](DRILL/Drill-06.html) [Exercises](EXERCISES/Exer-06.html)
+- Chapter 7: [Reading Questions](READING_QUESTIONS/RQ-07.html) [Drill Questions](DRILL/Drill-07.html) [Exercises](EXERCISES/Exer-07.html)
 
 -----
 

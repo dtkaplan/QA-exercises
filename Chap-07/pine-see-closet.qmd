@@ -1,0 +1,29 @@
+<!--
+id: "pine-see-closet"
+created: "Fri Oct 16 12:07:32 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-pine-see-closet}
+```{r}
+#| echo: false
+drill::slope_question(4817, mosaicCalc::domain(y = -5:5))
+```
+
+a. For what input is the rate of change of the function about -1?
+
+`r devoirs::devoirs_set(c(-4.5, -3, 0, 3), correct = 3, id="D-07-zap", sort = TRUE)`
+
+b. For what input is the rate of change of the function about +1?
+
+`r devoirs::devoirs_set(c(-2, -1, 0, 0.5, 2), correct = 0.5, id="D-07-gaol", sort = TRUE)`
+
+:::
+ <!-- end of exr-pine-see-closet -->

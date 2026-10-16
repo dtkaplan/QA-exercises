@@ -1,0 +1,25 @@
+<!--
+id: "beech-toss-car"
+created: "Fri Oct 16 11:21:45 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 06
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-beech-toss-car}
+The function `heat_index(temperature, humidity)` expects temperature in degrees Celsius and humidity as a decimal between 0 and 1. Which invocation follows that documentation for 30 degrees Celsius and 80% humidity?
+
+```{mcq}
+#| label: d06-interface-02
+1. `heat_index(30, 80)`
+2. `heat_index(80, 30)`
+3. `heat_index(30, 0.80)` [correct]
+4. `heat_index(0.30, 80)`
+```
+:::
+ <!-- end of exr-beech-toss-car -->

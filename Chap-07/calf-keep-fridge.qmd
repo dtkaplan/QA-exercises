@@ -1,0 +1,32 @@
+<!--
+id: "calf-keep-fridge"
+created: "Fri Oct 16 12:06:05 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-calf-keep-fridge}
+```{r}
+#| echo: false
+drill::slope_question(718, mosaicCalc::domain(y = 0:10))
+```
+
+a. Reading the graph from left to right, at what value of the input does the function's slope change from positive to negative?
+
+`r devoirs::devoirs_set(c(1.75, 2.75, 5.5, 7.5), correct = 1.75, id="D-07-saw", sort = TRUE)`
+
+b. Still reading from left to right, at what value of the input does the function's slope change from negative to positive?
+
+`r devoirs::devoirs_set(c(1.5, 2.5, 5.5, 7.5), correct = 5.5, id="D-07-edit", sort = TRUE)`
+
+c. For which input is the slope of the function close to -1.5?
+
+`r devoirs::devoirs_set(c(1, 2, 3, 4, 5), correct = 3, id="D-07-echo")`
+:::
+ <!-- end of exr-calf-keep-fridge -->

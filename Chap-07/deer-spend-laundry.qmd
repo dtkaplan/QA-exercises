@@ -1,0 +1,19 @@
+<!--
+id: "deer-spend-laundry"
+created: "Fri Oct 16 12:18:50 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-deer-spend-laundry}
+A function has two inputs, `temperature` and `humidity`, and one output, `heat index`. How many arguments does the function have?
+
+`r devoirs::devoirs_set(choices = "D-07-made", correct = 2, id = "d06-input-output-02")`
+:::
+ <!-- end of exr-deer-spend-laundry -->

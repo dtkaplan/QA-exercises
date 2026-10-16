@@ -1,0 +1,30 @@
+<!--
+id: "toe-cut-shelf"
+created: "Fri Oct 16 11:47:52 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-toe-cut-shelf}
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 22), 
+  seed = 6, 
+  domain(x = -5:5), 
+  id = "D-07-map")
+Prob$P
+```
+
+`r Prob$Q`
+
+:::
+ <!-- end of exr-toe-cut-shelf -->

@@ -1,0 +1,54 @@
+<!--
+id: "lion-open-canoe"
+created: "Fri Oct 16 10:35:43 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-lion-open-canoe}
+For each of the following, you are asked to compare two standard notation numbers to determine which is larger. You can probably do this at a glance, but we ask you to identify which digit is decisive in making the comparison.
+
+### A. Compare 0.0132 and 0.0089
+
+```{mcq}
+#| label: loc-38a
+1. The leading digit
+2. The second digit
+3. The third digit [correct hint: That is, the 1 in 0.0132]
+4. A digit in position four or beyond
+5. The number of digits before the decimal point.
+6. The number of digits after the decimal point.
+```
+
+### B. Compare 23.1 and 79.3
+
+```{mcq}
+#| label: loc-38b
+1. The leading digit [correct hint: That is, the 2 in 23.1]
+2. The second digit
+3. The third digit
+4. A digit in position four or beyond
+5. The number of digits before the decimal point.
+6. The number of digits after the decimal point.
+```
+
+###C. Compare 102.1 and 97.3
+
+```{mcq}
+#| label: loc-38c
+1. The leading digit 
+2. The second digit
+3. The third digit
+4. A digit in position four or beyond
+5. The number of digits before the decimal point. [correct]
+6. The number of digits after the decimal point.
+```
+
+:::
+ <!-- end of exr-lion-open-canoe -->

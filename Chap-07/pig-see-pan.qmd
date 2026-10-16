@@ -1,0 +1,25 @@
+<!--
+id: "pig-see-pan"
+created: "Fri Oct 16 12:20:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-pig-see-pan}
+A contour plot has one input on each axis. What does movement along a single contour represent?
+
+```{mcq}
+#| label: d07-input-output-04
+1. The output remains constant. [correct]
+2. The first input remains constant.
+3. Both inputs remain constant.
+4. The output changes at the fastest possible rate.
+```
+:::
+ <!-- end of exr-pig-see-pan -->

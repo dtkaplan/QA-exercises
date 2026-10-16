@@ -1,0 +1,48 @@
+<!--
+id: "boy-hurt-hat"
+created: "Fri Oct 16 11:03:19 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-boy-hurt-hat}
+In each of the following, you are asked to compare two numbers written in *scientific notation*. Identify how you were able to perform the comparison. (Note that in proper notation, there is exactly one digit 1 to 9 *before* the decimal point.)
+
+### A. Compare `3.2e5` and `4.1e4`
+
+```{mcq}
+#| label: bhh-ns-a
+1. Compare the exponents [correct]
+2. Compare the first digit of the mantissa
+3. Compare the second digit of the mantissa
+4. Compare the third digit of the mantissa.
+```
+
+### B. Compare `7.5e3` and `7.1e3`
+
+```{mcq}
+#| label: bhh-ns-b
+1. Compare the exponents 
+2. Compare the first digit of the mantissa
+3. Compare the second digit of the mantissa [correct]
+4. Compare the third digit of the mantissa.
+```
+
+### C. Compare `1.2e-5` and `1.3e5`
+
+```{mcq}
+#| label: bhh-ns-c
+1. Compare the exponents [correct]
+2. Compare the first digit of the mantissa
+3. Compare the second digit of the mantissa
+4. Compare the third digit of the mantissa.
+```
+
+:::
+ <!-- end of exr-boy-hurt-hat -->

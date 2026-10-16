@@ -1,0 +1,25 @@
+<!--
+id: "rat-show-cotton"
+created: "Fri Oct 16 11:21:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 06
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-rat-show-cotton}
+What is the main purpose of an algorithm in a function?
+
+```{mcq}
+#| label: d06-algorithm-03
+1. To give the function a memorable name.
+2. To list the inputs without describing what happens to them.
+3. To provide the operational steps that turn inputs into an output. [correct]
+4. To guarantee that the model represents every feature of the real system.
+```
+:::
+ <!-- end of exr-rat-show-cotton -->

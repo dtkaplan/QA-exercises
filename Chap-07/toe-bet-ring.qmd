@@ -1,0 +1,35 @@
+<!--
+id: "toe-bet-ring"
+created: "Fri Oct 16 12:04:31 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-toe-bet-ring}
+
+```{r}
+#| echo: false
+drill::slope_question(55)
+```
+
+a. What is the most positive rate of change for the function?
+
+`r devoirs::devoirs_set(c(-4, -2, 0, 2, 4), correct = 4, id="D-07-disk")`
+
+b. At which of these inputs does that most positive rate of change occur?
+
+`r devoirs::devoirs_set(c(-2, -1, 0, 1), correct = 1, id="D-07-pie")`
+
+
+c. For what input is the rate of change practically zero?
+
+`r devoirs::devoirs_set(c(-2, -1, 0, 1, 2, 3), correct = 0, id="D-07-net")`
+
+:::
+ <!-- end of exr-toe-bet-ring -->

@@ -1,0 +1,29 @@
+<!--
+id: "oak-become-bolt"
+created: "Fri Oct 16 11:45:08 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-oak-become-bolt}
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 242), 
+  seed = 18, 
+  domain(x = 0:5), 
+  id = "D-07-mail")
+Prob$P
+```
+
+`r Prob$Q`
+:::
+ <!-- end of exr-oak-become-bolt -->

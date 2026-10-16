@@ -1,0 +1,24 @@
+<!--
+id: "titmouse-build-painting"
+created: "Fri Oct 16 10:16:57 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 04
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-titmouse-build-painting}
+The dimension of a rate is:
+```{mcq}
+#| label: R-3-12
+1. The dimension of the numerator (the quantity on top).
+2. The dimension of the denominator (the quantity on the bottom).
+3. The dimension of the numerator divided by the dimension of the denominator. [correct]
+4. Rates do not have a dimension. [hint: Wrong. A rate is a quantity. Quantities *always* have a dimension!]
+```
+:::
+ <!-- end of exr-titmouse-build-painting -->

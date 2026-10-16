@@ -1,0 +1,34 @@
+<!--
+id: "arm-hold-hamper"
+created: "Fri Oct 16 10:31:38 2026"
+attribution: DTK
+mode: exercise
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-arm-hold-hamper}
+Write `0.00056` in scientific notation. The expected answer is `5.6e-4`.
+
+Write `7.2e5` in ordinary decimal notation. The expected answer is `720,000`.
+
+Two positive quantities have scientific-notation exponents 4 and 7. By how many orders of magnitude do their sizes differ, approximately? The expected answer is 3.
+
+MAYBE MOVE THIS TO AN EXERCISE: Make up two scientific notation numbers, one with and exponent of 4 and the other an exponent of 7. Your job is to select mantissas that
+
+a. will make the order of magnitude difference almost exactly 3.
+
+b. will make the order of magnitude difference practically 4.
+
+c. will make the order of magnitude difference practically 2.
+
+d. Are there mantissas in the conventional format (with one digit to the left of decimal point) that can make the order of magnitude 5? (Hint: Think about the signs.)
+
+e. Are there mantissas in the conventional format (with one digit to the left of decimal point) that can make the order of magnitude 6?
+
+:::
+ <!-- end of exr-arm-hold-hamper -->

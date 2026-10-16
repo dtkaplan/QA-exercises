@@ -1,0 +1,29 @@
+<!--
+id: "pony-iron-pot"
+created: "Fri Oct 16 11:49:41 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-pony-iron-pot}
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 642), 
+  seed = 12, 
+  domain(x = 0:5), 
+  id = "D-07-oil")
+Prob$P
+```
+
+`r Prob$Q`
+:::
+ <!-- end of exr-pony-iron-pot -->

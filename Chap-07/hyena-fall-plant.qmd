@@ -1,0 +1,25 @@
+<!--
+id: "hyena-fall-plant"
+created: "Fri Oct 16 12:19:37 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-hyena-fall-plant}
+A slice plot shows monthly mortgage payment on the vertical axis and interest rate on the horizontal axis. The curve rises from left to right. What happens to the monthly payment as the interest rate increases?
+
+```{mcq}
+#| label: d07-input-output-03
+1. It decreases.
+2. It stays constant.
+3. It increases. [correct]
+4. It first increases and then decreases.
+```
+:::
+ <!-- end of exr-hyena-fall-plant -->

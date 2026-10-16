@@ -1,0 +1,35 @@
+<!--
+id: "spider-find-blouse"
+created: "Fri Oct 16 10:17:57 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 04
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-spider-find-blouse}
+What is the conversion factor ("flavor of one") for converting an angle measured in radians into degrees?
+
+```{mcq}
+#| label: R-3-14
+1. 0.01745 radian/degree [hint: Sorry. We're converting *to* degrees, so that must be on top.]
+2. 57.30 degree/radians [correct]
+3. 0.01745 degree [hint: Sorry, this isn't a flavor of one.]
+4. 57.30 radians [hint: Sorry, this isn't a flavor of one.]
+```
+
+<!-- Opening answer: Drill-questions-9Hx -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+The angle spanning a half circle has *180 degrees* or, the same thing, *3.14159 radians*. Since the two are the same, dividing one by the other gives a flavor of one. Since we are converting *to degrees* from radians, degrees need to be be on top and radians on the bottom: $$\frac{180}{3.14159} \ \frac{\text{degree}}{\text{radian}} = 57.30 \frac{\text{degree}}{\text{radian}}\ .$$
+
+[..id..]{data-tooltip="Ans id: Drill-questions-9Hx"}
+:::
+<!-- closing answer Drill-questions-9Hx -->
+:::
+ <!-- end of exr-spider-find-blouse -->

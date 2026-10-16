@@ -30,6 +30,8 @@ source("_start-up.R")
 {{< include _exercises/seahorse-pitch-teacup.qmd >}}
 
 {{< include ../Chap-05/titmouse-let-saw.qmd >}}
+
+{{< include ../Chap-05/arm-hold-hamper.qmd >}}
 -----
 
 

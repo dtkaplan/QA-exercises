@@ -1,0 +1,33 @@
+<!--
+id: "maple-lose-door"
+created: "Fri Oct 16 11:49:11 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-maple-lose-door}
+With respect to the following plot ... 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 122), 
+  seed = 68, 
+  domain(x = -5:5), 
+  id = "D-07-ken")
+```
+
+`r Prob$Q`
+
+```{r}
+#| echo: false
+Prob$P
+```
+:::
+ <!-- end of exr-maple-lose-door -->

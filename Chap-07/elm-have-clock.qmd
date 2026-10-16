@@ -1,0 +1,41 @@
+<!--
+id: "elm-have-clock"
+created: "Fri Oct 16 12:05:26 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-elm-have-clock}
+```{r}
+#| echo: false
+drill::slope_question(718)
+```
+
+a. What is the rate of change when y = 0?
+
+`r devoirs::devoirs_set(c(-6, -4, 4, 6, "greater than 6"), correct = "greater than 6", id="D-07-back", sort = TRUE)`
+
+b. At what value of the input is the function output the greatest?
+
+`r devoirs::devoirs_set(c(-1.5, -0.5, 0.5, 1.5 ), correct = 1.5, id="D-07-aura")`
+
+c. What is the rate of change of the function when the input is at the value in question (b)?
+
+`r devoirs::devoirs_set(c(-4, -2, 0, 2, 4), correct = 0, id="D-07-fir")`
+
+d. At what value of the input is the function output the smallest?
+
+`r devoirs::devoirs_set(c(-1.5, -0.5, 0.5, 1.5 ), correct = -1.5, id="D-07-jog")`
+
+e. What is the rate of change of the function when the input is at the value in question (b)?
+
+`r devoirs::devoirs_set(c(-4, -2, 0, 2, 4), correct = 0, id="D-07-mair")`
+
+:::
+ <!-- end of exr-elm-have-clock -->

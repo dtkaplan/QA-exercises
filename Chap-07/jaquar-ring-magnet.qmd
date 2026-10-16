@@ -5,7 +5,7 @@ attribution: DTK
 mode: undetermined
 status: sketch
 group: x_drafts
-chapter: 07
+chapter: 7
 topic: "graph reading"
 -->
 

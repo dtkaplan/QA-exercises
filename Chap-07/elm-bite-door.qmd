@@ -1,0 +1,30 @@
+<!--
+id: "elm-bite-door"
+created: "Fri Oct 16 11:51:48 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-elm-bite-door}
+Consider the following plot: 
+
+```{r}
+#| echo: false
+Prob <- fun_output_vals(
+  mosaicCalc::doodle_fun(~ x, seed = 1942), 
+  seed = 2180, 
+  domain(x = 0:5), 
+  id = "D-07-kemp")
+Prob$P
+```
+
+`r Prob$Q`
+
+:::
+ <!-- end of exr-elm-bite-door -->

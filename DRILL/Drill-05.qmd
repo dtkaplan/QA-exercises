@@ -1,97 +1,58 @@
 ---
-number-offset: 4
-crossref:
-  exr-title: "Drill 5."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 5 Drill Questions"
+filters:
+  - shinylive
 ---
 
-# Drill Questions: Magnitudes {-}
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r include = FALSE}
+library(drill)
+```
 
 ```{r include=FALSE}
-source("_start-up.R")
-library(drill)
+source("../_exercise_startup.R")
 ```
 
 {{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
 
-`r id = "d05"`
-
 :::: {.callout-note collapse=true}
-## Scientific notation
-
-`r cc <- drill::new_drill_counter(style = "numeric")`
-
-## `r cc()` 
-
-IN DRAFT: Ask the reader to compare the two standard notation numbers to determine which is bigger. E.g. 0.0132 and 0.0089
-
-1. The leading digit
-2. The second digit
-3. The third digit
-4. A digit in position four or beyond
-
-## `r cc()`
-
-IN DRAFT: Ask the reader to compare the two scientific notation numbers given to determine which is bigger and which is smaller. 
-
-ANSWER FORM
-
-1. Compare the exponents
-2. Compare the first digit of the mantissa
-3. Compare the second digit of the mantissa
-4. Compare the third digit of the mantissa.
-
-## `r cc()`
-
-Write `0.00056` in scientific notation. The expected answer is `5.6e-4`.
-
-Write `7.2e5` in ordinary decimal notation. The expected answer is `720,000`.
-
-Two positive quantities have scientific-notation exponents 4 and 7. By how many orders of magnitude do their sizes differ, approximately? The expected answer is 3.
-
-MAYBE MOVE THIS TO AN EXERCISE: Make up two scientific notation numbers, one with and exponent of 4 and the other an exponent of 7. Your job is to select mantissas that
-
-a. will make the order of magnitude difference almost exactly 3.
-
-b. will make the order of magnitude difference practically 4.
-
-c. will make the order of magnitude difference practically 2.
-
-d. Are there mantissas in the conventional format (with one digit to the left of decimal point) that can make the order of magnitude 5? (Hint: Think about the signs.)
-
-e. Are there mantissas in the conventional format (with one digit to the left of decimal point) that can make the order of magnitude 6?
-
-::::
-
-
-:::: {.callout-note collapse=true}
-## Logarithms
-
-`r cc <- drill::new_drill_counter(style = "numeric")`
-
+## Scientific notation and logarithms
 ::: {.panel-tabset}
+## 1.
 
+{{< include ../Chap-05/lion-open-canoe.qmd >}}
 
-## `r cc()`
+## 2.
+
+{{< include ../Chap-05/boy-hurt-hat.qmd >}}
+
+## 3.
+
+`r cc <- drill::new_drill_counter(style = "numeric")`
+
+## 4.
 
 True or false: `log10(5e8)` is between 8 and 9.
 
 `r devoirs::devoirsTF(correct = TRUE, id = "d05-log-04")`
 
-## `r cc()`
+## 5.
 
 True or false: The logarithm of `5 kg` is a quantity with dimension `[mass]`.
 
 `r devoirs::devoirsTF(correct = FALSE, id = "d05-unit-02", wrong.hint="The logarithm applies to only the number part of a quantity. The unit is lost.")`
 
-## `r cc()`
+## 6.
 
 True or false: The logarithm of `5 kg` is a quantity with dimension `[log mass]`.
 
 `r devoirs::devoirsTF(correct = FALSE, id = "d05-unit-5628", wrong.hint="[log mass] is not a dimension. Logarithms of a quantity do not carry a dimension in the framework we are using for units and dimensions")`
 
-
+:::
 ::::
 
 
@@ -99,67 +60,42 @@ True or false: The logarithm of `5 kg` is a quantity with dimension `[log mass]`
 ## Magnitudes
 
 
-
-`r cc <- drill::new_drill_counter(style = "numeric")`
-
-
-
 ::: {.panel-tabset}
 
-## `r c()`
+## A.
 
-A population rises from `2,000` to `20,000`. How many orders of magnitude larger is the new population?
+{{< include ../Chap-05/dolphin-hit-mattress.qmd >}}
 
-```{mcq}
-#| label: d05-order-01
-#| inline: true
-1. `1` [correct]
-2. `2`
-3. `10`
-4. `18`
-```
+## B.
 
-## `r cc()`
+{{< include ../Chap-05/finch-stand-saucer.qmd >}}
 
-A sound level changes from `10^-6 W/m^2` to `10^-3 W/m^2`. By how many orders of magnitude did the power density increase? 
-
-```{mcq}
-#| label: d05-order-02
-#| inline: true
-1. `1`
-2. `2`
-3. `3`  [correct]
-4. `4`
-```
-
-
-## `r cc()`
+## C.
 
 `r drill::what_is_the_magnitude(digits = 1, mag = 4, id = "D-05-dock", seed = 32)`
 
-## `r cc()`
+## D.
 
 `r drill::what_is_the_magnitude(digits = 2, mag = 8, id = "D-05-wad", seed = 67)`
 
-## `r cc()`
+## E.
 
 `r drill::what_is_the_magnitude(digits = 1, mag = 1, id = "D-05-bog", seed = 89)`
 
-## `r cc()`
+## F.
 
 `r drill::what_is_the_magnitude(digits = 4, mag = -4, id = "D-05-ted", seed = 101)`
 
-## `r cc()`
+## G.
 
 `r drill::what_is_the_magnitude(digits = 1, mag = 0, id = "D-05-var", seed = 362)`
 
-## `r cc()`
+## H.
 
 `r drill::what_is_the_magnitude(digits = 1, mag = -7, id = "D-05-gap", seed = 80923)`
 
 :::
 
-.
 
 ::::
 
@@ -168,21 +104,21 @@ A sound level changes from `10^-6 W/m^2` to `10^-3 W/m^2`. By how many orders of
 
 ::: {.panel-tabset}
 
-## 1
+## i.
 
 {{< include ../Chap-05/pig-think-bolt.qmd >}}
 
 
-## 2 
+## ii. 
 
 {{< include ../Chap-05/lamb-speak-radio.qmd >}}
 
 
-## 3
+## iii.
 
 {{< include ../Chap-05/pollen-stand-pen.qmd >}}
 
-## 4
+## iv.
 
 `r devoirs::devoirsTF(correct = FALSE, id = "d05-graphics-02")` A magnitude axis changes the underlying values of the quantities begin plotted.
 
