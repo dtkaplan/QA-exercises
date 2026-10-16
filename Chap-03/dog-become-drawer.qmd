@@ -1,0 +1,18 @@
+<!--
+id: "dog-become-drawer"
+created: "Fri Oct 16 08:51:14 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-dog-become-drawer}
+`r devoirs::devoirsTF(correct = TRUE, id="D-03-hex")` You can add or subtract any two *numbers*.
+
+:::
+ <!-- end of exr-dog-become-drawer -->

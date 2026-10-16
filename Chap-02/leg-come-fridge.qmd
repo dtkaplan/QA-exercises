@@ -1,0 +1,27 @@
+<!--
+id: "leg-come-fridge"
+created: "Fri Oct 16 08:14:14 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-leg-come-fridge}
+Which statement about a variable in a data frame is consistent with the terminology used in this book?
+
+```{mcq}
+#| label: d01-variable
+#| inline: true
+1. A variable is a column of a data frame. [correct]
+2. A variable is always an unknown number.
+3. A variable is always a continuous numerical measurement.
+4. A variable is the entire data frame.
+```
+
+:::
+ <!-- end of exr-leg-come-fridge -->

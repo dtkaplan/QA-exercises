@@ -1,0 +1,17 @@
+<!--
+id: "kid-sleep-vase"
+created: "Fri Oct 16 08:52:34 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-kid-sleep-vase}
+`r devoirs::devoirsTF(correct = TRUE, id="D-03-leg", wrong.hint="Anything goes! (When it comes to multiplication and division.)")` You can multiply or divide any two *quantities* (excepting zero)?
+:::
+ <!-- end of exr-kid-sleep-vase -->

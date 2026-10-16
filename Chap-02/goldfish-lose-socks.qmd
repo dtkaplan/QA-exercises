@@ -1,0 +1,20 @@
+<!--
+id: "goldfish-lose-socks"
+created: "Fri Oct 16 08:08:34 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-goldfish-lose-socks}
+In this book, the word **dimension** refers only to a spatial measurement such as length, width, or height.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "D-02-orb", wrong.hint="Here, dimension means an aspect, characteristic, or property of a system. It is not restricted to spatial dimensions.")`
+
+:::
+ <!-- end of exr-goldfish-lose-socks -->

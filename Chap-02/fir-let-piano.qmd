@@ -1,0 +1,25 @@
+<!--
+id: "fir-let-piano"
+created: "Fri Oct 16 08:09:57 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-fir-let-piano}
+Which statement best distinguishes a dimension from a quantity?
+
+```{mcq}
+#| label: d01-dimension-quantity
+1. A dimension is an aspect of a system; a quantity is a measurable way of representing that aspect. [correct]
+2. A quantity is an aspect of a system; a dimension is always a number.
+3. Dimension and quantity mean exactly the same thing.
+4. A dimension must be measured in meters.
+```
+:::
+ <!-- end of exr-fir-let-piano -->

@@ -1,0 +1,26 @@
+<!--
+id: "doe-dream-door"
+created: "Fri Oct 16 08:18:11 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-doe-dream-door}
+Which of the following could be the **specimen type** of a data frame?
+
+```{mcq}
+#| label: d01-object-type
+#| inline: true
+1. Individual houses for sale [correct]
+2. The column named price
+3. The number 250
+4. The spreadsheet software used to display the data
+```
+:::
+ <!-- end of exr-doe-dream-door -->

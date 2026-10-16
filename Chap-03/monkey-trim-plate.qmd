@@ -1,0 +1,28 @@
+<!--
+id: "monkey-trim-plate"
+created: "Fri Oct 16 08:46:53 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-monkey-trim-plate}
+A quantity has a value of 36 deg F at the "from" setting and 43 deg F at the "to" setting. What is the change?
+
+```{mcq}
+#| label: d03-fto2
+#| inline: true
+1. 7 deg F[correct]
+2. -7 deg F [hint: The change is always "to minus from." The sign matters!]
+3. 7 [hint: The units are important!]
+4. -7 [hint: The units are important!]
+5. 0
+6. No valid answer.
+```
+:::
+ <!-- end of exr-monkey-trim-plate -->

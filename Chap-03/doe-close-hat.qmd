@@ -1,0 +1,25 @@
+<!--
+id: "doe-close-hat"
+created: "Fri Oct 16 08:47:47 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-doe-close-hat}
+Suppose we want to understand how the dosage of a medication changes a person's blood pressure. Which is the *primary* dimension and which is the *context-setting* dimension?
+
+```{mcq}
+#| label: d03-wrt1
+1. Blood pressure; dosage [correct]
+2. Dosage; blood pressure [hint: An experiment might try different doses and observe the corresponding blood pressure. Dosage is the context-setting dimension.]
+3. Blood pressure; time [hint: Obviously, time is involved. But it's dosage that we want to understand.]
+4. They are both primary dimensions. 
+```
+:::
+ <!-- end of exr-doe-close-hat -->

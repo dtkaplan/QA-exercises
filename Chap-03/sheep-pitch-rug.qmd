@@ -1,0 +1,17 @@
+<!--
+id: "sheep-pitch-rug"
+created: "Fri Oct 16 08:48:23 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-sheep-pitch-rug}
+`r devoirs::devoirsTF(correct = TRUE, id="D-03-jar", wrong.hint = "You might wonder how it's possible to hold time of day constant, but think of comparing two day's sales at the same time of day.", right.hint = "'Holding constant' is the hallmark of partial change.")`  Suppose an ice-cream shop's sales depend on temperature, price, and time of day. Studying the change in sales with respect to temperature while holding price and time of day constant is an example of partial change.
+:::
+ <!-- end of exr-sheep-pitch-rug -->

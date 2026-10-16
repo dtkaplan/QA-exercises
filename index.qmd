@@ -2,7 +2,7 @@
 title: "Quantitative Argumentation"
 subtitle: "Supplemental Materials"
 author: "Daniel T Kaplan"
-date: "`r Sys.Date()`"
+date: "`r date()`"
 ---
 
 

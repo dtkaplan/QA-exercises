@@ -1,0 +1,26 @@
+<!--
+id: "rabbit-write-glasses"
+created: "Fri Oct 16 09:01:51 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-rabbit-write-glasses}
+Which of these units is used to measure information?
+
+```{mcq}
+#| inline: true
+#| label: info-unit
+1. Hertz [hint: Sorry. This is *per second*, that is, inverse seconds]
+2. Parsec [hint: Sorry. This unit measures distance]
+3. Bit [correct hint: Right! A byte is 8 bits, a Gigabyte is one-billion bits. Computers are information machines, thus the use of bits when describing their memory capacity.]
+4. Erg [hint: Sorry. This unit measures energy]
+```
+:::
+ <!-- end of exr-rabbit-write-glasses -->

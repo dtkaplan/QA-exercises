@@ -1,0 +1,20 @@
+<!--
+id: "sheep-see-cotton"
+created: "Fri Oct 16 08:16:32 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-sheep-see-cotton}
+A column containing student ID numbers is necessarily a quantitative variable because its values are written as digits.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "D-02-pet", wrong.hint="An ID can be a categorical variable even when its values consist of digits. The important feature of 'betweenness' doesn't have meaning for ID numbers.")`
+
+:::
+ <!-- end of exr-sheep-see-cotton -->

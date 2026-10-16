@@ -1,0 +1,22 @@
+<!--
+id: "hamster-forgive-closet"
+created: "Fri Oct 16 08:15:39 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-hamster-forgive-closet}
+A good test for whether a variable in a data frame should be represented *quantitatively* is that the idea of "between" makes natural sense for values. Keeping this in mind, consider these following situations and decide whether "between" is meaningful.
+
+Danish is meaningfully between Chinese and English.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "D-02-odd", wrong.hint="Although 'D' is alphabetically between 'C' and 'E', this has nothing to do with the nature of the three languages.")`
+
+:::
+ <!-- end of exr-hamster-forgive-closet -->

@@ -1,0 +1,18 @@
+<!--
+id: "cat-take-closet"
+created: "Fri Oct 16 08:53:41 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-cat-take-closet}
+Is [acceleration] is the same as [velocity]?
+`r devoirs::devoirsTF(correct = FALSE, id="D-03-guy", format="Yes or No")` 
+:::
+ <!-- end of exr-cat-take-closet -->

@@ -1,0 +1,25 @@
+<!--
+id: "wolf-sleep-stair"
+created: "Fri Oct 16 08:45:41 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-wolf-sleep-stair}
+Which of the following is a flavor of one?
+
+```{mcq}
+#| label: d03-flv1
+#| inline: true
+1. 12 inches [hint: Flavors of 1 are always dimensionless. The dimension here is L.]
+2. 1 foot [hint: Flavors of 1 are always dimensionless. The dimension here is L.]
+3. 12 inches / 1 foot [correct]
+```
+:::
+ <!-- end of exr-wolf-sleep-stair -->

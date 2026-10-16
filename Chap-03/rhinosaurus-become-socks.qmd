@@ -1,0 +1,18 @@
+<!--
+id: "rhinosaurus-become-socks"
+created: "Fri Oct 16 08:54:05 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-rhinosaurus-become-socks}
+`r drill::what_is_the_dimension_of("[2 hours]", "T", id = "D-03-yet", seed = 9)`
+
+:::
+ <!-- end of exr-rhinosaurus-become-socks -->

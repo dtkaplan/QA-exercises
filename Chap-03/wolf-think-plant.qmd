@@ -1,0 +1,26 @@
+<!--
+id: "wolf-think-plant"
+created: "Fri Oct 16 08:57:36 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-wolf-think-plant}
+We measure one property of food using the unit Calorie (Cal, for short). Use a web search to look up the definition of Cal to answer this question: What is the dimension of the unit Cal?
+
+```{mcq}
+#| label: d03-cal
+#| inline: true
+1. 〖volume〗
+2. 〖mass〗
+3. 〖energy〗 [hint: correct]
+4. 〖power〗 [hint: The correct answer is 〖energy〗. Power is 〖energy〗 / T.]
+```
+:::
+ <!-- end of exr-wolf-think-plant -->

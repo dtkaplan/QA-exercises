@@ -1,0 +1,25 @@
+<!--
+id: "horse-read-mattress"
+created: "Fri Oct 16 08:09:27 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-horse-read-mattress}
+Which of the following is a dimension of a system in the sense used in this chapter?
+
+```{mcq}
+#| label: d02-dimension
+1. A property or aspect of the system [correct]
+2. Only a numerical measurement
+3. Only a spatial direction
+4. Only a column in a data frame
+```
+:::
+ <!-- end of exr-horse-read-mattress -->

@@ -1,0 +1,28 @@
+<!--
+id: "child-close-lamp"
+created: "Fri Oct 16 08:46:23 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-child-close-lamp}
+A quantity has a value of 18 m/s at the "from" setting and 11 m/s at the "to" setting. What is the change?
+
+```{mcq}
+#| label: d03-fto1
+#| inline: true
+1. 7 m/s [hint: The change is always "to minus from." The sign matters!]
+2. -7 m/s[correct]
+3. 7 [hint: The units are important!]
+4. -7 [hint: The units are important!]
+5. 0
+6. No valid answer.
+```
+:::
+ <!-- end of exr-child-close-lamp -->

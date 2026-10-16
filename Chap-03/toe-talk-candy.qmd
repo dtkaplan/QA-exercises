@@ -1,0 +1,26 @@
+<!--
+id: "toe-talk-candy"
+created: "Fri Oct 16 08:44:46 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-toe-talk-candy}
+A quantity has units of kilograms per second squared. What is its dimension?
+
+```{mcq}
+#| label: d03-qukss
+#| inline: true
+1. M/T
+2. M/T^2^ [correct]
+3. MT^2^
+4. T^2^ / M
+```
+:::
+ <!-- end of exr-toe-talk-candy -->

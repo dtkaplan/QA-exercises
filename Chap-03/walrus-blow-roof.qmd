@@ -1,0 +1,20 @@
+<!--
+id: "walrus-blow-roof"
+created: "Fri Oct 16 08:43:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-walrus-blow-roof}
+`r devoirs::devoirsTF(correct = FALSE, id="D-03-vim")` As you know, you can add or subtract any two pure *numbers*. 
+
+`r devoirs::devoirsTF(correct = FALSE, id="D-03-pay", wrong.hint = "The quantities must be commensurate. For example, 3 cups + 2 pints is meaningful, but 3 cups + 2 seconds is not.")` Can you always add two *quantities* by adding together their numerical parts? 
+
+:::
+ <!-- end of exr-walrus-blow-roof -->

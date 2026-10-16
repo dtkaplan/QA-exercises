@@ -1,0 +1,27 @@
+<!--
+id: "fly-blow-ship"
+created: "Fri Oct 16 08:12:05 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-fly-blow-ship}
+Why is the heat index used in the chapter as an example of operationalization?
+
+```{mcq}
+#| label: d01-heat-index
+#| inline: true
+1. It provides a quantitative indicator related to comfort in hot, humid weather. [correct]
+2. It measures every aspect of human comfort.
+3. It is simply another word for temperature.
+4. It eliminates the need for a model.
+```
+
+:::
+ <!-- end of exr-fly-blow-ship -->

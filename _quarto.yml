@@ -17,6 +17,8 @@ project:
     - Apps/App-GDP-Mortality.qmd
     - Apps/App-SIR.qmd
     - DRILL/Drill-01.qmd
+    - DRILL/Drill-02.qmd
+    - DRILL/Drill-03.qmd
     - READING_QUESTIONS/RQ-01.qmd
     - EXERCISES/Exer-??.qmd
 

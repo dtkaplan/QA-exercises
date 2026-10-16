@@ -1,0 +1,18 @@
+<!--
+id: "leg-toss-vase"
+created: "Fri Oct 16 08:54:36 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-leg-toss-vase}
+`r drill::what_is_the_dimension_of("[acre-feet]", "L^2^", id = "D-03-kart", seed = 29)`
+
+:::
+ <!-- end of exr-leg-toss-vase -->

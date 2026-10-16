@@ -1,0 +1,28 @@
+<!--
+id: "bear-beat-spoon"
+created: "Fri Oct 16 08:47:22 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-bear-beat-spoon}
+A quantity has a value of 106 kg / s at the "from" setting and 99 kg at the "to" setting. What is the change?
+
+```{mcq}
+#| label: d03-fto3
+#| inline: true
+1. 7 kg / s
+2. -7 kg / s
+3. 7 s 
+4. -7 kg
+5. 0
+6. No valid answer. [hint: The units and dimensions  are incommensurate. Subtraction is not a valid operation.]
+```
+:::
+ <!-- end of exr-bear-beat-spoon -->

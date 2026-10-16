@@ -1,0 +1,17 @@
+<!--
+id: "deer-walk-chair"
+created: "Fri Oct 16 08:56:30 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-deer-walk-chair}
+`r drill::what_is_the_dimension_of("[kilometers per mile]", "【1】", id = "D-03-laic", seed = 95)`
+:::
+ <!-- end of exr-deer-walk-chair -->

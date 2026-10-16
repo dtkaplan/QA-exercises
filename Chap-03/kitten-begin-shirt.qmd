@@ -1,0 +1,17 @@
+<!--
+id: "kitten-begin-shirt"
+created: "Fri Oct 16 08:46:01 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-kitten-begin-shirt}
+`r devoirs::devoirsTF(correct = FALSE, id="D-03-nit", wrong.hint = "The dimensions cancel out, but 1 inch is not the same amount as 1 foot.")` Is 1 inch / 1 foot a flavor of 1?
+:::
+ <!-- end of exr-kitten-begin-shirt -->

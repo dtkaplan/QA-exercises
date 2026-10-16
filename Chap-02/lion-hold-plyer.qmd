@@ -1,0 +1,27 @@
+<!--
+id: "lion-hold-plyer"
+created: "Fri Oct 16 08:10:36 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-lion-hold-plyer}
+Which example illustrates **operationalization**?
+
+```{mcq}
+#| label: d01-operationalization
+#| inline: true
+1. Calling anxiety a dimension of personality.
+2. Using a blood-pressure measurement as one way to quantify health. [correct]
+3. Saying that health is important.
+4. Listing several people in a data frame.
+```
+
+:::
+ <!-- end of exr-lion-hold-plyer -->

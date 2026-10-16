@@ -1,0 +1,26 @@
+<!--
+id: "mouse-tell-car"
+created: "Fri Oct 16 08:19:00 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-mouse-tell-car}
+In the terminology of this book, what is a **value** in a data frame?
+
+```{mcq}
+#| label: d01-value
+#| inline: true
+1. The entry at the intersection of a variable and a row. [correct]
+2. The name of the data frame.
+3. The object type of the data frame.
+4. The entire column.
+```
+:::
+ <!-- end of exr-mouse-tell-car -->

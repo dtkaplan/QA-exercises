@@ -1,0 +1,20 @@
+<!--
+id: "calf-pack-teacup"
+created: "Fri Oct 16 08:13:38 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-calf-pack-teacup}
+In a data frame, each row represents one specimen. Every row should represent a specimens of the same object type.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "D-02-claw")`
+
+:::
+ <!-- end of exr-calf-pack-teacup -->

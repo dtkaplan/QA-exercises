@@ -1,0 +1,17 @@
+<!--
+id: "maple-find-book"
+created: "Fri Oct 16 08:57:01 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-maple-find-book}
+`r drill::what_is_the_dimension_of("[𝜋]", "【1】", id = "D-03-ten", seed = 964)`
+:::
+ <!-- end of exr-maple-find-book -->

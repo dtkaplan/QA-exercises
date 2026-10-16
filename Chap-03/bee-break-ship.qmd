@@ -1,0 +1,17 @@
+<!--
+id: "bee-break-ship"
+created: "Fri Oct 16 08:55:53 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-bee-break-ship}
+`r drill::what_is_the_dimension_of("[miles per hour]", "L T^-1^", id = "D-03-area", seed = 95)`
+:::
+ <!-- end of exr-bee-break-ship -->

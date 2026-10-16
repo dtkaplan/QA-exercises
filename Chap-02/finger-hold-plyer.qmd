@@ -1,0 +1,21 @@
+<!--
+id: "finger-hold-plyer"
+created: "Fri Oct 16 08:08:09 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-finger-hold-plyer}
+In this book, what technical word is used for the elements in a system? that interact with one another.
+
+`r devoirs::devoirsTF(correct = TRUE, id = "D-02-bald")`
+
+
+:::
+ <!-- end of exr-finger-hold-plyer -->

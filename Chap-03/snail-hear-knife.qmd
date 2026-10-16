@@ -1,0 +1,27 @@
+<!--
+id: "snail-hear-knife"
+created: "Fri Oct 16 08:42:06 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-snail-hear-knife}
+All but one of these is a pure number. Which is the exception?
+
+```{mcq}
+#| label: d03-dls
+#| inline: true
+1. 7
+2. $\pi$
+3. 7 meters [correct]
+4. 0.25
+```
+
+:::
+ <!-- end of exr-snail-hear-knife -->

@@ -1,0 +1,17 @@
+<!--
+id: "turtle-begin-linen"
+created: "Fri Oct 16 08:55:27 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-turtle-begin-linen}
+`r drill::what_is_the_dimension_of("[2.65]", "【1】", id = "D-03-fad", seed = 99)`
+:::
+ <!-- end of exr-turtle-begin-linen -->

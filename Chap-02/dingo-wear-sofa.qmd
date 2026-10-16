@@ -1,0 +1,20 @@
+<!--
+id: "dingo-wear-sofa"
+created: "Fri Oct 16 08:11:36 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 02
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-dingo-wear-sofa}
+A good operationalization must be a perfect and complete representation of the dimension it measures.
+
+`r devoirs::devoirsTF(correct = FALSE, id = "D-02-gang", wrong.hint="The chapter emphasizes that operationalizations can be imperfect. The relevant question is whether an operationalization is good enough for the purpose at hand.")`
+
+:::
+ <!-- end of exr-dingo-wear-sofa -->

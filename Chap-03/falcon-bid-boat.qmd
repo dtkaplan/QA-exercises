@@ -1,0 +1,27 @@
+<!--
+id: "falcon-bid-boat"
+created: "Fri Oct 16 08:58:10 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-falcon-bid-boat}
+What's wrong with this statement:
+
+> The [velocity] is miles-per-hour.
+
+```{mcq}
+#| label: d03-vel
+1. It should be hours-per-mile. [hint: Sorry, miles-per-hour is correct as a unit of velocity. ]
+2. Velocity has no dimension. 
+3. "Miles per hour" is a unit, not a dimension. [correct]
+4. Nothing is wrong.
+```
+:::
+ <!-- end of exr-falcon-bid-boat -->

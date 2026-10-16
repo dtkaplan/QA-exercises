@@ -1,0 +1,25 @@
+<!--
+id: "panda-tie-kayak"
+created: "Fri Oct 16 08:44:25 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-panda-tie-kayak}
+Which statement is correct?
+
+```{mcq}
+#| label: d03-lxew
+1. Meter is a dimension and length is a unit.
+2. Length is a dimension and meter is a unit. [correct]
+3. Length and meter are two names for the same thing. [hint: A meter is a specific length.]
+4. Neither length nor meter is a dimension or unit.
+```
+:::
+ <!-- end of exr-panda-tie-kayak -->

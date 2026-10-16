@@ -1,0 +1,18 @@
+<!--
+id: "octopus-wish-window"
+created: "Fri Oct 16 08:54:58 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-octopus-wish-window}
+`r drill::what_is_the_dimension_of("[[13]]", "【1】", id = "D-03-say", seed = 19)`
+
+:::
+ <!-- end of exr-octopus-wish-window -->

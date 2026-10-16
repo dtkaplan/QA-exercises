@@ -1,0 +1,36 @@
+<!--
+id: "toe-lick-car"
+created: "Fri Oct 16 08:59:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+:::: {#exr-toe-lick-car}
+
+Write down the names of five base dimensions. As well, give the symbol for each of those dimensions.
+
+`r devoirs::devoirs_text("D-03-sad")`
+
+<!-- Opening answer: D0q-9kP -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+- Length (L)
+- Mass (M)
+- Time (T)
+- Temperature ($\Theta$, the Greek letter "theta")
+- Money (W, for "worth")
+- People (C, for "capita")
+- Dimensionless ([1])
+
+[..id..]{data-tooltip="Ans id: D0q-9kP"}
+
+:::
+::::
+ <!-- end of exr-toe-lick-car -->
