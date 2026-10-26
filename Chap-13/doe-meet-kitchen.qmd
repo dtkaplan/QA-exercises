@@ -3,8 +3,8 @@ id: "doe-meet-kitchen"
 created: "Sat Jan 31 11:49:48 2026"
 attribution: TBA
 status: "ready-to-use"
-chapter: 13
-mode: "outline"
+chapter: 9
+mode: "computer-skills"
 -->
 
 {{< include ../exercise-header.qmd >}}

@@ -1,0 +1,24 @@
+<!--
+id: "goat-enjoy-piano"
+created: "Thu Oct 22 07:48:19 2026"
+attribution: DTK
+mode: reading-questions
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-goat-enjoy-piano}
+`r xf("fig-gdp-mortality")` draws attention to three exceptional countries in 1960 with both high mortality and high GDP per capita. Using this [interactive version of the figure](  https://dtkaplan.github.io/QA-exercises/Apps/App-GDP-Mortality.html) find out which countries they are and what might explain their unusual combination of high mortality and high GDP per capita. Also, find those same three countries in the 2020 data. (Hint: they are all rich in 2020 as well.) 
+
+`r devoirs::devoirs_text("wjd-outliers")`
+
+Using the magnitude plot (the bottom plot on the interactive version site) comment on the claim made by some economists that GDP change is the primary driver of improvements in mortality levels between 1960 and 2020.
+
+`r devoirs::devoirs_text("wjd-claim")`
+
+:::
+ <!-- end of exr-goat-enjoy-piano -->

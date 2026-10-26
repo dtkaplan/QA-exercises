@@ -38,7 +38,7 @@ F <- pnorm
 dom <- domain(x = -4:4)
 
 slice_plot(F(x) ~ x, dom) |>
-  slope_rose(keepers = "pos", y = 0.05, x = -4, 
+  LSTbook::add_slope_rose(keepers = "pos", y = 0.05, x = -4, 
              nice_slopes = c(0.1, 0.15, 0.2, 0.25, 0.3, 0.35,0.4), 
              scale = 0.3) |> 
   gf_labs(y = "F(x)") |>
@@ -55,7 +55,7 @@ Pts <- Znotes::segmentize(F(x) ~ x, h=0.25, dom, npts=1) |>
 slice_plot(F(x) ~ x, dom, color = "white") |>
    gf_lims(y=c(0, 0.25), x = c(-4,4)) |>
   gf_labs(y="Rise over h = 0.25") |>
-  slope_rose(keepers = "pos", y = 0, x = -4, nice_slopes = c(0.1, 0.2, 0.3, 0.4), scale = .06) |> 
+  LSTbook::add_slope_rose(keepers = "pos", y = 0, x = -4, nice_slopes = c(0.1, 0.2, 0.3, 0.4), scale = .06) |> 
   gf_segment(ymin + ymax ~ xmin + xmax, data = Pts,
              color="blue", linewidth=1.5) |>
   gf_theme(theme_minimal())

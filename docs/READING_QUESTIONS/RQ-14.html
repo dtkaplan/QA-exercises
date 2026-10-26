@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Quantitative Argumentation – Quantitative Argumentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><em>Quantitative Argumentation</em></h1>
+<p class="subtitle lead">Chapter 14 Reading Questions</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><span id="devoirs-docID" style="display: none;">RQ-14.rmarkdown</span> <span><button onclick="devoirsSubmit()">Collect your answers</button></span> <span id="devoirs_summary">No answers yet collected</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<script type="text/javascript">
+ console.log("In devoirs.js")
+
+function devoirsCollectEssays() {
+  var essay_answers = [];
+  var items = document.getElementsByClassName("devoirs-text");
+  for (i = 0; i < items.length; i++) {
+    //console.log("text entry" + i + "being handled");
+    essay_answers[i] = {itemid: items[i].id, contents: items[i].value}
+  }
+
+  return essay_answers;
+}
+
+function devoirsGetDocID() {
+  return document.getElementById("devoirs-docID").innerHTML
+}
+
+function devoirsCollectMC() {
+    let mc_answers = [] // Hold the information
+    var ele = document.getElementsByClassName("devoirs-mcq");
+    var count = 0;
+    for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
+          //console.log("Entering conditional.");
+          let checked_one = ele[i];
+          mc_answers[count++] = {itemid: checked_one.id, w: checked_one.getAttribute("w"), contents: checked_one.text};
+        }
+    }
+    return mc_answers;
+}
+
+console.log("About to define WebR")
+
+function devoirsCollectWebR() {
+  var chunk_contents = []; // placeholder for collecting webr items
+  if (typeof qwebrCellDetails == "undefined") {
+    // There aren't any webr chunks
+    return chunk_contents;
+  }
+  var chunks = qwebrCellDetails;
+  for (i = 0; i < chunks.length; i++) {
+    chunk_contents[i] = {itemid: chunks[i].options["label"], contents: chunks[i].code};
+  }
+
+  return chunk_contents;
+}
+
+console.log("About to define devoirsSubmit")
+
+function devoirsSubmit() {
+  console.log("About to collect history")
+
+  // check if there is any sign of a webr entry
+  // If not, don't try to collect webr entries
+  if (typeof qwebrRCommandHistory === 'undefined') {
+    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays(), WebR: {}, R: {}}
+  } else {
+    console.log("Getting R commands.")
+    var Rhistory = qwebrRCommandHistory.map((x) => x.replace(/Ran code in (.*) at (.*[AP]M).{5}(.*)/, "[chunk: $1, time: $2, code: $3]"))
+
+    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays()} //, WebR: devoirsCollectWebR(), R: Rhistory}
+  }
+
+  navigator.clipboard.writeText(JSON.stringify(items));
+
+  // summarize what's being collected
+  var my_summary = "Answers copied to clipboard. Fixed choice: " + items.MC.length + " Essays: " + items.Essays.length + " WebR chunks: " + items.WebR.length
+
+  document.getElementById("devoirs_summary").innerHTML = my_summary;
+}
+
+console.log("Read devoirsSubmit()")
+
+// Hint handling in Multiple choice
+
+// Still have to add an on/off switch from options
+
+function devoirs_setup_hintarea() {
+  answers = document.getElementsByClassName("devoirs-mcq")
+  for (i=0; i<answers.length; i++) answers[i].addEventListener('click', function(e){document.getElementById(e.target.name + "-hintarea").innerHTML = e.target.getAttribute("hint")})
+}
+
+ window.addEventListener("load", function() {
+  answers = document.getElementsByClassName("devoirs-mcq")
+  for (i=0; i<answers.length; i++) {
+    if (answers[i].getAttribute("show_hints") == "TRUE") {
+        answers[i].addEventListener('click', function(e){
+          console.log("inserting hint")
+        document.getElementById(e.target.name + "-hintarea").innerText = e.target.getAttribute("hint")
+      })
+
+    }
+  }
+})
+
+console.log("Added hint summary.") 
+</script>
+
+</div>
+</div>
+<script type="text/javascript">
+      // clear the local storage
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('btnClearStorage');
+      form.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+        console.log("Clearing memory");
+      }, false);
+    }
+    )
+    </script>
+<button id="btnClearStorage">
+Clear memory
+</button>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3.</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<!--
+id: "cheetah-stand-mattress"
+created: "Sun Dec 28 14:33:01 2025"
+attribution: DTK
+status: "ready-to-use"
+chapter: 13
+mode: "exercise"
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-cheetah-stand-mattress" class="theorem exercise page-columns page-full">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> The series of images of “The Horse in Motion,” made by Eadweard Muybridge in 1878, was one of the first stop-action, multi-frame photographs. There are 11 successive frames, each separated by 0.04 seconds. (The last frame is out of sequence, so ignore it for our purposes.) The vertical lines are separated by 27 inches. The whole set of frames, from 1 to 11, covers approximately one-half stride cycle of the horse.</p>
+<div class="column-page-inset-right">
+<p><img src="../www/muybridge-horse.png" class="img-fluid"></p>
+</div>
+<p>We are going to look at the rate of change of the horse’s position with respect to time. Of course, “rate of change of position with respect to time” is more commonly known as <em>velocity</em>. And, evidently, different parts of the horse are moving with different velocities at different times.</p>
+<p>To start, make measurements from the photos of two parts of the horse: the tip of the nose and the center of one of the front hooves. Which hoof? The one that is <em>not</em> in contact with the ground in frame 1 and is being pulled behind a bent knee in frame 2. (Note that to see the hoof is being pulled, you might need to refer to frame 3. Simple dynamical phenomena play out over extended time.)</p>
+<p>The following is a text-entry box that will be submitted along with your other answers. Questions (1) - (3) below are to get you started filling in the velocity columns of the table.</p>
+<script type="text/javascript">
+      //save entered info
+      document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for csm-tab-3ks.');
+      const form = document.getElementById('csm-tab-3ks');
+      form.addEventListener("input", function () {
+        var todo = document.getElementById('csm-tab-3ks').value;
+        localStorage.setItem("csm-tab-3ks-contents", todo);
+        console.log("Saving value of csm-tab-3ks.")
+      }, false);
+
+      //on page load, read in the old value
+      const savedValue = localStorage.getItem("csm-tab-3ks-contents");
+      if (savedValue) {
+        document.getElementById('csm-tab-3ks').value = savedValue;
+      }
+})
+</script>
+<textarea id="csm-tab-3ks" name="csm-tab-3ks" class="devoirs-text" style="font-family: monospace, monospace;" rows="14" cols="50" placeholder="Type here. (ID csm-tab-3ks)">                              Nose       Hoof
+Frame | Time | Nose | Hoof | Velocity | Velocity 
+------|------|------|------|----------|----------
+1     | 0.00 |  8.1 |  5.4 |
+2     | 0.04 |  9.4 |  7.5 |
+3     | 0.08 | 10.1 |  8.7 |
+4     | 0.12 | 11.4 | 10.8 |
+5     | 0.16 | 12.3 | 12.2 |
+6     | 0.20 | 13.3 | 13.3 |
+7     | 0.24 | 14.3 | 14.0 |
+8     | 0.28 | 15.1 | 14.0 |
+9     | 0.32 | 16.1 | 14.0 |
+10    | 0.36 | 17.2 | 14.3 |
+11    | 0.40 | 18.3 | 16.1 |
+</textarea>
+<ol type="1">
+<li>What is the change in nose position from frame 1 to frame 2?</li>
+</ol>
+<span> <small style="color: grey;" id="csm-1-clw-hintarea" class="hintarea">csm-1-clw</small>
+<form id="csm-1-clw-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="-0.6" id="csm-1-clw-1" w="32" name="csm-1-clw" hint="Sorry!" show_hints="TRUE"> -0.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.6" id="csm-1-clw-2" w="7" name="csm-1-clw" hint="This is wide of the mark." show_hints="TRUE"> 0.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1.3" id="csm-1-clw-3" w="5" name="csm-1-clw" hint="You're right!" show_hints="TRUE"> 1.3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2.7" id="csm-1-clw-4" w="19" name="csm-1-clw" hint="Oops!" show_hints="TRUE"> 2.7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3.5" id="csm-1-clw-5" w="87" name="csm-1-clw" hint="No." show_hints="TRUE"> 3.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="csm-1-clw" id="csm-1-clw.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for csm-1-clw.');
+      const form = document.getElementById('csm-1-clw-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('csm-1-clw-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for csm-1-clw.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for csm-1-clw.");
+          localStorage.setItem('csm-1-clw-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+<ol start="2" type="1">
+<li>What is the rate of change of nose position with respect to time from frame 1 to frame 2?</li>
+</ol>
+<span> <small style="color: grey;" id="csv-2-kwc-hintarea" class="hintarea">csv-2-kwc</small>
+<form id="csv-2-kwc-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="-10.9" id="csv-2-kwc-1" w="32" name="csv-2-kwc" hint="Incorrect choice." show_hints="TRUE"> -10.9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="14.6" id="csv-2-kwc-2" w="19" name="csv-2-kwc" hint="Not quite." show_hints="TRUE"> 14.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="32.5" id="csv-2-kwc-3" w="29" name="csv-2-kwc" hint="You're right!" show_hints="TRUE"> 32.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="52.3" id="csv-2-kwc-4" w="23" name="csv-2-kwc" hint="This is wide of the mark." show_hints="TRUE"> 52.3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="57.7" id="csv-2-kwc-5" w="87" name="csv-2-kwc" hint="You're wrong here." show_hints="TRUE"> 57.7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="csv-2-kwc" id="csv-2-kwc.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for csv-2-kwc.');
+      const form = document.getElementById('csv-2-kwc-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('csv-2-kwc-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for csv-2-kwc.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for csv-2-kwc.");
+          localStorage.setItem('csv-2-kwc-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+<ol start="3" type="1">
+<li>What is the rate of change in hoof position with respect to time from frame 1 to frame 2?</li>
+</ol>
+<span> <small style="color: grey;" id="csv-3-csl-hintarea" class="hintarea">csv-3-csl</small>
+<form id="csv-3-csl-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="25.1" id="csv-3-csl-1" w="19" name="csv-3-csl" hint="Nope." show_hints="TRUE"> 25.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="31.9" id="csv-3-csl-2" w="19" name="csv-3-csl" hint="You might think so, but ..." show_hints="TRUE"> 31.9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="45.1" id="csv-3-csl-3" w="19" name="csv-3-csl" hint="Not so!" show_hints="TRUE"> 45.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="52.5" id="csv-3-csl-4" w="8" name="csv-3-csl" hint="Correct." show_hints="TRUE"> 52.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="57.7" id="csv-3-csl-5" w="87" name="csv-3-csl" hint="Sorry!" show_hints="TRUE"> 57.7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="csv-3-csl" id="csv-3-csl.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for csv-3-csl.');
+      const form = document.getElementById('csv-3-csl-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('csv-3-csl-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for csv-3-csl.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for csv-3-csl.");
+          localStorage.setItem('csv-3-csl-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+<ol start="4" type="1">
+<li><p>Consider this phrase: “The rate of change in hoof position with respect to nose position.” Calculate it, then explain how the value is related to the values from (2) and (3).</p></li>
+<li><p>Do similar calculations as in (2) and (3), but go backwards: from frame 2 to frame 1. Do your results have an evident relationship to the values you calculated in (2) and (3).</p></li>
+<li><p>Fill in the velocity columns for <strong>?@tbl-nose-hoof</strong> for all ten pairs of successive frames. As you do so, contemplate this question: for the rates of change from frame n to n+1, should you enter the values on line n or line n+1 or something different? Would either be valid? Both? We just want to hear what you’re thinking about this, not that there is a right answer.</p></li>
+</ol>
+<script type="text/javascript">
+      //save entered info
+      document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for csm-roc-uw34.');
+      const form = document.getElementById('csm-roc-uw34');
+      form.addEventListener("input", function () {
+        var todo = document.getElementById('csm-roc-uw34').value;
+        localStorage.setItem("csm-roc-uw34-contents", todo);
+        console.log("Saving value of csm-roc-uw34.")
+      }, false);
+
+      //on page load, read in the old value
+      const savedValue = localStorage.getItem("csm-roc-uw34-contents");
+      if (savedValue) {
+        document.getElementById('csm-roc-uw34').value = savedValue;
+      }
+})
+</script>
+<textarea id="csm-roc-uw34" name="csm-roc-uw34" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID csm-roc-uw34)"></textarea>
+<ol start="7" type="1">
+<li>Imagine that your answer to the previous question was “both.” You would then have two different velocities to enter on each line of the table. But the horse’s nose cannot have two different velocities at the same time. This is a genuine problem. In <a href="Chap-14-rates-of-change.html#sec-rates-of-change">Chapter 14</a> the word “instantaneous” is associated with the conceptual resolution of this problem. Explain the connection between “instantaneous” and the resolution of the riddle in (6).</li>
+</ol>
+<script type="text/javascript">
+      //save entered info
+      document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for csm-7-xekw.');
+      const form = document.getElementById('csm-7-xekw');
+      form.addEventListener("input", function () {
+        var todo = document.getElementById('csm-7-xekw').value;
+        localStorage.setItem("csm-7-xekw-contents", todo);
+        console.log("Saving value of csm-7-xekw.")
+      }, false);
+
+      //on page load, read in the old value
+      const savedValue = localStorage.getItem("csm-7-xekw-contents");
+      if (savedValue) {
+        document.getElementById('csm-7-xekw').value = savedValue;
+      }
+})
+</script>
+<textarea id="csm-7-xekw" name="csm-7-xekw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID csm-7-xekw)"></textarea>
+<ol start="8" type="1">
+<li>A high-speed, high-resolution video camera can cover the same time span as covered in Muybridge’s photo with thousands of successive frames rather than just eleven. How might such data make the question of where to place each velocity data point practically of no consequence.</li>
+</ol>
+<script type="text/javascript">
+      //save entered info
+      document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for csm-8-gskw.');
+      const form = document.getElementById('csm-8-gskw');
+      form.addEventListener("input", function () {
+        var todo = document.getElementById('csm-8-gskw').value;
+        localStorage.setItem("csm-8-gskw-contents", todo);
+        console.log("Saving value of csm-8-gskw.")
+      }, false);
+
+      //on page load, read in the old value
+      const savedValue = localStorage.getItem("csm-8-gskw-contents");
+      if (savedValue) {
+        document.getElementById('csm-8-gskw').value = savedValue;
+      }
+})
+</script>
+<textarea id="csm-8-gskw" name="csm-8-gskw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID csm-8-gskw)"></textarea>
+<p><a href="#fig-nose-hoof-continuous" class="quarto-xref">Figure&nbsp;1</a> shows a model of the position of the nose and hoof as they vary continuously in time. The graphs are annotated with sloping lines where the unit of the slope is m/s.</p>
+<div id="fig-nose-hoof-continuous" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nose-hoof-continuous-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nose-hoof-continuous" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-nose-hoof-continuous-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-nose-hoof-continuous-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="RQ-14_files/figure-html/fig-nose-hoof-continuous-1.png" class="img-fluid figure-img" data-ref-parent="fig-nose-hoof-continuous" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nose-hoof-continuous-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Nose
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nose-hoof-continuous" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-nose-hoof-continuous-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-nose-hoof-continuous-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="RQ-14_files/figure-html/fig-nose-hoof-continuous-2.png" class="img-fluid figure-img" data-ref-parent="fig-nose-hoof-continuous" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nose-hoof-continuous-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Hoof
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nose-hoof-continuous-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A reconstruction of nose and hoof positions as a continuous function of time.
+</figcaption>
+</figure>
+</div>
+<ol start="9" type="1">
+<li><p>Copy over one of the graphs (approximate is OK) to a piece of paper. Annotate the graph with:</p>
+<ol type="a">
+<li>Points and a sloping line connecting them that correspond to the velocity calculation between frames 3 and 4 (that is, time 0.08 to 0.12 s).</li>
+<li>Points and a sloping line connecting them that correspond to the overall velocity over the interval from time zero to time 0.40 s</li>
+<li>The instant when the velocity is highest.</li>
+</ol></li>
+</ol>
+<p>The <code>{devoirs}</code> homework collection system doesn’t handle pictures, but bring your annotated graph to class for discussion purposes.</p>
+</span></span></span></div>
+<p><!-- end of exr-cheetah-stand-mattress --></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<!--
+id: "bee-begin-gloves"
+created: "Sat Dec 20 08:45:42 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "reading-question"
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-bee-begin-gloves" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> AI generated in response to a prompt about “fuel economy” versus “fuel consumption.”</p>
+<p>This is a fantastic topic for our quantitative reasoning course because it highlights how different cultures choose different units to represent the same concept—and how those choices change the math.</p>
+<p>In the United States, we use Fuel Efficiency (Distance/Volume), while in Europe and much of the world, they use Fuel Consumption (Volume/Distance).</p>
+<p>Scenario: You are comparing two rental cars for a road trip.</p>
+<p>The American Model: Rated at 30 miles per gallon (mpg).</p>
+<p>The European Model: Rated at 8 liters per 100 kilometers (L/100km).</p>
+<p>To compare them, you need to convert the European rating into “American” units. Use the following conversion factors:</p>
+<ul>
+<li>1 gallon ≈ 3.8 liters</li>
+<li>100 kilometers ≈ 62 miles</li>
+</ul>
+<p>Question: What is the approximate fuel efficiency of the European model in miles per gallon, and which car is more “efficient” (uses less fuel per mile)?</p>
+<div class="cell">
+<span> <small style="color: grey;" id="bbg-1-cfr-hintarea" class="hintarea">bbg-1-cfr</small>
+<form id="bbg-1-cfr-form">
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... efficient." id="bbg-1-cfr-1" w="19" name="bbg-1-cfr" hint="No." show_hints="TRUE"> The European model is 18.6 mpg, making the American model more efficient.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... efficient." id="bbg-1-cfr-2" w="41" name="bbg-1-cfr" hint="Score!" show_hints="TRUE"> The European model is 29.5 mpg, making the American model slightly more efficient.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... efficient." id="bbg-1-cfr-3" w="19" name="bbg-1-cfr" hint="Not quite right." show_hints="TRUE"> The European model is 46.5 mpg, making the European model significantly more efficient.</p>
+<p></p>
+<p>
+</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... long trip." id="bbg-1-cfr-4" w="3" name="bbg-1-cfr" hint="You might think so, but ..." show_hints="TRUE"> The European model is 7.75 mpg, making it a very poor choice for a long trip.</p>
+<p></p>
+<input type="radio" class="devoirs-mcq" name="bbg-1-cfr" id="bbg-1-cfr.null" style="display: none;" w="skipped" checked="">
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for bbg-1-cfr.');
+      const form = document.getElementById('bbg-1-cfr-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('bbg-1-cfr-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for bbg-1-cfr.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for bbg-1-cfr.");
+          localStorage.setItem('bbg-1-cfr-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<!-- Opening answer: bbg-7Se -->
+<div class="callout callout-style-default callout-tip callout-titled" style="display: block;">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>To compare two quantities, they must have the same dimension. The dimension of miles-per-gallon is L / L<sup>3</sup> = L<sup>-2</sup>. The dimension of “liters per 100 km” is L<sup>3</sup> / L = L^2$. So we can’t directly compare the two cars.</p>
+<p>Nonetheless, it is straightforward to calculate the miles-per-gallon of the European car. The car consumes 8 liters in order to go 100 km. The problem statement told us that 100 km = 62 miles. But how many gallons are their in eight liters? We need a conversion factor <em>from</em> liters <em>to</em> gallons. The conversion factor will be a flavor of 1 with gallons on top and liters on the bottom. Since 1 gallon ≈ 3.8 liters, we divide 1 gallon by 3.8 liters; the conversion factor is <span class="math display">\[\frac{1\, \text{gallon} }{3.8\, \text{liters}} = 0.263\, \text{gallons per litre} .\]</span></p>
+<p>Converting 8 liters to gallons is a simple matter of multiplying by the conversion factor: <span class="math display">\[8\, \text{liters} \times 0.263\, \frac{\text{gallons}}{\text{litre}} = 2.112\,  \text{gallons}\]</span> To find the miles-per-gallon, divide the distance by the fuel used, that is <span class="math display">\[62\, \text{miles} / 2.112\, \text{gallons} \approx 29.5\, \text{mpg} .\]</span></p>
+<p><span data-tooltip="Ans id: bbg-7Se">..id..</span></p>
+</div>
+</div>
+</div>
+<!-- closing answer bbg-7Se -->
+</div>
+<p><!-- end of exr-bee-begin-gloves --></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<!--
+id: "crow-pull-laundry"
+created: "Sat Jul 12 09:28:56 2025"
+attribution: TBA
+status: "ready-to-use"
+chapter: 14
+mode: "reading-question"
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-crow-pull-laundry" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Light bulbs generally have a quantity printed on them: the wattage. Similarly, light-bulb sockets often have a “max watts” label advising the user of the largest wattage bulb that can work safely in the socket.</p>
+<dl>
+<dt>Part a</dt>
+<dd>
+What is the dimension of a watt?
+</dd>
+</dl>
+<div class="cell" data-inline="true">
+<span> <small style="color: grey;" id="bulb-wattage-hintarea" class="hintarea">bulb-wattage</small>
+<form id="bulb-wattage-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="Energy " id="bulb-wattage-1" w="19" name="bulb-wattage" hint="Wrong." show_hints="TRUE"> Energy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Power" id="bulb-wattage-2" w="5" name="bulb-wattage" hint="You've got it!" show_hints="TRUE"> Power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Electrical voltage" id="bulb-wattage-3" w="19" name="bulb-wattage" hint="Nope." show_hints="TRUE"> Electrical voltage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Electrical current" id="bulb-wattage-4" w="87" name="bulb-wattage" hint="Wrong." show_hints="TRUE"> Electrical current &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bulb-wattage" id="bulb-wattage.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for bulb-wattage.');
+      const form = document.getElementById('bulb-wattage-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('bulb-wattage-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for bulb-wattage.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for bulb-wattage.");
+          localStorage.setItem('bulb-wattage-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<!-- Opening answer: quantities-2uB -->
+<div class="callout callout-style-default callout-tip callout-titled" style="display: block;">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Since people don’t directly perceive electrical current or voltage, it is hard to form an intuition about them. Instead, training is required to interpret properly the meanings of electrical dimensions.</p>
+<p>An exact mathematical analogy to electrical dimensions can be made to water and flow. You turn on the shower and step in for four minutes. As you shower, at each instant you can feel the “intensity” (flow) of the spray from the shower-head. You even have a faucet to set the flow. This flow is analogous to the power used by a light bulb.</p>
+<p>Over the full course of your 4-minute shower, six gallons of water goes down the train. Gallons, of course, have the dimension of <em>volume</em>. You used those six gallons over four minutes. Consequently, the <strong>flow</strong> of water is <span class="math inline">\(\frac{6\, \text{gallons}}{4\, \text{minutes}} = 1.5\, \text{gallons per minute}\)</span>. The volume of water used in your shower session is analogous to the energy used by a light bulb: it is power multiplied by duration. <span data-tooltip="Ans id: quantities-2uB">..id..</span></p>
+</div>
+</div>
+</div>
+<!-- closing answer quantities-2uB -->
+<dl>
+<dt>Part b</dt>
+<dd>
+The brightness of the light emitted by a light bulb is proportional to power. Suppose you turn on a 20-watt light when you walk into a room. This consumes energy. The energy used by the bulb is the power multiplied by the duration that the light was on.
+</dd>
+</dl>
+<ol type="1">
+<li>If you stay in the room for 1 hour, turning off the light when you leave, how much energy has the light consumed?</li>
+</ol>
+<div class="cell" data-inline="true">
+<span> <small style="color: grey;" id="light-bulb-b1-hintarea" class="hintarea">light-bulb-b1</small>
+<form id="light-bulb-b1-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="20 watts" id="light-bulb-b1-1" w="7" name="light-bulb-b1" hint="A watt is a unit of power, not energy," show_hints="TRUE"> 20 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="20 watt-hours" id="light-bulb-b1-2" w="35" name="light-bulb-b1" hint="Right-O!" show_hints="TRUE"> 20 watt-hours &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough ... n is given" id="light-bulb-b1-3" w="7" name="light-bulb-b1" hint="Not quite right." show_hints="TRUE"> Not enough information is given &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1 hour" id="light-bulb-b1-4" w="19" name="light-bulb-b1" hint="An hour is a unit of time. Energy is power multiplied by duration (time)." show_hints="TRUE"> 1 hour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b1" id="light-bulb-b1.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for light-bulb-b1.');
+      const form = document.getElementById('light-bulb-b1-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('light-bulb-b1-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for light-bulb-b1.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for light-bulb-b1.");
+          localStorage.setItem('light-bulb-b1-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<ol start="2" type="1">
+<li>In terms of the fundamental <em>dimension</em>s—L, M, T—energy has <em>dimension</em> L<sup>2</sup> M T<sup>-2</sup>. What is the <em>dimension</em> of power?</li>
+</ol>
+<div class="cell" data-inline="true">
+<span> <small style="color: grey;" id="light-bulb-b2-hintarea" class="hintarea">light-bulb-b2</small>
+<form id="light-bulb-b2-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="L^2^ M T^-1^" id="light-bulb-b2-1" w="3" name="light-bulb-b2" hint="No." show_hints="TRUE"> L<sup>2</sup> M T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ M T^-2^" id="light-bulb-b2-2" w="19" name="light-bulb-b2" hint="Incorrect." show_hints="TRUE"> L<sup>2</sup> M T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ M T^-3^" id="light-bulb-b2-3" w="41" name="light-bulb-b2" hint="That is, energy *divided by* time." show_hints="TRUE"> L<sup>2</sup> M T<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b2" id="light-bulb-b2.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for light-bulb-b2.');
+      const form = document.getElementById('light-bulb-b2-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('light-bulb-b2-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for light-bulb-b2.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for light-bulb-b2.");
+          localStorage.setItem('light-bulb-b2-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<ol start="3" type="1">
+<li>You might reasonably ask, “What does mass have to do with energy?” Perhaps you remember Einstein’s famous equation for energy: <span class="math display">\[E = m\, c^2\]</span> where <span class="math inline">\(m\)</span> is mass and <span class="math inline">\(c\)</span> is the <em>speed</em> of light. What is the dimension of <span class="math inline">\(c^2\)</span>?</li>
+</ol>
+<div class="cell" data-inline="true">
+<span> <small style="color: grey;" id="light-bulb-b3-hintarea" class="hintarea">light-bulb-b3</small>
+<form id="light-bulb-b3-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="L T" id="light-bulb-b3-1" w="23" name="light-bulb-b3" hint="Oops!" show_hints="TRUE"> L T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="light-bulb-b3-2" w="32" name="light-bulb-b3" hint="Hmmm ..." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L T^-1^" id="light-bulb-b3-3" w="19" name="light-bulb-b3" hint="Incorrect." show_hints="TRUE"> L T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L T^-2^" id="light-bulb-b3-4" w="32" name="light-bulb-b3" hint="Incorrect." show_hints="TRUE"> L T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ T^-2^" id="light-bulb-b3-5" w="5" name="light-bulb-b3" hint="Excellent!" show_hints="TRUE"> L<sup>2</sup> T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b3" id="light-bulb-b3.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for light-bulb-b3.');
+      const form = document.getElementById('light-bulb-b3-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('light-bulb-b3-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for light-bulb-b3.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for light-bulb-b3.");
+          localStorage.setItem('light-bulb-b3-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<p>Consequently, <span class="math inline">\(m\, c^2\)</span> has the dimension of energy.</p>
+<dl>
+<dt>Part c</dt>
+<dd>
+Consider this statement:
+</dd>
+</dl>
+<blockquote class="blockquote">
+<p>Power consumption is a property of the light bulb, but <em>energy</em> consumption involves both the light bulb itself and the pattern of usage.</p>
+</blockquote>
+&nbsp;&nbsp; <span> <small style="color: grey;" id="light-bulb-c1-hintarea" class="hintarea">light-bulb-c1</small>
+<form id="light-bulb-c1-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="light-bulb-c1-1" w="18" name="light-bulb-c1" hint="Certainly." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="light-bulb-c1-2" w="23" name="light-bulb-c1" hint="Better luck next time." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-c1" id="light-bulb-c1.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for light-bulb-c1.');
+      const form = document.getElementById('light-bulb-c1-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('light-bulb-c1-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for light-bulb-c1.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for light-bulb-c1.");
+          localStorage.setItem('light-bulb-c1-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+<dl>
+<dt>Part d</dt>
+<dd>
+A typical household uses about 10 kilowatt-hours of energy per day. “10 kilowatt-hours” is an amount of energy, but “energy per day” is a flow of energy, that is, a power.
+</dd>
+</dl>
+<ol type="1">
+<li>Translate “10 kilowatt-hours of energy per day” into the equivalent watts. For simplicity in the calculation, assume that the energy is used evenly over the 24-hour day.</li>
+</ol>
+<div class="cell" data-inline="true">
+<span> <small style="color: grey;" id="light-bulb-d1-hintarea" class="hintarea">light-bulb-d1</small>
+<form id="light-bulb-d1-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="417 watts" id="light-bulb-d1-1" w="16" name="light-bulb-d1" hint="A hit!" show_hints="TRUE"> 417 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="10,000 watts" id="light-bulb-d1-2" w="23" name="light-bulb-d1" hint="Boo!" show_hints="TRUE"> 10,000 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="240,000 watts" id="light-bulb-d1-3" w="32" name="light-bulb-d1" hint="Not on target." show_hints="TRUE"> 240,000 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough ... formation " id="light-bulb-d1-4" w="87" name="light-bulb-d1" hint="Sorry!" show_hints="TRUE"> Not enough information &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-d1" id="light-bulb-d1.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for light-bulb-d1.');
+      const form = document.getElementById('light-bulb-d1-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('light-bulb-d1-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for light-bulb-d1.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for light-bulb-d1.");
+          localStorage.setItem('light-bulb-d1-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+<ol start="2" type="1">
+<li>Look up the power consumption of a hand-held blow-dryer. When the blow-dryer is in use, energy consumption of the household increases. Which of these is a plausible fraction of average household power consumed by the hair-dryer?</li>
+</ol>
+<div class="cell" data-inline="true">
+<span> <small style="color: grey;" id="light-bulb-d2-hintarea" class="hintarea">light-bulb-d2</small>
+<form id="light-bulb-d2-form">
+<span> <span> <input type="radio" class="devoirs-mcq" value="10% of ave ... rage power" id="light-bulb-d2-1" w="23" name="light-bulb-d2" hint="Try again!" show_hints="TRUE"> 10% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="50% of ave ... rage power" id="light-bulb-d2-2" w="23" name="light-bulb-d2" hint="Think again." show_hints="TRUE"> 50% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="100% of av ... rage power" id="light-bulb-d2-3" w="3" name="light-bulb-d2" hint="Boo!" show_hints="TRUE"> 100% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="200% of av ... rage power" id="light-bulb-d2-4" w="20" name="light-bulb-d2" hint="Yeah!" show_hints="TRUE"> 200% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-d2" id="light-bulb-d2.null" style="display: none;" w="skipped" checked=""> </span> </span>
+</form>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+      console.log('Adding event listener for light-bulb-d2.');
+      const form = document.getElementById('light-bulb-d2-form');
+      const radioButtons = form.querySelectorAll('input[type="radio"]');
+
+      // Load saved value on page load
+      const savedValue = localStorage.getItem('light-bulb-d2-choice');
+      if (savedValue) {
+        console.log("Restoring radio button values for light-bulb-d2.");
+        radioButtons.forEach(radio => {
+          if (radio.value === savedValue) {
+            radio.checked = true;
+          }
+        });
+      }
+
+      // Save value on change
+      form.addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+          console.log("Saving changed value for light-bulb-d2.");
+          localStorage.setItem('light-bulb-d2-choice', event.target.value);
+        }
+      });
+    });
+</script>
+<p></p>
+</span></div>
+</span></div>
+<p><!-- end of exr-crow-pull-laundry --></p>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

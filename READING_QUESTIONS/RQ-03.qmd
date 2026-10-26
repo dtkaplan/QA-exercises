@@ -42,13 +42,12 @@ source("../_exercise_startup.R")
 :::
 
 
-<!-- Library for RQ2
+<!-- Library for RQ3
 
-exercises/beech-understand-cotton.qmd
-exercises/croc-come-blanket.qmd
-exercises/deer-put-cotton.qmd
-exercises/falcon-have-book.qmd
-
+beech-understand-cotton.qmd
+croc-come-blanket.qmd
+deer-put-cotton.qmd
+falcon-have-book.qmd
 -->
 
 

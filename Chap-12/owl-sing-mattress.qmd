@@ -1,0 +1,110 @@
+<!--
+id: "owl-sing-mattress"
+created: "Sat Oct 24 09:23:41 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 12
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-owl-sing-mattress}
+For some strange, textbook reason you are in a closed room with no windows. You have been there so long that you don't know what day of the year it is. You wonder what the temperature is like outside.
+
+Here are four shapes of relative probability functions that take temperature as input.
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+prior <- function(temp) {
+  dnorm(temp, mean = 55, sd = 15) / dnorm(55, mean = 55, sd = 15)
+} 
+
+make_temperature_plot <- function(fname) {
+  slice_plot(fname(temp) ~ temp,
+  domain(temp = 0:100)) |>
+  gf_theme(theme_minimal(base_size = 12)) |>
+  gf_labs(x = "Temperature", y = "Relative probability")
+}
+
+
+
+winter <- function(temp) {
+  dnorm(temp, mean = 30, sd = 10) / dnorm(30, mean = 30, sd = 10)
+}
+
+summer <- function(temp) {
+  dnorm(temp, mean = 75, sd = 10) / dnorm(75, mean = 75, sd = 10)
+}
+
+fall_spring <- function(temp) {
+  dnorm(temp, mean = 45, sd = 10) / dnorm(45, mean = 45, sd = 10)
+}
+
+make_temperature_plot(fall_spring) |> gf_labs(title = "Function A")
+
+make_temperature_plot(prior) |> gf_labs(title = "Function B")
+
+make_temperature_plot(summer) |> gf_labs(title = "Function C")
+
+make_temperature_plot(winter) |> gf_labs(title = "Function D")
+```
+
+i. Which of the four functions best represents a sensible *prior* belief about the temperature?
+
+```{mcq}
+#| label: D12-xxxx-i
+#| inline: true
+1. A [hint: too narrow]
+2. B [correct]
+3. C [hint: too narrow]
+4. D [hint: too narrow]
+```
+
+Eager to know more about the time of year, you ask to have a thermometer read-out installed which shows the outside temperature.
+
+-----
+
+ii. Which of the four plots shows a sensible *likelihood* for temperature under the hypothesis that it is either spring or fall?
+
+```{mcq}
+#| label: D12-xxxx-ii
+#| inline: true
+1. A [correct]
+2. B 
+3. C 
+4. D 
+```
+
+-----
+
+iii. What is the best of the following criterion for judging which of the four functions is suitable for the *prior*?
+
+```{mcq}
+#| label: D12-xxxx-iii
+1. It should be taller than the others.
+2. It should cover only a narrow range of temperatures.
+3. It should cover a broad range of temperatures. [correct]
+4. It should never have a negative value. [hint: This is true of all relative probability functions.]
+```
+
+
+-----
+
+iv. Which of the four plots shows a sensible *likelihood* for temperature under the hypothesis that it is summer?
+
+```{mcq}
+#| label: D12-xxxx-iv
+#| inline: true
+1. A 
+2. B 
+3. C [correct]
+4. D 
+```
+
+
+:::
+ <!-- end of exr-owl-sing-mattress -->

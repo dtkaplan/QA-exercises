@@ -1,0 +1,35 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 11 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1.
+
+{{< include ../Chap-11/lion-hold-hamper.qmd >}}
+
+## 2.
+
+{{< include ../Chap-11/deer-iron-cotton.qmd >}}
+
+## 3.
+
+{{< include ../Chap-11/spider-bite-suitcase.qmd >}}
+
+## 4.
+
+{{< include ../Chap-11/ash-buy-rug.qmd >}}
+
+:::
+
+
+
+
+

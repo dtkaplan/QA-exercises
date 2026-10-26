@@ -11,7 +11,50 @@ source("../_exercise_startup.R")
 
 ::: {.panel-tabset}
 
-## 1
+## 1.
 
+{{< include ../Chap-05/wolf-jump-door.qmd >}}
+
+## 2.
+
+{{< include ../Chap-05/goat-enjoy-piano.qmd >}}
+
+## 3. 
+
+{{< include ../Chap-05/child-blow-coat.qmd >}}
 
 :::
+
+
+<!-- ignore the following -->
+```{r}
+#| echo: false
+#| eval: false
+yrate <- 1.02^12
+amounts <- 1000 * yrate^(0:10)
+tibble::tibble(
+  Year = 0:10,
+  Amount = amounts,
+  ProportionChange = Amount / lag(Amount),
+  Magnitude = log10(Amount)
+) |>
+  mutate(Amount = round(Amount),
+  Year = Year + 2027) |>
+  knitr::kable()
+```
+
+```{r}
+#| echo: false
+#| eval: false
+library(lubridate)
+Covid <- readr::read_csv("~/Downloads/case-hosp-death.csv")
+
+Covid <- Covid |> 
+dplyr::mutate(
+    date = mdy(DATE_OF_INTEREST),
+    doy = yday(date))
+
+ggplot(Covid |> head(12), aes(x = date, y = CASE_COUNT)) +
+  geom_point() 
+```
+

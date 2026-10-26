@@ -1,0 +1,30 @@
+<!--
+id: "child-blow-coat"
+created: "Thu Oct 22 08:16:37 2026"
+attribution: DTK
+mode: reading-question
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-child-blow-coat}
+Look carefully at the axes in `r xf("fig-gdp-mortality-mag")`. Along the horizontal axis, the tick marks are evenly spaced. From left to right, the numerical values on the scale increase. How much do they increase? State your answer in three different ways:
+
+i. The arithmetical difference between consecutive numerical values.
+ii. The ratio of consecutive numerical values.
+iii. The order of magnitude change between consecutive numerical values.
+
+For each of the above, write an answer for each of the two pairs of numbers: 1000 to 10,000 and 10,000 to 100,000.
+
+`r devoirs::devoirs_text("cbc-horiz", contents="                          1st pair          2nd pair\n\ni. Arithmetical\n\nii. Ratio\n\niii. Order of magnitude", rows=10, cols=80 )`
+
+Make the same analysis for the labels on the vertical axis, but note that the tick marks are not exactly evenly spaced, so the differences between consecutive pairs change as you move up the axis. In addition to giving your measurements for the four pairs of consecutive numbers, speculate on why the tick marks are not exactly evenly spaced.
+
+`r devoirs::devoirs_text("cbc-vert", contents="                          1st pair      2nd      3rd      4th\n\ni. Arithmetical\n\nii. Ratio\n\niii. Order of magnitude", rows=10, cols=80 )`
+
+:::
+ <!-- end of exr-child-blow-coat -->

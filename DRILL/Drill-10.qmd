@@ -1,16 +1,35 @@
 ---
-number-offset: 09
-crossref:
-  exr-title: "Drill 10."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 10 Drill Questions"
+filters:
+  - shinylive
 ---
 
-# Drill Questions: Making good choices
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-```{r include=FALSE}
-source("_start-up.R")
+```{r include = FALSE}
+library(drill)
 ```
 
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
 `r devoirs::push_answer_style("block")`
+:::: {.callout-note collapse="false"}
 
-{{< include _devoirs.qmd >}}
+## 1.
 
+{{< include ../Chap-10/sister-dive-oven.qmd >}}
+
+## 2. 
+
+{{< include ../Chap-10/giraffe-blow-chair.qmd >}}
+
+## 3.
+
+{{< include ../Chap-10/octopus-iron-kayak.qmd >}}
+
+::::

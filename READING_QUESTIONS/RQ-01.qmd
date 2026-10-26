@@ -32,7 +32,7 @@ source("../_exercise_startup.R")
 
 {{< include ../Chap-01/frog-dig-pot.qmd >}}
 
-## 6
+
 
 
 

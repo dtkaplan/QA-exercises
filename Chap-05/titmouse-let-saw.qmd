@@ -4,7 +4,7 @@ created: "Sun Nov 30 13:50:19 2025"
 attribution: TBA
 status: "ready-to-use"
 chapter: 5
-mode: "reading-question"
+mode: "discussion"
 -->
 
 {{< include ../exercise-header.qmd >}}

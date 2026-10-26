@@ -1,0 +1,37 @@
+<!--
+id: "wolf-jump-door"
+created: "Wed Oct 21 17:27:53 2026"
+attribution: DTK
+mode: reading-question
+status: ready-to-go
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-wolf-jump-door}
+Credit cards routinely charge interest on outstanding balances at a rate of around 2% per month. So you might think that carrying a balance for 50 months would double the amount you owe, and carrying it for 100 months would triple the amount.
+
+This is not at all the case. The table below shows the amount owed at the end of every year, over 10 years (120 months). The starting balance, in 2027, is $1000. Columns show the proportional increase from the previous year and the magnitude of the amount owed.
+
+| Year| Amount| Proportion<br>Change| Magnitude|
+|----:|------:|---------:|------:|
+| 2027|   $1000|             |  3.000|
+| 2028|   $1268|         1.27|  3.103|
+| 2029|   $1608|         1.27|  3.206|
+| 2030|   $2040|         1.27|  3.309|
+| 2031|   $2587|         1.27|  3.412|
+| 2032|   $3281|         1.27|  3.516|
+| 2033|   $4161|         1.27|  3.619|
+| 2034|   $5277|         1.27|  3.722|
+| 2035|   $6693|         1.27|  3.825|
+| 2036|   $8488|         1.27|  3.928|
+| 2037|  $10765|         1.27|  4.032|
+
+What about the information in the table points to the growth of debt being a **magnitude** process?
+
+`r devoirs::devoirs_text("wjd-debt")`
+:::
+ <!-- end of exr-wolf-jump-door -->

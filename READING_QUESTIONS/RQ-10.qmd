@@ -1,0 +1,82 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 10 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+An objective function, like all functions, has one or more inputs and an output. 
+
+1. Which of these two---the output or the inputs---corresponds to the decision taken? 
+2. What does the other one tell you? 
+3.How does the word "argmax" relate to the answers to (1) and (2)?
+
+`r devoirs::devoirs_text("rq10-axe")`
+
+## 2. 
+
+Give an experience from your life or imagination of simultaneously questing for two competing goals. Make sure to explain why the two goals are in competition with one another.
+
+`r devoirs::devoirs_text("rq10-experience")`
+
+## 3. 
+
+You are dining in a restaurant and take a first spoonful of a bowl of underseasoned soup. You decide to add salt with the objective of maximizing tastiness.
+
+Here are three functions of tastiness versus the total amount of salt added. Which of the three is a plausible objective function for determining how much salt to add? In your answer, explain your reasoning and say also what the horizontal axis stands for.
+
+```{r}
+#| echo: false
+blank_it_out <- function(P) {
+    P |> gf_labs(x = "", y = "Tastiness") |>
+  gf_theme(
+
+    axis.text  = element_blank(), 
+    axis.ticks = element_blank(),
+    base_size = 12
+  ) |> 
+  gf_refine(coord_fixed())
+}
+```
+
+```{r}
+#| echo: false
+#| layout-ncol: 3
+slice_plot((exp(x)-1)/(exp(1)-1) ~ x, domain(x=0:1)) |>
+  blank_it_out() |>
+  gf_labs(title = "(A)")
+
+slice_plot(0.5*exp(-x)*exp(1) ~ x, domain(x=0:1)) |>
+  blank_it_out() |>
+  gf_labs(title = "(B)")
+
+slice_plot(dnorm(x, mean=0.5, sd=0.3)/1.33 ~ x, domain(x=0:1)) |>
+  blank_it_out() |>
+  gf_labs(title = "(C)")
+
+```
+
+
+`r devoirs::devoirs_text("rq10-soup-1")`  
+
+A cook in a test kitchen experiments with different recipes to find the best. In this soupy situation, imagine that the issue is how much salt to put in the soup. In the terminology of this chapter, the cook's task is to construct the objective function then read off the argmax.
+
+As a restaurant diner, on the other hand, you can't afford this expensive experiment. So, you add a small amount of salt, taste, add more salt, taste again, and so on. With this procedure, how can you tell if you are i) approaching the argmax, ii) very close to the argmax, or iii) have passed the argmax?
+
+`r devoirs::devoirs_text("rq10-soup-1")`  
+
+
+:::
+
+
+
+
+

@@ -1,0 +1,51 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 6 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+What is the distinction between the `exp2()` and `log2()` functions?
+
+`r devoirs::devoirs_text("rq07-double")`
+
+
+## 2.
+
+What does "periodic" mean in terms of a function?
+
+`r devoirs::devoirs_text("rq07-periodic")`
+
+## 3.
+
+Which of the core modeling functions comes closest to giving as output the *magnitude* of the input?
+
+`r devoirs::devoirs_text("rq07-magnitude")`
+
+## 4. 
+
+Which of the core modeling functions never has the output zero? (Hint: There might be more than one.)
+
+`r devoirs::devoirs_text("rq07-zero")`
+
+## 5. 
+
+What is the point of constructing a function by scaling the input of a core modeling function?
+
+`r devoirs::devoirs_text("rq07-input-scaling") `
+
+
+:::
+
+
+
+
+

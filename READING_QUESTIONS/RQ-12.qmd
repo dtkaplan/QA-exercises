@@ -1,0 +1,32 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 12 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1.
+
+{{< include ../Chap-12/oak-swim-bed.qmd >}}
+
+## 2.
+
+{{< include ../Chap-12/cheetah-feel-teacup.qmd >}}
+
+## 3.
+
+include ../Chap-12/deer-iron-cotton.qmd is currently in RQ-11
+
+
+:::
+
+
+
+
+

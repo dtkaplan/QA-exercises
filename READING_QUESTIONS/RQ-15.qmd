@@ -1,0 +1,36 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 15 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1.
+
+{{< include ../Chap-15/turtle-understand-scarf.qmd >}}
+
+## 2.
+
+{{< include ../Chap-15/camel-win-pen.qmd >}}
+
+## 3.
+
+{{< include ../Chap-15/boy-speak-dish.qmd >}}
+
+## 4.
+
+{{< include ../Chap-15/snake-send-linen.qmd >}}
+
+
+:::
+
+
+
+
+

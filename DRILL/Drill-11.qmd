@@ -1,54 +1,51 @@
 ---
-number-offset: 10
-crossref:
-  exr-title: "Drill 11."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 11 Drill Questions"
+filters:
+  - shinylive
 ---
 
-# Drill Questions: Likelihood 
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r include = FALSE}
+library(drill)
+```
 
 ```{r include=FALSE}
-source("_start-up.R")
+source("../_exercise_startup.R")
 ```
+
+{{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
 
-{{< include _devoirs.qmd >}}
-
-:::: {.callout-note collapse=true}
-## A. Relative and absolute probability
+:::: {.callout-note collapse=false}
+## Likelihood
 
 ::: {.panel-tabset}
 ## 1.
 
-{{< include _exercises/walrus-sharpen-boat.qmd >}}
+{{< include ../Chap-11/walrus-sharpen-boat.qmd >}}
 
 ## 2. 
 
-{{< include _exercises/bird-engage-saw.qmd >}}
+{{< include ../Chap-11/bird-engage-saw.qmd >}}
 
 ## 3.
 
-{{< include _exercises/panda-mean-pen.qmd >}}
+{{< include ../Chap-11/panda-mean-pen.qmd >}}
 
 ## 4.
 
-{{< include _exercises/nephew-find-drawer.qmd >}}
+{{< include ../Chap-11/nephew-find-drawer.qmd >}}
 
-:::
+## 5.
 
-::::
+{{< include ../Chap-11/cat-run-screen.qmd >}}
 
+## 6.
 
-
-:::: {.callout-note collapse=true}
-## B. Calculating likelihood using data
-
-::: {.panel-tabset}
-
-
-## 1.
-
-{{< include _exercises/titmouse-refer-laundry.qmd >}}
+{{< include ../Chap-11/titmouse-refer-laundry.qmd >}}
 
 :::
 

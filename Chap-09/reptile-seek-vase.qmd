@@ -1,0 +1,54 @@
+<!--
+id: "reptile-seek-vase"
+created: "Thu Oct 22 18:34:25 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 09
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-reptile-seek-vase}
+
+```{r}
+#| echo: false
+f <- doodle_fun(~ x & z, seed = 400)
+contour_plot(f(x, z) ~ x & z, domain(x = -3:3, z = -3:3)) |>
+  gf_refine(coord_fixed()) |>
+  gf_theme(theme_minimal())
+```
+
+For the function plotted just above ...
+
+1. What is the output spacing between adjacent contours?
+
+`r devoirs::devoirs_set(choices = "D-09-gab", correct = 2, id = "cp-space-3kws")`
+
+2. What is the output spacing between adjacent **labelled** contours?
+
+`r devoirs::devoirs_set(choices = "D-09-zed", correct = 4, id = "cp-labels-ekx")`
+
+
+3. What is the minimum possible value for the function output on the input space shown. (Pick the closest answer.)
+
+`r devoirs::devoirs_set(choices = "D-09-laid", correct = -3, id = "cp-min-3kws")`
+
+4. What is the maximum possible value for the function output in the input space shown. (Pick the closest answer.)
+
+`r devoirs::devoirs_set(choices = "D-09-gale", correct = 13.5, id = "cp-max-34s")`
+
+5. Consider an input close to x = -3, z = 0, on the left side of the input space. Which of these is the best statement about the possible output for that input?
+
+```{mcq}
+#| label: cp-sure-382
+1. The output is less than 2.
+2. The output is greater than 2.
+3. The output is greater than 2 and less than 3.
+4. The output is greater than 2 and less than 4. [correct]
+```
+
+:::
+ <!-- end of exr-reptile-seek-vase -->

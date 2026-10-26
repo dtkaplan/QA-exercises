@@ -1,27 +1,30 @@
 ---
-number-offset: 15
-crossref:
-  exr-title: "Drill 16."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 16 Drill Questions"
 ---
 
-# Drill Questions: Operations
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-```{r include=FALSE}
-source("_start-up.R")
+```{r include = FALSE}
+library(drill)
 ```
 
-{{< include _devoirs.qmd >}}
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
 
 ::: {.panel-tabset}
 ## 1.
 
-{{< include _exercises/toe-lose-pen.qmd >}}
+{{< include ../Chap-16/toe-lose-pen.qmd >}}
 
 ## 2.
 
-{{< include _exercises/daisy-blow-kitchen.qmd >}}
+{{< include ../Chap-16/daisy-blow-kitchen.qmd >}}
 
 
 :::

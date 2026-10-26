@@ -11,9 +11,39 @@ source("../_exercise_startup.R")
 
 ::: {.panel-tabset}
 
-## 1
+## 1.
+
+Explain what the phrase, "Systems have dimensions" means in the terminology of this book.
+
+`r devoirs::devoirs_text("RQ-02-1")`
+
+## 2.
 
 {{< include ../Chap-02/puppy-break-mattress.qmd >}}
+
+## 3.
+
+A data frameis a storage device. What is stored in a data frame?
+
+`r devoirs::devoirs_text("RQ-02-3")`
+
+
+## 4.
+
+"Rows" and "columns" are everyday words often used to refer to the major elements of a data frame. In this book we use two distinctive, technical terms instead. What is our replacement for "row?" What technical word is used for "column?"
+
+`r devoirs::devoirs_text("RQ-02-4")`
+
+## 5.
+
+
+Consider a house as an example of a *system*. Make a list of five or more familiar dimensions of a house.
+
+Similarly, imagine a data frame storing measured information about each of the houses on a block.
+
+Write a meaningful paragraph describing the relationship between your list of dimensions for a single house and the data frame of many houses.  In your paragraph, use each of these words properly in its technical sense: object type, operationalization, variable, specimen, value
+
+`r devoirs::devoirs_text("RQ-02-5")`
 
 
 :::

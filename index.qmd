@@ -16,13 +16,22 @@ It is organized by chapter, with each chapter containing a catalog displaying th
 
 Each file is also a stand-along resource accessible by link. Users can navigate directly to the content they need without going through the catalog. This may be convenient for setting assignments for students.
 
-- Chapter 1: [Reading Questions](READING_QUESTIONS/RQ-01.html) [Drill Questions](DRILL/Drill-01.html) [Exercises](EXERCISES/Exer-01.html)
-- Chapter 2: [Reading Questions](READING_QUESTIONS/RQ-02.html) [Drill Questions](DRILL/Drill-02.html) [Exercises](EXERCISES/Exer-02.html)
-- Chapter 3: [Reading Questions](READING_QUESTIONS/RQ-03.html) [Drill Questions](DRILL/Drill-03.html) [Exercises](EXERCISES/Exer-03.html)
-- Chapter 4: [Reading Questions](READING_QUESTIONS/RQ-04.html) [Drill Questions](DRILL/Drill-04.html) [Exercises](EXERCISES/Exer-04.html)
-- Chapter 5: [Reading Questions](READING_QUESTIONS/RQ-05.html) [Drill Questions](DRILL/Drill-05.html) [Exercises](EXERCISES/Exer-05.html)
-- Chapter 6: [Reading Questions](READING_QUESTIONS/RQ-06.html) [Drill Questions](DRILL/Drill-06.html) [Exercises](EXERCISES/Exer-06.html)
-- Chapter 7: [Reading Questions](READING_QUESTIONS/RQ-07.html) [Drill Questions](DRILL/Drill-07.html) [Exercises](EXERCISES/Exer-07.html)
+- Chapter 1: [Reading Questions](READING_QUESTIONS/RQ-01.html) ::  [Drill](DRILL/Drill-01.html) : [Exercises](EXERCISES/Exer-01.html)
+- Chapter 2: [Reading Questions](READING_QUESTIONS/RQ-02.html) ::  [Drill](DRILL/Drill-02.html) : [Exercises](EXERCISES/Exer-02.html)
+- Chapter 3: [Reading Questions](READING_QUESTIONS/RQ-03.html) ::  [Drill](DRILL/Drill-03.html) :  [Exercises](EXERCISES/Exer-03.html)
+- Chapter 4: [Reading Questions](READING_QUESTIONS/RQ-04.html) ::  [Drill](DRILL/Drill-04.html) :  [Exercises](EXERCISES/Exer-04.html)
+- Chapter 5: [Reading Questions](READING_QUESTIONS/RQ-05.html) ::  [Drill](DRILL/Drill-05.html) :  [Exercises](EXERCISES/Exer-05.html)
+- Chapter 6: [Reading Questions](READING_QUESTIONS/RQ-06.html) ::  [Drill](DRILL/Drill-06.html) :  [Exercises](EXERCISES/Exer-06.html)
+- Chapter 7: [Reading Questions](READING_QUESTIONS/RQ-07.html) ::  [Drill](DRILL/Drill-07.html) :  [Exercises](EXERCISES/Exer-07.html)
+- Chapter 8: [Reading Questions](READING_QUESTIONS/RQ-08.html) ::  [Drill](DRILL/Drill-08.html) :  [Exercises](EXERCISES/Exer-08.html)
+- Chapter 9: [Reading Questions](READING_QUESTIONS/RQ-09.html) ::  [Drill](DRILL/Drill-09.html) :  [Exercises](EXERCISES/Exer-09.html)
+- Chapter 10: [Reading Questions](READING_QUESTIONS/RQ-10.html) [Drill](DRILL/Drill-10.html) [Exercises](EXERCISES/Exer-10.html)
+- Chapter 11: [Reading Questions](READING_QUESTIONS/RQ-11.html) [Drill](DRILL/Drill-11.html) [Exercises](EXERCISES/Exer-11.html)
+- Chapter 12: [Reading Questions](READING_QUESTIONS/RQ-12.html) [Drill](DRILL/Drill-12.html) [Exercises](EXERCISES/Exer-12.html)
+- Chapter 13: [Reading Questions](READING_QUESTIONS/RQ-13.html) [Drill](DRILL/Drill-13.html) [Exercises](EXERCISES/Exer-13.html)
+- Chapter 14: [Reading Questions](READING_QUESTIONS/RQ-14.html) [Drill](DRILL/Drill-14.html) [Exercises](EXERCISES/Exer-14.html)
+- Chapter 15: [Reading Questions](READING_QUESTIONS/RQ-15.html) [Drill](DRILL/Drill-15.html) [Exercises](EXERCISES/Exer-15.html)
+- Chapter 16: [Reading Questions](READING_QUESTIONS/RQ-16.html) [Drill](DRILL/Drill-16.html) [Exercises](EXERCISES/Exer-16.html)
 
 -----
 

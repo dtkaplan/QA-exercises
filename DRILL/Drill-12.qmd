@@ -1,37 +1,43 @@
 ---
-number-offset: 11
-crossref:
-  exr-title: "Drill 12."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 12 Drill Questions"
 ---
 
-# Drill Questions: Bayesian reasoning 
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-```{r include=FALSE}
-source("_start-up.R")
+```{r include = FALSE}
+library(drill)
 ```
 
-{{< include _devoirs.qmd >}}
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
 
+
 :::: {.callout-note}
-## B. Odds and probabilities
+## A. Odds and probabilities
 
 ::: {.panel-tabset}
 
 ## 1. 
 
-{{< include _exercises/finch-teach-kayak.qmd >}}
+{{< include ../Chap-12/finch-teach-kayak.qmd >}}
 
 ## 2.
 
-{{< include _exercises/pony-do-suitcase.qmd >}}
+{{< include ../Chap-12/pony-do-suitcase.qmd >}}
 
 ## 3.
 
-{{< include _exercises/panda-cost-door.qmd >}}
+{{< include ../Chap-12/panda-cost-door.qmd >}}
 
+## 4. 
 
+{{< include ../Chap-12/owl-sing-mattress.qmd >}}
 
 :::
 

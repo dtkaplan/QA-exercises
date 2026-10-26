@@ -51,12 +51,6 @@ title: "Chapter 03 Catalog"
 
 ::: {.callout-note collapse="true" title="Group: dimensions"}
 ::: {.panel-tabset collapse=true}
-## aspen-buy-chair
-
-
-> File: Chap-03/aspen-buy-chair.qmd
-
-{{< include aspen-buy-chair.qmd >}}
 
 ## snake-show-knife
 
@@ -151,13 +145,6 @@ title: "Chapter 03 Catalog"
 > File: Chap-03/pine-speak-shelf.qmd
 
 {{< include pine-speak-shelf.qmd >}}
-
-## spider-bid-plate
-
-
-> File: Chap-03/spider-bid-plate.qmd
-
-{{< include spider-bid-plate.qmd >}}
 
 ## titmouse-hide-clock
 

@@ -2,7 +2,7 @@
 id: "sheep-feel-tv"
 created: "Sat Dec 20 08:25:55 2025"
 attribution: DTK
-mode: ready-to-use
+status: ready-to-use
 chapter: 4
 -->
 

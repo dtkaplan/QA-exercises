@@ -114,27 +114,27 @@ source("../_exercise_startup.R")
 
 ::: {.panel-tabset}
 
-## 
+## i.
 
 {{< include ../Chap-07/seal-talk-room.qmd >}}
 
-## 
+## ii.
 
 {{< include ../Chap-07/girl-keep-hamper.qmd >}}
 
-## 
+## iii.
 
 {{< include ../Chap-07/boy-lick-book.qmd >}}
 
-## 
+## iv.
 
 {{< include ../Chap-07/bear-iron-rug.qmd >}}
 
-## 
+## v.
 
 {{< include ../Chap-07/sheep-write-jacket.qmd >}}
 
-## 
+## vi.
 
 {{< include ../Chap-07/fox-burn-spoon.qmd >}}
 

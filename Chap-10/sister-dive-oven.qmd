@@ -1,0 +1,34 @@
+<!--
+id: "sister-dive-oven"
+created: "Thu Oct 22 18:47:23 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 10
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-sister-dive-oven}
+```{r}
+#| echo: false
+f1 <- doodle_fun( ~ z, seed = 932)
+slice_plot(f1(z-3) ~ z, domain(z=0:5)) |>
+  gf_theme(theme_minimal(base_size = 12))
+```
+
+i. Which of the following choices are closest to the *argmin* of the function displayed in the graph?
+
+`r devoirs::devoirs_set(choices = c(-6, 0.5, 3, 8), correct=3, id = "D10-sdo-argmin")`
+
+ii. Which is closest to the *maximum* of the function?
+
+`r devoirs::devoirs_set(choices = c(-6, 0.5, 3, 8), correct=8, id = "D10-sdo-max")`
+
+iii. Which is closest to the *argmax* of the function?
+
+`r devoirs::devoirs_set(choices = c(-6, 0.5, 3, 8), correct=0.5, id = "D10-sdo-argmax")`
+:::
+ <!-- end of exr-sister-dive-oven -->

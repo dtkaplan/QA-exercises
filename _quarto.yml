@@ -3,27 +3,12 @@ project:
   type: website
   render:
     - index.qmd
-    - Chap-01/*-*-*.qmd
-    - Chap-02/*-*-*.qmd
-    - Chap-03/*-*-*.qmd
-    - Chap-01/Catalog-01.qmd
-    - Chap-02/Catalog-02.qmd
-    - Chap-03/Catalog-03.qmd
-    - Chap-04/Catalog-04.qmd
-    - Chap-05/Catalog-05.qmd
-    - Chap-06/Catalog-06.qmd
     - Apps/App-113.qmd
     - Apps/App-rotations.qmd
     - Apps/App-GDP-Mortality.qmd
     - Apps/App-SIR.qmd
-    - DRILL/Drill-01.qmd
-    - DRILL/Drill-02.qmd
-    - DRILL/Drill-03.qmd
-    - DRILL/Drill-04.qmd
-    - DRILL/Drill-05.qmd
-    - DRILL/Drill-06.qmd
-    - DRILL/Drill-07.qmd
-    - READING_QUESTIONS/RQ-01.qmd
+    - DRILL/Drill-??.qmd
+    - READING_QUESTIONS/RQ-??.qmd
     - EXERCISES/Exer-??.qmd
 
 

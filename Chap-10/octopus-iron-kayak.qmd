@@ -1,0 +1,100 @@
+<!--
+id: "octopus-iron-kayak"
+created: "Fri Oct 23 10:46:13 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 10
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-octopus-iron-kayak}
+The two graphs below show two imagined competing objective functions. One represents pollution from a factory as a function of the chemical processing temperature, the other represents the profit, which also depends on the chemical processing temperature.
+
+```{r}
+pollution <- doodle_fun( ~ temp, seed = 123)
+profit <- doodle_fun( ~ temp, seed = 456)
+slice_plot(15+pollution((temp-500)/600) ~ temp,
+domain(temp = 200:1200), label_text="Pollution", label_x= 0.5) |>
+slice_plot(profit(20*(((300 + temp))/2500)-8) ~ temp, color="magenta", label_text="Profit", label_x = 0.6) |>
+gf_refine(
+  scale_x_continuous(limits=c(200,1200),
+  breaks=seq(200,1200,100)),
+  scale_y_continuous(limits = c(0, 20),
+    name = "Profit ($million)",
+    sec.axis = sec_axis(~. * 75 , name="Pollution (tons)")) )|>
+gf_theme(theme_minimal(base_size=12)) |>
+gf_labs(x = "Temperature (C)") 
+```
+
+i. Which temperature gives the highest profit?
+
+```{mcq}
+#| label: D10-OIK-i
+#| inline: true
+1. 17.5 million$ [hint: That is not a temperature!]
+2. 400 C [hint: Try again! A higher temperature might be better]
+3. 900 C [correct]
+4. 1200 C [hint: Sorry. Would a somewhat lower temperature be better]
+```
+
+ii. What is the technical name for that highest-profit temperature?
+
+```{mcq}
+#| label: D10-OIK-ii
+#| inline: true
+1. Max temperature
+2. Argmin for profit
+3. Argmax for pollution
+4. Argmax for profit [correct]
+```
+
+iii. What is the technical name for the highest profit?
+
+```{mcq}
+#| label: D10-OIK-iii
+#| inline: true
+1. Max profit [correct]
+2. Argmax for profit
+3. Argmin for profit
+4. Max temperature
+```
+
+iv. What is the level of pollution when the profit is maximized? (Pick the closest.)
+
+```{mcq}
+#| label: D10-OIK-iv
+#| inline: true
+1. 9.5 million $ [hint: Sorry, but that's not a level of pollution.]
+2. 17.5 million $ [hint: Sorry, but that's not a level of pollution.]
+3. 700 tons [correct]
+4. 1100 tons [hint: That's the maximum pollution on the graph, not the pollution at the argmax for profit.]
+```
+
+v. If the only concern were profit, the factory would operate at 900 C. By operating at a somewhat lower temperature, say 700 C, the profit would be reduced but pollution would also be lower.
+
+The change in profit moving from 900 C to 700 C is about negative $6 million. What's the change in pollution when for the move from 900 C to 700 C?
+
+```{mcq}
+#| label: D10-OIK-v
+#| inline: true
+1. 400 tons [correct]
+2. 700 tons
+3. 1100 tons
+```
+
+vi. Moving from 900 C to 700 C effectively pays $6 million for a pollution reduction of 400 tons. What's the *shadow price* for lowering pollution?
+
+```{mcq}
+#| label: D10-OIK-vi
+#| inline: true
+1. $15,000 per ton [correct]
+2. $6 million per ton
+3. $6 million
+4. 6 million tons per dollar.
+```
+:::
+ <!-- end of exr-octopus-iron-kayak -->

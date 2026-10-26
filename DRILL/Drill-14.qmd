@@ -1,47 +1,51 @@
 ---
-number-offset: 13
-crossref:
-  exr-title: "Drill 14."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 14 Drill Questions"
 ---
 
-# Drill Questions: Rates of change
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{r include = FALSE}
+library(drill)
+```
 
 ```{r include=FALSE}
-source("_start-up.R")
+source("../_exercise_startup.R")
 ```
+
+{{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
 
-{{< include _devoirs.qmd >}} 
 
-:::: {.callout-note collapse=true}
+:::: {.callout-note collapse=false}
 ## Rates of change and derivatives
 
 ::: {.panel-tabset}
 
 ## 1.
 
-{{< include _exercises/niece-eat-pot.qmd >}}
+{{< include ../Chap-14/niece-eat-pot.qmd >}}
 
 ## 2.
 
-{{< include _exercises/spider-mean-bolt.qmd >}}
+{{< include ../Chap-14/spider-mean-bolt.qmd >}}
 
 ## 3.
 
-{{< include _exercises/ant-dream-boat.qmd >}}
+{{< include ../Chap-14/ant-dream-boat.qmd >}}
 
 ## 4.
 
-{{< include _exercises/turtle-break-stair.qmd >}}
+{{< include ../Chap-14/turtle-break-stair.qmd >}}
 
 ## 5.
 
-{{< include _exercises/kid-hurt-dress.qmd >}}
+{{< include ../Chap-14/kid-hurt-dress.qmd >}}
 
 ## 6.
 
-{{< include _exercises/camel-sharpen-futon.qmd >}}
+{{< include ../Chap-14/camel-sharpen-futon.qmd >}}
 
 :::
 ::::

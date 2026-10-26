@@ -51,7 +51,6 @@ library(mosaicCalc)
 
 --------
 
-{{< include _exercises/daisy-blow-kitchen.qmd >}}
 
 -----
 

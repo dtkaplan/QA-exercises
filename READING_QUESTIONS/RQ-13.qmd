@@ -1,0 +1,32 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 13 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1.
+
+{{< include ../Chap-13/ant-put-room.qmd >}}
+
+## 2. 
+
+{{< include ../Chap-13/dolphin-see-pants.qmd >}}
+
+## 4.
+
+{{< include ../Chap-13/dog-stand-plant.qmd >}}
+
+
+:::
+
+
+
+
+

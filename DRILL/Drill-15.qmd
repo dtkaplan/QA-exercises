@@ -1,17 +1,19 @@
 ---
-number-offset: 14
-crossref:
-  exr-title: "Drill 15."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 15 Drill Questions"
 ---
 
-# Drill Questions: Accumulation
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-```{r include=FALSE}
-source("_start-up.R")
-source("_software/slope_rose.R")
+```{r include = FALSE}
+library(drill)
 ```
 
-{{< include _devoirs.qmd >}}
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
 
@@ -42,44 +44,43 @@ Remember that we are using L, M, and T as the dimension of length, mass, and tim
 
 ## 1.
 
-{{< include _exercises/aspen-sing-pan.qmd >}}
+{{< include ../Chap-15/aspen-sing-pan.qmd >}}
 
 ## 2.
 
-{{< include _exercises/child-break-jacket.qmd >}}
+{{< include ../Chap-15/child-break-jacket.qmd >}}
 
 ## 3.
 
-{{< include _exercises/buck-tug-painting.qmd >}}
+{{< include ../Chap-15/buck-tug-painting.qmd >}}
 
 ## 4.
 
-{{< include _exercises/lamb-point-saucer.qmd >}}
-
+{{< include ../Chap-15/lamb-point-saucer.qmd >}}
 
 ## 5.
 
-{{< include _exercises/fawn-draw-radio.qmd >}}
+{{< include ../Chap-15/fawn-draw-radio.qmd >}}
 
 ## 6.
 
-{{< include _exercises/maple-freeze-hat.qmd >}}
+{{< include ../Chap-15/maple-freeze-hat.qmd >}}
 
 ## 7.
 
-{{< include _exercises/buck-hang-pantry.qmd >}}
+{{< include ../Chap-15/buck-hang-pantry.qmd >}}
 
 ## 8.
 
-{{< include _exercises/aspen-buy-chair.qmd >}}
+{{< include ../Chap-15/aspen-buy-chair.qmd >}}
 
 ## 9.
 
-{{< include _exercises/sister-pay-candy.qmd >}}
+{{< include ../Chap-15/sister-pay-candy.qmd >}}
 
 ## 10.
 
-{{< include _exercises/spider-bid-plate.qmd >}}
+{{< include ../Chap-15/spider-bid-plate.qmd >}}
 
 
 :::
@@ -95,26 +96,19 @@ Remember that we are using L, M, and T as the dimension of length, mass, and tim
 ::: {.panel-tabset}
 ## Explain
 
-An partial motivation for the choice of our core modeling functions is that, often, a core modeling function has a derivative or anti-derivative that is another core modeling function. With enough practice, finding the derivative or anti-derivative of core modeling functions becomes second nature. This greatly facilitates modeling, since if you know either the derivative or the anti-derivative of the function you are ultimately interest in, you can easy know the shape of that function of interest.
+A partial motivation for the choice of our core modeling functions is that, often, a core modeling function has a derivative or anti-derivative that is another core modeling function. With enough practice, finding the derivative or anti-derivative of core modeling functions becomes second nature. This greatly facilitates modeling, since if you know either the derivative or the anti-derivative of the function you are ultimately interest in, you can easy know the shape of that function of interest.
 
 We are not planning for you to commit to heart more than a very few of these pairs. Instead, these drill questions in this section will give you a quick introduction.
 
 Each of the following questions plots out *two* functions, side-by-side. At least one of the functions come from the core modeling collection. As well, the functions will always be a derivative/anti-derivative pair. Your job is to identify which is the anti-derivative function and say whether *both* of the functions have shapes from core modeling collection.
 
-`r core_modelings <- "D-15-keep"", "flat()", "hill()", "hillside()", "osc()", "recip()", "exp2()", "log2()")`
-
-
 ## 1.
 
-{{< include _exercises/duck-swim-candy.qmd >}}
+{{< include ../Chap-15/duck-swim-candy.qmd >}}
 
 ## 2. 
 
-
-## 3.
-
-
-{{< include _exercises/ash-talk-pen.qmd >}}
+{{< include ../Chap-15/ash-talk-pen.qmd >}}
 
 -----
 
@@ -133,7 +127,7 @@ Each of the following questions plots out *two* functions, side-by-side. At leas
 ## Explain
 
 
-{{< include _exercises/squirrel-light-scarf.qmd >}}
+{{< include ../Chap-15/squirrel-light-scarf.qmd >}}
 
 ## 1.
 

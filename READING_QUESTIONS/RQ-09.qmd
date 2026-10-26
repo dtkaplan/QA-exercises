@@ -1,0 +1,37 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 9 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../Chap-09/snail-get-futon.qmd >}}
+
+## 2
+
+{{< include ../Chap-09/puppy-get-painting.qmd >}}
+
+
+## 3
+
+{{< include ../Chap-09/snail-leave-saw.qmd >}}
+
+## 4
+
+{{< include ../Chap-13/crow-see-blanket.qmd >}}
+
+
+:::
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!--
+id: "pig-pull-ship"
+created: "Thu Oct 22 18:33:36 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 09
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-pig-pull-ship}
+Suppose you have set the input values so that the corresponding point lies exactly on some contour. Now you change the input values in such a way so that they always correspond to other points on the same contour. Let's call this "moving along the contour."
+
+How does the output value change as the input moves along a contour?
+
+```{mcq}
+#| label: d05-move
+1. The output is unchanged. [correct]
+2. The output always goes up.
+3. The output always goes down.
+4. The output goes up or down depending on whether the movement is clockwise or counter-clockwise.
+```
+
+:::
+ <!-- end of exr-pig-pull-ship -->

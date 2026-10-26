@@ -1,18 +1,23 @@
 ---
-number-offset: 11
-crossref:
-  exr-title: "Drill 13."
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 13 Drill Questions"
 ---
 
-# Drill Questions: Dynamics 
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-```{r include=FALSE}
-source("_start-up.R")
+```{r include = FALSE}
+library(drill)
 ```
 
-{{< include _devoirs.qmd >}}
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
 
 `r devoirs::push_answer_style("block")`
+
+
 
 :::: {.callout-note collapse=true}
 ## A. Instantaneous flow
@@ -25,31 +30,31 @@ The *dynamical rule* describes for each location in the state space how fast and
 
 ## 1.
 
-{{< include _exercises/cheetah-ring-clock.qmd >}}
+{{< include ../Chap-13/cheetah-ring-clock.qmd >}}
 
 ## 2.
 
-{{< include _exercises/gator-walk-piano.qmd >}}
+{{< include ../Chap-13/gator-walk-piano.qmd >}}
 
 ## 3.
 
-{{< include _exercises/beech-sleep-canoe.qmd >}}
+{{< include ../Chap-13/beech-sleep-canoe.qmd >}}
 
 ## 4.
 
-{{< include _exercises/lamb-rise-kitchen.qmd >}}
+{{< include ../Chap-13/lamb-rise-kitchen.qmd >}}
 
 ## 5.
 
-{{< include _exercises/oak-ring-socks.qmd >}}
+{{< include ../Chap-13/oak-ring-socks.qmd >}}
 
 ## 6.
 
-{{< include _exercises/cow-sharpen-linen.qmd >}}
+{{< include ../Chap-13/cow-sharpen-linen.qmd >}}
 
 ## 7.
 
-{{< include _exercises/nephew-do-screen.qmd >}}
+{{< include ../Chap-13/nephew-do-screen.qmd >}}
 
 ::::
 
@@ -65,15 +70,15 @@ In each of the following questions, a flow field is shown. In general, the rate 
 
 ## 1.
 
-{{< include _exercises/turtle-sing-socks.qmd >}}
+{{< include ../Chap-13/turtle-sing-socks.qmd >}}
 
 ## 2. 
 
-{{< include _exercises/goldfish-sleep-lamp.qmd >}}
+{{< include ../Chap-13/goldfish-sleep-lamp.qmd >}}
 
 ## 3. 
 
-{{< include _exercises/fish-toss-boat.qmd >}}
+{{< include ../Chap-13/fish-toss-boat.qmd >}}
 
 :::
 
@@ -88,11 +93,11 @@ In each of the following questions, a flow field is shown. In general, the rate 
 
 ## 1.
 
-{{< include _exercises/fox-tell-dress.qmd >}}
+{{< include ../Chap-13/fox-tell-dress.qmd >}}
 
 ## 2.
 
-{{< include _exercises/rabbit-lead-socks.qmd >}}
+{{< include ../Chap-13/rabbit-lead-socks.qmd >}}
 
 -----
 

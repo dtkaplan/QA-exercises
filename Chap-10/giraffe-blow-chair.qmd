@@ -1,0 +1,63 @@
+<!--
+id: "giraffe-blow-chair"
+created: "Thu Oct 22 18:58:03 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 10
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-giraffe-blow-chair}
+
+```{r}
+#| echo: false
+g <- doodle_fun(~ u + w, seed = 3913)
+contour_plot(g(u, w-3) ~ u + w, domain(u=-2:2, w=0:4), skip=0) |>
+gf_theme(theme_minimal(base_size=12))
+```
+
+i. Which of the following is closest to the *minimum* of the function?
+
+```{mcq}
+#| label: D10-gbc-1
+#| inline: true
+1. $(u = 1, w = 1)$
+2. 12
+3. -3 [correct]
+4. $(u=-1.5, w = 0.75)$
+5. $(u=1, w = 3.5)$
+```
+
+
+ii. Which of the following is closest to the *argmax* of the function?
+
+```{mcq}
+#| label: D10-gbc-2
+#| inline: true
+1. $(u = 1, w = 1)$
+2. 12
+3. -3 
+4. $(u=-1.5, w = 0.75)$ [correct]
+5. $(u=1, w = 3.5)$
+```
+
+
+iii. Which of the following is closest to the *argmin* of the function?
+
+```{mcq}
+#| label: D10-gbc-3
+#| inline: true
+1. $(u = 1, w = 1)$ [correct]
+2. 12
+3. -3 
+4. $(u=-1.5, w = 0.75)$ 
+5. $(u=1, w = 3.5)$
+```
+
+
+:::
+ <!-- end of exr-giraffe-blow-chair -->

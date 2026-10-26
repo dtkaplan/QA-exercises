@@ -14,7 +14,7 @@ mode: "reading-question"
 ::: {#exr-puppy-break-mattress}
 What is meant by "operationalization?"
 
-`r devoirs::devoirs_text("RQ-models-4")`
+`r devoirs::devoirs_text("RQ-02-2")`
 
 :::
  <!-- end of exr-puppy-break-mattress -->

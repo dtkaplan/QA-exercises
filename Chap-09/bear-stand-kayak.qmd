@@ -1,0 +1,78 @@
+<!--
+id: "bear-stand-kayak"
+created: "Thu Oct 22 18:32:11 2026"
+attribution: DTK
+mode: drill
+status: ready-to-go
+chapter: 09
+topic: "functions of two inputs"
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-bear-stand-kayak}
+
+```{r}
+#| echo: false
+f <- doodle_fun(~ temp & pressure, seed = 403)
+Pts <- tibble::tribble(
+  ~ temp, ~ pressure, ~ label,
+  0.5, 1.5, "A", 
+  -2, 0, "B",
+  3, -3, "C",
+  -0.5, 2, "D",
+  -0.5, -0.4, "E",
+  2, 0, "F"
+)
+contour_plot(f(temp, pressure) ~ temp & pressure, domain(temp = -3:3, pressure = -3:3)) |>
+  gf_text(pressure ~ temp, label = ~ label, color = "magenta", data = Pts) |>
+  gf_refine(coord_fixed()) |>
+  gf_theme(theme_minimal())
+```
+
+1. Is the landscape near point A a hilltop or the bottom of a bowl?
+
+```{mcq}
+#| label: d05-A-dkwe
+#| inline: true
+1. hilltop
+2. bowl [correct]
+```
+
+2. Which point is at the lowest output value of the function shown?
+
+`r devoirs::devoirs_set(choices = "D-09-zit", correct = "B", id = "d05-2-low")`
+
+3. Which point is at the highest output value of the function shown?
+
+`r devoirs::devoirs_set(choices = "D-09-pal", correct = "C", id = "d05-3-high")`
+
+4. If you went on a walk on a straight path between points D and E, which of the following is an output value you would never see?
+
+`r devoirs::devoirs_set(choices = "D-09-gas", correct = -10.3, id = "d05-4-high")`
+
+5. If the output is the elevation of the landscape, walking from point C to E which of these is true?
+
+```{mcq}
+#| label: d05-5-ew22
+1. You are walking uphill.
+2. You are walking on the level.
+3. You are walking downhill. [correct]
+4. Neither of the above.
+```
+
+6. Walking from point F in a southwest (↙) direction, which is the best description for how your elevation is changing.
+
+```{mcq}
+#| label: d05-6-ewu2
+1. You are walking uphill.
+2. You are walking on the level. [correct]
+3. You are walking downhill. 
+4. You are going up and down.
+```
+
+
+:::
+ <!-- end of exr-bear-stand-kayak -->

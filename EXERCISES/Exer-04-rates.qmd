@@ -44,8 +44,6 @@ include ./_extensions/r-wasm/live/_knitr.qmd
 
 {{< include _exercises/ant-tell-saw.qmd >}}
 
-{{< include _exercises/bee-begin-gloves.qmd >}}
-
 {{< include _exercises/elephant-have-knife.qmd >}}
 
 {{< include _exercises/deer-trim-coat.qmd >}}

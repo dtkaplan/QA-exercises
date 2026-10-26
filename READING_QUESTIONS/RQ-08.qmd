@@ -1,0 +1,34 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 8 Reading Questions"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+{{< include ../_devoirs.qmd >}}
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../Chap-08/lobster-serve-sofa.qmd >}}
+
+## 2
+
+{{< include ../Chap-08/fox-throw-knob.qmd >}}
+
+
+## 3
+
+{{< include ../Chap-08/puppy-win-gloves.qmd >}}
+
+
+
+:::
+
+
+
+
+
