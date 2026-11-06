@@ -3,7 +3,7 @@ id: "pony-look-magnet"
 created: "Fri Oct 16 12:20:41 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

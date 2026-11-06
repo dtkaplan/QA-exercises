@@ -1,0 +1,125 @@
+<!--
+id: "jaquar-shut-pot"
+created: "Mon Feb 16 08:22:56 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 10
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-jaquar-shut-pot}
+You're trying to predict the outcome of a football game, updating your predictions as the game proceeds. The competing hypotheses here are the possible end scores for your team: 2, 3, 4, 5, 6, 7, 8, 9, ..., 100, 100+. I don't know which is your team and what are your beliefs about it, so I can't tell you much about what relative probability you assign to each of these 100 possible outcomes, but you have your own views, well informed or not. 
+
+Purely for the sake of simplicity, let's consider just these 20 hypotheses: the scores 5 through 24, with equal relative probability assigned to each: 1. 
+
+A. You don't need to translate this relative probability distribution into an (absolute) probability, but if you were to do so, what would it be?
+
+```{devoirs_choices}
+#| label: choices_jsp.A.3982
+- '0.10 for each of the odd-valued scores.':
+    correct: false
+    feedback: 'The absolute probability will have the same shape distribution as the relative probability.'
+- '1% for score of 5, increasing linearly to 13.5% for score 24.':
+    correct: false
+    feedback: 'Sorry. Going from a relative to an absolute probability is always a matter of multiplying each relative probability by the same number. That''s not what''s happening here.'
+- '0.05 for each of the hypotheses.':
+    correct: true
+- 'Not enough information has been given.':
+    correct: false
+    feedback: 'Sorry, but you have everything you need.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jsp-A-3982",
+  question = "Placeholder for now",
+  answers = choices_jsp.A.3982,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+Now it's half-time. Your team has a score of 10 pts. To update your before-the-game opinion, you need to multiply that relative probability by a likelihood function: What is the probability of the half-time outcome given each of the hypotheses.
+
+B. Some of the hypotheses can be assigned zero likelihood given the half-time observation. Which are these?
+
+```{devoirs_choices}
+#| label: choices_jsp.B.3843
+- 'Hypothethetical ending scores of 5 through 9 have zero likelihood.':
+    correct: true
+- 'Hypothetical ending score of 5 through 10 have zero likelihood.':
+    correct: false
+- 'Anything can happen in a football game. Best not to assign zero likelihood to any before-the-game hypothesis.':
+    correct: false
+- 'There is no such thing as zero likelihood.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jsp-B-3843",
+  question = "Placeholder for now",
+  answers = choices_jsp.B.3843,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+
+C. What's a better name for relative probability distribution that encodes your "before-the-game opinion" on your team's score?
+
+```{devoirs_choices}
+#| label: choices_jsp.C.k3ks
+- 'Posterior':
+    correct: false
+- 'Prior':
+    correct: true
+- 'Likelihood':
+    correct: false
+- 'Antebellum':
+    correct: false
+- 'Frequency':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jsp-C-k3ks",
+  question = "Placeholder for now",
+  answers = choices_jsp.C.k3ks,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+D. What's a proper name for your updated distribution of relative probabilities taking into account the half-time score?
+
+```{devoirs_choices}
+#| label: choices_jsp.D.3l2s
+- 'Posterior':
+    correct: true
+- 'Prior':
+    correct: false
+- 'Likelihood':
+    correct: false
+- 'Antebellum':
+    correct: false
+- 'Frequency':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jsp-D-3l2s",
+  question = "Placeholder for now",
+  answers = choices_jsp.D.3l2s,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+
+:::
+ <!-- end of exr-jaquar-shut-pot -->

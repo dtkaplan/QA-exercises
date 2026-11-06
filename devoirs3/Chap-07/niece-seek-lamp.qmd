@@ -1,0 +1,51 @@
+<!--
+id: "niece-seek-lamp"
+created: "Thu Oct 16 17:04:39 2025"
+attribution: DTK
+chapter: 7
+status: sketch
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-niece-seek-lamp}
+
+Scientific notation for numbers undoubtedly simplifies comparing numbers that might be very different in magnitude. Just look at the [order of magnitude]{style="color: magenta;"}. In traditional notation, e.g. China GDP at  $\color{blue}{1.87} \times 10^\color{magenta}{13}$ USD versus Estonia GDP at $\color{blue}{4.27} \times 10^\color{magenta}{10}$ just look at the integer in the [order of magnitude position]{style="color: magenta;"}. Similarly for the computer-notation style, e.g. $\color{blue}{1.87}\mathtt{e}\color{magenta}{13}$.
+
+In scientific notation, the numbers 1 to 9 all have the same order of magnitude, that is, `1e0`, `2e0`, `3e0`, ..., `9e10`. In graphics, and other applications, we can relax the restriction that the order of magnitude be an integer. For instance, we 
+
+
+[[I'm getting tangled up in this. Come back to it.]]
+
+For graphics on a magnitude scale, the axis labels allow you to read off the number itself, not the number's magnitude. To illustrate, @fig-mantissa-label shows the scale labelled with the values 1, 2, 3, ..., 9. But inbetween each pair of labels, there are nine grid lines that also are arranged in the unevenly spaced manner typified by a magnitude scale. 
+
+
+::: {#fig-mantissa-label}
+```{r}
+#| label: C07-zitqd
+vals <- c(1:9)
+set.seed(103)
+tibble(y = abs(rnorm(20,0,3)), x = abs(rnorm(20,0,5))) |>
+  gf_point(log10(y) ~ log10(x), alpha = 0) |>
+  gf_refine(
+    scale_x_continuous(limits=c(0,1),
+                       breaks = log10(vals),
+                       minor_breaks = log10(seq(1, 10, by = 0.1)),
+                       labels = vals),
+    scale_y_continuous(limits=c(0,1),
+                       breaks = log10(vals),
+                       minor_breaks = log10(seq(1, 10, by = 0.1)),
+                       labels = vals)
+            ) |>
+  gf_labs(x = "Mantissa for x", y = "Mantissa for y") |>
+  gf_theme(theme_minimal())
+```
+
+A magnitude-scale plot of a handful of coordinate pairs in the range 1 to 10.
+
+:::
+
+
+:::
+ <!-- end of exr-niece-seek-lamp -->

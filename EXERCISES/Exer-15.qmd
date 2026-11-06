@@ -1,0 +1,47 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 15 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+`r devoirs3::devoirs_start("QA-exer-15")`
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../devoirs3/Chap-15/arm-begin-door.qmd >}}
+
+## 2
+
+{{< include ../devoirs3/Chap-15/fawn-draw-radio.qmd >}}
+
+## 3
+
+{{< include ../devoirs3/Chap-15/lamb-point-saucer.qmd >}}
+
+## 4
+
+{{< include ../devoirs3/Chap-15/maple-freeze-hat.qmd >}}
+
+## 5
+
+{{< include ../devoirs3/Chap-15/sister-pay-candy.qmd >}}
+
+## 6
+
+{{< include ../devoirs3/Chap-15/spider-bid-plate.qmd >}}
+
+## 7
+
+{{< include ../devoirs3/Chap-15/turtle-speak-pencil.qmd >}}
+
+
+
+
+:::
+
+

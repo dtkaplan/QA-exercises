@@ -2,7 +2,7 @@
 id: "snail-get-futon"
 created: "Sun Dec 28 14:14:50 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 8
 mode: "reading-question"
 -->

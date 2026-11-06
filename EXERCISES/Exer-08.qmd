@@ -1,0 +1,39 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 8 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+`r devoirs3::devoirs_start("QA-exer-08")`
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../devoirs3/Chap-08/frog-choose-knife.qmd >}}
+
+## 2
+
+{{< include ../devoirs3/Chap-08/hamster-cut-tv.qmd >}}
+
+## 3
+
+{{< include ../devoirs3/Chap-08/horse-point-closet.qmd >}}
+
+## 4
+
+{{< include ../devoirs3/Chap-08/pig-teach-oven.qmd >}}
+
+## 5
+
+{{< include ../devoirs3/Chap-08/pony-rise-boat.qmd >}}
+
+
+
+
+:::
+
+

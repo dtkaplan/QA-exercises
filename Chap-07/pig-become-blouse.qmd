@@ -2,7 +2,7 @@
 id: "pig-become-blouse"
 created: "Tue Dec 23 11:36:08 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

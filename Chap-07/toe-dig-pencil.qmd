@@ -3,7 +3,7 @@ id: "toe-dig-pencil"
 created: "Fri Jan 30 17:06:32 2026"
 attribution: Dorothy Dickmann
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

@@ -1,0 +1,242 @@
+<!--
+id: "pig-become-blouse"
+created: "Tue Dec 23 11:36:08 2025"
+attribution: TBA
+status: ready-to-use
+chapter: 7
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pig-become-blouse}
+1. One of these is **not** the name of a core modeling function. Which one?
+
+```{devoirs_choices}
+#| label: choices_pbb.1.8ruw
+- 'hill()':
+    correct: false
+- 'ramp()':
+    correct: true
+- 'same()':
+    correct: false
+- 'log2()':
+    correct: false
+- 'recip()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-1-8ruw",
+  question = "Placeholder for now",
+  answers = choices_pbb.1.8ruw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+2. Consider these four core modeling functions:
+
+    i. flat() which says the output doesn't depend on the input
+    ii. same() where the output increases steadily as the input increases
+    iii. hillside() where the output increases with the input for a while, but looks like `flat()` for very large inputs.
+    iv. hill() where the output increases with the input up to a point, but increasing the input beyond that leads to a reduction in the output.
+
+
+For each of the following settings, choose which of the four functions is the better model.
+
+a. The input is the temperature setting on a heating systems thermostat, the output is the temperature of the house. (Hint: At some point, the heating system is at full blast.)
+
+```{devoirs_choices}
+#| label: choices_pbb.2a.ksle
+- 'flat()':
+    correct: false
+- 'same()':
+    correct: false
+- 'hillside()':
+    correct: true
+- 'hill()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-2a-ksle",
+  question = "Placeholder for now",
+  answers = choices_pbb.2a.ksle,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+
+b. The input is the amount of money you spend on groceries, the output is the volume of pantry space those groceries will take up.
+
+```{devoirs_choices}
+#| label: choices_pbb.2b.cs3s
+- 'flat()':
+    correct: false
+- 'same()':
+    correct: true
+- 'hillside()':
+    correct: false
+- 'hill()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-2b-cs3s",
+  question = "Placeholder for now",
+  answers = choices_pbb.2b.cs3s,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+c. The input is the extent to which you push down on a car's accelerator pedal, the output is the speed of a car on a flat road.
+
+```{devoirs_choices}
+#| label: choices_pbb.2c.kwld
+- 'flat()':
+    correct: false
+- 'same()':
+    correct: false
+- 'hillside()':
+    correct: true
+- 'hill()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-2c-kwld",
+  question = "Placeholder for now",
+  answers = choices_pbb.2c.kwld,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+d. The input is the amount of food you eat at a meal, the output is your sense of wellbeing after the meal.
+
+```{devoirs_choices}
+#| label: choices_pbb.2d.sse
+- 'flat()':
+    correct: false
+- 'same()':
+    correct: false
+- 'hillside()':
+    correct: false
+- 'hill()':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-2d-sse",
+  question = "Placeholder for now",
+  answers = choices_pbb.2d.sse,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+e. The input is the amount of time you spend vacuuming a rug, the output is the cleanliness of the rug.
+
+```{devoirs_choices}
+#| label: choices_pbb.2e.jke
+- 'flat()':
+    correct: false
+- 'same()':
+    correct: false
+- 'hillside()':
+    correct: true
+- 'hill()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-2e-jke",
+  question = "Placeholder for now",
+  answers = choices_pbb.2e.jke,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+f. The input is the number of roommates you share a rental with, the output is your sense of value-for-money from your individual rent.
+
+```{devoirs_choices}
+#| label: choices_pbb.24.hdw
+- 'flat()':
+    correct: false
+- 'same()':
+    correct: false
+- 'hillside()':
+    correct: false
+- 'hill()':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-24-hdw",
+  question = "Placeholder for now",
+  answers = choices_pbb.24.hdw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+g. The input is the amount of time you spend dreaming about having a successful athletic career, the output is the probability of your having such a career.
+
+```{devoirs_choices}
+#| label: choices_pbb.2g.ksl
+- 'flat()':
+    correct: true
+- 'same()':
+    correct: false
+- 'hillside()':
+    correct: false
+- 'hill()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-2g-ksl",
+  question = "Placeholder for now",
+  answers = choices_pbb.2g.ksl,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+h. The input is the amount of rainfall in your garden, the output is the harvest from the garden.
+
+```{devoirs_choices}
+#| label: choices_pbb.2h.kle
+- 'flat()':
+    correct: false
+- 'same()':
+    correct: false
+- 'hillside()':
+    correct: false
+- 'hill()':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pbb-2h-kle",
+  question = "Placeholder for now",
+  answers = choices_pbb.2h.kle,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-pig-become-blouse -->

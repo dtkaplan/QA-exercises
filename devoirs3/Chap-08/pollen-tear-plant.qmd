@@ -1,0 +1,17 @@
+<!--
+id: "pollen-tear-plant"
+created: "Tue Sep  1 17:22:46 2026"
+attribution: DTK
+chapter: 8
+mode: discussion
+status: draft
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pollen-tear-plant}
+
+Outline a discussion about why `hill()` is so often used for a relative probability distribution but none of the other core modeling functions are. Explain what features of `flat()` are suited to a probability distribution, but speculate on why that distribution would have very little use. 
+
+:::
+ <!-- end of exr-pollen-tear-plant -->

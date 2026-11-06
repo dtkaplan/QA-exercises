@@ -1,0 +1,15 @@
+<!--
+id: "jellyfish-lay-bolt"
+created: "Fri Aug  7 13:10:02 2026"
+attribution: DTK
+status: "sketch"
+chapter: 2
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-jellyfish-lay-bolt}
+meta-data synonyms: codebook, data dictionary, documentation
+:::
+ <!-- end of exr-jellyfish-lay-bolt -->

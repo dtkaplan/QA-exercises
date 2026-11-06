@@ -2,7 +2,7 @@
 id: "spider-stand-ship"
 created: "Thu Jan 15 11:37:57 2026"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 4
 mode: "discussion"
 topic: "money"

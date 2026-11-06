@@ -2,7 +2,7 @@
 id: "oak-eat-pan"
 created: "Fri Jan 30 08:26:10 2026"
 attribution: prompted by AI
-status: "ready-to-use"
+status: ready-to-use
 chapter: 8
 mode: "drill"
 -->

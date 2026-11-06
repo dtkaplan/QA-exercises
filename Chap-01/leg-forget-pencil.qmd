@@ -3,7 +3,7 @@ id: "leg-forget-pencil"
 created: "Thu Oct 15 12:15:03 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 1
 -->
 

@@ -1,0 +1,64 @@
+<!--
+id: "camel-toss-drawer"
+created: "Sun Aug 30 08:19:57 2026"
+attribution: DTK
+uses: "core modeling functions discussion"
+status: "draft"
+chapter: 13
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-camel-toss-drawer}
+### Note: Hills and bells {-}
+
+MOVE THIS TO A DISCUSSION item, which will name the common functions used in calculus courses and compare them to our core-modeling functions. 
+
+### 1. Polynomial & Algebraic Functions
+* **Constant Function**: $f(x) = c$
+* **Identity Function**: $f(x) = x$
+* **Linear Function**: $f(x) = mx + b$
+* **Quadratic Function**: $f(x) = x^2$
+* **Cubic Function**: $f(x) = x^3$
+* **General Power Function**: $f(x) = x^n$
+* **Square Root Function**: $f(x) = \sqrt{x}$
+* **Reciprocal Function**: $f(x) = \frac{1}{x}$
+* **Rational Function**: $f(x) = \frac{P(x)}{Q(x)}$
+* **Absolute Value Function**: $f(x) = |x|$
+
+### 2. Transcendental Functions (Exponential & Logarithmic)
+* **Natural Exponential Function**: $f(x) = e^x$
+* **General Exponential Function**: $f(x) = a^x$
+* **Natural Logarithmic Function**: $f(x) = \ln(x)$
+* **General Logarithmic Function**: $f(x) = \log_a(x)$
+
+### 3. Trigonometric Functions
+* **Sine Function**: $f(x) = \sin(x)$
+* **Cosine Function**: $f(x) = \cos(x)$
+* **Tangent Function**: $f(x) = \tan(x)$
+
+### 4. Inverse Trigonometric & Hyperbolic Functions
+* **Inverse Sine Function**: $f(x) = \arcsin(x)$
+* **Inverse Tangent Function**: $f(x) = \arctan(x)$
+* **Hyperbolic Functions**: $f(x) = \sinh(x)$
+
+
+Two of our core modeling functions---`hill()` and `hillside()`---don't have a central role in traditional algebra-based courses. The standard algebraic form for `hill()` is far from concise; you can see it in @fig-gauss-note. `Hillside()` cannot even be written as an algebraic formula.
+
+`Hill()` and `hillside()` are so important in applied work in many fields that they have been given multiple names. For instance, `hill()` is also known as the *gaussian*, *normal*, *gaussian-density*, *normal-density*, *gaussian probability distribution function* (PDF), *normal PDF*, or *bell-curve* function.
+
+:::: {.column-page-inset}
+::: {#fig-gauss-note layout-ncol=2 fig-cap-location="bottom"}
+![Carl Gauss](www/gauss-banknote.png)
+
+![Detail from the note](www/gauss-banknote-detail.png)
+
+The 10 Deutschmark note in 1999 has a picture of mathematician Carl Gauss, graphs the gaussian function and even gives its algebraic formula.
+:::
+::::
+
+The names used in different fields for the `hillside()` function are somewhat obscure; most readers may never have heard of them. Examples include the "gaussian cumulative distribution function (CDF)," the "normal CDF," the Greek letter $\Phi$, and such. 
+
+:::
+ <!-- end of exr-camel-toss-drawer -->

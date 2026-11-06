@@ -1,0 +1,39 @@
+<!--
+id: "dolphin-hit-mattress"
+created: "Fri Oct 16 10:30:36 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-dolphin-hit-mattress}
+A population rises from `2,000` to `20,000`. How many orders of magnitude larger is the new population?
+
+```{devoirs_choices}
+#| label: choices_d05.order.01
+- '`1`':
+    correct: true
+- '`2`':
+    correct: false
+- '`10`':
+    correct: false
+- '`18`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d05-order-01",
+  question = "Placeholder for now",
+  answers = choices_d05.order.01,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-dolphin-hit-mattress -->

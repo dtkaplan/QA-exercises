@@ -2,7 +2,7 @@
 id: "ape-teach-spoon"
 created: "Thu Jan 22 10:11:23 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "drill"
 -->

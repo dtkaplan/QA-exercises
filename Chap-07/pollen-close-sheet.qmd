@@ -3,7 +3,7 @@ id: "pollen-close-sheet"
 created: "Fri Jan 30 16:59:22 2026"
 attribution: Dorothy Dickmann
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

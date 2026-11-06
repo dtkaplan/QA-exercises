@@ -2,7 +2,7 @@
 id: "beech-understand-cotton"
 created: "Sun Dec 28 13:59:51 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "reading-question"
 -->

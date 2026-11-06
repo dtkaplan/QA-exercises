@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300">
+  <defs><clipPath id="glyphPlus"><text x="120" y="150" dominant-baseline="central" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="320">+</text></clipPath></defs>
+  <rect width="240" height="300" fill="#e7b333"/>
+  <path d="M-20 79C12 38 44 35 73 58s48 40 77 17 62-31 104 1l-26 49c-34-14-54-8-81 14s-55 25-85 2-50-20-80 9z" fill="#2d7d98"/>
+  <path d="M-17 212c32-39 61-44 88-21s46 31 73 8 61-31 104 0l-30 59c-32-15-55-7-80 14s-55 20-83-1-46-18-70 9z" fill="#cc4232"/>
+  <path d="M29-15c27 28 31 54 10 81s-15 52 13 76 33 49 12 76-17 49 13 81l-48 23c-29-35-35-67-11-101s15-53-14-78-25-55-5-87S19 9 0-7z" fill="#ed7429"/>
+  <path d="M3 29c25 19 45 16 68-3s40-15 61 4m45 244c24-21 46-25 75-9" fill="none" stroke="#f5e8c5" stroke-width="13" stroke-linecap="round"/>
+  <path d="M-7 261c24-19 42-14 59 5s37 20 57 4m54-200c22-19 42-20 66-1" fill="none" stroke="#eab534" stroke-width="15" stroke-linecap="round"/>
+  <text x="120" y="150" dominant-baseline="central" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="320" fill="#2d7995">+</text>
+  <g clip-path="url(#glyphPlus)" fill="none" stroke-linecap="round">
+    <path d="M42 105c35 19 75 25 116 11s58-8 82 7" stroke="#e64c32" stroke-width="34"/>
+    <path d="M34 183c39-18 70-18 101-4s67 15 104-8" stroke="#f0bd3d" stroke-width="26"/>
+    <path d="M65 54c9 23 11 49 3 75m105 20c-17 20-25 45-22 78" stroke="#f5e8c5" stroke-width="14"/>
+    <path d="M54 216l21-10m95-100 17 8" stroke="#ef762b" stroke-width="7"/>
+  </g>
+  <g fill="none" stroke-linecap="round"><path d="M30 41l13-7m159 13 13 9M18 234l14-8m180 26 12-8M52 279l10 4" stroke="#f5e8c5" stroke-width="4"/><path d="M27 83l10 5m165 111 11-5M22 162l9-13m168-91 10-6" stroke="#c83e32" stroke-width="4"/></g>
+  <text x="120" y="150" dominant-baseline="central" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="320" fill="none" stroke="#000" stroke-width="1.375" stroke-linejoin="round">+</text>
+</svg>

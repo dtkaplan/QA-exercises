@@ -1,0 +1,40 @@
+<!--
+id: "snail-hear-knife"
+created: "Fri Oct 16 08:42:06 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-snail-hear-knife}
+All but one of these is a pure number. Which is the exception?
+
+```{devoirs_choices}
+#| label: choices_d03.dls
+- '7':
+    correct: false
+- '$\pi$':
+    correct: false
+- '7 meters':
+    correct: true
+- '0.25':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d03-dls",
+  question = "Placeholder for now",
+  answers = choices_d03.dls,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+:::
+ <!-- end of exr-snail-hear-knife -->

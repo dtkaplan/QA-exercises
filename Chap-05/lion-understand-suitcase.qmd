@@ -2,7 +2,7 @@
 id: "lion-understand-suitcase"
 created: "Sun Dec 28 14:07:39 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 topic: "orders-of-magnitude"

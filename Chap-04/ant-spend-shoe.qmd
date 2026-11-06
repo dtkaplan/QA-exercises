@@ -2,7 +2,7 @@
 id: "ant-spend-shoe"
 created: "Fri Jan  9 13:01:39 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 4
 mode: "exercise"
 -->

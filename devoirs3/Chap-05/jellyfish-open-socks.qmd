@@ -1,0 +1,150 @@
+<!--
+id: "jellyfish-open-socks"
+created: "Sun Oct 19 08:27:10 2025"
+attribution: DTK
+use: "Chapter 5 exercise"
+status: ready-to-use
+chapter: 5
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-jellyfish-open-socks}
+
+```{mermaid}
+graph LR
+  X(X)
+  Y(Y)
+  Z(Z)
+  U(U)
+  V(V)
+  W(W)
+
+  X --> W
+  Z --> W
+  W --> U
+  Y --> U
+  U --> V
+  Y --> V
+
+  
+{{< include ../mermaid-classes.txt >}}
+
+class X exogenous
+class Y exogenous
+class Z exogenous
+```
+
+1. Which quantities are *exogenous*?
+
+```{devoirs_choices}
+#| label: choices_jos.1.ekf
+- 'X Y Z':
+    correct: true
+- 'U V W':
+    correct: false
+- 'X W U V':
+    correct: false
+- 'V':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jos-1-ekf",
+  question = "Placeholder for now",
+  answers = choices_jos.1.ekf,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+For the endogenous quantities, each of the round-cornered, shaded boxes is a function. The *output* of the function is the quantity named in the box. The inputs to the function are the names of the quantities that are connected to the box by incoming arrows.
+
+2. What are the inputs to the function V()?
+
+```{devoirs_choices}
+#| label: choices_jos.2.hgw
+- 'U':
+    correct: false
+- 'W & U & Y':
+    correct: false
+- 'U & Y':
+    correct: true
+- 'none. V is exogenous':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jos-2-hgw",
+  question = "Placeholder for now",
+  answers = choices_jos.2.hgw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+3. What are the inputs to the function W()?
+
+```{devoirs_choices}
+#| label: choices_jos.3.s4w
+- 'U':
+    correct: false
+- 'X only':
+    correct: false
+- 'X & Z':
+    correct: true
+- 'none. W is exogenous':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jos-3-s4w",
+  question = "Placeholder for now",
+  answers = choices_jos.3.s4w,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+4. `r devoirs3::devoirs_TF(TRUE, label="jos-4-dw")` Is this collection of functions consistent with the system diagram?
+    i. U(W, Y)
+    ii. V(U, Y)
+    iii. W(X, Z)
+
+5. Consider a new system consisting of these functions and their inputs.
+    i. B(A, E)
+    ii. D(B, F)
+    iii. F(B)
+    iv. C(F, A)
+    
+Which are the exogenous quantities?
+    
+```{devoirs_choices}
+#| label: choices_jos.5.was
+- 'C & A':
+    correct: false
+- 'B & F':
+    correct: false
+- 'A & E':
+    correct: true
+- 'C & F':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "jos-5-was",
+  question = "Placeholder for now",
+  answers = choices_jos.5.was,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+    
+:::
+ <!-- end of exr-jellyfish-open-socks -->

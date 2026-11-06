@@ -3,7 +3,7 @@ id: "mouse-cost-mattress"
 created: "Sun Aug 16 17:20:36 2026"
 attribution: DTK
 uses: "To illustrate chains of reasoning"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 1
 mode: discussion
 -->

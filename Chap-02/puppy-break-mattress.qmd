@@ -2,7 +2,7 @@
 id: "puppy-break-mattress"
 created: "Sun Dec 28 13:50:24 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 2
 mode: "reading-question"
 -->

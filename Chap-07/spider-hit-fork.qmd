@@ -3,7 +3,7 @@ id: "spider-hit-fork"
 created: "Fri Jan 30 14:19:22 2026"
 attribution: DTK
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

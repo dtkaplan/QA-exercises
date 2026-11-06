@@ -1,0 +1,38 @@
+<!--
+id: "seal-ride-book"
+created: "Wed Jan 28 09:48:09 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 6"
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-seal-ride-book}
+In the text's example about sun position, cloudiness, and production, select the correct description:
+
+```{devoirs_choices}
+#| label: choices_srb.1.njvc
+- 'All three variables are endogenous.':
+    correct: false
+- 'The variables sun position and cloudiness are endogenous; production is exogenous.':
+    correct: false
+- 'The variables sun position and cloudiness are exogenous; production is endogenous.':
+    correct: true
+- 'All three variables are exogenous.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "srb-1-njvc",
+  question = "Placeholder for now",
+  answers = choices_srb.1.njvc,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-seal-ride-book -->

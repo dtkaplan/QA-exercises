@@ -3,7 +3,7 @@ id: "pony-bite-suitcase"
 created: "Fri May 29 12:02:05 2026"
 attribution: DTK
 uses: "modeling based on derivatives"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
 mode: "exercise"
 -->

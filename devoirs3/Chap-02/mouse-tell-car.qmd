@@ -1,0 +1,39 @@
+<!--
+id: "mouse-tell-car"
+created: "Fri Oct 16 08:19:00 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-mouse-tell-car}
+In the terminology of this book, what is a **value** in a data frame?
+
+```{devoirs_choices}
+#| label: choices_d01.value
+- 'The entry at the intersection of a variable and a row.':
+    correct: true
+- 'The name of the data frame.':
+    correct: false
+- 'The object type of the data frame.':
+    correct: false
+- 'The entire column.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-value",
+  question = "Placeholder for now",
+  answers = choices_d01.value,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-mouse-tell-car -->

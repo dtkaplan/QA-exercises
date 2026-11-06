@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300">
+  <defs>
+    <clipPath id="one">
+      <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340"
+        transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">1</text>
+    </clipPath>
+  </defs>
+
+  <rect width="240" height="300" fill="#e6b336"/>
+  <path d="M-25 86C8 49 40 38 69 62s48 48 79 26 66-29 108 1l-28 47c-31-16-51-12-78 11s-53 28-85 3-53-22-83 8z" fill="#287b9e"/>
+  <path d="M-21 196c31-31 60-37 89-13s49 29 73 7 59-33 104-4l-26 61c-28-12-52-9-77 14s-57 24-87 2-45-20-69 8z" fill="#cf3f32"/>
+  <path d="M26-18c26 27 31 53 12 79s-17 50 11 75 34 52 13 80-16 47 13 77l-45 24c-31-35-37-67-13-101s14-52-15-78-27-56-5-88S17 7 0-7z" fill="#ec6c28"/>
+  <path d="M183-15c-22 33-16 58 12 78s38 49 16 78-21 53 10 77 31 48 16 81l48-2c20-39 10-72-18-98s-27-48-2-79 19-56-13-81-28-41-8-63z" fill="#d94b2e"/>
+  <path d="M6 29c23 19 44 19 67 0s47-18 65 4m28 248c23-20 47-30 76-17" fill="none" stroke="#bc342e" stroke-width="14" stroke-linecap="round"/>
+  <path d="M-7 256c24-19 40-14 57 6s37 22 57 5m56-206c23-23 42-24 66-4" fill="none" stroke="#f3d04d" stroke-width="16" stroke-linecap="round"/>
+  <path d="M27 105c13-17 27-19 42-8m76 87c16-16 30-20 49-12M87 20c13 12 20 22 22 36m-47 179c12-12 24-18 37-19" fill="none" stroke="#206b8e" stroke-width="9" stroke-linecap="round"/>
+  <path d="M18 15c31-11 60-5 81 9m27 256c37 12 65 5 89-15M15 209c16-16 25-30 28-46m147-67c-13 14-20 28-20 43" fill="none" stroke="#f7e8c2" stroke-width="5" stroke-linecap="round"/>
+
+  <path d="M18 31c24-12 47-16 72-12m78 2c16 1 30 4 42 11M14 257c20 10 39 14 61 12m87 3c22 1 41-1 60-9" fill="none" stroke="#c83e32" stroke-width="9" stroke-linecap="round"/>
+
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340"
+      fill="#276f91" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">1</text>
+  <g clip-path="url(#one)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M29 88c37-17 67-7 92 8s47 11 83-13" stroke="#f3d04d" stroke-width="36"/>
+    <path d="M24 123c36-13 67 11 93 16s53-9 91-28" stroke="#f1e4b9" stroke-width="24"/>
+    <path d="M34 178c34-16 57-10 80 4s57 14 104-10" stroke="#d44b2e" stroke-width="32"/>
+    <path d="M39 215c35-18 60-2 83 10s54 9 87-11" stroke="#39a0a8" stroke-width="19"/>
+    <path d="M58 62c23 7 36 17 48 29m42 32c-15 8-30 8-46 5m-35 41c18-7 32-4 47 6m29 23c13-3 24-8 35-17" stroke="#f7eee0" stroke-width="8"/>
+    <path d="M83 75l19 6m62 73 17-7m-94 43 18 6m44 34 17-5" stroke="#ec762b" stroke-width="5"/>
+  </g>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M31 46l15-8m152 3 13 8M20 228l17-6m164 43 14-9M47 278l10 4m116-257 12 3" stroke="#287b9e" stroke-width="5"/>
+    <path d="M29 89l9 5m165 88 11-4M58 20l7 3m112 260 13-4M10 170l8-12" stroke="#fff0c7" stroke-width="4"/>
+  </g>
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340"
+      fill="none" stroke="#000000" stroke-width="1.375" stroke-linejoin="round"
+        transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">1</text>
+</svg>

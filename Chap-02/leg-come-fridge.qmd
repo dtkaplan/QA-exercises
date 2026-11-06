@@ -3,7 +3,7 @@ id: "leg-come-fridge"
 created: "Fri Oct 16 08:14:14 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 02
 topic: data
 -->

@@ -2,7 +2,7 @@
 id: "falcon-have-book"
 created: "Sun Dec 28 14:00:24 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "reading-question"
 -->

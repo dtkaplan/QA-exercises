@@ -2,7 +2,7 @@
 id: "rabbit-lead-socks"
 created: "Fri Feb 20 09:50:55 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
 mode: "exercise"
 -->
@@ -37,13 +37,13 @@ flow_field(dyn1, domain(x = 0:5, y = 0:5)) |>
   gf_theme(theme_minimal(base_size = 16))
 ```
 
-1. `r devoirs::devoirsTF(TRUE, id = "traj-rls-1-lx")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
+1. `r devoirs::devoirs_TF(TRUE, id = "traj-rls-1-lx")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
 
-2. `r devoirs::devoirsTF(FALSE, id = "traj-rls-2-l7y")` For the flow shown above, [green]{style="color: green;"} is a trajectory.
+2. `r devoirs::devoirs_TF(FALSE, id = "traj-rls-2-l7y")` For the flow shown above, [green]{style="color: green;"} is a trajectory.
 
-3. `r devoirs::devoirsTF(TRUE, id = "traj-rls-3-kw")` For the flow shown above, [blue]{style="color: blue;"} is a trajectory.
+3. `r devoirs::devoirs_TF(TRUE, id = "traj-rls-3-kw")` For the flow shown above, [blue]{style="color: blue;"} is a trajectory.
 
-4. `r devoirs::devoirsTF(FALSE, id = "traj-rls-3-luy")` For the flow shown above, [gray]{style="color: darkgray;"} is a trajectory.
+4. `r devoirs::devoirs_TF(FALSE, id = "traj-rls-3-luy")` For the flow shown above, [gray]{style="color: darkgray;"} is a trajectory.
 
 ```{r}
 #| echo: false

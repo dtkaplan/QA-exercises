@@ -1,0 +1,67 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 6 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+`r devoirs3::devoirs_start("QA-exer-06")`
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../devoirs3/Chap-06/dolphin-enjoy-kitchen.qmd >}}
+
+## 2
+
+{{< include ../devoirs3/Chap-06/fir-wish-table.qmd >}}
+
+## 3
+
+{{< include ../devoirs3/Chap-06/maple-burn-knife.qmd >}}
+
+## 4
+
+{{< include ../devoirs3/Chap-06/maple-send-ship.qmd >}}
+
+## 5
+
+{{< include ../devoirs3/Chap-06/panda-run-magnet.qmd >}}
+
+## 6
+
+{{< include ../devoirs3/Chap-06/seal-ride-book.qmd >}}
+
+## 7
+
+{{< include ../devoirs3/Chap-06/seaweed-build-jacket.qmd >}}
+
+## 8
+
+{{< include ../devoirs3/Chap-06/spruce-refer-bulb.qmd >}}
+
+## 9
+
+{{< include ../devoirs3/Chap-06/spruce-talk-sheet.qmd >}}
+
+## 10
+
+{{< include ../devoirs3/Chap-06/squirrel-put-map.qmd >}}
+
+## 11
+
+{{< include ../devoirs3/Chap-06/tiger-build-stair.qmd >}}
+
+## 12
+
+{{< include ../devoirs3/Chap-06/tiger-lick-window.qmd >}}
+
+
+
+
+:::
+
+

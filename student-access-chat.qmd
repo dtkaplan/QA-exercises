@@ -1,0 +1,61 @@
+# Student access to submissions and grade reports
+
+I want to create a way for students to see their submissions and grades. Let's call the system "devoirs-portal" for now.
+
+## Key terms
+
+- Assignment: the .html version of a quarto .qmd that uses the `{devoirs3}` package. The assignment author---typically an instructor or the author of this the questions in this directory---uses `devoirs_selection()` or `devoirs_text()` to create interactive "answer elements".
+- Collection: The .html contains JavaScript enabling the student to collect all their answers into a JSON object that is copied to the student's clipboard. The object contains a unique id for each answer element as well as the student's selection or text entered.
+- Submission: the student copies the JSON object from the clipboard and copies it over to a "collection site."
+    - Determining the arrangement of the "collection site" is one of the key design choices in devoirs-portal. Currently, it is a Google Form where students paste their JSON.
+    - The collection site should be accessible through Google authentication via the student's gmail address.
+    - The JSON object has a unique identifier for the assignment: the name of the qmd source for the assignment. This will be used to keep track of which submission is for which assignment.
+    - Students should be able to post the JSON object from their clipboard to the site and the site will store submissions for later review. Each student may have multiple submissions for an assignment. 
+    - There will be some de-duplication of all the JSON objects submitted by each student. The latest answer one for each answer element is kept.
+    - The instructor should be able to download a spreadsheet with the student email address, time of submission, and de-duplicated JSON object. 
+    - Instructor feedback from grading will be provided outside of this system, likely via the instructor's institution's course support software.
+- Kaplan: The name of the person directing this project.
+
+
+Later phases of the project will consider how to create grading rubrics for an assignment and how to use a rubric to provide both a feedback document for the student and an overall grade for the assignment for the instructor to store as a CSV file.
+
+For the present, I want to generate ideas for how to implement the collection site. To review, the student uploads one or more JSON objects for the assignment. The instructor can download and de-duplicate the submissions for a given assignment.
+
+Criteria for the collection site:
+
+1. It should be implemented in a framework that can easily be set up by an instructor following some basic instructions. An example of such a framework is a Google Form for collecting student submissions and the corresponding Google Sheet for the instructor to download submissions from.
+2. The site should be secure against unauthorized downloads of student submissions. There should be a white-list of gmail addresses authorized to access the full set of submissions. 
+3. The site should not require any IT support from the instructor's institution.
+4. Setting up the site should be free (as with Google Forms) or require only a token payment by the instructor.
+5. Ideally, the instructor (and other white-listed users) should be able to get the de-duplicated submissions via their browser using a special-purpose "access web page" that uses WebR for processing, assembles a CSV of the de-duplicated submissions for an assignment, and allows download directly from the access web page. The instructor would need to enter the location of the collection site and the assignment name, as well as any needed authentication information so that the access web page can download the raw data.
+
+
+## Some candidate web service identified by AI:
+
+This list is for future reference only. Eventually, we will experiment with several of these but for the present, in the early system design phase, we will provisionally focus on Google Forms and Sheets.
+
+- **Google Forms + Sheets:** The simplest low-cost option for collecting JSON and downloading responses. Email collection can identify students. The form's response size can handle the JSON payloads.  
+- **Google Apps Script + Sheets:** A small custom web app backed by a Sheet could use Google sign-in, enforce an instructor-maintained email allowlist, and provide separate student and instructor views. It fits the workflow closely, though it requires more setup and careful access-control configuration than a standard form.  
+- **Supabase:** A hosted database with Google sign-in and row-level access rules can restrict students to their own records and instructors to the full set. It supports the portal and export workflow well, but requires building and hosting a web interface; free-tier limits apply.  
+- **Firebase (Authentication, Firestore, and Hosting):** A custom portal can use Google sign-in, database security rules, and Firebase Hosting to collect and display submissions. It offers a managed Google-centered setup, but requires development work for de-duplication and spreadsheet or CSV export.
+
+## Work plan for the collection site
+
+1. Set up a Google Form for student submissions.
+    i. Kaplan will create the initial form and provide the link under his dtkaplan@gmail.com account. The link: https://docs.google.com/forms/d/e/1FAIpQLSdT0NhgGf8i58Ip8lT82O0tvxvfuruF5QtnD-KjzRB_j9Kzkw/viewform?usp=publish-editor
+    ii. We will eventually write instructions for instructors on how to set up their own form and provide an access link for student use.
+2. Link the form to a Google Sheet for collecting responses.
+    i. Kaplan will set up a private Google Sheet linked to the form.
+        - The link for the Sheet itself: https://docs.google.com/spreadsheets/d/1CqZOHm9-K8Yx-ankWksMeD21q4O7yzQN9haaCF0BgBQ/edit?usp=sharing
+        - A published-to-web CSV link was created for testing. Disable that publication before collecting real student work; publication does not enforce a Gmail allowlist.
+    ii. We will write instructions for instructors to link their form to a Sheet, keep the Sheet private, and share it directly with authorized instructors through Google's account permissions.
+3. Implement a script to de-duplicate submissions in the Sheet.
+    i. The current script is in [scripts/deduplicate-submissions.gs](scripts/deduplicate-submissions.gs); the previous full-rebuild script is preserved as `scripts/deduplicate-submissions-version1.gs`. The new script writes one row per answered item to a short `D-<docID>-<hash>` tab, with student email, answer submission time, assignment ID, question label, type, and value. The raw Form Responses tab is not modified.
+    ii. In the linked Sheet, choose **Extensions / Apps Script**, replace the starter contents with the current script, and save. At the top, set `responseSheetName` and `jsonHeader` to match the response tab and exact JSON column header. The defaults for the timestamp and email headers are `Timestamp` and `Email Address`; configure the Form to collect verified email addresses.
+    iii. Run `rebuildDeduplicatedSubmissions` once to create the assignment tabs from existing responses. Then run `installFormSubmitTrigger` once and authorize it. The installable spreadsheet **On form submit** trigger processes only the newly added response and updates or adds that student's answer rows in the corresponding assignment tab.
+    iv. `rebuildDeduplicatedSubmissions` is the recovery/reconciliation function; it rebuilds generated tabs from the full response history. `Source response row` is a hidden column used to resolve ties and repeated trigger executions. Generated tabs use the `D-` prefix; the rebuild clears and regenerates these tabs.
+    v. The output tabs inherit the spreadsheet's sharing access. This script does not add authentication or an email allowlist; keep the spreadsheet private and do not publish the assignment tabs to the web.
+    
+4. Provide an access page for instructors to download the cleaned data.
+5. Test the workflow with a few sample submissions.
+6. Adjust the script or form as needed based on test results.

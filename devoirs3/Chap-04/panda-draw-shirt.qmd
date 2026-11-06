@@ -1,0 +1,68 @@
+<!--
+id: "panda-draw-shirt"
+created: "Tue Feb 24 13:23:11 2026"
+attribution: DTK
+status: ready-to-use
+chapter: 4
+mode: "discussion"
+topic: "finance"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-panda-draw-shirt}
+The US government debt (usually called the "National Debt") is approximately $40 trillion as of early 2026. Written out, that's $40,000,000,000,000. Or, $4e13.
+
+The "gross domestic product" (GDP) of the US is about $30 trillion per year. The per-year is important. It's the same quantity as $2.5 trillion per month, or $1 million per second, or $3000 trillion per century. 
+
+Economic journalists often describe the debt condition of a country as ratio of debt to GDP. For instance, looking at the amounts $40 and $30 trillion, they would measure the US debt is 125% of GDP. A journalist's rule of thumb is that ratios above 100% are a sign of trouble.
+
+1. What is the dimension of the quantity Debt/GDP?
+
+```{devoirs_choices}
+#| label: choices_pds.1.dimension
+- 'Dimensionless':
+    correct: false
+- 'Time':
+    correct: true
+- 'Money^-1^':
+    correct: false
+- 'Time^-1^':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pds-1-dimension",
+  question = "Placeholder for now",
+  answers = choices_pds.1.dimension,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+
+Comparing GDP (dimension W T^-1^) with government debt (dimension W) makes sense only if we are interested in extracting the T component. The journalists' ratio of "125%" should really be stated as 1.25 years.
+
+It is unclear what fundamental justification there is for treating a ratio of 1 year as the threshold for concern. Among other things, there are many other forms of debt: state and local government debt ($4 trillion in 2026), corporate debt ($16 trillion in 2026), and consumer debt ($18 trillion in 2026), which are not captured in the national debt figure. Add to this about $5 trillion in unfunded liabilities for state and local public pensions, $8 trillion for Federal civil and military pensions, and $25 trillion in the net present value of unfunded Social Security benefits. These figures total $76 trillion, about double the so-called "national debt."
+
+More fundamentally, the Dept/GDP ratio says little about how expensive the debt is, that is, how much it costs to service the debt each year. `r xf("fig-pds-23s")` shows a fairly stable pattern of Dept/GDP over the last 15 years (excluding the 2020 spike in the COVID-19 pandemic). But the interest-expense/GDP ratio shows substantial changes over the last five years.
+
+```{r}
+#| label: fig-pds-23s
+#| echo: false
+#| fig-cap: "US National Debt to GDP Ratio with Interest Expense (2010-2026). [Data source](https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/)"
+library(ggplot2)
+USstats <- readr::read_csv("../www/US_Debt_2010_2026.csv")
+ggplot(USstats, aes(x = FY, y = Debt/GDP)) +
+  geom_line() +
+  geom_line(aes(y = 20*InterestExpense/GDP), color="blue") +
+  theme_minimal(base_size = 14 ) +
+  scale_y_continuous(limits=c(0,2), sec.axis = sec_axis(~./20, name = "Interest Expense/GDP")) +
+  geom_text(aes(label = "Interest Expense", y = 0.6, x = 2015), color = "blue") +
+  geom_text(aes(label = "National Debt", y = 1.5, x = 2015)) +
+  labs(x = "Year", y = "Debt/GDP")
+```
+
+:::
+ <!-- end of exr-panda-draw-shirt -->

@@ -3,7 +3,7 @@ id: "turtle-break-stair"
 created: "Thu Mar 12 08:12:38 2026"
 attribution: Dorothy Dickmann
 use: Ch 12 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 14
 mode: "exercise"
 -->

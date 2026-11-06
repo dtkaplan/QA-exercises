@@ -13,13 +13,13 @@ mode: "exercise"
 Which core modeling functions have a negative rate of change whenever the input is zero or greater?
 
 
-`r devoirs::devoirsTF(TRUE, leed="recip()", id="clc-1-3se")`
+1. `recip()` `r devoirs::devoirs_TF(TRUE, id="clc-1-3se")`
 
-`r devoirs::devoirsTF(FALSE, leed="log2()", id="clc-2-se")`
+2. `log2()` `r devoirs::devoirs_TF(FALSE, id="clc-2-se")`
 
-`r devoirs::devoirsTF(FALSE, leed="hill()", id="clc-3-dse")`
+3. `hill()` `r devoirs::devoirs_TF(FALSE, id="clc-3-dse")`
 
-`r devoirs::devoirsTF(TRUE, leed="hillside()", id="clc-4-y23")`
+4. `hillside()` `r devoirs::devoirs_TF(TRUE, id="clc-4-y23")`
 
 
 :::

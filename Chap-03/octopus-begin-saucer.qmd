@@ -2,7 +2,7 @@
 id: "octopus-begin-saucer"
 created: "Tue Jul 29 16:31:02 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "activity"
 -->

@@ -1,0 +1,39 @@
+<!--
+id: "rat-show-cotton"
+created: "Fri Oct 16 11:21:02 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 06
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-rat-show-cotton}
+What is the main purpose of an algorithm in a function?
+
+```{devoirs_choices}
+#| label: choices_d06.algorithm.03
+- 'To give the function a memorable name.':
+    correct: false
+- 'To list the inputs without describing what happens to them.':
+    correct: false
+- 'To provide the operational steps that turn inputs into an output.':
+    correct: true
+- 'To guarantee that the model represents every feature of the real system.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-algorithm-03",
+  question = "Placeholder for now",
+  answers = choices_d06.algorithm.03,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-rat-show-cotton -->

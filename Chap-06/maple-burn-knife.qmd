@@ -2,7 +2,7 @@
 id: "maple-burn-knife"
 created: "Fri Jan 16 10:42:07 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "exercise"
 -->

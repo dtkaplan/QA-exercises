@@ -3,7 +3,7 @@ id: "chicken-send-hat"
 created: "Fri Oct 16 10:18:21 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 04
 
 -->

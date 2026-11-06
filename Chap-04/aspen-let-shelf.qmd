@@ -2,7 +2,7 @@
 id: "aspen-let-shelf"
 created: "Sat Dec 20 08:22:22 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 4
 mode: "drill"
 topic: "AI created"

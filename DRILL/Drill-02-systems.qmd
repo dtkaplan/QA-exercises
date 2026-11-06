@@ -34,13 +34,13 @@ source("_start-up.R")
 
 A system is a collection of elements that interact with one another.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
 In this book, what technical word is used for the elements in a system? that interact with one another.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 
 
@@ -49,7 +49,7 @@ In this book, what technical word is used for the elements in a system? that int
 
 In this book, the word **dimension** refers only to a spatial measurement such as length, width, or height.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Here, dimension means an aspect, characteristic, or property of a system. It is not restricted to spatial dimensions.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="Here, dimension means an aspect, characteristic, or property of a system. It is not restricted to spatial dimensions.")`
 
 ## `r cc()`
 
@@ -94,13 +94,13 @@ Which example illustrates **operationalization**?
 
 Operationalization is the process of converting a dimension into a quantity that can be measured.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
 A good operationalization must be a perfect and complete representation of the dimension it measures.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="The chapter emphasizes that operationalizations can be imperfect. The relevant question is whether an operationalization is good enough for the purpose at hand.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="The chapter emphasizes that operationalizations can be imperfect. The relevant question is whether an operationalization is good enough for the purpose at hand.")`
 
 ## `r cc()`
 
@@ -129,13 +129,13 @@ Why is the heat index used in the chapter as an example of operationalization?
 
 In this chapter, a **data frame** is a rectangular array of cells organized into rows and columns.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
 In a data frame, each row represents one specimen. Every row should represent a specimens of the same object type.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
@@ -158,14 +158,14 @@ A good test for whether a variable in a data frame should be represented *quanti
 
 Danish is meaningfully between Chinese and English.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Although 'D' is alphabetically between 'C' and 'E', this has nothing to do with the nature of the three languages.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="Although 'D' is alphabetically between 'C' and 'E', this has nothing to do with the nature of the three languages.")`
 
 
 ## `r cc()`
 
 A column containing student ID numbers is necessarily a quantitative variable because its values are written as digits.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="An ID can be a categorical variable even when its values consist of digits. The important feature of 'betweenness' doesn't have meaning for ID numbers.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="An ID can be a categorical variable even when its values consist of digits. The important feature of 'betweenness' doesn't have meaning for ID numbers.")`
 
 ## `r cc()`
 
@@ -210,7 +210,7 @@ Which statement best describes a **sample**?
 
 A population, in the statistical terminology used in this chapter, must consist of people.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Here, population can refer to any source of specimens, such as people, stars, or events.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="Here, population can refer to any source of specimens, such as people, stars, or events.")`
 
 ## `r cc()`
 

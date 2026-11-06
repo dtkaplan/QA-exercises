@@ -1,0 +1,16 @@
+<!--
+id: "owl-tug-room"
+created: "Fri Nov  7 07:30:45 2025"
+attribution: DTK
+status: sketch
+chapter: 5
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-owl-tug-room}
+Show how the magnitude corresponds to the amount of data needed. Doubling the amount of data means, effectively, squaring the likelihood. If you start with "limited evidence", you need to double the amount of data to get to Magnitude 2. Another doubling (that is, to four times the amount of data) brings you to Magnitude 4.
+:::
+ <!-- end of exr-owl-tug-room -->

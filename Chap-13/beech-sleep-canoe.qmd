@@ -2,7 +2,7 @@
 id: "beech-sleep-canoe"
 created: "Fri Feb 20 07:43:32 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
 mode: "exercise"
 -->

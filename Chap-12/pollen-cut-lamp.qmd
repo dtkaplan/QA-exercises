@@ -2,7 +2,7 @@
 id: "pollen-cut-lamp"
 created: "Wed Oct 22 12:21:31 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
 mode: "exercise"
 -->

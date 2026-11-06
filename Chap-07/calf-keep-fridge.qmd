@@ -3,7 +3,7 @@ id: "calf-keep-fridge"
 created: "Fri Oct 16 12:06:05 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

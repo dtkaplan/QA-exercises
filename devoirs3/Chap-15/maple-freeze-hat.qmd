@@ -1,0 +1,40 @@
+<!--
+id: "maple-freeze-hat"
+created: "Tue Feb 24 12:30:16 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 15
+mode: exercise
+title: "Newton's Second Law"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-maple-freeze-hat}
+Newton's Second Law famously related acceleration to force and mass. What's the relationship between force and acceleration?
+
+```{devoirs_choices}
+#| label: choices_mfh.1.u04
+- 'Acceleration is proportional to force.':
+    correct: true
+    feedback: 'Yes. The constant of proportionality is called *mass*.'
+- 'Acceleration is the derivative of force with respect to time.':
+    correct: false
+- 'Acceleration is the accumulation of force with respect to time.':
+    correct: false
+- 'Acceleration and force have unrelated dimensions.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "mfh-1-u04",
+  question = "Placeholder for now",
+  answers = choices_mfh.1.u04,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-maple-freeze-hat -->

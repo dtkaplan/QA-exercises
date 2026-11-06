@@ -3,7 +3,7 @@ id: "nephew-do-screen"
 created: "Fri Feb 20 07:32:40 2026"
 attribution: DTK
 use: Drill dynamics
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
 mode: "exercise"
 -->

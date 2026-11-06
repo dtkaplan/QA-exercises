@@ -2,7 +2,7 @@
 id: "seahorse-bathe-knife"
 created: "Sun Jul 27 16:37:05 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 4
 mode: "exercise"
 -->
@@ -99,7 +99,7 @@ The article describes the then-current leader in the Tour de France as having a 
 
 8. In the exercise/diet literature it's said that walking a mile consumes about 100 kcal. 
 
-`r devoirs::devoirsTF(correct = TRUE, id="sbk-8-ywr")` This is (roughly) consistent with the 150 watts of power claimed when waking at 2.5 mi/hr.
+`r devoirs::devoirs_TF(correct = TRUE, id="sbk-8-ywr")` This is (roughly) consistent with the 150 watts of power claimed when waking at 2.5 mi/hr.
 
 
 

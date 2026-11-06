@@ -1,0 +1,39 @@
+<!--
+id: "boy-walk-stair"
+created: "Fri Oct 16 12:18:27 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-boy-walk-stair}
+Consider a function whose horizontal axis is labeled `temperature` and whose vertical axis is labeled `comfort`. Which statement is correct?
+
+```{devoirs_choices}
+#| label: choices_d07.input.output.01
+- 'Temperature is the output and comfort is the input.':
+    correct: false
+- 'Comfort is the output and temperature is the input.':
+    correct: true
+- 'Both temperature and comfort are outputs.':
+    correct: false
+- 'The graph does not show either input or output.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d07-input-output-01",
+  question = "Placeholder for now",
+  answers = choices_d07.input.output.01,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-boy-walk-stair -->

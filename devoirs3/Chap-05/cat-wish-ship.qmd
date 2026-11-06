@@ -1,0 +1,25 @@
+<!--
+id: "cat-wish-ship"
+created: "Thu Oct 22 09:10:35 2026"
+attribution: DTK
+mode: discussion
+status: draft
+chapter: 05
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-cat-wish-ship}
+
+MAKE THIS ABOUT WHY WE ARE USING base-10 logarithms.
+
+In algebra courses, logarithms are usually introduced in an abstract way. Usually, no mention is made of the revolution in arithmetic created by the publication of the first "table of logarithms" in 1617. Such printed tables were an essential volume of every quantitatively oriented professional, a pattern that persisted through the 1980s when electronic computers first became widely available. 
+
+Mathematicians developing a theoretical basis for logarithms invented a generalization that contains infinitely many types of logarithms, indexed by a number called the "base." The traditional logarithm, the one corresponding to scientific notation, is called "base-10." In the extended theory, any number can serve as a base and each base gives its own value for the resulting logarithm. 
+
+Much confusion and error can be avoided by sticking to base-10. We'll tend to do that in this book. However, as needed, especially in `r xf("sec-dynamics")`, we will defer to the customs of mathematically-adjacent disciplines such as physics or electrical engineering.
+
+:::
+ <!-- end of exr-cat-wish-ship -->

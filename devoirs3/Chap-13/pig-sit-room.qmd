@@ -1,0 +1,28 @@
+<!--
+id: "pig-sit-room"
+created: "Sat Dec 20 10:07:27 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-pig-sit-room}
+Tragedy of the commons problem.
+
+In the Medieval period, an area of land was held for the common use of peasants or tenants. Typically this was used for grazing cattle.
+
+SKETCH An upside-down U function for productivity versus number of cattle. Find the point at which productivity is maximal. Let's assume there are 50 tenants sharing the land. Anachronistically, a management consultant advised the community that the productivity would be near optimal if each tenant had one or two grazing animals. (This puts the peak of the U at about 50-100 animals.) One tenant looking at the situation suspects he will do better by adding another animal. This might push the animal population beyond the optimal production point, but only a little. And all of the marginal benefits of the new animal accrue to that one tenant, so from his point of view, the addition is certainly worthwhile. Other tenants see this, and each adds another animal for his or her own benefit. What happens to the production now?
+
+Suppose one tenant is inspired by the motto, "Think globally. Act locally." This tenant resolves not to contribute to the problem and distains to add an extra animal. Explain whether this eco-minded tenant is rewarded or punished in terms of production for their resolution. 
+
+Suppose there were a tax imposed on each tenant for each animal they graze. Tax would be zero for the tenant's first animal, then go up (per animal) for each additional animal. The tax should be set at that amount that overall productivity is diminshed if *every* tenant had that number of grazing animals. What should be the tax on the second and on the third animal per tenant?
+
+This setting (without the tax) is called the "Tragedy of the Commons." With the tax, it is called variously "sensible resource management" or "an infringement on individual liberty by an intrusive government," depending on the person's point of view. Think of an example of "tragedy of the commons" that exists in the contemporary world.  
+
+:::
+ <!-- end of exr-pig-sit-room -->

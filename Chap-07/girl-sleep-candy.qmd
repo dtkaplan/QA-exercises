@@ -3,7 +3,7 @@ id: "girl-sleep-candy"
 created: "Fri Oct 16 11:50:09 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

@@ -1,0 +1,216 @@
+<!--
+id: "reptile-speak-piano"
+created: "Tue Oct 14 17:43:28 2025"
+attribution: DTK
+status: ready-to-use
+chapter: 4
+mode: drill
+topic: "motion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-reptile-speak-piano}
+Consider a bicyclist pedalling along a straight road. There are distance markers every tenth of a mile, so the cyclist can note her position easily.
+
+1. What is the dimension of the biker's position along the road?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.1
+- 'L':
+    correct: true
+- 'L/T':
+    correct: false
+- '(L/T)/T':
+    correct: false
+- 'None of the above':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-1",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.1,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+2. What is the dimension of speed along the road?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.2
+- 'L':
+    correct: false
+- 'L/T':
+    correct: true
+- '(L/T)/T':
+    correct: false
+- 'None of the above':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-2",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.2,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+3. Is speed a simple or compound ratio?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.3
+- 'Simple ratio':
+    correct: true
+- 'Compound ratio':
+    correct: false
+- 'Neither':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-3",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.3,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+4. Speed is a rate of change. Explain why?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.4
+- 'No. Speed is the current position divided by the current time of day.':
+    correct: false
+- 'No. Speed is the change in current position divided by the current time of day.':
+    correct: false
+- 'Yes. Speed is the change in position divided by the change in time over which the position changed.':
+    correct: true
+- 'Yes. Time is always changing.':
+    correct: false
+    feedback: 'It''s true that time is always changing, but this alone does not define speed.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-4",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.4,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+The bicyclist has just crested a hill and is not speeding up. While speed tells how position changes with respect to time, "speeding up" is a synonym for *acceleration*. 
+
+5. Which of these corresponds to acceleration?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.5
+- 'A change in speed.':
+    correct: false
+    feedback: 'Acceleration is a *rate of change*.'
+- 'A change in position.':
+    correct: false
+    feedback: 'Acceleration is specifically about the change in speed, not just position.'
+- 'A change in speed *with respect to* a change in time.':
+    correct: true
+- 'A change in speed *with respect to* a change in position.':
+    correct: false
+    feedback: 'While position is changing along with the speed, acceleration specifically refers to the change in speed with respect to the change in time during which the change of speed is accomplished.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-5",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.5,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+6. What is the dimension of a *change in position*?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.6
+- 'L':
+    correct: true
+- 'L/T':
+    correct: false
+- '(L/T)/T':
+    correct: false
+- 'None of the above':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-6",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.6,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+7. What is the dimension of a *change in speed*?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.7
+- 'L':
+    correct: false
+- 'L/T':
+    correct: true
+- '(L/T)/T':
+    correct: false
+- 'None of the above':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-7",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.7,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+8. What is the dimension of a *change in speed* with respect to a *change in time*?
+
+```{devoirs_choices}
+#| label: choices_rsp.7cks.8
+- 'L':
+    correct: false
+    feedback: 'This would be the dimension of a change in position.'
+- 'L/T':
+    correct: false
+    feedback: 'This would be the dimension of a change in speed.'
+- '(L/T)/T':
+    correct: true
+- 'None of the above':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsp-7cks-8",
+  question = "Placeholder for now",
+  answers = choices_rsp.7cks.8,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-reptile-speak-piano -->

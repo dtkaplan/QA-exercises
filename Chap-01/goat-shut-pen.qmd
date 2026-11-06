@@ -3,7 +3,7 @@ id: "goat-shut-pen"
 created: "Thu Oct 15 12:13:29 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 1
 -->
 

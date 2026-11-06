@@ -1,0 +1,20 @@
+---
+title: "*Quantitative Argumentation*"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+`r devoirs3::devoirs_start("QA-exer-16")`
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../devoirs3/Chap-16/toe-lose-pen.qmd >}}
+
+
+:::
+
+

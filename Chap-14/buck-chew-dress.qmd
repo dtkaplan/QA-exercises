@@ -2,7 +2,7 @@
 id: "buck-chew-dress"
 created: "Mon Feb 16 15:50:44 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 14
 mode: "exercise"
 -->

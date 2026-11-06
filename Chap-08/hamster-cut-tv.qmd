@@ -2,7 +2,7 @@
 id: "hamster-cut-tv"
 created: "Fri Feb 13 16:03:05 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 8
 mode: "exercise"
 -->
@@ -10,6 +10,6 @@ mode: "exercise"
 {{< include ../exercise-header.qmd >}}
 
 ::: {#exr-hamster-cut-tv}
-`r devoirs::devoirsTF(TRUE, "hct-1-fkw")` An (absolute) probability is also a relative probability.
+`r devoirs::devoirs_TF(TRUE, "hct-1-fkw")` An (absolute) probability is also a relative probability.
 :::
  <!-- end of exr-hamster-cut-tv -->

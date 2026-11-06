@@ -1,0 +1,17 @@
+<!--
+id: "nephew-sleep-fork"
+created: "Fri Dec  5 09:41:35 2025"
+attribution: DTK
+status: sketch
+chapter: 7
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-nephew-sleep-fork}
+[[Compound interest, rule of 72]]
+
+:::
+ <!-- end of exr-nephew-sleep-fork -->

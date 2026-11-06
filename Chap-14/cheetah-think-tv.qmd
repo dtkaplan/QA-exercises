@@ -2,7 +2,7 @@
 id: "cheetah-think-tv"
 created: "Fri Dec 19 17:11:29 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 14
 mode: "exercise"
 -->

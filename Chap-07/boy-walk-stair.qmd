@@ -3,7 +3,7 @@ id: "boy-walk-stair"
 created: "Fri Oct 16 12:18:27 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

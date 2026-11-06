@@ -1,0 +1,151 @@
+<!--
+id: "panda-refer-window"
+created: "Tue Oct  7 14:01:47 2025"
+attribution: DTK
+status: ready-to-use
+chapter: 4
+mode: drill
+topic: "transportation"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-panda-refer-window}
+There are several ways to measure *transportation* services. Let's focus here on the transportation of *people*. The *distance* of transport is, obviously, an important aspect of transportation services. So it the number of people transported. 
+
+In a proper measure of transportation services, it seems reasonable that the longer the distance, the more transportation being provided, so long as the number of passengers is the same. Similarly, the more passengers carried, so long as the distance is the same, the more transportation is provided.
+
+1. Which of the following is a sensible way to measure the amount of transportation?
+
+```{devoirs_choices}
+#| label: choices_prw.base.wlci
+- 'People plus miles':
+    correct: false
+    feedback: 'You can''t add quantities with different dimensions.'
+- 'People per mile':
+    correct: false
+    feedback: 'If the number of miles goes up, so should the amount of transportation services. "Per mile" doesn''t do this.'
+- 'Miles per person':
+    correct: false
+    feedback: 'If the number of persons goes up, so should the amount of transportation services. "Per person" doesn''t do this'
+- 'Miles $\times \sqrt{\strut\text{person}}$':
+    correct: false
+    feedback: 'The square-root of a person. That makes no sense. In a jokey way, it would be one of the parents if the person multiplied with themselves!'
+- 'Persons $\times$ miles':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "prw-base-wlci",
+  question = "Placeholder for now",
+  answers = choices_prw.base.wlci,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+2. 100 passengers are on a flight covering 500 miles. How much transportation service is provided to the group of passengers?
+
+```{devoirs_choices}
+#| label: choices_prw.2.cksd
+- '500 passenger miles':
+    correct: false
+- '5000 passenger miles':
+    correct: false
+- '50,000 passenger miles':
+    correct: true
+- '500,000 passenger miles.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "prw-2-cksd",
+  question = "Placeholder for now",
+  answers = choices_prw.2.cksd,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+Many people are concerned with the amount of fuel used in air travel. For modern jets (with a full load of passengers), the amount of fuel used is approximately 0.02 to 0.03 gallons per passenger mile.
+
+3. What is the {{< var dim.dim >}} of "gallons per passenger mile?"
+
+```{devoirs_choices}
+#| label: choices_prw.3.kdlw
+- 'L^4 C^-1^':
+    correct: false
+- 'L^3 C^-1^':
+    correct: false
+- 'L^2 C^-1^':
+    correct: true
+- 'L C^-1^':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "prw-3-kdlw",
+  question = "Placeholder for now",
+  answers = choices_prw.3.kdlw,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+4. People in the US are used to measuring *fuel economy* in "miles per gallon." This contrasts with the style in much of the rest of the world the unit is "liters per 100 km." Assume that a group of friends is travelling 600 miles to a concert. They could fly or drive. If there are three friends, how many gallons of fuel will the one-way air travel consume (for these three passengers)? (Pick the closest answer.)
+
+```{devoirs_choices}
+#| label: choices_prw.4.cksd
+- '15 gallons':
+    correct: false
+- '30 gallons':
+    correct: true
+- '150 gallons':
+    correct: false
+- '300 gallons':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "prw-4-cksd",
+  question = "Placeholder for now",
+  answers = choices_prw.4.cksd,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+5. Now imagine the three friends are carpooling to the concert in a car that gets 30 miles per gallon. How many gallons of fuel will the one-way drive consume for all three passengers. (Pick the closest answer.)
+
+```{devoirs_choices}
+#| label: choices_prw.5.wels
+- '20 gallons':
+    correct: true
+- '60 gallons':
+    correct: false
+- '200 gallons':
+    correct: false
+- '300 gallons':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "prw-5-wels",
+  question = "Placeholder for now",
+  answers = choices_prw.5.wels,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+6. Some people reason that it does not consume any fuel for the three friends to fly, since even if they didn't fly the plane would consume the same amount of fuel. Are you sympathetic to this argument? Explain why or why not.
+
+`r devoirs::devoirs_text("prw-marginal-ywls")`
+
+:::
+ <!-- end of exr-panda-refer-window -->

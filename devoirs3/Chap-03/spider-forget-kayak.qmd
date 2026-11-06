@@ -1,0 +1,19 @@
+<!--
+id: "spider-forget-kayak"
+created: "Tue Aug 18 07:33:12 2026"
+attribution: DTK
+uses: "dimensional analysis"
+status: "sketch"
+chapter: 3
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-spider-forget-kayak}
+
+Turn this into an exercise in dimensional analysis.
+
+For instance, a standard for energy is, the *watt-hour*. SI also has a standard derived unit for surface tension (as in the property that shapes rainwater into discrete droplets). Energy and surface tension,utterly different kinds of quantities, but they are closely related. Surface tension is energy per unit area. 
+:::
+ <!-- end of exr-spider-forget-kayak -->

@@ -2,7 +2,7 @@
 id: "titmouse-refer-laundry"
 created: "Fri Feb 13 11:34:41 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
 mode: "exercise"
 -->

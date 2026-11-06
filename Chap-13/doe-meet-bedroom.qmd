@@ -3,7 +3,7 @@ id: "doe-meet-bedroom"
 created: "Sat Jan 31 11:49:48 2026"
 attribution: DTK
 use: Chap 8 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 9
 mode: "computer-skills"
 -->

@@ -1,0 +1,20 @@
+<!--
+id: "pine-fall-drawer"
+created: "Sun Jan 25 16:41:44 2026"
+attribution: TBA
+status: "sketch"
+chapter: 3
+mode: "outline"
+-->
+
+
+::: {#exr-pine-fall-drawer}
+
+Let's see what we can do to include units **compactly** as part of a numeral.
+
+$$\newcommand{\year}[2]{\stackrel{\text{#2}}{#1}}$$
+$\year{y}{km.lb2/year}$
+
+
+:::
+ <!-- end of exr-pine-fall-drawer -->

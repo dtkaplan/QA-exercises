@@ -2,7 +2,7 @@
 id: "pony-rise-boat"
 created: "Tue Oct  7 14:04:32 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 8
 mode: "exercise"
 -->

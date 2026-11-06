@@ -13,6 +13,6 @@ chapter: 1
 ::: {#exr-lobster-sleep-magnet}
 For purposes of this book, **reasoning** is the transformation of givens into new beliefs and understandings.
 
-`r devoirs::devoirsTF(correct = TRUE, id = "D-01-yes")`
+`r devoirs::devoirs_TF(correct = TRUE, id = "D-01-yes")`
 :::
  <!-- end of exr-lobster-sleep-magnet -->

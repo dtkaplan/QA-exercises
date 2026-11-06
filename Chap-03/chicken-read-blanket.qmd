@@ -3,7 +3,7 @@ id: "chicken-read-blanket"
 created: "Fri Oct 16 08:43:29 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -12,7 +12,7 @@ chapter: 03
 
 
 ::: {#exr-chicken-read-blanket}
-`r devoirs::devoirsTF(correct = FALSE, id="D-03-ode", wrong.hint = "Multiplication and division can produce derived dimensions. For example, length / time has the dimension of velocity, and length × length has the dimension of area.")` Two quantities must have the same dimension before they can be multiplied.
+`r devoirs::devoirs_TF(correct = FALSE, id="D-03-ode", wrong.hint = "Multiplication and division can produce derived dimensions. For example, length / time has the dimension of velocity, and length × length has the dimension of area.")` Two quantities must have the same dimension before they can be multiplied.
 
 :::
  <!-- end of exr-chicken-read-blanket -->

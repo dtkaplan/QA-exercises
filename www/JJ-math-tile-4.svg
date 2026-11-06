@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300">
+  <defs>
+    <clipPath id="digit4">
+      <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340"
+            transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">4</text>
+    </clipPath>
+  </defs>
+  <rect width="240" height="300" fill="#d94b31"/>
+  <path d="M-19 92C12 52 39 40 68 61s47 44 78 24 62-28 107 1l-27 47c-31-14-52-9-78 12s-54 27-84 5-51-21-80 7z" fill="#e7b333"/>
+  <path d="M-24 205c31-37 58-44 86-23s46 33 75 10 60-34 107-6l-28 61c-34-16-57-9-81 12s-56 23-86 2-45-20-70 8z" fill="#287e9d"/>
+  <path d="M34-17c26 27 30 54 9 80s-16 52 12 75 32 48 12 76-17 49 13 81l-46 22c-28-35-35-67-11-100s15-53-14-78-25-54-5-87S20 8 1-7z" fill="#ed7629"/>
+  <path d="M5 28c25 20 45 18 68-1s41-17 62 4m42 244c23-22 45-26 74-12" fill="none" stroke="#c43e32" stroke-width="14" stroke-linecap="round"/>
+  <path d="M-7 260c24-19 41-14 58 5s37 22 57 5m53-201c23-20 43-21 67-3" fill="none" stroke="#f0bd3d" stroke-width="15" stroke-linecap="round"/>
+  <path d="M17 19c29-12 57-8 82 7m29 251c34 12 61 7 88-12M17 214c15-18 23-33 24-50m146-70c-11 15-17 29-17 44" fill="none" stroke="#f5edda" stroke-width="5" stroke-linecap="round"/>
+
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340"
+        fill="#286e8d" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">4</text>
+  <g clip-path="url(#digit4)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 91c38-17 65-9 91 7s54 15 101-9" stroke="#f3d04d" stroke-width="36"/>
+    <path d="M30 125c39-7 63 10 91 20s53 5 91-16" stroke="#e66c29" stroke-width="23"/>
+    <path d="M28 177c37-17 57-13 84 2s56 12 100-12" stroke="#f6e9c8" stroke-width="32"/>
+    <path d="M39 215c31-14 54-8 77 5s51 12 83-8" stroke="#c83e32" stroke-width="19"/>
+    <path d="M53 69c21 6 34 16 48 29m50 33c-14 6-27 6-44 1m-29 40c18-7 34-5 50 5m28 21c14-4 25-11 36-20" stroke="#58a7a9" stroke-width="8"/>
+    <path d="M37 233c28-29 51-52 72-83s44-57 82-76" stroke="#e7762d" stroke-width="16"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M30 43l14-7m157 13 12 7M19 232l13-7m179 29 12-8M52 279l10 4" stroke="#e6b333" stroke-width="5"/>
+    <path d="M28 83l9 5m160 112 12-5M21 164l9-12m168-92 10-6" stroke="#f5e6bf" stroke-width="4"/>
+  </g>
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340"
+        fill="none" stroke="#000000" stroke-width="1.375" stroke-linejoin="round"
+        transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">4</text>
+</svg>

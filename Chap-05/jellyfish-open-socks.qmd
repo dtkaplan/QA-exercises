@@ -3,7 +3,7 @@ id: "jellyfish-open-socks"
 created: "Sun Oct 19 08:27:10 2025"
 attribution: DTK
 use: "Chapter 5 exercise"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->
@@ -72,7 +72,7 @@ For the endogenous quantities, each of the round-cornered, shaded boxes is a fun
 4. none. W is exogenous
 ```
 
-4. `r devoirsTF(TRUE, id="jos-4-dw")` Is this collection of functions consistent with the system diagram?
+4. `r devoirs_TF(TRUE, id="jos-4-dw")` Is this collection of functions consistent with the system diagram?
     i. U(W, Y)
     ii. V(U, Y)
     iii. W(X, Z)

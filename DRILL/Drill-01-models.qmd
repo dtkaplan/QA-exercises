@@ -34,7 +34,7 @@ source("_start-up.R")
 
 For purposes of this book, **reasoning** is the transformation of givens into new beliefs and understandings.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
@@ -53,7 +53,7 @@ Which of the following can be a **given** at the start of a reasoning process?
 
 Hearing a rooster crow is a direct observation that it is dawn.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="The rooster sound is a given. 'It is dawn' is a belief reached by reasoning from the given.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="The rooster sound is a given. 'It is dawn' is a belief reached by reasoning from the given.")`
 
 ## `r cc()`
 
@@ -72,7 +72,7 @@ What links the observation of a rooster sound to the reasoned belief that it is 
 
 A **heuristic** is a reasoning link that is useful but is not guaranteed to be correct.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
@@ -90,7 +90,7 @@ Which statement best describes **formal reasoning** as used in this chapter?
 
 A premise is a statement assumed to be true for the purpose of formal reasoning.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
@@ -119,7 +119,7 @@ Why can formal reasoning give misleading results when it is applied to a real-wo
 
 A model is a **representation** of an item, process, or setting of interest.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
@@ -137,7 +137,7 @@ Which statement best expresses the role of a quantitative model in this book?
 
 Building a quantitative model is itself an exercise in formal reasoning.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Model construction uses knowledge, understanding, and belief about real-world matters together with heuristic reasoning. The completed model can then serve as a premise for formal reasoning.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="Model construction uses knowledge, understanding, and belief about real-world matters together with heuristic reasoning. The completed model can then serve as a premise for formal reasoning.")`
 
 ## `r cc()`
 
@@ -156,7 +156,7 @@ Suppose a model is used to predict the effect of an intervention in a real-world
 
 The usefulness of a model depends in part on the purpose for which the model is built.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
@@ -175,13 +175,13 @@ Which statement best describes the iterative nature of modeling?
 
 In the epidemic example, the SIR model is used to represent the connections among **susceptible**, **infective**, and **recovered** people.
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))`
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))`
 
 ## `r cc()`
 
 In the epidemic example, the computer simulation is itself the model; the SIR model is merely the software used to run it.
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="The SIR description is the model. The computer program implements the model's bookkeeping and formal calculations.")`
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="The SIR description is the model. The computer program implements the model's bookkeeping and formal calculations.")`
 
 :::
 ::::

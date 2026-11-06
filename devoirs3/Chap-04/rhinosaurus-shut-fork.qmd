@@ -1,0 +1,172 @@
+<!--
+id: "rhinosaurus-shut-fork"
+created: "Mon Dec 15 13:16:51 2025"
+attribution: DTK
+status: ready-to-use
+chapter: 4
+mode: drill
+topic: "health"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-rhinosaurus-shut-fork}
+
+As you know, "mortality" refers to the state of being subject to death as in, "All men are mortal." In contrast, "mortality rate" refers to the *frequency* of death in a *given* population or group *over* a specified period of time.
+
+Notice the three words: "frequency," "given," and "over." 
+
+Frequency on its own is ambiguous. With respect to mortality, it can mean any of three things; the number of deaths, the proportion of the population that dies, or (less commonly) the number of deaths during a time interval.
+
+1. What is the dimension of the *number of deaths*?
+
+```{devoirs_choices}
+#| label: choices_rsf.ckse.1
+- 'Dimensionless':
+    correct: false
+    feedback: 'This is a reasonable choice, but in the context of counting people, we are using "capita."'
+- 'C (capita)':
+    correct: true
+- 'T':
+    correct: false
+- 'C/T':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsf-ckse-1",
+  question = "Placeholder for now",
+  answers = choices_rsf.ckse.1,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+2. What is the dimension of the *proportion of the population that dies*?
+
+```{devoirs_choices}
+#| label: choices_rsf.ckse.2
+- '1/C':
+    correct: false
+- 'Dimensionless':
+    correct: true
+    feedback: 'It''s the ratio C/C.'
+- 'C':
+    correct: false
+- 'C/T':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsf-ckse-2",
+  question = "Placeholder for now",
+  answers = choices_rsf.ckse.2,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+3. What is the dimension of the *number of deaths per unit time*?
+
+```{devoirs_choices}
+#| label: choices_rsf.ckse.3
+- 'Dimensionless':
+    correct: false
+- 'C (capita)':
+    correct: false
+- 'T':
+    correct: false
+- 'C/T':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsf-ckse-3",
+  question = "Placeholder for now",
+  answers = choices_rsf.ckse.3,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+4. Perhaps the most widely used form for "mortality rate" is the proportion of people dying in a given group per unit time. What is the dimension of this quantity?
+
+```{devoirs_choices}
+#| label: choices_rsf.ckse.4
+- 'C':
+    correct: false
+- 'T':
+    correct: false
+- 'C/T':
+    correct: false
+- '(C/C)/T = 1/T':
+    correct: true
+    feedback: 'C/C is the proportion, dividing by T gives the rate with respect to time.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsf-ckse-4",
+  question = "Placeholder for now",
+  answers = choices_rsf.ckse.4,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+5. According to the answer to (4), which one of the following could be an appropriate unit for mortality rate?
+
+```{devoirs_choices}
+#| label: choices_rsf.ckse.5
+- 'year':
+    correct: false
+- 'per year':
+    correct: true
+- 'person':
+    correct: false
+- 'per person':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsf-ckse-5",
+  question = "Placeholder for now",
+  answers = choices_rsf.ckse.5,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+6. The correct answer to (5) can be confusing to many people because "per year" is familiar only in the context "*something* per year." It's common when discussing mortality rates to substitute "percent" in place of the "something," as in "percent per year." What is the dimension of *percent*?
+
+```{devoirs_choices}
+#| label: choices_rsf.ckse.6
+- 'Dimensionless':
+    correct: true
+    feedback: 'Percent is a ratio, like C/C, which is dimensionless.'
+- 'C':
+    correct: false
+- 'T':
+    correct: false
+- 'per T':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "rsf-ckse-6",
+  question = "Placeholder for now",
+  answers = choices_rsf.ckse.6,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+:::
+ <!-- end of exr-rhinosaurus-shut-fork -->

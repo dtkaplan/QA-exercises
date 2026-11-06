@@ -1,0 +1,43 @@
+<!--
+id: "pig-teach-oven"
+created: "Sat Dec 20 09:40:34 2025"
+attribution: TBA
+status: ready-to-use
+chapter: 8
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pig-teach-oven}
+AI Generated:
+
+1. A freelance consultant charges a flat fee of $75 per hour for her services. Which type of growth describes her total earnings as she works more hours?
+
+```{devoirs_choices}
+#| label: choices_pto.1.jee
+- 'Diminishing Returns':
+    correct: false
+- 'Logarithmic Growth':
+    correct: false
+- 'Linear Growth':
+    correct: true
+- 'Exponential Growth':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pto-1-jee",
+  question = "Placeholder for now",
+  answers = choices_pto.1.jee,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+Think about whether the 'bonus' for working one extra hour changes or stays the same regardless of how many hours have passed.
+
+
+:::
+ <!-- end of exr-pig-teach-oven -->

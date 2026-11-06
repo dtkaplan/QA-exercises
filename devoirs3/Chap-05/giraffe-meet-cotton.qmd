@@ -1,0 +1,167 @@
+<!--
+id: "giraffe-meet-cotton"
+created: "Wed Dec 31 13:54:47 2025"
+attribution: DTK
+use: "Chapter 5 exercises"
+status: ready-to-use
+chapter: 5
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-giraffe-meet-cotton}
+We have defined for your convenience several one-input functions named `f1()` through `f5()`. Graph each of them, one at a time, on the domain -5 to 5 and, from the graph, read off the requested information. (Hint: All you need is the *name* of the function, you don't have to worry about how we constructed it.)
+
+```{webr}
+#| echo: false
+#| autorun: true
+f1 <- mosaicCalc::doodle_fun( ~ z, seed = 504)
+f2 <- mosaicCalc::doodle_fun( ~ z, seed = 506)
+f3 <- mosaicCalc::doodle_fun( ~ z, seed = 508)
+f4 <- mosaicCalc::doodle_fun( ~ z, seed = 510)
+f5 <- mosaicCalc::doodle_fun( ~ z, seed = 512)
+```
+
+```{webr}
+#| caption: Make your plots here.
+slice_plot(f1(z) ~ z, domain(z = -5:5))
+```
+
+1. For `f1()`, for what input does the output reach its maximum value? (Select the closest value.)
+
+```{devoirs_choices}
+#| label: choices_gmc.1.lesle
+- '-4':
+    correct: false
+- '-3':
+    correct: false
+- '-2':
+    correct: true
+- '0':
+    correct: false
+- '2':
+    correct: false
+- '3':
+    correct: false
+- '4':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-1-lesle",
+  question = "Placeholder for now",
+  answers = choices_gmc.1.lesle,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+2. For `f2()`, what is the input where the output crosses zero?  [Pick the closest answer.]
+
+```{devoirs_choices}
+#| label: choices_gmc.2.loie
+- '-3':
+    correct: false
+- '-1':
+    correct: true
+- '0':
+    correct: false
+- '1':
+    correct: false
+- '3':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-2-loie",
+  question = "Placeholder for now",
+  answers = choices_gmc.2.loie,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+3. For `f3()`, what is the minimum value of the output? [Pick the closest answer.]
+
+```{devoirs_choices}
+#| label: choices_gmc.3.yee
+- '0':
+    correct: false
+- '-10':
+    correct: false
+- '-20':
+    correct: false
+- '-30':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-3-yee",
+  question = "Placeholder for now",
+  answers = choices_gmc.3.yee,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+4. For `f4()`, at what input does the output cross zero? [Pick the closest answer.]
+
+```{devoirs_choices}
+#| label: choices_gmc.4.rwsle
+- '-4':
+    correct: false
+- '-3':
+    correct: false
+- '-2':
+    correct: false
+- '0':
+    correct: false
+- '2':
+    correct: false
+- '3':
+    correct: true
+- '4':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-4-rwsle",
+  question = "Placeholder for now",
+  answers = choices_gmc.4.rwsle,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+5. For `f5()`, at how many different inputs does the output cross zero? 
+
+```{devoirs_choices}
+#| label: choices_gmc.5.qdr
+- '0':
+    correct: false
+- '1':
+    correct: false
+- '2':
+    correct: false
+- '3':
+    correct: true
+- '4':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-5-qdr",
+  question = "Placeholder for now",
+  answers = choices_gmc.5.qdr,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-giraffe-meet-cotton -->

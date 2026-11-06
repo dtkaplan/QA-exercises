@@ -3,7 +3,7 @@ id: "turtle-understand-scarf"
 created: "Thu Mar 12 07:35:20 2026"
 attribution: Dorothy Dickmann
 use: RQ 13
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
 mode: "reading-question"
 -->

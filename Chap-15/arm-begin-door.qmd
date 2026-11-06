@@ -2,7 +2,7 @@
 id: "arm-begin-door"
 created: "Thu Jan 22 16:50:56 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 15
 mode: "exercise"
 -->

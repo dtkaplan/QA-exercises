@@ -1,0 +1,40 @@
+<!--
+id: "bat-send-chair"
+created: "Fri Jan 30 17:02:05 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "sketch"
+chapter: 7
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bat-send-chair}
+The core modeling functions take pure numbers (dimensionless) as input and produce pure numbers as output. To use them with real-world quantities that have units, we use **input transformations**. 
+
+An input transformation has the form $a(q - q_0)$ where $q$ is the real-world input quantity. What must be true about the dimension of $q_0$?
+
+```{devoirs_choices}
+#| label: choices_d06.bsc.esd
+- 'It must be dimensionless':
+    correct: false
+- 'It must have the same dimension as $q$':
+    correct: true
+- 'It must have the reciprocal dimension of $q$':
+    correct: false
+- 'It can have any dimension':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-bsc-esd",
+  question = "Placeholder for now",
+  answers = choices_d06.bsc.esd,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-bat-send-chair -->

@@ -2,7 +2,7 @@
 id: "lobster-serve-sofa"
 created: "Sun Dec 28 14:12:26 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 8
 mode: "reading-question"
 -->

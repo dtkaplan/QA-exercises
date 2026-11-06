@@ -3,7 +3,7 @@ id: "maple-forgive-socks"
 created: "Thu Oct 15 12:09:46 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 1
 -->
 

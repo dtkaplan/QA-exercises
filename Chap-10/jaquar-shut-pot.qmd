@@ -2,7 +2,7 @@
 id: "jaquar-shut-pot"
 created: "Mon Feb 16 08:22:56 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 10
 mode: "exercise"
 -->

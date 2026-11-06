@@ -1,0 +1,43 @@
+<!--
+id: "eagle-leave-room"
+created: "Wed Jan 28 09:49:33 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 5"
+status: "sketch"
+chapter: 14
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-leave-room}
+Functions with multiple inputs can be analyzed using a technique called "slicing." Which of the following statements accurately describes this process? Select any correct answer.
+
+```{devoirs_choices}
+#| label: choices_elr.1.jse
+- 'It involves holding one or more input variables constant at a fixed value.':
+    correct: true
+- 'It requires setting the function''s output to zero to solve for the intercepts.':
+    correct: false
+- 'It allows you to visualize the relationship between the output and a single input on a standard input vs output graph.':
+    correct: true
+- 'It calculates the average rate of change for all inputs simultaneously.':
+    correct: false
+- 'It enables some analysis of a multi-variable function as a single-variable function.':
+    correct: true
+- 'It combines all input variables into a single sum to determine the total magnitude.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "elr-1-jse",
+  question = "Placeholder for now",
+  answers = choices_elr.1.jse,
+  multiple = TRUE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-eagle-leave-room -->

@@ -2,7 +2,7 @@
 id: "rhinosaurus-shut-fork"
 created: "Mon Dec 15 13:16:51 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 4
 mode: "drill"
 topic: "health"

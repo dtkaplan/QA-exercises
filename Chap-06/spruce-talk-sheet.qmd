@@ -3,7 +3,7 @@ id: "spruce-talk-sheet"
 created: "Thu Jan 22 09:49:05 2026"
 attribution: Dave Ruth
 use: Chap 6 Drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "exercise"
 -->

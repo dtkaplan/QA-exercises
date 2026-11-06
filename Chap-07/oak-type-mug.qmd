@@ -2,7 +2,7 @@
 id: "oak-type-mug"
 created: "Tue Jul  1 16:24:16 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

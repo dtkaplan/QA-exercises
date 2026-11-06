@@ -3,7 +3,7 @@ id: "wolf-think-plant"
 created: "Fri Oct 16 08:57:36 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->

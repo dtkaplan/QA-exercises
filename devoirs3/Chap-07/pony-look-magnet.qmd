@@ -1,0 +1,39 @@
+<!--
+id: "pony-look-magnet"
+created: "Fri Oct 16 12:20:41 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 7
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-pony-look-magnet}
+A function's graph rises as the input increases, but its slope becomes less steep. Which description best fits the graph?
+
+```{devoirs_choices}
+#| label: choices_d07.input.output.05
+- 'The function is decreasing.':
+    correct: false
+- 'The function is increasing with diminishing slope.':
+    correct: true
+- 'The function is constant.':
+    correct: false
+- 'The function has no output.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d07-input-output-05",
+  question = "Placeholder for now",
+  answers = choices_d07.input.output.05,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-pony-look-magnet -->

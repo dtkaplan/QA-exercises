@@ -2,7 +2,7 @@
 id: "fly-spend-gloves"
 created: "Fri Jan  9 12:51:41 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 4
 mode: "reading-question"
 -->

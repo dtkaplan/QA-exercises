@@ -2,7 +2,7 @@
 id: "monkey-drive-book"
 created: "Sat Aug 23 13:13:15 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 1
 mode: "exercise"
 -->

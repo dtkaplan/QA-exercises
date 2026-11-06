@@ -1,0 +1,39 @@
+<!--
+id: "doe-dream-door"
+created: "Fri Oct 16 08:18:11 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-doe-dream-door}
+Which of the following could be the **specimen type** of a data frame?
+
+```{devoirs_choices}
+#| label: choices_d01.object.type
+- 'Individual houses for sale':
+    correct: true
+- 'The column named price':
+    correct: false
+- 'The number 250':
+    correct: false
+- 'The spreadsheet software used to display the data':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-object-type",
+  question = "Placeholder for now",
+  answers = choices_d01.object.type,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-doe-dream-door -->

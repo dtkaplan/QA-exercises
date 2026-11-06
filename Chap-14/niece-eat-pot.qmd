@@ -3,7 +3,7 @@ id: "niece-eat-pot"
 created: "Thu Mar 12 07:51:21 2026"
 attribution: Dorothy Dickmann
 use: Ch 12 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 14
 mode: "exercise"
 -->

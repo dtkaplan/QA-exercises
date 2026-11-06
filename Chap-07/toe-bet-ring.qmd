@@ -3,7 +3,7 @@ id: "toe-bet-ring"
 created: "Fri Oct 16 12:04:31 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

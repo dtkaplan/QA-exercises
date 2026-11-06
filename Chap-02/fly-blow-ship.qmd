@@ -3,7 +3,7 @@ id: "fly-blow-ship"
 created: "Fri Oct 16 08:12:05 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 02
 
 -->

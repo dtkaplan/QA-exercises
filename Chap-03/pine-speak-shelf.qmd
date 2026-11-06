@@ -3,7 +3,7 @@ id: "pine-speak-shelf"
 created: "Fri Aug 21 12:04:07 2026"
 attribution: DTK
 uses: dimension calculation
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "exercise"
 -->

@@ -1,0 +1,39 @@
+<!--
+id: "boy-serve-kitchen"
+created: "Fri Jan 30 17:01:27 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: "sketch"
+chapter: 7
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-boy-serve-kitchen}
+In the input transformation $a(q - q_0)$, what must be true about the dimension of parameter $a$?
+
+```{devoirs_choices}
+#| label: choices_d06.bsk.a
+- 'It must be dimensionless':
+    correct: false
+- 'It must have the same dimension as $q$':
+    correct: false
+- 'It must have dimension $1/[q]$ (the reciprocal of $q$''s dimension)':
+    correct: true
+- 'It can have any dimension':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-bsk-a",
+  question = "Placeholder for now",
+  answers = choices_d06.bsk.a,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-boy-serve-kitchen -->

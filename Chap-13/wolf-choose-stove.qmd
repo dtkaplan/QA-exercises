@@ -2,7 +2,7 @@
 id: "wolf-choose-stove"
 created: "Tue Sep 30 12:26:48 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
 mode: "exercise"
 -->

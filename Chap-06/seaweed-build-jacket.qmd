@@ -3,7 +3,7 @@ id: "seaweed-build-jacket"
 created: "Wed Jan 28 09:53:10 2026"
 attribution: Dave Ruth
 uses: "Quiz Ch 6"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "exercise"
 -->

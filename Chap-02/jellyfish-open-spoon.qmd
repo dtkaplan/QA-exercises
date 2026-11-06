@@ -3,7 +3,7 @@ id: "jellyfish-open-spoon"
 created: "Sat Aug 15 10:06:46 2026"
 attribution: DTK
 uses: "Systems chapter"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 2
 mode: exercise
 group: dimensions

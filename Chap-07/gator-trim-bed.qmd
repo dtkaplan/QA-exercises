@@ -3,7 +3,7 @@ id: "gator-trim-bed"
 created: "Fri Jan 30 16:47:51 2026"
 attribution: Dorothy Dickmann
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

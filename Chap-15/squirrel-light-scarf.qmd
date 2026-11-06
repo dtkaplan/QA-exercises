@@ -67,7 +67,7 @@ slice_plot(F(x) ~ x, dom, color = "white") |>
 
 2. Now look at the graph of $f(x)$. An any input value $x_0$, the output $f(x_0)$ is the slope of $F(x)$.  Look at the value of $f(x_0)$, that is, the value of $f()$ at the input you selected in question (1). The output value $f(x_0)$ should match the slope of $F(x)$ at $x = x_0$.
 
-`r devoirs::devoirsTF(TRUE, id = "sls-2-4kse")`
+`r devoirs::devoirs_TF(TRUE, id = "sls-2-4kse")`
 
 3. Focus now on panel (c) of @fig-Ffslope. This panel also shows $f(x)$, but in a new way. In panel (C), the output of $f(x)$ is shown as the slope of a sloping line segment. (In constrast, in panel (B) the output of $f(x)$ is shown on the vertical axis.) We've annotated the graph with slopes, but it's easier to do a little calculation to find the slope of any of the segments in panel (C).
 

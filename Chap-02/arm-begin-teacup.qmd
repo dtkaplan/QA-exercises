@@ -3,7 +3,7 @@ id: "arm-begin-teacup"
 created: "Fri Oct 16 08:11:03 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 02
 
 -->
@@ -14,6 +14,6 @@ chapter: 02
 ::: {#exr-arm-begin-teacup}
 Operationalization is the process of converting a dimension into a quantity that can be measured.
 
-`r devoirs::devoirsTF(correct = TRUE, id = "D-02-tee")`
+`r devoirs::devoirs_TF(correct = TRUE, id = "D-02-tee")`
 :::
  <!-- end of exr-arm-begin-teacup -->

@@ -2,7 +2,7 @@
 id: "pony-meet-window"
 created: "Sun Oct 19 08:38:08 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "drill"
 -->

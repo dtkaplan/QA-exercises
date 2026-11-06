@@ -3,7 +3,7 @@ id: "nephew-toss-gloves"
 created: "Fri Jan 30 17:06:59 2026"
 attribution: Dorothy Dickmann
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

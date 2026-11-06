@@ -136,278 +136,476 @@ window.Quarto = {
 </header>
 
 
-<p><span id="devoirs-docID" style="display: none;">Exer-03.rmarkdown</span> <span><button onclick="devoirsSubmit()">Collect your answers</button></span> <span id="devoirs_summary">No answers yet collected</span></p>
-<div class="cell">
-<div class="cell-output-display">
-<script type="text/javascript">
- console.log("In devoirs.js")
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-function devoirsCollectEssays() {
-  var essay_answers = [];
-  var items = document.getElementsByClassName("devoirs-text");
-  for (i = 0; i < items.length; i++) {
-    //console.log("text entry" + i + "being handled");
-    essay_answers[i] = {itemid: items[i].id, contents: items[i].value}
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
   }
 
-  return essay_answers;
-}
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
 
-function devoirsGetDocID() {
-  return document.getElementById("devoirs-docID").innerHTML
-}
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
 
-function devoirsCollectMC() {
-    let mc_answers = [] // Hold the information
-    var ele = document.getElementsByClassName("devoirs-mcq");
-    var count = 0;
-    for (i = 0; i < ele.length; i++) {
-        if (ele[i].checked) {
-          //console.log("Entering conditional.");
-          let checked_one = ele[i];
-          mc_answers[count++] = {itemid: checked_one.id, w: checked_one.getAttribute("w"), contents: checked_one.text};
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
         }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
     }
-    return mc_answers;
-}
 
-console.log("About to define WebR")
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
 
-function devoirsCollectWebR() {
-  var chunk_contents = []; // placeholder for collecting webr items
-  if (typeof qwebrCellDetails == "undefined") {
-    // There aren't any webr chunks
-    return chunk_contents;
-  }
-  var chunks = qwebrCellDetails;
-  for (i = 0; i < chunks.length; i++) {
-    chunk_contents[i] = {itemid: chunks[i].options["label"], contents: chunks[i].code};
-  }
-
-  return chunk_contents;
-}
-
-console.log("About to define devoirsSubmit")
-
-function devoirsSubmit() {
-  console.log("About to collect history")
-
-  // check if there is any sign of a webr entry
-  // If not, don't try to collect webr entries
-  if (typeof qwebrRCommandHistory === 'undefined') {
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays(), WebR: {}, R: {}}
-  } else {
-    console.log("Getting R commands.")
-    var Rhistory = qwebrRCommandHistory.map((x) => x.replace(/Ran code in (.*) at (.*[AP]M).{5}(.*)/, "[chunk: $1, time: $2, code: $3]"))
-
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays()} //, WebR: devoirsCollectWebR(), R: Rhistory}
+    document.body.prepend(toolbar);
   }
 
-  navigator.clipboard.writeText(JSON.stringify(items));
-
-  // summarize what's being collected
-  var my_summary = "Answers copied to clipboard. Fixed choice: " + items.MC.length + " Essays: " + items.Essays.length + " WebR chunks: " + items.WebR.length
-
-  document.getElementById("devoirs_summary").innerHTML = my_summary;
-}
-
-console.log("Read devoirsSubmit()")
-
-// Hint handling in Multiple choice
-
-// Still have to add an on/off switch from options
-
-function devoirs_setup_hintarea() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) answers[i].addEventListener('click', function(e){document.getElementById(e.target.name + "-hintarea").innerHTML = e.target.getAttribute("hint")})
-}
-
- window.addEventListener("load", function() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) {
-    if (answers[i].getAttribute("show_hints") == "TRUE") {
-        answers[i].addEventListener('click', function(e){
-          console.log("inserting hint")
-        document.getElementById(e.target.name + "-hintarea").innerText = e.target.getAttribute("hint")
-      })
-
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
     }
   }
-})
 
-console.log("Added hint summary.") 
-</script>
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
 
-</div>
-</div>
-<script type="text/javascript">
-      // clear the local storage
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('btnClearStorage');
-      form.addEventListener("click", function () {
-        localStorage.clear();
-        location.reload();
-        console.log("Clearing memory");
-      }, false);
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
     }
-    )
-    </script>
-<button id="btnClearStorage">
-Clear memory
-</button>
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">5</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">6</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">7</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">8</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">9</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">4.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">5.</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <!--
-id: "beech-find-pot"
-created: "Tue Jul 29 10:36:03 2025"
-attribution: TBA
-status: "sketch"
+id: "avoid-get-laundry"
+created: "Thu Oct  9 08:44:48 2025"
+attribution: DTK
+status: ready-to-use
 chapter: 3
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
   display: none;
 }
 </style>
-<div id="exr-beech-find-pot" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1</strong></span> Give three different named units for each of J.E. Thompson’s eight “common measurements”</p>
-<ol type="i">
-<li>Length</li>
-<li>Surface, or area</li>
-<li>Volume, or capacity</li>
-<li>Weight, or force of gravity</li>
-<li>Time</li>
-<li>Angles, latitude and longitude</li>
-<li>Temperature, or intensity of heat</li>
-<li>Money, or value</li>
+<div id="exr-avoid-get-laundry" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Note: The purpose of this exercise is to help you develop a better understanding of conversion factors. In practical use, you would look up a conversion factor rather than calculating it from the sort of facts presented here.</p>
+<p>All of the following quantities are flavors of one.</p>
+<ol type="a">
+<li>5.0292 meters per rod</li>
+<li>201.168 meters per furlong</li>
+<li>0.0254 meters per inch</li>
+<li>20.1168 meters per chain</li>
+<li>1852 meters per <em>nautical</em> mile</li>
+<li>1609.34 meters per mile (statute mile)</li>
+<li>4046.86 square meters per acre</li>
+<li>60 seconds per minute</li>
+<li>3600 seconds per hour</li>
+<li>86400 seconds per day</li>
+<li>31,557,600 seconds per year (Julian year)</li>
 </ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for bfp-unit-names.');
-      const form = document.getElementById('bfp-unit-names');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('bfp-unit-names').value;
-        localStorage.setItem("bfp-unit-names-contents", todo);
-        console.log("Saving value of bfp-unit-names.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("bfp-unit-names-contents");
-      if (savedValue) {
-        document.getElementById('bfp-unit-names').value = savedValue;
-      }
-})
-</script>
-<textarea id="bfp-unit-names" name="bfp-unit-names" class="devoirs-text" style="font-family: monospace, monospace;" rows="8" cols="50" placeholder="Type here. (ID bfp-unit-names)">i. Length:
-ii. Surface, or area:
-iii. Volume, or capacity:
-iv. Weight, or force of gravity:
-v. Time:
-vi. Angles, latitude and longitude:
-vii. Temperature, or intensity of heat:
-viii. Money, or value:</textarea>
-</div>
-<p><!-- end of exr-beech-find-pot --></p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<!--
-id: "bear-leave-tv"
-created: "Tue Jul 29 10:49:28 2025"
-attribution: TBA
-status: "sketch"
-chapter: 5
-mode: "exercise"
--->
-<style>
-.theorem-title {
-  display: none;
-}
-</style>
-<div id="exr-bear-leave-tv" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2</strong></span> Name five units for energy. Remember that “power” has a different <em>dimension</em> than energy.</p>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for blt-energy-units.');
-      const form = document.getElementById('blt-energy-units');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('blt-energy-units').value;
-        localStorage.setItem("blt-energy-units-contents", todo);
-        console.log("Saving value of blt-energy-units.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("blt-energy-units-contents");
-      if (savedValue) {
-        document.getElementById('blt-energy-units').value = savedValue;
-      }
-})
-</script>
-<textarea id="blt-energy-units" name="blt-energy-units" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID blt-energy-units)"></textarea>
-</div>
-<p><!-- end of exr-bear-leave-tv --></p>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<!--
-id: "crow-pull-laundry"
-created: "Sat Jul 12 09:28:56 2025"
-attribution: TBA
-status: "ready-to-use"
-chapter: 14
-mode: "reading-question"
--->
-<style>
-.theorem-title {
-  display: none;
-}
-</style>
-<div id="exr-crow-pull-laundry" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3</strong></span> Light bulbs generally have a quantity printed on them: the wattage. Similarly, light-bulb sockets often have a “max watts” label advising the user of the largest wattage bulb that can work safely in the socket.</p>
-<dl>
-<dt>Part a</dt>
-<dd>
-What is the dimension of a watt?
-</dd>
-</dl>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="bulb-wattage-hintarea" class="hintarea">bulb-wattage</small>
-<form id="bulb-wattage-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="Energy " id="bulb-wattage-1" w="19" name="bulb-wattage" hint="Better luck next time." show_hints="TRUE"> Energy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Power" id="bulb-wattage-2" w="8" name="bulb-wattage" hint="Yup!" show_hints="TRUE"> Power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Electrical voltage" id="bulb-wattage-3" w="32" name="bulb-wattage" hint="Nope." show_hints="TRUE"> Electrical voltage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Electrical current" id="bulb-wattage-4" w="23" name="bulb-wattage" hint="Oops!" show_hints="TRUE"> Electrical current &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bulb-wattage" id="bulb-wattage.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for bulb-wattage.');
-      const form = document.getElementById('bulb-wattage-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('bulb-wattage-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for bulb-wattage.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for bulb-wattage.");
-          localStorage.setItem('bulb-wattage-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<!-- Opening answer: quantities-2uB -->
-<div class="callout callout-style-default callout-tip callout-titled" style="display: block;">
+<p>You are to construct additional flavors of one that are conversion factors:</p>
+<p>EXAMPLE: Convert nautical miles to inches.</p>
+<blockquote class="blockquote">
+<p>Dividing or multiplying any flavor of one by any others gives as a result still another flavor of one. Flavors of one are conversion factors from the unit on the bottom (denominator) to the unit on the top (numerator). For nautical miles to inches, we want a flavor of one with nautical miles on the bottom and inches on the top. Scanning the list above we identify (c) and (e) as our raw materials. It takes a moment’s thought to figure out whether to multiply or divide here. Division will cancel out the meters leaving the only units as nautical miles and inches. We want nautical miles on the top so divide (e) by (c), giving 72,913.39 inches per nautical mile. As a sanity check on this result, remember that a nautical mile is much longer than an inch, so it takes many inches to constitute a nautical mile.</p>
+</blockquote>
+<ol type="1">
+<li><p>Convert chains to inches. <span class="shortanswer" style="display: none;" data-tooltip="Ans id: Rates-exercises-6Th">Divide (d) by (c).</span></p></li>
+<li><p>Convert nautical miles to furlongs.<span class="shortanswer" style="display: none;" data-tooltip="Ans id: Rates-exercises-6nd">Divide (e) by (b).</span></p></li>
+<li><p>Convert acres to rod-furlongs. <span class="shortanswer" style="display: none;" data-tooltip="Ans id: Rates-exercises-2CL">1 acre is 4 rod-furlongs</span></p></li>
+<li><p>(Hard) Convert miles per hour to meters per second.</p></li>
+</ol>
+<!-- Opening answer: Rates-exercises-8JB -->
+<div class="callout callout-style-default callout-tip callout-titled" style="display: none;">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -419,319 +617,294 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Since people don’t directly perceive electrical current or voltage, it is hard to form an intuition about them. Instead, training is required to interpret properly the meanings of electrical dimensions.</p>
-<p>An exact mathematical analogy to electrical dimensions can be made to water and flow. You turn on the shower and step in for four minutes. As you shower, at each instant you can feel the “intensity” (flow) of the spray from the shower-head. You even have a faucet to set the flow. This flow is analogous to the power used by a light bulb.</p>
-<p>Over the full course of your 4-minute shower, six gallons of water goes down the train. Gallons, of course, have the dimension of <em>volume</em>. You used those six gallons over four minutes. Consequently, the <strong>flow</strong> of water is <span class="math inline">\(\frac{6\, \text{gallons}}{4\, \text{minutes}} = 1.5\, \text{gallons per minute}\)</span>. The volume of water used in your shower session is analogous to the energy used by a light bulb: it is power multiplied by duration. <span data-tooltip="Ans id: quantities-2uB">..id..</span></p>
+<p>On top, we need to convert miles to meters. (f) is the appropriate choice. On bottom, we need to convert hours to seconds, which is (i). So divide (f) by (i) to get the conversion factor: 0.447 mile/hour per meter/sec.&nbsp;Sanity check: 1 mile in an hour is about 1600 meters in an hour which is in turn about 1600/3600 meters in a second.</p>
+<p><span data-tooltip="Ans id: Rates-exercises-8JB">..id..</span></p>
 </div>
 </div>
 </div>
-<!-- closing answer quantities-2uB -->
-<dl>
-<dt>Part b</dt>
-<dd>
-The brightness of the light emitted by a light bulb is proportional to power. Suppose you turn on a 20-watt light when you walk into a room. This consumes energy. The energy used by the bulb is the power multiplied by the duration that the light was on.
-</dd>
-</dl>
-<ol type="1">
-<li>If you stay in the room for 1 hour, turning off the light when you leave, how much energy has the light consumed?</li>
+<!-- closing answer Rates-exercises-8JB -->
+<ol start="6" type="1">
+<li>(Hard) Convert inches per second to miles per year.</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-b1-hintarea" class="hintarea">light-bulb-b1</small>
-<form id="light-bulb-b1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="20 watts" id="light-bulb-b1-1" w="19" name="light-bulb-b1" hint="A watt is a unit of power, not energy," show_hints="TRUE"> 20 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="20 watt-hours" id="light-bulb-b1-2" w="14" name="light-bulb-b1" hint="Yes!" show_hints="TRUE"> 20 watt-hours &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough ... n is given" id="light-bulb-b1-3" w="3" name="light-bulb-b1" hint="Try again!" show_hints="TRUE"> Not enough information is given &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1 hour" id="light-bulb-b1-4" w="32" name="light-bulb-b1" hint="An hour is a unit of time. Energy is power multiplied by duration (time)." show_hints="TRUE"> 1 hour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b1" id="light-bulb-b1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-b1.');
-      const form = document.getElementById('light-bulb-b1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-b1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-b1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-b1.");
-          localStorage.setItem('light-bulb-b1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="2" type="1">
-<li>In terms of the fundamental <em>dimension</em>s—L, M, T—energy has <em>dimension</em> L<sup>2</sup> M T<sup>-2</sup>. What is the <em>dimension</em> of power?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-b2-hintarea" class="hintarea">light-bulb-b2</small>
-<form id="light-bulb-b2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L^2^ M T^-1^" id="light-bulb-b2-1" w="19" name="light-bulb-b2" hint="Sorry!" show_hints="TRUE"> L<sup>2</sup> M T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ M T^-2^" id="light-bulb-b2-2" w="3" name="light-bulb-b2" hint="Try again!" show_hints="TRUE"> L<sup>2</sup> M T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ M T^-3^" id="light-bulb-b2-3" w="35" name="light-bulb-b2" hint="That is, energy *divided by* time." show_hints="TRUE"> L<sup>2</sup> M T<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b2" id="light-bulb-b2.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-b2.');
-      const form = document.getElementById('light-bulb-b2-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-b2-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-b2.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-b2.");
-          localStorage.setItem('light-bulb-b2-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="3" type="1">
-<li>You might reasonably ask, “What does mass have to do with energy?” Perhaps you remember Einstein’s famous equation for energy: <span class="math display">\[E = m\, c^2\]</span> where <span class="math inline">\(m\)</span> is mass and <span class="math inline">\(c\)</span> is the <em>speed</em> of light. What is the dimension of <span class="math inline">\(c^2\)</span>?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-b3-hintarea" class="hintarea">light-bulb-b3</small>
-<form id="light-bulb-b3-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L T" id="light-bulb-b3-1" w="3" name="light-bulb-b3" hint="You're wrong here." show_hints="TRUE"> L T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="light-bulb-b3-2" w="87" name="light-bulb-b3" hint="You're wrong here." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L T^-1^" id="light-bulb-b3-3" w="19" name="light-bulb-b3" hint="Nope." show_hints="TRUE"> L T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L T^-2^" id="light-bulb-b3-4" w="32" name="light-bulb-b3" hint="Sorry!" show_hints="TRUE"> L T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ T^-2^" id="light-bulb-b3-5" w="8" name="light-bulb-b3" hint="Bullseye!" show_hints="TRUE"> L<sup>2</sup> T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b3" id="light-bulb-b3.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-b3.');
-      const form = document.getElementById('light-bulb-b3-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-b3-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-b3.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-b3.");
-          localStorage.setItem('light-bulb-b3-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<p>Consequently, <span class="math inline">\(m\, c^2\)</span> has the dimension of energy.</p>
-<dl>
-<dt>Part c</dt>
-<dd>
-Consider this statement:
-</dd>
-</dl>
-<blockquote class="blockquote">
-<p>Power consumption is a property of the light bulb, but <em>energy</em> consumption involves both the light bulb itself and the pattern of usage.</p>
-</blockquote>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="light-bulb-c1-hintarea" class="hintarea">light-bulb-c1</small>
-<form id="light-bulb-c1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="light-bulb-c1-1" w="41" name="light-bulb-c1" hint="Excellent!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="light-bulb-c1-2" w="19" name="light-bulb-c1" hint="Wrong." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-c1" id="light-bulb-c1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-c1.');
-      const form = document.getElementById('light-bulb-c1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-c1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-c1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-c1.");
-          localStorage.setItem('light-bulb-c1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-<dl>
-<dt>Part d</dt>
-<dd>
-A typical household uses about 10 kilowatt-hours of energy per day. “10 kilowatt-hours” is an amount of energy, but “energy per day” is a flow of energy, that is, a power.
-</dd>
-</dl>
-<ol type="1">
-<li>Translate “10 kilowatt-hours of energy per day” into the equivalent watts. For simplicity in the calculation, assume that the energy is used evenly over the 24-hour day.</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-d1-hintarea" class="hintarea">light-bulb-d1</small>
-<form id="light-bulb-d1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="417 watts" id="light-bulb-d1-1" w="20" name="light-bulb-d1" hint="Right-O!" show_hints="TRUE"> 417 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="10,000 watts" id="light-bulb-d1-2" w="32" name="light-bulb-d1" hint="Wrong." show_hints="TRUE"> 10,000 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="240,000 watts" id="light-bulb-d1-3" w="19" name="light-bulb-d1" hint="Oops!" show_hints="TRUE"> 240,000 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough ... formation " id="light-bulb-d1-4" w="19" name="light-bulb-d1" hint="No." show_hints="TRUE"> Not enough information &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-d1" id="light-bulb-d1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-d1.');
-      const form = document.getElementById('light-bulb-d1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-d1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-d1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-d1.");
-          localStorage.setItem('light-bulb-d1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="2" type="1">
-<li>Look up the power consumption of a hand-held blow-dryer. When the blow-dryer is in use, energy consumption of the household increases. Which of these is a plausible fraction of average household power consumed by the hair-dryer?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-d2-hintarea" class="hintarea">light-bulb-d2</small>
-<form id="light-bulb-d2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="10% of ave ... rage power" id="light-bulb-d2-1" w="7" name="light-bulb-d2" hint="No." show_hints="TRUE"> 10% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="50% of ave ... rage power" id="light-bulb-d2-2" w="87" name="light-bulb-d2" hint="Incorrect choice." show_hints="TRUE"> 50% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="100% of av ... rage power" id="light-bulb-d2-3" w="7" name="light-bulb-d2" hint="Hmmm ..." show_hints="TRUE"> 100% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="200% of av ... rage power" id="light-bulb-d2-4" w="41" name="light-bulb-d2" hint="You've got it!" show_hints="TRUE"> 200% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-d2" id="light-bulb-d2.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-d2.');
-      const form = document.getElementById('light-bulb-d2-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-d2-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-d2.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-d2.");
-          localStorage.setItem('light-bulb-d2-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-</span></div>
-<p><!-- end of exr-crow-pull-laundry --></p>
+<!-- Opening answer: Rates-exercises-1cl -->
+<div class="callout callout-style-default callout-tip callout-titled" style="display: none;">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The conversion factor needs miles/year on top and inches/second on bottom. On bottom, inches/second. This works out to a flavor of one with numerator mile-sec and denominator inch-year or, mile/inch divided by second/year.</p>
+<ul>
+<li>(Top): mile/inch is (f)/(c), that is, 0.00001578287 miles/inch</li>
+<li>(Bottom): year/second is 1/(k), that is, 0.00000003169 year/sec.</li>
+</ul>
+<p>Dividing (Top) by (Bottom) gives 498.069 miles/year per inches/sec.</p>
+<p>Sanity check. At 1 inch/sec, you would travel 31,557,600 inches in a year. There are 5280 feet <span class="math inline">\(\times\)</span> 12 inches/foot in a mile, that is, about 60,000 inches in a mile. 32 million inches / 60,000 inch/mile gives about 500 miles.</p>
+<p><span data-tooltip="Ans id: Rates-exercises-1cl">..id..</span></p>
+</div>
+</div>
+</div>
+<!-- closing answer Rates-exercises-1cl -->
+</div>
+<p><!-- end of exr-avoid-get-laundry --></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <!--
-id: "cow-walk-pantry"
-created: "Sat Jul 12 09:31:00 2025"
+id: "deer-put-cotton"
+created: "Sun Dec 28 14:00:11 2025"
 attribution: TBA
-status: "sketch"
-chapter: 5
-mode: "exercise"
+status: ready-to-use
+chapter: 3
+mode: exercise
 -->
 <style>
 .theorem-title {
   display: none;
 }
 </style>
-<div id="exr-cow-walk-pantry" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4</strong></span> Perhaps unsurprisingly, the power of an automobile engine has the dimension of power.</p>
-<p>Imagine a car with a 100 horsepower engine. What is the equivalent value in units of watts.</p>
-<div class="cell">
-<span> <small style="color: grey;" id="light-bulb-e3-hintarea" class="hintarea">light-bulb-e3</small>
-<form id="light-bulb-e3-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="735.5 watts" id="light-bulb-e3-1" w="87" name="light-bulb-e3" hint="No." show_hints="TRUE"> 735.5 watts</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="7355 watts" id="light-bulb-e3-2" w="7" name="light-bulb-e3" hint="Not quite right." show_hints="TRUE"> 7355 watts</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="73,550 watts" id="light-bulb-e3-3" w="14" name="light-bulb-e3" hint="Nice." show_hints="TRUE"> 73,550 watts</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="light-bulb-e3" id="light-bulb-e3.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-e3.');
-      const form = document.getElementById('light-bulb-e3-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-e3-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-e3.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-e3.");
-          localStorage.setItem('light-bulb-e3-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div id="exr-deer-put-cotton" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Give at least <strong>five</strong> names for units used for each of these four fundamental <em>dimension</em>s. You might need to do a web search to find unfamiliar units.</p>
+<p>Whenever one of your units came as a surprise to you, write it with double-stars around it, like <code>**parsec**</code>.</p>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="RQ-units-fundamental">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-52512d756e6974732d66756e64616d656e74616c">Text editor box.</label>
+<textarea id="devoirs3-text-52512d756e6974732d66756e64616d656e74616c" class="devoirs3-text-input" rows="5" cols="40" placeholder="" data-devoirs3-input="">Length:
+Mass: 
+Time: 
+Temperature: 
+</textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">RQ-units-fundamental</span></p>
 </div>
-<p><!-- end of exr-cow-walk-pantry --></p>
+</div>
+<p><!-- end of exr-deer-put-cotton --></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<!--
+id: "pine-speak-shelf"
+created: "Fri Aug 21 12:04:07 2026"
+attribution: DTK
+uses: dimension calculation
+status: ready-to-use
+chapter: 3
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-pine-speak-shelf" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Sound consists of power moving through air in the form of vibrations: sound waves. The wave front is spread out, so it means little to talk about power at a single point. Instead, “power density” is used. A gentle sound might have a power density of <code>1e-6</code> W/m<sup>2</sup>.</p>
+<ol type="1">
+<li>Which of the units in <code>1e-6</code> W/m<sup>2</sup> is about power?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-03" data-label="05-ear-power" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f776572" id="devoirs3-selection-30352d6561722d706f776572-1" value="AAhgslt" data-devoirs3-option="" data-option-id="AAhgslt" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>m<sup>-1</sup></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f776572" id="devoirs3-selection-30352d6561722d706f776572-2" value="BAqgjrg" data-devoirs3-option="" data-option-id="BAqgjrg" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>m<sup>2</sup></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f776572" id="devoirs3-selection-30352d6561722d706f776572-3" value="CAcksab" data-devoirs3-option="" data-option-id="CAcksab" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>W</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f776572" id="devoirs3-selection-30352d6561722d706f776572-4" value="DAgqpfs" data-devoirs3-option="" data-option-id="DAgqpfs" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>W/m</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">05-ear-power</span>
+</span>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Which of the units in <code>1e-6</code> W/m<sup>2</sup> can be translated “per square meter”?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-03" data-label="05-ear-power2" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657232" id="devoirs3-selection-30352d6561722d706f77657232-1" value="AAcdfzq" data-devoirs3-option="" data-option-id="AAcdfzq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>m<sup>1</sup></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657232" id="devoirs3-selection-30352d6561722d706f77657232-2" value="BAuzgua" data-devoirs3-option="" data-option-id="BAuzgua" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>m<sup>-2</sup></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657232" id="devoirs3-selection-30352d6561722d706f77657232-3" value="CAclais" data-devoirs3-option="" data-option-id="CAclais" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>W</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657232" id="devoirs3-selection-30352d6561722d706f77657232-4" value="DAhxoax" data-devoirs3-option="" data-option-id="DAhxoax" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>W/m</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">05-ear-power2</span>
+</span>
+</div>
+</div>
+<ol start="3" type="1">
+<li>An adult human eardrum has a vibrating surface area of about <code>5e-5</code> m<sup>2</sup>. This is what transfers power to the human ear. For the gentle sound of <code>1e-6</code> W/m<sup>2</sup>, what is the total power impinging on the eardrum?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-03" data-label="05-ear-power3" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657233" id="devoirs3-selection-30352d6561722d706f77657233-1" value="AAawoaf" data-devoirs3-option="" data-option-id="AAawoaf" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><code>5e-11</code> W</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657233" id="devoirs3-selection-30352d6561722d706f77657233-2" value="BAjvfrw" data-devoirs3-option="" data-option-id="BAjvfrw" data-feedback="Multiply the mantissas and add the exponents." data-feedback-html="Multiply the mantissas and add the exponents.">
+    <span><code>5e-9</code> W</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657233" id="devoirs3-selection-30352d6561722d706f77657233-3" value="CAfyyht" data-devoirs3-option="" data-option-id="CAfyyht" data-feedback="Multiply the mantissas and add the exponents." data-feedback-html="Multiply the mantissas and add the exponents.">
+    <span><code>5e-1</code> W</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657233" id="devoirs3-selection-30352d6561722d706f77657233-4" value="DAzpkfm" data-devoirs3-option="" data-option-id="DAzpkfm" data-feedback="Multiply the mantissas and add the exponents." data-feedback-html="Multiply the mantissas and add the exponents.">
+    <span><code>5e1</code> W (e.g.&nbsp;5 W)</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">05-ear-power3</span>
+</span>
+</div>
+</div>
+<ol start="4" type="1">
+<li>On a piece of paper, draw a circle that has an area of roughly <code>5e-5</code> m<sup>2</sup>. (Hint: You might find it easier to think in terms of mm<sup>2</sup> rather than m<sup>2</sup>.) Which of these is most similar to the circle of the correct size?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-03" data-label="05-ear-power4" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657234" id="devoirs3-selection-30352d6561722d706f77657234-1" value="AAehevr" data-devoirs3-option="" data-option-id="AAehevr" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>a poppy seed</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657234" id="devoirs3-selection-30352d6561722d706f77657234-2" value="BAykmnk" data-devoirs3-option="" data-option-id="BAykmnk" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>a sesame seed</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657234" id="devoirs3-selection-30352d6561722d706f77657234-3" value="CAyojth" data-devoirs3-option="" data-option-id="CAyojth" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>a pumpkin seed</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-30352d6561722d706f77657234" id="devoirs3-selection-30352d6561722d706f77657234-4" value="DAeijwg" data-devoirs3-option="" data-option-id="DAeijwg" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>a walnut</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">05-ear-power4</span>
+</span>
+</div>
+</div>
+</div>
+<p><!-- end of exr-pine-speak-shelf --></p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<!--
+id: "snake-show-knife"
+created: "Mon Aug 25 15:25:02 2025"
+attribution: TBA
+status: ready-to-use
+chapter: 3
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-snake-show-knife" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> <em>The Economist</em> is considered one of the world’s leading news magazines. Here is part of an article entitled “<a href="https://www.economist.com/finance-and-economics/2025/08/24/fear-the-deficit-populism-doom-loop">Fear the deficit-populism doom loop</a>” from Aug 24, 2025.</p>
+<blockquote class="blockquote">
+<p>You are a finance minister after a decade of meagre economic growth, shocks from a financial crisis, a pandemic and sky-high energy prices. Public debt is worth more than your country’s gross domestic product, interest rates are at their highest in years and merely servicing outstanding debt is taking up an ever-greater share of tax revenue. Inflation is stubborn. America’s profligacy is satisfying much of the world’s appetite for government bonds, meaning your debt must pay more to attract investors. You lie awake worrying about how to make the numbers add up.</p>
+</blockquote>
+<ol type="a">
+<li>What are the <em>dimension</em>s of <em>public debt</em>? <span class="shortanswer" style="display: none;" data-tooltip="Ans id: ssk-1ss">S in units of whatever is the relevant currency.</span></li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="ssk-a-94ls">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-73736b2d612d39346c73">Text editor box.</label>
+<textarea id="devoirs3-text-73736b2d612d39346c73" class="devoirs3-text-input" rows="1" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ssk-a-94ls</span></p>
+</div>
+<ol start="2" type="a">
+<li>What are the <em>dimension</em>s of <em>gross domestic product</em>? <span class="shortanswer" style="display: none;" data-tooltip="Ans id: ssk-1NQ">S T<sup>-1</sup></span></li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="ssk-b-94ls">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-73736b2d622d39346c73">Text editor box.</label>
+<textarea id="devoirs3-text-73736b2d622d39346c73" class="devoirs3-text-input" rows="1" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ssk-b-94ls</span></p>
+</div>
+<ol start="3" type="a">
+<li><p>It’s quantitatively incorrect to compare <em>public debt</em> with <em>gross domestic product</em>.</p>
+<ol type="i">
+<li>What <em>dimension</em> must the quantity be that multiplies <em>gross domestic product</em> in order to convert it to a quantity that is directly comparable with <em>public debt</em>?</li>
+<li>Let’s give the name B to the quantity in (i). You know the dimension of B, but to perform the multiplication you need to choose a <em>value</em> for B. Is there a value for B that is obviously correct? If you say “no,” explain why not. If you say “yes,” explain the reasoning behind its being obvious.</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="ssk-c-94ls">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-73736b2d632d39346c73">Text editor box.</label>
+<textarea id="devoirs3-text-73736b2d632d39346c73" class="devoirs3-text-input" rows="4" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ssk-c-94ls</span></p>
+</div></li>
+</ol>
+<p>The <em>Economist</em> article continues:</p>
+<blockquote class="blockquote">
+<p>This is the bind facing governments in much of the rich world. The average fiscal deficit in the OECD, a club of mostly rich countries, hit 4.6% of GDP last year, up from an average of 2.9% in the four years before the covid-19 pandemic; interest payments on outstanding debt came to 3.3% of GDP, only just below the amount Nato members hope to spend on defence by 2035. The political-science literature offers some comfort—austerity is not usually a barrier to re-election—but also a warning. Research shows a link between spending cuts and populist success. Indeed, in Britain, France and Germany such parties are already ascendant. Call it the deficit-populism doom loop: ministers face both big deficits and voter revolts, and there is little way of satisfying both the bond markets and the barbarians at the gate.</p>
+</blockquote>
+<ol start="4" type="a">
+<li>If <em>fiscal deficit</em> can be stated as a percentage of GDP, what does that say about the <em>dimension</em> of <em>fiscal deficit</em>?</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="ssk-d-94ls">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-73736b2d642d39346c73">Text editor box.</label>
+<textarea id="devoirs3-text-73736b2d642d39346c73" class="devoirs3-text-input" rows="2" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ssk-d-94ls</span></p>
+</div>
+<ol start="5" type="a">
+<li>Explain what’s different between <em>fiscal deficit</em> and <em>debt</em>.</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="ssk-e-94ls">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-73736b2d652d39346c73">Text editor box.</label>
+<textarea id="devoirs3-text-73736b2d652d39346c73" class="devoirs3-text-input" rows="2" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ssk-e-94ls</span></p>
+</div>
+<ol start="6" type="a">
+<li><em>Fiscal deficit</em> can be reckoned as the sum of 1) <em>interest payments</em> on the debt (3.3%) and 2) the amount of other spending (on education, pensions, military, etc.) in excess of government income (taxes, etc.) By what percentage would spending need to decrease or taxes need to increase in order to eliminate the fiscal deficit?</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="ssk-f-94ls">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-73736b2d662d39346c73">Text editor box.</label>
+<textarea id="devoirs3-text-73736b2d662d39346c73" class="devoirs3-text-input" rows="1" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ssk-f-94ls</span></p>
+</div>
+</div>
+<p><!-- end of exr-snake-show-knife --></p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <!--
 id: "titmouse-leave-shelf"
 created: "Fri Nov 28 14:02:58 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
-mode: "exercise"
+mode: exercise
 title: "Dimensions from the *Practical Man*"
 -->
 <style>
@@ -755,25 +928,9 @@ title: "Dimensions from the *Practical Man*"
 </ol>
 </blockquote>
 <p>Annotate each item of Thompson’s list with the dimension. Indicate whether it is a basic dimension or a derived dimension.</p>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for tls-323l.');
-      const form = document.getElementById('tls-323l');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('tls-323l').value;
-        localStorage.setItem("tls-323l-contents", todo);
-        console.log("Saving value of tls-323l.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("tls-323l-contents");
-      if (savedValue) {
-        document.getElementById('tls-323l').value = savedValue;
-      }
-})
-</script>
-<textarea id="tls-323l" name="tls-323l" class="devoirs-text" style="font-family: monospace, monospace;" rows="8" cols="50" placeholder="Type here. (ID tls-323l)">i. Length:
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-03" data-label="tls-323l">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-746c732d3332336c">Text editor box.</label>
+<textarea id="devoirs3-text-746c732d3332336c" class="devoirs3-text-input" rows="8" cols="40" placeholder="" data-devoirs3-input="">i. Length:
 ii. Surface, or area: 
 iii. Volume, or capacity:   
 iv. Weight, or force of gravity: 
@@ -781,9 +938,11 @@ v. Time:
 vi. Angles, latitude and longitude: 
 vii. Temperature, or intensity of heat: 
 viii. Money, or value : </textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">tls-323l</span></p>
+</div>
 <!-- Opening answer: tls-7Cc -->
-<div class="callout callout-style-default callout-tip callout-titled" style="display: block;">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-tip callout-titled" style="display: none;">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -792,7 +951,7 @@ viii. Money, or value : </textarea>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="i">
 <li>Length, L</li>
@@ -812,807 +971,6 @@ viii. Money, or value : </textarea>
 <!-- closing answer tls-7Cc -->
 </div>
 <p><!-- end of exr-titmouse-leave-shelf --></p>
-</div>
-<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-<!--
-id: "snake-show-knife"
-created: "Mon Aug 25 15:25:02 2025"
-attribution: TBA
-status: "ready-to-use"
-chapter: 3
-mode: "exercise"
--->
-<style>
-.theorem-title {
-  display: none;
-}
-</style>
-<div id="exr-snake-show-knife" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6</strong></span> <em>The Economist</em> is considered one of the world’s leading news magazines. Here is part of an article entitled “<a href="https://www.economist.com/finance-and-economics/2025/08/24/fear-the-deficit-populism-doom-loop">Fear the deficit-populism doom loop</a>” from Aug 24, 2025.</p>
-<blockquote class="blockquote">
-<p>You are a finance minister after a decade of meagre economic growth, shocks from a financial crisis, a pandemic and sky-high energy prices. Public debt is worth more than your country’s gross domestic product, interest rates are at their highest in years and merely servicing outstanding debt is taking up an ever-greater share of tax revenue. Inflation is stubborn. America’s profligacy is satisfying much of the world’s appetite for government bonds, meaning your debt must pay more to attract investors. You lie awake worrying about how to make the numbers add up.</p>
-</blockquote>
-<ol type="a">
-<li>What are the <em>dimension</em>s of <em>public debt</em>? <span class="shortanswer" style="display: block;" data-tooltip="Ans id: ssk-1ss">S in units of whatever is the relevant currency.</span></li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ssk-a-94ls.');
-      const form = document.getElementById('ssk-a-94ls');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('ssk-a-94ls').value;
-        localStorage.setItem("ssk-a-94ls-contents", todo);
-        console.log("Saving value of ssk-a-94ls.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("ssk-a-94ls-contents");
-      if (savedValue) {
-        document.getElementById('ssk-a-94ls').value = savedValue;
-      }
-})
-</script>
-<textarea id="ssk-a-94ls" name="ssk-a-94ls" class="devoirs-text" style="font-family: monospace, monospace;" rows="1" cols="50" placeholder="Type here. (ID ssk-a-94ls)"></textarea>
-<ol start="2" type="a">
-<li>What are the <em>dimension</em>s of <em>gross domestic product</em>? <span class="shortanswer" style="display: block;" data-tooltip="Ans id: ssk-1NQ">S T<sup>-1</sup></span></li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ssk-b-94ls.');
-      const form = document.getElementById('ssk-b-94ls');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('ssk-b-94ls').value;
-        localStorage.setItem("ssk-b-94ls-contents", todo);
-        console.log("Saving value of ssk-b-94ls.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("ssk-b-94ls-contents");
-      if (savedValue) {
-        document.getElementById('ssk-b-94ls').value = savedValue;
-      }
-})
-</script>
-<textarea id="ssk-b-94ls" name="ssk-b-94ls" class="devoirs-text" style="font-family: monospace, monospace;" rows="1" cols="50" placeholder="Type here. (ID ssk-b-94ls)"></textarea>
-<ol start="3" type="a">
-<li><p>It’s quantitatively incorrect to compare <em>public debt</em> with <em>gross domestic product</em>.</p>
-<ol type="i">
-<li>What <em>dimension</em> must the quantity be that multiplies <em>gross domestic product</em> in order to convert it to a quantity that is directly comparable with <em>public debt</em>?</li>
-<li>Let’s give the name B to the quantity in (i). You know the dimension of B, but to perform the multiplication you need to choose a <em>value</em> for B. Is there a value for B that is obviously correct? If you say “no,” explain why not. If you say “yes,” explain the reasoning behind its being obvious.</li>
-</ol>
-<script type="text/javascript">
-   //save entered info
-   document.addEventListener('DOMContentLoaded', function() {
-   console.log('Adding event listener for ssk-c-94ls.');
-   const form = document.getElementById('ssk-c-94ls');
-   form.addEventListener("input", function () {
-     var todo = document.getElementById('ssk-c-94ls').value;
-     localStorage.setItem("ssk-c-94ls-contents", todo);
-     console.log("Saving value of ssk-c-94ls.")
-   }, false);
-
-   //on page load, read in the old value
-   const savedValue = localStorage.getItem("ssk-c-94ls-contents");
-   if (savedValue) {
-     document.getElementById('ssk-c-94ls').value = savedValue;
-   }
-})
-</script>
-<textarea id="ssk-c-94ls" name="ssk-c-94ls" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID ssk-c-94ls)"></textarea></li>
-</ol>
-<p>The <em>Economist</em> article continues:</p>
-<blockquote class="blockquote">
-<p>This is the bind facing governments in much of the rich world. The average fiscal deficit in the OECD, a club of mostly rich countries, hit 4.6% of GDP last year, up from an average of 2.9% in the four years before the covid-19 pandemic; interest payments on outstanding debt came to 3.3% of GDP, only just below the amount Nato members hope to spend on defence by 2035. The political-science literature offers some comfort—austerity is not usually a barrier to re-election—but also a warning. Research shows a link between spending cuts and populist success. Indeed, in Britain, France and Germany such parties are already ascendant. Call it the deficit-populism doom loop: ministers face both big deficits and voter revolts, and there is little way of satisfying both the bond markets and the barbarians at the gate.</p>
-</blockquote>
-<ol start="4" type="a">
-<li>If <em>fiscal deficit</em> can be stated as a percentage of GDP, what does that say about the <em>dimension</em> of <em>fiscal deficit</em>?</li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ssk-d-94ls.');
-      const form = document.getElementById('ssk-d-94ls');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('ssk-d-94ls').value;
-        localStorage.setItem("ssk-d-94ls-contents", todo);
-        console.log("Saving value of ssk-d-94ls.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("ssk-d-94ls-contents");
-      if (savedValue) {
-        document.getElementById('ssk-d-94ls').value = savedValue;
-      }
-})
-</script>
-<textarea id="ssk-d-94ls" name="ssk-d-94ls" class="devoirs-text" style="font-family: monospace, monospace;" rows="2" cols="50" placeholder="Type here. (ID ssk-d-94ls)"></textarea>
-<ol start="5" type="a">
-<li>Explain what’s different between <em>fiscal deficit</em> and <em>debt</em>.</li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ssk-e-94ls.');
-      const form = document.getElementById('ssk-e-94ls');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('ssk-e-94ls').value;
-        localStorage.setItem("ssk-e-94ls-contents", todo);
-        console.log("Saving value of ssk-e-94ls.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("ssk-e-94ls-contents");
-      if (savedValue) {
-        document.getElementById('ssk-e-94ls').value = savedValue;
-      }
-})
-</script>
-<textarea id="ssk-e-94ls" name="ssk-e-94ls" class="devoirs-text" style="font-family: monospace, monospace;" rows="2" cols="50" placeholder="Type here. (ID ssk-e-94ls)"></textarea>
-<ol start="6" type="a">
-<li><em>Fiscal deficit</em> can be reckoned as the sum of 1) <em>interest payments</em> on the debt (3.3%) and 2) the amount of other spending (on education, pensions, military, etc.) in excess of government income (taxes, etc.) By what percentage would spending need to decrease or taxes need to increase in order to eliminate the fiscal deficit?</li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ssk-f-94ls.');
-      const form = document.getElementById('ssk-f-94ls');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('ssk-f-94ls').value;
-        localStorage.setItem("ssk-f-94ls-contents", todo);
-        console.log("Saving value of ssk-f-94ls.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("ssk-f-94ls-contents");
-      if (savedValue) {
-        document.getElementById('ssk-f-94ls').value = savedValue;
-      }
-})
-</script>
-<textarea id="ssk-f-94ls" name="ssk-f-94ls" class="devoirs-text" style="font-family: monospace, monospace;" rows="1" cols="50" placeholder="Type here. (ID ssk-f-94ls)"></textarea>
-</div>
-<p><!-- end of exr-snake-show-knife --></p>
-</div>
-<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
-<!--
-id: "panda-refer-window"
-created: "Tue Oct  7 14:01:47 2025"
-attribution: DTK
-status: "ready-to-use"
-chapter: 4
-mode: "drill"
-topic: "transportation"
--->
-<style>
-.theorem-title {
-  display: none;
-}
-</style>
-<div id="exr-panda-refer-window" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 7</strong></span> There are several ways to measure <em>transportation</em> services. Let’s focus here on the transportation of <em>people</em>. The <em>distance</em> of transport is, obviously, an important aspect of transportation services. So it the number of people transported.</p>
-<p>In a proper measure of transportation services, it seems reasonable that the longer the distance, the more transportation being provided, so long as the number of passengers is the same. Similarly, the more passengers carried, so long as the distance is the same, the more transportation is provided.</p>
-<ol type="1">
-<li>Which of the following is a sensible way to measure the amount of transportation?</li>
-</ol>
-<div class="cell">
-<span> <small style="color: grey;" id="prw-base-wlci-hintarea" class="hintarea">prw-base-wlci</small>
-<form id="prw-base-wlci-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="People plus miles" id="prw-base-wlci-1" w="3" name="prw-base-wlci" hint="You can't add quantities with different dimensions." show_hints="TRUE"> People plus miles</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="People per mile" id="prw-base-wlci-2" w="3" name="prw-base-wlci" hint="If the number of miles goes up, so should the amount of transportation services. &quot;Per mile&quot; doesn't do this." show_hints="TRUE"> People per mile</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Miles per person" id="prw-base-wlci-3" w="7" name="prw-base-wlci" hint="If the number of persons goes up, so should the amount of transportation services. &quot;Per person&quot; doesn't do this" show_hints="TRUE"> Miles per person</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Miles $\ti ... {person}}$" id="prw-base-wlci-4" w="3" name="prw-base-wlci" hint="The square-root of a person. That makes no sense. In a jokey way, it would be one of the parents if the person multiplied with themselves!" show_hints="TRUE"> Miles <span class="math inline">\(\times \sqrt{\strut\text{person}}\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Persons $\ ... mes$ miles" id="prw-base-wlci-5" w="8" name="prw-base-wlci" hint="Certainly." show_hints="TRUE"> Persons <span class="math inline">\(\times\)</span> miles</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="prw-base-wlci" id="prw-base-wlci.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for prw-base-wlci.');
-      const form = document.getElementById('prw-base-wlci-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('prw-base-wlci-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for prw-base-wlci.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for prw-base-wlci.");
-          localStorage.setItem('prw-base-wlci-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="2" type="1">
-<li>100 passengers are on a flight covering 500 miles. How much transportation service is provided to the group of passengers?</li>
-</ol>
-<div class="cell">
-<span> <small style="color: grey;" id="prw-2-cksd-hintarea" class="hintarea">prw-2-cksd</small>
-<form id="prw-2-cksd-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="500 passenger miles" id="prw-2-cksd-1" w="32" name="prw-2-cksd" hint="You might think so, but ..." show_hints="TRUE"> 500 passenger miles</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="5000 passe ... nger miles" id="prw-2-cksd-2" w="23" name="prw-2-cksd" hint="Try again!" show_hints="TRUE"> 5000 passenger miles</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="50,000 pas ... nger miles" id="prw-2-cksd-3" w="35" name="prw-2-cksd" hint="Yup!" show_hints="TRUE"> 50,000 passenger miles</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="500,000 pa ... ger miles." id="prw-2-cksd-4" w="87" name="prw-2-cksd" hint="You're wrong here." show_hints="TRUE"> 500,000 passenger miles.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="prw-2-cksd" id="prw-2-cksd.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for prw-2-cksd.');
-      const form = document.getElementById('prw-2-cksd-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('prw-2-cksd-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for prw-2-cksd.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for prw-2-cksd.");
-          localStorage.setItem('prw-2-cksd-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<p>Many people are concerned with the amount of fuel used in air travel. For modern jets (with a full load of passengers), the amount of fuel used is approximately 0.02 to 0.03 gallons per passenger mile.</p>
-<ol start="3" type="1">
-<li>What is the <em>dimension</em> of “gallons per passenger mile?”</li>
-</ol>
-<div class="cell">
-<span> <small style="color: grey;" id="prw-3-kdlw-hintarea" class="hintarea">prw-3-kdlw</small>
-<form id="prw-3-kdlw-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="L^4 C^-1^" id="prw-3-kdlw-1" w="19" name="prw-3-kdlw" hint="Not quite." show_hints="TRUE"> L^4 C<sup>-1</sup></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="L^3 C^-1^" id="prw-3-kdlw-2" w="19" name="prw-3-kdlw" hint="This is wide of the mark." show_hints="TRUE"> L^3 C<sup>-1</sup></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="L^2 C^-1^" id="prw-3-kdlw-3" w="20" name="prw-3-kdlw" hint="Bingo!" show_hints="TRUE"> L^2 C<sup>-1</sup></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="L C^-1^" id="prw-3-kdlw-4" w="87" name="prw-3-kdlw" hint="Not quite right." show_hints="TRUE"> L C<sup>-1</sup></p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="prw-3-kdlw" id="prw-3-kdlw.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for prw-3-kdlw.');
-      const form = document.getElementById('prw-3-kdlw-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('prw-3-kdlw-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for prw-3-kdlw.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for prw-3-kdlw.");
-          localStorage.setItem('prw-3-kdlw-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="4" type="1">
-<li>People in the US are used to measuring <em>fuel economy</em> in “miles per gallon.” This contrasts with the style in much of the rest of the world the unit is “liters per 100 km.” Assume that a group of friends is travelling 600 miles to a concert. They could fly or drive. If there are three friends, how many gallons of fuel will the one-way air travel consume (for these three passengers)? (Pick the closest answer.)</li>
-</ol>
-<div class="cell">
-<span> <small style="color: grey;" id="prw-4-cksd-hintarea" class="hintarea">prw-4-cksd</small>
-<form id="prw-4-cksd-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="15 gallons" id="prw-4-cksd-1" w="87" name="prw-4-cksd" hint="This is wide of the mark." show_hints="TRUE"> 15 gallons</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="30 gallons" id="prw-4-cksd-2" w="29" name="prw-4-cksd" hint="A win!" show_hints="TRUE"> 30 gallons</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="150 gallons " id="prw-4-cksd-3" w="3" name="prw-4-cksd" hint="Oops!" show_hints="TRUE"> 150 gallons</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="300 gallons" id="prw-4-cksd-4" w="32" name="prw-4-cksd" hint="This is wide of the mark." show_hints="TRUE"> 300 gallons</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="prw-4-cksd" id="prw-4-cksd.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for prw-4-cksd.');
-      const form = document.getElementById('prw-4-cksd-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('prw-4-cksd-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for prw-4-cksd.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for prw-4-cksd.");
-          localStorage.setItem('prw-4-cksd-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="5" type="1">
-<li>Now imagine the three friends are carpooling to the concert in a car that gets 30 miles per gallon. How many gallons of fuel will the one-way drive consume for all three passengers. (Pick the closest answer.)</li>
-</ol>
-<div class="cell">
-<span> <small style="color: grey;" id="prw-5-wels-hintarea" class="hintarea">prw-5-wels</small>
-<form id="prw-5-wels-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="20 gallons" id="prw-5-wels-1" w="29" name="prw-5-wels" hint="That's right." show_hints="TRUE"> 20 gallons</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="60 gallons" id="prw-5-wels-2" w="19" name="prw-5-wels" hint="Incorrect." show_hints="TRUE"> 60 gallons</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="200 gallons" id="prw-5-wels-3" w="32" name="prw-5-wels" hint="Try again!" show_hints="TRUE"> 200 gallons</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="300 gallons" id="prw-5-wels-4" w="19" name="prw-5-wels" hint="Untrue!" show_hints="TRUE"> 300 gallons</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="prw-5-wels" id="prw-5-wels.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for prw-5-wels.');
-      const form = document.getElementById('prw-5-wels-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('prw-5-wels-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for prw-5-wels.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for prw-5-wels.");
-          localStorage.setItem('prw-5-wels-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="6" type="1">
-<li>Some people reason that it does not consume any fuel for the three friends to fly, since even if they didn’t fly the plane would consume the same amount of fuel. Are you sympathetic to this argument? Explain why or why not.</li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for prw-marginal-ywls.');
-      const form = document.getElementById('prw-marginal-ywls');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('prw-marginal-ywls').value;
-        localStorage.setItem("prw-marginal-ywls-contents", todo);
-        console.log("Saving value of prw-marginal-ywls.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("prw-marginal-ywls-contents");
-      if (savedValue) {
-        document.getElementById('prw-marginal-ywls').value = savedValue;
-      }
-})
-</script>
-<textarea id="prw-marginal-ywls" name="prw-marginal-ywls" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID prw-marginal-ywls)"></textarea>
-</div>
-<p><!-- end of exr-panda-refer-window --></p>
-</div>
-<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
-<!--
-id: "elephant-hold-knob"
-created: "Tue Oct  7 14:04:55 2025"
-attribution: TBA
-chapter: 2
--->
-<div id="exr-elephant-hold-knob" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 8</strong></span> In much of the world, fuel use by individual passenger vehicles is operationalized in units of liters per 100 km with typical values of [5 to 15] liters per 100 km.</p>
-<p>In the US, in contrast, fuel use is operationalized in units of miles per gallon. Typical values are [15 to 40] mpg.</p>
-<p>Behind these diverging styles are <em>choices</em> made by engineers and others.</p>
-<ol type="1">
-<li>A convenient feature of any operationalization is that the numerical value go up as the thing being operationalized goes up. Two different names are available: “fuel consumption” and “fuel economy.” Which naming scheme is appropriate with this convenience alignment of name and values?</li>
-</ol>
-<div class="cell">
-<span> <small style="color: grey;" id="ehk-1-ckse-hintarea" class="hintarea">ehk-1-ckse</small>
-<form id="ehk-1-ckse-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Both inter ...  economy.&quot;" id="ehk-1-ckse-1" w="87" name="ehk-1-ckse" hint="Boo!" show_hints="TRUE"> Both international and US operationalizations ought to be called “fuel economy.”</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Both opera ... sumption.&quot;" id="ehk-1-ckse-2" w="19" name="ehk-1-ckse" hint="You're wrong here." show_hints="TRUE"> Both operationalizations out to be called “fuel consumption.”</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="US is &quot;fue ... sumption.&quot;" id="ehk-1-ckse-3" w="8" name="ehk-1-ckse" hint="A hit!" show_hints="TRUE"> US is “fuel economy” while international is “fuel consumption.”</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="US is &quot;fue ...  economy.&quot;" id="ehk-1-ckse-4" w="19" name="ehk-1-ckse" hint="Sorry!" show_hints="TRUE"> US is “fuel consumption” while international is “fuel economy.”</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="ehk-1-ckse" id="ehk-1-ckse.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ehk-1-ckse.');
-      const form = document.getElementById('ehk-1-ckse-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('ehk-1-ckse-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for ehk-1-ckse.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for ehk-1-ckse.");
-          localStorage.setItem('ehk-1-ckse-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="2" type="1">
-<li>Another convenient feature for units that are in everyday use is that the range of typical values be from 1 to 100, that is, use two digits.</li>
-</ol>
-<p>If the international style used SI-base units, the measure would be cubic-meters per meter. Keeping in mind that a cubic-meter is exactly 1000 liters, and that a kilometer is exactly 1000 meters, what would be the SI equivalent of the range [5-15] liters per 100 km?</p>
-<div class="cell">
-<span> <small style="color: grey;" id="ehk-2-emxl-hintarea" class="hintarea">ehk-2-emxl</small>
-<form id="ehk-2-emxl-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="[500 to 1500] m^2^" id="ehk-2-emxl-1" w="87" name="ehk-2-emxl" hint="Bullseye!" show_hints="TRUE"> [500 to 1500] m<sup>2</sup></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="[0.05 to 0.15] m^2^" id="ehk-2-emxl-2" w="3" name="ehk-2-emxl" hint="Certainly." show_hints="TRUE"> [0.05 to 0.15] m<sup>2</sup></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="[0.00005 t ... 0015] m^2^" id="ehk-2-emxl-3" w="3" name="ehk-2-emxl" hint="Yes." show_hints="TRUE"> [0.00005 to 0.00015] m<sup>2</sup></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="[0.0000000 ... 0015] m^2^" id="ehk-2-emxl-4" w="8" name="ehk-2-emxl" hint="Excellent!" show_hints="TRUE"> [0.00000005 to 0.00000015] m<sup>2</sup></p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="ehk-2-emxl" id="ehk-2-emxl.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ehk-2-emxl.');
-      const form = document.getElementById('ehk-2-emxl-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('ehk-2-emxl-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for ehk-2-emxl.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for ehk-2-emxl.");
-          localStorage.setItem('ehk-2-emxl-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="3" type="1">
-<li>What is the <em>dimension</em> of the international style of measurement?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="ehk-3-dkck-hintarea" class="hintarea">ehk-3-dkck</small>
-<form id="ehk-3-dkck-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L^-3^" id="ehk-3-dkck-1" w="3" name="ehk-3-dkck" hint="Wrong." show_hints="TRUE"> L<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-2^" id="ehk-3-dkck-2" w="23" name="ehk-3-dkck" hint="Nope." show_hints="TRUE"> L<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^" id="ehk-3-dkck-3" w="19" name="ehk-3-dkck" hint="You might think so, but ..." show_hints="TRUE"> L<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="dimensionless" id="ehk-3-dkck-4" w="3" name="ehk-3-dkck" hint="Hmmm ..." show_hints="TRUE"> dimensionless &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="ehk-3-dkck-5" w="87" name="ehk-3-dkck" hint="This is wide of the mark." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^" id="ehk-3-dkck-6" w="8" name="ehk-3-dkck" hint="Right-O!" show_hints="TRUE"> L<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^3^" id="ehk-3-dkck-7" w="23" name="ehk-3-dkck" hint="Wrong." show_hints="TRUE"> L<sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="ehk-3-dkck" id="ehk-3-dkck.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ehk-3-dkck.');
-      const form = document.getElementById('ehk-3-dkck-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('ehk-3-dkck-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for ehk-3-dkck.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for ehk-3-dkck.");
-          localStorage.setItem('ehk-3-dkck-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="4" type="1">
-<li>What is the <em>dimension</em> of the US style of measurement?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="ehk-4-ukws-hintarea" class="hintarea">ehk-4-ukws</small>
-<form id="ehk-4-ukws-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L^-3^" id="ehk-4-ukws-1" w="87" name="ehk-4-ukws" hint="Not quite." show_hints="TRUE"> L<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-2^" id="ehk-4-ukws-2" w="8" name="ehk-4-ukws" hint="Yup!" show_hints="TRUE"> L<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^" id="ehk-4-ukws-3" w="19" name="ehk-4-ukws" hint="You're wrong here." show_hints="TRUE"> L<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="dimensionless" id="ehk-4-ukws-4" w="19" name="ehk-4-ukws" hint="This is wide of the mark." show_hints="TRUE"> dimensionless &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="ehk-4-ukws-5" w="87" name="ehk-4-ukws" hint="Sorry!" show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ " id="ehk-4-ukws-6" w="87" name="ehk-4-ukws" hint="Incorrect choice." show_hints="TRUE"> L<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^3^" id="ehk-4-ukws-7" w="23" name="ehk-4-ukws" hint="No." show_hints="TRUE"> L<sup>3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="ehk-4-ukws" id="ehk-4-ukws.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ehk-4-ukws.');
-      const form = document.getElementById('ehk-4-ukws-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('ehk-4-ukws-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for ehk-4-ukws.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for ehk-4-ukws.");
-          localStorage.setItem('ehk-4-ukws-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<p>FYI: To develop intuition, it can be useful to have a physical model in mind when interpreting quantities. For fuel consumption, an interesting model is a mini-pipeline. Imagine a car getting its fuel from a pipeline as it goes along. For a typical car, the required pipeline would be 1-2 mm in diameter: think thick fishing line.</p>
-</div>
-<p><!-- end of exr-elephant-hold-knob --></p>
-</div>
-<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
-<!--
-id: "beech-bid-plate"
-created: "Wed Apr 22 08:35:50 2026"
-attribution: TBA
-status: "sketch"
-chapter: 5
-mode: "exercise"
--->
-<style>
-.theorem-title {
-  display: none;
-}
-</style>
-<div id="exr-beech-bid-plate" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 9</strong></span> The exponents on each element of a dimension, say L T<sup>-1</sup>, must always be integers, that is <span class="math inline">\(\ldots, -2, -1, 0, 1, 2, 3, \ldots\)</span>.</p>
-<ol type="1">
-<li>Multiplying or dividing two quantities creates a quantity with a dimension that is the product or quotient of the two quantities, respectively. For instance, dividing L T<sup>-1</sup> by T gives L T<sup>-2</sup>. Explain briefly why such multiplication or division of quantities must always produce a dimension expression where all the exponents are integers.</li>
-</ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for bbp-3kd-1.');
-      const form = document.getElementById('bbp-3kd-1');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('bbp-3kd-1').value;
-        localStorage.setItem("bbp-3kd-1-contents", todo);
-        console.log("Saving value of bbp-3kd-1.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("bbp-3kd-1-contents");
-      if (savedValue) {
-        document.getElementById('bbp-3kd-1').value = savedValue;
-      }
-})
-</script>
-<textarea id="bbp-3kd-1" name="bbp-3kd-1" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID bbp-3kd-1)"></textarea>
-<p>In contrast, taking a square root (or any non-integer power) does not necessarily produce integer exponents for the element of the dimension. For instance, <span class="math inline">\(\sqrt{L/T}\)</span> produces L<sup>1/2</sup> T<sup>-1/2</sup>. For each of the following, say whether the dimension is legitimate.</p>
-<ol start="2" type="1">
-<li><p>[square root of length]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-2-hintarea" class="hintarea">bbp-723-2</small></span></p>
-<form id="bbp-723-2-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-2-1" w="19" name="bbp-723-2" hint="Untrue!" show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-2-2" w="18" name="bbp-723-2" hint="You're right!" show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-2" id="bbp-723-2.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-   console.log('Adding event listener for bbp-723-2.');
-   const form = document.getElementById('bbp-723-2-form');
-   const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-   // Load saved value on page load
-   const savedValue = localStorage.getItem('bbp-723-2-choice');
-   if (savedValue) {
-     console.log("Restoring radio button values for bbp-723-2.");
-     radioButtons.forEach(radio => {
-       if (radio.value === savedValue) {
-         radio.checked = true;
-       }
-     });
-   }
-
-   // Save value on change
-   form.addEventListener('change', function(event) {
-     if (event.target.type === 'radio') {
-       console.log("Saving changed value for bbp-723-2.");
-       localStorage.setItem('bbp-723-2-choice', event.target.value);
-     }
-   });
- });
-</script>
-<p></p></li>
-<li><p>[square root of velocity]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-3-hintarea" class="hintarea">bbp-723-3</small></span></p>
-<form id="bbp-723-3-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-3-1" w="3" name="bbp-723-3" hint="Try again!" show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-3-2" w="5" name="bbp-723-3" hint="You're right." show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-3" id="bbp-723-3.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-   console.log('Adding event listener for bbp-723-3.');
-   const form = document.getElementById('bbp-723-3-form');
-   const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-   // Load saved value on page load
-   const savedValue = localStorage.getItem('bbp-723-3-choice');
-   if (savedValue) {
-     console.log("Restoring radio button values for bbp-723-3.");
-     radioButtons.forEach(radio => {
-       if (radio.value === savedValue) {
-         radio.checked = true;
-       }
-     });
-   }
-
-   // Save value on change
-   form.addEventListener('change', function(event) {
-     if (event.target.type === 'radio') {
-       console.log("Saving changed value for bbp-723-3.");
-       localStorage.setItem('bbp-723-3-choice', event.target.value);
-     }
-   });
- });
-</script>
-<p></p></li>
-<li><p>[square root of energy]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-4-hintarea" class="hintarea">bbp-723-4</small></span></p>
-<form id="bbp-723-4-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or " id="bbp-723-4-1" w="7" name="bbp-723-4" hint="Sorry!" show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not" id="bbp-723-4-2" w="5" name="bbp-723-4" hint="Yes." show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-4" id="bbp-723-4.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-   console.log('Adding event listener for bbp-723-4.');
-   const form = document.getElementById('bbp-723-4-form');
-   const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-   // Load saved value on page load
-   const savedValue = localStorage.getItem('bbp-723-4-choice');
-   if (savedValue) {
-     console.log("Restoring radio button values for bbp-723-4.");
-     radioButtons.forEach(radio => {
-       if (radio.value === savedValue) {
-         radio.checked = true;
-       }
-     });
-   }
-
-   // Save value on change
-   form.addEventListener('change', function(event) {
-     if (event.target.type === 'radio') {
-       console.log("Saving changed value for bbp-723-4.");
-       localStorage.setItem('bbp-723-4-choice', event.target.value);
-     }
-   });
- });
-</script>
-<p></p></li>
-<li><p>[square root of (energy/mass)]&nbsp;&nbsp; <span> <small style="color: grey;" id="bbp-723-5-hintarea" class="hintarea">bbp-723-5</small></span></p>
-<form id="bbp-723-5-form">
-<p><span> <span> <input type="radio" class="devoirs-mcq" value="Legitimate &nbsp;&nbsp;&nbsp; or" id="bbp-723-5-1" w="5" name="bbp-723-5" hint="That's right." show_hints="TRUE"> Legitimate &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not " id="bbp-723-5-2" w="3" name="bbp-723-5" hint="Better luck next time." show_hints="TRUE"> Not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bbp-723-5" id="bbp-723-5.null" style="display: none;" w="skipped" checked=""> </span> </span></p>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-   console.log('Adding event listener for bbp-723-5.');
-   const form = document.getElementById('bbp-723-5-form');
-   const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-   // Load saved value on page load
-   const savedValue = localStorage.getItem('bbp-723-5-choice');
-   if (savedValue) {
-     console.log("Restoring radio button values for bbp-723-5.");
-     radioButtons.forEach(radio => {
-       if (radio.value === savedValue) {
-         radio.checked = true;
-       }
-     });
-   }
-
-   // Save value on change
-   form.addEventListener('change', function(event) {
-     if (event.target.type === 'radio') {
-       console.log("Saving changed value for bbp-723-5.");
-       localStorage.setItem('bbp-723-5-choice', event.target.value);
-     }
-   });
- });
-</script>
-<p></p></li>
-</ol>
-</div>
-<p><!-- end of exr-beech-bid-plate --></p>
 </div>
 </div>
 </div>

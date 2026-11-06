@@ -3,7 +3,7 @@ id: "titmouse-build-painting"
 created: "Fri Oct 16 10:16:57 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 04
 
 -->

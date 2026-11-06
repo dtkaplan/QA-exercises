@@ -1,0 +1,39 @@
+<!--
+id: "monkey-meet-laundry"
+created: "Fri Jan 30 16:47:21 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: ready-to-use
+chapter: 7
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-monkey-meet-laundry}
+The function `exp2()` ...
+
+```{devoirs_choices}
+#| label: choices_d06.mml.ldx
+- 'goes up from a baseline and then back down to the baseline':
+    correct: false
+- 'the output doubles for every unit increase in input':
+    correct: true
+- 'tells you how many doublings correspond to a given output':
+    correct: false
+- 'decreases quickly at first, then more slowly':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-mml-ldx",
+  question = "Placeholder for now",
+  answers = choices_d06.mml.ldx,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-monkey-meet-laundry -->

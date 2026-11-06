@@ -1,0 +1,6 @@
+```{mcq}
+#| label: test-q
+1. A
+2. B [correct]
+```
+`r devoirs::devoirs_set(choices = c(1, 2), correct = 2, id = "stable")`

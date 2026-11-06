@@ -1,0 +1,67 @@
+<!--
+id: "lion-let-stair"
+created: "Wed May 13 08:00:41 2026"
+attribution: DTK
+chapter: 10
+status: sketch
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lion-let-stair}
+TURN THIS INTO EXERCISES, giving both a function graph and a graph of the gradient field.
+
+[Whenever you can plot a function]{style="font-variant:small-caps;"} finding a maximum is easy.A glance at the graph will tell you which input has the highest output.
+
+As an example, here is a randomly selected function with one input.
+
+::: {.content-hidden unless-format="html"}
+```{webr}
+#| caption: Optimize this!
+h <- doodle_fun( ~ x, seed = 832)
+slice_plot(h(x) ~ x, 
+           domain(x = -5:5)) 
+```
+::::
+
+::: {.content-hidden unless-format="pdf"}
+```{r}
+#| echo: false
+#| label: C10-lgobq
+h <- doodle_fun( ~ x, seed = 832)
+slice_plot(h(x) ~ x, 
+           domain(x = -5:5)) 
+```
+::::
+
+You can locate the maximum (or the minimum) almost instantly.
+
+Another example of finding minima, now for a function of two inputs. Try this randomly generated function:
+
+:::: {.content-hidden unless-format="html"}
+```{webr}
+#| caption: Find the minimum
+g <- doodle_fun(~ x + y, seed = 101)
+contour_plot(g(x, y) ~ x & y, 
+             domain(x = -4:4, y = -4:4))
+```
+
+Can you see where the minimum is? Basic contour-graph reading skills will lead you there; look for the small circularly-shaped contour that has a lower output level than the surrounding circularly-shaped contours. By changing the number after seed =  to another integer, you can generate another random function. You’ll find it easy to locate the minimum (which might be on the border).
+::::
+
+:::: {.content-hidden unless-format="html"}
+```{r}
+#| echo: false
+#| label: C10-qnjmw
+g <- doodle_fun(~ x + y, seed = 101)
+contour_plot(g(x, y) ~ x & y, 
+             domain(x = -4:4, y = -4:4))
+```
+
+Can you see where the minimum is? Basic contour-graph reading skills will lead you there; look for the small circularly-shaped contour that has a lower output level than the surrounding circularly-shaped contours.
+::::
+:::
+
+
+:::
+ <!-- end of exr-lion-let-stair -->

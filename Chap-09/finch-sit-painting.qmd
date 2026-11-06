@@ -2,7 +2,7 @@
 id: "finch-sit-painting"
 created: "Thu Nov 13 13:49:00 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 9
 mode: "exercise"
 -->

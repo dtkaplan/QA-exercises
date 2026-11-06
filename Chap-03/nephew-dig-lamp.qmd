@@ -3,7 +3,7 @@ id: "nephew-dig-lamp"
 created: "Wed Dec 31 07:14:08 2025"
 attribution: Dave Ruth
 use: "Reading Question Chap 2"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "reading-question"
 -->

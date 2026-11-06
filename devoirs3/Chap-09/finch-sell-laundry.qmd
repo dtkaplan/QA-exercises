@@ -1,0 +1,18 @@
+<!--
+id: "finch-sell-laundry"
+created: "Sat Nov 15 08:26:39 2025"
+attribution: TBA
+status: "draft"
+chapter: 9
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-finch-sell-laundry}
+Class discussion: Derive success and failure likelihoods. The argument is simple, e.g. suppose the hypothesis is that the success rate is 40%. What's the probability of a success under that hypothesis? 40%! The probability of a failure under that hypothesis? 60%!
+
+:::
+ <!-- end of exr-finch-sell-laundry -->

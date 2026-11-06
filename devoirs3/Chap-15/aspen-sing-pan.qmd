@@ -1,0 +1,38 @@
+<!--
+id: "aspen-sing-pan"
+created: "Tue Feb 24 12:33:24 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 15
+mode: drill
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-aspen-sing-pan}
+*Speed* has dimension L T^-1^ whereas *distance* has dimension L. What is the relationship between speed and distance?
+
+```{devoirs_choices}
+#| label: choices_asp.1.csl
+- 'Distance is proportional to speed.':
+    correct: false
+    feedback: 'No, they have different dimensions.'
+- 'Distance is the derivative of speed with respect to time.':
+    correct: false
+- 'Distance is the accumulation of speed with respect to time.':
+    correct: true
+- 'Distance and speed have unrelated dimensions.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "asp-1-csl",
+  question = "Placeholder for now",
+  answers = choices_asp.1.csl,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-aspen-sing-pan -->

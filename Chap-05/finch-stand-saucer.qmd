@@ -3,7 +3,7 @@ id: "finch-stand-saucer"
 created: "Fri Oct 16 10:30:02 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 05
 
 -->

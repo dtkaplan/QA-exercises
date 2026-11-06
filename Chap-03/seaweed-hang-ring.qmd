@@ -2,7 +2,7 @@
 id: "seaweed-hang-ring"
 created: "Wed Dec 31 07:16:52 2025"
 attribution: Dave Ruth
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "reading-question"
 -->

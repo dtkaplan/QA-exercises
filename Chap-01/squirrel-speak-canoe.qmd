@@ -3,7 +3,7 @@ id: "squirrel-speak-canoe"
 created: "Thu Oct 15 12:03:42 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 1
 -->
 

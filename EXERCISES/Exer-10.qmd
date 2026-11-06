@@ -1,0 +1,27 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 10 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+`r devoirs3::devoirs_start("QA-exer-10")`
+
+::: {.panel-tabset}
+
+## 1 
+
+{{< include ../devoirs3/Chap-10/jaquar-shut-pot.qmd >}}
+
+## 2 
+
+{{< include ../devoirs3/Chap-10/monkey-talk-pants.qmd >}}
+
+
+
+
+:::
+
+

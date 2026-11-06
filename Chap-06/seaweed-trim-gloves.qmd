@@ -1,0 +1,23 @@
+<!--
+id: "seaweed-trim-gloves"
+created: "Wed Oct 28 16:55:36 2026"
+attribution: DTK
+mode: discussion
+status: ready-to-use
+chapter: 06
+topic: algorithms
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-seaweed-trim-gloves}
+To help students understand how an algorithm is built out of simpler algorithms ...
+
+
+
+Recall how you were taught arithmetic. First you memorized phrases like "two plus two is four." Next, you learned how to translate these into a compact notation: $2 + 2 = 4$. Ultimately, you emerged with the ability to add single-digit numbers without effort. (For those whose single-digit skills were weak, you had difficulty doing more advanced arithmetic.)
+
+To add larger numbers, you learned an argument that uses the single-digit facts repeatedly. You learned to write out the two large numbers one above the other, arranging successive digits in columns. Then, starting on the right, you add the digits in the right-most column and write down the result as the last digit of the output. If the digits add to more than nine, you use only the last digit of the single-digit sum and "carry" the 1 to the next column. Then add the digits in that next column and add in the 1, if any, from the "carry." Continue on in this way until you run out of digits. 
+:::
+ <!-- end of exr-seaweed-trim-gloves -->

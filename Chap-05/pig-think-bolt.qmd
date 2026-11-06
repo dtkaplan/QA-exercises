@@ -2,7 +2,7 @@
 id: "pig-think-bolt"
 created: "Mon Dec 22 06:06:02 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->

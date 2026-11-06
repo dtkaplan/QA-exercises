@@ -2,7 +2,7 @@
 id: "fox-throw-knob"
 created: "Sun Dec 28 14:12:37 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 8
 mode: "reading-question"
 -->

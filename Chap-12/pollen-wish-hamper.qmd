@@ -2,7 +2,7 @@
 id: "pollen-wish-hamper"
 created: "Sat Feb 14 12:39:35 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
 mode: "exercise"
 -->

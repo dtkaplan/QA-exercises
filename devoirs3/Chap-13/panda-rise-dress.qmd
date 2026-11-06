@@ -1,0 +1,24 @@
+<!--
+id: "panda-rise-dress"
+created: "Mon Nov 17 10:59:00 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-panda-rise-dress}
+Discussion to highlight how dynamical rules can be simple since they deal only with instantaneous motion. 
+
+A non-dynamical-rule description of motion: Kepler's theory of planetary motion: Planets trace out elliptical orbits with the Sun at one focus and sweep out equal areas in equal times. This is a macroscopic description. 
+
+A description in terms of a dynamical rule involves two relatively simple parts: (1) The planet's rate-of-change in position is velocity.  (2) The rate-of-change in velocity is directed toward the Sun and inversely proportional to the square of the distance from the Sun. 
+
+The accounting system plays out this rule and, in consequence, produces orbits that are ellipses with the planet's velocity inversely proportional to distance from the Sun.
+
+:::
+ <!-- end of prp-panda-rise-dress -->

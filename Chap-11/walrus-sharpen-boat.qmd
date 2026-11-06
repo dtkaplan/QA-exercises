@@ -2,7 +2,7 @@
 id: "walrus-sharpen-boat"
 created: "Thu Feb 19 09:12:47 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
 mode: "exercise"
 -->

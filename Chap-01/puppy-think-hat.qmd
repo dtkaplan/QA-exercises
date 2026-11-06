@@ -3,7 +3,7 @@ id: "puppy-think-hat"
 created: "Thu Oct 15 12:11:59 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 1
 -->
 

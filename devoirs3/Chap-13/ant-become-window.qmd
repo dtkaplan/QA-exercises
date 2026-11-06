@@ -1,0 +1,17 @@
+<!--
+id: "ant-become-window"
+created: "Mon Nov 24 06:53:57 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-ant-become-window}
+Look at exponential growth, and at the rate of change of exponential growth which itself grows exponentially
+:::
+ <!-- end of exr-ant-become-window -->

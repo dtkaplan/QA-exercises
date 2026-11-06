@@ -3,7 +3,7 @@ id: "cow-lie-bed"
 created: "Thu Oct 15 12:10:51 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 1
 -->
 
@@ -13,7 +13,7 @@ chapter: 1
 ::: {#exr-cow-lie-bed}
 A premise is a statement assumed to be true for the purpose of formal reasoning.
 
-`r devoirs::devoirsTF(correct = TRUE, id = "D-01-jar")`
+`r devoirs::devoirs_TF(correct = TRUE, id = "D-01-jar")`
 
 :::
  <!-- end of exr-cow-lie-bed -->

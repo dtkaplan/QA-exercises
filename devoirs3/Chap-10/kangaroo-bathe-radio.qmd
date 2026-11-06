@@ -1,0 +1,17 @@
+<!--
+id: "kangaroo-bathe-radio"
+created: "Mon Jul  6 16:33:51 2026"
+attribution: DTK
+uses: optimization
+status: "sketch"
+chapter: 10
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kangaroo-bathe-radio}
+
+Optimization Example: Sailing at high tide.
+:::
+ <!-- end of exr-kangaroo-bathe-radio -->

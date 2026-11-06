@@ -1,0 +1,38 @@
+<!--
+id: "shark-choose-bed"
+created: "Fri Jan 30 16:48:29 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: ready-to-use
+chapter: 7
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-shark-choose-bed}
+Which core modeling function would best describe the outdoor temperature over the course of a single day (rising in the morning, falling in the evening, repeating daily)?
+
+```{devoirs_choices}
+#| label: choices_d06.scb.daily
+- 'hill()':
+    correct: false
+- 'hillside()':
+    correct: false
+- 'osc()':
+    correct: true
+- 'exp2()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-scb-daily",
+  question = "Placeholder for now",
+  answers = choices_d06.scb.daily,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-shark-choose-bed -->

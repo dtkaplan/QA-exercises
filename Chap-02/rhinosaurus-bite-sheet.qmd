@@ -3,7 +3,7 @@ id: "rhinosaurus-bite-sheet"
 created: "Fri Oct 16 08:12:54 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 02
 
 -->
@@ -14,6 +14,6 @@ chapter: 02
 ::: {#exr-rhinosaurus-bite-sheet}
 In this chapter, a **data frame** is a rectangular array of cells organized into rows and columns.
 
-`r devoirs::devoirsTF(correct = TRUE, id = "D-02-nun")`
+`r devoirs::devoirs_TF(correct = TRUE, id = "D-02-nun")`
 :::
  <!-- end of exr-rhinosaurus-bite-sheet -->

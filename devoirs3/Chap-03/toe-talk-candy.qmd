@@ -1,0 +1,39 @@
+<!--
+id: "toe-talk-candy"
+created: "Fri Oct 16 08:44:46 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-toe-talk-candy}
+A quantity has units of kilograms per second squared. What is its dimension?
+
+```{devoirs_choices}
+#| label: choices_d03.qukss
+- 'M/T':
+    correct: false
+- 'M/T^2^':
+    correct: true
+- 'MT^2^':
+    correct: false
+- 'T^2^ / M':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d03-qukss",
+  question = "Placeholder for now",
+  answers = choices_d03.qukss,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+ <!-- end of exr-toe-talk-candy -->

@@ -19,10 +19,6 @@ source("../_exercise_startup.R")
 
 {{< include ../Chap-14/bee-begin-gloves.qmd >}}
 
-## 3.
-
-{{< include ../Chap-14/crow-pull-laundry.qmd >}}
-
 
 
 :::

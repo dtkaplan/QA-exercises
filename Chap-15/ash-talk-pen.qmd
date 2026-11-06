@@ -2,7 +2,7 @@
 id: "ash-talk-pen"
 created: "Mon Feb 23 17:15:39 2026"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 15
 mode: "drill"
 -->

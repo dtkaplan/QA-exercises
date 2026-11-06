@@ -1,0 +1,38 @@
+<!--
+id: "avoid-refer-fridge"
+created: "Fri Jan 30 14:00:43 2026"
+attribution: DTK
+use: Chap 06 drill
+status: ready-to-use
+chapter: 7
+mode: drill
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-avoid-refer-fridge}
+For which core modeling functions is the output bounded on the bottom by zero but unbounded on the top?
+
+```{devoirs_choices}
+#| label: choices_arf.1.82kd
+- '`log2()` & `same()`':
+    correct: false
+- '`hillside()` & `hill()`':
+    correct: false
+- '`exp2()` & `recip()`':
+    correct: true
+- '`same()` & `osc()`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "arf-1-82kd",
+  question = "Placeholder for now",
+  answers = choices_arf.1.82kd,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-avoid-refer-fridge -->

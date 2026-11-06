@@ -2,7 +2,7 @@
 id: "cheetah-stand-mattress"
 created: "Sun Dec 28 14:33:01 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
 mode: "exercise"
 -->

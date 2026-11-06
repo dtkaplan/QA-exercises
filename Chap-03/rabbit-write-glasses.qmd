@@ -3,7 +3,7 @@ id: "rabbit-write-glasses"
 created: "Fri Oct 16 09:01:51 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->

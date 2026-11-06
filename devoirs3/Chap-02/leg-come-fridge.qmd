@@ -1,0 +1,40 @@
+<!--
+id: "leg-come-fridge"
+created: "Fri Oct 16 08:14:14 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 02
+topic: data
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-leg-come-fridge}
+Which statement about a variable in a data frame is consistent with the terminology used in this book?
+
+```{devoirs_choices}
+#| label: choices_d01.variable
+- 'A variable is a column of a data frame.':
+    correct: true
+- 'A variable is always an unknown number.':
+    correct: false
+- 'A variable is always a continuous numerical measurement.':
+    correct: false
+- 'A variable is the entire data frame.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-variable",
+  question = "Placeholder for now",
+  answers = choices_d01.variable,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+:::
+ <!-- end of exr-leg-come-fridge -->

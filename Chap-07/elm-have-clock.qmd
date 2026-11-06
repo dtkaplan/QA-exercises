@@ -3,7 +3,7 @@ id: "elm-have-clock"
 created: "Fri Oct 16 12:05:26 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

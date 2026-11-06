@@ -3,7 +3,7 @@ id: "lobster-get-hamper"
 created: "Fri Oct 16 10:19:27 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 04
 
 -->

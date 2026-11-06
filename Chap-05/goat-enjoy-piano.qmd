@@ -3,7 +3,7 @@ id: "goat-enjoy-piano"
 created: "Thu Oct 22 07:48:19 2026"
 attribution: DTK
 mode: reading-questions
-status: ready-to-go
+status: ready-to-use
 chapter: 05
 
 -->

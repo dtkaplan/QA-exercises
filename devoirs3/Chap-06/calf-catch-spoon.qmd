@@ -1,0 +1,48 @@
+<!--
+id: "calf-catch-spoon"
+created: "Mon Aug 24 13:23:18 2026"
+attribution: DTK
+uses: Activity about functions
+status: "sketch"
+chapter: 6
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-calf-catch-spoon}
+::: {.callout-note}
+## Using functions "inside-out"
+
+Someone shopping for a house needs to know what price is affordable to them. Typically, people have a good idea of how much they can pay monthly, but need to translate this into a new form: the *principal* of the loan what will generate such a payment.
+
+For this purpose, the `monthly_payment()` function is set up backwards. To use `monthly_payment()`, you need to know the principal---it will calculate the corresponding monthly payment. 
+
+Even so, `monthly_payment()` can lead you to the answer. You just have to turn it inside out. This involves a simple procedure. Say you can afford a $2500 monthly payment. What is the corresponding principal?
+
+Start by guessing. Could you afford a million-dollar loan? Let's see:
+
+```{r echo=FALSE}
+library(QRA)
+```
+
+```{r}
+monthly_payment(1e6, 6, 30)
+```
+
+No good. The million-dollar loan would cost about $6000 per month. If you completely understood the mechanics of the monthly-payment calculation, you could use algebra to find what principal you can afford.
+
+But you don't need to understand the function, you just need to be able to use it. Since one million dollars is too rich for your situation, try half-a-million dollars.
+
+```{r}
+monthly_payment(0.5e6, 6, 30)
+```
+
+Still too much! Keep on trying until you hit the spot.
+
+
+
+:::
+
+:::
+ <!-- end of exr-calf-catch-spoon -->

@@ -2,7 +2,7 @@
 id: "monkey-talk-pants"
 created: "Mon Feb 16 14:20:56 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 10
 mode: "exercise"
 -->
@@ -73,7 +73,7 @@ Note that the priors reflect a genuine reality: there are many more rubber dingy
 
 5. You can compute the relative posterior for each hypothesis by a simple multiplication of the numbers on that hypothesis's row in the table. 
 
-`r devoirsTF(FALSE, "mtp-5-cks")` You can likewise find each absolute posterior probability by using just the entries in that row.
+`r devoirs_TF(FALSE, "mtp-5-cks")` You can likewise find each absolute posterior probability by using just the entries in that row.
 
 6. What is the absolute probability, given the observation, of the craft being a luxury yacht? (Pick the closest answer.)
 

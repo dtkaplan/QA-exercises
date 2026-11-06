@@ -1,0 +1,38 @@
+<!--
+id: "brother-blow-futon"
+created: "Sun Feb  1 09:05:10 2026"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-brother-blow-futon}
+The text gives a specific name to the multiplication of two steady functions with different inputs, i.e., $\text{steady}(x) \times \text{steady}(z)$. What is this term called in statistics?
+
+```{devoirs_choices}
+#| label: choices_bbf.1.9dls
+- 'independency':
+    correct: false
+- 'interaction':
+    correct: true
+- 'duplication':
+    correct: false
+- 'unsteady':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bbf-1-9dls",
+  question = "Placeholder for now",
+  answers = choices_bbf.1.9dls,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+:::
+ <!-- end of exr-brother-blow-futon -->

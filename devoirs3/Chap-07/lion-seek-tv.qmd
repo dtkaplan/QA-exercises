@@ -1,0 +1,20 @@
+<!--
+id: "lion-seek-tv"
+created: "Sun Aug 30 08:49:49 2026"
+attribution: DTK
+uses: "Chap 7, discussion units of magnitude."
+status: "sketch"
+chapter: 7
+mode: "discussion"
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lion-seek-tv}
+Units of magnitude as opposed to "orders of magnitude."
+
+Introduce `log10()` and `exp10()` which describes magnitude as factors of 10. Similarly, `log2()` produces **bits** and `exp2()` handles successive doublings.
+
+:::
+ <!-- end of exr-lion-seek-tv -->

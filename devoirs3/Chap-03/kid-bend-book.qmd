@@ -1,0 +1,17 @@
+<!--
+id: "kid-bend-book"
+created: "Tue Aug 18 07:36:58 2026"
+attribution: DTK
+use: "dimensional analysis"
+status: "sketch"
+chapter: 3
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-kid-bend-book}
+ChatGPT disputes that a mole is dimensionless. 
+SI has its own base dimension definition for the "dimensionless dimension": N. The corresponding base unit in SI is *mole*, which is a count widely used in chemistry. A mole is 602,214,076,000,000,000,000,000 individuals. When the "individuals" are atoms or molecules, a mole of individuals can be weighed on a kitchen scale; a mole of water molecules weighs 8 grams. In contrast, a mole of people would weigh about 10 times the mass of the Earth; not a convenient unit. 
+:::
+ <!-- end of exr-kid-bend-book -->

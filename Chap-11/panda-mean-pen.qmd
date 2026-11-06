@@ -2,7 +2,7 @@
 id: "panda-mean-pen"
 created: "Thu Feb 19 09:50:39 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 11
 mode: "exercise"
 -->

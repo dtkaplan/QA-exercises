@@ -3,7 +3,7 @@ id: "spruce-lie-kayak"
 created: "Fri Jan 30 13:56:38 2026"
 attribution: DTK
 use: Chap 06 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

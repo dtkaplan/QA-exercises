@@ -2,7 +2,7 @@
 id: "girl-sleep-linen"
 created: "Fri Jan 30 13:57:23 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

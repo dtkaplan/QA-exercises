@@ -3,7 +3,7 @@ id: "pony-iron-pot"
 created: "Fri Oct 16 11:49:41 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

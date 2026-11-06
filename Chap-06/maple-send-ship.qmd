@@ -3,7 +3,7 @@ id: "maple-send-ship"
 created: "Sat Aug 22 08:41:14 2026"
 attribution: DTK
 uses: functions Chap 6
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "exercise"
 -->

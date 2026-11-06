@@ -2,7 +2,7 @@
 id: "spruce-refer-bulb"
 created: "Fri Jan 16 09:08:34 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "exercise"
 -->

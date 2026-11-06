@@ -2,7 +2,7 @@
 id: "zebra-dream-blouse"
 created: "Mon Dec  1 12:20:41 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->
@@ -94,9 +94,9 @@ ggplot(Pts, aes(x=x, y = y)) +
   theme_minimal()
 ```
 
-4. `r devoirs::devoirsTF(FALSE, id="zdb-4-73sq")` On the x-axis scale in @fig-zdb-many, the labels 1.0, 2.0, and 3.0 refer to equal steps in the quantity value. Are they equally spaced physically?
+4. `r devoirs::devoirs_TF(FALSE, id="zdb-4-73sq")` On the x-axis scale in @fig-zdb-many, the labels 1.0, 2.0, and 3.0 refer to equal steps in the quantity value. Are they equally spaced physically?
 
-5. `r devoirs::devoirsTF(TRUE, id = "zdb-5-347s")` On the x-axis scale in @fig-zdb-many, the values 1, 2, 4, 8 are equally spaced in magnitude. (In this case, each is twice as big as the previous.) Are they equally spaced physically?
+5. `r devoirs::devoirs_TF(TRUE, id = "zdb-5-347s")` On the x-axis scale in @fig-zdb-many, the values 1, 2, 4, 8 are equally spaced in magnitude. (In this case, each is twice as big as the previous.) Are they equally spaced physically?
 
 6. On the y-axis (*vertical*) scale in @fig-zdb-many, the horizontal grid lines labeled 2 and 10 are separated in value by a multiplicative factor of 5. There are several other pairs of labels on the y-axis that are separated by a multiplicative factor of 5, for instance 1 and 5. Write down *all* such pairs of labels. And, for each pair, record the spatial distance between the labels. You can use a ruler to do so, but if one is out of reach, use your fingers as a ruler. 
 

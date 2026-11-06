@@ -2,7 +2,7 @@
 id: "lion-hold-hamper"
 created: "Sun Dec 28 14:30:55 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 11
 mode: "reading-question"
 -->

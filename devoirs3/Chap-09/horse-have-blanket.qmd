@@ -1,0 +1,39 @@
+<!--
+id: "horse-have-blanket"
+created: "Wed Jul 16 15:10:47 2025"
+attribution: TBA
+chapter: 9
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+The elevations in the simulated topographic map below are given in meters. Negative elevations indicate depth below sea level. (The latitudes and longitudes are in "minutes," that is, 1/60th of a degree.)
+```{r}
+#| echo: false
+#| label: C09-zcrhs
+f <- mosaicCalc::doodle_fun(~ x & y, seed = 8932)
+Pts <- tibble::tribble(
+  ~ x, ~y, ~ label,
+  39.75, 46.6, "A",
+  43.3, 46, "B",
+  36.3, 41.7, "C")
+contour_plot(
+  20*f(x = longitude-37, y = latitude-44) - 100 ~ longitude & latitude,
+  domain(longitude = 30:44, latitude = 37:51), 
+  contours_at = c(-75, -50, -25,  0.1, 0, 25, 50, 100, 150, 200, 250)) |>
+  contour_plot(
+    20*f(x = longitude-37, y = latitude-44) - 100 ~ longitude & latitude,
+    domain(longitude = 30:44, latitude = 37:51), 
+    contours_at = 0, contour_color = "red") |>
+  gf_text(y ~ x, label = ~ label, data = Pts, inherit = FALSE)
+  
+```
+
+1. One of the contours is colored red. What geographic feature does this contour mark? [Coastline]
+
+2. Is this one island or two nearby islands? [One]
+
+3. Which of the marked points is on the most gently sloping beach? [B]
+
+
+

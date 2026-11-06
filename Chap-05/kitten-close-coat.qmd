@@ -2,7 +2,7 @@
 id: "kitten-close-coat"
 created: "Tue Jan 20 14:02:46 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->

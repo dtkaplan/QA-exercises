@@ -1,0 +1,17 @@
+<!--
+id: "snail-hang-tv"
+created: "Mon Oct 27 07:16:33 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-snail-hang-tv}
+In $a x + b$, what are the functions that go into the linear combination. Same for $a x^2 + b x + c$.
+:::
+ <!-- end of exr-snail-hang-tv -->

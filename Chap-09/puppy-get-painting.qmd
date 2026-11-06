@@ -2,7 +2,7 @@
 id: "puppy-get-painting"
 created: "Sun Dec 28 14:15:03 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 9
 mode: "exercise"
 -->

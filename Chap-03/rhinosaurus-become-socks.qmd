@@ -3,7 +3,7 @@ id: "rhinosaurus-become-socks"
 created: "Fri Oct 16 08:54:05 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->

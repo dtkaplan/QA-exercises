@@ -2,7 +2,7 @@
 id: "oak-close-window"
 created: "Sun Feb  1 08:52:01 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 9
 mode: "exercise"
 -->

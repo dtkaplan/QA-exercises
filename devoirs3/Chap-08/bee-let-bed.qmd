@@ -1,0 +1,17 @@
+<!--
+id: "bee-let-bed"
+created: "Tue Sep  1 16:06:44 2026"
+attribution: DTK
+chapter: 8
+status: sketch
+mode: activity
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bee-let-bed}
+When the relative probability output is produced by a function of one or more uncertain inputs, it does not have to be one of the three exemplary probability distributions in the chapter. Even if the inputs are described by one or another of the exemplary distributions, the output might be a very different function. 
+
+An accessible technique to get a picture of the output distribution is based on `r xf_definition()` simulation. Tell how this works. 
+:::
+ <!-- end of exr-bee-let-bed -->

@@ -3,7 +3,7 @@ id: "horse-read-mattress"
 created: "Fri Oct 16 08:09:27 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 02
 
 -->

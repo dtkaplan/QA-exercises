@@ -2,7 +2,7 @@
 id: "seal-form-glasses"
 created: "Fri Jan 16 11:24:35 2026"
 attribution: "Dorothy Dickmann"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "reading-question"
 -->

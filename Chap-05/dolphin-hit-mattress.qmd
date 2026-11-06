@@ -3,7 +3,7 @@ id: "dolphin-hit-mattress"
 created: "Fri Oct 16 10:30:36 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 05
 
 -->

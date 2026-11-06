@@ -1,0 +1,21 @@
+<!--
+id: "sister-make-scarf"
+created: "Wed Nov 12 13:25:35 2025"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-sister-make-scarf}
+
+MAKE THIS ABOUT HOW OUR UNDERSTANDING OF GROWTH concerns the instantaneous rate of change rather than the ratio of height to age.
+
+[[Example: a person's height divided by their age **versus** the change of height per year. Maybe use the NHANES height data, fitting a 3rd or 4th order natural spline. Show three graphs: height versus age, height/age versus age, change in height over one year/one year versus age.]]
+
+:::
+ <!-- end of exr-sister-make-scarf -->

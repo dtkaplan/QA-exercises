@@ -2,7 +2,7 @@
 id: "ash-sit-pot"
 created: "Tue Oct  7 13:13:56 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "drill"
 -->

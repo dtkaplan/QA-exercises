@@ -2,7 +2,7 @@
 id: "snake-show-knife"
 created: "Mon Aug 25 15:25:02 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "exercise"
 -->

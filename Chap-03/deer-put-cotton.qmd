@@ -2,7 +2,7 @@
 id: "deer-put-cotton"
 created: "Sun Dec 28 14:00:11 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "exercise"
 -->

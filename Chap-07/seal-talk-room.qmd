@@ -3,7 +3,7 @@ id: "seal-talk-room"
 created: "Fri Jan 30 16:52:24 2026"
 attribution: Dorothy Dickmann
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->
@@ -13,14 +13,14 @@ mode: "exercise"
 ::: {#exr-seal-talk-room}
 Which core modeling functions have a positive rate of change for all positive inputs?
 
-`r devoirs::devoirsTF(FALSE, leed="recip()", id="d06-str-3ks")`
+1. `recip()` `r devoirs::devoirs_TF(FALSE,  id="d06-str-3ks")`
 
-`r devoirs::devoirsTF(TRUE, leed="exp2()", id="d06-str-lxe")`
+2. `exp2()` `r devoirs::devoirs_TF(TRUE, id="d06-str-lxe")`
 
-`r devoirs::devoirsTF(FALSE, leed="hill()", id="d06-str-8ue")`
+3. `hill()` `r devoirs::devoirs_TF(FALSE, id="d06-str-8ue")`
 
-`r devoirs::devoirsTF(TRUE, leed="hillside()", id="d06-str-lex")`
+4. `hillside()` `r devoirs::devoirs_TF(TRUE, id="d06-str-lex")`
 
-`r devoirs::devoirsTF(TRUE, leed="same()", id="d06-str-cwox")`
+5. `same()` `r devoirs::devoirs_TF(TRUE, id="d06-str-cwox")`
 :::
  <!-- end of exr-seal-talk-room -->

@@ -3,7 +3,7 @@ id: "calf-freeze-saw"
 created: "Sun Oct 19 08:44:49 2025"
 attribution: DTK
 use: "Chapter 5 exercise"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
 mode: "exercise"
 -->
@@ -22,7 +22,7 @@ idn <- function(n) {
   glue::glue("cfs-{n}-{paste0(sample(letters, 5), collapse='')}")
 }
 endo_exo_Q <- function(n=1, answer = "endogenous", type = c("endogenous", "exogenous")) {
-  devoirs::devoirsTF(
+  devoirs::devoirs_TF(
     c(TRUE, FALSE)[which(answer == type)],
     format = paste(type, collapse = " or "),
     id = idn(n)

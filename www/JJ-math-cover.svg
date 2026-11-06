@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17in" height="11in" viewBox="0 0 1700 1100">
+  <defs>
+    <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035 0.05" numOctaves="2" seed="17" result="grain"/>
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="tiles" width="400" height="500" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#ef7021"/>
+      <path d="M-8 28 Q25 4 61 20 T112 5 M-5 82 Q34 58 72 78 T110 62" fill="none" stroke="#f2c83a" stroke-width="12"/>
+      <rect x="100" width="100" height="100" fill="#267ba9"/>
+      <path d="M92 34 Q130 10 169 28 T212 12 M94 88 Q132 61 168 81 T212 69" fill="none" stroke="#63b7d0" stroke-width="11"/>
+      <rect x="200" width="100" height="100" fill="#d83c27"/>
+      <path d="M191 24 Q229 5 271 22 T311 7 M193 79 Q234 57 269 75 T312 63" fill="none" stroke="#f49a28" stroke-width="13"/>
+      <rect x="300" width="100" height="100" fill="#e7dec5"/>
+      <path d="M292 37 Q327 10 368 29 T411 9 M294 88 Q329 62 370 80 T411 67" fill="none" stroke="#378eb4" stroke-width="12"/>
+
+      <rect y="100" width="100" height="100" fill="#287fb2"/>
+      <path d="M-7 130 Q35 105 72 124 T111 109 M-5 182 Q30 154 72 174 T111 160" fill="none" stroke="#f2d343" stroke-width="12"/>
+      <rect x="100" y="100" width="100" height="100" fill="#e6a12a"/>
+      <path d="M92 128 Q130 104 170 124 T212 107 M93 184 Q133 158 170 177 T212 162" fill="none" stroke="#c8332b" stroke-width="13"/>
+      <rect x="200" y="100" width="100" height="100" fill="#f0e6d0"/>
+      <path d="M192 132 Q230 107 269 126 T312 108 M193 183 Q232 156 271 177 T312 161" fill="none" stroke="#ed6224" stroke-width="12"/>
+      <rect x="300" y="100" width="100" height="100" fill="#c92d2c"/>
+      <path d="M292 130 Q330 105 370 125 T412 108 M293 183 Q334 158 370 177 T412 162" fill="none" stroke="#f5c83a" stroke-width="12"/>
+
+      <rect y="200" width="100" height="100" fill="#e84a27"/>
+      <path d="M-8 228 Q29 204 72 224 T111 207 M-4 281 Q37 256 73 276 T112 261" fill="none" stroke="#4e9fc2" stroke-width="13"/>
+      <rect x="100" y="200" width="100" height="100" fill="#f2cc36"/>
+      <path d="M92 231 Q129 205 169 226 T212 208 M94 282 Q133 255 170 276 T212 260" fill="none" stroke="#ec7224" stroke-width="12"/>
+      <rect x="200" y="200" width="100" height="100" fill="#347fa5"/>
+      <path d="M191 230 Q232 205 270 225 T312 208 M194 282 Q233 257 270 277 T312 260" fill="none" stroke="#e9dfca" stroke-width="12"/>
+      <rect x="300" y="200" width="100" height="100" fill="#e5dfce"/>
+      <path d="M292 231 Q330 206 370 226 T412 209 M293 282 Q332 256 371 276 T412 261" fill="none" stroke="#d83d2b" stroke-width="12"/>
+
+      <rect y="300" width="100" height="100" fill="#d83a2a"/>
+      <path d="M-7 330 Q32 304 72 324 T111 308 M-5 382 Q34 356 73 377 T111 361" fill="none" stroke="#efb52e" stroke-width="12"/>
+      <rect x="100" y="300" width="100" height="100" fill="#439abe"/>
+      <path d="M92 329 Q130 305 170 325 T212 308 M94 382 Q133 356 171 377 T212 361" fill="none" stroke="#f0e5cc" stroke-width="12"/>
+      <rect x="200" y="300" width="100" height="100" fill="#e9a028"/>
+      <path d="M192 330 Q230 306 269 326 T312 309 M193 382 Q233 357 271 377 T312 361" fill="none" stroke="#2876a5" stroke-width="12"/>
+      <rect x="300" y="300" width="100" height="100" fill="#f0e4cc"/>
+      <path d="M292 330 Q330 305 370 325 T412 308 M293 382 Q334 356 371 377 T412 361" fill="none" stroke="#ed6626" stroke-width="12"/>
+
+      <rect y="400" width="100" height="100" fill="#3183ad"/>
+      <path d="M-8 430 Q30 404 72 424 T111 408 M-4 482 Q34 456 73 477 T112 461" fill="none" stroke="#ee7223" stroke-width="12"/>
+      <rect x="100" y="400" width="100" height="100" fill="#e1a02d"/>
+      <path d="M92 430 Q130 405 170 425 T212 408 M94 482 Q133 457 171 477 T212 461" fill="none" stroke="#f2e6cf" stroke-width="12"/>
+      <rect x="200" y="400" width="100" height="100" fill="#d53b2d"/>
+      <path d="M192 430 Q230 405 270 425 T312 408 M193 482 Q233 457 271 477 T312 461" fill="none" stroke="#4aa0c2" stroke-width="12"/>
+      <rect x="300" y="400" width="100" height="100" fill="#e9e1cf"/>
+      <path d="M292 430 Q330 405 370 425 T412 408 M293 482 Q334 457 371 477 T412 461" fill="none" stroke="#e74729" stroke-width="12"/>
+
+      <path d="M0 0H400M0 100H400M0 200H400M0 300H400M0 400H400M0 500H400 M0 0V500M100 0V500M200 0V500M300 0V500M400 0V500" fill="none" stroke="#f4e7cc" stroke-opacity=".48" stroke-width="5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1700" height="1100" fill="#276d98"/>
+  <rect x="50" y="50" width="1600" height="1000" fill="url(#tiles)" filter="url(#paint)"/>
+
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="700" filter="url(#paint)">
+    <g fill="none" stroke="#174f78" stroke-width="14" stroke-linejoin="round" opacity=".8">
+      <text x="50" y="133" letter-spacing="50">012+345&#215;678&#247;9012</text>
+      <text x="50" y="233" letter-spacing="50">9&#8722;8&#247;7+6&#215;5&#8722;4&#247;3+2</text>
+      <text x="50" y="333" letter-spacing="50">1&#215;2+3&#247;4&#8722;5&#215;6+7&#247;8&#8722;</text>
+      <text x="50" y="433" letter-spacing="50">6&#8722;4+2&#215;8&#247;1&#8722;3+7&#215;50</text>
+      <text x="50" y="533" letter-spacing="50">2&#247;5+8&#8722;0&#215;3+6&#247;1&#8722;47</text>
+      <text x="50" y="633" letter-spacing="50">8&#215;1&#8722;3+9&#247;2&#215;4&#8722;6+70</text>
+      <text x="50" y="733" letter-spacing="50">4+7&#215;0&#247;5&#8722;2+8&#215;31&#8722;9</text>
+      <text x="50" y="833" letter-spacing="50">3&#8722;6+1&#215;9&#247;4&#8722;7&#215;2+50</text>
+      <text x="50" y="933" letter-spacing="50">5&#247;2&#215;7&#8722;1+4&#247;8&#215;3&#8722;90</text>
+      <text x="50" y="1033" letter-spacing="50">0+9&#8722;3&#215;6&#247;2+5&#8722;8&#215;17</text>
+    </g>
+    <g stroke="#f4e7cf" stroke-width="3" stroke-linejoin="round">
+      <text x="50" y="127" letter-spacing="50" fill="#f3c83c">012+345&#215;678&#247;9012</text>
+      <text x="50" y="227" letter-spacing="50" fill="#f1eee0">9&#8722;8&#247;7+6&#215;5&#8722;4&#247;3+2</text>
+      <text x="50" y="327" letter-spacing="50" fill="#f5e8cb">1&#215;2+3&#247;4&#8722;5&#215;6+7&#247;8&#8722;</text>
+      <text x="50" y="427" letter-spacing="50" fill="#f5c53a">6&#8722;4+2&#215;8&#247;1&#8722;3+7&#215;50</text>
+      <text x="50" y="527" letter-spacing="50" fill="#f0ece0">2&#247;5+8&#8722;0&#215;3+6&#247;1&#8722;47</text>
+      <text x="50" y="627" letter-spacing="50" fill="#f1c43a">8&#215;1&#8722;3+9&#247;2&#215;4&#8722;6+70</text>
+      <text x="50" y="727" letter-spacing="50" fill="#f4e9d2">4+7&#215;0&#247;5&#8722;2+8&#215;31&#8722;9</text>
+      <text x="50" y="827" letter-spacing="50" fill="#f3c83c">3&#8722;6+1&#215;9&#247;4&#8722;7&#215;2+50</text>
+      <text x="50" y="927" letter-spacing="50" fill="#f2eee1">5&#247;2&#215;7&#8722;1+4&#247;8&#215;3&#8722;90</text>
+      <text x="50" y="1027" letter-spacing="50" fill="#f1c83a">0+9&#8722;3&#215;6&#247;2+5&#8722;8&#215;17</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round" opacity=".9" filter="url(#paint)">
+    <path d="M26 164Q97 139 151 170M1552 176Q1620 151 1680 165" stroke="#e75028" stroke-width="12"/>
+    <path d="M31 515Q84 489 139 509M1555 512Q1627 487 1680 503" stroke="#f2c83a" stroke-width="10"/>
+    <path d="M24 886Q81 862 142 881M1550 886Q1619 861 1680 879" stroke="#4ba4c8" stroke-width="12"/>
+    <path d="M60 28Q94 52 130 32M1567 1066Q1604 1042 1640 1063" stroke="#f2e8d4" stroke-width="9"/>
+  </g>
+</svg>

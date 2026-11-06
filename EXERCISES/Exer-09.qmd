@@ -1,0 +1,39 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 9 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+`r devoirs3::devoirs_start("QA-exer-09")`
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../devoirs3/Chap-09/finch-sit-painting.qmd >}}
+
+## 2
+
+{{< include ../devoirs3/Chap-09/hamster-hear-radio.qmd >}}
+
+## 3
+
+{{< include ../devoirs3/Chap-09/lamb-fly-clock.qmd >}}
+
+## 4
+
+{{< include ../devoirs3/Chap-09/oak-close-window.qmd >}}
+
+## 5
+
+{{< include ../devoirs3/Chap-09/puppy-get-painting.qmd >}}
+
+
+
+
+:::
+
+

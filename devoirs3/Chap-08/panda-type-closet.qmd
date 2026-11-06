@@ -1,0 +1,19 @@
+<!--
+id: "panda-type-closet"
+created: "Tue Oct 28 06:21:56 2025"
+attribution: DTK
+chapter: 8
+status: sketch
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-panda-type-closet}
+Setting the $\lambda$ parameter in an exponential distribution.
+
+Setting mean and sd in a normal distribution.
+
+:::
+ <!-- end of exr-panda-type-closet -->

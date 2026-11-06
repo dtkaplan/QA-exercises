@@ -1,0 +1,151 @@
+<!--
+id: "titmouse-refer-laundry"
+created: "Fri Feb 13 11:34:41 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 12
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-titmouse-refer-laundry}
+In 1990, Philipine President Corazon Aquino appointed retired Brig. Gen. Alfredo Lim to investigate claims that the government lottery was rigged. In September of that year, Gen. Lim won the lottery's top prize of $200,000. Coincidence?
+
+1. What are appropriate competing hypotheses for evaluating the question of coincidence?
+
+```{devoirs_choices}
+#| label: choices_trl.1.3kc
+- 'The General won versus the General did not win.':
+    correct: false
+    feedback: 'No. These are two possible observations, only the first of which happened.'
+- 'President Aquino participated in the conspiracy versus her not participating.':
+    correct: false
+- 'The Sept. lottery was rigged versus the Sept. lottery was honest. [Correct]':
+    correct: false
+- 'The lottery had been rigged before 1990 versus it was rigged only in 1990.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "trl-1-3kc",
+  question = "Placeholder for now",
+  answers = choices_trl.1.3kc,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+2. Suppose the lottery was indeed corrupt. Which of the following likelihoods would reflect skepticism that anyone in the lottery management would try to pay off the General?
+
+```{devoirs_choices}
+#| label: choices_trl.2.2kd
+- '0.001':
+    correct: true
+- '0.01':
+    correct: false
+- '0.1':
+    correct: false
+- 'Practically 1.0':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "trl-2-2kd",
+  question = "Placeholder for now",
+  answers = choices_trl.2.2kd,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+::: {.callout-tip collapse=true}
+Assigning a low likelihood means that it would have been a surprise that the General won even if the lottery were corrupt.
+:::
+
+3. Suppose that the lottery was honest and that one-million people play it each week. What is the likelihood that the General would win the top prize?
+
+```{devoirs_choices}
+#| label: choices_trl.3.jfe
+- '1e-6':
+    correct: true
+- '1e-4':
+    correct: false
+- '1e-2':
+    correct: false
+- '1':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "trl-3-jfe",
+  question = "Placeholder for now",
+  answers = choices_trl.3.jfe,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+::: {.callout-tip collapse=true}
+Some people might think that, because the General won, his probability of winning was 100%. But the likelihood of each possible outcome (e.g. win versus not win) has to be evaluated under the relevant hypothesis. Then, given the actual observed outcome, the likelihood assigned to that particular outcome is the one used.
+:::
+
+4. What is the likelihood ratio of the rigged versus honest hypotheses given the indicated answers to the above questions about likelihood?
+
+```{devoirs_choices}
+#| label: choices_trl.4.3ws
+- '0.001':
+    correct: false
+- '0.1':
+    correct: false
+- '10':
+    correct: false
+- '1000':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "trl-4-3ws",
+  question = "Placeholder for now",
+  answers = choices_trl.4.3ws,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+```
+
+::: {.callout-tip collapse=true}
+In constructing a likelihood ratio, you need to decide which hypothesis is in the numerator (top) of the ratio and which in the denominator (bottom). We didn't use these words in the question prompt, but "H1 versus H2" is a standard way of saying that H1 is in the numerator. The calculated likelihood ratio will then measure the strength of evidence in favor of the hypothesis in the numerator.
+:::
+
+5. On the verbal scale for interpretting likelihood, what's the best description for the indicated answer to (4)?
+
+```{devoirs_choices}
+#| label: choices_trl.5.wkc
+- 'Moderate support for the "rigged" hypothesis.':
+    correct: false
+- 'Weak support for the "honest" hypothesis.':
+    correct: false
+- 'Moderate to strong support for the "rigged" hypothesis.':
+    correct: true
+- 'Moderate to strong support for the "honest" hypothesis.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "trl-5-wkc",
+  question = "Placeholder for now",
+  answers = choices_trl.5.wkc,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+
+:::
+ <!-- end of exr-titmouse-refer-laundry -->

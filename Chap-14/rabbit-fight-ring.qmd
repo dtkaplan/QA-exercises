@@ -2,7 +2,7 @@
 id: "rabbit-fight-ring"
 created: "Thu Dec 11 16:35:00 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 14
 mode: "exercise"
 -->
@@ -60,7 +60,7 @@ foo |> gf_line(concentration ~ year) |>
 #| inline: true
 1. 325 ppm
 2. 340 ppm
-3. 380 ppm [correct hint]
+3. 380 ppm [correct]
 4. 420 ppm
 ```
 
@@ -89,7 +89,7 @@ foo |> gf_line(concentration ~ year) |>
 
 6. Explain, as best you can, how the BBC quote is reflected in the actual data.
 
-`r devoirs::devoirs_text(" -bbc")`
+`r devoirs::devoirs_text("rfr-6-bbc")`
 
 :::
  <!-- end of exr-rabbit-fight-ring -->

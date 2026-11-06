@@ -3,7 +3,7 @@ id: "seal-ride-book"
 created: "Wed Jan 28 09:48:09 2026"
 attribution:  Dave Ruth
 uses: "Quiz Ch 6"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "exercise"
 -->

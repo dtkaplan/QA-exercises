@@ -2,7 +2,7 @@
 id: "lamb-speak-radio"
 created: "Mon Dec 22 10:17:40 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->
@@ -40,40 +40,39 @@ idn <- function(n) {
   glue::glue("sca-{n}-{paste0(sample(letters, 5), collapse='')}")
 }
 scale_Q <- function(n=1, answer = "linear", type = c("linear", "magnitude")) {
-  devoirs::devoirsTF(
+  devoirs::devoirs_TF(
     c(TRUE, FALSE)[which(answer == type)],
     format = paste(type, collapse = " or "),
-    leed = "Which kind of scale is this?",
     id = idn(n)
   )
 }
 ```
 
-1. ![](../www/scale-log-h1.png) `r scale_Q(1, "magnitude")`
+1. Which kind of scale is this? ![](../www/scale-log-h1.png) `r scale_Q(1, "magnitude")`
 
 -----
 
-2. ![](../www/scale-lin-v1.png){height=40mm} `r scale_Q(2, "linear")`
+2. Which kind of scale is this? ![](../www/scale-lin-v1.png){height=40mm} `r scale_Q(2, "linear")`
 
 -----
 
-3. ![](../www/scale-lin-h2.png) `r scale_Q(3, "linear")`
+3. Which kind of scale is this? ![](../www/scale-lin-h2.png) `r scale_Q(3, "linear")`
 
 -----
 
-4. ![](../www/scale-log-v2.png){height=40mm} `r scale_Q(4, "magnitude")`
+4. Which kind of scale is this? ![](../www/scale-log-v2.png){height=40mm} `r scale_Q(4, "magnitude")`
 
 -----
 
-5. ![](../www/scale-log-h1.png) `r scale_Q(5, "magnitude")`
+5. Which kind of scale is this? ![](../www/scale-log-h1.png) `r scale_Q(5, "magnitude")`
 
 -----
 
-6. ![](../www/scale-lin-v2.png){height=40mm} `r scale_Q(6, "linear")`
+6. Which kind of scale is this? ![](../www/scale-lin-v2.png){height=40mm} `r scale_Q(6, "linear")`
 
 -----
 
-7. ![](../www/scale-lin-h2.png) `r scale_Q(7, "linear")`
+7. Which kind of scale is this? ![](../www/scale-lin-h2.png) `r scale_Q(7, "linear")`
 
 
 

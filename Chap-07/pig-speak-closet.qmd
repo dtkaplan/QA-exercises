@@ -3,7 +3,7 @@ id: "pig-speak-closet"
 created: "Fri Jan 30 17:05:14 2026"
 attribution: Dorothy Dickmann
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

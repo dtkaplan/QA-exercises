@@ -1,0 +1,54 @@
+<!--
+id: "duck-swim-candy"
+created: "Mon Feb 23 17:15:06 2026"
+attribution: DTK
+status: "draft"
+chapter: 15
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-duck-swim-candy}
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| label: C13-ioqfp
+
+slice_plot(pnorm(x) ~ x, domain(x=-3:3)) |>
+  gf_theme(theme_minimal(base_size = 12))
+slice_plot(dnorm(x) ~ x, domain(x = -3:3)) |>
+  gf_theme(theme_minimal(base_size = 12))
+```
+
+1. Which of the two functions has the shape of a core modeling function, left, right, or both? 
+
+`r devoirs3::devoirs_set3(c("left", "right", "both"), correct="both", label="dsc-1-cls")`
+
+
+2. Which core modeling function(s) are shown?
+
+```{devoirs_choices}
+#| label: choices_dsc.2.3d
+- 'hill() and recip()':
+    correct: false
+- 'hill() and hillside()':
+    correct: true
+- 'Just recip()':
+    correct: false
+- 'Just log2()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dsc-2-3d",
+  question = "Placeholder for now",
+  answers = choices_dsc.2.3d,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-duck-swim-candy -->

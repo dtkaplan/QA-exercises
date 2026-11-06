@@ -3,7 +3,7 @@ id: "ant-dive-stair"
 created: "Fri Oct 16 11:52:15 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

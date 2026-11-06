@@ -1,0 +1,14 @@
+---
+id: hampster-tie-scarf
+created: Sept 9, 2026
+status: sketch
+chapter: 9
+mode: computing exercise
+attribution: DTK
+---
+
+EXERCISE: 
+Consider the model `score(performance, education, income, size)` defined above. Replace `same(income)` with `log2(income)` and `hillside(income)` in separate versions of the model. How do the resulting functions differ in terms of their sensitivity to changes in family income?
+
+Anyone familiar with the pattern of family incomes knows that income differs markedly. It is not uncommon for one family to have, say, ten times the income of another. However, it seems unrealistic that the more affluent family gets such a boost in student performance. To create a more realistic model, the modeler can replace the `same(income)` in  `score()`. Two good choices would be `log2(income)`, which replaces income with its magnitude, or `hillside(income)`. 
+

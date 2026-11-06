@@ -1,0 +1,39 @@
+<!--
+id: "goat-shut-pen"
+created: "Thu Oct 15 12:13:29 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-goat-shut-pen}
+Which statement best expresses the role of a quantitative model in this book?
+
+```{devoirs_choices}
+#| label: choices_d01.model.bridge
+- 'It bridges real-world givens and the power of formal reasoning.':
+    correct: true
+- 'It replaces the real world with a mathematically exact copy.':
+    correct: false
+- 'It guarantees that conclusions about the real world are true.':
+    correct: false
+- 'It eliminates the need for heuristic reasoning.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-model-bridge",
+  question = "Placeholder for now",
+  answers = choices_d01.model.bridge,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-goat-shut-pen -->

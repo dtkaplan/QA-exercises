@@ -23,7 +23,7 @@ source("_start-up.R")
 ## `r cc()`
 
 
-`r devoirs::devoirsTF(correct = TRUE, id="R-3-11")` A rate is a quantity.
+`r devoirs::devoirs_TF(correct = TRUE, id="R-3-11")` A rate is a quantity.
 
 
 ## `r cc()`
@@ -39,7 +39,7 @@ The dimension of a rate is:
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = TRUE, id = cc(id))` A *compound rate* is a quantity.
+`r devoirs::devoirs_TF(correct = TRUE, id = cc(id))` A *compound rate* is a quantity.
 
 ## `r cc()`
 What is the conversion factor ("flavor of one") for converting an angle measured in radians into degrees?

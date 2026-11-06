@@ -2,7 +2,7 @@
 id: "avoid-get-laundry"
 created: "Thu Oct  9 08:44:48 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "exercise"
 -->

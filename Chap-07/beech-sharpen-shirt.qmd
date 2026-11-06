@@ -2,7 +2,7 @@
 id: "beech-sharpen-shirt"
 created: "Wed Apr 22 07:57:11 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "reading-question"
 -->

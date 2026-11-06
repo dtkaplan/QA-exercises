@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300">
+  <defs><clipPath id="glyph0"><text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">0</text></clipPath></defs>
+  <rect width="240" height="300" fill="#287c97"/>
+  <path d="M-22 76C10 37 43 34 71 57s48 41 77 17 64-31 106 2l-26 49c-33-14-54-8-81 14s-54 26-84 3-50-20-80 9z" fill="#e9b233"/>
+  <path d="M-19 207c32-39 60-44 88-21s46 31 74 7 60-31 103 0l-30 59c-32-14-54-7-79 15s-56 20-84-1-46-18-70 9z" fill="#d04632"/>
+  <path d="M30-17c26 27 30 54 9 80s-15 51 13 76 33 49 12 76-17 50 13 82l-48 22c-29-34-34-67-10-100s14-54-14-78-25-55-5-87S20 8 1-8z" fill="#ed762b"/>
+  <path d="M4 31c26 17 46 14 68-5s41-14 62 5m45 242c23-22 45-27 74-11" fill="none" stroke="#f4e7c4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M-7 261c24-20 41-15 58 4s37 21 58 4m53-202c22-20 42-21 67-2" fill="none" stroke="#f0c03c" stroke-width="15" stroke-linecap="round"/>
+  <path d="M18 18c29-12 58-7 82 9m29 251c35 12 62 5 89-14M15 211c16-18 25-33 27-49m147-71c-13 15-18 29-18 43" fill="none" stroke="#c84232" stroke-width="6" stroke-linecap="round"/>
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" fill="#f3e3bf" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">0</text>
+  <g clip-path="url(#glyph0)" fill="none" stroke-linecap="round">
+    <path d="M26 88c41-28 74-23 100-5s53 17 92-8" stroke="#cf4232" stroke-width="36"/>
+    <path d="M37 126c37-17 65-5 88 10s51 13 87-9" stroke="#2c7e99" stroke-width="25"/>
+    <path d="M34 187c36-18 63-11 87 6s53 16 97-11" stroke="#e9b333" stroke-width="33"/>
+    <path d="M48 217c30-11 51-7 72 6s50 14 80-5" stroke="#ee762b" stroke-width="18"/>
+    <path d="M61 67c18 8 31 18 44 31m54 33c-15 5-29 4-45-1m-31 48c17-8 33-6 48 3m29 24c13-5 23-12 33-22" stroke="#fff3d7" stroke-width="8"/>
+  </g>
+  <g fill="none" stroke-linecap="round"><path d="M31 44l13-7m157 14 13 8M20 233l14-7m179 28 12-8M52 279l10 4" stroke="#f4e6c2" stroke-width="4"/><path d="M29 85l10 5m164 110 11-5M22 162l9-13m168-91 10-6" stroke="#e9b333" stroke-width="4"/></g>
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" fill="none" stroke="#000" stroke-width="1.375" stroke-linejoin="round" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">0</text>
+</svg>

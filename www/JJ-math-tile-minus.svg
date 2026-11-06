@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300">
+  <defs><clipPath id="glyphMinus"><text x="120" y="150" dominant-baseline="central" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340">&#8722;</text></clipPath></defs>
+  <rect width="240" height="300" fill="#327d94"/>
+  <path d="M-18 73C13 36 44 33 72 56s48 41 77 17 63-31 105 1l-25 50c-33-15-55-8-81 14s-55 26-84 3-51-20-81 10z" fill="#e7b133"/>
+  <path d="M-19 211c33-40 60-45 89-21s47 30 74 6 59-30 102 1l-30 59c-31-14-54-7-79 14s-56 20-84-2-46-18-70 10z" fill="#d04632"/>
+  <path d="M32-16c25 27 29 54 9 80s-15 51 13 76 33 48 12 76-17 49 13 82l-48 22c-29-35-34-67-10-100s14-54-14-78-25-55-5-87S21 8 2-8z" fill="#ed762b"/>
+  <path d="M2 30c26 18 47 15 69-4s40-16 62 4m44 244c24-22 46-27 74-10" fill="none" stroke="#f3e4bd" stroke-width="13" stroke-linecap="round"/>
+  <path d="M-7 261c24-20 41-15 59 4s37 21 57 4m53-201c23-20 43-20 67-1" fill="none" stroke="#c83e32" stroke-width="15" stroke-linecap="round"/>
+  <path d="M-21 278c40-35 65-67 91-94s52-36 77-18 48 18 73-8 34-46 52-70" fill="none" stroke="#e9b431" stroke-width="25" stroke-linecap="round"/>
+  <path d="M28 54l17-9m-8 208 19-11m119-87 18 7" fill="none" stroke="#f4e6c4" stroke-width="7" stroke-linecap="round"/>
+  <text x="120" y="150" dominant-baseline="central" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" fill="#f4e6c4">&#8722;</text>
+  <g clip-path="url(#glyphMinus)" fill="none" stroke-linecap="round">
+    <path d="M35 127c39-21 70-15 96-2s51 12 75-4" stroke="#d34932" stroke-width="26"/>
+    <path d="M42 167c31-10 59-7 82 3s48 10 73-4" stroke="#eab331" stroke-width="15"/>
+    <path d="M63 142l17-3m65 12 18-2" stroke="#2d7f99" stroke-width="7"/>
+  </g>
+  <g fill="none" stroke-linecap="round"><path d="M29 43l13-7m159 13 13 8M19 234l14-7m179 27 12-8M51 279l10 4" stroke="#f5e7c5" stroke-width="4"/><path d="M28 84l10 5m164 111 11-5M21 162l9-13m169-91 10-6" stroke="#e7b133" stroke-width="4"/></g>
+  <text x="120" y="150" dominant-baseline="central" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" fill="none" stroke="#000" stroke-width="1.375" stroke-linejoin="round">&#8722;</text>
+</svg>

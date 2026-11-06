@@ -2,7 +2,7 @@
 id: "oak-swim-bed"
 created: "Sun Dec 28 14:18:53 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
 mode: "exercise"
 -->

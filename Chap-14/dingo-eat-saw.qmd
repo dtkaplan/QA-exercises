@@ -2,7 +2,7 @@
 id: "dingo-eat-saw"
 created: "Thu Feb 19 12:08:19 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 14
 mode: "exercise"
 -->

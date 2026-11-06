@@ -2,7 +2,7 @@
 id: "aspen-serve-painting"
 created: "Tue Dec  9 17:10:49 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
 mode: "activity"
 -->

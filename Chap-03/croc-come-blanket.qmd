@@ -3,7 +3,7 @@ id: "croc-come-blanket"
 created: "Sun Dec 28 14:00:00 2025"
 attribution: DTK
 use: Chapter 3 reading questions
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "reading-question"
 -->

@@ -3,7 +3,7 @@ id: "puppy-hang-blanket"
 created: "Wed Dec 31 07:20:54 2025"
 attribution: Dave Ruth
 use: "Reading Question Chap 2"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 2
 mode: "reading-question"
 -->

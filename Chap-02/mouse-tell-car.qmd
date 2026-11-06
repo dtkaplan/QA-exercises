@@ -3,7 +3,7 @@ id: "mouse-tell-car"
 created: "Fri Oct 16 08:19:00 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 02
 topic: data
 -->

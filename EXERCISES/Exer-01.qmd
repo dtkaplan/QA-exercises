@@ -7,13 +7,19 @@ subtitle: "Chapter 1 Exercises"
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+`r devoirs3::devoirs_start("QA-exer-01")`
 
 ::: {.panel-tabset}
 
 ## 1
 
-None yet.
+{{< include ../devoirs3/Chap-01/hamster-hurt-lamp.qmd >}}
+
+## 2
+
+{{< include ../devoirs3/Chap-01/monkey-drive-book.qmd >}}
+
+
 
 :::
 

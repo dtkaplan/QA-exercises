@@ -3,7 +3,7 @@ id: "spider-find-blouse"
 created: "Fri Oct 16 10:17:57 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 04
 
 -->

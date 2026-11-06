@@ -1,0 +1,22 @@
+<!--
+id: "finch-chew-spoon"
+created: "Mon Dec  8 11:20:06 2025"
+attribution: TBA
+status: "draft"
+chapter: 9
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-finch-chew-spoon}
+Proposed in-class lesson for likelihood. Work through the [Reading Questions](RQ-09-likelihood.html) one at a time. By asking questions of the students, lead them to an understanding of the origin of each curve in the figures, being careful to say which are hypothetical curves and which are curves that include the observed data. 
+
+- Pose new data values for observations.
+- Show how to combine likelihood values for several observations.
+- Ask them to speculate on what the probability distributions will be for the no-storm-yet observations.
+
+:::
+ <!-- end of prp-finch-chew-spoon -->

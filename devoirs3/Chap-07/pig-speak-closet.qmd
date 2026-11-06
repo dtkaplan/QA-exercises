@@ -1,0 +1,47 @@
+<!--
+id: "pig-speak-closet"
+created: "Fri Jan 30 17:05:14 2026"
+attribution: Dorothy Dickmann
+use: Chap 6 drill
+status: ready-to-use
+chapter: 7
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pig-speak-closet}
+```{r}
+#| echo: false
+#| label: C07-zhhhb
+slice_plot(dnorm(x) ~ x, domain(x = -3:3)) |>
+  gf_labs(y = "output", x = "input") |>
+  gf_theme(theme_minimal(base_size = 16))
+```
+
+Which core modeling function does this graph show?
+
+```{devoirs_choices}
+#| label: choices_psc.1.xkd
+- 'hill()':
+    correct: true
+- 'hillside()':
+    correct: false
+- 'osc()':
+    correct: false
+- 'recip()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "psc-1-xkd",
+  question = "Placeholder for now",
+  answers = choices_psc.1.xkd,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+:::
+
+<!-- end of exr-pig-speak-closet -->

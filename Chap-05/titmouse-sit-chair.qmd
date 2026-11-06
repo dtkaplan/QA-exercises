@@ -3,7 +3,7 @@ id: "titmouse-sit-chair"
 created: "Wed Dec 31 13:27:42 2025"
 attribution: DTK
 use: "Chapter 5 exercises"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->

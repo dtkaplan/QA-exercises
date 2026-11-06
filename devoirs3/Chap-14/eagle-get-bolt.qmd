@@ -1,0 +1,50 @@
+<!--
+id: "eagle-get-bolt"
+created: "Mon Jan 26 11:58:40 2026"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-eagle-get-bolt}
+## Housing shortfall
+
+The graphic in @fig-house-building shows the number of new houses built each year in the US over the last half century as reported in November 2025 by the [New York Times](https://www.nytimes.com/2025/11/23/opinion/housing-crisis-america.html?smid=nytcore-ios-share). The horizontal dotted line shows the yearly average through 2007, just before the "great recession."
+
+::: {#fig-house-building}
+![](../www/housing-built-CAP.png)
+
+Yearly housing built in the US over the last 60 years. The graph mistakenly claims to be units per 100,000 people, but in reality it is units per 1000 people. So a typical yearly rate is about one-half house per year per 1000 people. [Source](https://www.americanprogress.org/article/build-baby-build-a-plan-to-lower-housing-costs-for-all/)
+:::
+
+[[Slot this in for an exercise in the rates chapter? compound rates.]]
+
+
+A straightforward interpretation of @fig-house-building ---straightforward, but not necessarily correct---is that over the last 20 years or so, the yearly number of new housing units has been substantially below historical averages. 
+
+"New units per year" is a rate of change. However, people do not live in rates of change, they live in houses! The link between the data in @fig-house-building and the stock of housing (per 1000 people) is *accumulation*. The "historical average" in the graph reflects data up through 2007. Since the Great Recession (2008), the rate of change of the housing stock has been consistently below the historical average by about 0.2 units per year per thousand people. Accumulating this over the last 17 years (the date of this writing), suggests a cumulative shortfall of around 3 houses per 1000 people. It's hard to interpret at rate of 0.2 units per year per thousand people without knowing something about how many houses there are. Using data from the US Census not included in the reported article, there are about 430 housing units per 1000 people. So the new construction rate is less than one-tenth of a percent per year. 
+
+It pays to look at some other factors that are crucial to constructing a meaningful interpretation of the housing situation. According to [an estimate](https://www.enterprisecommunity.org/sites/default/files/2022-01/housing-losses-by-counties-white-paper-final.pdf) about 1.1% of housing units are destroyed each year. This is a rate per year, but it is not in the correct units to compare to the shortfall of housing. We need to know how many housing units there are to translate 1.1% per year into a rate of change of housing units. According to the US Census, there are about 150,000,000 housing units in the US, while the population is about 347 million. This gives about 430 households per thousand people. A "household" is not a "house," but assuming the numbers to be roughly equivalent gives 430 housing units per thousand people. Consequently, about 4.7 housing units per thousand people are destroyed each year. This far exceeds the 0.4 housing units (per 1000 people) completed each year. Combining the two numbers gives a loss in housing stock of about 1% per year, about 4 houses per year per 1000 people.
+
+A decrease in housing stock is not necessarily a problem. What's important is the balance between the number of housing units and the number of *households*. [Data published here](https://ycharts.com/indicators/us_households#:~:text=Basic%20Info.%20US%20Households%20is%20at%20a,month%20and%200.81%25%20from%20one%20year%20ago.) indicates that since 2020 the number of households increases by about 1% per year. For housing stock to stay in balance with the number of households requires an addition of about 4.3 housing units per 1000 people) per year. Instead, we have an estimated loss of about 4 housing units per 1000 people per year. Housing stock is falling behind household formation by about 8 units per 1000 people per year, a mismatch of about 2% per year in the stock of housing.
+
+Some things to point out here:
+
+1. Appropriate interpretation of data can only be done in the context of the full *system* of components, not just a single component such as reported in @fig-house-building. In this case, there are two system components (household formation and housing unit destruction) that are an order of magnitude *larger* in impact than the new housing rate.
+
+2. While it is somewhat tedious to keep track and report the units---per 1000 people per year appears about a dozen times in the above.
+
+3. It helps when assessing published information to have a good feeling for the size of things. The units of "per 100,000 per year" given in the new housing graphic would mean that in a city of 1-million people, only about 40 new housing units are built each year. That's silly. The reality is 100 times bigger.
+
+4. Care is needed to notice whether reported data are in the form of a rate of change (new building per 1000 per year) or a stock (430 housing units per 1000 people). Often we need both forms in modeling and interpreting data.
+
+The model presented above can be legitimately critized. For instance, one critical number---the rate of destruction of housing---is based on one published estimate. Given its central role in the conclusion, better support for the estimate is needed. But in interpreting criticism of a model, keep in mind the purpose for the model. This model was constructed to investigate whether a news article about housing shortages is informative about that issue. It turns out, the article did not include enough detail about the total system to be useful. And it may turn out that the estimate of housing destruction rates are misleading. But at least we know now what to focus our attention on: housing destruction and new household formation. "All models are wrong, some are useful."
+
+
+
+
+:::
+ <!-- end of exr-eagle-get-bolt -->

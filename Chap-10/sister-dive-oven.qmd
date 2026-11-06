@@ -3,7 +3,7 @@ id: "sister-dive-oven"
 created: "Thu Oct 22 18:47:23 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 10
 
 -->

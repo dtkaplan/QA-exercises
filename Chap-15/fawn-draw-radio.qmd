@@ -2,7 +2,7 @@
 id: "fawn-draw-radio"
 created: "Tue Feb 24 12:31:03 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 15
 mode: "exercise"
 -->

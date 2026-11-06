@@ -1,0 +1,39 @@
+<!--
+id: "bee-light-kayak"
+created: "Fri Jan 30 16:48:59 2026"
+attribution: Dorothy Dickmann
+use: Chap 7 drill
+status: "sketch"
+chapter: 7
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bee-light-kayak}
+Which core modeling function would best describe the adoption of a new technology (few users at first, rapid growth, then leveling off as the market saturates)?
+
+```{devoirs_choices}
+#| label: choices_d06.blk.73
+- 'hill()':
+    correct: false
+- 'hillside()':
+    correct: true
+- 'osc()':
+    correct: false
+- 'exp2()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-blk-73",
+  question = "Placeholder for now",
+  answers = choices_d06.blk.73,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+:::
+ <!-- end of exr-bee-light-kayak -->

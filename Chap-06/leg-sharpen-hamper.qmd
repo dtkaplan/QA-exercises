@@ -3,7 +3,7 @@ id: "leg-sharpen-hamper"
 created: "Fri Oct 16 11:22:23 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 06
 
 -->

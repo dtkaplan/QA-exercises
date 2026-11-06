@@ -1,0 +1,43 @@
+<!--
+id: "aspen-pack-blanket"
+created: "Wed Jan 28 09:51:09 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 5"
+status: ready-to-use
+chapter: 6
+mode: drill
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-aspen-pack-blanket}
+The words used to identify the various inputs to a function are called ____.
+
+```{devoirs_choices}
+#| label: choices_apb.1.hes
+- 'abstractions':
+    correct: false
+- 'algorithms':
+    correct: false
+- 'analyses':
+    correct: false
+- 'arguments':
+    correct: true
+- 'asymptotes':
+    correct: false
+- 'axes':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "apb-1-hes",
+  question = "Placeholder for now",
+  answers = choices_apb.1.hes,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-aspen-pack-blanket -->

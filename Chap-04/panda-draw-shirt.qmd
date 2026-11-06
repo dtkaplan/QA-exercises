@@ -2,7 +2,7 @@
 id: "panda-draw-shirt"
 created: "Tue Feb 24 13:23:11 2026"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 4
 mode: "discussion"
 topic: "finance"

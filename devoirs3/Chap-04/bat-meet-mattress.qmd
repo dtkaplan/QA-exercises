@@ -1,0 +1,70 @@
+<!--
+id: "bat-meet-mattress"
+created: "Wed Aug 19 12:40:10 2026"
+attribution: DTK
+uses: rates
+status: ready-to-use
+chapter: 4
+mode: drill
+topic: "energy"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bat-meet-mattress}
+Sometimes the dimension of a quantity points to an unexpected way to interpret that quantity. Consider, for example, energy utilization of walking rate *80 Cal per mile*. The dimension of *80 Cal* is [energy]. The dimension of *mile* is [L]. 
+
+
+1. Which of these is equivalent to [energy]
+```{devoirs_choices}
+#| label: choices_bmm.1.t37s
+- '`r bracket("force")` $\div$ `r bracket("length")`':
+    correct: false
+- '`r bracket("force")` $\div$ `r bracket("mass")`':
+    correct: false
+- '`r bracket("force")` $\times$ `r bracket("length")`':
+    correct: true
+- '`r bracket("mass")` $\times$ `r bracket("time")`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bmm-1-t37s",
+  question = "Placeholder for now",
+  answers = choices_bmm.1.t37s,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+2. What is the dimension of the rate *80 Cal per mile*?
+
+```{devoirs_choices}
+#| label: choices_bmm.2.t37s
+- '`r bracket("energy")`':
+    correct: false
+- '`r bracket("force")`':
+    correct: true
+- '`r bracket("energy")` $\div$ `r bracket("time")`':
+    correct: false
+- '`r bracket("energy")` $\times$ `r bracket("length")`':
+    correct: false
+    feedback: 'notice the *per* in *Cal per mile*.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bmm-2-t37s",
+  question = "Placeholder for now",
+  answers = choices_bmm.2.t37s,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+3. Briefly state your opinion of whether the (correct) answer to 2 is consistent with your intuition of what energy per mile means. 
+`r devoirs3::devoirs_text("bmm-3-t37s", )
+
+:::
+ <!-- end of exr-bat-meet-mattress -->

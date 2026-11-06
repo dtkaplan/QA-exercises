@@ -2,7 +2,7 @@
 id: "kid-ring-screen"
 created: "Mon Nov  3 11:10:56 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 11
 mode: "exercise"
 -->

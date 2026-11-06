@@ -3,7 +3,7 @@ id: "avoid-send-mug"
 created: "Mon Dec  1 10:38:05 2025"
 attribution: DTK
 use: "Exercise Chap 3"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "drill"
 title: "Metric system orders of magnitude"

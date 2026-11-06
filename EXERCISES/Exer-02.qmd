@@ -1,0 +1,23 @@
+---
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 2 Exercises"
+---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
+`r devoirs3::devoirs_start("QA-exer-02")`
+
+::: {.panel-tabset}
+
+## 1
+
+{{< include ../devoirs3/Chap-02/jellyfish-open-spoon.qmd >}}
+
+
+
+
+:::
+
+

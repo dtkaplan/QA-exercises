@@ -1,0 +1,18 @@
+<!--
+id: "lobster-open-coat"
+created: "Mon Dec  8 11:40:19 2025"
+attribution: DTK
+chapter: 7
+status: sketch
+mode: discussion
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-lobster-open-coat}
+Need an in-class plan. Perhaps using the computer. Do input scaling to get the function to match some data, like the tide data. Or, play synthesized sounds (sine waves) of different frequencies. 
+
+:::
+ <!-- end of exr-lobster-open-coat -->

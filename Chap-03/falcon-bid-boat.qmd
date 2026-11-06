@@ -3,7 +3,7 @@ id: "falcon-bid-boat"
 created: "Fri Oct 16 08:58:10 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->

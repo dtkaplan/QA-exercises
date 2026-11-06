@@ -3,7 +3,7 @@ id: "hyena-fall-plant"
 created: "Fri Oct 16 12:19:37 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

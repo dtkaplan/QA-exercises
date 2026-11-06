@@ -3,7 +3,7 @@ id: "goldfish-cost-bed"
 created: "Tue Oct 21 09:44:26 2025"
 attribution: DTK
 use: "Chapter 5 exercise"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->
@@ -61,7 +61,7 @@ The sultriness function. Set the inputs with the sliders and the corresponding o
 @fig-heat-index-sliders shows three values. When you change the inputs, the output changes accordingly. That is the characteristic of a function. The presentation in @fig-heat-index-sliders is adequate for someone who wants to compute the sultriness for given weather conditions. We gain more insight into sultriness if we present the output of the function for *many different* sets of inputs. Steadman's paper displayed the function as a printed **table**, which was the only practical way of communicating such a complicated function in 1979 (that is, before the widespread availability of calculators or computers).
 :::
 
-1. True or false: there are temperature/humidity combinations at which the output temperature (that is, the sultriness index) is *lower* than the input ambient temperature? `r devoirs::devoirsTF(TRUE, id="gcb-1-kwe")`
+1. True or false: there are temperature/humidity combinations at which the output temperature (that is, the sultriness index) is *lower* than the input ambient temperature? `r devoirs::devoirs_TF(TRUE, id="gcb-1-kwe")`
 
 2. At an input temperature of 37 C (that is, body temperature) what is the highest humidity level for which the inputs are in bounds?
 
@@ -85,9 +85,9 @@ The sultriness function. Set the inputs with the sliders and the corresponding o
 4. 15 percentage points
 ```
     
-3b. At 0% humidity, there is some input temperature where the output temperature is greater than the input. `r devoirs::devoirsTF(FALSE, id="gcb-3b-2se")`
+3b. At 0% humidity, there is some input temperature where the output temperature is greater than the input. `r devoirs::devoirs_TF(FALSE, id="gcb-3b-2se")`
     
-3c. At 50% humidity, there is some input temperature where the output temperature is greater than the input. `r devoirs::devoirsTF(TRUE, id="gcb-3c-2se")`
+3c. At 50% humidity, there is some input temperature where the output temperature is greater than the input. `r devoirs::devoirs_TF(TRUE, id="gcb-3c-2se")`
     
 4. At 50% humidity, what's the highest possible value for the output?
 

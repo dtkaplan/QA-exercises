@@ -3,7 +3,7 @@ id: "aspen-pack-blanket"
 created: "Wed Jan 28 09:51:09 2026"
 attribution:  Dave Ruth
 uses: "Quiz Ch 5"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "drill"
 -->

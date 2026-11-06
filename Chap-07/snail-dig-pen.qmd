@@ -3,7 +3,7 @@ id: "snail-dig-pen"
 created: "Fri Jan 30 17:04:28 2026"
 attribution: Dorothy Dickmann
 use: Chap 6 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

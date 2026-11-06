@@ -1,0 +1,89 @@
+<!--
+id: "shark-dream-linen"
+created: "Thu Jan 29 13:24:12 2026"
+attribution: DTK
+chapter: 8
+mode: exercise
+status: ready
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-shark-dream-linen}
+Consider the relative probability distribution graphed below.
+
+```{r}
+#| echo: false
+#| label: C08-gyleu
+Pts <- tibble::tribble(
+  ~ x, ~y, ~letter,
+  1.5, 0.02, "A",
+  3.0, 0.02, "B",
+  5.0, 0.02, "C",
+  7.5, 0.02, "D"
+)
+
+fun <- function(x) 0.3*dnorm(x, mean = 5, sd=1) + 0.7*dexp(x, rate = 1/3)
+slice_plot( fun(x) ~ x, domain(x = 0:10)) |>
+  gf_text(y ~ x, label = ~ letter, data = Pts, color = "blue") |>
+  gf_labs(y = "Relative probability", x = "Snowfall (in)") |>
+  gf_theme(theme_minimal(base_size = 18))
+```
+
+
+1. Which of these outcomes is the least likely?
+`r devoirs3::devoirs_set3(label = "sdl-1-uew", choices=LETTERS[1:4], correct = "D")`
+
+2. Which of these outcomes is the most likely?
+`r devoirs3::devoirs_set3(label = "sdl-2-uew", choices=LETTERS[1:4], correct = "C")`
+
+3. How much more likely is outcome C compared to outcome B? (Pick the closest estimate.)
+
+```{devoirs_choices}
+#| label: choices_sdl.3.kss
+- 'About 30 percent more likely':
+    correct: false
+- 'About 60 percent more likely':
+    correct: true
+- 'About 100 percent more likely':
+    correct: false
+- 'About 150 percent more likely':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sdl-3-kss",
+  question = "Placeholder for now",
+  answers = choices_sdl.3.kss,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+4. How much more likely is outcome B compared to outcome D? (Pick the closest estimate.)
+
+```{devoirs_choices}
+#| label: choices_sdl.4.kss
+- 'About 100 percent more likely':
+    correct: false
+- 'About 200 percent more likely':
+    correct: false
+- 'About 300 percent more likely':
+    correct: true
+- 'About 500 percent more likely':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sdl-4-kss",
+  question = "Placeholder for now",
+  answers = choices_sdl.4.kss,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-shark-dream-linen -->

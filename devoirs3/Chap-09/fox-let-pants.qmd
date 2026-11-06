@@ -1,0 +1,19 @@
+<!--
+id: "fox-let-pants"
+created: "Thu Nov  6 06:41:38 2025"
+attribution: TBA
+status: "draft"
+chapter: 9
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-fox-let-pants}
+ANALYSIS OF THE SOLAR POWER DATA to illustrate function composition.
+
+DO THIS USING DATA and the knowledge that the position of the sun is a function of time (and date) and, more simply, that it doesn't change much from day to day, although it changes a lot from hour to hour.
+:::
+ <!-- end of prp-fox-let-pants -->

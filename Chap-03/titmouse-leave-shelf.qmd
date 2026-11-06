@@ -2,7 +2,7 @@
 id: "titmouse-leave-shelf"
 created: "Fri Nov 28 14:02:58 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "exercise"
 title: "Dimensions from the *Practical Man*"

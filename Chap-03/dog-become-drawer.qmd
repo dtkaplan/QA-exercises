@@ -3,7 +3,7 @@ id: "dog-become-drawer"
 created: "Fri Oct 16 08:51:14 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -12,7 +12,7 @@ chapter: 03
 
 
 ::: {#exr-dog-become-drawer}
-`r devoirs::devoirsTF(correct = TRUE, id="D-03-hex")` You can add or subtract any two *numbers*.
+`r devoirs::devoirs_TF(correct = TRUE, id="D-03-hex")` You can add or subtract any two *numbers*.
 
 :::
  <!-- end of exr-dog-become-drawer -->

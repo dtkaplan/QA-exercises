@@ -1,0 +1,37 @@
+<!--
+id: "cow-walk-pantry"
+created: "Sat Jul 12 09:31:00 2025"
+attribution: TBA
+status: "sketch"
+chapter: 5
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cow-walk-pantry}
+Perhaps unsurprisingly, the power of an automobile engine has the dimension of power. 
+
+Imagine a car with a 100 horsepower engine. What is the equivalent value in units of watts.
+
+```{devoirs_choices}
+#| label: choices_light.bulb.e3
+- '735.5 watts':
+    correct: false
+- '7355 watts':
+    correct: false
+- '73,550 watts':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "light-bulb-e3",
+  question = "Placeholder for now",
+  answers = choices_light.bulb.e3,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+:::
+ <!-- end of exr-cow-walk-pantry -->

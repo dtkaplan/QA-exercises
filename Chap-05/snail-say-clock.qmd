@@ -2,7 +2,7 @@
 id: "snail-say-clock"
 created: "Mon Dec  1 09:43:24 2025"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->

@@ -3,7 +3,7 @@ id: "dolphin-enjoy-kitchen"
 created: "Thu Oct 23 07:58:37 2025"
 attribution: DTK
 use: "Chapter 5 exercises"
-status: "ready-to-use"
+status: ready-to-use
 chapter: 6
 mode: "exercise"
 -->

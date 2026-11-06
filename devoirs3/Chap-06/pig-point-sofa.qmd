@@ -1,0 +1,46 @@
+<!--
+id: "pig-point-sofa"
+created: "Sat Oct 18 08:53:14 2025"
+attribution: TBA
+status: "draft"
+chapter: 6
+mode: "discussion"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-pig-point-sofa}
+## Envisioning functions
+
+It helps to have a concrete mental image of what a function is. One metaphor, which some people find useful, is that a function is a kind of **look-up table**, as drawn schematically in @tbl-look-up-table. You can use the table to look up the relevant values of the inputs and read off the corresponding value of the output.
+
+::: {#tbl-look-up-table}
+
+x | y | output
+--|---|--------
+5 | 2 | 14.1
+6 | 2 | 14.3
+7 | 2 | 14.1
+5 | 3 | 13.8
+6 | 3 | 12.9
+7 | 3 | 10.7
+
+A function as a **look-up table**. Given values for the inputs x and y, look up the corresponding *row* in the table, then read off the output.
+:::
+
+The mathematical conception of function imposes a restriction on the contents. There can never be two rows that have the same values for all the inputs. For instance, in @tbl-look-up-table, it would not be permitted to have another row with inputs (x = 6, y = 2). Another way to say the same thing: Given input values, the output is completely deterministic; no waffling, indecision, or randomness allowed!
+
+Historically, printed look-up tables were an important way to represent functions, and old statistics and applied math books have many pages of such tables.
+
+Another visually compelling image of a function is provided by a now-obsolete technique: nomography. @fig-nomogram-bmi shows an example: the function that takes human height and weight as inputs and produces body-mass index (BMI) as the output.
+
+::: {#fig-nomogram-bmi}
+![](../www/BMI-nomogram.png)
+A nomogram for body-mass index as a function of height and weight.
+
+:::
+
+:::
+ <!-- end of prp-pig-point-sofa -->

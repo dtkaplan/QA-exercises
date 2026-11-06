@@ -1,0 +1,15 @@
+<!--
+id: "elm-tear-plate"
+created: "Fri Nov  7 06:42:27 2025"
+attribution: TBA
+chapter: 7
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-elm-tear-plate}
+Exercise comparing a plot of `log2()` compared to the same plot using `magnitude()`. One is merely offset by another. 
+:::
+ <!-- end of exr-elm-tear-plate -->

@@ -3,7 +3,7 @@ id: "lion-open-canoe"
 created: "Fri Oct 16 10:35:43 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 05
 
 -->

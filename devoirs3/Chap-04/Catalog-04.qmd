@@ -1,0 +1,224 @@
+---
+title: "Chapter 04 Catalog"
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+<style>
+.theorem-title {
+  display: none;
+}
+
+.panel-tabset {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20%) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.panel-tabset > .nav-tabs {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.panel-tabset > .nav-tabs .nav-link {
+  width: 100%;
+  text-align: left;
+}
+
+.panel-tabset > .tab-content {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .panel-tabset {
+    display: block;
+  }
+
+  .panel-tabset > .nav-tabs {
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+
+  .panel-tabset > .nav-tabs .nav-link {
+    width: auto;
+  }
+}
+</style>
+{{< include ../exercise-header.qmd >}}
+
+::: {.callout-note collapse="true" title="Group: AI-generated"}
+::: {.panel-tabset collapse=true}
+## sheep-feel-tv
+
+
+> File: Chap-04/sheep-feel-tv.qmd
+> Status: null
+
+
+{{< include sheep-feel-tv.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: computer-skills"}
+::: {.panel-tabset collapse=true}
+## spider-forgive-pantry
+
+
+> File: Chap-04/spider-forgive-pantry.qmd
+> Status: draft
+
+
+{{< include spider-forgive-pantry.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: discussion"}
+::: {.panel-tabset collapse=true}
+## duck-sleep-lamp
+
+
+> File: Chap-04/duck-sleep-lamp.qmd
+> Status: ready-to-go
+
+
+{{< include duck-sleep-lamp.qmd >}}
+
+## panda-draw-shirt
+
+
+> File: Chap-04/panda-draw-shirt.qmd
+
+{{< include panda-draw-shirt.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: drill"}
+::: {.panel-tabset collapse=true}
+## aspen-let-shelf
+
+
+> File: Chap-04/aspen-let-shelf.qmd
+
+{{< include aspen-let-shelf.qmd >}}
+
+## panda-refer-window
+
+
+> File: Chap-04/panda-refer-window.qmd
+
+{{< include panda-refer-window.qmd >}}
+
+## reptile-speak-piano
+
+
+> File: Chap-04/reptile-speak-piano.qmd
+
+{{< include reptile-speak-piano.qmd >}}
+
+## rhinosaurus-shut-fork
+
+
+> File: Chap-04/rhinosaurus-shut-fork.qmd
+
+{{< include rhinosaurus-shut-fork.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: exercise"}
+::: {.panel-tabset collapse=true}
+## falcon-iron-pants
+
+
+> File: Chap-04/falcon-iron-pants.qmd
+
+{{< include falcon-iron-pants.qmd >}}
+
+## finger-dig-fridge
+
+
+> File: Chap-04/finger-dig-fridge.qmd
+
+{{< include finger-dig-fridge.qmd >}}
+
+## ant-spend-shoe
+
+
+> File: Chap-04/ant-spend-shoe.qmd
+
+{{< include ant-spend-shoe.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: fragment"}
+::: {.panel-tabset collapse=true}
+## ash-ride-window
+
+
+> File: Chap-04/ash-ride-window.qmd
+> Status: oddity
+
+
+{{< include ash-ride-window.qmd >}}
+
+:::
+:::
+
+::: {.callout-note collapse="true" title="Group: unclassified"}
+::: {.panel-tabset collapse=true}
+## avoid-send-painting
+
+
+> File: Chap-04/avoid-send-painting.qmd
+> Status: sketch
+
+
+{{< include avoid-send-painting.qmd >}}
+
+## bat-meet-mattress
+
+
+> File: Chap-04/bat-meet-mattress.qmd
+
+{{< include bat-meet-mattress.qmd >}}
+
+## beech-put-knife
+
+
+> File: Chap-04/beech-put-knife.qmd
+
+{{< include beech-put-knife.qmd >}}
+
+## kid-sail-sofa
+
+
+> File: Chap-04/kid-sail-sofa.qmd
+> Status: sketch
+
+
+{{< include kid-sail-sofa.qmd >}}
+
+## seahorse-bathe-knife
+
+
+> File: Chap-04/seahorse-bathe-knife.qmd
+
+{{< include seahorse-bathe-knife.qmd >}}
+
+## spider-stand-ship
+
+
+> File: Chap-04/spider-stand-ship.qmd
+
+{{< include spider-stand-ship.qmd >}}
+
+:::
+:::
+

@@ -2,7 +2,7 @@
 id: "maple-freeze-hat"
 created: "Tue Feb 24 12:30:16 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 15
 mode: "exercise"
 title: "Newton's Second Law"

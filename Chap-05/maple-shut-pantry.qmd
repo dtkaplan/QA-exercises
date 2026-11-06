@@ -2,7 +2,7 @@
 id: "maple-shut-pantry"
 created: "Mon Dec 22 13:15:23 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 5
 mode: "exercise"
 -->

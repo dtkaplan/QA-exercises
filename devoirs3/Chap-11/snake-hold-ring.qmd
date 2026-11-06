@@ -1,0 +1,17 @@
+<!--
+id: "snake-hold-ring"
+created: "Tue Oct 28 10:44:16 2025"
+attribution: TBA
+status: "draft"
+chapter: 11
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-snake-hold-ring}
+Absolute and relative probability set with the criterion that the total probability across all possibilities, adds up to 1. We'll talk about how this calculation is done in `r xf("sec-accumulation")`.
+:::
+ <!-- end of exr-snake-hold-ring -->

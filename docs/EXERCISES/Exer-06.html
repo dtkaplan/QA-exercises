@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Quantitative Argumentation – Quantitative Argumentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><em>Quantitative Argumentation</em></h1>
+<p class="subtitle lead">Chapter 6 Exercises</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
+  }
+
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
+
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
+
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
+        }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
+    }
+
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
+
+    document.body.prepend(toolbar);
+  }
+
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
+    }
+  }
+
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
+
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
+    }
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">5</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">6</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">7</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">8</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">9</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false" href="">10</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" role="tab" aria-controls="tabset-1-11" aria-selected="false" href="">11</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-12" role="tab" aria-controls="tabset-1-12" aria-selected="false" href="">12</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<!--
+id: "dolphin-enjoy-kitchen"
+created: "Thu Oct 23 07:58:37 2025"
+attribution: DTK
+use: "Chapter 5 exercises"
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-dolphin-enjoy-kitchen" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Consider this plot of the hillside function:</p>
+<div id="fig-first-plot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-first-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-caption="Graphing a function" data-autorun="true">
+<pre class="{webr}"><code>#| caption: "Graphing a function"
+#| autorun: true
+slice_plot(hillside(z) ~ z, domain(z = -2:4))</code></pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-first-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>What R function is being used to make the plot?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="dek-1-gmek" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d312d676d656b" id="devoirs3-selection-64656b2d312d676d656b-1" value="AAielpw" data-devoirs3-option="" data-option-id="AAielpw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>plot()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d312d676d656b" id="devoirs3-selection-64656b2d312d676d656b-2" value="BAbzaii" data-devoirs3-option="" data-option-id="BAbzaii" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>slice_plot()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d312d676d656b" id="devoirs3-selection-64656b2d312d676d656b-3" value="CAxrlzl" data-devoirs3-option="" data-option-id="CAxrlzl" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>plotfun()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d312d676d656b" id="devoirs3-selection-64656b2d312d676d656b-4" value="DAmgpnx" data-devoirs3-option="" data-option-id="DAmgpnx" data-feedback="The actual name has an underscore character in it." data-feedback-html="The actual name has an underscore character in it.">
+    <span>sliceplot()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d312d676d656b" id="devoirs3-selection-64656b2d312d676d656b-5" value="EAitxod" data-devoirs3-option="" data-option-id="EAitxod" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>plot_fun()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dek-1-gmek</span>
+</span>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Immediately following the name of the function, there is an opening parenthesis. The matching closing parenthesis is at the very end of the command. In R (as in many computer languages) the <em>arguments</em> to the function are contained inside the parentheses. If there is more than one argument, successive arguments are separated by commas. How many arguments are there to <code>slice_plot()</code>?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="dek-2-z38d" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d322d7a333864" id="devoirs3-selection-64656b2d322d7a333864-1" value="AAkucar" data-devoirs3-option="" data-option-id="AAkucar" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d322d7a333864" id="devoirs3-selection-64656b2d322d7a333864-2" value="BAvpklu" data-devoirs3-option="" data-option-id="BAvpklu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>2</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d322d7a333864" id="devoirs3-selection-64656b2d322d7a333864-3" value="CAvpktf" data-devoirs3-option="" data-option-id="CAvpktf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>3</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d322d7a333864" id="devoirs3-selection-64656b2d322d7a333864-4" value="DAwcpwb" data-devoirs3-option="" data-option-id="DAwcpwb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>4</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dek-2-z38d</span>
+</span>
+</div>
+</div>
+<p>The first argument to <code>slice_plot()</code> tells which function you want to graph. In the example, the first argument is <code>hillside(z) ~ z</code>. This is called a ☞&nbsp;<strong>tilde expression</strong><span id="finger-tilde-expression-definition" data-label="tilde expression">&nbsp;☜</span> so named because the tilde character (<code>~</code>) appears.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>hillside(z)</code></td>
+<td><code>~</code> (tilde)</td>
+<td><code>z</code></td>
+</tr>
+</tbody>
+</table>
+<ol type="i">
+<li><p>The left part of the tilde expression is a <em>formula</em> written in more or less conventional algebraic form. Other examples for this formula: <code>2*z + 3</code>, <code>osc(z)</code>, <code>hillside(z) * osc(z)</code>.</p></li>
+<li><p>The right part of the tilde expression gives the <em>name</em> of the input variable. In the example, the name is <code>z</code>, but you can use whatever name you think appropriate. Note that the formula in (i) must be written in terms of the input-variable name.</p></li>
+<li><p>The middle part of the tilde expression is merely punctuation, but it is essential punctuation. Among other things, the tilde makes clear what are the left and right sides of the tilde expression.</p></li>
+</ol>
+<ol start="3" type="1">
+<li>Suppose that you want to call the input quantity <code>x</code>. You can easily modify the command to do this, just substitute <code>x</code> for <code>z</code>. In how many places do you have to make the change?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="dek-3-jwkd" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d332d6a776b64" id="devoirs3-selection-64656b2d332d6a776b64-1" value="AAiyunx" data-devoirs3-option="" data-option-id="AAiyunx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d332d6a776b64" id="devoirs3-selection-64656b2d332d6a776b64-2" value="BAjdmmt" data-devoirs3-option="" data-option-id="BAjdmmt" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>2</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d332d6a776b64" id="devoirs3-selection-64656b2d332d6a776b64-3" value="CAaoorp" data-devoirs3-option="" data-option-id="CAaoorp" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>3</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d332d6a776b64" id="devoirs3-selection-64656b2d332d6a776b64-4" value="DAkswjj" data-devoirs3-option="" data-option-id="DAkswjj" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>4</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dek-3-jwkd</span>
+</span>
+</div>
+</div>
+<p>Focus now on the graphic itself—<a href="#fig-first-plot" class="quarto-xref">Figure&nbsp;1</a>. The name of the input variable appears as a label on the horizontal axis. The label on the vertical axis, in contrast, is just a reminder that we are plotting the <em>output</em> of the function versus the input quantity.</p>
+<p>The vertical scale will be created automatically by <code>slice_plot()</code>, taking into account the range of function output values. But the horizontal axis is different: the user specifies this. The numerical extent of the horizontal axis is called the <strong>graphics domain</strong>.</p>
+<p>The second argument to <code>slice_plot()</code> is used for the graphics domain specification.</p>
+<ol start="4" type="1">
+<li>What is the graphics domain in <a href="#fig-first-plot" class="quarto-xref">Figure&nbsp;1</a>?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="dek-4-p3n2" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d70336e32" id="devoirs3-selection-64656b2d342d70336e32-1" value="AAskpjy" data-devoirs3-option="" data-option-id="AAskpjy" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0 to 4</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d70336e32" id="devoirs3-selection-64656b2d342d70336e32-2" value="BAbzoit" data-devoirs3-option="" data-option-id="BAbzoit" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>-2 to 2</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d70336e32" id="devoirs3-selection-64656b2d342d70336e32-3" value="CAeusru" data-devoirs3-option="" data-option-id="CAeusru" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>-2 to 4</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d70336e32" id="devoirs3-selection-64656b2d342d70336e32-4" value="DAcopan" data-devoirs3-option="" data-option-id="DAcopan" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>-4 to 4</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dek-4-p3n2</span>
+</span>
+</div>
+</div>
+<p>In the example, the second argument is <code>domain(z = -2:4)</code>. The graphics domain specification will always look like this, and uses the R function <code>domain()</code>.</p>
+<ol start="5" type="1">
+<li>How many arguments does <code>domain()</code> take in this example?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="dek-4-7s2r" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d37733272" id="devoirs3-selection-64656b2d342d37733272-1" value="AAgwgdc" data-devoirs3-option="" data-option-id="AAgwgdc" data-feedback="Since there is something inside the domain() parentheses, there must be at least one argument." data-feedback-html="Since there is something inside the domain() parentheses, there must be at least one argument.">
+    <span>0</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d37733272" id="devoirs3-selection-64656b2d342d37733272-2" value="BAgwuiu" data-devoirs3-option="" data-option-id="BAgwuiu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>1</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d37733272" id="devoirs3-selection-64656b2d342d37733272-3" value="CAjdplg" data-devoirs3-option="" data-option-id="CAjdplg" data-feedback="While it is true that the argument has several components, if there were multiple arguments they would be separated by commas. There are no commas inside the dom() parentheses." data-feedback-html="While it is true that the argument has several components, if there were multiple arguments they would be separated by commas. There are no commas inside the dom() parentheses.">
+    <span>2</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64656b2d342d37733272" id="devoirs3-selection-64656b2d342d37733272-4" value="DAycwry" data-devoirs3-option="" data-option-id="DAycwry" data-feedback="While it is true that the argument has several components, if there were multiple arguments they would be separated by commas. There are no commas inside the dom() parentheses." data-feedback-html="While it is true that the argument has several components, if there were multiple arguments they would be separated by commas. There are no commas inside the dom() parentheses.">
+    <span>3</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dek-4-7s2r</span>
+</span>
+</div>
+</div>
+<p>There are two punctuation symbols in the argument to <code>domain()</code>. The colon (:) is placed between the two limits to be used for the domain. <code>-2:4</code> means “minus 2 to 4.” The graphics domain zero to ten would be <code>0:10</code>. The other punctuation mark is <code>=</code>. To the left of the <code>=</code> goes the name of the input variable. The expression <code>z = -2:4</code> means “the graphics domain of <code>z</code> is to be -2 to 4.</p>
+<ol start="6" type="1">
+<li>Using the “graphing a function” interactive R chunk, write an expression to plot out the function <code>osc()</code> over the graphics domain 0 to 5. Use whatever you like as the input name. After checking that your expression works, copy the expression into the following answer block.</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-06" data-label="dek-6-ex">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-64656b2d362d6578">Text editor box.</label>
+<textarea id="devoirs3-text-64656b2d362d6578" class="devoirs3-text-input" rows="2" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dek-6-ex</span></p>
+</div>
+</div>
+<p><!-- end of exr-dolphin-enjoy-kitchen --></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<!--
+id: "fir-wish-table"
+created: "Fri Jan 16 08:29:31 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-fir-wish-table" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> To <em>double</em> a quantity means to multiply it by 2. <em>Trebling</em> means multiplying by 3. And you’ve probably heard of “quadrupling,” which is multiplication by 4.</p>
+<p>If you repeatedly double a quantity, it will eventually get quite big. For instance, <a href="#tbl-double-many-times" class="quarto-xref">Table&nbsp;1</a> shows growth from a starting quantity of 1 as it is successively doubled.</p>
+<div id="tbl-double-many-times" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-double-many-times-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Successive doublings from a starting point of 1.
+</figcaption>
+<div aria-describedby="tbl-double-many-times-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Times doubled</th>
+<th style="text-align: right;">Quantity</th>
+<th>Exponent notation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td>2<sup>0</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td>2<sup>1</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td>2<sup>2</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td>2<sup>3</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+<td>2<sup>4</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">32</td>
+<td>2<sup>5</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">64</td>
+<td>2<sup>6</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">128</td>
+<td>2<sup>7</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">256</td>
+<td>2<sup>8</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">512</td>
+<td>2<sup>9</sup></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1024</td>
+<td>2<sup>10</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(\vdots\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\vdots\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">1,048,576</td>
+<td>2<sup>20</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(\vdots\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\vdots\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">1,073,741,824</td>
+<td>2<sup>30</sup></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(\vdots\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\vdots\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Now imagine a situation where there is a quantity that doubles every day. For instance, this might be the amount of algae in a lake during an “algal bloom.” If the lake had 1 gm of algae on day zero, it would have 2 gm on day one, 4 gm on day two, and so on. By day 10, the biomass of the algal bloom would be 1024 gm, that is, just over 1 kg. Wait another 10 days, there will be 1,048,567 gm, that is, more than 1000 kg. This pattern of growth is called <em>exponential growth</em>.</p>
+<p>Why <em>exponential</em> growth? In the third column of <strong>?@tbl-2-exponential</strong> the quantities are written using exponents. For instance, in 2<sup>6</sup>, the exponent is 6. In terms of the algal bloom, the number 2<sup>3</sup> is the biomass of algae on day 3. Similarly, 2<sup>5</sup> is the biomass on day 5. In this exponential growth, the exponent increases steadily by 1 each day. But the biomass is 2<sup>exponent</sup> and grows quickly and at an every-growing rate.</p>
+<ol type="1">
+<li>What is the rate of change of biomass with respect to time, looking at time 5 to 6? Remember, the <em>change in biomass</em> will be on top in the ratio, the <em>change in time</em> (we asked about 1 day).</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="fwt-1-2kdw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d312d326b6477" id="devoirs3-selection-6677742d312d326b6477-1" value="AAwidzi" data-devoirs3-option="" data-option-id="AAwidzi" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>20 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d312d326b6477" id="devoirs3-selection-6677742d312d326b6477-2" value="BAqafui" data-devoirs3-option="" data-option-id="BAqafui" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>32 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d312d326b6477" id="devoirs3-selection-6677742d312d326b6477-3" value="CAufepx" data-devoirs3-option="" data-option-id="CAufepx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>65 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d312d326b6477" id="devoirs3-selection-6677742d312d326b6477-4" value="DAnksml" data-devoirs3-option="" data-option-id="DAnksml" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>128 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d312d326b6477" id="devoirs3-selection-6677742d312d326b6477-5" value="EAykwcy" data-devoirs3-option="" data-option-id="EAykwcy" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>256 gm per day</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fwt-1-2kdw</span>
+</fieldset>
+</div>
+</div>
+<ol start="2" type="1">
+<li>What is the rate of change of biomass with respect to time over the interval day 8 to 9?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="fwt-2-2kdw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d322d326b6477" id="devoirs3-selection-6677742d322d326b6477-1" value="AAtwaah" data-devoirs3-option="" data-option-id="AAtwaah" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>20 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d322d326b6477" id="devoirs3-selection-6677742d322d326b6477-2" value="BAkmvcf" data-devoirs3-option="" data-option-id="BAkmvcf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>32 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d322d326b6477" id="devoirs3-selection-6677742d322d326b6477-3" value="CAjzjmp" data-devoirs3-option="" data-option-id="CAjzjmp" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>65 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d322d326b6477" id="devoirs3-selection-6677742d322d326b6477-4" value="DAjulaw" data-devoirs3-option="" data-option-id="DAjulaw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>128 gm per day</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d322d326b6477" id="devoirs3-selection-6677742d322d326b6477-5" value="EAeoozm" data-devoirs3-option="" data-option-id="EAeoozm" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>256 gm per day</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fwt-2-2kdw</span>
+</fieldset>
+</div>
+</div>
+<p>It’s very convenient for the purposes of this problem that the algal biomass doubles with every new day. In reality, however, the <em>doubling time</em> would depend on things like the temperature or the oxygen or mineral content of the water.</p>
+<p>Suppose that the doubling time for algae is 3.5 days. How many days would it take for the biomass to reach 1024 gm (that is, about 1 kg)?</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="fwt-3-3lse" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d332d336c7365" id="devoirs3-selection-6677742d332d336c7365-1" value="AAucemq" data-devoirs3-option="" data-option-id="AAucemq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>28 days</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d332d336c7365" id="devoirs3-selection-6677742d332d336c7365-2" value="BAouigm" data-devoirs3-option="" data-option-id="BAouigm" data-feedback="3.5 times as long as it took to grow to 1 kg when the doubling time was 1 day." data-feedback-html="3.5 times as long as it took to grow to 1 kg when the doubling time was 1 day.">
+    <span>35 days</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d332d336c7365" id="devoirs3-selection-6677742d332d336c7365-3" value="CAjyhmp" data-devoirs3-option="" data-option-id="CAjyhmp" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>64 days</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6677742d332d336c7365" id="devoirs3-selection-6677742d332d336c7365-4" value="DAimgyi" data-devoirs3-option="" data-option-id="DAimgyi" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>72 days</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fwt-3-3lse</span>
+</span>
+</div>
+</div>
+</div>
+<p><!-- end of exr-fir-wish-table --></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<!--
+id: "maple-burn-knife"
+created: "Fri Jan 16 10:42:07 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-maple-burn-knife" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> <strong>Of twos and tens</strong></p>
+<p>exp2() is an exponential function, but it is by no means the only one. The characteristic of exp2() that makes it exponential is that increasing the input by one <em>always</em> produces an output that is bigger by a factor of two. For instance:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp2</span>(<span class="fl">3.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11.31371</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp2</span>(<span class="fl">4.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 22.62742</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp2</span>(<span class="fl">5.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 45.25483</code></pre>
+</div>
+</div>
+<p>The other exponential functions behave similarly. That is, increasing the input by 1 increases the output by a factor of ____? The blank (___) is the number that characterizes the exponential function.</p>
+<p>For instance, we can imagine an exponential function where an increase in the input by 1 produces an increase in output by 10-fold. There is no standard name for this 10-fold exponential function, so we will invent one just for this problem: the “tenfold()” function.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tenfold</span>(<span class="fl">0.7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5.011872</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tenfold</span>(<span class="fl">1.7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 50.11872</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tenfold</span>(<span class="fl">2.7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 501.1872</code></pre>
+</div>
+</div>
+<ol type="a">
+<li>Based on the pattern you observe above for tenfold(), what will be the output when the input is 4.7?</li>
+</ol>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="mbk-b-nbld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d6e626c64" id="devoirs3-selection-6d626b2d622d6e626c64-1" value="AAqhcys" data-devoirs3-option="" data-option-id="AAqhcys" data-feedback="Sorry." data-feedback-html="Sorry."> <span>501.1872</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d6e626c64" id="devoirs3-selection-6d626b2d622d6e626c64-2" value="BAzjruu" data-devoirs3-option="" data-option-id="BAzjruu" data-feedback="Sorry." data-feedback-html="Sorry."> <span>5011.872</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d6e626c64" id="devoirs3-selection-6d626b2d622d6e626c64-3" value="CAyarao" data-devoirs3-option="" data-option-id="CAyarao" data-feedback="Correct!" data-feedback-html="Correct!"> <span>50118.72</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d6e626c64" id="devoirs3-selection-6d626b2d622d6e626c64-4" value="DAdjvnn" data-devoirs3-option="" data-option-id="DAdjvnn" data-feedback="Sorry." data-feedback-html="Sorry."> <span>501187.2</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">mbk-b-nbld</span> </span></p>
+<ol start="2" type="a">
+<li>As you know, 0.7 - 1 = -0.3. Keeping that in mind, what will be the output from tenfold(-0.3)?</li>
+</ol>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="mbk-b-isld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d69736c64" id="devoirs3-selection-6d626b2d622d69736c64-1" value="AAiggne" data-devoirs3-option="" data-option-id="AAiggne" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.005011872</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d69736c64" id="devoirs3-selection-6d626b2d622d69736c64-2" value="BAnozte" data-devoirs3-option="" data-option-id="BAnozte" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.05011872</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d69736c64" id="devoirs3-selection-6d626b2d622d69736c64-3" value="CAuolul" data-devoirs3-option="" data-option-id="CAuolul" data-feedback="Correct!" data-feedback-html="Correct!"> <span>0.5011872</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d622d69736c64" id="devoirs3-selection-6d626b2d622d69736c64-4" value="DAtrcwm" data-devoirs3-option="" data-option-id="DAtrcwm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>5.011872</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">mbk-b-isld</span> </span></p>
+<p>All the exponential functions are merely input scaled versions of doubling(). For instance, tenfold(x) is the same as doubling(3.3219281 * x):</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tenfold</span>(<span class="fl">4.2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15848.93</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp2</span>(<span class="fl">3.3219281</span> <span class="sc">*</span> <span class="fl">4.2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15848.93</code></pre>
+</div>
+</div>
+<p>Things work out the other way, too.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp2</span>(<span class="fl">6.92</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 121.0954</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tenfold</span>(<span class="fl">6.92</span> <span class="sc">/</span> <span class="fl">3.3219281</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 121.0954</code></pre>
+</div>
+</div>
+<p>What’s special about 3.3219281? It is the amount of doublings that leads to an output of 10:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp2</span>(<span class="fl">3.3219281</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<p>We can find the special number just by asking how many doublings lead to a ten-fold increase:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log2</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.321928</code></pre>
+</div>
+</div>
+<p>History might have followed a path where tenfold() would be the standard exponential function. But there is no strong reason to change now, since exp2() and log2() do everything that tenfold() and tenfoldings() can do. Calculations with paper and pencil would be easier with tenfold() and tenfoldings(). For example,</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log2</span>(<span class="dv">1000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9.965784</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tenfoldings</span>(<span class="dv">1000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<ol start="3" type="a">
+<li>What is the output of tenfoldings(1000000)? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="mbk-c-dwld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d632d64776c64" id="devoirs3-selection-6d626b2d632d64776c64-1" value="AAoohhc" data-devoirs3-option="" data-option-id="AAoohhc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d632d64776c64" id="devoirs3-selection-6d626b2d632d64776c64-2" value="BApttxv" data-devoirs3-option="" data-option-id="BApttxv" data-feedback="Sorry." data-feedback-html="Sorry."> <span>3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d632d64776c64" id="devoirs3-selection-6d626b2d632d64776c64-3" value="CAqgulu" data-devoirs3-option="" data-option-id="CAqgulu" data-feedback="Sorry." data-feedback-html="Sorry."> <span>5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d632d64776c64" id="devoirs3-selection-6d626b2d632d64776c64-4" value="DAiaiwb" data-devoirs3-option="" data-option-id="DAiaiwb" data-feedback="Correct!" data-feedback-html="Correct!"> <span>6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6d626b2d632d64776c64" id="devoirs3-selection-6d626b2d632d64776c64-5" value="EAyldhq" data-devoirs3-option="" data-option-id="EAyldhq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>9</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">mbk-c-dwld</span> </span></li>
+</ol>
+<p>While everyday people might find it easier to work with tenfold() and tenfoldings(), mathematicians and many scientists routinely use another exponential function named exp(), whose output increases by 2.71828182846-fold whenever the input increases by 1.</p>
+<p>Using 2.71828182846-fold might seem crazy, but there are good reasons for it, at least for those heavily involved with quantitative thinking. For instance, the <em>rate of change</em> of exp(x) with respect to x is exactly exp(x). And, delving into the world of “imaginary” numbers used by mathematicians, physicists, and some engineers, there is the remarkable fact that exp(3.1415926535i) gives -1.</p>
+<p>Just as exp2() has log2() to convert output into input, and tenfold() has tenfoldings() to do the same job, exp() has a function that we might call “expings()”. For instance:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="sc">-</span><span class="fl">2.302585</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">expings</span>(<span class="fl">0.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -2.302585</code></pre>
+</div>
+</div>
+<p>The official name for the expings() function is the “natural logarithm function,” written <span class="math inline">\(\ln()\)</span> in print and <code>log()</code> in almost all computer languages. The official names for log2() and tenfoldings() are, in computer languages, <code>log2()</code> and <code>log10()</code>.</p>
+<p>There’s no right answer to the following question. We’re just interested in your opinion on the matter.</p>
+<p>In your heart, which would you like to be the standard exponential function?</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="mbk-in-your-heart" data-feedback-enabled="true" data-multiple="true">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6d626b2d696e2d796f75722d6865617274" id="devoirs3-selection-6d626b2d696e2d796f75722d6865617274-1" value="AAptmwo" data-devoirs3-option="" data-option-id="AAptmwo" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>exp()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6d626b2d696e2d796f75722d6865617274" id="devoirs3-selection-6d626b2d696e2d796f75722d6865617274-2" value="BAiumdu" data-devoirs3-option="" data-option-id="BAiumdu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6d626b2d696e2d796f75722d6865617274" id="devoirs3-selection-6d626b2d696e2d796f75722d6865617274-3" value="CAffzul" data-devoirs3-option="" data-option-id="CAffzul" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>tenfold()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">mbk-in-your-heart</span>
+</span>
+</div>
+</div>
+<p>Keep in mind that these are all exponential functions and differ only by the amount of input scaling.</p>
+</div>
+<p><!-- end of exr-maple-burn-knife --></p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<!--
+id: "maple-send-ship"
+created: "Sat Aug 22 08:41:14 2026"
+attribution: DTK
+uses: functions Chap 6
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-maple-send-ship" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Heavier individuals burn more calories due to the increased energy needed to move their bodies, while faster paces and inclines require more exertion, boosting calorie expenditure. More fit individuals tend to be more efficient, burning fewer calories at a given activity level than less fit individuals.</p>
+<p>Translate the previous paragraph into a list of the inputs to and output from a function. You don’t have to build the function, but you should give plausible units for the input and output quantities.</p>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-06" data-label="mss-elxd">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-6d73732d656c7864">Text editor box.</label>
+<textarea id="devoirs3-text-6d73732d656c7864" class="devoirs3-text-input" rows="3" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">mss-elxd</span></p>
+</div>
+</div>
+<p><!-- end of exr-maple-send-ship --></p>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<!--
+id: "panda-run-magnet"
+created: "Mon Aug 24 16:56:30 2026"
+attribution: DTK
+uses: functions. A classroom activity?
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-panda-run-magnet" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Write down an algorithm for adding two numbers, each with 2 digits. You can assume that you already have the algorithm for adding single digits, for instance 7 + 2.</p>
+<p>In addition to your algorithm, write down a table that shows the output for adding any digit 0 to 9 to another digit.</p>
+</div>
+<p><!-- end of exr-panda-run-magnet --></p>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<!--
+id: "seal-ride-book"
+created: "Wed Jan 28 09:48:09 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 6"
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-seal-ride-book" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> In the text’s example about sun position, cloudiness, and production, select the correct description:</p>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-1-njvc" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7372622d312d6e6a7663" id="devoirs3-selection-7372622d312d6e6a7663-1" value="AAnkcdh" data-devoirs3-option="" data-option-id="AAnkcdh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>All three variables are endogenous.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7372622d312d6e6a7663" id="devoirs3-selection-7372622d312d6e6a7663-2" value="BAzwqpz" data-devoirs3-option="" data-option-id="BAzwqpz" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The variables sun position and cloudiness are endogenous; production is exogenous.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7372622d312d6e6a7663" id="devoirs3-selection-7372622d312d6e6a7663-3" value="CAcctgi" data-devoirs3-option="" data-option-id="CAcctgi" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>The variables sun position and cloudiness are exogenous; production is endogenous.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7372622d312d6e6a7663" id="devoirs3-selection-7372622d312d6e6a7663-4" value="DAuuxtd" data-devoirs3-option="" data-option-id="DAuuxtd" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>All three variables are exogenous.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-1-njvc</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-seal-ride-book --></p>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<!--
+id: "seaweed-build-jacket"
+created: "Wed Jan 28 09:53:10 2026"
+attribution: Dave Ruth
+uses: "Quiz Ch 6"
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-seaweed-build-jacket" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7</strong></span> &nbsp;</p>
+<ol type="1">
+<li>Recall the <code>monthly_payment()</code> function. xf(“fig-payment-r-slice”)<code>is a slice plot that holds</code>principal` constant. Which of the following correctly describes the plot?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="sbj-1-keiw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d312d6b656977" id="devoirs3-selection-73626a2d312d6b656977-1" value="AAygais" data-devoirs3-option="" data-option-id="AAygais" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>interest_rate</code> as input, <code>years</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d312d6b656977" id="devoirs3-selection-73626a2d312d6b656977-2" value="BAajarw" data-devoirs3-option="" data-option-id="BAajarw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>years</code> as input, <code>interest_rate</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d312d6b656977" id="devoirs3-selection-73626a2d312d6b656977-3" value="CAsicsa" data-devoirs3-option="" data-option-id="CAsicsa" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>years</code> as input, <code>monthly_payment</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d312d6b656977" id="devoirs3-selection-73626a2d312d6b656977-4" value="DAkmzue" data-devoirs3-option="" data-option-id="DAkmzue" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>monthly_payment</code> as input, <code>years</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d312d6b656977" id="devoirs3-selection-73626a2d312d6b656977-5" value="EAevieh" data-devoirs3-option="" data-option-id="EAevieh" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><code>interest_rate</code> as input, <code>monthly_payment</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d312d6b656977" id="devoirs3-selection-73626a2d312d6b656977-6" value="FAtnaov" data-devoirs3-option="" data-option-id="FAtnaov" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>monthly_payment</code> as input, <code>interest_rate</code> as output.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sbj-1-keiw</span>
+</fieldset>
+</div>
+</div>
+<ol start="2" type="1">
+<li>UNRESOLVED fig-payment-years-slice is a similar slice plot. that holds <code>principal</code> constant. Which of the following correctly describes that plot?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="sbj-2-keiw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d322d6b656977" id="devoirs3-selection-73626a2d322d6b656977-1" value="AAfuvas" data-devoirs3-option="" data-option-id="AAfuvas" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>interest_rate</code> as input, <code>years</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d322d6b656977" id="devoirs3-selection-73626a2d322d6b656977-2" value="BAmdohu" data-devoirs3-option="" data-option-id="BAmdohu" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>years</code> as input, <code>interest_rate</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d322d6b656977" id="devoirs3-selection-73626a2d322d6b656977-3" value="CAkbsji" data-devoirs3-option="" data-option-id="CAkbsji" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><code>years</code> as input, <code>monthly_payment</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d322d6b656977" id="devoirs3-selection-73626a2d322d6b656977-4" value="DAktjqb" data-devoirs3-option="" data-option-id="DAktjqb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>monthly_payment</code> as input, <code>years</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d322d6b656977" id="devoirs3-selection-73626a2d322d6b656977-5" value="EAjrzjr" data-devoirs3-option="" data-option-id="EAjrzjr" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>interest_rate</code> as input, <code>monthly_payment</code> as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73626a2d322d6b656977" id="devoirs3-selection-73626a2d322d6b656977-6" value="FAqfgzs" data-devoirs3-option="" data-option-id="FAqfgzs" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><code>monthly_payment</code> as input, <code>interest_rate</code> as output.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sbj-2-keiw</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-seaweed-build-jacket --></p>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<!--
+id: "spruce-refer-bulb"
+created: "Fri Jan 16 09:08:34 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-spruce-refer-bulb" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8</strong></span> For the exp2() function …</p>
+<ol type="a">
+<li><p>What is the output value when the input is 0? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-a-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-1" value="AAiekzb" data-devoirs3-option="" data-option-id="AAiekzb" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-2" value="BAmiwof" data-devoirs3-option="" data-option-id="BAmiwof" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-3" value="CAhqszk" data-devoirs3-option="" data-option-id="CAhqszk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-4" value="DAoensg" data-devoirs3-option="" data-option-id="DAoensg" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-5" value="EAaoobl" data-devoirs3-option="" data-option-id="EAaoobl" data-feedback="Correct!" data-feedback-html="Correct!"> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-6" value="FAlkwvc" data-devoirs3-option="" data-option-id="FAlkwvc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-7" value="GAsskwk" data-devoirs3-option="" data-option-id="GAsskwk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d612d33326c64" id="devoirs3-selection-7372622d612d33326c64-8" value="HAxzzbx" data-devoirs3-option="" data-option-id="HAxzzbx" data-feedback="Sorry." data-feedback-html="Sorry."> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-a-32ld</span> </span></p></li>
+<li><p>What is the output value when the input is 1? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-b-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-1" value="AAfcwxq" data-devoirs3-option="" data-option-id="AAfcwxq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-2" value="BAtsoij" data-devoirs3-option="" data-option-id="BAtsoij" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-3" value="CAwsngq" data-devoirs3-option="" data-option-id="CAwsngq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-4" value="DAfwshy" data-devoirs3-option="" data-option-id="DAfwshy" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-5" value="EApsfft" data-devoirs3-option="" data-option-id="EApsfft" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-6" value="FApacbj" data-devoirs3-option="" data-option-id="FApacbj" data-feedback="Correct!" data-feedback-html="Correct!"> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-7" value="GAcfoaw" data-devoirs3-option="" data-option-id="GAcfoaw" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d622d33326c64" id="devoirs3-selection-7372622d622d33326c64-8" value="HAeleqz" data-devoirs3-option="" data-option-id="HAeleqz" data-feedback="Sorry." data-feedback-html="Sorry."> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-b-32ld</span> </span></p></li>
+<li><p>What is the output value when the input is 2? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-c-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-1" value="AAqiqin" data-devoirs3-option="" data-option-id="AAqiqin" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-2" value="BAlseju" data-devoirs3-option="" data-option-id="BAlseju" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-3" value="CAhpapi" data-devoirs3-option="" data-option-id="CAhpapi" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-4" value="DAowasz" data-devoirs3-option="" data-option-id="DAowasz" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-5" value="EAtpxrs" data-devoirs3-option="" data-option-id="EAtpxrs" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-6" value="FAjqrbg" data-devoirs3-option="" data-option-id="FAjqrbg" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-7" value="GAikpcn" data-devoirs3-option="" data-option-id="GAikpcn" data-feedback="Correct!" data-feedback-html="Correct!"> <span>4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d632d33326c64" id="devoirs3-selection-7372622d632d33326c64-8" value="HAaohcz" data-devoirs3-option="" data-option-id="HAaohcz" data-feedback="Sorry." data-feedback-html="Sorry."> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-c-32ld</span> </span></p></li>
+<li><p>What is the output value when the input is -1? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-d-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-1" value="AAtadqi" data-devoirs3-option="" data-option-id="AAtadqi" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-2" value="BAiicew" data-devoirs3-option="" data-option-id="BAiicew" data-feedback="Correct!" data-feedback-html="Correct!"> <span>-0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-3" value="CAecmve" data-devoirs3-option="" data-option-id="CAecmve" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-4" value="DAvozix" data-devoirs3-option="" data-option-id="DAvozix" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-5" value="EAfpuef" data-devoirs3-option="" data-option-id="EAfpuef" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-6" value="FAqclfz" data-devoirs3-option="" data-option-id="FAqclfz" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-7" value="GAwnxau" data-devoirs3-option="" data-option-id="GAwnxau" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d642d33326c64" id="devoirs3-selection-7372622d642d33326c64-8" value="HAwkysy" data-devoirs3-option="" data-option-id="HAwkysy" data-feedback="Sorry." data-feedback-html="Sorry."> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-d-32ld</span> </span></p></li>
+<li><p>At what <strong>input</strong> will the output of exp2() be 1/2? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-e-32le" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-1" value="AAeoodh" data-devoirs3-option="" data-option-id="AAeoodh" data-feedback="Correct!" data-feedback-html="Correct!"> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-2" value="BAmzxzs" data-devoirs3-option="" data-option-id="BAmzxzs" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-3" value="CAunbde" data-devoirs3-option="" data-option-id="CAunbde" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-4" value="DAuagrc" data-devoirs3-option="" data-option-id="DAuagrc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-5" value="EAhanpo" data-devoirs3-option="" data-option-id="EAhanpo" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-6" value="FAlbuet" data-devoirs3-option="" data-option-id="FAlbuet" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-7" value="GAyybnn" data-devoirs3-option="" data-option-id="GAyybnn" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d652d33326c65" id="devoirs3-selection-7372622d652d33326c65-8" value="HAgpbsm" data-devoirs3-option="" data-option-id="HAgpbsm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-e-32le</span> </span></p></li>
+</ol>
+<p>Now turn to the closely related log2() function. (Remember that log2() is related to exp2() but they are different functions.)</p>
+<ol start="6" type="a">
+<li><p>When the input to log2() is 8, what is the output? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-f-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-1" value="AAqrccj" data-devoirs3-option="" data-option-id="AAqrccj" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-2" value="BAusxun" data-devoirs3-option="" data-option-id="BAusxun" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-3" value="CAttfqm" data-devoirs3-option="" data-option-id="CAttfqm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-4" value="DAwnhdm" data-devoirs3-option="" data-option-id="DAwnhdm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-5" value="EAmalhe" data-devoirs3-option="" data-option-id="EAmalhe" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-6" value="FAdmobo" data-devoirs3-option="" data-option-id="FAdmobo" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-7" value="GAjmxwh" data-devoirs3-option="" data-option-id="GAjmxwh" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-8" value="HAbxuao" data-devoirs3-option="" data-option-id="HAbxuao" data-feedback="Correct!" data-feedback-html="Correct!"> <span>3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d662d33326c64" id="devoirs3-selection-7372622d662d33326c64-9" value="IAxqyxg" data-devoirs3-option="" data-option-id="IAxqyxg" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-f-32ld</span> </span></p></li>
+<li><p>When the input to log2() is 4, what is the output? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-g-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-1" value="AAsnjpc" data-devoirs3-option="" data-option-id="AAsnjpc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-2" value="BAzxqdz" data-devoirs3-option="" data-option-id="BAzxqdz" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-3" value="CAbdgeo" data-devoirs3-option="" data-option-id="CAbdgeo" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-4" value="DAizicn" data-devoirs3-option="" data-option-id="DAizicn" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-5" value="EAbftbl" data-devoirs3-option="" data-option-id="EAbftbl" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-6" value="FArbwcq" data-devoirs3-option="" data-option-id="FArbwcq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-7" value="GAkcmlu" data-devoirs3-option="" data-option-id="GAkcmlu" data-feedback="Correct!" data-feedback-html="Correct!"> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-8" value="HAkjnjr" data-devoirs3-option="" data-option-id="HAkjnjr" data-feedback="Sorry." data-feedback-html="Sorry."> <span>3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d672d33326c64" id="devoirs3-selection-7372622d672d33326c64-9" value="IAjfbft" data-devoirs3-option="" data-option-id="IAjfbft" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-g-32ld</span> </span></p></li>
+<li><p>When the input to log2() is 1/2, what is the output? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-h-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-1" value="AAqgnzq" data-devoirs3-option="" data-option-id="AAqgnzq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-2" value="BAhmtoi" data-devoirs3-option="" data-option-id="BAhmtoi" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-3" value="CAnaodb" data-devoirs3-option="" data-option-id="CAnaodb" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-4" value="DAzizoi" data-devoirs3-option="" data-option-id="DAzizoi" data-feedback="Correct!" data-feedback-html="Correct!"> <span>-1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-5" value="EAijcwe" data-devoirs3-option="" data-option-id="EAijcwe" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-6" value="FAzpdfw" data-devoirs3-option="" data-option-id="FAzpdfw" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-7" value="GAedolm" data-devoirs3-option="" data-option-id="GAedolm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-8" value="HAceyot" data-devoirs3-option="" data-option-id="HAceyot" data-feedback="Sorry." data-feedback-html="Sorry."> <span>3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d682d33326c64" id="devoirs3-selection-7372622d682d33326c64-9" value="IAxjhuo" data-devoirs3-option="" data-option-id="IAxjhuo" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-h-32ld</span> </span></p></li>
+<li><p>When the <strong>output</strong> from log2() is -2, what is the input? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="srb-i-32ld" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d692d33326c64" id="devoirs3-selection-7372622d692d33326c64-1" value="AArydqo" data-devoirs3-option="" data-option-id="AArydqo" data-feedback="Correct!" data-feedback-html="Correct!"> <span>1/4</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d692d33326c64" id="devoirs3-selection-7372622d692d33326c64-2" value="BAyihub" data-devoirs3-option="" data-option-id="BAyihub" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1/2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d692d33326c64" id="devoirs3-selection-7372622d692d33326c64-3" value="CAynzbb" data-devoirs3-option="" data-option-id="CAynzbb" data-feedback="Sorry." data-feedback-html="Sorry."> <span>1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d692d33326c64" id="devoirs3-selection-7372622d692d33326c64-4" value="DAgjdvh" data-devoirs3-option="" data-option-id="DAgjdvh" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-7372622d692d33326c64" id="devoirs3-selection-7372622d692d33326c64-5" value="EAneqeq" data-devoirs3-option="" data-option-id="EAneqeq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>4</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">srb-i-32ld</span> </span></p></li>
+</ol>
+</div>
+<p><!-- end of exr-spruce-refer-bulb --></p>
+</div>
+<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
+<!--
+id: "spruce-talk-sheet"
+created: "Thu Jan 22 09:49:05 2026"
+attribution: Dave Ruth
+use: Chap 6 Drill
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-spruce-talk-sheet" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9</strong></span> Consider a function <code>Profit(price, weather)</code> used by an ice cream shop owner to predict daily earnings.</p>
+<ul>
+<li><p>Input 1: <code>price</code> (the cost of a cone, set by the owner).</p></li>
+<li><p>Input 2: <code>weather</code> (the daily high temperature).</p></li>
+<li><p>Internal Calculation: The model internally calculates demand (how many people buy ice cream) based on the price and weather. It then calculates profit by subtracting costs from revenue.</p></li>
+</ul>
+<p>In a system diagram of this specific model, how would we classify the variable demand?</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="sts-1-k3s" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374732d312d6b3373" id="devoirs3-selection-7374732d312d6b3373-1" value="AArjeyu" data-devoirs3-option="" data-option-id="AArjeyu" data-feedback="Not in this model. In the model Profit(price, weather), demand is calculated from the two inputs price and weather. Those inputs are exogenous; the model doesn't determine the weather and the price is dictated by the shop owner." data-feedback-html="Not in this model. In the model Profit(price, weather), demand is calculated from the two inputs price and weather. Those inputs are exogenous; the model doesn’t determine the weather and the price is dictated by the shop owner.">
+    <span>Exogenous</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374732d312d6b3373" id="devoirs3-selection-7374732d312d6b3373-2" value="BAwaine" data-devoirs3-option="" data-option-id="BAwaine" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Endogenous</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374732d312d6b3373" id="devoirs3-selection-7374732d312d6b3373-3" value="CAufzbe" data-devoirs3-option="" data-option-id="CAufzbe" data-feedback="Sorry. &quot;Argument&quot; is another word for the input to a function." data-feedback-html="Sorry. “Argument” is another word for the input to a function.">
+    <span>An Argument</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374732d312d6b3373" id="devoirs3-selection-7374732d312d6b3373-4" value="DAoimxp" data-devoirs3-option="" data-option-id="DAoimxp" data-feedback="No. An algorithm is a &quot;recipe&quot; for a computation." data-feedback-html="No.&nbsp;An algorithm is a “recipe” for a computation.">
+    <span>An Algorithm</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sts-1-k3s</span>
+</span>
+</div>
+</div>
+</div>
+<p><!-- end of exr-spruce-talk-sheet --></p>
+</div>
+<div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
+<!--
+id: "squirrel-put-map"
+created: "Fri Jan 16 09:03:25 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-squirrel-put-map" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10</strong></span> Which core modeling functions have a positive rate of change everywhere?</p>
+<ol type="1">
+<li><p><code>recip()</code> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="spm-1-3se" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d312d337365" id="devoirs3-selection-73706d2d312d337365-1" value="AAtjbqr" data-devoirs3-option="" data-option-id="AAtjbqr" data-feedback="Sorry"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d312d337365" id="devoirs3-selection-73706d2d312d337365-2" value="BAnavry" data-devoirs3-option="" data-option-id="BAnavry" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">spm-1-3se</span> </span></p></li>
+<li><p><code>log2()</code><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="spm-2-se" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d322d7365" id="devoirs3-selection-73706d2d322d7365-1" value="AAebqrm" data-devoirs3-option="" data-option-id="AAebqrm" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d322d7365" id="devoirs3-selection-73706d2d322d7365-2" value="BAvdrhb" data-devoirs3-option="" data-option-id="BAvdrhb" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">spm-2-se</span> </span></p></li>
+<li><p><code>hill()</code> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="spm-3-dse" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d332d647365" id="devoirs3-selection-73706d2d332d647365-1" value="AAiukmf" data-devoirs3-option="" data-option-id="AAiukmf" data-feedback="Sorry"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d332d647365" id="devoirs3-selection-73706d2d332d647365-2" value="BAxfwar" data-devoirs3-option="" data-option-id="BAxfwar" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">spm-3-dse</span> </span></p></li>
+<li><p><code>hillside()</code> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="spm-4-y23" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d342d793233" id="devoirs3-selection-73706d2d342d793233-1" value="AAguxae" data-devoirs3-option="" data-option-id="AAguxae" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73706d2d342d793233" id="devoirs3-selection-73706d2d342d793233-2" value="BAelmnu" data-devoirs3-option="" data-option-id="BAelmnu" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">spm-4-y23</span> </span></p></li>
+</ol>
+</div>
+<p><!-- end of exr-squirrel-put-map --></p>
+</div>
+<div id="tabset-1-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-11-tab">
+<!--
+id: "tiger-build-stair"
+created: "Thu Oct 23 15:33:39 2025"
+attribution: TBA
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-tiger-build-stair" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11</strong></span> <a href="Chap-08-uncertainty.html#sec-uncertainty">Chapter 8</a> described how the gaussian function is often used as a probability distribution function to represent an interval statement. But it might happen that a modeler prefers a distribution that is closer to uniform, like that in <a href="#fig-tbs-1dks" class="quarto-xref">Figure&nbsp;2</a>(b).</p>
+<ol type="1">
+<li>Build a custom function that looks like <a href="#fig-tbs-1dks" class="quarto-xref">Figure&nbsp;2</a>(b). As a hint, here is a riddle: How do you build a <em>hill</em> out of two hillsides?</li>
+</ol>
+<div id="fig-tbs-1dks" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tbs-1dks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-tbs-1dks" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-tbs-1dks-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-tbs-1dks-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Exer-06_files/figure-html/fig-tbs-1dks-1.png" class="img-fluid figure-img" data-ref-parent="fig-tbs-1dks" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-tbs-1dks-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Normal distribution
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-tbs-1dks" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-tbs-1dks-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-tbs-1dks-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Exer-06_files/figure-html/fig-tbs-1dks-2.png" class="img-fluid figure-img" data-ref-parent="fig-tbs-1dks" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-tbs-1dks-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Custom distribution
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tbs-1dks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Two possible relative probability functions to encode the idea of [5 to 15]
+</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Using linear combination of two functions, build a custom function that looks like <a href="#fig-tbs-1dks" class="quarto-xref">Figure&nbsp;2</a>(b). As a hint, here is a riddle: How do you build a <em>hill</em> out of two hillsides? We’ve scaffolded the problem: you just have to find appropriate values for the <code>???</code> in the input scaling, and perhaps change the sign on one of the coefficients of the linear combination.</li>
+</ol>
+<div class="cell">
+<pre class="{webr}"><code>myfun &lt;- function(val) {
+  hillside(val - ???) + hillside(val - ???)
+}
+slice_plot(myfun(val) ~ val, domain(val = 0:20))</code></pre>
+</div>
+<p>Copy your function definition here.</p>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-06" data-label="tbs-1lsxe">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-7462732d316c737865">Text editor box.</label>
+<textarea id="devoirs3-text-7462732d316c737865" class="devoirs3-text-input" rows="3" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">tbs-1lsxe</span></p>
+</div>
+<ol start="2" type="1">
+<li>The hillside() function has a parameter <code>sd</code> that governs the speed of the transition from zero to one. Modify your function to make the output look more like a uniform distribution running from 5 to 15.</li>
+</ol>
+<p>Copy your new function definition here.</p>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-06" data-label="tbs-2-ekkc">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-7462732d322d656b6b63">Text editor box.</label>
+<textarea id="devoirs3-text-7462732d322d656b6b63" class="devoirs3-text-input" rows="3" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">tbs-2-ekkc</span></p>
+</div>
+</div>
+<p><!-- end of exr-tiger-build-stair --></p>
+</div>
+<div id="tabset-1-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-12-tab">
+<!--
+id: "tiger-lick-window"
+created: "Wed Jan 28 09:46:50 2026"
+attribution:  Dave Ruth
+uses: "Quiz Ch 6"
+status: ready-to-use
+chapter: 6
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-tiger-lick-window" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 12</strong></span> According to <a href="Chap-06-functions.html#sec-intro-to-functions">Chapter 6</a>, what is the definition of a mathematical function?</p>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-06" data-label="tlw-1-dkw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-746c772d312d646b77" id="devoirs3-selection-746c772d312d646b77-1" value="AAofmil" data-devoirs3-option="" data-option-id="AAofmil" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>A mathematical concept that converts units associated with quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-746c772d312d646b77" id="devoirs3-selection-746c772d312d646b77-2" value="BAjtdkw" data-devoirs3-option="" data-option-id="BAjtdkw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>A mathematical concept that connects an unknown variable to a desired solution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-746c772d312d646b77" id="devoirs3-selection-746c772d312d646b77-3" value="CAqitoe" data-devoirs3-option="" data-option-id="CAqitoe" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>A mechanism that transforms one or more inputs into a corresponding output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-746c772d312d646b77" id="devoirs3-selection-746c772d312d646b77-4" value="DAfoqeb" data-devoirs3-option="" data-option-id="DAfoqeb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>A mechanism that transforms one or more inputs into a collection of outputs.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-746c772d312d646b77" id="devoirs3-selection-746c772d312d646b77-5" value="EArzxnt" data-devoirs3-option="" data-option-id="EArzxnt" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>A graph that passes the horizontal line test.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-746c772d312d646b77" id="devoirs3-selection-746c772d312d646b77-6" value="FAgwqfw" data-devoirs3-option="" data-option-id="FAgwqfw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>A graph that has a horizontal and vertical axis.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">tlw-1-dkw</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-tiger-lick-window --></p>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

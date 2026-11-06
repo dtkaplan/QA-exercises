@@ -2,7 +2,7 @@
 id: "aspen-buy-chair"
 created: "Tue Feb 24 12:57:06 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 15
 mode: "drill"
 -->

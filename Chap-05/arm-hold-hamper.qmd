@@ -3,7 +3,7 @@ id: "arm-hold-hamper"
 created: "Fri Oct 16 10:31:38 2026"
 attribution: DTK
 mode: exercise
-status: ready-to-go
+status: ready-to-use
 chapter: 05
 
 -->

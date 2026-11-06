@@ -3,7 +3,7 @@ id: "octopus-iron-kayak"
 created: "Fri Oct 23 10:46:13 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 10
 
 -->

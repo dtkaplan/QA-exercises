@@ -2,7 +2,7 @@
 id: "panda-cost-door"
 created: "Thu Feb 19 10:28:52 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 11
 mode: "exercise"
 -->

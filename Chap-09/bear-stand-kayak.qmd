@@ -3,7 +3,7 @@ id: "bear-stand-kayak"
 created: "Thu Oct 22 18:32:11 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 09
 topic: "functions of two inputs"
 

@@ -28,7 +28,7 @@ source("../_exercise_startup.R")
 ## 1.
 
 
-`r devoirs::devoirsTF(correct = TRUE, id="R-3-11")` A rate is a quantity.
+`r devoirs::devoirs_TF(correct = TRUE, id="R-3-11")` A rate is a quantity.
 
 
 ## 2.
@@ -37,7 +37,7 @@ source("../_exercise_startup.R")
 
 ## 3.
 
-`r devoirs::devoirsTF(correct = TRUE, id = "D-04-gag")` A *compound rate* is a quantity.
+`r devoirs::devoirs_TF(correct = TRUE, id = "D-04-gag")` A *compound rate* is a quantity.
 
 ## 4.
 

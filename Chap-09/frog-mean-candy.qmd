@@ -3,7 +3,7 @@ id: "frog-mean-candy"
 created: "Thu Oct 22 18:35:06 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 09
 
 -->

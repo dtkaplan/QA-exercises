@@ -1,0 +1,87 @@
+<!--
+id: "falcon-iron-pants"
+created: "Mon Dec 15 16:32:53 2025"
+attribution: DTK
+status: ready-to-use
+chapter: 4
+mode: exercise
+topic: "cooking"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-falcon-iron-pants}
+Thanksgiving chefs can easily find recommendations for roasting turkey. On source suggests 13-15 min/lb at a temperature of 325-350°F. Another source recommends 15-20 min/lb at a temperature of 325°F.
+
+1. Explain why it's sensible to convey the cooking time using a rate, rather than just saying how long to cook the bird.
+
+`r devoirs3::devoirs_text("fip-1-uwls")`
+
+2. Of course, there are other rates that can be constructed: cooking time *with respect to* .... For instance, cooking time depends on temperature. Would it make sense to have a rate like 0.5 min / °F? Explain how this might help or whether it makes any sense at all.
+
+`r devoirs3::devoirs_text("fip-2-3ks")`
+
+Back to cooking time versus weight ...
+
+Once source gives a handy table for cooking at 325°F:
+
+> * 10 pounds: cook 165 min
+> * 15 pounds: cook 210 min
+> * 18 pounds: cook 240 min
+> * 21 pounds: cook 270 min
+
+3. Between 10 and 15 pound turkeys, what is the rate of change in cooking time with respect to weight? 
+
+```{devoirs_choices}
+#| label: choices_fip.3.w4s
+- '10 mins / pound':
+    correct: false
+- '10 pounds / min':
+    correct: false
+    feedback: 'The units (and dimension) are upside down.'
+- '11 mins / pound':
+    correct: true
+- '11 pounds / min':
+    correct: false
+    feedback: 'The units (and dimension) are upside down.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fip-3-w4s",
+  question = "Placeholder for now",
+  answers = choices_fip.3.w4s,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+4. Between 10 and 15 pound turkeys, what is the rate of change in cooking time with respect to weight? 
+
+```{devoirs_choices}
+#| label: choices_fip.4.flw
+- '10 mins / pound':
+    correct: true
+- '10 pounds / min':
+    correct: false
+- '11 mins / pound':
+    correct: false
+- '11 pounds / min':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fip-4-flw",
+  question = "Placeholder for now",
+  answers = choices_fip.4.flw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+
+:::
+ <!-- end of exr-falcon-iron-pants -->

@@ -1,0 +1,66 @@
+<!--
+id: "pony-do-suitcase"
+created: "Mon Feb 16 08:42:08 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 12
+mode: exercise
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-pony-do-suitcase}
+There are only two horses in the race: Valentine and Epitaph. Valentine's odds are 9 to 6.
+
+1. What are Epitaph's odds?
+
+```{devoirs_choices}
+#| label: choices_pds.1.dkse
+- '3 to 2':
+    correct: false
+- '6 to 9':
+    correct: true
+- '33%':
+    correct: false
+- 'Not enough information is given.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pds-1-dkse",
+  question = "Placeholder for now",
+  answers = choices_pds.1.dkse,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+2. Which of these is a correct statement of the *relative* probabilities for Valentine and Epitaph respectively?
+
+```{devoirs_choices}
+#| label: choices_pds.2.dkse
+- '6/9 = 2/3 = 0.33':
+    correct: false
+    feedback: 'Sorry. There need to be *two* relative probabilities, not just one.'
+- '6 and 9':
+    correct: false
+- '9 and 6':
+    correct: true
+- 'Not enough information is given.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pds-2-dkse",
+  question = "Placeholder for now",
+  answers = choices_pds.2.dkse,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+
+:::
+ <!-- end of exr-pony-do-suitcase -->

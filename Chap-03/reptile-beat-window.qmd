@@ -2,7 +2,7 @@
 id: "reptile-beat-window"
 created: "Wed Dec 31 07:15:51 2025"
 attribution: Dave Ruth
-status: "ready-to-use"
+status: ready-to-use
 chapter: 3
 mode: "reading-question"
 -->

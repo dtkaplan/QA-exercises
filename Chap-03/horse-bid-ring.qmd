@@ -3,7 +3,7 @@ id: "horse-bid-ring"
 created: "Fri Oct 16 08:45:11 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -12,6 +12,6 @@ chapter: 03
 
 
 ::: {#exr-horse-bid-ring}
-`r devoirs::devoirsTF(correct = TRUE, id="D-03-off", right.hint = "The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit.")` The ratio of two quantities with the same dimension is always dimensionless.
+`r devoirs::devoirs_TF(correct = TRUE, id="D-03-off", right.hint = "The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit.")` The ratio of two quantities with the same dimension is always dimensionless.
 :::
  <!-- end of exr-horse-bid-ring -->

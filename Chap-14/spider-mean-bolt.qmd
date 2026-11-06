@@ -3,7 +3,7 @@ id: "spider-mean-bolt"
 created: "Thu Mar 12 07:58:14 2026"
 attribution: Dorothy Dickmann
 use: Ch 14 drill
-status: "ready-to-use"
+status: ready-to-use
 chapter: 14
 mode: "exercise"
 -->

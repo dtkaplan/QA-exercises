@@ -2,7 +2,7 @@
 id: "spider-bid-plate"
 created: "Tue Feb 24 13:32:03 2026"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 15
 mode: "exercise"
 -->

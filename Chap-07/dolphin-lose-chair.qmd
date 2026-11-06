@@ -3,7 +3,7 @@ id: "dolphin-lose-chair"
 created: "Fri Oct 16 12:06:54 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 7
 
 -->

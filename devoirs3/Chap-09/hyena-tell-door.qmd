@@ -1,0 +1,158 @@
+<!--
+id: "hyena-tell-door"
+created: "Wed Jul 16 14:01:37 2025"
+attribution: DTK
+chapter: 9
+-->
+
+Consider the function plotted below:
+
+```{r}
+#| echo: false
+#| label: C09-glwpa
+f <- mosaicCalc::doodle_fun(~ x & y, seed = 1023)
+contour_plot(f(u, v) + 1~ u & v, domain(u=-5:5, v=-5:5))
+```
+
+What are the names of the inputs to the function?
+
+```{devoirs_choices}
+#| label: choices_hyena.tell.door.names
+- 'x & y':
+    correct: false
+- 'just u':
+    correct: false
+- 'u & v':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "hyena-tell-door-names",
+  question = "Placeholder for now",
+  answers = choices_hyena.tell.door.names,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+The contours show the *output* of the function. How far apart are adjacent contours spaced in terms of the output?
+
+```{devoirs_choices}
+#| label: choices_hyena.tell.door.spacing
+- '1 unit':
+    correct: true
+- '2 units':
+    correct: false
+    feedback: 'The *labels* are spaced by 2 units, but only every other contour is labelled.'
+- 'No way to know.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "hyena-tell-door-spacing",
+  question = "Placeholder for now",
+  answers = choices_hyena.tell.door.spacing,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+Which of these input points are closest to the location of the peak of the terrain?
+
+```{devoirs_choices}
+#| label: choices_hyena.tell.door.argmax
+- 'u = 4, v = 2':
+    correct: false
+- 'u = 2, v = 2':
+    correct: true
+- 'u = 0, v = 5':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "hyena-tell-door-argmax",
+  question = "Placeholder for now",
+  answers = choices_hyena.tell.door.argmax,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+What is the highest function output shown?
+
+```{devoirs_choices}
+#| label: choices_hyena.tell.door.highest
+- 'Between 6 and 7':
+    correct: false
+    feedback: 'The peak is *inside* the 7 contour.'
+- 'Exactly 7.5':
+    correct: false
+    feedback: 'You can''t tell the exact value for inputs that are not exactly on a contour.'
+- 'Between 7 and 8':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "hyena-tell-door-highest",
+  question = "Placeholder for now",
+  answers = choices_hyena.tell.door.highest,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+What is the *lowest* function output shown?
+
+```{devoirs_choices}
+#| label: choices_hyena.tell.door.lowest
+- 'Between -3 and -4':
+    correct: false
+    feedback: 'Since the contours surrounding -4 have a higher (less negative) value, the values inside the -4 contour have a lower (more negative) value than -4.'
+- 'Between -4 and -5.':
+    correct: true
+- 'Exactly - 4.5':
+    correct: false
+    feedback: 'You can''t tell the exact value for inputs that are not exactly on a contour.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "hyena-tell-door-lowest",
+  question = "Placeholder for now",
+  answers = choices_hyena.tell.door.lowest,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+There is a shallow bowl near $u = 3$. What is the value of input $v$ at the bottom of the bowl? (Pick the closest answer.)
+
+```{devoirs_choices}
+#| label: choices_hyena.tell.door.shallow
+- '1':
+    correct: false
+- '0':
+    correct: false
+- '-1':
+    correct: false
+- '-2':
+    correct: false
+- '-3':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "hyena-tell-door-shallow",
+  question = "Placeholder for now",
+  answers = choices_hyena.tell.door.shallow,
+  multiple = FALSE
+)
+Q(inline = TRUE)
+```
+
+ <!-- end of exr-hyena-tell-door -->

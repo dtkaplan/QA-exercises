@@ -58,13 +58,13 @@ All but one of these is a pure number. Which is the exception?
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = FALSE, id=cc(id))` As you know, you can add or subtract any two pure *numbers*. 
+`r devoirs::devoirs_TF(correct = FALSE, id=cc(id))` As you know, you can add or subtract any two pure *numbers*. 
 
-`r devoirs::devoirsTF(correct = FALSE, id=cc(id), wrong.hint = "The quantities must be commensurate. For example, 3 cups + 2 pints is meaningful, but 3 cups + 2 seconds is not.")` Can you always add two *quantities* by adding together their numerical parts? 
+`r devoirs::devoirs_TF(correct = FALSE, id=cc(id), wrong.hint = "The quantities must be commensurate. For example, 3 cups + 2 pints is meaningful, but 3 cups + 2 seconds is not.")` Can you always add two *quantities* by adding together their numerical parts? 
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = FALSE, id=cc(id), wrong.hint = "Multiplication and division can produce derived dimensions. For example, length / time has the dimension of velocity, and length × length has the dimension of area.")` Two quantities must have the same dimension before they can be multiplied.
+`r devoirs::devoirs_TF(correct = FALSE, id=cc(id), wrong.hint = "Multiplication and division can produce derived dimensions. For example, length / time has the dimension of velocity, and length × length has the dimension of area.")` Two quantities must have the same dimension before they can be multiplied.
 
 ## `r cc()`
 
@@ -93,7 +93,7 @@ A quantity has units of kilograms per second squared. What is its dimension?
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = TRUE, id=cc(id), right.hint = "The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit.")` The ratio of two quantities with the same dimension is always dimensionless.
+`r devoirs::devoirs_TF(correct = TRUE, id=cc(id), right.hint = "The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit.")` The ratio of two quantities with the same dimension is always dimensionless.
 
 ## `r cc()`
 
@@ -110,7 +110,7 @@ Which of the following is a flavor of one?
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = FALSE, id=cc(id), wrong.hint = "The dimensions cancel out, but 1 inch is not the same amount as 1 foot.")` Is 1 inch / 1 foot a flavor of 1?
+`r devoirs::devoirs_TF(correct = FALSE, id=cc(id), wrong.hint = "The dimensions cancel out, but 1 inch is not the same amount as 1 foot.")` Is 1 inch / 1 foot a flavor of 1?
 
 ## `r cc()`
 
@@ -171,7 +171,7 @@ Suppose we want to understand how the dosage of a medication changes a person's 
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = TRUE, id=cc(id), wrong.hint = "You might wonder how it's possible to hold time of day constant, but think of comparing two day's sales at the same time of day.", right.hint = "'Holding constant' is the hallmark of partial change.")`  Suppose an ice-cream shop's sales depend on temperature, price, and time of day. Studying the change in sales with respect to temperature while holding price and time of day constant is an example of partial change.
+`r devoirs::devoirs_TF(correct = TRUE, id=cc(id), wrong.hint = "You might wonder how it's possible to hold time of day constant, but think of comparing two day's sales at the same time of day.", right.hint = "'Holding constant' is the hallmark of partial change.")`  Suppose an ice-cream shop's sales depend on temperature, price, and time of day. Studying the change in sales with respect to temperature while holding price and time of day constant is an example of partial change.
 
 
 
@@ -192,30 +192,30 @@ Suppose we want to understand how the dosage of a medication changes a person's 
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = TRUE, id=cc(id))` You can add or subtract any two *numbers*.
+`r devoirs::devoirs_TF(correct = TRUE, id=cc(id))` You can add or subtract any two *numbers*.
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = FALSE, id = cc(id), wrong.hint="Only if they have the same dimension.")` You can add or subtract any two *quantities*.
+`r devoirs::devoirs_TF(correct = FALSE, id = cc(id), wrong.hint="Only if they have the same dimension.")` You can add or subtract any two *quantities*.
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = TRUE, id=cc(id))` You can multiply or divide any two *numbers* (excepting zero)
+`r devoirs::devoirs_TF(correct = TRUE, id=cc(id))` You can multiply or divide any two *numbers* (excepting zero)
 
 ## `r cc()`
 
-`r devoirs::devoirsTF(correct = TRUE, id=cc(id), wrong.hint="Anything goes! (When it comes to multiplication and division.)")` You can multiply or divide any two *quantities* (excepting zero)?
+`r devoirs::devoirs_TF(correct = TRUE, id=cc(id), wrong.hint="Anything goes! (When it comes to multiplication and division.)")` You can multiply or divide any two *quantities* (excepting zero)?
 
 ## `r cc()`
 
 Recall that the notation [ x ] means "the dimension of x."
 
-`r devoirs::devoirsTF(correct = TRUE, id=cc(id))` [Pints] is the same as [gallons].
+`r devoirs::devoirs_TF(correct = TRUE, id=cc(id))` [Pints] is the same as [gallons].
 
 ## `r cc()`
 
 Is [acceleration] is the same as [velocity]?
-`r devoirs::devoirsTF(correct = FALSE, id=cc(id), format="Yes or No")` 
+`r devoirs::devoirs_TF(correct = FALSE, id=cc(id), format="Yes or No")` 
 
 ## `r cc()`
 

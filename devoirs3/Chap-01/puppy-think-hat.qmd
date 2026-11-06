@@ -1,0 +1,39 @@
+<!--
+id: "puppy-think-hat"
+created: "Thu Oct 15 12:11:59 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 1
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-puppy-think-hat}
+Why can formal reasoning give misleading results when it is applied to a real-world situation?
+
+```{devoirs_choices}
+#| label: choices_d01.premises
+- 'The premises used in the formal reasoning may not accurately represent the real-world situation.':
+    correct: true
+- 'Formal reasoning is never reliable.':
+    correct: false
+- 'Formal reasoning always uses numerical data.':
+    correct: false
+- 'Formal reasoning cannot be carried out by a computer.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-premises",
+  question = "Placeholder for now",
+  answers = choices_d01.premises,
+  multiple = FALSE
+)
+Q(inline = FALSE)
+```
+
+:::
+ <!-- end of exr-puppy-think-hat -->

@@ -2,7 +2,7 @@
 id: "toe-lose-pen"
 created: "Wed Mar  4 18:06:44 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 7
 mode: "exercise"
 -->

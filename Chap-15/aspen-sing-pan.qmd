@@ -2,7 +2,7 @@
 id: "aspen-sing-pan"
 created: "Tue Feb 24 12:33:24 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 15
 mode: "drill"
 -->

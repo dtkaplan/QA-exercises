@@ -1,0 +1,17 @@
+<!--
+id: "lobster-tear-clock"
+created: "Tue Oct 14 07:54:39 2025"
+attribution: DTK
+status: sketch
+chapter: 3
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lobster-tear-clock}
+
+
+
+It's also convenient if the *same units* are used for both since that lets you do the calculation using ordinary subtraction. Otherwise, you first have to convert one of the quantities to have the same unit as the other. 
+:::
+ <!-- end of exr-lobster-tear-clock -->

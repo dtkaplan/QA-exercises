@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="300" viewBox="0 0 240 300">
+  <defs><clipPath id="glyphTimes"><text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">&#215;</text></clipPath></defs>
+  <rect width="240" height="300" fill="#e6b233"/>
+  <path d="M-19 76C11 38 42 34 70 57s48 41 77 17 64-31 106 2l-27 50c-33-15-54-8-81 14s-55 25-84 2-50-20-80 10z" fill="#cf4432"/>
+  <path d="M-18 210c32-39 61-44 88-21s46 31 74 7 60-31 103 0l-30 59c-32-14-55-7-80 14s-55 20-83-1-46-18-70 9z" fill="#2c7d98"/>
+  <path d="M30-17c27 28 31 54 10 81s-15 52 13 76 33 49 12 76-17 49 13 81l-48 23c-29-35-35-67-11-101s15-53-14-78-25-55-5-87S20 9 1-7z" fill="#ec7429"/>
+  <path d="M3 29c25 19 45 16 68-3s40-15 61 4m45 244c24-21 46-25 75-9" fill="none" stroke="#f4e5c1" stroke-width="12" stroke-linecap="round"/>
+  <path d="M-7 261c24-19 42-14 59 5s37 20 57 4m54-200c22-19 42-20 66-1" fill="none" stroke="#e9b335" stroke-width="15" stroke-linecap="round"/>
+  <path d="M-15 18c44 32 71 59 100 91s59 58 94 81 52 44 74 92M-16 275c43-34 72-64 101-91s54-49 86-72 52-49 77-89" fill="none" stroke="#f4e5c1" stroke-width="18" stroke-linecap="round"/>
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" fill="#2c7b96" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">&#215;</text>
+  <g clip-path="url(#glyphTimes)" fill="none" stroke-linecap="round">
+    <path d="M49 75c30 28 57 55 83 81s48 50 75 69" stroke="#cf4432" stroke-width="36"/>
+    <path d="M42 226c34-31 61-58 87-83s48-51 75-73" stroke="#e7b333" stroke-width="29"/>
+    <path d="M67 61c18 13 35 30 49 47m21 83c14 14 28 27 44 38" stroke="#f5e7c5" stroke-width="9"/>
+    <path d="M85 115l13 11m47 44 13 12" stroke="#ed762b" stroke-width="7"/>
+  </g>
+  <g fill="none" stroke-linecap="round"><path d="M31 43l13-7m157 13 13 8M19 234l14-7m179 27 12-8M51 279l10 4" stroke="#f4e5c1" stroke-width="4"/><path d="M29 84l10 5m164 111 11-5M22 162l9-13m168-91 10-6" stroke="#cf4432" stroke-width="4"/></g>
+  <text x="120" y="267" text-anchor="middle" font-family="Times-Roman, Times, serif" font-size="340" fill="none" stroke="#000" stroke-width="1.375" stroke-linejoin="round" transform="translate(120 150) scale(1.22 1.15) translate(-120 -150)">&#215;</text>
+</svg>
