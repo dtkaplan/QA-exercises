@@ -14,12 +14,26 @@ chapter: 7
 ::: {#exr-pig-see-pan}
 A contour plot has one input on each axis. What does movement along a single contour represent?
 
-```{mcq}
-#| label: d07-input-output-04
-1. The output remains constant. [correct]
-2. The first input remains constant.
-3. Both inputs remain constant.
-4. The output changes at the fastest possible rate.
+```{devoirs_choices}
+#| label: choices_d07.input.output.04
+- 'The output remains constant.':
+    correct: true
+- 'The first input remains constant.':
+    correct: false
+- 'Both inputs remain constant.':
+    correct: false
+- 'The output changes at the fastest possible rate.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d07-input-output-04",
+  question = "Placeholder for now",
+  answers = choices_d07.input.output.04,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-pig-see-pan -->

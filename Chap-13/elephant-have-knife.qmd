@@ -4,7 +4,7 @@ created: "Tue Jan 13 19:28:12 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -45,68 +45,149 @@ Our goal is to find out how to combine Rate A and Rate B by multiplication or di
 The way to start is by writing down the *dimension* of Rates A and B. Keep in mind that the unit L refers to liters. The dimension L however, refers to length.  [L] = [volume] = L^3^.
 
 1. What is the dimension of Rate A?
-```{mcq}
-#| label: ehk-1-3sk
-#| inline: true
-1. T L^-3^ 
-2. L T^-1^
-3. L^3^ T^-1^ [correct]
-4. L^-3^ T^-1^
+```{devoirs_choices}
+#| label: choices_ehk.1.3sk
+- 'T L^-3^':
+    correct: false
+- 'L T^-1^':
+    correct: false
+- 'L^3^ T^-1^':
+    correct: true
+- 'L^-3^ T^-1^':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ehk-1-3sk",
+  question = "Placeholder for now",
+  answers = choices_ehk.1.3sk,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. What is the dimension of gtts, that is, [gtts]?
-```{mcq}
-#| label: ehk-2-si3
-#| inline: true
-1. L T
-2. L^2^ T^-1^
-3. L^-3^
-4. L^3^ [correct]
+```{devoirs_choices}
+#| label: choices_ehk.2.si3
+- 'L T':
+    correct: false
+- 'L^2^ T^-1^':
+    correct: false
+- 'L^-3^':
+    correct: false
+- 'L^3^':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ehk-2-si3",
+  question = "Placeholder for now",
+  answers = choices_ehk.2.si3,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. What is the dimension of Rate B, that is, [gtts/mL]?
-```{mcq}
-#| label: ehk-3-esle
-#| inline: true
-1. dim(1) [correct]
-2. L
-3. L^2
-4. L^-1^
-5. L^-2^
+```{devoirs_choices}
+#| label: choices_ehk.3.esle
+- 'dim(1)':
+    correct: true
+- 'L':
+    correct: false
+- 'L^2':
+    correct: false
+- 'L^-1^':
+    correct: false
+- 'L^-2^':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ehk-3-esle",
+  question = "Placeholder for now",
+  answers = choices_ehk.3.esle,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 4. What is the dimension of the target, that is, [gtts/min]?
-```{mcq}
-#| label: ehk-4-lfdw
-#| inline: true
-1. dim(1)
-2. L T^-1^
-3. L^3^ T
-4. L^3^ T^-1^
+```{devoirs_choices}
+#| label: choices_ehk.4.lfdw
+- 'dim(1)':
+    correct: false
+- 'L T^-1^':
+    correct: false
+- 'L^3^ T':
+    correct: false
+- 'L^3^ T^-1^':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ehk-4-lfdw",
+  question = "Placeholder for now",
+  answers = choices_ehk.4.lfdw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 We can multiply and divide dimensions in whatever way we like. For instance,
 (L T^-2^)^-1^ if T^2^ L^-1^.
 
 5. What's the way to combine [Rate A] and [Rate B] to end up with [target]?
-```{mcq}
-#| label: ehk-5-eks
-1. dim(Rate A) $\times$ dim(Rate B) [correct]
-2. dim(Rate A)/dim(Rate B)
-3.  1/(dim(Rate A)$\times$ dim(Rate B))
-4.  dim(Rate B)/dim(Rate A)
+```{devoirs_choices}
+#| label: choices_ehk.5.eks
+- 'dim(Rate A) $\times$ dim(Rate B)':
+    correct: true
+- 'dim(Rate A)/dim(Rate B)':
+    correct: false
+- '1/(dim(Rate A)$\times$ dim(Rate B))':
+    correct: false
+- 'dim(Rate B)/dim(Rate A)':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ehk-5-eks",
+  question = "Placeholder for now",
+  answers = choices_ehk.5.eks,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 This dimensional analysis tells us how to combine the quantities Rate A and Rate B. Carry out the combination according to your answer to Question 5. 
 
 
 6. What is the quantity of the combination:
-```{mcq}
-#| label: ehk-6-kr3e
-1. $\frac{\text{L}}{8\,\text{hr}} \frac{10\ \text{gtts}}{\text{mL}}$ [correct]
-2. $\frac{\text{L}}{8\ \text{hr}} \frac{\text{mL}}{\text{gtts}}$
-3. $\frac{8\ \text{hr}}{\text{L}} \frac{\text{mL}}{10\ \text{gtts}}$
-4. $\frac{10\ \text{gtts}}{\text{mL}} \frac{8\ \text{hr}}{\text{L}}$
+```{devoirs_choices}
+#| label: choices_ehk.6.kr3e
+- '$\frac{\text{L}}{8\,\text{hr}} \frac{10\ \text{gtts}}{\text{mL}}$':
+    correct: true
+- '$\frac{\text{L}}{8\ \text{hr}} \frac{\text{mL}}{\text{gtts}}$':
+    correct: false
+- '$\frac{8\ \text{hr}}{\text{L}} \frac{\text{mL}}{10\ \text{gtts}}$':
+    correct: false
+- '$\frac{10\ \text{gtts}}{\text{mL}} \frac{8\ \text{hr}}{\text{L}}$':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ehk-6-kr3e",
+  question = "Placeholder for now",
+  answers = choices_ehk.6.kr3e,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 Your answer to (6) is the target quantity, but it has some funny units:

@@ -14,7 +14,7 @@ chapter: 02
 ::: {#exr-finger-hold-plyer}
 In this book, what technical word is used for the elements in a system? that interact with one another.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-02-bald")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-02-bald")`
 
 
 :::

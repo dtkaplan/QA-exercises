@@ -14,13 +14,26 @@ topic: data
 ::: {#exr-doe-dream-door}
 Which of the following could be the **specimen type** of a data frame?
 
-```{mcq}
-#| label: d01-object-type
-#| inline: true
-1. Individual houses for sale [correct]
-2. The column named price
-3. The number 250
-4. The spreadsheet software used to display the data
+```{devoirs_choices}
+#| label: choices_d01.object.type
+- 'Individual houses for sale':
+    correct: true
+- 'The column named price':
+    correct: false
+- 'The number 250':
+    correct: false
+- 'The spreadsheet software used to display the data':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-object-type",
+  question = "Placeholder for now",
+  answers = choices_d01.object.type,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-doe-dream-door -->

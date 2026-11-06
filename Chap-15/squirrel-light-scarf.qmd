@@ -63,11 +63,11 @@ slice_plot(F(x) ~ x, dom, color = "white") |>
 
 1. In the graph of $F(x)$, locate a specific input---we'll call it $x_0$---where the slope of $F(x)$ is approximately 0.40. Which of these is closest to that input?
 
-`r devoirs::devoirs_set(c(-4, -2, 0, 2, 4), correct = 0, id="sls-1-exls")`
+`r devoirs3::devoirs_set3(c(-4, -2, 0, 2, 4), correct = 0, label="sls-1-exls")`
 
 2. Now look at the graph of $f(x)$. An any input value $x_0$, the output $f(x_0)$ is the slope of $F(x)$.  Look at the value of $f(x_0)$, that is, the value of $f()$ at the input you selected in question (1). The output value $f(x_0)$ should match the slope of $F(x)$ at $x = x_0$.
 
-`r devoirs::devoirs_TF(TRUE, id = "sls-2-4kse")`
+`r devoirs3::devoirs_TF(TRUE, label = "sls-2-4kse")`
 
 3. Focus now on panel (c) of @fig-Ffslope. This panel also shows $f(x)$, but in a new way. In panel (C), the output of $f(x)$ is shown as the slope of a sloping line segment. (In constrast, in panel (B) the output of $f(x)$ is shown on the vertical axis.) We've annotated the graph with slopes, but it's easier to do a little calculation to find the slope of any of the segments in panel (C).
 
@@ -75,16 +75,15 @@ Slope is rise over run. The segments in panel (C) are drawn with a *run* of 0.25
 
 What is the slope of the center segment---the tallest one---in panel (C)?
 
-`r devoirs::devoirs_set(c(0.25, 0.3, 0.4, 0.5), correct = 0.4, id="sls-3-lsx")`
+`r devoirs3::devoirs_set3(c(0.25, 0.3, 0.4, 0.5), correct = 0.4, label="sls-3-lsx")`
 
 4. Judging from the heights of the segments in panel (C), locate the left-most segment that has a slope of 0.1. (Remember that the "run" is 0.25, so the height of the correct segment will be such that height/0.25 = 0.1.) What is the value of $x$ where this segment is located?
 
-`r devoirs::devoirs_set(c(-3, -1.7, -1.1, -0.5), correct = -1.7,
-id ="sls-4-ews")`
+`r devoirs3::devoirs_set3(c(-3, -1.7, -1.1, -0.5), correct = -1.7, label ="sls-4-ews")`
 
 5. Going back to panel (B), read off the value of $f(x)$ at the input you identified in question (4). What is this value?
 
-`r devoirs::devoirs_set(c(0.1, 0.2, 0.3, 0.4), correct = 0.1, id="sls-5-u3w")`
+`r devoirs3::devoirs_set3(c(0.1, 0.2, 0.3, 0.4), correct = 0.1, label="sls-5-u3w")`
 
 Connecting the segments in panel (C), so the left end of one segment matches the right end of the neighbor on the left side, reconstitutes the original function $F(x)$, using only the information that's contained in $f(x)$.
 

@@ -1,0 +1,20 @@
+<!--
+id: "hyena-tear-magnet"
+created: "Mon Nov 17 13:13:21 2025"
+attribution: TBA
+status: "draft"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-hyena-tear-magnet}
+BUILD A SLIDER APP that let's the reader choose the position and velocity and returns the rate of change of the position and velocity. Also plot out the pendulum with a little arrow indicating the direction and speed. 
+
+THE DYNAMICAL RULE must have a pair of rates of change (one for each component of the state) for any given value of the state. THE APP shows this.
+
+:::
+ <!-- end of exr-hyena-tear-magnet -->

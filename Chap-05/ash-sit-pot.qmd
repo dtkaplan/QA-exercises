@@ -4,7 +4,7 @@ created: "Tue Oct  7 13:13:56 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 3
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -17,13 +17,26 @@ One bit is a tiny amount of information. The word "byte" refers to a larger amou
 
 1. How many different states can be stored by one byte?
 
-```{mcq}
-#| label: BF-byte
-#| inline: true
-1. 8
-2. 16
-3. 64
-4. 256 [correct]
+```{devoirs_choices}
+#| label: choices_BF.byte
+- '8':
+    correct: false
+- '16':
+    correct: false
+- '64':
+    correct: false
+- '256':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "BF-byte",
+  question = "Placeholder for now",
+  answers = choices_BF.byte,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 The words "*megabyte*" (MB) and "*gigabyte*" (GB) refer to the amount of storage space on computers and other devices. Naturally, "mega" means *million* and "giga" means billion. So is 1 megabyte exactly 1,000,000 bytes and 1 gigabyte exactly 1,000,000,000 bytes? Not quite. A megabyte is 1,048,576 bytes and a gigibyte 1,073,741,824 bytes. These funny-looking numbers reflect the nature of information storage: every time we add an additional byte we increase the number of possible states 256-fold. 
@@ -33,14 +46,28 @@ In this hardware sense, exactly one million bytes would be a strange constructio
 
 2. How many doublings correspond to exactly one million? (Choose the closest answer.) You can use the interactive R chunk that follows to do the calculations.
 
-```{mcq}
-#| label: BF-million
-#| inline: true
-1. 9 doublings
-2. 9.5 doublings
-3. 9.9 doublings
-4. approx 9.9432 doublings
-5. approx 9.965784 doublings [correct]
+```{devoirs_choices}
+#| label: choices_BF.million
+- '9 doublings':
+    correct: false
+- '9.5 doublings':
+    correct: false
+- '9.9 doublings':
+    correct: false
+- 'approx 9.9432 doublings':
+    correct: false
+- 'approx 9.965784 doublings':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "BF-million",
+  question = "Placeholder for now",
+  answers = choices_BF.million,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

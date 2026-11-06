@@ -1,0 +1,17 @@
+<!--
+id: "duck-see-magnet"
+created: "Wed Oct 15 11:19:58 2025"
+attribution: TBA
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-duck-see-magnet}
+The rate of energy while running captured the "amount of running" in units of mile-pounds. But doesn't speed enter into it? It's common sense that running faster involves a larger "amount of running." If this were the case, the units for the amount of running would be mile-pounds-mile/hour or miles^2^-pound/hour. That's a strange-looking unit. It turns out, however, that running speed is not an important factor in determining the amount of energy used to run a mile-pound. Instead, the increased effort for running fast is due to higher *power* use, where power is energy per time. 
+:::
+ <!-- end of exr-duck-see-magnet -->

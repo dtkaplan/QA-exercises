@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,14 +13,28 @@ mode: "exercise"
 ::: {#exr-tiger-blow-shoe}
 Which of the following is **not** the name of a core modeling function?
 
-```{mcq}
-#| label: d06-tbs-2da
-#| inline: true
-1. hill()
-2. ramp() [correct]
-3. same()
-4. log2()
-5. recip()
+```{devoirs_choices}
+#| label: choices_d06.tbs.2da
+- 'hill()':
+    correct: false
+- 'ramp()':
+    correct: true
+- 'same()':
+    correct: false
+- 'log2()':
+    correct: false
+- 'recip()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-tbs-2da",
+  question = "Placeholder for now",
+  answers = choices_d06.tbs.2da,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

@@ -16,12 +16,27 @@ A student wrote, "Multiplying the km value by 0.621371 turns kilometers into mil
 
 Which of these quantities is a flavor of one?
 
-```{mcq}
-#| label: d03-km-mi
-#| inline: true
-1. 0.621371 [hint: No. The number 0.621371 is obviously *less* than 1, so it cannot be a flavor of one.]
-2. 0.621371 km per mile [hint: On the plus side, this quantity has units that are both of the same dimension, namely, L. However it's not a flavor of one because 0.621371 km is not equal to 1 mile. 0.621371 km is roughly one-third of a mile.]
-3. 0.621371 mile per km [correct hint: A km is less than a mile. So we take only part of a mile (0.621371 miles, to be exact) to reach a km.]
+```{devoirs_choices}
+#| label: choices_d03.km.mi
+- '0.621371':
+    correct: false
+    feedback: 'No. The number 0.621371 is obviously *less* than 1, so it cannot be a flavor of one.'
+- '0.621371 km per mile':
+    correct: false
+    feedback: 'On the plus side, this quantity has units that are both of the same dimension, namely, L. However it''s not a flavor of one because 0.621371 km is not equal to 1 mile. 0.621371 km is roughly one-third of a mile.'
+- '0.621371 mile per km':
+    correct: true
+    feedback: 'A km is less than a mile. So we take only part of a mile (0.621371 miles, to be exact) to reach a km.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d03-km-mi",
+  question = "Placeholder for now",
+  answers = choices_d03.km.mi,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

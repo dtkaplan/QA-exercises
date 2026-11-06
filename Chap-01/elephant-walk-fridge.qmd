@@ -13,6 +13,6 @@ chapter: 1
 ::: {#exr-elephant-walk-fridge}
 Building a quantitative model is itself an exercise in formal reasoning.
 
-`r devoirs::devoirs_TF(correct = FALSE, id = "D-01-dot", wrong.hint="Model construction uses knowledge, understanding, and belief about real-world matters together with heuristic reasoning. The completed model can then serve as a premise for formal reasoning.")`
+`r devoirs3::devoirs_TF(correct = FALSE, label = "D-01-dot", wrong_hint="Model construction uses knowledge, understanding, and belief about real-world matters together with heuristic reasoning. The completed model can then serve as a premise for formal reasoning.")`
 :::
  <!-- end of exr-elephant-walk-fridge -->

@@ -15,12 +15,29 @@ AI-generated question:
 
 At a local cafe, you are deciding between two bags of coffee beans. Brand A costs $14.40 for a 12-ounce bag. Brand B costs $18.00 for a 16-ounce bag. Which brand offers the better value based on the unit price per ounce?
 
-```{mcq}
-#| label: sft-1-qifl
-1. Brand A, because its unit price is $1.20 per ounce compared to Brand B's $1.125 per ounce. [hint: The quoted rates are correct, but "value" corresponds to a lower rate rather than a higher rate.]
-2. Brand B, because its unit price is $1.125 per ounce, which is lower than Brand A’s $1.20 per ounce. [correct]
-3. Both brands have the same unit price because they both cost more than $1.00 per ounce. [hint: Why? Because every cost more than $1 is the same? Nonesense.]
-4. Brand A, because you spend $3.60 less upfront than you would for Brand B. [hint: See the human comment below.]
+```{devoirs_choices}
+#| label: choices_sft.1.qifl
+- 'Brand A, because its unit price is $1.20 per ounce compared to Brand B''s $1.125 per ounce.':
+    correct: false
+    feedback: 'The quoted rates are correct, but "value" corresponds to a lower rate rather than a higher rate.'
+- 'Brand B, because its unit price is $1.125 per ounce, which is lower than Brand A’s $1.20 per ounce.':
+    correct: true
+- 'Both brands have the same unit price because they both cost more than $1.00 per ounce.':
+    correct: false
+    feedback: 'Why? Because every cost more than $1 is the same? Nonesense.'
+- 'Brand A, because you spend $3.60 less upfront than you would for Brand B.':
+    correct: false
+    feedback: 'See the human comment below.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sft-1-qifl",
+  question = "Placeholder for now",
+  answers = choices_sft.1.qifl,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 Human comments:

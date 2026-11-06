@@ -34,43 +34,82 @@ contour_plot(f(temp, pressure) ~ temp & pressure, domain(temp = -3:3, pressure =
 
 1. Is the landscape near point A a hilltop or the bottom of a bowl?
 
-```{mcq}
-#| label: d05-A-dkwe
-#| inline: true
-1. hilltop
-2. bowl [correct]
+```{devoirs_choices}
+#| label: choices_d05.A.dkwe
+- 'hilltop':
+    correct: false
+- 'bowl':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d05-A-dkwe",
+  question = "Placeholder for now",
+  answers = choices_d05.A.dkwe,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. Which point is at the lowest output value of the function shown?
 
-`r devoirs::devoirs_set(choices = "D-09-zit", correct = "B", id = "d05-2-low")`
+`r devoirs3::devoirs_set3(choices = "D-09-zit", correct = "B", label = "d05-2-low")`
 
 3. Which point is at the highest output value of the function shown?
 
-`r devoirs::devoirs_set(choices = "D-09-pal", correct = "C", id = "d05-3-high")`
+`r devoirs3::devoirs_set3(choices = "D-09-pal", correct = "C", label = "d05-3-high")`
 
 4. If you went on a walk on a straight path between points D and E, which of the following is an output value you would never see?
 
-`r devoirs::devoirs_set(choices = "D-09-gas", correct = -10.3, id = "d05-4-high")`
+`r devoirs3::devoirs_set3(choices = "D-09-gas", correct = -10.3, label = "d05-4-high")`
 
 5. If the output is the elevation of the landscape, walking from point C to E which of these is true?
 
-```{mcq}
-#| label: d05-5-ew22
-1. You are walking uphill.
-2. You are walking on the level.
-3. You are walking downhill. [correct]
-4. Neither of the above.
+```{devoirs_choices}
+#| label: choices_d05.5.ew22
+- 'You are walking uphill.':
+    correct: false
+- 'You are walking on the level.':
+    correct: false
+- 'You are walking downhill.':
+    correct: true
+- 'Neither of the above.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d05-5-ew22",
+  question = "Placeholder for now",
+  answers = choices_d05.5.ew22,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 6. Walking from point F in a southwest (↙) direction, which is the best description for how your elevation is changing.
 
-```{mcq}
-#| label: d05-6-ewu2
-1. You are walking uphill.
-2. You are walking on the level. [correct]
-3. You are walking downhill. 
-4. You are going up and down.
+```{devoirs_choices}
+#| label: choices_d05.6.ewu2
+- 'You are walking uphill.':
+    correct: false
+- 'You are walking on the level.':
+    correct: true
+- 'You are walking downhill.':
+    correct: false
+- 'You are going up and down.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d05-6-ewu2",
+  question = "Placeholder for now",
+  answers = choices_d05.6.ewu2,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 

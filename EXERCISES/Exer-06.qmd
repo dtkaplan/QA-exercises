@@ -13,53 +13,51 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-06/dolphin-enjoy-kitchen.qmd >}}
+{{< include ../Chap-06/tiger-lick-window.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-06/fir-wish-table.qmd >}}
+{{< include ../Chap-06/fir-wish-table.qmd >}}
 
 ## 3
 
-{{< include ../devoirs3/Chap-06/maple-burn-knife.qmd >}}
+{{< include ../Chap-06/maple-burn-knife.qmd >}}
 
 ## 4
 
-{{< include ../devoirs3/Chap-06/maple-send-ship.qmd >}}
+{{< include ../Chap-06/maple-send-ship.qmd >}}
 
 ## 5
 
-{{< include ../devoirs3/Chap-06/panda-run-magnet.qmd >}}
+{{< include ../Chap-06/panda-run-magnet.qmd >}}
 
 ## 6
 
-{{< include ../devoirs3/Chap-06/seal-ride-book.qmd >}}
+{{< include ../Chap-06/seal-ride-book.qmd >}}
 
 ## 7
 
-{{< include ../devoirs3/Chap-06/seaweed-build-jacket.qmd >}}
+{{< include ../Chap-06/seaweed-build-jacket.qmd >}}
 
 ## 8
 
-{{< include ../devoirs3/Chap-06/spruce-refer-bulb.qmd >}}
+{{< include ../Chap-06/spruce-refer-bulb.qmd >}}
 
 ## 9
 
-{{< include ../devoirs3/Chap-06/spruce-talk-sheet.qmd >}}
+{{< include ../Chap-06/spruce-talk-sheet.qmd >}}
 
 ## 10
 
-{{< include ../devoirs3/Chap-06/squirrel-put-map.qmd >}}
+{{< include ../Chap-06/squirrel-put-map.qmd >}}
 
 ## 11
 
-{{< include ../devoirs3/Chap-06/tiger-build-stair.qmd >}}
+{{< include ../Chap-06/tiger-build-stair.qmd >}}
 
 ## 12
 
-{{< include ../devoirs3/Chap-06/tiger-lick-window.qmd >}}
-
-
+{{< include ../Chap-06/dolphin-enjoy-kitchen.qmd >}}
 
 
 :::

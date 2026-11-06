@@ -14,13 +14,30 @@ chapter: 03
 ::: {#exr-rabbit-write-glasses}
 Which of these units is used to measure information?
 
-```{mcq}
-#| inline: true
-#| label: info-unit
-1. Hertz [hint: Sorry. This is *per second*, that is, inverse seconds]
-2. Parsec [hint: Sorry. This unit measures distance]
-3. Bit [correct hint: Right! A byte is 8 bits, a Gigabyte is one-billion bits. Computers are information machines, thus the use of bits when describing their memory capacity.]
-4. Erg [hint: Sorry. This unit measures energy]
+```{devoirs_choices}
+#| label: choices_info.unit
+- 'Hertz':
+    correct: false
+    feedback: 'Sorry. This is *per second*, that is, inverse seconds'
+- 'Parsec':
+    correct: false
+    feedback: 'Sorry. This unit measures distance'
+- 'Bit':
+    correct: true
+    feedback: 'Right! A byte is 8 bits, a Gigabyte is one-billion bits. Computers are information machines, thus the use of bits when describing their memory capacity.'
+- 'Erg':
+    correct: false
+    feedback: 'Sorry. This unit measures energy'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "info-unit",
+  question = "Placeholder for now",
+  answers = choices_info.unit,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-rabbit-write-glasses -->

@@ -12,7 +12,7 @@ mode: "discussion"
 ::: {#exr-ant-put-room}
 What is the *state* of a dynamical system?
 
-`r devoirs::devoirs_text("RQ11-apr")`
+`r devoirs3::devoirs_text("RQ11-apr")`
 
 <!-- Opening answer: R1d-5tn -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

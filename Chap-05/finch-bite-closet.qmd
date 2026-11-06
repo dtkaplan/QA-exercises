@@ -6,7 +6,7 @@ uses: magnitudes
 description: elaboration on the marking of axes in magnitude plots.
 status: "draft"
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

@@ -1,0 +1,17 @@
+<!--
+id: "doe-feel-closet"
+created: "Tue Oct  7 14:05:35 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-doe-feel-closet}
+- SI system https://en.wikipedia.org/wiki/2019_revision_of_the_SI
+:::
+ <!-- end of exr-doe-feel-closet -->

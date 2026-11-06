@@ -14,13 +14,26 @@ chapter: 05
 ::: {#exr-finch-stand-saucer}
 A sound level changes from `10^-6 W/m^2` to `10^-3 W/m^2`. By how many orders of magnitude did the power density increase? 
 
-```{mcq}
-#| label: d05-order-02
-#| inline: true
-1. `1`
-2. `2`
-3. `3`  [correct]
-4. `4`
+```{devoirs_choices}
+#| label: choices_d05.order.02
+- '`1`':
+    correct: false
+- '`2`':
+    correct: false
+- '`3`':
+    correct: true
+- '`4`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d05-order-02",
+  question = "Placeholder for now",
+  answers = choices_d05.order.02,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-finch-stand-saucer -->

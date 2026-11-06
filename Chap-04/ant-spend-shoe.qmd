@@ -4,7 +4,7 @@ created: "Fri Jan  9 13:01:39 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 4
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -23,7 +23,7 @@ v. tire pressure
 
 For each of these, say whether it is a rate, a rate of change, or something else. And, for each, give a very brief explanation of your answer.
 
-`r devoirs::devoirs_text("asps-1-dwle", rows = 6, contents = "i.\nii.\niii.\niv.\nv.\n")`
+`r devoirs3::devoirs_text("asps-1-dwle", height = 6, contents = "i.\nii.\niii.\niv.\nv.\n")`
 
 :::
  <!-- end of exr-ant-spend-shoe -->

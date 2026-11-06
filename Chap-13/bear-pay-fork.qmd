@@ -4,7 +4,7 @@ created: "Tue Oct 14 10:55:26 2025"
 attribution: TBA
 status: "sketch"
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

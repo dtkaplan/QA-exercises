@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,13 +13,26 @@ mode: "exercise"
 ::: {#exr-girl-keep-hamper}
 For the `osc()` function, what is the **period** (the input interval over which the function completes one full cycle and returns to its starting pattern)?
 
-```{mcq}
-#| label: d06-gkh-ekos
-#| inline: true
-1. 0.5
-2. 1 [correct]
-3. 2
-4. 3.14159
+```{devoirs_choices}
+#| label: choices_d06.gkh.ekos
+- '0.5':
+    correct: false
+- '1':
+    correct: true
+- '2':
+    correct: false
+- '3.14159':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-gkh-ekos",
+  question = "Placeholder for now",
+  answers = choices_d06.gkh.ekos,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

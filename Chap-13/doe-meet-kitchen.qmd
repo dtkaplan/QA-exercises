@@ -50,7 +50,7 @@ slice_plot(newf(x) ~ x, domain(x = -4:4), npts = 500) |>
   gf_theme(theme_minimal(base_size = 14))
 ```
 
-`r devoirs::devoirs_text("dmk-A-d7w")`
+`r devoirs3::devoirs_text("dmk-A-d7w")`
 
 ::: {.callout-tip collapse=true}
 ## Hints:
@@ -76,7 +76,7 @@ slice_plot(newf(x) ~ x, domain(x = -4:4), npts = 500) |>
   gf_theme(theme_minimal(base_size = 14))
 ```
 
-`r devoirs::devoirs_text("dmk-B-x7d")`
+`r devoirs3::devoirs_text("dmk-B-x7d")`
 
 ::: {.callout-tip collapse=true}
 ## Hint:
@@ -100,7 +100,7 @@ slice_plot(newf(x) ~ x, domain(x = -4:4), npts = 500) |>
   gf_theme(theme_minimal(base_size = 14))
 ```
 
-`r devoirs::devoirs_text("dmk-C-klwd")`
+`r devoirs3::devoirs_text("dmk-C-klwd")`
 
 ::: {.callout-tip collapse=true}
 ## Hint:
@@ -124,7 +124,7 @@ slice_plot(newf(x)~ x, domain(x = -4:4), npts = 500) |>
   gf_theme(theme_minimal(base_size = 14))
 ```
 
-`r devoirs::devoirs_text("dmk-D-sws")`
+`r devoirs3::devoirs_text("dmk-D-sws")`
 
 ::: {.callout-tip collapse=true}
 ## Hint:

@@ -4,7 +4,7 @@ created: "Tue Feb 24 12:33:04 2026"
 attribution: DTK
 status: "sketch"
 chapter: 15
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,12 +14,28 @@ Human staffing for a project or enterprise has dimension C (that is, [capita]). 
 
 What is the relationship between staffing and human effort?
 
-```{mcq}
-#| label: cbj-1-uwd
-1. Staffing is proportional to effort expended. [hint: Sorry. Staffing and effort have different dimensions.]
-2. Staffing is the derivative of effort with respect to time. [correct]
-3. Staffing is the accumulation of effort with respect to time. [hint: No. Since effort has dimension CT, the accumulation of effort with respect to time would have dimension C T^2^.]
-4. Staffing and effort have unrelated dimensions.
+```{devoirs_choices}
+#| label: choices_cbj.1.uwd
+- 'Staffing is proportional to effort expended.':
+    correct: false
+    feedback: 'Sorry. Staffing and effort have different dimensions.'
+- 'Staffing is the derivative of effort with respect to time.':
+    correct: true
+- 'Staffing is the accumulation of effort with respect to time.':
+    correct: false
+    feedback: 'No. Since effort has dimension CT, the accumulation of effort with respect to time would have dimension C T^2^.'
+- 'Staffing and effort have unrelated dimensions.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cbj-1-uwd",
+  question = "Placeholder for now",
+  answers = choices_cbj.1.uwd,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-child-break-jacket -->

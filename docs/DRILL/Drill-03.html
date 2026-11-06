@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bf8f49345ee328fa78402b74928d9a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -74,8 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -107,19 +105,16 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -143,125 +138,430 @@ window.Quarto = {
 </header>
 
 
-<p><span id="devoirs-docID" style="display: none;">Drill-03.rmarkdown</span> <span><button onclick="devoirsSubmit()">Collect your answers</button></span> <span id="devoirs_summary">No answers yet collected</span></p>
-<div class="cell">
-<div class="cell-output-display">
-<script type="text/javascript">
- console.log("In devoirs.js")
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-function devoirsCollectEssays() {
-  var essay_answers = [];
-  var items = document.getElementsByClassName("devoirs-text");
-  for (i = 0; i < items.length; i++) {
-    //console.log("text entry" + i + "being handled");
-    essay_answers[i] = {itemid: items[i].id, contents: items[i].value}
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
   }
 
-  return essay_answers;
-}
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
 
-function devoirsGetDocID() {
-  return document.getElementById("devoirs-docID").innerHTML
-}
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
 
-function devoirsCollectMC() {
-    let mc_answers = [] // Hold the information
-    var ele = document.getElementsByClassName("devoirs-mcq");
-    var count = 0;
-    for (i = 0; i < ele.length; i++) {
-        if (ele[i].checked) {
-          //console.log("Entering conditional.");
-          let checked_one = ele[i];
-          mc_answers[count++] = {itemid: checked_one.id, w: checked_one.getAttribute("w"), contents: checked_one.text};
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
         }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
     }
-    return mc_answers;
-}
 
-console.log("About to define WebR")
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
 
-function devoirsCollectWebR() {
-  var chunk_contents = []; // placeholder for collecting webr items
-  if (typeof qwebrCellDetails == "undefined") {
-    // There aren't any webr chunks
-    return chunk_contents;
-  }
-  var chunks = qwebrCellDetails;
-  for (i = 0; i < chunks.length; i++) {
-    chunk_contents[i] = {itemid: chunks[i].options["label"], contents: chunks[i].code};
-  }
-
-  return chunk_contents;
-}
-
-console.log("About to define devoirsSubmit")
-
-function devoirsSubmit() {
-  console.log("About to collect history")
-
-  // check if there is any sign of a webr entry
-  // If not, don't try to collect webr entries
-  if (typeof qwebrRCommandHistory === 'undefined') {
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays(), WebR: {}, R: {}}
-  } else {
-    console.log("Getting R commands.")
-    var Rhistory = qwebrRCommandHistory.map((x) => x.replace(/Ran code in (.*) at (.*[AP]M).{5}(.*)/, "[chunk: $1, time: $2, code: $3]"))
-
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays()} //, WebR: devoirsCollectWebR(), R: Rhistory}
+    document.body.prepend(toolbar);
   }
 
-  navigator.clipboard.writeText(JSON.stringify(items));
-
-  // summarize what's being collected
-  var my_summary = "Answers copied to clipboard. Fixed choice: " + items.MC.length + " Essays: " + items.Essays.length + " WebR chunks: " + items.WebR.length
-
-  document.getElementById("devoirs_summary").innerHTML = my_summary;
-}
-
-console.log("Read devoirsSubmit()")
-
-// Hint handling in Multiple choice
-
-// Still have to add an on/off switch from options
-
-function devoirs_setup_hintarea() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) answers[i].addEventListener('click', function(e){document.getElementById(e.target.name + "-hintarea").innerHTML = e.target.getAttribute("hint")})
-}
-
- window.addEventListener("load", function() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) {
-    if (answers[i].getAttribute("show_hints") == "TRUE") {
-        answers[i].addEventListener('click', function(e){
-          console.log("inserting hint")
-        document.getElementById(e.target.name + "-hintarea").innerText = e.target.getAttribute("hint")
-      })
-
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
     }
   }
-})
 
-console.log("Added hint summary.") 
-</script>
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
 
-</div>
-</div>
-<script type="text/javascript">
-      // clear the local storage
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('btnClearStorage');
-      form.addEventListener("click", function () {
-        localStorage.clear();
-        location.reload();
-        console.log("Clearing memory");
-      }, false);
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
     }
-    )
-    </script>
-<button id="btnClearStorage">
-Clear memory
-</button>
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
 <p>Note: You are not expected to memorize the values of conversion factors. Look them up as you need them.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -310,7 +610,7 @@ id: "snail-hear-knife"
 created: "Fri Oct 16 08:42:06 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -321,39 +621,32 @@ chapter: 03
 </style>
 <div id="exr-snail-hear-knife" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1</strong></span> All but one of these is a pure number. Which is the exception?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="d03-dls-hintarea" class="hintarea">d03-dls</small>
-<form id="d03-dls-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="7" id="d03-dls-1" w="87" name="d03-dls" hint="You're wrong here." show_hints="TRUE"> 7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$\pi$" id="d03-dls-2" w="19" name="d03-dls" hint="Think again." show_hints="TRUE"> <span class="math inline">\(\pi\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="7 meters" id="d03-dls-3" w="20" name="d03-dls" hint="Yup!" show_hints="TRUE"> 7 meters &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.25" id="d03-dls-4" w="23" name="d03-dls" hint="Not so!" show_hints="TRUE"> 0.25 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d03-dls" id="d03-dls.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-dls.');
-      const form = document.getElementById('d03-dls-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-dls-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-dls.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-dls.");
-          localStorage.setItem('d03-dls-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-dls" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d646c73" id="devoirs3-selection-6430332d646c73-1" value="AAvajag" data-devoirs3-option="" data-option-id="AAvajag" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>7</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d646c73" id="devoirs3-selection-6430332d646c73-2" value="BAngwfw" data-devoirs3-option="" data-option-id="BAngwfw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\(\pi\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d646c73" id="devoirs3-selection-6430332d646c73-3" value="CAtvecm" data-devoirs3-option="" data-option-id="CAtvecm" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>7 meters</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d646c73" id="devoirs3-selection-6430332d646c73-4" value="DAwxpeu" data-devoirs3-option="" data-option-id="DAwxpeu" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.25</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-dls</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-snail-hear-knife --></p>
 </div>
@@ -363,7 +656,7 @@ id: "walrus-blow-roof"
 created: "Fri Oct 16 08:43:02 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -373,70 +666,9 @@ chapter: 03
 }
 </style>
 <div id="exr-walrus-blow-roof" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-vim-hintarea" class="hintarea">D-03-vim</small>
-<form id="D-03-vim-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or " id="D-03-vim-1" w="3" name="D-03-vim" hint="Better luck next time." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-03-vim-2" w="8" name="D-03-vim" hint="Yup!" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-vim" id="D-03-vim.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-vim.');
-      const form = document.getElementById('D-03-vim-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-vim-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-vim.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-vim.");
-          localStorage.setItem('D-03-vim-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> As you know, you can add or subtract any two pure <em>numbers</em>.</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-pay-hintarea" class="hintarea">D-03-pay</small>
-<form id="D-03-pay-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-pay-1" w="3" name="D-03-pay" hint="The quantities must be commensurate. For example, 3 cups + 2 pints is meaningful, but 3 cups + 2 seconds is not." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-03-pay-2" w="29" name="D-03-pay" hint="Bingo!" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-pay" id="D-03-pay.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-pay.');
-      const form = document.getElementById('D-03-pay-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-pay-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-pay.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-pay.");
-          localStorage.setItem('D-03-pay-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> Can you always add two <em>quantities</em> by adding together their numerical parts?</p>
-</span></span></div>
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-vim" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d76696d" id="devoirs3-selection-442d30332d76696d-1" value="AAjepip" data-devoirs3-option="" data-option-id="AAjepip" data-feedback="Sorry"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d76696d" id="devoirs3-selection-442d30332d76696d-2" value="BAoeoxx" data-devoirs3-option="" data-option-id="BAoeoxx" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-vim</span> </span> As you know, you can add or subtract any two pure <em>numbers</em>.</p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-pay" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d706179" id="devoirs3-selection-442d30332d706179-1" value="AAtqzbj" data-devoirs3-option="" data-option-id="AAtqzbj" data-feedback="The quantities must be commensurate. For example, 3 cups + 2 pints is meaningful, but 3 cups + 2 seconds is not."> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d706179" id="devoirs3-selection-442d30332d706179-2" value="BAxvodw" data-devoirs3-option="" data-option-id="BAxvodw" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-pay</span> </span> Can you always add two <em>quantities</em> by adding together their numerical parts?</p>
+</div>
 <p><!-- end of exr-walrus-blow-roof --></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
@@ -445,7 +677,7 @@ id: "chicken-read-blanket"
 created: "Fri Oct 16 08:43:29 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -455,39 +687,8 @@ chapter: 03
 }
 </style>
 <div id="exr-chicken-read-blanket" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-ode-hintarea" class="hintarea">D-03-ode</small>
-<form id="D-03-ode-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-ode-1" w="19" name="D-03-ode" hint="Multiplication and division can produce derived dimensions. For example, length / time has the dimension of velocity, and length × length has the dimension of area." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-03-ode-2" w="35" name="D-03-ode" hint="Right-O!" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-ode" id="D-03-ode.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-ode.');
-      const form = document.getElementById('D-03-ode-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-ode-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-ode.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-ode.");
-          localStorage.setItem('D-03-ode-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> Two quantities must have the same dimension before they can be multiplied.</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-ode" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6f6465" id="devoirs3-selection-442d30332d6f6465-1" value="AArzeax" data-devoirs3-option="" data-option-id="AArzeax" data-feedback="Multiplication and division can produce derived dimensions. For example, length / time has the dimension of velocity, and length × length has the dimension of area."> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6f6465" id="devoirs3-selection-442d30332d6f6465-2" value="BAasppf" data-devoirs3-option="" data-option-id="BAasppf" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-ode</span> </span> Two quantities must have the same dimension before they can be multiplied.</p>
+</div>
 <p><!-- end of exr-chicken-read-blanket --></p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
@@ -496,7 +697,7 @@ id: "panda-tie-kayak"
 created: "Fri Oct 16 08:44:25 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -508,50 +709,31 @@ chapter: 03
 <div id="exr-panda-tie-kayak" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4</strong></span> Which statement is correct?</p>
 <div class="cell">
-<span> <small style="color: grey;" id="d03-lxew-hintarea" class="hintarea">d03-lxew</small>
-<form id="d03-lxew-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Meter is a ... is a unit." id="d03-lxew-1" w="7" name="d03-lxew" hint="You might think so, but ..." show_hints="TRUE"> Meter is a dimension and length is a unit.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Length is  ... is a unit." id="d03-lxew-2" w="29" name="d03-lxew" hint="That's right." show_hints="TRUE"> Length is a dimension and meter is a unit.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Length and ... ame thing." id="d03-lxew-3" w="87" name="d03-lxew" hint="A meter is a specific length." show_hints="TRUE"> Length and meter are two names for the same thing.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Neither le ... n or unit." id="d03-lxew-4" w="32" name="d03-lxew" hint="Try again!" show_hints="TRUE"> Neither length nor meter is a dimension or unit.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="d03-lxew" id="d03-lxew.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-lxew.');
-      const form = document.getElementById('d03-lxew-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-lxew-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-lxew.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-lxew.");
-          localStorage.setItem('d03-lxew-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-lxew" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d6c786577" id="devoirs3-selection-6430332d6c786577-1" value="AAgfyhc" data-devoirs3-option="" data-option-id="AAgfyhc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Meter is a dimension and length is a unit.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d6c786577" id="devoirs3-selection-6430332d6c786577-2" value="BAqauwo" data-devoirs3-option="" data-option-id="BAqauwo" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Length is a dimension and meter is a unit.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d6c786577" id="devoirs3-selection-6430332d6c786577-3" value="CAdphth" data-devoirs3-option="" data-option-id="CAdphth" data-feedback="A meter is a specific length." data-feedback-html="A meter is a specific length.">
+    <span>Length and meter are two names for the same thing.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d6c786577" id="devoirs3-selection-6430332d6c786577-4" value="DAyykph" data-devoirs3-option="" data-option-id="DAyykph" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Neither length nor meter is a dimension or unit.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-lxew</span>
+</fieldset>
+</div>
+</div>
 </div>
 <p><!-- end of exr-panda-tie-kayak --></p>
 </div>
@@ -561,7 +743,7 @@ id: "toe-talk-candy"
 created: "Fri Oct 16 08:44:46 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -572,39 +754,32 @@ chapter: 03
 </style>
 <div id="exr-toe-talk-candy" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5</strong></span> A quantity has units of kilograms per second squared. What is its dimension?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="d03-qukss-hintarea" class="hintarea">d03-qukss</small>
-<form id="d03-qukss-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="M/T" id="d03-qukss-1" w="23" name="d03-qukss" hint="Think again." show_hints="TRUE"> M/T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="M/T^2^" id="d03-qukss-2" w="20" name="d03-qukss" hint="You're right!" show_hints="TRUE"> M/T<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="MT^2^" id="d03-qukss-3" w="3" name="d03-qukss" hint="Sorry!" show_hints="TRUE"> MT<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="T^2^ / M" id="d03-qukss-4" w="7" name="d03-qukss" hint="Oops!" show_hints="TRUE"> T<sup>2</sup> / M &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d03-qukss" id="d03-qukss.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-qukss.');
-      const form = document.getElementById('d03-qukss-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-qukss-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-qukss.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-qukss.");
-          localStorage.setItem('d03-qukss-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-qukss" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d71756b7373" id="devoirs3-selection-6430332d71756b7373-1" value="AAfeuyp" data-devoirs3-option="" data-option-id="AAfeuyp" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>M/T</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d71756b7373" id="devoirs3-selection-6430332d71756b7373-2" value="BAodkbk" data-devoirs3-option="" data-option-id="BAodkbk" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>M/T<sup>2</sup></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d71756b7373" id="devoirs3-selection-6430332d71756b7373-3" value="CAwarni" data-devoirs3-option="" data-option-id="CAwarni" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>MT<sup>2</sup></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d71756b7373" id="devoirs3-selection-6430332d71756b7373-4" value="DAlhhie" data-devoirs3-option="" data-option-id="DAlhhie" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>T<sup>2</sup> / M</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-qukss</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-toe-talk-candy --></p>
 </div>
@@ -614,7 +789,7 @@ id: "horse-bid-ring"
 created: "Fri Oct 16 08:45:11 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -624,39 +799,8 @@ chapter: 03
 }
 </style>
 <div id="exr-horse-bid-ring" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-off-hintarea" class="hintarea">D-03-off</small>
-<form id="D-03-off-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-off-1" w="20" name="D-03-off" hint="The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-03-off-2" w="87" name="D-03-off" hint="Not on target." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-off" id="D-03-off.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-off.');
-      const form = document.getElementById('D-03-off-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-off-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-off.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-off.");
-          localStorage.setItem('D-03-off-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> The ratio of two quantities with the same dimension is always dimensionless.</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-off" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6f6666" id="devoirs3-selection-442d30332d6f6666-1" value="AAaugen" data-devoirs3-option="" data-option-id="AAaugen" data-feedback="The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit."> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6f6666" id="devoirs3-selection-442d30332d6f6666-2" value="BAjpfkp" data-devoirs3-option="" data-option-id="BAjpfkp" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-off</span> </span> The ratio of two quantities with the same dimension is always dimensionless.</p>
+</div>
 <p><!-- end of exr-horse-bid-ring --></p>
 </div>
 <div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
@@ -665,7 +809,7 @@ id: "wolf-sleep-stair"
 created: "Fri Oct 16 08:45:41 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -676,39 +820,28 @@ chapter: 03
 </style>
 <div id="exr-wolf-sleep-stair" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 7</strong></span> Which of the following is a flavor of one?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="d03-flv1-hintarea" class="hintarea">d03-flv1</small>
-<form id="d03-flv1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="12 inches" id="d03-flv1-1" w="19" name="d03-flv1" hint="Flavors of 1 are always dimensionless. The dimension here is L." show_hints="TRUE"> 12 inches &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1 foot" id="d03-flv1-2" w="23" name="d03-flv1" hint="Flavors of 1 are always dimensionless. The dimension here is L." show_hints="TRUE"> 1 foot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="12 inches / 1 foot" id="d03-flv1-3" w="35" name="d03-flv1" hint="Certainly." show_hints="TRUE"> 12 inches / 1 foot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d03-flv1" id="d03-flv1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-flv1.');
-      const form = document.getElementById('d03-flv1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-flv1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-flv1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-flv1.");
-          localStorage.setItem('d03-flv1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-flv1" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d666c7631" id="devoirs3-selection-6430332d666c7631-1" value="AAkuxus" data-devoirs3-option="" data-option-id="AAkuxus" data-feedback="Flavors of 1 are always dimensionless. The dimension here is L." data-feedback-html="Flavors of 1 are always dimensionless. The dimension here is L.">
+    <span>12 inches</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d666c7631" id="devoirs3-selection-6430332d666c7631-2" value="BApaayc" data-devoirs3-option="" data-option-id="BApaayc" data-feedback="Flavors of 1 are always dimensionless. The dimension here is L." data-feedback-html="Flavors of 1 are always dimensionless. The dimension here is L.">
+    <span>1 foot</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d666c7631" id="devoirs3-selection-6430332d666c7631-3" value="CAjigee" data-devoirs3-option="" data-option-id="CAjigee" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>12 inches / 1 foot</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-flv1</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-wolf-sleep-stair --></p>
 </div>
@@ -718,7 +851,7 @@ id: "kitten-begin-shirt"
 created: "Fri Oct 16 08:46:01 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -728,39 +861,8 @@ chapter: 03
 }
 </style>
 <div id="exr-kitten-begin-shirt" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 8</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-nit-hintarea" class="hintarea">D-03-nit</small>
-<form id="D-03-nit-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-nit-1" w="32" name="D-03-nit" hint="The dimensions cancel out, but 1 inch is not the same amount as 1 foot." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-03-nit-2" w="20" name="D-03-nit" hint="Correct." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-nit" id="D-03-nit.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-nit.');
-      const form = document.getElementById('D-03-nit-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-nit-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-nit.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-nit.");
-          localStorage.setItem('D-03-nit-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> Is 1 inch / 1 foot a flavor of 1?</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 8</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-nit" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6e6974" id="devoirs3-selection-442d30332d6e6974-1" value="AAealvk" data-devoirs3-option="" data-option-id="AAealvk" data-feedback="The dimensions cancel out, but 1 inch is not the same amount as 1 foot."> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6e6974" id="devoirs3-selection-442d30332d6e6974-2" value="BAivwyv" data-devoirs3-option="" data-option-id="BAivwyv" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-nit</span> </span> Is 1 inch / 1 foot a flavor of 1?</p>
+</div>
 <p><!-- end of exr-kitten-begin-shirt --></p>
 </div>
 <div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
@@ -769,7 +871,7 @@ id: "child-close-lamp"
 created: "Fri Oct 16 08:46:23 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -780,39 +882,40 @@ chapter: 03
 </style>
 <div id="exr-child-close-lamp" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 9</strong></span> A quantity has a value of 18 m/s at the “from” setting and 11 m/s at the “to” setting. What is the change?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="d03-fto1-hintarea" class="hintarea">d03-fto1</small>
-<form id="d03-fto1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="7 m/s" id="d03-fto1-1" w="87" name="d03-fto1" hint="The change is always &quot;to minus from.&quot; The sign matters!" show_hints="TRUE"> 7 m/s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-7 m/s[correct]" id="d03-fto1-2" w="35" name="d03-fto1" hint="Certainly." show_hints="TRUE"> -7 m/s[correct] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="7" id="d03-fto1-3" w="23" name="d03-fto1" hint="The units are important!" show_hints="TRUE"> 7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-7" id="d03-fto1-4" w="3" name="d03-fto1" hint="The units are important!" show_hints="TRUE"> -7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0" id="d03-fto1-5" w="7" name="d03-fto1" hint="Better luck next time." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No valid answer." id="d03-fto1-6" w="23" name="d03-fto1" hint="Incorrect choice." show_hints="TRUE"> No valid answer. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d03-fto1" id="d03-fto1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-fto1.');
-      const form = document.getElementById('d03-fto1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-fto1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-fto1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-fto1.");
-          localStorage.setItem('d03-fto1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-fto1" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f31" id="devoirs3-selection-6430332d66746f31-1" value="AAzubum" data-devoirs3-option="" data-option-id="AAzubum" data-feedback="The change is always &quot;to minus from.&quot; The sign matters!" data-feedback-html="The change is always “to minus from.” The sign matters!">
+    <span>7 m/s</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f31" id="devoirs3-selection-6430332d66746f31-2" value="BAligue" data-devoirs3-option="" data-option-id="BAligue" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>-7 m/s</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f31" id="devoirs3-selection-6430332d66746f31-3" value="CAespux" data-devoirs3-option="" data-option-id="CAespux" data-feedback="The units are important!" data-feedback-html="The units are important!">
+    <span>7</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f31" id="devoirs3-selection-6430332d66746f31-4" value="DAdzydx" data-devoirs3-option="" data-option-id="DAdzydx" data-feedback="The units are important!" data-feedback-html="The units are important!">
+    <span>-7</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f31" id="devoirs3-selection-6430332d66746f31-5" value="EAbofas" data-devoirs3-option="" data-option-id="EAbofas" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f31" id="devoirs3-selection-6430332d66746f31-6" value="FAjfaab" data-devoirs3-option="" data-option-id="FAjfaab" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>No valid answer.</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-fto1</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-child-close-lamp --></p>
 </div>
@@ -822,7 +925,7 @@ id: "monkey-trim-plate"
 created: "Fri Oct 16 08:46:53 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -833,39 +936,40 @@ chapter: 03
 </style>
 <div id="exr-monkey-trim-plate" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 10</strong></span> A quantity has a value of 36 deg F at the “from” setting and 43 deg F at the “to” setting. What is the change?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="d03-fto2-hintarea" class="hintarea">d03-fto2</small>
-<form id="d03-fto2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="7 deg F[correct]" id="d03-fto2-1" w="14" name="d03-fto2" hint="Excellent!" show_hints="TRUE"> 7 deg F[correct] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-7 deg F" id="d03-fto2-2" w="87" name="d03-fto2" hint="The change is always &quot;to minus from.&quot; The sign matters!" show_hints="TRUE"> -7 deg F &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="7" id="d03-fto2-3" w="19" name="d03-fto2" hint="The units are important!" show_hints="TRUE"> 7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-7" id="d03-fto2-4" w="7" name="d03-fto2" hint="The units are important!" show_hints="TRUE"> -7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0" id="d03-fto2-5" w="87" name="d03-fto2" hint="Sorry!" show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No valid answer." id="d03-fto2-6" w="19" name="d03-fto2" hint="Not so!" show_hints="TRUE"> No valid answer. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d03-fto2" id="d03-fto2.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-fto2.');
-      const form = document.getElementById('d03-fto2-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-fto2-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-fto2.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-fto2.");
-          localStorage.setItem('d03-fto2-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-fto2" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f32" id="devoirs3-selection-6430332d66746f32-1" value="AApqxfo" data-devoirs3-option="" data-option-id="AApqxfo" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>7 deg F</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f32" id="devoirs3-selection-6430332d66746f32-2" value="BAcefgu" data-devoirs3-option="" data-option-id="BAcefgu" data-feedback="The change is always &quot;to minus from.&quot; The sign matters!" data-feedback-html="The change is always “to minus from.” The sign matters!">
+    <span>-7 deg F</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f32" id="devoirs3-selection-6430332d66746f32-3" value="CAcwrae" data-devoirs3-option="" data-option-id="CAcwrae" data-feedback="The units are important!" data-feedback-html="The units are important!">
+    <span>7</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f32" id="devoirs3-selection-6430332d66746f32-4" value="DAgiaym" data-devoirs3-option="" data-option-id="DAgiaym" data-feedback="The units are important!" data-feedback-html="The units are important!">
+    <span>-7</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f32" id="devoirs3-selection-6430332d66746f32-5" value="EAbylnh" data-devoirs3-option="" data-option-id="EAbylnh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f32" id="devoirs3-selection-6430332d66746f32-6" value="FAdnaey" data-devoirs3-option="" data-option-id="FAdnaey" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>No valid answer.</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-fto2</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-monkey-trim-plate --></p>
 </div>
@@ -875,7 +979,7 @@ id: "bear-beat-spoon"
 created: "Fri Oct 16 08:47:22 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -886,39 +990,40 @@ chapter: 03
 </style>
 <div id="exr-bear-beat-spoon" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 11</strong></span> A quantity has a value of 106 kg / s at the “from” setting and 99 kg at the “to” setting. What is the change?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="d03-fto3-hintarea" class="hintarea">d03-fto3</small>
-<form id="d03-fto3-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="7 kg / s" id="d03-fto3-1" w="32" name="d03-fto3" hint="Not quite." show_hints="TRUE"> 7 kg / s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-7 kg / s" id="d03-fto3-2" w="3" name="d03-fto3" hint="Boo!" show_hints="TRUE"> -7 kg / s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="7 s " id="d03-fto3-3" w="3" name="d03-fto3" hint="Think again." show_hints="TRUE"> 7 s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-7 kg" id="d03-fto3-4" w="87" name="d03-fto3" hint="Wrong." show_hints="TRUE"> -7 kg &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0" id="d03-fto3-5" w="23" name="d03-fto3" hint="You're wrong here." show_hints="TRUE"> 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No valid answer." id="d03-fto3-6" w="87" name="d03-fto3" hint="The units and dimensions  are incommensurate. Subtraction is not a valid operation." show_hints="TRUE"> No valid answer. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d03-fto3" id="d03-fto3.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-fto3.');
-      const form = document.getElementById('d03-fto3-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-fto3-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-fto3.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-fto3.");
-          localStorage.setItem('d03-fto3-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-fto3" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f33" id="devoirs3-selection-6430332d66746f33-1" value="AAklmbx" data-devoirs3-option="" data-option-id="AAklmbx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>7 kg / s</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f33" id="devoirs3-selection-6430332d66746f33-2" value="BAiokkc" data-devoirs3-option="" data-option-id="BAiokkc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>-7 kg / s</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f33" id="devoirs3-selection-6430332d66746f33-3" value="CAhflyc" data-devoirs3-option="" data-option-id="CAhflyc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>7 s</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f33" id="devoirs3-selection-6430332d66746f33-4" value="DAfbgns" data-devoirs3-option="" data-option-id="DAfbgns" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>-7 kg</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f33" id="devoirs3-selection-6430332d66746f33-5" value="EAcpvgy" data-devoirs3-option="" data-option-id="EAcpvgy" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d66746f33" id="devoirs3-selection-6430332d66746f33-6" value="FAwpdie" data-devoirs3-option="" data-option-id="FAwpdie" data-feedback="The units and dimensions  are incommensurate. Subtraction is not a valid operation." data-feedback-html="The units and dimensions are incommensurate. Subtraction is not a valid operation.">
+    <span>No valid answer.</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-fto3</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-bear-beat-spoon --></p>
 </div>
@@ -928,7 +1033,7 @@ id: "doe-close-hat"
 created: "Fri Oct 16 08:47:47 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -940,50 +1045,31 @@ chapter: 03
 <div id="exr-doe-close-hat" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 12</strong></span> Suppose we want to understand how the dosage of a medication changes a person’s blood pressure. Which is the <em>primary</em> dimension and which is the <em>context-setting</em> dimension?</p>
 <div class="cell">
-<span> <small style="color: grey;" id="d03-wrt1-hintarea" class="hintarea">d03-wrt1</small>
-<form id="d03-wrt1-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Blood pres ... re; dosage" id="d03-wrt1-1" w="20" name="d03-wrt1" hint="Right!" show_hints="TRUE"> Blood pressure; dosage</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Dosage; bl ... d pressure" id="d03-wrt1-2" w="32" name="d03-wrt1" hint="An experiment might try different doses and observe the corresponding blood pressure. Dosage is the context-setting dimension." show_hints="TRUE"> Dosage; blood pressure</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Blood pres ... sure; time" id="d03-wrt1-3" w="19" name="d03-wrt1" hint="Obviously, time is involved. But it's dosage that we want to understand." show_hints="TRUE"> Blood pressure; time</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="They are b ... mensions. " id="d03-wrt1-4" w="23" name="d03-wrt1" hint="Nope." show_hints="TRUE"> They are both primary dimensions.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="d03-wrt1" id="d03-wrt1.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-wrt1.');
-      const form = document.getElementById('d03-wrt1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-wrt1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-wrt1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-wrt1.");
-          localStorage.setItem('d03-wrt1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-wrt1" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d77727431" id="devoirs3-selection-6430332d77727431-1" value="AAiqaxi" data-devoirs3-option="" data-option-id="AAiqaxi" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Blood pressure; dosage</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d77727431" id="devoirs3-selection-6430332d77727431-2" value="BAgpkkz" data-devoirs3-option="" data-option-id="BAgpkkz" data-feedback="An experiment might try different doses and observe the corresponding blood pressure. Dosage is the context-setting dimension." data-feedback-html="An experiment might try different doses and observe the corresponding blood pressure. Dosage is the context-setting dimension.">
+    <span>Dosage; blood pressure</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d77727431" id="devoirs3-selection-6430332d77727431-3" value="CAtvyrk" data-devoirs3-option="" data-option-id="CAtvyrk" data-feedback="Obviously, time is involved. But it's dosage that we want to understand." data-feedback-html="Obviously, time is involved. But it’s dosage that we want to understand.">
+    <span>Blood pressure; time</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d77727431" id="devoirs3-selection-6430332d77727431-4" value="DAakhov" data-devoirs3-option="" data-option-id="DAakhov" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>They are both primary dimensions.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-wrt1</span>
+</fieldset>
+</div>
+</div>
 </div>
 <p><!-- end of exr-doe-close-hat --></p>
 </div>
@@ -993,7 +1079,7 @@ id: "sheep-pitch-rug"
 created: "Fri Oct 16 08:48:23 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1003,39 +1089,8 @@ chapter: 03
 }
 </style>
 <div id="exr-sheep-pitch-rug" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 13</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-jar-hintarea" class="hintarea">D-03-jar</small>
-<form id="D-03-jar-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-jar-1" w="35" name="D-03-jar" hint="'Holding constant' is the hallmark of partial change." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-03-jar-2" w="32" name="D-03-jar" hint="You might wonder how it's possible to hold time of day constant, but think of comparing two day's sales at the same time of day." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-jar" id="D-03-jar.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-jar.');
-      const form = document.getElementById('D-03-jar-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-jar-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-jar.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-jar.");
-          localStorage.setItem('D-03-jar-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> Suppose an ice-cream shop’s sales depend on temperature, price, and time of day. Studying the change in sales with respect to temperature while holding price and time of day constant is an example of partial change.</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 13</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-jar" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6a6172" id="devoirs3-selection-442d30332d6a6172-1" value="AAuuotj" data-devoirs3-option="" data-option-id="AAuuotj" data-feedback="'Holding constant' is the hallmark of partial change."> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6a6172" id="devoirs3-selection-442d30332d6a6172-2" value="BAekspi" data-devoirs3-option="" data-option-id="BAekspi" data-feedback="You might wonder how it's possible to hold time of day constant, but think of comparing two day's sales at the same time of day."> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-jar</span> </span> Suppose an ice-cream shop’s sales depend on temperature, price, and time of day. Studying the change in sales with respect to temperature while holding price and time of day constant is an example of partial change.</p>
+</div>
 <p><!-- end of exr-sheep-pitch-rug --></p>
 </div>
 </div>
@@ -1064,7 +1119,7 @@ id: "dog-become-drawer"
 created: "Fri Oct 16 08:51:14 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1074,39 +1129,8 @@ chapter: 03
 }
 </style>
 <div id="exr-dog-become-drawer" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-hex-hintarea" class="hintarea">D-03-hex</small>
-<form id="D-03-hex-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-hex-1" w="20" name="D-03-hex" hint="Correct." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-03-hex-2" w="23" name="D-03-hex" hint="Incorrect." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-hex" id="D-03-hex.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-hex.');
-      const form = document.getElementById('D-03-hex-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-hex-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-hex.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-hex.");
-          localStorage.setItem('D-03-hex-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> You can add or subtract any two <em>numbers</em>.</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 14</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-hex" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d686578" id="devoirs3-selection-442d30332d686578-1" value="AAqaoro" data-devoirs3-option="" data-option-id="AAqaoro" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d686578" id="devoirs3-selection-442d30332d686578-2" value="BAyzsio" data-devoirs3-option="" data-option-id="BAyzsio" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-hex</span> </span> You can add or subtract any two <em>numbers</em>.</p>
+</div>
 <p><!-- end of exr-dog-become-drawer --></p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
@@ -1115,7 +1139,7 @@ id: "seal-come-screen"
 created: "Fri Oct 16 08:51:45 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1125,39 +1149,8 @@ chapter: 03
 }
 </style>
 <div id="exr-seal-come-screen" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 15</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-box-hintarea" class="hintarea">D-03-box</small>
-<form id="D-03-box-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-box-1" w="23" name="D-03-box" hint="Only if they have the same dimension." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-03-box-2" w="5" name="D-03-box" hint="Spot on!" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-box" id="D-03-box.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-box.');
-      const form = document.getElementById('D-03-box-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-box-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-box.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-box.");
-          localStorage.setItem('D-03-box-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> You can add or subtract any two <em>quantities</em>.</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 15</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-box" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d626f78" id="devoirs3-selection-442d30332d626f78-1" value="AAmldlp" data-devoirs3-option="" data-option-id="AAmldlp" data-feedback="Only if they have the same dimension."> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d626f78" id="devoirs3-selection-442d30332d626f78-2" value="BAesuxi" data-devoirs3-option="" data-option-id="BAesuxi" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-box</span> </span> You can add or subtract any two <em>quantities</em>.</p>
+</div>
 <p><!-- end of exr-seal-come-screen --></p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
@@ -1166,7 +1159,7 @@ id: "monkey-talk-oven"
 created: "Fri Oct 16 08:52:04 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1176,39 +1169,8 @@ chapter: 03
 }
 </style>
 <div id="exr-monkey-talk-oven" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 16</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-fan-hintarea" class="hintarea">D-03-fan</small>
-<form id="D-03-fan-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-fan-1" w="41" name="D-03-fan" hint="Good job!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-03-fan-2" w="7" name="D-03-fan" hint="Hmmm ..." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-fan" id="D-03-fan.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-fan.');
-      const form = document.getElementById('D-03-fan-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-fan-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-fan.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-fan.");
-          localStorage.setItem('D-03-fan-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> You can multiply or divide any two <em>numbers</em> (excepting zero)</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 16</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-fan" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d66616e" id="devoirs3-selection-442d30332d66616e-1" value="AAipano" data-devoirs3-option="" data-option-id="AAipano" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d66616e" id="devoirs3-selection-442d30332d66616e-2" value="BArmwwr" data-devoirs3-option="" data-option-id="BArmwwr" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-fan</span> </span> You can multiply or divide any two <em>numbers</em> (excepting zero)</p>
+</div>
 <p><!-- end of exr-monkey-talk-oven --></p>
 </div>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
@@ -1217,7 +1179,7 @@ id: "kid-sleep-vase"
 created: "Fri Oct 16 08:52:34 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1227,39 +1189,8 @@ chapter: 03
 }
 </style>
 <div id="exr-kid-sleep-vase" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 17</strong></span> &nbsp;</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-leg-hintarea" class="hintarea">D-03-leg</small>
-<form id="D-03-leg-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-leg-1" w="29" name="D-03-leg" hint="A hit!" show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False" id="D-03-leg-2" w="7" name="D-03-leg" hint="Anything goes! (When it comes to multiplication and division.)" show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-leg" id="D-03-leg.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-leg.');
-      const form = document.getElementById('D-03-leg-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-leg-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-leg.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-leg.");
-          localStorage.setItem('D-03-leg-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> You can multiply or divide any two <em>quantities</em> (excepting zero)?</p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 17</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-leg" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6c6567" id="devoirs3-selection-442d30332d6c6567-1" value="AAuizeb" data-devoirs3-option="" data-option-id="AAuizeb" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6c6567" id="devoirs3-selection-442d30332d6c6567-2" value="BAlrfqw" data-devoirs3-option="" data-option-id="BAlrfqw" data-feedback="Anything goes! (When it comes to multiplication and division.)"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-leg</span> </span> You can multiply or divide any two <em>quantities</em> (excepting zero)?</p>
+</div>
 <p><!-- end of exr-kid-sleep-vase --></p>
 </div>
 <div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
@@ -1268,7 +1199,7 @@ id: "octopus-have-book"
 created: "Fri Oct 16 08:53:20 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1279,38 +1210,8 @@ chapter: 03
 </style>
 <div id="exr-octopus-have-book" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 18</strong></span> Recall that the notation [ x ] means “the dimension of x.”</p>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-ohm-hintarea" class="hintarea">D-03-ohm</small>
-<form id="D-03-ohm-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="D-03-ohm-1" w="35" name="D-03-ohm" hint="Exactly." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="D-03-ohm-2" w="32" name="D-03-ohm" hint="Hmmm ..." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-ohm" id="D-03-ohm.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-ohm.');
-      const form = document.getElementById('D-03-ohm-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-ohm-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-ohm.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-ohm.");
-          localStorage.setItem('D-03-ohm-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p> [Pints] is the same as [gallons].</p>
-</span></div>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-ohm" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6f686d" id="devoirs3-selection-442d30332d6f686d-1" value="AAvxeaa" data-devoirs3-option="" data-option-id="AAvxeaa" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6f686d" id="devoirs3-selection-442d30332d6f686d-2" value="BAaqbya" data-devoirs3-option="" data-option-id="BAaqbya" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-ohm</span> </span> [Pints] is the same as [gallons].</p>
+</div>
 <p><!-- end of exr-octopus-have-book --></p>
 </div>
 <div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
@@ -1319,7 +1220,7 @@ id: "cat-take-closet"
 created: "Fri Oct 16 08:53:41 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1329,39 +1230,8 @@ chapter: 03
 }
 </style>
 <div id="exr-cat-take-closet" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 19</strong></span> &nbsp;</p>
-Is [acceleration] is the same as [velocity]? &nbsp;&nbsp; <span> <small style="color: grey;" id="D-03-guy-hintarea" class="hintarea">D-03-guy</small>
-<form id="D-03-guy-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="Yes &nbsp;&nbsp;&nbsp; or " id="D-03-guy-1" w="87" name="D-03-guy" hint="Oops!" show_hints="TRUE"> Yes &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="No" id="D-03-guy-2" w="8" name="D-03-guy" hint="Yes." show_hints="TRUE"> No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-guy" id="D-03-guy.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-guy.');
-      const form = document.getElementById('D-03-guy-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-guy-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-guy.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-guy.");
-          localStorage.setItem('D-03-guy-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 19</strong></span> Is [acceleration] is the same as [velocity]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Yes or No question" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-guy" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Yes or No question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d677579" id="devoirs3-selection-442d30332d677579-1" value="AAzbrjv" data-devoirs3-option="" data-option-id="AAzbrjv" data-feedback="Sorry"> <span>Yes</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d677579" id="devoirs3-selection-442d30332d677579-2" value="BAufevi" data-devoirs3-option="" data-option-id="BAufevi" data-feedback="Nice!"> <span>No</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Yes or No question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-guy</span> </span></p>
+</div>
 <p><!-- end of exr-cat-take-closet --></p>
 </div>
 <div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
@@ -1370,7 +1240,7 @@ id: "rhinosaurus-become-socks"
 created: "Fri Oct 16 08:54:05 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1380,39 +1250,8 @@ chapter: 03
 }
 </style>
 <div id="exr-rhinosaurus-become-socks" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 20</strong></span> &nbsp;</p>
-What is [2 hours]? <span> <small style="color: grey;" id="D-03-yet-hintarea" class="hintarea">D-03-yet</small>
-<form id="D-03-yet-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="T" id="D-03-yet-1" w="5" name="D-03-yet" hint="Good job!" show_hints="TRUE"> T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C^-1^ M" id="D-03-yet-2" w="87" name="D-03-yet" hint="You're mistaken" show_hints="TRUE"> C<sup>-1</sup> M &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C V^-1^" id="D-03-yet-3" w="19" name="D-03-yet" hint="Not quite right." show_hints="TRUE"> C V<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ M^2^" id="D-03-yet-4" w="32" name="D-03-yet" hint="Try again!" show_hints="TRUE"> L<sup>2</sup> M<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C^-2^ T" id="D-03-yet-5" w="3" name="D-03-yet" hint="Not on target." show_hints="TRUE"> C<sup>-2</sup> T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-yet" id="D-03-yet.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-yet.');
-      const form = document.getElementById('D-03-yet-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-yet-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-yet.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-yet.");
-          localStorage.setItem('D-03-yet-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 20</strong></span> What is [2 hours]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-yet" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d796574" id="devoirs3-selection-442d30332d796574-1" value="AAepsoi" data-devoirs3-option="" data-option-id="AAepsoi" data-feedback="Correct!" data-feedback-html="Correct!"> <span>T</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d796574" id="devoirs3-selection-442d30332d796574-2" value="BAmbvii" data-devoirs3-option="" data-option-id="BAmbvii" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C<sup>-1</sup> M</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d796574" id="devoirs3-selection-442d30332d796574-3" value="CAlrtsl" data-devoirs3-option="" data-option-id="CAlrtsl" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C V<sup>-1</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d796574" id="devoirs3-selection-442d30332d796574-4" value="DAjcvoi" data-devoirs3-option="" data-option-id="DAjcvoi" data-feedback="Sorry." data-feedback-html="Sorry."> <span>L<sup>2</sup> M<sup>2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d796574" id="devoirs3-selection-442d30332d796574-5" value="EAuxrof" data-devoirs3-option="" data-option-id="EAuxrof" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C<sup>-2</sup> T</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-yet</span> </span></p>
+</div>
 <p><!-- end of exr-rhinosaurus-become-socks --></p>
 </div>
 <div id="tabset-2-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-8-tab">
@@ -1421,7 +1260,7 @@ id: "leg-toss-vase"
 created: "Fri Oct 16 08:54:36 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1431,39 +1270,8 @@ chapter: 03
 }
 </style>
 <div id="exr-leg-toss-vase" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 21</strong></span> &nbsp;</p>
-What is [acre-feet]? <span> <small style="color: grey;" id="D-03-kart-hintarea" class="hintarea">D-03-kart</small>
-<form id="D-03-kart-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="M^-1^ θ^-1^" id="D-03-kart-1" w="19" name="D-03-kart" hint="Not quite." show_hints="TRUE"> M<sup>-1</sup> θ<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^" id="D-03-kart-2" w="14" name="D-03-kart" hint="Yeah!" show_hints="TRUE"> L<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="V^-1^" id="D-03-kart-3" w="3" name="D-03-kart" hint="Sorry!" show_hints="TRUE"> V<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-kart-4" w="32" name="D-03-kart" hint="You're wrong here." show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C^-2^ T" id="D-03-kart-5" w="19" name="D-03-kart" hint="This is wide of the mark." show_hints="TRUE"> C<sup>-2</sup> T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-kart" id="D-03-kart.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-kart.');
-      const form = document.getElementById('D-03-kart-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-kart-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-kart.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-kart.");
-          localStorage.setItem('D-03-kart-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 21</strong></span> What is [acre-feet]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-kart" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6b617274" id="devoirs3-selection-442d30332d6b617274-1" value="AAxxpbw" data-devoirs3-option="" data-option-id="AAxxpbw" data-feedback="Sorry." data-feedback-html="Sorry."> <span>M<sup>-1</sup> θ<sup>-1</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6b617274" id="devoirs3-selection-442d30332d6b617274-2" value="BAxowrd" data-devoirs3-option="" data-option-id="BAxowrd" data-feedback="Correct!" data-feedback-html="Correct!"> <span>L<sup>2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6b617274" id="devoirs3-selection-442d30332d6b617274-3" value="CAyarum" data-devoirs3-option="" data-option-id="CAyarum" data-feedback="Sorry." data-feedback-html="Sorry."> <span>V<sup>-1</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6b617274" id="devoirs3-selection-442d30332d6b617274-4" value="DAjjjml" data-devoirs3-option="" data-option-id="DAjjjml" data-feedback="Sorry." data-feedback-html="Sorry."> <span>【1】</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6b617274" id="devoirs3-selection-442d30332d6b617274-5" value="EAllvkb" data-devoirs3-option="" data-option-id="EAllvkb" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C<sup>-2</sup> T</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-kart</span> </span></p>
+</div>
 <p><!-- end of exr-leg-toss-vase --></p>
 </div>
 <div id="tabset-2-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-9-tab">
@@ -1472,7 +1280,7 @@ id: "octopus-wish-window"
 created: "Fri Oct 16 08:54:58 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1482,39 +1290,8 @@ chapter: 03
 }
 </style>
 <div id="exr-octopus-wish-window" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 22</strong></span> &nbsp;</p>
-What is [[13]]? <span> <small style="color: grey;" id="D-03-say-hintarea" class="hintarea">D-03-say</small>
-<form id="D-03-say-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="C^2^" id="D-03-say-1" w="32" name="D-03-say" hint="You're wrong here." show_hints="TRUE"> C<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-say-2" w="14" name="D-03-say" hint="Right on the nose!" show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-say-3" w="14" name="D-03-say" hint="A win!" show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="M^-1^ V^-2^" id="D-03-say-4" w="7" name="D-03-say" hint="Nope." show_hints="TRUE"> M<sup>-1</sup> V<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^ T^-1^" id="D-03-say-5" w="32" name="D-03-say" hint="You're mistaken" show_hints="TRUE"> L<sup>-1</sup> T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-say" id="D-03-say.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-say.');
-      const form = document.getElementById('D-03-say-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-say-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-say.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-say.");
-          localStorage.setItem('D-03-say-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 22</strong></span> What is [[13]]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-say" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d736179" id="devoirs3-selection-442d30332d736179-1" value="AAzbjhv" data-devoirs3-option="" data-option-id="AAzbjhv" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C<sup>2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d736179" id="devoirs3-selection-442d30332d736179-2" value="BAihbnt" data-devoirs3-option="" data-option-id="BAihbnt" data-feedback="Correct!" data-feedback-html="Correct!"> <span>【1】</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d736179" id="devoirs3-selection-442d30332d736179-3" value="CAbcupk" data-devoirs3-option="" data-option-id="CAbcupk" data-feedback="Correct!" data-feedback-html="Correct!"> <span>【1】</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d736179" id="devoirs3-selection-442d30332d736179-4" value="DAzxpiu" data-devoirs3-option="" data-option-id="DAzxpiu" data-feedback="Sorry." data-feedback-html="Sorry."> <span>M<sup>-1</sup> V<sup>-2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d736179" id="devoirs3-selection-442d30332d736179-5" value="EAbeobf" data-devoirs3-option="" data-option-id="EAbeobf" data-feedback="Sorry." data-feedback-html="Sorry."> <span>L<sup>-1</sup> T<sup>-1</sup></span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-say</span> </span></p>
+</div>
 <p><!-- end of exr-octopus-wish-window --></p>
 </div>
 <div id="tabset-2-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-10-tab">
@@ -1523,7 +1300,7 @@ id: "turtle-begin-linen"
 created: "Fri Oct 16 08:55:27 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1533,39 +1310,8 @@ chapter: 03
 }
 </style>
 <div id="exr-turtle-begin-linen" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 23</strong></span> &nbsp;</p>
-What is [2.65]? <span> <small style="color: grey;" id="D-03-fad-hintarea" class="hintarea">D-03-fad</small>
-<form id="D-03-fad-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-fad-1" w="5" name="D-03-fad" hint="You're right!" show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="T^-2^ θ" id="D-03-fad-2" w="19" name="D-03-fad" hint="Incorrect." show_hints="TRUE"> T<sup>-2</sup> θ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-fad-3" w="14" name="D-03-fad" hint="A hit!" show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C^2^ M^-1^" id="D-03-fad-4" w="23" name="D-03-fad" hint="Not quite." show_hints="TRUE"> C<sup>2</sup> M<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^-1^ T" id="D-03-fad-5" w="19" name="D-03-fad" hint="You're wrong here." show_hints="TRUE"> L<sup>-1</sup> T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-fad" id="D-03-fad.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-fad.');
-      const form = document.getElementById('D-03-fad-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-fad-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-fad.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-fad.");
-          localStorage.setItem('D-03-fad-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 23</strong></span> What is [2.65]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-fad" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d666164" id="devoirs3-selection-442d30332d666164-1" value="AApmtew" data-devoirs3-option="" data-option-id="AApmtew" data-feedback="Correct!" data-feedback-html="Correct!"> <span>【1】</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d666164" id="devoirs3-selection-442d30332d666164-2" value="BAbrvvj" data-devoirs3-option="" data-option-id="BAbrvvj" data-feedback="Sorry." data-feedback-html="Sorry."> <span>T<sup>-2</sup> θ</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d666164" id="devoirs3-selection-442d30332d666164-3" value="CAativo" data-devoirs3-option="" data-option-id="CAativo" data-feedback="Correct!" data-feedback-html="Correct!"> <span>【1】</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d666164" id="devoirs3-selection-442d30332d666164-4" value="DAgdoho" data-devoirs3-option="" data-option-id="DAgdoho" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C<sup>2</sup> M<sup>-1</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d666164" id="devoirs3-selection-442d30332d666164-5" value="EAkqnxm" data-devoirs3-option="" data-option-id="EAkqnxm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>L<sup>-1</sup> T</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-fad</span> </span></p>
+</div>
 <p><!-- end of exr-turtle-begin-linen --></p>
 </div>
 <div id="tabset-2-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-11-tab">
@@ -1574,7 +1320,7 @@ id: "bee-break-ship"
 created: "Fri Oct 16 08:55:53 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1584,39 +1330,8 @@ chapter: 03
 }
 </style>
 <div id="exr-bee-break-ship" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 24</strong></span> &nbsp;</p>
-What is [miles per hour]? <span> <small style="color: grey;" id="D-03-area-hintarea" class="hintarea">D-03-area</small>
-<form id="D-03-area-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="V" id="D-03-area-1" w="32" name="D-03-area" hint="Incorrect choice." show_hints="TRUE"> V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L T^-1^" id="D-03-area-2" w="20" name="D-03-area" hint="Score!" show_hints="TRUE"> L T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C M^-2^" id="D-03-area-3" w="87" name="D-03-area" hint="You're mistaken" show_hints="TRUE"> C M<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C θ^-2^" id="D-03-area-4" w="7" name="D-03-area" hint="You're wrong here." show_hints="TRUE"> C θ<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="V^2^" id="D-03-area-5" w="3" name="D-03-area" hint="Nope." show_hints="TRUE"> V<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-area" id="D-03-area.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-area.');
-      const form = document.getElementById('D-03-area-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-area-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-area.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-area.");
-          localStorage.setItem('D-03-area-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 24</strong></span> What is [miles per hour]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-area" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d61726561" id="devoirs3-selection-442d30332d61726561-1" value="AAveahg" data-devoirs3-option="" data-option-id="AAveahg" data-feedback="Sorry." data-feedback-html="Sorry."> <span>V</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d61726561" id="devoirs3-selection-442d30332d61726561-2" value="BAogqee" data-devoirs3-option="" data-option-id="BAogqee" data-feedback="Correct!" data-feedback-html="Correct!"> <span>L T<sup>-1</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d61726561" id="devoirs3-selection-442d30332d61726561-3" value="CAscgjc" data-devoirs3-option="" data-option-id="CAscgjc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C M<sup>-2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d61726561" id="devoirs3-selection-442d30332d61726561-4" value="DAmopla" data-devoirs3-option="" data-option-id="DAmopla" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C θ<sup>-2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d61726561" id="devoirs3-selection-442d30332d61726561-5" value="EAgmdue" data-devoirs3-option="" data-option-id="EAgmdue" data-feedback="Sorry." data-feedback-html="Sorry."> <span>V<sup>2</sup></span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-area</span> </span></p>
+</div>
 <p><!-- end of exr-bee-break-ship --></p>
 </div>
 <div id="tabset-2-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-12-tab">
@@ -1625,7 +1340,7 @@ id: "deer-walk-chair"
 created: "Fri Oct 16 08:56:30 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1635,39 +1350,8 @@ chapter: 03
 }
 </style>
 <div id="exr-deer-walk-chair" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 25</strong></span> &nbsp;</p>
-What is [kilometers per mile]? <span> <small style="color: grey;" id="D-03-laic-hintarea" class="hintarea">D-03-laic</small>
-<form id="D-03-laic-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="V" id="D-03-laic-1" w="32" name="D-03-laic" hint="Incorrect choice." show_hints="TRUE"> V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-laic-2" w="20" name="D-03-laic" hint="Score!" show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C M^-2^" id="D-03-laic-3" w="87" name="D-03-laic" hint="You're mistaken" show_hints="TRUE"> C M<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C θ^-2^" id="D-03-laic-4" w="7" name="D-03-laic" hint="You're wrong here." show_hints="TRUE"> C θ<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="V^2^" id="D-03-laic-5" w="3" name="D-03-laic" hint="Nope." show_hints="TRUE"> V<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-laic" id="D-03-laic.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-laic.');
-      const form = document.getElementById('D-03-laic-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-laic-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-laic.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-laic.");
-          localStorage.setItem('D-03-laic-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 25</strong></span> What is [kilometers per mile]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-laic" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6c616963" id="devoirs3-selection-442d30332d6c616963-1" value="AAmllrp" data-devoirs3-option="" data-option-id="AAmllrp" data-feedback="Sorry." data-feedback-html="Sorry."> <span>V</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6c616963" id="devoirs3-selection-442d30332d6c616963-2" value="BAaeecx" data-devoirs3-option="" data-option-id="BAaeecx" data-feedback="Correct!" data-feedback-html="Correct!"> <span>【1】</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6c616963" id="devoirs3-selection-442d30332d6c616963-3" value="CAfgyjj" data-devoirs3-option="" data-option-id="CAfgyjj" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C M<sup>-2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6c616963" id="devoirs3-selection-442d30332d6c616963-4" value="DAjoayd" data-devoirs3-option="" data-option-id="DAjoayd" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C θ<sup>-2</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6c616963" id="devoirs3-selection-442d30332d6c616963-5" value="EAjkthg" data-devoirs3-option="" data-option-id="EAjkthg" data-feedback="Sorry." data-feedback-html="Sorry."> <span>V<sup>2</sup></span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-laic</span> </span></p>
+</div>
 <p><!-- end of exr-deer-walk-chair --></p>
 </div>
 <div id="tabset-2-13" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-13-tab">
@@ -1676,7 +1360,7 @@ id: "maple-find-book"
 created: "Fri Oct 16 08:57:01 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1686,39 +1370,8 @@ chapter: 03
 }
 </style>
 <div id="exr-maple-find-book" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 26</strong></span> &nbsp;</p>
-What is [𝜋]? <span> <small style="color: grey;" id="D-03-ten-hintarea" class="hintarea">D-03-ten</small>
-<form id="D-03-ten-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="V^-1^ θ^-1^" id="D-03-ten-1" w="32" name="D-03-ten" hint="Better luck next time." show_hints="TRUE"> V<sup>-1</sup> θ<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-ten-2" w="14" name="D-03-ten" hint="Score!" show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="C^-1^" id="D-03-ten-3" w="87" name="D-03-ten" hint="Boo!" show_hints="TRUE"> C<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="M^2^ T" id="D-03-ten-4" w="3" name="D-03-ten" hint="Better luck next time." show_hints="TRUE"> M<sup>2</sup> T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="【1】" id="D-03-ten-5" w="16" name="D-03-ten" hint="Good job!" show_hints="TRUE"> 【1】 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D-03-ten" id="D-03-ten.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-ten.');
-      const form = document.getElementById('D-03-ten-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-ten-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-ten.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-ten.");
-          localStorage.setItem('D-03-ten-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<p><span class="theorem-title"><strong>Exercise 26</strong></span> What is [𝜋]? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-ten" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d74656e" id="devoirs3-selection-442d30332d74656e-1" value="AAnpvrn" data-devoirs3-option="" data-option-id="AAnpvrn" data-feedback="Sorry." data-feedback-html="Sorry."> <span>V<sup>-1</sup> θ<sup>-1</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d74656e" id="devoirs3-selection-442d30332d74656e-2" value="BAmwehw" data-devoirs3-option="" data-option-id="BAmwehw" data-feedback="Correct!" data-feedback-html="Correct!"> <span>【1】</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d74656e" id="devoirs3-selection-442d30332d74656e-3" value="CAkzxvs" data-devoirs3-option="" data-option-id="CAkzxvs" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C<sup>-1</sup></span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d74656e" id="devoirs3-selection-442d30332d74656e-4" value="DAxousc" data-devoirs3-option="" data-option-id="DAxousc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>M<sup>2</sup> T</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d74656e" id="devoirs3-selection-442d30332d74656e-5" value="EAdcuue" data-devoirs3-option="" data-option-id="EAdcuue" data-feedback="Correct!" data-feedback-html="Correct!"> <span>【1】</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-ten</span> </span></p>
+</div>
 <p><!-- end of exr-maple-find-book --></p>
 </div>
 <div id="tabset-2-14" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-14-tab">
@@ -1727,7 +1380,7 @@ id: "wolf-think-plant"
 created: "Fri Oct 16 08:57:36 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1738,39 +1391,32 @@ chapter: 03
 </style>
 <div id="exr-wolf-think-plant" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 27</strong></span> We measure one property of food using the unit Calorie (Cal, for short). Use a web search to look up the definition of Cal to answer this question: What is the dimension of the unit Cal?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="d03-cal-hintarea" class="hintarea">d03-cal</small>
-<form id="d03-cal-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="〖volume〗" id="d03-cal-1" w="23" name="d03-cal" hint="Think again." show_hints="TRUE"> 〖volume〗 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="〖mass〗" id="d03-cal-2" w="19" name="d03-cal" hint="Sorry!" show_hints="TRUE"> 〖mass〗 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="〖energy〗" id="d03-cal-3" w="32" name="d03-cal" hint="correct" show_hints="TRUE"> 〖energy〗 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="〖power〗" id="d03-cal-4" w="19" name="d03-cal" hint="The correct answer is 〖energy〗. Power is 〖energy〗 / T." show_hints="TRUE"> 〖power〗 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="d03-cal" id="d03-cal.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-cal.');
-      const form = document.getElementById('d03-cal-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-cal-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-cal.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-cal.");
-          localStorage.setItem('d03-cal-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-cal" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d63616c" id="devoirs3-selection-6430332d63616c-1" value="AArkzbw" data-devoirs3-option="" data-option-id="AArkzbw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>〖volume〗</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d63616c" id="devoirs3-selection-6430332d63616c-2" value="BAzapur" data-devoirs3-option="" data-option-id="BAzapur" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>〖mass〗</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d63616c" id="devoirs3-selection-6430332d63616c-3" value="CAqorob" data-devoirs3-option="" data-option-id="CAqorob" data-feedback="correct" data-feedback-html="correct">
+    <span>〖energy〗</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d63616c" id="devoirs3-selection-6430332d63616c-4" value="DAwdrrv" data-devoirs3-option="" data-option-id="DAwdrrv" data-feedback="The correct answer is 〖energy〗. Power is 〖energy〗 / T." data-feedback-html="The correct answer is 〖energy〗. Power is 〖energy〗 / T.">
+    <span>〖power〗</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-cal</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-wolf-think-plant --></p>
 </div>
@@ -1780,7 +1426,7 @@ id: "falcon-bid-boat"
 created: "Fri Oct 16 08:58:10 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1795,50 +1441,31 @@ chapter: 03
 <p>The [velocity] is miles-per-hour.</p>
 </blockquote>
 <div class="cell">
-<span> <small style="color: grey;" id="d03-vel-hintarea" class="hintarea">d03-vel</small>
-<form id="d03-vel-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="It should  ... -per-mile." id="d03-vel-1" w="7" name="d03-vel" hint="Sorry, miles-per-hour is correct as a unit of velocity." show_hints="TRUE"> It should be hours-per-mile.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Velocity h ... imension. " id="d03-vel-2" w="7" name="d03-vel" hint="Incorrect choice." show_hints="TRUE"> Velocity has no dimension.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="&quot;Miles per ... dimension." id="d03-vel-3" w="20" name="d03-vel" hint="Good job!" show_hints="TRUE"> “Miles per hour” is a unit, not a dimension.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Nothing is wrong." id="d03-vel-4" w="19" name="d03-vel" hint="You're wrong here." show_hints="TRUE"> Nothing is wrong.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="d03-vel" id="d03-vel.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for d03-vel.');
-      const form = document.getElementById('d03-vel-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('d03-vel-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for d03-vel.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for d03-vel.");
-          localStorage.setItem('d03-vel-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="d03-vel" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d76656c" id="devoirs3-selection-6430332d76656c-1" value="AAcsuca" data-devoirs3-option="" data-option-id="AAcsuca" data-feedback="Sorry, miles-per-hour is correct as a unit of velocity." data-feedback-html="Sorry, miles-per-hour is correct as a unit of velocity.">
+    <span>It should be hours-per-mile.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d76656c" id="devoirs3-selection-6430332d76656c-2" value="BAghvvw" data-devoirs3-option="" data-option-id="BAghvvw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Velocity has no dimension.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d76656c" id="devoirs3-selection-6430332d76656c-3" value="CAdeeuy" data-devoirs3-option="" data-option-id="CAdeeuy" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>“Miles per hour” is a unit, not a dimension.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6430332d76656c" id="devoirs3-selection-6430332d76656c-4" value="DAroiyg" data-devoirs3-option="" data-option-id="DAroiyg" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Nothing is wrong.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">d03-vel</span>
+</fieldset>
+</div>
+</div>
 </div>
 <p><!-- end of exr-falcon-bid-boat --></p>
 </div>
@@ -1848,7 +1475,7 @@ id: "toe-lick-car"
 created: "Fri Oct 16 08:59:02 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -1859,27 +1486,13 @@ chapter: 03
 </style>
 <div id="exr-toe-lick-car" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 29</strong></span> Write down the names of five base dimensions. As well, give the symbol for each of those dimensions.</p>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-sad.');
-      const form = document.getElementById('D-03-sad');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('D-03-sad').value;
-        localStorage.setItem("D-03-sad-contents", todo);
-        console.log("Saving value of D-03-sad.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("D-03-sad-contents");
-      if (savedValue) {
-        document.getElementById('D-03-sad').value = savedValue;
-      }
-})
-</script>
-<textarea id="D-03-sad" name="D-03-sad" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID D-03-sad)"></textarea>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-drill-03" data-label="D-03-sad">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-442d30332d736164">Text editor box.</label>
+<textarea id="devoirs3-text-442d30332d736164" class="devoirs3-text-input" rows="3" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-sad</span></p>
+</div>
 <!-- Opening answer: D0q-9kP -->
-<div class="callout callout-style-default callout-tip callout-titled" style="display: block;">
+<div class="callout callout-style-default callout-tip callout-titled" style="display: none;">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1929,404 +1542,116 @@ chapter: 03
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p>To convert from yards to mm, multiply yards by 914.4 yards per mm.</p>
-<span> <small style="color: grey;" id="D-03-halo-hintarea" class="hintarea">D-03-halo</small>
-<form id="D-03-halo-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-halo-1" w="23" name="D-03-halo" hint="Incorrect choice." show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-halo-2" w="19" name="D-03-halo" hint="You're mistaken" show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-halo-3" w="29" name="D-03-halo" hint="Yes." show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-halo-4" w="87" name="D-03-halo" hint="Not quite." show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-halo-5" w="87" name="D-03-halo" hint="Not quite." show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-halo" id="D-03-halo.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-halo.');
-      const form = document.getElementById('D-03-halo-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-halo" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d68616c6f" id="devoirs3-selection-442d30332d68616c6f-1" value="AAuitng" data-devoirs3-option="" data-option-id="AAuitng" data-feedback="Sorry." data-feedback-html="Sorry."> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d68616c6f" id="devoirs3-selection-442d30332d68616c6f-2" value="BAgfkoe" data-devoirs3-option="" data-option-id="BAgfkoe" data-feedback="Sorry." data-feedback-html="Sorry."> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d68616c6f" id="devoirs3-selection-442d30332d68616c6f-3" value="CAezhhx" data-devoirs3-option="" data-option-id="CAezhhx" data-feedback="Correct!" data-feedback-html="Correct!"> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d68616c6f" id="devoirs3-selection-442d30332d68616c6f-4" value="DApeubc" data-devoirs3-option="" data-option-id="DApeubc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d68616c6f" id="devoirs3-selection-442d30332d68616c6f-5" value="EAenyev" data-devoirs3-option="" data-option-id="EAenyev" data-feedback="Sorry." data-feedback-html="Sorry."> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-halo-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-halo.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-halo.");
-          localStorage.setItem('D-03-halo-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-halo</span>
+</fieldset>
+</div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <p><a href="#tip-flavor-of-one">Instructions</a></p>
 <p>To convert from pints to cubic meters, multiply pints by 2113.38 meters<sup>3</sup> per pint.</p>
-<span> <small style="color: grey;" id="D-03-vas-hintarea" class="hintarea">D-03-vas</small>
-<form id="D-03-vas-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-vas-1" w="3" name="D-03-vas" hint="Not quite." show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-vas-2" w="3" name="D-03-vas" hint="Hmmm ..." show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-vas-3" w="23" name="D-03-vas" hint="Think again." show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-vas-4" w="7" name="D-03-vas" hint="Untrue!" show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-vas-5" w="14" name="D-03-vas" hint="You're right." show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-vas" id="D-03-vas.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-vas.');
-      const form = document.getElementById('D-03-vas-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-vas" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766173" id="devoirs3-selection-442d30332d766173-1" value="AAlmior" data-devoirs3-option="" data-option-id="AAlmior" data-feedback="Sorry." data-feedback-html="Sorry."> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766173" id="devoirs3-selection-442d30332d766173-2" value="BAksgml" data-devoirs3-option="" data-option-id="BAksgml" data-feedback="Sorry." data-feedback-html="Sorry."> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766173" id="devoirs3-selection-442d30332d766173-3" value="CAbrrxd" data-devoirs3-option="" data-option-id="CAbrrxd" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766173" id="devoirs3-selection-442d30332d766173-4" value="DAoksye" data-devoirs3-option="" data-option-id="DAoksye" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766173" id="devoirs3-selection-442d30332d766173-5" value="EAqukau" data-devoirs3-option="" data-option-id="EAqukau" data-feedback="Correct!" data-feedback-html="Correct!"> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-vas-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-vas.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-vas.");
-          localStorage.setItem('D-03-vas-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-vas</span>
+</fieldset>
+</div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <p>To convert from <em>meters per second</em> to miles, multiply by 0.000621371 miles per meter.</p>
-<span> <small style="color: grey;" id="D-03-vat-hintarea" class="hintarea">D-03-vat</small>
-<form id="D-03-vat-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-vat-1" w="5" name="D-03-vat" hint="Yup!" show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-vat-2" w="23" name="D-03-vat" hint="Better luck next time." show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-vat-3" w="23" name="D-03-vat" hint="Wrong." show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-vat-4" w="3" name="D-03-vat" hint="You're wrong here." show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-vat-5" w="7" name="D-03-vat" hint="This is wide of the mark." show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-vat" id="D-03-vat.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-vat.');
-      const form = document.getElementById('D-03-vat-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-vat" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766174" id="devoirs3-selection-442d30332d766174-1" value="AAeahha" data-devoirs3-option="" data-option-id="AAeahha" data-feedback="Correct!" data-feedback-html="Correct!"> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766174" id="devoirs3-selection-442d30332d766174-2" value="BAuxobt" data-devoirs3-option="" data-option-id="BAuxobt" data-feedback="Sorry." data-feedback-html="Sorry."> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766174" id="devoirs3-selection-442d30332d766174-3" value="CAfksnw" data-devoirs3-option="" data-option-id="CAfksnw" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766174" id="devoirs3-selection-442d30332d766174-4" value="DAnxiog" data-devoirs3-option="" data-option-id="DAnxiog" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d766174" id="devoirs3-selection-442d30332d766174-5" value="EArfaka" data-devoirs3-option="" data-option-id="EArfaka" data-feedback="Sorry." data-feedback-html="Sorry."> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-vat-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-vat.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-vat.");
-          localStorage.setItem('D-03-vat-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-vat</span>
+</fieldset>
+</div>
 <div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
 <p>To convert from seconds to hours, multiply by seconds per hour.</p>
-<span> <small style="color: grey;" id="D-03-wet-hintarea" class="hintarea">D-03-wet</small>
-<form id="D-03-wet-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-wet-1" w="87" name="D-03-wet" hint="You're mistaken" show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-wet-2" w="23" name="D-03-wet" hint="Think again." show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-wet-3" w="16" name="D-03-wet" hint="Score!" show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-wet-4" w="32" name="D-03-wet" hint="Incorrect." show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-wet-5" w="87" name="D-03-wet" hint="Not on target." show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-wet" id="D-03-wet.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-wet.');
-      const form = document.getElementById('D-03-wet-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-wet" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d776574" id="devoirs3-selection-442d30332d776574-1" value="AAjcrss" data-devoirs3-option="" data-option-id="AAjcrss" data-feedback="Sorry." data-feedback-html="Sorry."> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d776574" id="devoirs3-selection-442d30332d776574-2" value="BAzaklo" data-devoirs3-option="" data-option-id="BAzaklo" data-feedback="Sorry." data-feedback-html="Sorry."> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d776574" id="devoirs3-selection-442d30332d776574-3" value="CAsnomd" data-devoirs3-option="" data-option-id="CAsnomd" data-feedback="Correct!" data-feedback-html="Correct!"> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d776574" id="devoirs3-selection-442d30332d776574-4" value="DAzaumn" data-devoirs3-option="" data-option-id="DAzaumn" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d776574" id="devoirs3-selection-442d30332d776574-5" value="EAhsdqw" data-devoirs3-option="" data-option-id="EAhsdqw" data-feedback="Sorry." data-feedback-html="Sorry."> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-wet-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-wet.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-wet.");
-          localStorage.setItem('D-03-wet-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-wet</span>
+</fieldset>
+</div>
 <div id="tabset-3-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-5-tab">
 <p>To convert from <em>acre-feet</em> to <em>cubic meters</em>, multiply by 1233.48 meters per foot.</p>
-<span> <small style="color: grey;" id="D-03-yin-hintarea" class="hintarea">D-03-yin</small>
-<form id="D-03-yin-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-yin-1" w="87" name="D-03-yin" hint="Wrong." show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-yin-2" w="18" name="D-03-yin" hint="Score!" show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-yin-3" w="19" name="D-03-yin" hint="Not on target." show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-yin-4" w="19" name="D-03-yin" hint="Better luck next time." show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-yin-5" w="3" name="D-03-yin" hint="Sorry!" show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-yin" id="D-03-yin.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-yin.');
-      const form = document.getElementById('D-03-yin-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-yin" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d79696e" id="devoirs3-selection-442d30332d79696e-1" value="AAusqxa" data-devoirs3-option="" data-option-id="AAusqxa" data-feedback="Sorry." data-feedback-html="Sorry."> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d79696e" id="devoirs3-selection-442d30332d79696e-2" value="BAuiedd" data-devoirs3-option="" data-option-id="BAuiedd" data-feedback="Correct!" data-feedback-html="Correct!"> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d79696e" id="devoirs3-selection-442d30332d79696e-3" value="CAvgblk" data-devoirs3-option="" data-option-id="CAvgblk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d79696e" id="devoirs3-selection-442d30332d79696e-4" value="DAfnwue" data-devoirs3-option="" data-option-id="DAfnwue" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d79696e" id="devoirs3-selection-442d30332d79696e-5" value="EAspjgc" data-devoirs3-option="" data-option-id="EAspjgc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-yin-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-yin.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-yin.");
-          localStorage.setItem('D-03-yin-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-yin</span>
+</fieldset>
+</div>
 <div id="tabset-3-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-6-tab">
 <p>To convert from <em>cc</em> to <em>liters</em>, multiply by 0.001 liters per cc.</p>
-<span> <small style="color: grey;" id="D-03-ball-hintarea" class="hintarea">D-03-ball</small>
-<form id="D-03-ball-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-ball-1" w="3" name="D-03-ball" hint="You might think so, but ..." show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-ball-2" w="87" name="D-03-ball" hint="Nope." show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-ball-3" w="32" name="D-03-ball" hint="Not so!" show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-ball-4" w="19" name="D-03-ball" hint="Incorrect." show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-ball-5" w="14" name="D-03-ball" hint="Yeah!" show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-ball" id="D-03-ball.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-ball.');
-      const form = document.getElementById('D-03-ball-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-ball" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d62616c6c" id="devoirs3-selection-442d30332d62616c6c-1" value="AAnldxf" data-devoirs3-option="" data-option-id="AAnldxf" data-feedback="Sorry." data-feedback-html="Sorry."> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d62616c6c" id="devoirs3-selection-442d30332d62616c6c-2" value="BAspgym" data-devoirs3-option="" data-option-id="BAspgym" data-feedback="Sorry." data-feedback-html="Sorry."> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d62616c6c" id="devoirs3-selection-442d30332d62616c6c-3" value="CAvuoyf" data-devoirs3-option="" data-option-id="CAvuoyf" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d62616c6c" id="devoirs3-selection-442d30332d62616c6c-4" value="DAcuvov" data-devoirs3-option="" data-option-id="DAcuvov" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d62616c6c" id="devoirs3-selection-442d30332d62616c6c-5" value="EAezati" data-devoirs3-option="" data-option-id="EAezati" data-feedback="Correct!" data-feedback-html="Correct!"> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-ball-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-ball.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-ball.");
-          localStorage.setItem('D-03-ball-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-ball</span>
+</fieldset>
+</div>
 <div id="tabset-3-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-7-tab">
 <p>To convert from <em>meters per second</em> to <em>miles per second</em>, multiply by 0.000621371 miles per meter.</p>
-<span> <small style="color: grey;" id="D-03-cage-hintarea" class="hintarea">D-03-cage</small>
-<form id="D-03-cage-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-cage-1" w="19" name="D-03-cage" hint="This is wide of the mark." show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-cage-2" w="7" name="D-03-cage" hint="Untrue!" show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-cage-3" w="3" name="D-03-cage" hint="You're mistaken" show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-cage-4" w="7" name="D-03-cage" hint="Try again!" show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-cage-5" w="16" name="D-03-cage" hint="Score!" show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-cage" id="D-03-cage.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-cage.');
-      const form = document.getElementById('D-03-cage-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-cage" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d63616765" id="devoirs3-selection-442d30332d63616765-1" value="AAeeztk" data-devoirs3-option="" data-option-id="AAeeztk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d63616765" id="devoirs3-selection-442d30332d63616765-2" value="BAqslei" data-devoirs3-option="" data-option-id="BAqslei" data-feedback="Sorry." data-feedback-html="Sorry."> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d63616765" id="devoirs3-selection-442d30332d63616765-3" value="CAppwsv" data-devoirs3-option="" data-option-id="CAppwsv" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d63616765" id="devoirs3-selection-442d30332d63616765-4" value="DAsaqya" data-devoirs3-option="" data-option-id="DAsaqya" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d63616765" id="devoirs3-selection-442d30332d63616765-5" value="EAneiyo" data-devoirs3-option="" data-option-id="EAneiyo" data-feedback="Correct!" data-feedback-html="Correct!"> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-cage-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-cage.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-cage.");
-          localStorage.setItem('D-03-cage-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-cage</span>
+</fieldset>
+</div>
 <div id="tabset-3-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-8-tab">
 <p>To convert from <em>GDP dollars per capita</em> to <em>total GDP dollars</em>, multiply by 365 capita per dollar.</p>
-<span> <small style="color: grey;" id="D-03-nut-hintarea" class="hintarea">D-03-nut</small>
-<form id="D-03-nut-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="conversion ... impossible" id="D-03-nut-1" w="8" name="D-03-nut" hint="A hit!" show_hints="TRUE"> conversion impossible</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="units not correct" id="D-03-nut-2" w="7" name="D-03-nut" hint="Better luck next time." show_hints="TRUE"> units not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numerator/ ... ot correct" id="D-03-nut-3" w="7" name="D-03-nut" hint="Not on target." show_hints="TRUE"> numerator/denominator not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="numeric va ... ot correct" id="D-03-nut-4" w="3" name="D-03-nut" hint="Nope." show_hints="TRUE"> numeric value not correct</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="correct" id="D-03-nut-5" w="87" name="D-03-nut" hint="Incorrect choice." show_hints="TRUE"> correct</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="D-03-nut" id="D-03-nut.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D-03-nut.');
-      const form = document.getElementById('D-03-nut-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="D-03-nut" data-feedback-enabled="true" data-multiple="false">
+<legend class="devoirs3-visually-hidden">Placeholder for now</legend> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6e7574" id="devoirs3-selection-442d30332d6e7574-1" value="AAioeqm" data-devoirs3-option="" data-option-id="AAioeqm" data-feedback="Correct!" data-feedback-html="Correct!"> <span>conversion impossible</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6e7574" id="devoirs3-selection-442d30332d6e7574-2" value="BAcnkrq" data-devoirs3-option="" data-option-id="BAcnkrq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>units not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6e7574" id="devoirs3-selection-442d30332d6e7574-3" value="CAajhof" data-devoirs3-option="" data-option-id="CAajhof" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numerator/denominator not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6e7574" id="devoirs3-selection-442d30332d6e7574-4" value="DAptbuo" data-devoirs3-option="" data-option-id="DAptbuo" data-feedback="Sorry." data-feedback-html="Sorry."> <span>numeric value not correct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-442d30332d6e7574" id="devoirs3-selection-442d30332d6e7574-5" value="EArqzhk" data-devoirs3-option="" data-option-id="EArqzhk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>correct</span> </label>
+<div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE">
 
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D-03-nut-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D-03-nut.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D-03-nut.");
-          localStorage.setItem('D-03-nut-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+</div>
+<button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">
+Clear
+</button>
+<span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-03-nut</span>
+</fieldset>
+</div>
 <div id="tabset-3-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-9-tab">
 <!--
 id: "rabbit-write-glasses"
 created: "Fri Oct 16 09:01:51 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 03
 
 -->
@@ -2337,39 +1662,32 @@ chapter: 03
 </style>
 <div id="exr-rabbit-write-glasses" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 30</strong></span> Which of these units is used to measure information?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="info-unit-hintarea" class="hintarea">info-unit</small>
-<form id="info-unit-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="Hertz" id="info-unit-1" w="87" name="info-unit" hint="Sorry. This is *per second*, that is, inverse seconds" show_hints="TRUE"> Hertz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Parsec" id="info-unit-2" w="3" name="info-unit" hint="Sorry. This unit measures distance" show_hints="TRUE"> Parsec &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Bit" id="info-unit-3" w="41" name="info-unit" hint="Right! A byte is 8 bits, a Gigabyte is one-billion bits. Computers are information machines, thus the use of bits when describing their memory capacity." show_hints="TRUE"> Bit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Erg" id="info-unit-4" w="19" name="info-unit" hint="Sorry. This unit measures energy" show_hints="TRUE"> Erg &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="info-unit" id="info-unit.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for info-unit.');
-      const form = document.getElementById('info-unit-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('info-unit-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for info-unit.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for info-unit.");
-          localStorage.setItem('info-unit-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="info-unit" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e666f2d756e6974" id="devoirs3-selection-696e666f2d756e6974-1" value="AAcxgpc" data-devoirs3-option="" data-option-id="AAcxgpc" data-feedback="Sorry. This is *per second*, that is, inverse seconds" data-feedback-html="Sorry. This is <em>per second</em>, that is, inverse seconds">
+    <span>Hertz</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e666f2d756e6974" id="devoirs3-selection-696e666f2d756e6974-2" value="BArhshz" data-devoirs3-option="" data-option-id="BArhshz" data-feedback="Sorry. This unit measures distance" data-feedback-html="Sorry. This unit measures distance">
+    <span>Parsec</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e666f2d756e6974" id="devoirs3-selection-696e666f2d756e6974-3" value="CAevaaj" data-devoirs3-option="" data-option-id="CAevaaj" data-feedback="Right! A byte is 8 bits, a Gigabyte is one-billion bits. Computers are information machines, thus the use of bits when describing their memory capacity." data-feedback-html="Right! A byte is 8 bits, a Gigabyte is one-billion bits. Computers are information machines, thus the use of bits when describing their memory capacity.">
+    <span>Bit</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e666f2d756e6974" id="devoirs3-selection-696e666f2d756e6974-4" value="DAwhhtc" data-devoirs3-option="" data-option-id="DAwhhtc" data-feedback="Sorry. This unit measures energy" data-feedback-html="Sorry. This unit measures energy">
+    <span>Erg</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">info-unit</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-rabbit-write-glasses --></p>
 </div>
@@ -2399,17 +1717,6 @@ W10=
 </script>
 
 </main> <!-- /main -->
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6W119
-</script>
-<script type="module">
-if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../DRILL";
-window._ojs.paths.runtimeToRoot = "../..";
-window._ojs.paths.docToRoot = "..";
-window._ojs.selfContained = false;
-window._ojs.runtime.interpretFromScriptTags();
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

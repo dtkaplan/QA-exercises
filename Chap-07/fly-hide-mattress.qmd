@@ -4,7 +4,7 @@ created: "Sat Dec 20 08:53:02 2025"
 attribution: TBA
 status: "draft"
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -96,36 +96,75 @@ The function shows that your net speed is most likely to be 2 mph, but due to fl
 
 1. What's the longest possible duration for the 8-mile trip?
 
-```{mcq}
-#| label: fhm-1-udw2
-#| inline: true
-1. 4 hours
-2. 5 hours
-3. 6.67 hours
-4. 8 hours [correct]
+```{devoirs_choices}
+#| label: choices_fhm.1.udw2
+- '4 hours':
+    correct: false
+- '5 hours':
+    correct: false
+- '6.67 hours':
+    correct: false
+- '8 hours':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fhm-1-udw2",
+  question = "Placeholder for now",
+  answers = choices_fhm.1.udw2,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 
 2. What's the shortest possible duration for the 8-mile trip?
 
-```{mcq}
-#| label: fhm-2-34df
-#| inline: true
-1. 2 hours
-2. 2.67 hours [correct]
-3. 3 hours
-4. 4 hours
+```{devoirs_choices}
+#| label: choices_fhm.2.34df
+- '2 hours':
+    correct: false
+- '2.67 hours':
+    correct: true
+- '3 hours':
+    correct: false
+- '4 hours':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fhm-2-34df",
+  question = "Placeholder for now",
+  answers = choices_fhm.2.34df,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. What's the most likely duration?
 
-```{mcq}
-#| label: fhm-3-9t3
-#| inline: true
-1. 3 hours
-2. 4 hours [correct]
-3. 5 hours
-4. 6.67 hours
+```{devoirs_choices}
+#| label: choices_fhm.3.9t3
+- '3 hours':
+    correct: false
+- '4 hours':
+    correct: true
+- '5 hours':
+    correct: false
+- '6.67 hours':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fhm-3-9t3",
+  question = "Placeholder for now",
+  answers = choices_fhm.3.9t3,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 ```{r}
@@ -144,12 +183,24 @@ p4
 
 @fig-ftm-3 shows three different relative probability functions, each purporting to show the distribution of travel times. Only one is correct. Which one?
 
-```{mcq}
-#| label: fhm-4-rdf
-#| inline: true
-1. a [correct]
-2. b 
-3. c
+```{devoirs_choices}
+#| label: choices_fhm.4.rdf
+- 'a':
+    correct: true
+- 'b':
+    correct: false
+- 'c':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fhm-4-rdf",
+  question = "Placeholder for now",
+  answers = choices_fhm.4.rdf,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

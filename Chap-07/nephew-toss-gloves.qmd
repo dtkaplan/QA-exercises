@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -21,13 +21,26 @@ slice_plot(1/x ~ x, domain(x = 0.2:3)) |>
 
 Which core modeling function does this graph show?
 
-```{mcq}
-#| label: ntg-1-cdwq
-#| inline: true
-1. log2()
-2. exp2()
-3. recip() [correct]
-4. hillside()
+```{devoirs_choices}
+#| label: choices_ntg.1.cdwq
+- 'log2()':
+    correct: false
+- 'exp2()':
+    correct: false
+- 'recip()':
+    correct: true
+- 'hillside()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ntg-1-cdwq",
+  question = "Placeholder for now",
+  answers = choices_ntg.1.cdwq,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

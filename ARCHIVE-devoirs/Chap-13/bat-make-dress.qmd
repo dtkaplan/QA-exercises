@@ -1,0 +1,62 @@
+<!--
+id: "bat-make-dress"
+created: "Thu Oct 16 15:58:06 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bat-make-dress}
+
+
+{== I don't think we need this. To mathy. ==}
+
+**Computing order of magnitude**
+
+Almost always, order of magnitude is used when *comparing* two or more  quantities, as we did in the previous section when comparing traveling speeds of different modes, e.g., walking and driving. The comparison is performed by rendering each of the quantities into scientific notation and subtracting the smaller exponent from the larger. That is, the difference between the exponents tells the relative order of magnitude of the two quantities.
+
+How about the order of magnitude of a single quantity? This idea is less useful because the scientific notation exponent will depend on the **units** of measurement. To illustrate, let's return to the distance from Earth to Mars and Venus, representing it in both km, millimeters, and light-years. (A light-year is the distance that light travels in a vacuum in one year. One light year amounts to 9.461 $\times$ 10^12^ km)
+
+Distance to Mars | Distance to Venus
+:----------------|:----------------
+5.89 $\times$ 10^-6^ light-year | 4.08 $\times$ 10^-6^ light-year 
+5.57 $\times$ 10^7^ km | 3.86 $\times$ 10^7^ km 
+5.57 $\times$ 10^13^ mm | 3.86 $\times$ 10^13^ mm 
+
+The scientific-notation exponent varies substantially from one unit to another. But for the comparison done in each unit, the result is the same: there is no order of magnitude *difference* in the distance to Mars compared to the distance to Venus.
+
+Suppose you have numbers written in ordinary decimal notation as opposed to scientific notation. You can calculate the exponential in the scientific notation representation by counting digits. There are three cases:
+
+i. There is just one digit to the left of the decimal point, e.g. 3.14159. Such numbers have scientific notation exponent zero.
+
+ii. There are multiple digits to the left of the decimal point. Count those digits and subtract one. For example, 38600000.0 km has eight digits to the left of the decimal point, so the scientific notation exponent is 7. (Strictly speaking, this rule includes special case (i).)
+
+iii. There are no non-zero digits to the left of the decimal point, for instance the Earth-to-Mars distance 0.00000589 light-year. In this case, count the leading zeros up to the first non-zero digit. Then add one.
+
+Actually, you can get the computer to do the counting for you. In R, the `format()` function will do the work, presenting the result in quoted characters:
+
+```{r}
+#| label: C13-gaegi
+format(38600000, scientific = TRUE)
+```
+
+Based on a mathematical discovery made near the start of the 17th century (when many such discoveries were being made that advanced science), there is a way to reduce any positive number to an equivalent exponent. By equivalent, I mean that the exponent alone carries all the information about the number with the mantissa *always being one*. For example, 38600000 is the same as 10^7.586587^ and 0.00000408 is the same as 10^-5.68934^. 
+
+To illustrate how this is, let's bound 3.86 $\times$ 10^7^ by two numbers that have exactly 1 as the mantissa. $$1\times 10^7\ <\  3.86 \times 10^7 \ <\  1 \times 10^8\ .$$ This suggests that if we want to replace the 3.86 by a simple 1.0, we would have to increase the exponent a bit above 7 in order to compensate:
+
+$$1\times 10^7\ <\  1 \times 10^{\color{magenta}{7.5 ...}} \ <\  1 \times 10^8\ .$$
+
+I've written ${\color{magenta}{7.5 ...}}$ as the exponent just as an approximation, the justification being that we know the exponent must be somewhere between 7 and 8.
+
+The calculation of the exponent by hand is a next to impossible task except in some special cases. The exponents for the numbers 1 to 10,000 we're published in 1618 after a stupendous amount of work by human "computers" using paper, ink, and quill. Nowadays, however, computers and calculators do the work almost instantaneously. All that's needed is to know the name of the function to use or the label on the calculator button. In R, and many other computer languages, the function name is `log10()`.
+
+For many people, logarithms bring back unhappy memories of high-school algebra. Possibly that's because students are taught the algebraic manipulation of logarithm functions involving all sorts of different "bases." This includes the so-called "natural logarithm" which in no everyday meaning of the word is "natural." In this course, we'll use `log10()` only. Keep in mind that you can approximate the logarithm calculation by counting digits.
+
+We will encounter several practical uses of logarithms in later chapters. Here, we point to just one: graphing out data that spans multiple orders of magnitude.  
+
+
+:::
+ <!-- end of exr-bat-make-dress -->

@@ -12,7 +12,7 @@ chapter: 03
 
 
 ::: {#exr-monkey-talk-oven}
-`r devoirs::devoirs_TF(correct = TRUE, id="D-03-fan")` You can multiply or divide any two *numbers* (excepting zero)
+`r devoirs3::devoirs_TF(correct = TRUE, label="D-03-fan")` You can multiply or divide any two *numbers* (excepting zero)
 
 :::
  <!-- end of exr-monkey-talk-oven -->

@@ -13,31 +13,31 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-15/arm-begin-door.qmd >}}
+{{< include ../Chap-15/arm-begin-door.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-15/fawn-draw-radio.qmd >}}
+{{< include ../Chap-15/fawn-draw-radio.qmd >}}
 
 ## 3
 
-{{< include ../devoirs3/Chap-15/lamb-point-saucer.qmd >}}
+{{< include ../Chap-15/lamb-point-saucer.qmd >}}
 
 ## 4
 
-{{< include ../devoirs3/Chap-15/maple-freeze-hat.qmd >}}
+{{< include ../Chap-15/maple-freeze-hat.qmd >}}
 
 ## 5
 
-{{< include ../devoirs3/Chap-15/sister-pay-candy.qmd >}}
+{{< include ../Chap-15/sister-pay-candy.qmd >}}
 
 ## 6
 
-{{< include ../devoirs3/Chap-15/spider-bid-plate.qmd >}}
+{{< include ../Chap-15/spider-bid-plate.qmd >}}
 
 ## 7
 
-{{< include ../devoirs3/Chap-15/turtle-speak-pencil.qmd >}}
+{{< include ../Chap-15/turtle-speak-pencil.qmd >}}
 
 
 

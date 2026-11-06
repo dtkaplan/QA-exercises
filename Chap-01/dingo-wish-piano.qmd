@@ -13,6 +13,6 @@ chapter: 1
 ::: {#exr-dingo-wish-piano}
 A model is a **representation** of an item, process, or setting of interest.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-01-lade")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-01-lade")`
 :::
  <!-- end of exr-dingo-wish-piano -->

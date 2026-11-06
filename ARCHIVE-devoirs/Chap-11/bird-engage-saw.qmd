@@ -1,0 +1,50 @@
+<!--
+id: "bird-engage-saw"
+created: "Thu Feb 19 09:30:53 2026"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bird-engage-saw}
+These questions relate to an event with three possible outcomes, A, B, and C. The relative probabilities are 5, 2, and 7 respectively. (Note: We are using integers for simplicity. Relative probabilities can be any non-negative number, not just integers.)
+
+1. What is the odds of A?
+
+```{mcq}
+#| label: ebs-1-e3se
+1. $5/2 = 2.5$  [hint: This compares only two of the three outcomes.]
+2. $5/7 = 0.714$ [hint: This compares only two of the three outcomes.]
+3. $5/9 = 0.556$ [correct]
+4. Odds are not applicable when there are three outcomes. [hint: That's a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes.]
+```
+
+2. What is the odds of C?
+
+```{mcq}
+#| label: ebs-2-e8ee
+1. $7/2 = 3.5$  [hint: This compares only two of the three outcomes.]
+2. $7/(5 + 2) = 1$ [correct]
+3. $(7+2)/5 = 1.8$ 
+4. Odds are not applicable when there are three outcomes. [hint: That's a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes.]
+```
+
+3. What is the odds of the outcome being *either* B or C?
+
+```{mcq}
+#| label: ebs-3-yeis
+1. Same as the odds of A. [hint: Not right, but a good thought since A is the alternative to outcome B or C.]
+2. 1 / (odds of A) [correct]
+3. odds B + odds C 
+4. Odds don't apply in this situation.
+```
+
+[Explanation for correct answer:  1/odds(something) is p(not something)/p(something).]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: bes-3nw"}
+
+[Explanation for choice "odds B + odds C": Something similar would be true for probabilities: prob(B or C) = prob(B) + prob(C), but odds work differently.]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: bes-3GG"}
+
+:::
+ <!-- end of exr-bird-engage-saw -->

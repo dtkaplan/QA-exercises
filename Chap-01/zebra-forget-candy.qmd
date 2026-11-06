@@ -13,6 +13,6 @@ chapter: 1
 ::: {#exr-zebra-forget-candy}
 A **heuristic** is a reasoning link that is useful but is not guaranteed to be correct.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-01-dig")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-01-dig")`
 :::
  <!-- end of exr-zebra-forget-candy -->

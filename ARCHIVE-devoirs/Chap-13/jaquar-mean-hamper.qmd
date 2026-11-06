@@ -1,0 +1,28 @@
+<!--
+id: "jaquar-mean-hamper"
+created: "Thu Aug 28 06:51:27 2025"
+attribution: DTK
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-jaquar-mean-hamper}
+The graphic in @fig-overdose-deaths appeared in an editorial in the *New York Times*. The editorial states this fact: "More than 400,000 Americans died from drug overdoses between 2020 and 2023."
+
+Assume that the graphic shows a continuous function of the date.
+
+a. Would the graphic, as labeled, be consistent with the statement? 
+
+b. What are the units for the vertical axis if the graphic is to be consistent with the statement and show a continuous function of the date?
+
+::: {#fig-overdose-deaths}
+![](../www/overdose-deaths-NYT.png)
+
+Overdose deaths in the US. (Source: [New York Times, August 28, 2025](https://www.nytimes.com/2025/08/28/opinion/opioids-progress-trump-policy-law.html?smid=nytcore-ios-share&referringSource=articleShare))
+:::
+
+:::
+ <!-- end of exr-jaquar-mean-hamper -->

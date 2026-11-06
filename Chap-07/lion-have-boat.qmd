@@ -5,7 +5,7 @@ attribution: DTK
 use: Chap 0 drill
 status: ready-to-use
 chapter: 7
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,14 +13,26 @@ mode: "drill"
 ::: {#exr-lion-have-boat}
 Some core modeling functions have a *bounded* output, that is, the output has finite maximum and minimum values. Pick the one that does **not** fit into this category.
 
-```{mcq}
-#| label: lhb-1-k32
-#| inline: true
-1. `osc()` 
-2  `hill()`
-3. `hillside()`
-4. `exp2()` [correct]
-5. `flat()`
+```{devoirs_choices}
+#| label: choices_lhb.1.k32
+- '`osc()`  2  `hill()`':
+    correct: false
+- '`hillside()`':
+    correct: false
+- '`exp2()`':
+    correct: true
+- '`flat()`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "lhb-1-k32",
+  question = "Placeholder for now",
+  answers = choices_lhb.1.k32,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-lion-have-boat -->

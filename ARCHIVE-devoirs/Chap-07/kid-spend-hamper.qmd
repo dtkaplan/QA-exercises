@@ -1,0 +1,20 @@
+<!--
+id: "kid-spend-hamper"
+created: "Thu Oct 23 07:56:46 2025"
+attribution: TBA
+status: "draft"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-kid-spend-hamper}
+
+Plotting the core modeling functions. As they come out of the box, all of the core modeling functions take a pure number as input and return a pure number as output. We've configured the out-of-the-box functions so that you can see the main features simply by making a plot with a graphic domain running from, say, -3 to 3.
+
+ASK for other domains. What features are left out when you plot over the specified domain.
+:::
+ <!-- end of exr-kid-spend-hamper -->

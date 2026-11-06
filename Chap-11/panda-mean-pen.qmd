@@ -4,7 +4,7 @@ created: "Thu Feb 19 09:50:39 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 11
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,47 +16,117 @@ Assume that rA $\neq$ pA, that is, that the relative probabilities are *not* abs
 
 1. What is the quantity rA/(rA + rB + rC + rD + rE)?
 
-```{mcq}
-#| label: pmp-1-xgs
-1. The odds of A 
-2. The absolute probability of A, that is, pA [correct]
-3. Neither of the above.
+```{devoirs_choices}
+#| label: choices_pmp.1.xgs
+- 'The odds of A':
+    correct: false
+- 'The absolute probability of A, that is, pA':
+    correct: true
+- 'Neither of the above.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pmp-1-xgs",
+  question = "Placeholder for now",
+  answers = choices_pmp.1.xgs,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 2. What is the quantity rA/(rB + rC + rD + rE)?
 
-```{mcq}
-#| label: pmp-2-3xgs
-1. The odds of A [correct]
-2. The absolute probability of A, that is, pA.
-3. Neither of the above.
+```{devoirs_choices}
+#| label: choices_pmp.2.3xgs
+- 'The odds of A':
+    correct: true
+- 'The absolute probability of A, that is, pA.':
+    correct: false
+- 'Neither of the above.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pmp-2-3xgs",
+  question = "Placeholder for now",
+  answers = choices_pmp.2.3xgs,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 3. What is the quantity pA/(rB + rC + rD + rE)?
 
-```{mcq}
-#| label: pmp-3-r3gs
-1. The odds of A [hint: Sorry. It would be, if rA = pA.]
-2. The absolute probability of A, that is, pA.
-3. Neither of the above. [correct hint: Yes, although if rA happens to equal pA we'd have the odds of A]
+```{devoirs_choices}
+#| label: choices_pmp.3.r3gs
+- 'The odds of A':
+    correct: false
+    feedback: 'Sorry. It would be, if rA = pA.'
+- 'The absolute probability of A, that is, pA.':
+    correct: false
+- 'Neither of the above.':
+    correct: true
+    feedback: 'Yes, although if rA happens to equal pA we''d have the odds of A'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pmp-3-r3gs",
+  question = "Placeholder for now",
+  answers = choices_pmp.3.r3gs,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 4. What is the quantity pA/(pA + pB + pC + pD + pE)?
 
-```{mcq}
-#| label: pmp-4-g312s
-1. The odds of A [hint: Sorry, but pA also appears in the denominator (bottom) of the fraction.]
-2. The absolute probability of A, that is, pA. [correct hint: Yes. But a pointless computation since we already know pA, we don't need pB, pC, pD, or pE.]
-3. Neither of the above. 
+```{devoirs_choices}
+#| label: choices_pmp.4.g312s
+- 'The odds of A':
+    correct: false
+    feedback: 'Sorry, but pA also appears in the denominator (bottom) of the fraction.'
+- 'The absolute probability of A, that is, pA.':
+    correct: true
+    feedback: 'Yes. But a pointless computation since we already know pA, we don''t need pB, pC, pD, or pE.'
+- 'Neither of the above.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pmp-4-g312s",
+  question = "Placeholder for now",
+  answers = choices_pmp.4.g312s,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 5. What is the quantity rA/(1-rA)?
 
-```{mcq}
-#| label: pmp-5-gjki8
-1. The odds of A [hint: No. In fact, if rA > 1 then this quantity would be negative.]
-2. The absolute probability of A, that is, pA. 
-3. Neither of the above. [correct]
+```{devoirs_choices}
+#| label: choices_pmp.5.gjki8
+- 'The odds of A':
+    correct: false
+    feedback: 'No. In fact, if rA > 1 then this quantity would be negative.'
+- 'The absolute probability of A, that is, pA.':
+    correct: false
+- 'Neither of the above.':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pmp-5-gjki8",
+  question = "Placeholder for now",
+  answers = choices_pmp.5.gjki8,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 

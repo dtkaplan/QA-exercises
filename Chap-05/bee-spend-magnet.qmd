@@ -4,7 +4,7 @@ created: "Mon Dec  1 10:38:18 2025"
 attribution: DTK
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 topic: "traditional units"
 -->
 
@@ -30,7 +30,7 @@ cubic foot:"
 
 
 
-`r devoirs_text("bsm-volume-units", rows=5, contents = default_text)`
+`r devoirs3::devoirs_text("bsm-volume-units", height=5, contents = default_text)`
 
 :::
  <!-- end of exr-bee-spend-magnet -->

@@ -4,7 +4,7 @@ created: "Mon Feb 16 14:20:56 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 10
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -29,21 +29,46 @@ B          | 3     |  0.9       |  0.27    | 0.27 / (0.28 + 0.27) = 0.49
 
 1. In the above example, what is the odds of hypothesis A?
 
-```{mcq}
-#| label: mtp-1-3ls
-#| inline: true
-1. 3
-2. 7
-3. 7/3 [correct]
-4. 3/7
+```{devoirs_choices}
+#| label: choices_mtp.1.3ls
+- '3':
+    correct: false
+- '7':
+    correct: false
+- '7/3':
+    correct: true
+- '3/7':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "mtp-1-3ls",
+  question = "Placeholder for now",
+  answers = choices_mtp.1.3ls,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. Each of the likelihoods is an absolute probability calculated in its own world, a world where the corresponding hypothesis is true. Is there any requirement for the likelihoods to add up to 1 across all the hypotheses?
 
-```{mcq}
-#| label: mtp-2-k4w
-1. Yes, because that's what it means to be an absolute probability. 
-2. No, because each likelihood is a probability of an outcome in a *different world* as opposed to the probabilities of different outcomes in the same world. [correct]
+```{devoirs_choices}
+#| label: choices_mtp.2.k4w
+- 'Yes, because that''s what it means to be an absolute probability.':
+    correct: false
+- 'No, because each likelihood is a probability of an outcome in a *different world* as opposed to the probabilities of different outcomes in the same world.':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "mtp-2-k4w",
+  question = "Placeholder for now",
+  answers = choices_mtp.2.k4w,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 Now let's make up an example where there are four hypotheses, say four different kinds of watercraft where the observation is seeing the craft with binoculars at a distance of 5 miles:
@@ -59,31 +84,58 @@ Note that the priors reflect a genuine reality: there are many more rubber dingy
 
 3. Give a sensible explanation of why the likelihood for the aircraft carrier is 80 times that for a rubber dingy.
 
-`r devoirs::devoirs_text("mtp-3-i2oe")`
+`r devoirs3::devoirs_text("mtp-3-i2oe")`
 
 4. Which of the four hypotheses has the greatest posterior probability?
 
-```{mcq}
-#| label: mtp-4-3dl
-1. Aircraft carrier
-2. Luxury yacht [correct]
-3. Canoe
-4. Rubber Dingy
+```{devoirs_choices}
+#| label: choices_mtp.4.3dl
+- 'Aircraft carrier':
+    correct: false
+- 'Luxury yacht':
+    correct: true
+- 'Canoe':
+    correct: false
+- 'Rubber Dingy':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "mtp-4-3dl",
+  question = "Placeholder for now",
+  answers = choices_mtp.4.3dl,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 5. You can compute the relative posterior for each hypothesis by a simple multiplication of the numbers on that hypothesis's row in the table. 
 
-`r devoirs_TF(FALSE, "mtp-5-cks")` You can likewise find each absolute posterior probability by using just the entries in that row.
+`r devoirs3::devoirs_TF(FALSE, "mtp-5-cks")` You can likewise find each absolute posterior probability by using just the entries in that row.
 
 6. What is the absolute probability, given the observation, of the craft being a luxury yacht? (Pick the closest answer.)
 
-```{mcq}
-#| label: mtp-6-pwd
-#| inline: true
-1. 0.5%
-2. 5%
-3. 30%
-4. 65% [correct]
+```{devoirs_choices}
+#| label: choices_mtp.6.pwd
+- '0.5%':
+    correct: false
+- '5%':
+    correct: false
+- '30%':
+    correct: false
+- '65%':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "mtp-6-pwd",
+  question = "Placeholder for now",
+  answers = choices_mtp.6.pwd,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

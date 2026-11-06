@@ -1,0 +1,19 @@
+<!--
+id: "kangaroo-eat-oven"
+created: "Mon Oct 27 11:35:43 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-kangaroo-eat-oven}
+Examples of textbook formulas created by multiplication of simple terms. Ask the students to write down the input variables, the coefficients, and whether they are a case of $x \times y$ or $x \time x$ or if some other functions are involved, as in $f(x) \times f(y)$.
+
+For instance, gravitational acceleration of any particle is proportional to the mass of the attracting object and inversely proportional to the square of the distance between the particle and the attracting object. Traditionally such relationship knowledge has been described as a "law," as in the "Universal Law of Gravitation," the name for the relationship described in the previous sentence. In chemistry, the "Ideal Gas Law" holds that temperature is proportional to the number of gas molecules ($n$), the pressure of the gas ($P$), and the volume of the container ($V$): altogether that $PV = n R T$ (where $R$ is a known constant of proportionality: 8.314 J mol^-1^ K^-1^). Similarly, "Ohm's Law" describing electrical current (I) and voltage (V) is that V = I R, where R is the resistance of the electrical conductor.
+:::
+ <!-- end of exr-kangaroo-eat-oven -->

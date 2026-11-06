@@ -4,7 +4,7 @@ created: "Sat Dec 20 08:37:49 2025"
 attribution: TBA
 status: "sketch"
 chapter: 15
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,12 +16,26 @@ Scenario: You are volunteering for a community garden. You need to apply liquid 
 
 The Question: The fertilizer is only sold in 1-quart bottles. How many bottles do you need to buy to treat all the seedlings? (Note the conversion factor: 32 fluid ounces = 1 quart)
 
-```{mcq}
-#| label: clf-10-mfdmd
-1. 2 bottles. You need 180 total fluid ounces, and two quarts only provide 64 ounces.
-2. 6 bottles. You need 180 total fluid ounces, which equals 5.625 quarts. [correct]
-3. 5 bottles. You need 160 total fluid ounces, which equals exactly 5 quarts. 
-4. 3 bottles. You need 90 total fluid ounces, which is just under 3 quarts.
+```{devoirs_choices}
+#| label: choices_clf.10.mfdmd
+- '2 bottles. You need 180 total fluid ounces, and two quarts only provide 64 ounces.':
+    correct: false
+- '6 bottles. You need 180 total fluid ounces, which equals 5.625 quarts.':
+    correct: true
+- '5 bottles. You need 160 total fluid ounces, which equals exactly 5 quarts.':
+    correct: false
+- '3 bottles. You need 90 total fluid ounces, which is just under 3 quarts.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "clf-10-mfdmd",
+  question = "Placeholder for now",
+  answers = choices_clf.10.mfdmd,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 Human comment:

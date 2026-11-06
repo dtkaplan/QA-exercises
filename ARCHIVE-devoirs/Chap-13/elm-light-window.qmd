@@ -1,0 +1,20 @@
+<!--
+id: "elm-light-window"
+created: "Sun Aug 30 08:02:34 2026"
+attribution: DTK
+uses: "core modeling exponentials logarithms"
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-elm-light-window}
+EXPLAIN ABOUT THE EXPONENTIALS HERE, PERHAPS USING A SCALED PLOT.
+
+THEN EXPLAIN ABOUT LOGARITHMS
+
+A close cousin of log2() is magnitude(), where a 10-fold increase in the input corresponds to adding 1 to the output. Both of these are in the *logarithmic family* of functions. log2() is the logarithm with a base of 2, magnitude is the logarithm with a base of 10. The shapes of these functions are identical, so either one of them can be used to the same effect.
+:::
+ <!-- end of exr-elm-light-window -->

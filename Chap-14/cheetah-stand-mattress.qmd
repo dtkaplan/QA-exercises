@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:33:01 2025"
 attribution: DTK
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -44,21 +44,21 @@ Frame | Time | Nose | Hoof | Velocity | Velocity
 
 The following is a text-entry box that will be submitted along with your other answers. Questions (1) - (3) below are to get you started filling in the velocity columns of the table. 
 
-`r devoirs::devoirs_text("csm-tab-3ks", contents = Framework, rows = 14)`
+`r devoirs3::devoirs_text("csm-tab-3ks", contents = Framework, height = 14)`
 
 
 
 1. What is the change in nose position from frame 1 to frame 2?
 
-`r devoirs::devoirs_set(c(-0.6, 0.6, 1.3, 2.7, 3.5), correct = 1.3, id = "csm-1-clw")`
+`r devoirs3::devoirs_set3(c(-0.6, 0.6, 1.3, 2.7, 3.5), correct = 1.3, label = "csm-1-clw")`
 
 2. What is the rate of change of nose position with respect to time from frame 1 to frame 2?
 
-`r devoirs::devoirs_set(c(-10.9, 14.6, 32.5, 52.3, 57.7), correct = 32.5, id = "csv-2-kwc")`
+`r devoirs3::devoirs_set3(c(-10.9, 14.6, 32.5, 52.3, 57.7), correct = 32.5, label = "csv-2-kwc")`
 
 3. What is the rate of change in hoof position with respect to time from frame 1 to frame 2?
 
-`r devoirs::devoirs_set(c(25.1, 31.9, 45.1, 52.5, 57.7), correct = 52.5, id = "csv-3-csl")`
+`r devoirs3::devoirs_set3(c(25.1, 31.9, 45.1, 52.5, 57.7), correct = 52.5, label = "csv-3-csl")`
 
 
 4. Consider this phrase: "The rate of change in hoof position with respect to nose position." Calculate it, then explain how the value is related to the values from (2) and (3).
@@ -67,16 +67,16 @@ The following is a text-entry box that will be submitted along with your other a
 
 6. Fill in the velocity columns for @tbl-nose-hoof for all ten pairs of successive frames. As you do so, contemplate this question: for the rates of change from frame n to n+1, should you enter the values on line n or line n+1 or something different? Would either be valid? Both? We just want to hear what you're thinking about this, not that there is a right answer.
 
-`r devoirs::devoirs_text("csm-roc-uw34", str = "Write your answer to (6) here.")`
+`r devoirs3::devoirs_text("csm-roc-uw34", placeholder = "Write your answer to (6) here.")`
 
 7. Imagine that your answer to the previous question was "both." You would then have two different velocities to enter on each line of the table. But the horse's nose cannot have two different velocities at the same time. This is a genuine problem. In `r xf("sec-rates-of-change")` the word "instantaneous" is associated with the conceptual resolution of this problem. Explain the connection between "instantaneous" and the resolution of the riddle in (6). 
 
-`r devoirs::devoirs_text("csm-7-xekw", str = "Write your answer to (7) here.")`
+`r devoirs3::devoirs_text("csm-7-xekw", placeholder = "Write your answer to (7) here.")`
 
 8. A high-speed, high-resolution video camera can cover the same time span as covered in Muybridge's photo with thousands of successive frames rather than just eleven. 
 How might such data make the question of where to place each velocity data point practically of no consequence.
 
-`r devoirs::devoirs_text("csm-8-gskw", str = "Write your answer to (8) here.")`
+`r devoirs3::devoirs_text("csm-8-gskw", placeholder = "Write your answer to (8) here.")`
 
 
 @fig-nose-hoof-continuous shows a model of the position of the nose and hoof as they vary continuously in time. The graphs are annotated with sloping lines where the unit of the slope is m/s.

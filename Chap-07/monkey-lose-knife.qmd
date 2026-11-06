@@ -4,7 +4,7 @@ created: "Thu Oct 23 15:30:34 2025"
 attribution: TBA
 status: "draft"
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -18,7 +18,7 @@ Let's do a formal analysis of uncertainty about the number of calories you burne
 
 1. Do AI searches with three queries: "how to multiply two ranges," "how to multiply two intervals," and "how to multiply two uncertain numbers." Quickly summarize what you found out, indicating whether the answers were clear and the extent to which they fall under the description, "Not related to what I was looking for."
 
-`r devoirs::devoirs_text("mlk-942-1")`
+`r devoirs3::devoirs_text("mlk-942-1")`
 
 2. GENERATE A SIMULATION WITH `distance` and `energy_rate`, each modeled by a hill function with an appropriate [WHAT IS THE PARAMETER, standard deviation?], and setting `Cals` to be the product of the two. What's the mean and standard deviation of `Cals`.
 

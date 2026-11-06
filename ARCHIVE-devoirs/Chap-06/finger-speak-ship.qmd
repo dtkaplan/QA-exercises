@@ -1,0 +1,36 @@
+<!--
+id: "finger-speak-ship"
+created: "Thu Sep  4 17:15:55 2025"
+attribution: TBA
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-finger-speak-ship}
+Classroom ACTIVITY: Talk about piecewise models. Fit the doubling function to the pre-crisis data. Up through the 1960s, a doubling time of 12 years seems about appropriate.
+
+```{r}
+#| echo: false
+Mod_values <- tibble(year = 1900:2023,
+                     production_index = pnorm( 0.045*(year - 1969.5)))
+# just testing out an exponential function
+Exp_values <- tibble(year = 1900:1973,
+                     production_index = 0.009536 * 2^((year - 1910)/10.8))
+World_oil |>
+  mutate(production_index = oil/52432) |>
+  gf_point(production_index ~ year, alpha = 0.5) |>
+  gf_line(production_index ~ year, data = Mod_values, color = "blue") |>
+  gf_line(production_index ~ year, data = Exp_values, color = "red") |>
+  gf_labs(y = "Production index")
+  
+```
+
+The doubling function (in red) works pretty well up through 1962 with a doubling time of 10.8 years. But after that oil production increased at a rate faster than that doubling rate. [Note that 10.8 years doubling corresponds to a growth rate of 6.7 % per year.]
+
+Here's a [graph of GDP growth](https://www.cnbc.com/2020/10/29/us-gdp-report-third-quarter-2020.html). 6% growth during the first half of the 20th century looks pretty reasonable, but it's down to about half that in the past 50 years.
+
+:::
+ <!-- end of exr-finger-speak-ship -->

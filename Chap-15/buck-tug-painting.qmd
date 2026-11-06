@@ -4,7 +4,7 @@ created: "Tue Feb 24 12:32:39 2026"
 attribution: TBA
 status: "sketch"
 chapter: 14
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,12 +12,26 @@ mode: "exercise"
 ::: {#exr-buck-tug-painting}
 Consider a store selling goods to consumers. One way to describe the store's activity is a sales rate, W T^-1^, say, dollars per month. At the end of the year, accountants tally up the stores total sales for the year, with dimension W. What is the relationship between sales rate and total sales?
 
-```{mcq}
-#| label: btp-1-hds
-1. Total sales is proportional to sales rate.
-2. Total sales is the derivative of sales rate with respect to time.
-3. Total sales is the accumulation of sales rate with respect to time. [correct]
-4. Total sales and sales rate have unrelated dimensions.
+```{devoirs_choices}
+#| label: choices_btp.1.hds
+- 'Total sales is proportional to sales rate.':
+    correct: false
+- 'Total sales is the derivative of sales rate with respect to time.':
+    correct: false
+- 'Total sales is the accumulation of sales rate with respect to time.':
+    correct: true
+- 'Total sales and sales rate have unrelated dimensions.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "btp-1-hds",
+  question = "Placeholder for now",
+  answers = choices_btp.1.hds,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

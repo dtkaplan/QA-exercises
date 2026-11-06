@@ -1,0 +1,63 @@
+<!--
+id: "fox-fly-bottle"
+created: "Thu Jan 29 12:02:53 2026"
+attribution: TBA
+status: "draft"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fox-fly-bottle}
+@fig-austin-weather-range shows the seasonal pattern in daily high and low temperatures for Austin, Texas, USA. Scanning the graph from left to right, you can see a yearly osc() pattern. Naturally, the high and low temperature on any given day vary from year to year so that, for each day, there is an uncertainty distribution.
+
+::: {#fig-austin-weather-range}
+
+![](../www/Austin-temperatures.png)
+
+As described by the source ... "The daily range of reported temperatures (gray bars) and 24-hour highs (red ticks) and lows (blue ticks), placed over the daily average high (faint red line) and low (faint blue line) temperature, with 25th to 75th and 10th to 90th percentile bands." Source: weatherspark.com
+:::
+
+Here are graphs of the low-temperature distributions for three days. Days were chosen at the lines dividing two consecutive months, e.g. March/April.
+
+```{r}
+#| label: fig-ffb-austin
+#| echo: false
+#| layout-ncol: 4
+#| fig-cap: Uncertainty distributions for the daily low temperature on four days during the year.
+#| fig-subcap:
+#| - " "
+#| - " "
+#| - " "
+
+P1 <- slice_plot(dnorm(x, mean = 47, sd = 11) ~ x, domain(x = 15:80)) |>
+  gf_labs(y = "Rel. probability", x = "The day's low temperature") |>
+  .bigger_text(size = 24) 
+
+P2 <- slice_plot(dnorm(x, mean = 62, sd = 7.8) ~ x, domain(x = 15:80)) |>
+  gf_labs(y = "Rel. probability", x = "The day's low temperature") |>
+  .bigger_text(size = 24) 
+
+P3 <- slice_plot(dnorm(x, mean = 64, sd = 7.4) ~ x, domain(x = 15:80)) |>
+  gf_labs(y = "Rel. probability", x = "The day's low temperature") |>
+  .bigger_text(size = 24) 
+
+P2
+P3
+P1
+```
+
+Match each graph to one of these days:
+
+`r day_choice <- c("New Year's Day", "Feb/Mar", "Mar/Apr", "Apr/May", "June/July", "Aug/Sept", "Sept/Oct", "Nov/Dec" )`
+
+Graphic (a): `r devoirs::devoirs_set(id = "ffb_d07_a", choices = day_choice, correct = "Apr/May", n = 5)`
+
+Graphic (b): `r devoirs::devoirs_set(id = "ffb_d07_b", choices = day_choice, correct = "Sept/Oct", n = 5)`
+
+Graphic (c): `r devoirs::devoirs_set(id = "ffb_d07_c", choices = day_choice, correct = "Feb/Mar", n = 5)`
+
+
+:::
+ <!-- end of exr-fox-fly-bottle -->

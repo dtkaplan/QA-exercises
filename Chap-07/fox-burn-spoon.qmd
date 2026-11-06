@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,13 +13,26 @@ mode: "exercise"
 ::: {#exr-fox-burn-spoon}
 The `flat()` function always returns the same output regardless of input. What is the rate of change of `flat()` with respect to its input?
 
-```{mcq}
-#| label: d06-fbs-4kdi
-#| inline: true
-1. -1
-2. 0 [correct]
-3. 1
-4. It depends on the input.
+```{devoirs_choices}
+#| label: choices_d06.fbs.4kdi
+- '-1':
+    correct: false
+- '0':
+    correct: true
+- '1':
+    correct: false
+- 'It depends on the input.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-fbs-4kdi",
+  question = "Placeholder for now",
+  answers = choices_d06.fbs.4kdi,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

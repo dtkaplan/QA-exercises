@@ -15,7 +15,7 @@ topic: "graph reading"
 ::: {#exr-jaquar-ring-magnet}
 `r xf("fig-log2-ex")` can be hard to interpret. Note that the graph is flattening out as the input (temperature) increases. Intuitively, this may suggest that the warming process is slowing. But that's not the case. Explain why the graph actually shows that at higher temperatures, the yearly increase is faster rather than slower.
 
-`r devoirs_text("jrm-3lse")`
+`r devoirs3::devoirs_text("jrm-3lse")`
 
 :::
  <!-- end of exr-jaquar-ring-magnet -->

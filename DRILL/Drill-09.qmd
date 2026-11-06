@@ -2,25 +2,24 @@
 title: "*Quantitative Argumentation*"
 subtitle: "Chapter 9 Drill Questions"
 filters:
-  - shinylive
+  - live
 ---
-
-{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-
-```{r include = FALSE}
-library(drill)
-```
 
 ```{r include=FALSE}
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-`r devoirs::push_answer_style("block")`
+```{r include=FALSE}
+library(drill)
+```
+
+`r devoirs3::devoirs_start("QA-drill-09", feedback=TRUE)`
 
 
-:::: {.callout-note collapse=true}
+
+:::: {.callout-note collapse=false}
 ## Contour plots
 
 ::: {.panel-tabset collapse=false}
@@ -47,39 +46,36 @@ source("../_exercise_startup.R")
 
 <!--
 
-:::: {.callout-note collapse=true}
 ## Motivated by AI
 
 The instructors fed an AI the chapter text and asked for some simple questions based on the text. We made some small modifications to fit into the multiple-choice format. Many of the AI-generated questions ask small algebra questions. Algebra is not an important topic of this course, but the AI is presumably drawing from problems that appear in conventional textbooks. The feedback for wrong answers was written by the instructors.
 
-::: {.panel-tabset}
+
 ## i.
 
-{{< include ../Chap-09/hamster-hear-radio.qmd >}}
+ include ../Chap-09/hamster-hear-radio.qmd 
 
 ## ii.
 
-{{< include ../Chap-09/lamb-fly-clock.qmd >}}
+ include ../Chap-09/lamb-fly-clock.qmd 
 
 ## iii.
 
-{{< include ../Chap-09/calf-swim-painting.qmd >}}
+ include ../Chap-09/calf-swim-painting.qmd 
 
 ## iv.
 
-{{< include ../Chap-09/oak-close-window.qmd >}}
+ include ../Chap-09/oak-close-window.qmd 
 
 ## v.
 
-{{< include ../Chap-09/dolphin-go-oven.qmd >}}
+ include ../Chap-09/dolphin-go-oven.qmd 
 
 ## vi.
 
-{{< include ../Chap-09/brother-blow-futon.qmd >}}
+ include ../Chap-09/brother-blow-futon.qmd 
 
-:::
 
-::::
 
 -->
 

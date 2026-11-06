@@ -1,0 +1,20 @@
+<!--
+id: "dingo-ride-stove"
+created: "Sat Aug 29 10:16:47 2026"
+attribution: DTK
+uses: "core functions, input-output scaling"
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-dingo-ride-stove}
+EXERCISES: CONVERT THESE TWO paragraphs to exercises. 
+
+The modeler selects appropriate values for the two transformation parameters, $a$ and $q_0$. We will discuss how to do this presently. For now, note that $a$ and $q_0$ are both quantities. In order for the subtraction in $a\left(q - q_0\right)$ to make sense, the dimension of $q_0$ must be identical to the dimension of $q$. Or, using the notation that $[q]$ stands for "the dimension of $q$," we must pick $q_0$ so that $[q_0] = [q]$.  
+  
+Similarly, in order for the transformation $a\left(q - q_0\right)$ to produce a pure number as output, we must pick parameter $a$ to have dimension that cancels out the dimension of $(q - q_0)$. That is $[a] = 1/[q]$. Returning to the example, where the input to the model function is in *miles per gallon* (L^-2^), the quantity $a$ must be in "gallons per mile," that is, L^2^. 
+:::
+ <!-- end of exr-dingo-ride-stove -->

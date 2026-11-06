@@ -2,23 +2,21 @@
 title: "*Quantitative Argumentation*"
 subtitle: "Chapter 4 Drill Questions"
 filters:
-  - shinylive
+  - live
 ---
-
-{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-
-```{r include = FALSE}
-library(drill)
-```
 
 ```{r include=FALSE}
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
+```{r include=FALSE}
+library(drill)
+```
 
-`r devoirs::push_answer_style("block")`
+`r devoirs3::devoirs_start("QA-drill-04", feedback=TRUE)`
+
 
 :::: {.callout-note collapse=true}
 ## Dimensions
@@ -28,7 +26,7 @@ source("../_exercise_startup.R")
 ## 1.
 
 
-`r devoirs::devoirs_TF(correct = TRUE, id="R-3-11")` A rate is a quantity.
+`r devoirs3::devoirs_TF(correct = TRUE, label="R-3-11")` A rate is a quantity.
 
 
 ## 2.
@@ -37,7 +35,7 @@ source("../_exercise_startup.R")
 
 ## 3.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-04-gag")` A *compound rate* is a quantity.
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-04-gag")` A *compound rate* is a quantity.
 
 ## 4.
 

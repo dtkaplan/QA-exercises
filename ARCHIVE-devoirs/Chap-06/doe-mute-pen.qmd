@@ -1,0 +1,28 @@
+<!--
+id: "doe-mute-pen"
+created: "Tue Aug  5 12:56:32 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-doe-mute-pen}
+Consider this elaboration of the seventh-grade algorithm that works for any S, even if it's outside the range of the table of perfect squares. 
+
+1. Store the value 1 under the name `sofar`.
+2. If S is inside the range of the table, apply the seventh-grade algorithm. The result of that algorithm times the value of `sofar` is the final result. You are done. On the other hand, 
+3. If S is larger than the largest entry in the output column of the table, go to step (4). But if S is smaller than the smallest entry in the output column of the table, go to step (5).
+4. Replace S with S/100 and replace `sofar` with `sofar/10`. Continue at step (2).
+5. Replace S with 100$\times$ S and `sofar` with `10*sofar`. Continue at step (2).
+
+Follow the algorithm to:
+
+1. Find the square root of 78,294.
+2. Find the square root of 0.0013
+
+
+:::
+ <!-- end of exr-doe-mute-pen -->

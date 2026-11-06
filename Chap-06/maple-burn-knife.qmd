@@ -4,7 +4,7 @@ created: "Fri Jan 16 10:42:07 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -39,11 +39,11 @@ tenfold(2.7)
 
 a. Based on the pattern you observe above for tenfold(), what will be the output when the input is 4.7?
 
-`r devoirs::devoirs_set(choices = c(501.1872, 5011.872, 50118.72, 501187.2), correct=50118.72, n=4, id = "mbk-b-nbld")`
+`r devoirs3::devoirs_set3(choices = c(501.1872, 5011.872, 50118.72, 501187.2), correct=50118.72, n=4, label = "mbk-b-nbld")`
 
 b. As you know, 0.7 - 1 = -0.3. Keeping that in mind, what will be the output from tenfold(-0.3)?
 
-`r devoirs::devoirs_set(choices = c(0.005011872, 0.05011872, 0.5011872, 5.011872),  correct=0.5011872, n=4, id = "mbk-b-isld")`
+`r devoirs3::devoirs_set3(choices = c(0.005011872, 0.05011872, 0.5011872, 5.011872),  correct=0.5011872, n=4, label = "mbk-b-isld")`
 
 All the exponential functions are merely input scaled versions of doubling(). For instance, tenfold(x) is the same as doubling(3.3219281 * x):
 
@@ -80,7 +80,7 @@ tenfoldings(1000)
 ```
 
 c. What is the output of tenfoldings(1000000)?
-`r devoirs::devoirs_set(choices = c(2, 3,5,6,9),  correct=6, n=5, id = "mbk-c-dwld")`
+`r devoirs3::devoirs_set3(choices = c(2, 3,5,6,9),  correct=6, n=5, label = "mbk-c-dwld")`
 
 While everyday people might find it easier to work with tenfold() and tenfoldings(), mathematicians and many scientists routinely use another exponential function named exp(), whose output increases by 2.71828182846-fold whenever the input increases by 1. 
 
@@ -99,12 +99,24 @@ There's no right answer to the following question. We're just interested in your
 
 In your heart, which would you like to be the standard exponential function?
 
-```{mcq}
-#| label: mbk-in-your-heart
-#| inline: true
-1. exp() [correct]
-2. exp2() [correct]
-3. tenfold() [correct]
+```{devoirs_choices}
+#| label: choices_mbk.in.your.heart
+- 'exp()':
+    correct: true
+- 'exp2()':
+    correct: true
+- 'tenfold()':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "mbk-in-your-heart",
+  question = "Placeholder for now",
+  answers = choices_mbk.in.your.heart,
+  multiple = TRUE
+)
+Q(inline = TRUE)
 ```
 
 Keep in mind that these are all exponential functions and differ only by the amount of input scaling.

@@ -1,0 +1,17 @@
+<!--
+id: "hyena-dig-pencil"
+created: "Mon May 11 09:46:26 2026"
+attribution: DTK
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-hyena-dig-pencil}
+DRAFT: Work through the relationships between exp(), exp2(), and exp10(), and their respective log functions.
+
+
+:::
+ <!-- end of exr-hyena-dig-pencil -->

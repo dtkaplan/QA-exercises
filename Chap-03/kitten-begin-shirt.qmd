@@ -12,6 +12,6 @@ chapter: 03
 
 
 ::: {#exr-kitten-begin-shirt}
-`r devoirs::devoirs_TF(correct = FALSE, id="D-03-nit", wrong.hint = "The dimensions cancel out, but 1 inch is not the same amount as 1 foot.")` Is 1 inch / 1 foot a flavor of 1?
+`r devoirs3::devoirs_TF(correct = FALSE, label="D-03-nit", wrong_hint = "The dimensions cancel out, but 1 inch is not the same amount as 1 foot.")` Is 1 inch / 1 foot a flavor of 1?
 :::
  <!-- end of exr-kitten-begin-shirt -->

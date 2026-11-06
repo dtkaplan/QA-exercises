@@ -1,0 +1,38 @@
+<!--
+id: "beech-bring-coat"
+created: "Thu Mar  5 09:14:31 2026"
+attribution: TBA
+status: "draft"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-bring-coat}
+From the Scottish Parliament data ...
+Organization of the bills
+::: {#fig-bills-3d}
+```{r webgl=TRUE}
+#| echo: true
+#| eval: false
+#| label: C16-qnilr
+open3d()
+points3d(x = b1, y = b2, z = b3)
+# close3d()
+```
+
+Organizations of the MPs
+
+::: {#fig-MPs-3d}
+```{r webgl=TRUE}
+#| echo: true
+#| eval: false
+#| label: C16-ubdgi
+open3d()
+points3d(x = a1, y = a2, z = a3)
+# close3d()
+```
+
+:::
+ <!-- end of exr-beech-bring-coat -->

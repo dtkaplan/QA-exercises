@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: "sketch"
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -15,14 +15,14 @@ For the `exp2()` function:
 
 a. What is the output when the input is 0?
 
-`r devoirs::devoirs_set(choices = c(0, 0.5, 1, 2, 4), correct = 1, id = "d06-bir-zero")`
+`r devoirs3::devoirs_set3(choices = c(0, 0.5, 1, 2, 4), correct = 1, label = "d06-bir-zero")`
 
 b. What is the output when the input is 3?
 
-`r devoirs::devoirs_set(choices = c(3, 6, 8, 9), correct = 8, id = "d06-bir-three")`
+`r devoirs3::devoirs_set3(choices = c(3, 6, 8, 9), correct = 8, label = "d06-bir-three")`
 
 c. What is the output when the input is -1?
 
-`r devoirs::devoirs_set(choices = c(-2, -1, 0.5, 1), correct = 0.5, id = "d06-bir-neg")`
+`r devoirs3::devoirs_set3(choices = c(-2, -1, 0.5, 1), correct = 0.5, label = "d06-bir-neg")`
 :::
  <!-- end of exr-bear-iron-rug -->

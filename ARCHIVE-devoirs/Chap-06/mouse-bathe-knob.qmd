@@ -1,0 +1,19 @@
+<!--
+id: "mouse-bathe-knob"
+created: "Sun Nov  9 11:45:06 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-mouse-bathe-knob}
+MAYBE WE ALREADY HAVE SUCH EXERCISES, BUT just in case ...
+
+Cover each of the core modeling functions in turn, showing how to find both the input and output transformation parameters. Point out that for the constant, proportional, and exponential functions, mathematicians generally simplify to a smaller number of parameters.
+:::
+ <!-- end of exr-mouse-bathe-knob -->

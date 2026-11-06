@@ -4,7 +4,7 @@ created: "Sat Dec 20 08:45:42 2025"
 attribution: TBA
 status: "draft"
 chapter: 14
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -32,12 +32,26 @@ To compare them, you need to convert the European rating into "American" units. 
 
 Question: What is the approximate fuel efficiency of the European model in miles per gallon, and which car is more "efficient" (uses less fuel per mile)?
 
-```{mcq}
-#| label: bbg-1-cfr
-1. The European model is 18.6 mpg, making the American model more efficient.
-2. The European model is 29.5 mpg, making the American model slightly more efficient. [correct]
-3. The European model is 46.5 mpg, making the European model significantly more efficient.
-4. The European model is 7.75 mpg, making it a very poor choice for a long trip.
+```{devoirs_choices}
+#| label: choices_bbg.1.cfr
+- 'The European model is 18.6 mpg, making the American model more efficient.':
+    correct: false
+- 'The European model is 29.5 mpg, making the American model slightly more efficient.':
+    correct: true
+- 'The European model is 46.5 mpg, making the European model significantly more efficient.':
+    correct: false
+- 'The European model is 7.75 mpg, making it a very poor choice for a long trip.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bbg-1-cfr",
+  question = "Placeholder for now",
+  answers = choices_bbg.1.cfr,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 <!-- Opening answer: bbg-7Se -->

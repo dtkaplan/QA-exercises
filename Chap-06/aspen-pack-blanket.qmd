@@ -5,7 +5,7 @@ attribution:  Dave Ruth
 uses: "Quiz Ch 5"
 status: ready-to-use
 chapter: 6
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,14 +13,30 @@ mode: "drill"
 ::: {#exr-aspen-pack-blanket}
 The words used to identify the various inputs to a function are called ____.
 
-```{mcq}
-#| label: apb-1-hes
-1.  abstractions
-1.  algorithms
-1.  analyses
-1.  arguments [correct]
-1.  asymptotes
-1.  axes
+```{devoirs_choices}
+#| label: choices_apb.1.hes
+- 'abstractions':
+    correct: false
+- 'algorithms':
+    correct: false
+- 'analyses':
+    correct: false
+- 'arguments':
+    correct: true
+- 'asymptotes':
+    correct: false
+- 'axes':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "apb-1-hes",
+  question = "Placeholder for now",
+  answers = choices_apb.1.hes,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

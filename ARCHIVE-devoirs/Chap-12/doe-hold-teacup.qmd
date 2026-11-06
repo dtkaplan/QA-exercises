@@ -1,0 +1,32 @@
+<!--
+id: "doe-hold-teacup"
+created: "Tue Dec  9 09:59:44 2025"
+attribution: TBA
+status: "sketch"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-doe-hold-teacup}
+For a classroom activity, tell the students before class to think about the lost-in-Texas question in RQ-10 and come to class prepared to discuss. Give printed copies of the map to all students in groups of three. (Give them 3 copies of the map.) Also have available for each group two different pieces of transparency film. One is marked with a line segment corresponding to 20 miles on the map.  The other has two such segments, in the form of an upside-down $\Gamma$ each leg of which is 20 miles long. 
+
+Walk the class through what an appropriate prior would be for your location once you exit your taxi and look around for the first time. Exactly 100 mi from Bastrop? Do you know the taxi flew in a straight line? What's your prior probability for that? First, tell the students that they will focus on a couple of regions on the map, about 60 miles square, which they can select themselves. (As a class, we're dividing up the work of the calculation.) Ask the students to (roughly) cross-hatch the the selected regions in the first copy of map to mark out three types of area: relatively high probability, mid-range, low probability. When they are done, elicit comparisons of different regions: why they selected their regions, how their priors might differ from one another, why that's OK if they do. They can refine their hatching after the discussion.
+
+Give the students the first scrap of transparency. Ask the students to copy over their square regions onto the second copy of the map. They are going to work with that. (They do not need to mark out the prior probability that they marked on the first map.) Ask them to figure out how they can use the transparency to locate high-likelihood positions for the taxi after the first leg of the walk. On a different map, cross-hatch specific areas to indicate the posterior probability after the walk. They don't have to cover the whole map, just their regions. Mark some high and low likelihood areas within their regions on the second copy of the map.
+
+Next, hand out the $\Gamma$ transparency. On the third map, ask them to mark high and low likelihood areas. In dicussion, focus on why the likelihoods plotted on the second map and third map are different (or should be different.)
+
+By eye, multiply the prior map with the first likelihood map. Just identify some locations where there was a high prior but a low likelihood, and some with a low prior but a high-likelihood, and so on.
+
+Now apply the second likelihood map. Ask them to identify particular places with the highest probability of where our hero is.
+
+I am not sure whether it's right to multiply the two likelihood maps together. I'm inclined to believe that using the $\Gamma$ does that job already.
+
+
+
+:::
+ <!-- end of prp-doe-hold-teacup -->

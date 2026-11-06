@@ -4,7 +4,7 @@ created: "Mon Nov  3 11:16:49 2025"
 attribution: TBA
 status: "draft"
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -23,7 +23,7 @@ For each of the pendulum pictures in @fig-pendulums-2, mark where you think the 
 #| fig-subcap:
 #| - " "
 #| - " "
-source("_software/pendulum.R")
+source("../_software/pendulum.R")
 draw_pendulum1(pi/5, 0.5)
 draw_pendulum1(-pi/5, 0.5)
 ```

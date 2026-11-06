@@ -4,7 +4,7 @@ created: "Mon Dec 15 16:32:53 2025"
 attribution: DTK
 status: ready-to-use
 chapter: 4
-mode: "exercise"
+mode: exercise
 topic: "cooking"
 -->
 
@@ -17,11 +17,11 @@ Thanksgiving chefs can easily find recommendations for roasting turkey. On sourc
 
 1. Explain why it's sensible to convey the cooking time using a rate, rather than just saying how long to cook the bird.
 
-`r devoirs::devoirs_text("fip-1-uwls")`
+`r devoirs3::devoirs_text("fip-1-uwls")`
 
 2. Of course, there are other rates that can be constructed: cooking time *with respect to* .... For instance, cooking time depends on temperature. Would it make sense to have a rate like 0.5 min / °F? Explain how this might help or whether it makes any sense at all.
 
-`r devoirs::devoirs_text("fip-2-3ks")`
+`r devoirs3::devoirs_text("fip-2-3ks")`
 
 Back to cooking time versus weight ...
 
@@ -34,24 +34,52 @@ Once source gives a handy table for cooking at 325°F:
 
 3. Between 10 and 15 pound turkeys, what is the rate of change in cooking time with respect to weight? 
 
-```{mcq}
-#| label: fip-3-w4s
-#| inline: true
-1. 10 mins / pound
-2. 10 pounds / min [hint: The units (and dimension) are upside down.]
-3. 11 mins / pound [correct]
-4. 11 pounds / min [hint: The units (and dimension) are upside down.]
+```{devoirs_choices}
+#| label: choices_fip.3.w4s
+- '10 mins / pound':
+    correct: false
+- '10 pounds / min':
+    correct: false
+    feedback: 'The units (and dimension) are upside down.'
+- '11 mins / pound':
+    correct: true
+- '11 pounds / min':
+    correct: false
+    feedback: 'The units (and dimension) are upside down.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fip-3-w4s",
+  question = "Placeholder for now",
+  answers = choices_fip.3.w4s,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 4. Between 10 and 15 pound turkeys, what is the rate of change in cooking time with respect to weight? 
 
-```{mcq}
-#| label: fip-4-flw
-#| inline: true
-1. 10 mins / pound [correct]
-2. 10 pounds / min
-3. 11 mins / pound 
-4. 11 pounds / min
+```{devoirs_choices}
+#| label: choices_fip.4.flw
+- '10 mins / pound':
+    correct: true
+- '10 pounds / min':
+    correct: false
+- '11 mins / pound':
+    correct: false
+- '11 pounds / min':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fip-4-flw",
+  question = "Placeholder for now",
+  answers = choices_fip.4.flw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

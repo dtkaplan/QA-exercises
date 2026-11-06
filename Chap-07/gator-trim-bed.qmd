@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,12 +14,26 @@ mode: "exercise"
 
 The function `log2()` is closely related to `exp2()`. What is the relationship?
 
-```{mcq}
-#| label: d06-gtb-ekx
-1. They are the same function with different names
-2. log2() tells you the input needed to reach a given output from exp2() [correct]
-3. log2() is exp2() multiplied by 2
-4. log2() is the rate of change of exp2()
+```{devoirs_choices}
+#| label: choices_d06.gtb.ekx
+- 'They are the same function with different names':
+    correct: false
+- 'log2() tells you the input needed to reach a given output from exp2()':
+    correct: true
+- 'log2() is exp2() multiplied by 2':
+    correct: false
+- 'log2() is the rate of change of exp2()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-gtb-ekx",
+  question = "Placeholder for now",
+  answers = choices_d06.gtb.ekx,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

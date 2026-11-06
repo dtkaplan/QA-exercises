@@ -1,0 +1,28 @@
+<!--
+id: "deer-iron-cotton"
+created: "Sun Dec 28 14:31:05 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-deer-iron-cotton}
+What does the output from the dynamical rule tell about the *state*? What does the word "*instantaneous*" have to do with it?
+
+`r devoirs::devoirs_text("RQ11-dic")`
+
+<!-- Opening answer: R1d-3FE -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+The output from the dynamical rule is the instantaneous rate of change for each of the quantities in the state. Thus, the dynamical rule tells how the state is changing over time. The word "instantaneous" signifies that the rate of change applies only for the *instant* at which the system state is at the corresponding input to the dynamical rule. In the brief time interval after that instant, the state changes slightly as described by the rate of change. 
+
+
+[..id..]{data-tooltip="Ans id: R1d-3FE"}
+:::
+<!-- closing answer R1d-3FE -->
+:::
+ <!-- end of exr-deer-iron-cotton -->

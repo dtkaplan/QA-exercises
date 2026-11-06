@@ -4,7 +4,7 @@ created: "Tue Feb 24 12:57:06 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 15
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,12 +14,26 @@ The name "horsepower" strongly suggests that it is a unit of power. James Watt's
 
 Which of these calculations of "horsepower" makes sense if the unit is one of power? Remember that the dimension of force is [acceleration] $\times$ [mass] or, L M T^-2^. The dimension of power is L^2^ M T^-3^.
 
-```{mcq}
-#| label: abc-1-xoy
-1. force $\times$ distance $\times$ time
-2. force $\times$ time / distance
-3. force $\times$ distance / time [correct]
-4. distance $\times$ time / force
+```{devoirs_choices}
+#| label: choices_abc.1.xoy
+- 'force $\times$ distance $\times$ time':
+    correct: false
+- 'force $\times$ time / distance':
+    correct: false
+- 'force $\times$ distance / time':
+    correct: true
+- 'distance $\times$ time / force':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "abc-1-xoy",
+  question = "Placeholder for now",
+  answers = choices_abc.1.xoy,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

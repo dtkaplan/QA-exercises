@@ -22,12 +22,26 @@ heat_index <- function(temperature, humidity) {
 
 Which function invocation correctly supplies the arguments by name rather than by position?
 
-```{mcq}
-#| label: d06-interface-01
-1. `heat_index(30, 0.80)`
-2. `heat_index(temperature = 30, humidity = 0.80)` [correct]
-3. `heat_index(30 = temperature, 0.80 = humidity)`
-4. `heat_index(temperature, humidity)`
+```{devoirs_choices}
+#| label: choices_d06.interface.01
+- '`heat_index(30, 0.80)`':
+    correct: false
+- '`heat_index(temperature = 30, humidity = 0.80)`':
+    correct: true
+- '`heat_index(30 = temperature, 0.80 = humidity)`':
+    correct: false
+- '`heat_index(temperature, humidity)`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-interface-01",
+  question = "Placeholder for now",
+  answers = choices_d06.interface.01,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

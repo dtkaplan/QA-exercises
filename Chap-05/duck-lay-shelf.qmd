@@ -5,7 +5,7 @@ attribution: DTK
 uses: graph interpretation
 status: "sketch"
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

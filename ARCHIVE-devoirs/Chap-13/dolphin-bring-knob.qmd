@@ -1,0 +1,17 @@
+<!--
+id: "dolphin-bring-knob"
+created: "Tue Sep 30 12:14:58 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-dolphin-bring-knob}
+Refering to `r xf("fig-SIR-model-rule1")`, three nearby points in state space, marked ![](../www/dots/dots-violet-all.png), have mainly a westward flow. But only the middle dot is purely westward, the neighboring positions have flows that are a little bit inclined to the north or south. Explain what it is about the mechanics of the epidemic that leads to the north or south component of the flows.
+
+`r devoirs::devoirs_text("dbk-flow")`
+:::
+ <!-- end of exr-dolphin-bring-knob -->

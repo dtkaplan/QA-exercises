@@ -12,6 +12,6 @@ chapter: 03
 
 
 ::: {#exr-seal-come-screen}
-`r devoirs::devoirs_TF(correct = FALSE, id = "D-03-box", wrong.hint="Only if they have the same dimension.")` You can add or subtract any two *quantities*.
+`r devoirs3::devoirs_TF(correct = FALSE, label = "D-03-box", wrong_hint="Only if they have the same dimension.")` You can add or subtract any two *quantities*.
 :::
  <!-- end of exr-seal-come-screen -->

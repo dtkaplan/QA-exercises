@@ -4,7 +4,7 @@ created: "Fri Nov 28 14:02:58 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 3
-mode: "exercise"
+mode: exercise
 title: "Dimensions from the *Practical Man*"
 -->
 
@@ -38,7 +38,7 @@ vii. Temperature, or intensity of heat:
 viii. Money, or value : "
 ```
 
-`r devoirs::devoirs_text("tls-323l", contents=default, rows=8)`
+`r devoirs3::devoirs_text("tls-323l", contents=default, height=8)`
 
 <!-- Opening answer: tls-7Cc -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

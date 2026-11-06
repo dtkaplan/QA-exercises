@@ -1,9 +1,13 @@
 ---
-title: "Quantitative Argumentation"
-subtitle: "Chapter 2 drill questions"
+title: "*Quantitative Argumentation*"
+subtitle: "Chapter 2 Drill Questions"
 filters:
   - live
 ---
+
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
@@ -11,13 +15,9 @@ filters:
 library(drill)
 ```
 
-```{r include=FALSE}
-source("../_exercise_startup.R")
-```
+`r devoirs3::devoirs_start("QA-drill-02", feedback=TRUE)`
 
-{{< include ../_devoirs.qmd >}}
 
-`r devoirs::push_answer_style("block")`
 
 :::: {.callout-note collapse=true}
 ## Systems and dimensions

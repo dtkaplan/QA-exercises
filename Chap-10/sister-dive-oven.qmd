@@ -21,14 +21,14 @@ slice_plot(f1(z-3) ~ z, domain(z=0:5)) |>
 
 i. Which of the following choices are closest to the *argmin* of the function displayed in the graph?
 
-`r devoirs::devoirs_set(choices = c(-6, 0.5, 3, 8), correct=3, id = "D10-sdo-argmin")`
+`r devoirs3::devoirs_set3(choices = c(-6, 0.5, 3, 8), correct=3, label = "D10-sdo-argmin")`
 
 ii. Which is closest to the *maximum* of the function?
 
-`r devoirs::devoirs_set(choices = c(-6, 0.5, 3, 8), correct=8, id = "D10-sdo-max")`
+`r devoirs3::devoirs_set3(choices = c(-6, 0.5, 3, 8), correct=8, label = "D10-sdo-max")`
 
 iii. Which is closest to the *argmax* of the function?
 
-`r devoirs::devoirs_set(choices = c(-6, 0.5, 3, 8), correct=0.5, id = "D10-sdo-argmax")`
+`r devoirs3::devoirs_set3(choices = c(-6, 0.5, 3, 8), correct=0.5, label = "D10-sdo-argmax")`
 :::
  <!-- end of exr-sister-dive-oven -->

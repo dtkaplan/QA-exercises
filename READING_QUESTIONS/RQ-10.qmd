@@ -7,7 +7,8 @@ subtitle: "Chapter 10 Reading Questions"
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+`r devoirs3::devoirs_start("QA-RQ-10")`
+
 
 ::: {.panel-tabset}
 
@@ -19,13 +20,13 @@ An objective function, like all functions, has one or more inputs and an output.
 2. What does the other one tell you? 
 3.How does the word "argmax" relate to the answers to (1) and (2)?
 
-`r devoirs::devoirs_text("rq10-axe")`
+`r devoirs3::devoirs_text("rq10-axe")`
 
 ## 2. 
 
 Give an experience from your life or imagination of simultaneously questing for two competing goals. Make sure to explain why the two goals are in competition with one another.
 
-`r devoirs::devoirs_text("rq10-experience")`
+`r devoirs3::devoirs_text("rq10-experience")`
 
 ## 3. 
 
@@ -65,13 +66,13 @@ slice_plot(dnorm(x, mean=0.5, sd=0.3)/1.33 ~ x, domain(x=0:1)) |>
 ```
 
 
-`r devoirs::devoirs_text("rq10-soup-1")`  
+`r devoirs3::devoirs_text("rq10-soup-1")`  
 
 A cook in a test kitchen experiments with different recipes to find the best. In this soupy situation, imagine that the issue is how much salt to put in the soup. In the terminology of this chapter, the cook's task is to construct the objective function then read off the argmax.
 
 As a restaurant diner, on the other hand, you can't afford this expensive experiment. So, you add a small amount of salt, taste, add more salt, taste again, and so on. With this procedure, how can you tell if you are i) approaching the argmax, ii) very close to the argmax, or iii) have passed the argmax?
 
-`r devoirs::devoirs_text("rq10-soup-1")`  
+`r devoirs3::devoirs_text("rq10-soup-2")`  
 
 
 :::

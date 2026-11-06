@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Quantitative Argumentation – Quantitative Argumentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><em>Quantitative Argumentation</em></h1>
+<p class="subtitle lead">Chapter 14 Exercises</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
+  }
+
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
+
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
+
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
+        }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
+    }
+
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
+
+    document.body.prepend(toolbar);
+  }
+
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
+    }
+  }
+
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
+
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
+    }
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">5</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">6</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">7</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">8</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">9</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false" href="">10</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" role="tab" aria-controls="tabset-1-11" aria-selected="false" href="">11</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<!--
+id: "buck-chew-dress"
+created: "Mon Feb 16 15:50:44 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-buck-chew-dress" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> We are going to pick up on drill problem 10.B.2 [give a link here.] As a reminder, that drill problem was about your trying to predict the outcome of a football game involving your favorite team, the particular form of the prediction being the end-of-game score for your team. For simplicity, assumed that your prior make score outcome of 5 to 24 equally probable and every other score impossible, that is, probability 0 in your prior. (This is unrealistic, since obviously 25, 26, and so on might the the outcome, but our interest here is in showing how a calculation might be structured.)</p>
+<p>So, your prior is 0.05 for each of the 20 scores between 5 and 24. (Note that they add up to 1, so this prior is in the form of an absolute probability distribution, which is of course a valid relative probability distribution as well.)</p>
+<p>The observation, made a half-time, was a score of 10 pts. Based on this observation, we want to know the <em>posterior</em> distribution for the end-of-game score. Do find this, we simply multiply the likelihood of the observation for each of the hypotheses in the prior. Likelihoods should not be simply pulled from the air, there should be some firm reasoning behind them.</p>
+<p>Common sense suggests that a half-time score of 10 is reasonably connected to an end-of-game score of 20. That is, it seems rough justice to say that it’s reasonable to expect the second half of the game to go more or less like the first half. But it would be silly to demand that the end-of-game score must be double the half-time score. A stickler for details might point out that the rules of football imply that an end-of-game score of 11 is impossible from a half-time score of 10. A Moneyball enthusiast might turn to the teams’ history in past games to look at how many points were scored in the second half of the game. More narrowly, the statistician might look only at previous games where the half-time score was 10, or perhaps throw the opposing team’s half-time score into the mix, and so on. But such detail requires more data. More data requires going back further in history. Going back further in history makes more questionable the relevance of that past record to the current performance of your team.</p>
+<p>Here is a very rough (but reasonable) model of scoring in a football game: at the end of the game, each point earned is equally likely to have come from the first-half of the game or from the second half. With this in mind, there is a road forward to calculate the likelihood of each end-of-game hypothesis given the half-time observation of 10 pts. Moving forward requires some technical knowledge about probability theory which there is no reason for you to have already gained. But in this situation as in many real-world situations, there is often an expert who can guide you with technical matters.</p>
+<p>I’m going to play the role of the expert consultant and tell you the calculation to do. The <strong>binomial</strong> distribution is well suited to this situation. The intuitive setting for the binomial is a series of coin flips, the binomial distribution tells you the probability out of n flips total, of getting 0 heads, or 1 head, or 2, or so on all the way up to n heads.</p>
+<p>The R chunk contains the command needed to calculate the probability of getting k heads out of n flips. To use it we provide three numbers: the number of heads, the number of flips (<code>size=</code>) and the probability of a head in any one flip (<code>prob = 1/2</code>). (If we thought points come harder in the second half of the game, we might set, for instance <code>prob = 1/4</code>, but we will stick to 1/2.)</p>
+<div class="cell" data-caption="Calculation for 10 heads out of 12 flips">
+<pre class="{webr}"><code>#| caption: Calculation for 10 heads out of 12 flips
+dbinom(10, prob = 1/2, size = 12)</code></pre>
+</div>
+<p>The table below lists each of the hypotheses for the end-of-game score as well as the prior probability we have assigned to each. There is also a column for the likelihood of observing a half-time score of 10 given each hypothesis. I’ve filled in the computer command that will calculate the likelihood for the first few hypotheses; the others follow the same pattern.</p>
+<p>Fill in the table by calculating each likelihood, then calculate the posterior relative probability by multiplying together the prior by the likelihood.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>hypothesis (pts)</th>
+<th>prior prob</th>
+<th>likelihood</th>
+<th>posterior relative prob</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>0.05</td>
+<td><code>dbinom(10, prob=1/2, size = 5)</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>0.05</td>
+<td><code>dbinom(10, prob=1/2, size = 6)</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>0.05</td>
+<td><code>dbinom(10, prob=1/2, size = 7)</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td>0.05</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>To convert the posterior relative probability to an absolute posterior probability, add up all the relative probabilities and then divide each relative probability by this sum.</p>
+<p>This is a lot of calculations, and a professional would automate them. You’re not expected to know how to do the automation, but perhaps you can understand what’s involved.</p>
+<div class="cell">
+<pre class="{webr}"><code>tibble::tibble(
+  hypothesis = 5:24,
+  prior = 1/20,
+  likelihood = dbinom(10, prob = 1/2, size = hypothesis),
+  relative_posterior = prior * likelihood,
+  absolute_posterior = relative_posterior / sum(relative_posterior)
+) |&gt; round(3) |&gt; # we don't need all those digits!
+  knitr::kable() # to display nicely
+  
+</code></pre>
+</div>
+<ol type="1">
+<li>What is the end-of-game posterior for a total score of 10 pts? (That is, no points scored in the second half.)</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="bcd-1-ek32" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d312d656b3332" id="devoirs3-selection-6263642d312d656b3332-1" value="AAyunue" data-devoirs3-option="" data-option-id="AAyunue" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>One in a thousand</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d312d656b3332" id="devoirs3-selection-6263642d312d656b3332-2" value="BAaitpm" data-devoirs3-option="" data-option-id="BAaitpm" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>One in a hundred</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d312d656b3332" id="devoirs3-selection-6263642d312d656b3332-3" value="CAgtlwk" data-devoirs3-option="" data-option-id="CAgtlwk" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Five in a hundred</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d312d656b3332" id="devoirs3-selection-6263642d312d656b3332-4" value="DAcmsgh" data-devoirs3-option="" data-option-id="DAcmsgh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Five in ten</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">bcd-1-ek32</span>
+</fieldset>
+</div>
+</div>
+<ol start="2" type="1">
+<li>A friend, impressed with your Bayesian powers, asks you at half-time, “What’s the probability that the final score will be <span class="math inline">\(\leq 15\)</span>?” (Pick the closest answer.)</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="bcd-2-ldw" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d322d6c6477" id="devoirs3-selection-6263642d322d6c6477-1" value="AAsyiaf" data-devoirs3-option="" data-option-id="AAsyiaf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>6%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d322d6c6477" id="devoirs3-selection-6263642d322d6c6477-2" value="BAnvgci" data-devoirs3-option="" data-option-id="BAnvgci" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>13%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d322d6c6477" id="devoirs3-selection-6263642d322d6c6477-3" value="CAjfjqq" data-devoirs3-option="" data-option-id="CAjfjqq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>26%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d322d6c6477" id="devoirs3-selection-6263642d322d6c6477-4" value="DAsouqf" data-devoirs3-option="" data-option-id="DAsouqf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>33%</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">bcd-2-ldw</span>
+</span>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Another friend, more competitive than the first, offers you an even-money bet claiming that the end-of-game score will be <span class="math inline">\(\geq 20\)</span>. How enthusiastic should you be to accept this bet?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="bcd-3-xlew" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d332d786c6577" id="devoirs3-selection-6263642d332d786c6577-1" value="AAthpdl" data-devoirs3-option="" data-option-id="AAthpdl" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Don’t go near it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d332d786c6577" id="devoirs3-selection-6263642d332d786c6577-2" value="BAmdlyq" data-devoirs3-option="" data-option-id="BAmdlyq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Indifferent but slightly disinclined.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d332d786c6577" id="devoirs3-selection-6263642d332d786c6577-3" value="CAxukao" data-devoirs3-option="" data-option-id="CAxukao" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Indifferent but slighly inclined</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d332d786c6577" id="devoirs3-selection-6263642d332d786c6577-4" value="DAovzru" data-devoirs3-option="" data-option-id="DAovzru" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Super excited.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">bcd-3-xlew</span>
+</fieldset>
+</div>
+</div>
+<ol start="4" type="1">
+<li>A third friend thinks that the number 21 has magical properties. She’s not so silly as to make an even money bet that the end-of-game outcome will be 21, and asks you to give her 7-to-1 odds. (This means, if she wins you pay her $7. If she loses, she pays you $1.) Are you willing to take the bet?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="bcd-4-he3ls" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d342d6865336c73" id="devoirs3-selection-6263642d342d6865336c73-1" value="AAqkkyp" data-devoirs3-option="" data-option-id="AAqkkyp" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>You would be ripping her off.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d342d6865336c73" id="devoirs3-selection-6263642d342d6865336c73-2" value="BAbixea" data-devoirs3-option="" data-option-id="BAbixea" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>It’s to your advantage, but reasonably fair for a friend.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d342d6865336c73" id="devoirs3-selection-6263642d342d6865336c73-3" value="CAqweja" data-devoirs3-option="" data-option-id="CAqweja" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>It’s to her advantage, but for a friend, why not?</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6263642d342d6865336c73" id="devoirs3-selection-6263642d342d6865336c73-4" value="DAydyzm" data-devoirs3-option="" data-option-id="DAydyzm" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>She’s ripping you off.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">bcd-4-he3ls</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-buck-chew-dress --></p>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<!--
+id: "cheetah-stand-mattress"
+created: "Sun Dec 28 14:33:01 2025"
+attribution: DTK
+status: ready-to-use
+chapter: 13
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-cheetah-stand-mattress" class="theorem exercise page-columns page-full">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> The series of images of “The Horse in Motion,” made by Eadweard Muybridge in 1878, was one of the first stop-action, multi-frame photographs. There are 11 successive frames, each separated by 0.04 seconds. (The last frame is out of sequence, so ignore it for our purposes.) The vertical lines are separated by 27 inches. The whole set of frames, from 1 to 11, covers approximately one-half stride cycle of the horse.</p>
+<div class="column-page-inset-right">
+<p><img src="../www/muybridge-horse.png" class="img-fluid"></p>
+</div>
+<p>We are going to look at the rate of change of the horse’s position with respect to time. Of course, “rate of change of position with respect to time” is more commonly known as <em>velocity</em>. And, evidently, different parts of the horse are moving with different velocities at different times.</p>
+<p>To start, make measurements from the photos of two parts of the horse: the tip of the nose and the center of one of the front hooves. Which hoof? The one that is <em>not</em> in contact with the ground in frame 1 and is being pulled behind a bent knee in frame 2. (Note that to see the hoof is being pulled, you might need to refer to frame 3. Simple dynamical phenomena play out over extended time.)</p>
+<p>The following is a text-entry box that will be submitted along with your other answers. Questions (1) - (3) below are to get you started filling in the velocity columns of the table.</p>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-14" data-label="csm-tab-3ks">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d7461622d336b73">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d7461622d336b73" class="devoirs3-text-input" rows="14" cols="40" placeholder="" data-devoirs3-input="">                              Nose       Hoof
+Frame | Time | Nose | Hoof | Velocity | Velocity 
+------|------|------|------|----------|----------
+1     | 0.00 |  8.1 |  5.4 |
+2     | 0.04 |  9.4 |  7.5 |
+3     | 0.08 | 10.1 |  8.7 |
+4     | 0.12 | 11.4 | 10.8 |
+5     | 0.16 | 12.3 | 12.2 |
+6     | 0.20 | 13.3 | 13.3 |
+7     | 0.24 | 14.3 | 14.0 |
+8     | 0.28 | 15.1 | 14.0 |
+9     | 0.32 | 16.1 | 14.0 |
+10    | 0.36 | 17.2 | 14.3 |
+11    | 0.40 | 18.3 | 16.1 |
+</textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-tab-3ks</span></p>
+</div>
+<ol type="1">
+<li>What is the change in nose position from frame 1 to frame 2?</li>
+</ol>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="csm-1-clw" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-1" value="AAnuowp" data-devoirs3-option="" data-option-id="AAnuowp" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-0.6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-2" value="BAyspvm" data-devoirs3-option="" data-option-id="BAyspvm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-3" value="CAkfeyg" data-devoirs3-option="" data-option-id="CAkfeyg" data-feedback="Correct!" data-feedback-html="Correct!"> <span>1.3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-4" value="DAozxov" data-devoirs3-option="" data-option-id="DAozxov" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2.7</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-5" value="EAnadgi" data-devoirs3-option="" data-option-id="EAnadgi" data-feedback="Sorry." data-feedback-html="Sorry."> <span>3.5</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-1-clw</span> </span></p>
+<ol start="2" type="1">
+<li>What is the rate of change of nose position with respect to time from frame 1 to frame 2?</li>
+</ol>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="csv-2-kwc" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-1" value="AAyvrpq" data-devoirs3-option="" data-option-id="AAyvrpq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-10.9</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-2" value="BAslcgc" data-devoirs3-option="" data-option-id="BAslcgc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>14.6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-3" value="CAsiuhu" data-devoirs3-option="" data-option-id="CAsiuhu" data-feedback="Correct!" data-feedback-html="Correct!"> <span>32.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-4" value="DAutfri" data-devoirs3-option="" data-option-id="DAutfri" data-feedback="Sorry." data-feedback-html="Sorry."> <span>52.3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-5" value="EAixzuy" data-devoirs3-option="" data-option-id="EAixzuy" data-feedback="Sorry." data-feedback-html="Sorry."> <span>57.7</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csv-2-kwc</span> </span></p>
+<ol start="3" type="1">
+<li>What is the rate of change in hoof position with respect to time from frame 1 to frame 2?</li>
+</ol>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="csv-3-csl" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-1" value="AAiogmp" data-devoirs3-option="" data-option-id="AAiogmp" data-feedback="Sorry." data-feedback-html="Sorry."> <span>25.1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-2" value="BAapebk" data-devoirs3-option="" data-option-id="BAapebk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>31.9</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-3" value="CAvzgxx" data-devoirs3-option="" data-option-id="CAvzgxx" data-feedback="Sorry." data-feedback-html="Sorry."> <span>45.1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-4" value="DAaokex" data-devoirs3-option="" data-option-id="DAaokex" data-feedback="Correct!" data-feedback-html="Correct!"> <span>52.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-5" value="EAlurde" data-devoirs3-option="" data-option-id="EAlurde" data-feedback="Sorry." data-feedback-html="Sorry."> <span>57.7</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csv-3-csl</span> </span></p>
+<ol start="4" type="1">
+<li><p>Consider this phrase: “The rate of change in hoof position with respect to nose position.” Calculate it, then explain how the value is related to the values from (2) and (3).</p></li>
+<li><p>Do similar calculations as in (2) and (3), but go backwards: from frame 2 to frame 1. Do your results have an evident relationship to the values you calculated in (2) and (3).</p></li>
+<li><p>Fill in the velocity columns for <strong>?@tbl-nose-hoof</strong> for all ten pairs of successive frames. As you do so, contemplate this question: for the rates of change from frame n to n+1, should you enter the values on line n or line n+1 or something different? Would either be valid? Both? We just want to hear what you’re thinking about this, not that there is a right answer.</p></li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-14" data-label="csm-roc-uw34">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d726f632d75773334">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d726f632d75773334" class="devoirs3-text-input" rows="3" cols="40" placeholder="Write your answer to (6) here." data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-roc-uw34</span></p>
+</div>
+<ol start="7" type="1">
+<li>Imagine that your answer to the previous question was “both.” You would then have two different velocities to enter on each line of the table. But the horse’s nose cannot have two different velocities at the same time. This is a genuine problem. In <a href="Chap-14-rates-of-change.html#sec-rates-of-change">Chapter 14</a> the word “instantaneous” is associated with the conceptual resolution of this problem. Explain the connection between “instantaneous” and the resolution of the riddle in (6).</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-14" data-label="csm-7-xekw">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d372d78656b77">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d372d78656b77" class="devoirs3-text-input" rows="3" cols="40" placeholder="Write your answer to (7) here." data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-7-xekw</span></p>
+</div>
+<ol start="8" type="1">
+<li>A high-speed, high-resolution video camera can cover the same time span as covered in Muybridge’s photo with thousands of successive frames rather than just eleven. How might such data make the question of where to place each velocity data point practically of no consequence.</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-14" data-label="csm-8-gskw">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d382d67736b77">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d382d67736b77" class="devoirs3-text-input" rows="3" cols="40" placeholder="Write your answer to (8) here." data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-8-gskw</span></p>
+</div>
+<p><a href="#fig-nose-hoof-continuous" class="quarto-xref">Figure&nbsp;1</a> shows a model of the position of the nose and hoof as they vary continuously in time. The graphs are annotated with sloping lines where the unit of the slope is m/s.</p>
+<div id="fig-nose-hoof-continuous" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nose-hoof-continuous-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nose-hoof-continuous" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-nose-hoof-continuous-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-nose-hoof-continuous-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Exer-14_files/figure-html/fig-nose-hoof-continuous-1.png" class="img-fluid figure-img" data-ref-parent="fig-nose-hoof-continuous" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nose-hoof-continuous-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Nose
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-nose-hoof-continuous" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-nose-hoof-continuous-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-nose-hoof-continuous-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Exer-14_files/figure-html/fig-nose-hoof-continuous-2.png" class="img-fluid figure-img" data-ref-parent="fig-nose-hoof-continuous" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-nose-hoof-continuous-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Hoof
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nose-hoof-continuous-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A reconstruction of nose and hoof positions as a continuous function of time.
+</figcaption>
+</figure>
+</div>
+<ol start="9" type="1">
+<li><p>Copy over one of the graphs (approximate is OK) to a piece of paper. Annotate the graph with:</p>
+<ol type="a">
+<li>Points and a sloping line connecting them that correspond to the velocity calculation between frames 3 and 4 (that is, time 0.08 to 0.12 s).</li>
+<li>Points and a sloping line connecting them that correspond to the overall velocity over the interval from time zero to time 0.40 s</li>
+<li>The instant when the velocity is highest.</li>
+</ol></li>
+</ol>
+<p>The <code>{devoirs}</code> homework collection system doesn’t handle pictures, but bring your annotated graph to class for discussion purposes.</p>
+</div>
+<p><!-- end of exr-cheetah-stand-mattress --></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<!--
+id: "cheetah-think-tv"
+created: "Fri Dec 19 17:11:29 2025"
+attribution: TBA
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-cheetah-think-tv" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Using the interactive R chunk, make a plot of the function <code>exp2(x) * osc()</code> over the domain -5 to 5. (The <code>npts=500</code> just helps to make the graph look smooth.)</p>
+<div class="cell" data-caption="R command chunk">
+<pre class="{webr}"><code>#| caption: R command chunk
+slice_plot( ~  , dom(   ), npts=500)</code></pre>
+</div>
+<ol type="1">
+<li>What is the range covered by the vertical axis? (Choose the closest answer.)</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-1-cslw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d312d63736c77" id="devoirs3-selection-6374742d312d63736c77-1" value="AApgrly" data-devoirs3-option="" data-option-id="AApgrly" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>-5 to 5</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d312d63736c77" id="devoirs3-selection-6374742d312d63736c77-2" value="BAgaduf" data-devoirs3-option="" data-option-id="BAgaduf" data-feedback="That's the graphics domain. The vertical axis is for the function output." data-feedback-html="That’s the graphics domain. The vertical axis is for the function output.">
+    <span>0 to 10</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d312d63736c77" id="devoirs3-selection-6374742d312d63736c77-3" value="CAjogim" data-devoirs3-option="" data-option-id="CAjogim" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0 to 1000</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d312d63736c77" id="devoirs3-selection-6374742d312d63736c77-4" value="DAlhnve" data-devoirs3-option="" data-option-id="DAlhnve" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>-500 to 500</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-1-cslw</span>
+</fieldset>
+</div>
+</div>
+<hr>
+<ol start="2" type="1">
+<li>The following plot involves the multiplication of two core modeling functions. Which two?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Exer-14_files/figure-html/C14-eepnl-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-2-cksw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d322d636b7377" id="devoirs3-selection-6374742d322d636b7377-1" value="AAbdnyq" data-devoirs3-option="" data-option-id="AAbdnyq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>osc() and hill()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d322d636b7377" id="devoirs3-selection-6374742d322d636b7377-2" value="BAzbmgc" data-devoirs3-option="" data-option-id="BAzbmgc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>osc() and exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d322d636b7377" id="devoirs3-selection-6374742d322d636b7377-3" value="CAaeyqo" data-devoirs3-option="" data-option-id="CAaeyqo" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>osc() and hillside()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d322d636b7377" id="devoirs3-selection-6374742d322d636b7377-4" value="DAkljvt" data-devoirs3-option="" data-option-id="DAkljvt" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>osc() and same()</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-2-cksw</span>
+</fieldset>
+</div>
+</div>
+<hr>
+<ol start="3" type="1">
+<li>Consider the three core modeling functions recip(), exp2(), log2(). For each of the settings below, say which is the better model.</li>
+</ol>
+<p>3a. The input is time since your last purchase, the output is the amount of your credit card debt if you do nothing to pay off the outstanding debt.</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-3a-sje" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33612d736a65" id="devoirs3-selection-6374742d33612d736a65-1" value="AAhckss" data-devoirs3-option="" data-option-id="AAhckss" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>recip()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33612d736a65" id="devoirs3-selection-6374742d33612d736a65-2" value="BAevaov" data-devoirs3-option="" data-option-id="BAevaov" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33612d736a65" id="devoirs3-selection-6374742d33612d736a65-3" value="CAcquhe" data-devoirs3-option="" data-option-id="CAcquhe" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>log2()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-3a-sje</span>
+</span>
+</div>
+</div>
+<hr>
+<p>3b. The input is the amount of time you spend procrastinating, the output is the amount of work you get done.</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-3b-stwe" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33622d73747765" id="devoirs3-selection-6374742d33622d73747765-1" value="AAxekvs" data-devoirs3-option="" data-option-id="AAxekvs" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>recip()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33622d73747765" id="devoirs3-selection-6374742d33622d73747765-2" value="BAgglpb" data-devoirs3-option="" data-option-id="BAgglpb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33622d73747765" id="devoirs3-selection-6374742d33622d73747765-3" value="CAjrflh" data-devoirs3-option="" data-option-id="CAjrflh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>log2()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-3b-stwe</span>
+</span>
+</div>
+</div>
+<hr>
+<p>3c. The input is the amount of time you spend preening for a date, the output is how good you look.</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-3c-ews3" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33632d65777333" id="devoirs3-selection-6374742d33632d65777333-1" value="AAqdtcn" data-devoirs3-option="" data-option-id="AAqdtcn" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>recip()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33632d65777333" id="devoirs3-selection-6374742d33632d65777333-2" value="BAzdnyy" data-devoirs3-option="" data-option-id="BAzdnyy" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33632d65777333" id="devoirs3-selection-6374742d33632d65777333-3" value="CAriocu" data-devoirs3-option="" data-option-id="CAriocu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>log2()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-3c-ews3</span>
+</span>
+</div>
+</div>
+<hr>
+<ol start="4" type="a">
+<li>The input is the number of people you share an apartment with, the output is your share of the rent on the apartment.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-3d-eye2" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33642d65796532" id="devoirs3-selection-6374742d33642d65796532-1" value="AAhazmd" data-devoirs3-option="" data-option-id="AAhazmd" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>recip()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33642d65796532" id="devoirs3-selection-6374742d33642d65796532-2" value="BAasris" data-devoirs3-option="" data-option-id="BAasris" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33642d65796532" id="devoirs3-selection-6374742d33642d65796532-3" value="CAwrflj" data-devoirs3-option="" data-option-id="CAwrflj" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>log2()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-3d-eye2</span>
+</span>
+</div>
+</div>
+<hr>
+<ol start="5" type="a">
+<li>The input is driving speed, the output is the time taken to get to your destination (assuming no problems with the car).</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-3e-tey" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33652d746579" id="devoirs3-selection-6374742d33652d746579-1" value="AAjiode" data-devoirs3-option="" data-option-id="AAjiode" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>recip()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33652d746579" id="devoirs3-selection-6374742d33652d746579-2" value="BAoqkju" data-devoirs3-option="" data-option-id="BAoqkju" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33652d746579" id="devoirs3-selection-6374742d33652d746579-3" value="CAawtat" data-devoirs3-option="" data-option-id="CAawtat" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>log2()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-3e-tey</span>
+</span>
+</div>
+</div>
+<hr>
+<ol start="6" type="a">
+<li>The input is the number of weeks you unintentionally left a piece of cheese under your bed, the output is the amount of mold on the cheese.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-3f-93ue" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33662d39337565" id="devoirs3-selection-6374742d33662d39337565-1" value="AAyisca" data-devoirs3-option="" data-option-id="AAyisca" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>recip()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33662d39337565" id="devoirs3-selection-6374742d33662d39337565-2" value="BAdkeeo" data-devoirs3-option="" data-option-id="BAdkeeo" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33662d39337565" id="devoirs3-selection-6374742d33662d39337565-3" value="CAkerbi" data-devoirs3-option="" data-option-id="CAkerbi" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>log2()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-3f-93ue</span>
+</span>
+</div>
+</div>
+<hr>
+<ol start="7" type="a">
+<li>The input is the amount of time you spend watching Netflix the day before an exam, the output is the your score on the exam.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ctt-3g-iewe" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33672d69657765" id="devoirs3-selection-6374742d33672d69657765-1" value="AAxsxil" data-devoirs3-option="" data-option-id="AAxsxil" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>recip()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33672d69657765" id="devoirs3-selection-6374742d33672d69657765-2" value="BAasijq" data-devoirs3-option="" data-option-id="BAasijq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6374742d33672d69657765" id="devoirs3-selection-6374742d33672d69657765-3" value="CAsnflf" data-devoirs3-option="" data-option-id="CAsnflf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>log2()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ctt-3g-iewe</span>
+</span>
+</div>
+</div>
+</div>
+<p><!-- end of exr-cheetah-think-tv --></p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<!--
+id: "dingo-eat-saw"
+created: "Thu Feb 19 12:08:19 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-dingo-eat-saw" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Consider a bad movie plot organized along these lines: The protagonist has a disturbing dream that the universe has changed from “Normal” to a new state: “Doom.” Doom was hitherto thought impossible. Doom and Normal constitute two hypotheses about the state of the universe.</p>
+<p>To say that a hypothesis is impossible is equivalent to assigning it probability zero. That’s what everyone else believes, but our protagonist, on account of his dream, assigns Doom the rhetorical odds “one-in-a-million.”</p>
+<ol type="1">
+<li>If an outcome has probability zero, what are the odds of that outcome?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="des-1-ckd" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d312d636b64" id="devoirs3-selection-6465732d312d636b64-1" value="AAzgyor" data-devoirs3-option="" data-option-id="AAzgyor" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Zero</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d312d636b64" id="devoirs3-selection-6465732d312d636b64-2" value="BAlklll" data-devoirs3-option="" data-option-id="BAlklll" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>One</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d312d636b64" id="devoirs3-selection-6465732d312d636b64-3" value="CAvybjb" data-devoirs3-option="" data-option-id="CAvybjb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Infinity</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d312d636b64" id="devoirs3-selection-6465732d312d636b64-4" value="DAzknvy" data-devoirs3-option="" data-option-id="DAzknvy" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>You can’t use odds here.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">des-1-ckd</span>
+</fieldset>
+</div>
+</div>
+<p>Now, in typical movie fashion, the protagonist starts to observe events—call them “strange events”—that shouldn’t be happening. In the Doom universe, such events have a high likelihood. But in the normal universe they could also be observed due to optical illusions, distraction, or tricks played by the neighborhood children who think the protagonist is crazy. Let’s assign each observed strange event a likelihood ratio of 2 in favor of Doom.</p>
+<ol start="2" type="1">
+<li>Explain what feature of Bayesian reasoning allows evidence to be in favor of a hypothesis that we believe is impossible.</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-14" data-label="des-2-rtir">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-6465732d322d72746972">Text editor box.</label>
+<textarea id="devoirs3-text-6465732d322d72746972" class="devoirs3-text-input" rows="3" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">des-2-rtir</span></p>
+</div>
+<ol start="3" type="1">
+<li>Translate a likelihood ratio of 3 according to the verbal scale for evidence:</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="des-3-lfs" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d332d6c6673" id="devoirs3-selection-6465732d332d6c6673-1" value="AAatpbi" data-devoirs3-option="" data-option-id="AAatpbi" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>No evidence</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d332d6c6673" id="devoirs3-selection-6465732d332d6c6673-2" value="BAnhmlf" data-devoirs3-option="" data-option-id="BAnhmlf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Limited</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d332d6c6673" id="devoirs3-selection-6465732d332d6c6673-3" value="CAlqycj" data-devoirs3-option="" data-option-id="CAlqycj" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Moderate</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d332d6c6673" id="devoirs3-selection-6465732d332d6c6673-4" value="DAyyzhs" data-devoirs3-option="" data-option-id="DAyyzhs" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Moderate to strong</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">des-3-lfs</span>
+</fieldset>
+</div>
+</div>
+<p>The Bayesian updating calculation has a particularly simple mathematical form when the prior probability is stated in terms of odds.</p>
+<p><span class="math display">\[\text{posterior odds} = \text{prior odds} \times \text{likelihood ratio} .\]</span></p>
+<p>For the character who claims that the prior odds of Doom is zero, the posterior odds must always remain zero regardless of the likelihood ratio. In the movies, such a character always ends up dying in a dramatic way, just punishment for his skepticism.</p>
+<ol start="4" type="1">
+<li>For our protagonist, who started with a prior odds of one-in-a-million, the posterior odds after one such “strange” event will be what?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="des-4-sot" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d342d736f74" id="devoirs3-selection-6465732d342d736f74-1" value="AAiflor" data-devoirs3-option="" data-option-id="AAiflor" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>One in a million</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d342d736f74" id="devoirs3-selection-6465732d342d736f74-2" value="BAiiakk" data-devoirs3-option="" data-option-id="BAiiakk" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Two in a million</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d342d736f74" id="devoirs3-selection-6465732d342d736f74-3" value="CAampuk" data-devoirs3-option="" data-option-id="CAampuk" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>One in one-hundred thousand</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d342d736f74" id="devoirs3-selection-6465732d342d736f74-4" value="DAdwfgn" data-devoirs3-option="" data-option-id="DAdwfgn" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>One in ten thousand</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">des-4-sot</span>
+</fieldset>
+</div>
+</div>
+<p>Our protagonist starts to encounter other “strange” reports, hearing about them on the radio, seeing them in news reports from diverse locations, and so on. For the skeptic, these are all of no import. It is impossible to move the skeptic off his prior odds of zero. But our protagonist takes them seriously. Or, at least, he is willing to fold them in to a Bayesian calculation.</p>
+<ol start="5" type="1">
+<li>After five strange events (in total), what should be our protagonist’s posterior odds? (Pick the closest answer.)</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="des-5-hjw" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d352d686a77" id="devoirs3-selection-6465732d352d686a77-1" value="AAjwxfd" data-devoirs3-option="" data-option-id="AAjwxfd" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.000001</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d352d686a77" id="devoirs3-selection-6465732d352d686a77-2" value="BAsucmh" data-devoirs3-option="" data-option-id="BAsucmh" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>0.00003</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d352d686a77" id="devoirs3-selection-6465732d352d686a77-3" value="CApgsio" data-devoirs3-option="" data-option-id="CApgsio" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.0001</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d352d686a77" id="devoirs3-selection-6465732d352d686a77-4" value="DAbeicd" data-devoirs3-option="" data-option-id="DAbeicd" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.003</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d352d686a77" id="devoirs3-selection-6465732d352d686a77-5" value="EArbxei" data-devoirs3-option="" data-option-id="EArbxei" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.01</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d352d686a77" id="devoirs3-selection-6465732d352d686a77-6" value="FAlaciz" data-devoirs3-option="" data-option-id="FAlaciz" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.3</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">des-5-hjw</span>
+</span>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Another five strange events are observed, making 10 in all. What should be our protagonists posterior odds?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="des-6-yqe" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d362d797165" id="devoirs3-selection-6465732d362d797165-1" value="AAyunat" data-devoirs3-option="" data-option-id="AAyunat" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.000001</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d362d797165" id="devoirs3-selection-6465732d362d797165-2" value="BAvuajn" data-devoirs3-option="" data-option-id="BAvuajn" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.00003</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d362d797165" id="devoirs3-selection-6465732d362d797165-3" value="CAijeuq" data-devoirs3-option="" data-option-id="CAijeuq" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>0.0001</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d362d797165" id="devoirs3-selection-6465732d362d797165-4" value="DAmqeon" data-devoirs3-option="" data-option-id="DAmqeon" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.003</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d362d797165" id="devoirs3-selection-6465732d362d797165-5" value="EAwzxxm" data-devoirs3-option="" data-option-id="EAwzxxm" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.01</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6465732d362d797165" id="devoirs3-selection-6465732d362d797165-6" value="FAljzmb" data-devoirs3-option="" data-option-id="FAljzmb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.3</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">des-6-yqe</span>
+</span>
+</div>
+</div>
+<p>Amazingly, we have all been exposed to series of strange events through web “doomscrolling.” We Bayesian thinkers might deal with the deluge by adding new hypotheses to consider. Not just Normal and Doom, but also Clickbait/AI.</p>
+</div>
+<p><!-- end of exr-dingo-eat-saw --></p>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<!--
+id: "kid-hurt-dress"
+created: "Thu Mar 12 08:15:50 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-kid-hurt-dress" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Velocity is the rate of change of position with respect to time. Acceleration is the rate of change of velocity with respect to time. So acceleration is the _____ derivative of position.</p>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="khd-1-nslw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6b68642d312d6e736c77" id="devoirs3-selection-6b68642d312d6e736c77-1" value="AAymeyo" data-devoirs3-option="" data-option-id="AAymeyo" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>first</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6b68642d312d6e736c77" id="devoirs3-selection-6b68642d312d6e736c77-2" value="BAfboaa" data-devoirs3-option="" data-option-id="BAfboaa" data-feedback="Right. That is, the derivative with respect to time of the derivative with respect to time of position." data-feedback-html="Right. That is, the derivative with respect to time of the derivative with respect to time of position.">
+    <span>second</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6b68642d312d6e736c77" id="devoirs3-selection-6b68642d312d6e736c77-3" value="CAdqskc" data-devoirs3-option="" data-option-id="CAdqskc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>marginal</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6b68642d312d6e736c77" id="devoirs3-selection-6b68642d312d6e736c77-4" value="DAjyeok" data-devoirs3-option="" data-option-id="DAjyeok" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>zero</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">khd-1-nslw</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-kid-hurt-dress --></p>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<!--
+id: "niece-eat-pot"
+created: "Thu Mar 12 07:51:21 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-niece-eat-pot" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> How does a <em>rate of change</em> differ from an ordinary <em>rate</em>? What do you need to measure each?</p>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="nep-1-udls" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e65702d312d75646c73" id="devoirs3-selection-6e65702d312d75646c73-1" value="AAhgcwq" data-devoirs3-option="" data-option-id="AAhgcwq" data-feedback="Sorry. If you are going to look at how something changes, you need a before-and-after measurement." data-feedback-html="Sorry. If you are going to look at how something changes, you need a before-and-after measurement.">
+    <span>A rate needs one snapshot; a rate of change needs one snapshot too, but with different units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e65702d312d75646c73" id="devoirs3-selection-6e65702d312d75646c73-2" value="BAoohig" data-devoirs3-option="" data-option-id="BAoohig" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>A rate is one quantity divided by another from a single snapshot; a rate of change uses <em>changes</em> in two quantities (numerator and denominator), so you need at least two “frames” (e.g., a short “movie”) to form the ratio of those changes.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e65702d312d75646c73" id="devoirs3-selection-6e65702d312d75646c73-3" value="CAxlmdy" data-devoirs3-option="" data-option-id="CAxlmdy" data-feedback="No. The rate of change can be with respect to any quantity, for instance the rate of change of student test scores with respect to parental education." data-feedback-html="No.&nbsp;The rate of change can be with respect to any quantity, for instance the rate of change of student test scores with respect to parental education.">
+    <span>A rate of change is always with respect to time; an ordinary rate is not.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e65702d312d75646c73" id="devoirs3-selection-6e65702d312d75646c73-4" value="DAsrlvp" data-devoirs3-option="" data-option-id="DAsrlvp" data-feedback="While it's true that a rate of change is also a rate, not every rate is a rate of change." data-feedback-html="While it’s true that a rate of change is also a rate, not every rate is a rate of change.">
+    <span>There is no real difference; the terms are interchangeable.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">nep-1-udls</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-niece-eat-pot --></p>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<!--
+id: "rabbit-fight-ring"
+created: "Thu Dec 11 16:35:00 2025"
+attribution: TBA
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-rabbit-fight-ring" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7</strong></span> “<em>The global rise in CO_2_ has nearly leveled off.</em>” — BBC News, Nov.&nbsp;6, 2025</p>
+<p>The meaning of the above sentence seems plain. Or is it?</p>
+<ol type="1">
+<li>Which of these do you think is closest to the meaning of the BBC quote?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ml1" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c31" id="devoirs3-selection-6d6c31-1" value="AAiubkt" data-devoirs3-option="" data-option-id="AAiubkt" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The atmospheric concentration of CO_2_ shows nearly no increase now from year to year.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c31" id="devoirs3-selection-6d6c31-2" value="BAiroij" data-devoirs3-option="" data-option-id="BAiroij" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>The atmospheric concentration of CO_2_ is still growing from year to year.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c31" id="devoirs3-selection-6d6c31-3" value="CAqxbao" data-devoirs3-option="" data-option-id="CAqxbao" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Neither of the above.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ml1</span>
+</fieldset>
+</div>
+</div>
+<p>The BBC news item is based on measurements of CO_2_ at the Mauna Loa observatory in Hawaii from March 1958 through October 2025. The data are available <a href="https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.txt">here</a>. The graphic below shows the average measurement each year. The data have been annotated with “slope roses,” a visual key for measuring a rate of change. (The units are ppm-per-year.)</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Exer-14_files/figure-html/C14-phfme-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>What is the rate of change of CO_2_ concentration with respect to time in 1970? Pick the closest answer.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ml2" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c32" id="devoirs3-selection-6d6c32-1" value="AAyvwcr" data-devoirs3-option="" data-option-id="AAyvwcr" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.5 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c32" id="devoirs3-selection-6d6c32-2" value="BAikeil" data-devoirs3-option="" data-option-id="BAikeil" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>1.0 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c32" id="devoirs3-selection-6d6c32-3" value="CAcwqlx" data-devoirs3-option="" data-option-id="CAcwqlx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1.5 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c32" id="devoirs3-selection-6d6c32-4" value="DAjczpf" data-devoirs3-option="" data-option-id="DAjczpf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>2.0 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c32" id="devoirs3-selection-6d6c32-5" value="EAcjysg" data-devoirs3-option="" data-option-id="EAcjysg" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>2.5 ppm/year</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ml2</span>
+</span>
+</div>
+</div>
+<ol start="3" type="1">
+<li>If the rate of change in (2) had held from 1970 through all the intervening time up to 2025, what would the current CO_2_ concentration be? Pick the closest answer.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ml3" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c33" id="devoirs3-selection-6d6c33-1" value="AAonyci" data-devoirs3-option="" data-option-id="AAonyci" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>325 ppm</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c33" id="devoirs3-selection-6d6c33-2" value="BAvmjbf" data-devoirs3-option="" data-option-id="BAvmjbf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>340 ppm</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c33" id="devoirs3-selection-6d6c33-3" value="CAveube" data-devoirs3-option="" data-option-id="CAveube" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>380 ppm</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c33" id="devoirs3-selection-6d6c33-4" value="DAoefsw" data-devoirs3-option="" data-option-id="DAoefsw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>420 ppm</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ml3</span>
+</span>
+</div>
+</div>
+<ol start="4" type="1">
+<li>In year 2000, what was the rate of change in CO_2_ concentration with respect to time?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ml4" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c34" id="devoirs3-selection-6d6c34-1" value="AAewzak" data-devoirs3-option="" data-option-id="AAewzak" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.5 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c34" id="devoirs3-selection-6d6c34-2" value="BAqosre" data-devoirs3-option="" data-option-id="BAqosre" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1.0 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c34" id="devoirs3-selection-6d6c34-3" value="CAqkeop" data-devoirs3-option="" data-option-id="CAqkeop" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1.5 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c34" id="devoirs3-selection-6d6c34-4" value="DAdpeeu" data-devoirs3-option="" data-option-id="DAdpeeu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>2.0 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c34" id="devoirs3-selection-6d6c34-5" value="EApldgr" data-devoirs3-option="" data-option-id="EApldgr" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>2.5 ppm/year</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ml4</span>
+</span>
+</div>
+</div>
+<ol start="5" type="1">
+<li>Estimate the rate of change in CO_2_ in 2020-2025.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="ml5" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c35" id="devoirs3-selection-6d6c35-1" value="AAzikad" data-devoirs3-option="" data-option-id="AAzikad" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.5 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c35" id="devoirs3-selection-6d6c35-2" value="BAoridz" data-devoirs3-option="" data-option-id="BAoridz" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1.0 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c35" id="devoirs3-selection-6d6c35-3" value="CArssrh" data-devoirs3-option="" data-option-id="CArssrh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1.5 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c35" id="devoirs3-selection-6d6c35-4" value="DAmufak" data-devoirs3-option="" data-option-id="DAmufak" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>2.0 ppm/year</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6c35" id="devoirs3-selection-6d6c35-5" value="EAdehsk" data-devoirs3-option="" data-option-id="EAdehsk" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>2.5 ppm/year</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ml5</span>
+</span>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Explain, as best you can, how the BBC quote is reflected in the actual data.</li>
+</ol>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-14" data-label="rfr-6-bbc">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-7266722d362d626263">Text editor box.</label>
+<textarea id="devoirs3-text-7266722d362d626263" class="devoirs3-text-input" rows="3" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">rfr-6-bbc</span></p>
+</div>
+</div>
+<p><!-- end of exr-rabbit-fight-ring --></p>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<!--
+id: "seahorse-lose-plyer"
+created: "Fri Jan 16 08:34:46 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-seahorse-lose-plyer" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8</strong></span> An article in <em>The Economist</em> in January 2026 stated:</p>
+<blockquote class="blockquote">
+<p>Since 2021, demand for electricity in India has increased by around 9% each year. It is set to more than double in the next decade. <a href="https://www.economist.com/asia/2026/01/14/to-power-up-growth-india-must-be-rewired">Source</a></p>
+</blockquote>
+<p>Assuming that the starting point is 2025 and that the growth continues at 9% per year, is it a fair statement that electricity demand will “more than double” in the next decade.</p>
+<p>Explain your reasoning, using the “<code>xf_to_def("Rule of 72")</code>.”</p>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-exer-14" data-label="clp-1-3dld">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-636c702d312d33646c64">Text editor box.</label>
+<textarea id="devoirs3-text-636c702d312d33646c64" class="devoirs3-text-input" rows="3" cols="40" placeholder="" data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">clp-1-3dld</span></p>
+</div>
+</div>
+<p><!-- end of exr-seahorse-lose-plyer --></p>
+</div>
+<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
+<!--
+id: "snail-sail-screen"
+created: "Sat Dec 20 09:37:03 2025"
+attribution: TBA
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-snail-sail-screen" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9</strong></span> AI generated: In quantitative reasoning, we move from linear growth (adding the same amount each time) to Exponential Growth. This occurs when the rate of change function is proportional to the current value. In social media, we call this “virality.”</p>
+<p>The more people who see a post, the more people there are to share it, which causes the growth rate to accelerate.</p>
+<p>Question 15: The Viral Content Surge</p>
+<p>Scenario: You are a digital marketing manager for a new sustainable fashion brand. You post a short video that goes viral. You model the total number of views (V) over time (t, in hours) using the following exponential function:</p>
+<p>V(t)=500⋅e 0.15t</p>
+<p>To track how fast your brand is growing at any specific moment, you use the rate of change function, V ′ (t), which represents the “views per hour”:</p>
+<p>V ′ (t)=75⋅e 0.15t</p>
+<p>The Question: Compare the state of your video at hour 2 and hour 10. Which of the following statements correctly interprets the rate of change of your views?</p>
+<ol type="A">
+<li><p>At hour 2, you are gaining views at a rate of 101 views/hour; by hour 10, the rate has accelerated to 336 views/hour.</p></li>
+<li><p>At hour 2, you are gaining views at a rate of 101 views/hour; by hour 10, the rate has accelerated to 2,240 views/hour.</p></li>
+<li><p>The rate of change is constant at 75 views per hour because that is the leading coefficient.</p></li>
+<li><p>At hour 10, the total views are higher, but the rate of growth actually slows down because of diminishing returns.</p></li>
+</ol>
+<p>Professor’s Quantitative Breakdown</p>
+<p>Exponential growth is characterized by a “snowball effect.” We calculate the rate of change by plugging our time values into V ′ (t):</p>
+<p>At t=2:</p>
+<p>V ′ (2)=75⋅e 0.15(2) =75⋅e 0.3 ≈75⋅1.35=101.25&nbsp;views/hour At t=10:</p>
+<p>V ′ (10)=75⋅e 0.15(10) =75⋅e 1.5 ≈75⋅4.48=336&nbsp;views/hour Correct Answer: A Note the difference between the total count and the rate. At hour 10, your total views V(10) would be about 2,240, but the speed at which you are currently gaining them is 336 per hour.</p>
+<p>The “Doubling Time” Concept</p>
+<p>A key feature of this rate is the Doubling Time. In exponential growth, the time it takes for the quantity to double is constant, regardless of how large the number is.</p>
+<p>For a growth rate of r=0.15, we use the “Rule of 70” (or more accurately, ln(2)/r):</p>
+<p>Doubling&nbsp;Time≈ 0.15 0.693 ​<br>
+≈4.62&nbsp;hours Whether you are going from 500 to 1,000 views or 50,000 to 100,000 views, it will take the same 4.6 hours!</p>
+<p>Visualizing Viral Growth in R</p>
+<p>R library(ggplot2)</p>
+<section id="define-growth-function" class="level1">
+<h1>Define growth function</h1>
+<p>growth_func &lt;- function(t) 500 * exp(0.15 * t) rate_func &lt;- function(t) 75 * exp(0.15 * t)</p>
+</section>
+<section id="generate-data" class="level1">
+<h1>Generate data</h1>
+<p>t_vals &lt;- seq(0, 24, length.out = 500) df &lt;- data.frame( time = t_vals, views = growth_func(t_vals), rate = rate_func(t_vals) )</p>
+</section>
+<section id="plotting-total-views" class="level1">
+<h1>Plotting Total Views</h1>
+<p>ggplot(df, aes(x = time, y = views)) + geom_line(color = “purple”, size = 1.2) + labs(title = “Total Video Views Over 24 Hours”, subtitle = “Exponential Growth: V(t) = 500 * e^(0.15t)”, x = “Time (hours)”, y = “Total Views”) + theme_minimal() Professor’s Closing Thought</p>
+<p>In the non-STEM world, understanding exponential rates is the difference between a “fad” and a “trend.” If the rate of change function is increasing, the momentum is still building. If the rate of change begins to flatten, you have reached the “saturation point” of your audience.</p>
+</section>
+</div>
+<p><!-- end of exr-snail-sail-screen --></p>
+</div>
+<div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
+<!--
+id: "spider-mean-bolt"
+created: "Thu Mar 12 07:58:14 2026"
+attribution: Dorothy Dickmann
+use: Ch 14 drill
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-spider-mean-bolt" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10</strong></span> On a graph of a function, what geometric quantity is the <em>rate of change</em> of the function with respect to its input? What is the name of the <em>function</em> that outputs that rate for every input?</p>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="smb-1-lse" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736d622d312d6c7365" id="devoirs3-selection-736d622d312d6c7365-1" value="AAvhrfr" data-devoirs3-option="" data-option-id="AAvhrfr" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The rate of change is the <em>height</em> of the graph; the function that gives it is the <em>integral</em>.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736d622d312d6c7365" id="devoirs3-selection-736d622d312d6c7365-2" value="BApoouy" data-devoirs3-option="" data-option-id="BApoouy" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>The rate of change is the <em>slope</em> of the graph at that input; the function that gives the slope at every input is the <em>derivative</em>.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736d622d312d6c7365" id="devoirs3-selection-736d622d312d6c7365-3" value="CAmjgkf" data-devoirs3-option="" data-option-id="CAmjgkf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The rate of change is the <em>area</em> under the graph; the function is the <em>antiderivative</em>.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736d622d312d6c7365" id="devoirs3-selection-736d622d312d6c7365-4" value="DAoofzv" data-devoirs3-option="" data-option-id="DAoofzv" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The rate of change is the <em>intercept</em>; the function is the <em>marginal</em> function.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">smb-1-lse</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-spider-mean-bolt --></p>
+</div>
+<div id="tabset-1-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-11-tab">
+<!--
+id: "turtle-break-stair"
+created: "Thu Mar 12 08:12:38 2026"
+attribution: Dorothy Dickmann
+use: Ch 12 drill
+status: ready-to-use
+chapter: 14
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-turtle-break-stair" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11</strong></span> The derivative of a function is itself a function. What are its <em>inputs</em> and what is the <em>output</em> (in words)?</p>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-14" data-label="tbs-1-ale" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7462732d312d616c65" id="devoirs3-selection-7462732d312d616c65-1" value="AAqllyj" data-devoirs3-option="" data-option-id="AAqllyj" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Inputs: rates of change; output: the original function value.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7462732d312d616c65" id="devoirs3-selection-7462732d312d616c65-2" value="BAmzefx" data-devoirs3-option="" data-option-id="BAmzefx" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Inputs: the same as the original function; output: the instantaneous (that is, “marginal”) rate of change (slope of the graph) of the original function at that input.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7462732d312d616c65" id="devoirs3-selection-7462732d312d616c65-3" value="CAhwkww" data-devoirs3-option="" data-option-id="CAhwkww" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Inputs: slopes; output: area under the curve.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7462732d312d616c65" id="devoirs3-selection-7462732d312d616c65-4" value="DAqqkdw" data-devoirs3-option="" data-option-id="DAqqkdw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Inputs: time only; output: position.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">tbs-1-ale</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-turtle-break-stair --></p>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

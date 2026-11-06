@@ -19,13 +19,26 @@ Economic journalists often describe the debt condition of a country as ratio of 
 
 1. What is the dimension of the quantity Debt/GDP?
 
-```{mcq}
-#| label: pds-1-dimension
-#| inline: true
-1. Dimensionless 
-2. Time [correct]
-3. Money^-1^
-4. Time^-1^
+```{devoirs_choices}
+#| label: choices_pds.1.dimension
+- 'Dimensionless':
+    correct: false
+- 'Time':
+    correct: true
+- 'Money^-1^':
+    correct: false
+- 'Time^-1^':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "pds-1-dimension",
+  question = "Placeholder for now",
+  answers = choices_pds.1.dimension,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

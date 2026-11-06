@@ -1,0 +1,15 @@
+<!--
+id: "fox-sleep-fork"
+created: "Tue Sep 30 12:59:20 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-fox-sleep-fork}
+Other dynamics examples: Arms race, battles. 
+:::
+ <!-- end of exr-fox-sleep-fork -->

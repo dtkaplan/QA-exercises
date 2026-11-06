@@ -1,21 +1,22 @@
 ---
 title: "*Quantitative Argumentation*"
-subtitle: "Chapter 15 Drill Questions"
+subtitle: "Chapter 16 Drill Questions"
+filters:
+  - live
 ---
-
-{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-
-```{r include = FALSE}
-library(drill)
-```
 
 ```{r include=FALSE}
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-`r devoirs::push_answer_style("block")`
+```{r include=FALSE}
+library(drill)
+```
+
+`r devoirs3::devoirs_start("QA-drill-15", feedback=TRUE)`
+
 
 
 :::: {.callout-note collapse=true}

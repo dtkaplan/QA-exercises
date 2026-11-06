@@ -1,0 +1,20 @@
+<!--
+id: "child-tug-stove"
+created: "Sun Dec 28 13:49:52 2025"
+attribution: DTK
+use: "Reading Question Chap 1"
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-child-tug-stove}
+What are the two key features of a *model* in the technical sense used in the chapter?
+
+`r devoirs::devoirs_text("RQ-models-2")`
+:::
+ <!-- end of exr-child-tug-stove -->

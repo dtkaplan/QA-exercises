@@ -1,0 +1,21 @@
+<!--
+id: "camel-lie-rug"
+created: "Mon Nov 10 07:10:00 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-camel-lie-rug}
+
+{++ Too advanced for intro. Need to collect incidence data and effectiveness of treatment data. ++}
+"A positive (abnormal) result should be followed by a colonoscopy. Patients with a negative (normal) result should screen again in 3 years. False positive and false negative results may occur. The USPSTF [[US Preventive Services Task Force](https://www.uspreventiveservicestaskforce.org/uspstf/)] recommends the Cologuard test as a CRC [Colo-rectal cancer] screening option. Their modeling estimates that screening with the test every 3 years from ages 45-85 could prevent up to 73% of (colo-rectal cancers) CRC and avoid up to 85% of CRC deaths." --- from the narrative included in the Cologuard report of test results. 
+
+Explain what the modeling might consist of: Putting together "incidence" versus age data and the results of studies of the effectiveness of treatment.
+:::
+ <!-- end of prp-camel-lie-rug -->

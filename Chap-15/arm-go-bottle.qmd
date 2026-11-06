@@ -4,7 +4,7 @@ created: "Tue Jul  1 16:54:14 2025"
 attribution: TBA
 status: "draft"
 chapter: 15
-mode: "exercise"
+mode: exercise
 -->
 
 
@@ -21,7 +21,7 @@ cumsum(numbers)
 
 Explain in everyday English what `cumsum()` does.
 
-`r devoirs_text("agb-cumsum")`
+`r devoirs3::devoirs_text("agb-cumsum")`
 
 :::
  <!-- end of exr-arm-go-bottle -->

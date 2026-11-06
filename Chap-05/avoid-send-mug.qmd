@@ -5,7 +5,7 @@ attribution: DTK
 use: "Exercise Chap 3"
 status: ready-to-use
 chapter: 3
-mode: "drill"
+mode: drill
 title: "Metric system orders of magnitude"
 -->
 
@@ -14,16 +14,32 @@ title: "Metric system orders of magnitude"
 ::: {#exr-avoid-send-mug}
 Food and medicine are measured over a large range. For instance, in the metric system, measurements might be denominated in micrograms, milligrams, grams, kilograms. How many orders of magnitude (that is, factors of 10) are spanned from micrograms to kilograms.
 
-```{mcq}
-#| label: asm-1-wels
-#| inline: true
-1. 3
-2. 4
-3. 6
-4. 8
-5. 9 [correct]
-6. 10
-7. 12
+```{devoirs_choices}
+#| label: choices_asm.1.wels
+- '3':
+    correct: false
+- '4':
+    correct: false
+- '6':
+    correct: false
+- '8':
+    correct: false
+- '9':
+    correct: true
+- '10':
+    correct: false
+- '12':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "asm-1-wels",
+  question = "Placeholder for now",
+  answers = choices_asm.1.wels,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

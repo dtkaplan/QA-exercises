@@ -13,6 +13,6 @@ chapter: 1
 ::: {#exr-kid-lick-pants}
 In the epidemic example, the computer simulation is itself the model; the SIR model is merely the software used to run it.
 
-`r devoirs::devoirs_TF(correct = FALSE, id = "D-01-rig", wrong.hint="The SIR description is the model. The computer program implements the model's bookkeeping and formal calculations.")`
+`r devoirs3::devoirs_TF(correct = FALSE, label = "D-01-rig", wrong_hint="The SIR description is the model. The computer program implements the model's bookkeeping and formal calculations.")`
 :::
  <!-- end of exr-kid-lick-pants -->

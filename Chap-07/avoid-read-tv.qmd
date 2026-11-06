@@ -4,7 +4,7 @@ created: "Fri Dec 19 17:18:21 2025"
 attribution: TBA
 status: "draft"
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -21,7 +21,7 @@ slice_plot(hill(y) ~ y, domain(y = -5:20))
 ```
 Enter your expression here:
 
-`r devoirs::devoirs_text("art-1-jdu")`
+`r devoirs3::devoirs_text("art-1-jdu")`
 
 :::
  <!-- end of exr-avoid-read-tv -->

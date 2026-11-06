@@ -7,7 +7,8 @@ subtitle: "Chapter 13 Reading Questions"
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+
+`r devoirs3::devoirs_start("QA-RQ-13")`
 
 ::: {.panel-tabset}
 
@@ -19,7 +20,7 @@ source("../_exercise_startup.R")
 
 {{< include ../Chap-13/dolphin-see-pants.qmd >}}
 
-## 4.
+## 3.
 
 {{< include ../Chap-13/dog-stand-plant.qmd >}}
 

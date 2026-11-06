@@ -4,7 +4,7 @@ created: "Fri Feb 20 09:33:20 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -37,13 +37,13 @@ flow_field(dyn1, domain(x = 0:5, y = 0:5)) |>
   gf_theme(theme_minimal(base_size = 16))
 ```
 
-1. `r devoirs::devoirs_TF(FALSE, id = "traj-ftd-1-lx")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
+1. `r devoirs3::devoirs_TF(FALSE, label = "traj-ftd-1-lx")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
 
-2. `r devoirs::devoirs_TF(TRUE, id = "traj-ftd-2-l7y")` For the flow shown above, [green]{style="color: green;"} is a trajectory.
+2. `r devoirs3::devoirs_TF(TRUE, label = "traj-ftd-2-l7y")` For the flow shown above, [green]{style="color: green;"} is a trajectory.
 
-3. `r devoirs::devoirs_TF(FALSE, id = "traj-ftd-3-kw")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
+3. `r devoirs3::devoirs_TF(FALSE, label = "traj-ftd-3-kw")` For the flow shown above, [red]{style="color: red;"} is a trajectory.
 
-4. `r devoirs::devoirs_TF(FALSE, id = "traj-ftd-3-luy")` For the flow shown above, [gray]{style="color: darkgray;"} is a trajectory.
+4. `r devoirs3::devoirs_TF(FALSE, label = "traj-ftd-3-luy")` For the flow shown above, [gray]{style="color: darkgray;"} is a trajectory.
 
 ```{r}
 #| echo: false
@@ -63,18 +63,36 @@ traj_plot(x(t) ~ t, sol1b) |>
     g. [blue-x]{style="color: blue;"}
     h. [blue-y]{style="color: blue;"}
 
-```{mcq}
-#| label: ts-ftd-5-wkd
-#| inline: true
-1. a
-2. b
-3. c
-4. d
-5. e  [correct]
-6. f
-7. g
-8. h
-9. None of the others.
+```{devoirs_choices}
+#| label: choices_ts.ftd.5.wkd
+- 'a':
+    correct: false
+- 'b':
+    correct: false
+- 'c':
+    correct: false
+- 'd':
+    correct: false
+- 'e':
+    correct: true
+- 'f':
+    correct: false
+- 'g':
+    correct: false
+- 'h':
+    correct: false
+- 'None of the others.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ts-ftd-5-wkd",
+  question = "Placeholder for now",
+  answers = choices_ts.ftd.5.wkd,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 
@@ -96,18 +114,36 @@ traj_plot(x(t) ~ t, sol2a) |>
     g. [blue-x]{style="color: blue;"}
     h. [blue-y]{style="color: blue;"}
 
-```{mcq}
-#| label: ts-ftd-6-wkd
-#| inline: true
-1. a
-2. b
-3. c [correct]
-4. d
-5. e 
-6. f
-7. g
-8. h
-9. None of the others.
+```{devoirs_choices}
+#| label: choices_ts.ftd.6.wkd
+- 'a':
+    correct: false
+- 'b':
+    correct: false
+- 'c':
+    correct: true
+- 'd':
+    correct: false
+- 'e':
+    correct: false
+- 'f':
+    correct: false
+- 'g':
+    correct: false
+- 'h':
+    correct: false
+- 'None of the others.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ts-ftd-6-wkd",
+  question = "Placeholder for now",
+  answers = choices_ts.ftd.6.wkd,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

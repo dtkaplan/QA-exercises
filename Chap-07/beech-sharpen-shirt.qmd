@@ -4,7 +4,7 @@ created: "Wed Apr 22 07:57:11 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 7
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -26,97 +26,200 @@ Suppose that the dimension of the input $x$ is T and the dimension of the output
 
 1. What is the dimension $[c]$?
 
-```{mcq}
-#| label: bss-32ld-1
-#| inline: true
-1. T
-2. L [correct]
-3. T L
-4. T L^-1^
-5. T^-1^ L
-6. Not enough information to tell.
+```{devoirs_choices}
+#| label: choices_bss.32ld.1
+- 'T':
+    correct: false
+- 'L':
+    correct: true
+- 'T L':
+    correct: false
+- 'T L^-1^':
+    correct: false
+- 'T^-1^ L':
+    correct: false
+- 'Not enough information to tell.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bss-32ld-1",
+  question = "Placeholder for now",
+  answers = choices_bss.32ld.1,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. What is the dimension $[b]$?
 
-```{mcq}
-#| label: bss-32ld-2
-#| inline: true
-1. T
-2. L 
-3. T L
-4. T L^-1^
-5. T^-1^ L [correct]
-6. Not enough information to tell.
+```{devoirs_choices}
+#| label: choices_bss.32ld.2
+- 'T':
+    correct: false
+- 'L':
+    correct: false
+- 'T L':
+    correct: false
+- 'T L^-1^':
+    correct: false
+- 'T^-1^ L':
+    correct: true
+- 'Not enough information to tell.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bss-32ld-2",
+  question = "Placeholder for now",
+  answers = choices_bss.32ld.2,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. What is the dimension $[a]$?
 
-```{mcq}
-#| label: bss-32ld-3
-#| inline: true
-1. T
-2. L [correct]
-3. T L
-4. T L^-1^
-5. T^-1^ L
-6. Not enough information to tell.
+```{devoirs_choices}
+#| label: choices_bss.32ld.3
+- 'T':
+    correct: false
+- 'L':
+    correct: true
+- 'T L':
+    correct: false
+- 'T L^-1^':
+    correct: false
+- 'T^-1^ L':
+    correct: false
+- 'Not enough information to tell.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bss-32ld-3",
+  question = "Placeholder for now",
+  answers = choices_bss.32ld.3,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 Is the quadratic formula dimensionally consistent? The following questions address this issue.
 
 4. What is the dimension $[b^2]$
 
-```{mcq}
-#| label: bss-32ld-4
-#| inline: true
-1. T^2^
-2. L^2^ 
-3. T^2^ L^2^
-4. T^2^ L^-2^
-5. T^-2^ L^2^ [correct]
+```{devoirs_choices}
+#| label: choices_bss.32ld.4
+- 'T^2^':
+    correct: false
+- 'L^2^':
+    correct: false
+- 'T^2^ L^2^':
+    correct: false
+- 'T^2^ L^-2^':
+    correct: false
+- 'T^-2^ L^2^':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bss-32ld-4",
+  question = "Placeholder for now",
+  answers = choices_bss.32ld.4,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 5. What is the dimension $[4 a c]$?
 
-```{mcq}
-#| label: bss-32ld-5
-#| inline: true
-1. T^2^
-2. 4 L^2^ 
-3. T^2^ L^2^
-4. 4 T^2^ L^-2^
-5. T^-2^ L^2^ [correct]
-6. 4 T^-2^ L^2^ [hint: 4 is not a dimension.]
+```{devoirs_choices}
+#| label: choices_bss.32ld.5
+- 'T^2^':
+    correct: false
+- '4 L^2^':
+    correct: false
+- 'T^2^ L^2^':
+    correct: false
+- '4 T^2^ L^-2^':
+    correct: false
+- 'T^-2^ L^2^':
+    correct: true
+- '4 T^-2^ L^2^':
+    correct: false
+    feedback: '4 is not a dimension.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bss-32ld-5",
+  question = "Placeholder for now",
+  answers = choices_bss.32ld.5,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 6. What is the dimension $[-b \pm \sqrt{b^2 - 4 a c}]$?
 
-```{mcq}
-#| label: bss-32ld-6
-#| inline: true
-1. T
-2. L 
-3. T L
-4. T L^-1^
-5. T^-1^ L [correct]
+```{devoirs_choices}
+#| label: choices_bss.32ld.6
+- 'T':
+    correct: false
+- 'L':
+    correct: false
+- 'T L':
+    correct: false
+- 'T L^-1^':
+    correct: false
+- 'T^-1^ L':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bss-32ld-6",
+  question = "Placeholder for now",
+  answers = choices_bss.32ld.6,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 7. What is the dimension of the result of the entire quadratic formula?
 
-```{mcq}
-#| label: bss-32ld-7
-#| inline: true
-1. T [correct]
-2. L 
-3. T L
-4. T L^-1^
-5. T^-1^ L 
+```{devoirs_choices}
+#| label: choices_bss.32ld.7
+- 'T':
+    correct: true
+- 'L':
+    correct: false
+- 'T L':
+    correct: false
+- 'T L^-1^':
+    correct: false
+- 'T^-1^ L':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bss-32ld-7",
+  question = "Placeholder for now",
+  answers = choices_bss.32ld.7,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 8. Briefly explain why the answer to (7) makes sense, that is, that the result of the entire quadratic formula has dimension $[x]$ rather than $[y]$ or something else.
 
-`r devoirs::devoirs_text("bss-32ld-8")`
+`r devoirs3::devoirs_text("bss-32ld-8")`
 
 <!-- Opening answer: bss-4OT -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

@@ -4,7 +4,7 @@ created: "Mon Dec  1 09:43:24 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,32 +16,68 @@ Tire pressures for cars and bicycles are frequently denominated in one of three 
 
 1. Which of the three units gives pressures that can be expressed with two or three digits?
 
-```{mcq}
-#| label: ssc-1-cksw
-#| inline: true
-1. psi
-2. bar
-3. pascal
+```{devoirs_choices}
+#| label: choices_ssc.1.cksw
+- 'psi':
+    correct: false
+- 'bar':
+    correct: false
+- 'pascal':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ssc-1-cksw",
+  question = "Placeholder for now",
+  answers = choices_ssc.1.cksw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. Which of the three units uses 3 digits, and even then has to be modified by an order-of-magnitude prefix?
 
-```{mcq}
-#| label: ssc-2-gdiw
-#| inline: true
-1. psi
-2. bar
-3. pascal [correct]
+```{devoirs_choices}
+#| label: choices_ssc.2.gdiw
+- 'psi':
+    correct: false
+- 'bar':
+    correct: false
+- 'pascal':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ssc-2-gdiw",
+  question = "Placeholder for now",
+  answers = choices_ssc.2.gdiw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. Which of the three units requires a decimal point to denominate car tire pressures to a suitable precision of $\pm$ 10%?
 
-```{mcq}
-#| label: ssc-3-edke
-#| inline: true
-1. psi
-2. bar  [correct]
-3. pascal
+```{devoirs_choices}
+#| label: choices_ssc.3.edke
+- 'psi':
+    correct: false
+- 'bar':
+    correct: true
+- 'pascal':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ssc-3-edke",
+  question = "Placeholder for now",
+  answers = choices_ssc.3.edke,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

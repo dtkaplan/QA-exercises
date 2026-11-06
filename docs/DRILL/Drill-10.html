@@ -80,6 +80,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,35 +110,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -171,125 +144,430 @@ window.Quarto = {
 </header>
 
 
-<p><span id="devoirs-docID" style="display: none;">Drill-10.rmarkdown</span> <span><button onclick="devoirsSubmit()">Collect your answers</button></span> <span id="devoirs_summary">No answers yet collected</span></p>
-<div class="cell">
-<div class="cell-output-display">
-<script type="text/javascript">
- console.log("In devoirs.js")
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-function devoirsCollectEssays() {
-  var essay_answers = [];
-  var items = document.getElementsByClassName("devoirs-text");
-  for (i = 0; i < items.length; i++) {
-    //console.log("text entry" + i + "being handled");
-    essay_answers[i] = {itemid: items[i].id, contents: items[i].value}
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
   }
 
-  return essay_answers;
-}
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
 
-function devoirsGetDocID() {
-  return document.getElementById("devoirs-docID").innerHTML
-}
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
 
-function devoirsCollectMC() {
-    let mc_answers = [] // Hold the information
-    var ele = document.getElementsByClassName("devoirs-mcq");
-    var count = 0;
-    for (i = 0; i < ele.length; i++) {
-        if (ele[i].checked) {
-          //console.log("Entering conditional.");
-          let checked_one = ele[i];
-          mc_answers[count++] = {itemid: checked_one.id, w: checked_one.getAttribute("w"), contents: checked_one.text};
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
         }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
     }
-    return mc_answers;
-}
 
-console.log("About to define WebR")
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
 
-function devoirsCollectWebR() {
-  var chunk_contents = []; // placeholder for collecting webr items
-  if (typeof qwebrCellDetails == "undefined") {
-    // There aren't any webr chunks
-    return chunk_contents;
-  }
-  var chunks = qwebrCellDetails;
-  for (i = 0; i < chunks.length; i++) {
-    chunk_contents[i] = {itemid: chunks[i].options["label"], contents: chunks[i].code};
-  }
-
-  return chunk_contents;
-}
-
-console.log("About to define devoirsSubmit")
-
-function devoirsSubmit() {
-  console.log("About to collect history")
-
-  // check if there is any sign of a webr entry
-  // If not, don't try to collect webr entries
-  if (typeof qwebrRCommandHistory === 'undefined') {
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays(), WebR: {}, R: {}}
-  } else {
-    console.log("Getting R commands.")
-    var Rhistory = qwebrRCommandHistory.map((x) => x.replace(/Ran code in (.*) at (.*[AP]M).{5}(.*)/, "[chunk: $1, time: $2, code: $3]"))
-
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays()} //, WebR: devoirsCollectWebR(), R: Rhistory}
+    document.body.prepend(toolbar);
   }
 
-  navigator.clipboard.writeText(JSON.stringify(items));
-
-  // summarize what's being collected
-  var my_summary = "Answers copied to clipboard. Fixed choice: " + items.MC.length + " Essays: " + items.Essays.length + " WebR chunks: " + items.WebR.length
-
-  document.getElementById("devoirs_summary").innerHTML = my_summary;
-}
-
-console.log("Read devoirsSubmit()")
-
-// Hint handling in Multiple choice
-
-// Still have to add an on/off switch from options
-
-function devoirs_setup_hintarea() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) answers[i].addEventListener('click', function(e){document.getElementById(e.target.name + "-hintarea").innerHTML = e.target.getAttribute("hint")})
-}
-
- window.addEventListener("load", function() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) {
-    if (answers[i].getAttribute("show_hints") == "TRUE") {
-        answers[i].addEventListener('click', function(e){
-          console.log("inserting hint")
-        document.getElementById(e.target.name + "-hintarea").innerText = e.target.getAttribute("hint")
-      })
-
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
     }
   }
-})
 
-console.log("Added hint summary.") 
-</script>
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
 
-</div>
-</div>
-<script type="text/javascript">
-      // clear the local storage
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('btnClearStorage');
-      form.addEventListener("click", function () {
-        localStorage.clear();
-        location.reload();
-        console.log("Clearing memory");
-      }, false);
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
     }
-    )
-    </script>
-<button id="btnClearStorage">
-Clear memory
-</button>
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -307,7 +585,7 @@ id: "sister-dive-oven"
 created: "Thu Oct 22 18:47:23 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 10
 
 -->
@@ -322,7 +600,7 @@ chapter: 10
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Drill-10_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Drill-10_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -330,106 +608,16 @@ chapter: 10
 <ol type="i">
 <li>Which of the following choices are closest to the <em>argmin</em> of the function displayed in the graph?</li>
 </ol>
-<span> <small style="color: grey;" id="D10-sdo-argmin-hintarea" class="hintarea">D10-sdo-argmin</small>
-<form id="D10-sdo-argmin-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-6" id="D10-sdo-argmin-1" w="7" name="D10-sdo-argmin" hint="This is wide of the mark." show_hints="TRUE"> -6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.5" id="D10-sdo-argmin-2" w="87" name="D10-sdo-argmin" hint="Not on target." show_hints="TRUE"> 0.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3" id="D10-sdo-argmin-3" w="35" name="D10-sdo-argmin" hint="Correct." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="8" id="D10-sdo-argmin-4" w="19" name="D10-sdo-argmin" hint="Think again." show_hints="TRUE"> 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-sdo-argmin" id="D10-sdo-argmin.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-sdo-argmin.');
-      const form = document.getElementById('D10-sdo-argmin-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-sdo-argmin-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-sdo-argmin.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-sdo-argmin.");
-          localStorage.setItem('D10-sdo-argmin-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-sdo-argmin" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d696e" id="devoirs3-selection-4431302d73646f2d6172676d696e-1" value="AAootbk" data-devoirs3-option="" data-option-id="AAootbk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d696e" id="devoirs3-selection-4431302d73646f2d6172676d696e-2" value="BAzchxj" data-devoirs3-option="" data-option-id="BAzchxj" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d696e" id="devoirs3-selection-4431302d73646f2d6172676d696e-3" value="CAiizec" data-devoirs3-option="" data-option-id="CAiizec" data-feedback="Correct!" data-feedback-html="Correct!"> <span>3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d696e" id="devoirs3-selection-4431302d73646f2d6172676d696e-4" value="DAyalpo" data-devoirs3-option="" data-option-id="DAyalpo" data-feedback="Sorry." data-feedback-html="Sorry."> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-sdo-argmin</span> </span></p>
 <ol start="2" type="i">
 <li>Which is closest to the <em>maximum</em> of the function?</li>
 </ol>
-<span> <small style="color: grey;" id="D10-sdo-max-hintarea" class="hintarea">D10-sdo-max</small>
-<form id="D10-sdo-max-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-6" id="D10-sdo-max-1" w="3" name="D10-sdo-max" hint="Nope." show_hints="TRUE"> -6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.5" id="D10-sdo-max-2" w="19" name="D10-sdo-max" hint="You're wrong here." show_hints="TRUE"> 0.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3" id="D10-sdo-max-3" w="19" name="D10-sdo-max" hint="Oops!" show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="8" id="D10-sdo-max-4" w="16" name="D10-sdo-max" hint="Excellent!" show_hints="TRUE"> 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-sdo-max" id="D10-sdo-max.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-sdo-max.');
-      const form = document.getElementById('D10-sdo-max-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-sdo-max-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-sdo-max.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-sdo-max.");
-          localStorage.setItem('D10-sdo-max-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-sdo-max" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6d6178" id="devoirs3-selection-4431302d73646f2d6d6178-1" value="AAigehy" data-devoirs3-option="" data-option-id="AAigehy" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6d6178" id="devoirs3-selection-4431302d73646f2d6d6178-2" value="BAjhdch" data-devoirs3-option="" data-option-id="BAjhdch" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6d6178" id="devoirs3-selection-4431302d73646f2d6d6178-3" value="CAyxqnb" data-devoirs3-option="" data-option-id="CAyxqnb" data-feedback="Sorry." data-feedback-html="Sorry."> <span>3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6d6178" id="devoirs3-selection-4431302d73646f2d6d6178-4" value="DAreqnv" data-devoirs3-option="" data-option-id="DAreqnv" data-feedback="Correct!" data-feedback-html="Correct!"> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-sdo-max</span> </span></p>
 <ol start="3" type="i">
 <li>Which is closest to the <em>argmax</em> of the function?</li>
 </ol>
-<span> <small style="color: grey;" id="D10-sdo-argmax-hintarea" class="hintarea">D10-sdo-argmax</small>
-<form id="D10-sdo-argmax-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-6" id="D10-sdo-argmax-1" w="87" name="D10-sdo-argmax" hint="Not quite." show_hints="TRUE"> -6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.5" id="D10-sdo-argmax-2" w="14" name="D10-sdo-argmax" hint="Bullseye!" show_hints="TRUE"> 0.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3" id="D10-sdo-argmax-3" w="23" name="D10-sdo-argmax" hint="Not quite." show_hints="TRUE"> 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="8" id="D10-sdo-argmax-4" w="7" name="D10-sdo-argmax" hint="Try again!" show_hints="TRUE"> 8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-sdo-argmax" id="D10-sdo-argmax.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-sdo-argmax.');
-      const form = document.getElementById('D10-sdo-argmax-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-sdo-argmax-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-sdo-argmax.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-sdo-argmax.");
-          localStorage.setItem('D10-sdo-argmax-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></span></span></div>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-sdo-argmax" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d6178" id="devoirs3-selection-4431302d73646f2d6172676d6178-1" value="AAyfomu" data-devoirs3-option="" data-option-id="AAyfomu" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d6178" id="devoirs3-selection-4431302d73646f2d6172676d6178-2" value="BAfiuza" data-devoirs3-option="" data-option-id="BAfiuza" data-feedback="Correct!" data-feedback-html="Correct!"> <span>0.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d6178" id="devoirs3-selection-4431302d73646f2d6172676d6178-3" value="CAqrhpw" data-devoirs3-option="" data-option-id="CAqrhpw" data-feedback="Sorry." data-feedback-html="Sorry."> <span>3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-4431302d73646f2d6172676d6178" id="devoirs3-selection-4431302d73646f2d6172676d6178-4" value="DAdclsf" data-devoirs3-option="" data-option-id="DAdclsf" data-feedback="Sorry." data-feedback-html="Sorry."> <span>8</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-sdo-argmax</span> </span></p>
+</div>
 <p><!-- end of exr-sister-dive-oven --></p>
 <section id="section-1" class="level2">
 <h2 class="anchored" data-anchor-id="section-1">2.</h2>
@@ -438,7 +626,7 @@ id: "giraffe-blow-chair"
 created: "Thu Oct 22 18:58:03 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 10
 
 -->
@@ -453,7 +641,7 @@ chapter: 10
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Drill-10_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Drill-10_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -461,111 +649,102 @@ chapter: 10
 <ol type="i">
 <li>Which of the following is closest to the <em>minimum</em> of the function?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-gbc-1-hintarea" class="hintarea">D10-gbc-1</small>
-<form id="D10-gbc-1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="$(u = 1, w = 1)$" id="D10-gbc-1-1" w="87" name="D10-gbc-1" hint="You might think so, but ..." show_hints="TRUE"> <span class="math inline">\((u = 1, w = 1)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="12" id="D10-gbc-1-2" w="32" name="D10-gbc-1" hint="Hmmm ..." show_hints="TRUE"> 12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-3" id="D10-gbc-1-3" w="18" name="D10-gbc-1" hint="You've got it!" show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$(u=-1.5,  ... w = 0.75)$" id="D10-gbc-1-4" w="19" name="D10-gbc-1" hint="Oops!" show_hints="TRUE"> <span class="math inline">\((u=-1.5, w = 0.75)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$(u=1, w = 3.5)$" id="D10-gbc-1-5" w="87" name="D10-gbc-1" hint="This is wide of the mark." show_hints="TRUE"> <span class="math inline">\((u=1, w = 3.5)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-gbc-1" id="D10-gbc-1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-gbc-1.');
-      const form = document.getElementById('D10-gbc-1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-gbc-1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-gbc-1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-gbc-1.");
-          localStorage.setItem('D10-gbc-1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-gbc-1" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d31" id="devoirs3-selection-4431302d6762632d31-1" value="AAuzdwa" data-devoirs3-option="" data-option-id="AAuzdwa" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((u = 1, w = 1)\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d31" id="devoirs3-selection-4431302d6762632d31-2" value="BAeuxbv" data-devoirs3-option="" data-option-id="BAeuxbv" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>12</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d31" id="devoirs3-selection-4431302d6762632d31-3" value="CAoirin" data-devoirs3-option="" data-option-id="CAoirin" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>-3</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d31" id="devoirs3-selection-4431302d6762632d31-4" value="DAvgpao" data-devoirs3-option="" data-option-id="DAvgpao" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((u=-1.5, w = 0.75)\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d31" id="devoirs3-selection-4431302d6762632d31-5" value="EAnweus" data-devoirs3-option="" data-option-id="EAnweus" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((u=1, w = 3.5)\)</span></span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-gbc-1</span>
+</span>
+</div>
+</div>
 <ol start="2" type="i">
 <li>Which of the following is closest to the <em>argmax</em> of the function?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-gbc-2-hintarea" class="hintarea">D10-gbc-2</small>
-<form id="D10-gbc-2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="$(u = 1, w = 1)$" id="D10-gbc-2-1" w="3" name="D10-gbc-2" hint="You might think so, but ..." show_hints="TRUE"> <span class="math inline">\((u = 1, w = 1)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="12" id="D10-gbc-2-2" w="87" name="D10-gbc-2" hint="Sorry!" show_hints="TRUE"> 12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-3 " id="D10-gbc-2-3" w="87" name="D10-gbc-2" hint="No." show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$(u=-1.5,  ... w = 0.75)$" id="D10-gbc-2-4" w="8" name="D10-gbc-2" hint="Certainly." show_hints="TRUE"> <span class="math inline">\((u=-1.5, w = 0.75)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$(u=1, w = 3.5)$" id="D10-gbc-2-5" w="32" name="D10-gbc-2" hint="Sorry!" show_hints="TRUE"> <span class="math inline">\((u=1, w = 3.5)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-gbc-2" id="D10-gbc-2.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-gbc-2.');
-      const form = document.getElementById('D10-gbc-2-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-gbc-2-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-gbc-2.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-gbc-2.");
-          localStorage.setItem('D10-gbc-2-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-gbc-2" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d32" id="devoirs3-selection-4431302d6762632d32-1" value="AAaevvm" data-devoirs3-option="" data-option-id="AAaevvm" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((u = 1, w = 1)\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d32" id="devoirs3-selection-4431302d6762632d32-2" value="BAovvhe" data-devoirs3-option="" data-option-id="BAovvhe" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>12</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d32" id="devoirs3-selection-4431302d6762632d32-3" value="CAzvjgx" data-devoirs3-option="" data-option-id="CAzvjgx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>-3</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d32" id="devoirs3-selection-4431302d6762632d32-4" value="DAmjeia" data-devoirs3-option="" data-option-id="DAmjeia" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><span class="math inline">\((u=-1.5, w = 0.75)\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d32" id="devoirs3-selection-4431302d6762632d32-5" value="EAxckcp" data-devoirs3-option="" data-option-id="EAxckcp" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((u=1, w = 3.5)\)</span></span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-gbc-2</span>
+</span>
+</div>
+</div>
 <ol start="3" type="i">
 <li>Which of the following is closest to the <em>argmin</em> of the function?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-gbc-3-hintarea" class="hintarea">D10-gbc-3</small>
-<form id="D10-gbc-3-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="$(u = 1, w = 1)$" id="D10-gbc-3-1" w="29" name="D10-gbc-3" hint="Bullseye!" show_hints="TRUE"> <span class="math inline">\((u = 1, w = 1)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="12" id="D10-gbc-3-2" w="19" name="D10-gbc-3" hint="Not so!" show_hints="TRUE"> 12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="-3 " id="D10-gbc-3-3" w="19" name="D10-gbc-3" hint="Not on target." show_hints="TRUE"> -3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$(u=-1.5,  ...  = 0.75)$ " id="D10-gbc-3-4" w="32" name="D10-gbc-3" hint="Boo!" show_hints="TRUE"> <span class="math inline">\((u=-1.5, w = 0.75)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$(u=1, w = 3.5)$" id="D10-gbc-3-5" w="7" name="D10-gbc-3" hint="You're wrong here." show_hints="TRUE"> <span class="math inline">\((u=1, w = 3.5)\)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-gbc-3" id="D10-gbc-3.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-gbc-3.');
-      const form = document.getElementById('D10-gbc-3-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-gbc-3-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-gbc-3.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-gbc-3.");
-          localStorage.setItem('D10-gbc-3-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-gbc-3" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d33" id="devoirs3-selection-4431302d6762632d33-1" value="AAeewem" data-devoirs3-option="" data-option-id="AAeewem" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><span class="math inline">\((u = 1, w = 1)\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d33" id="devoirs3-selection-4431302d6762632d33-2" value="BAdrvdy" data-devoirs3-option="" data-option-id="BAdrvdy" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>12</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d33" id="devoirs3-selection-4431302d6762632d33-3" value="CAmjswy" data-devoirs3-option="" data-option-id="CAmjswy" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>-3</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d33" id="devoirs3-selection-4431302d6762632d33-4" value="DAookxn" data-devoirs3-option="" data-option-id="DAookxn" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((u=-1.5, w = 0.75)\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d6762632d33" id="devoirs3-selection-4431302d6762632d33-5" value="EAmrxsb" data-devoirs3-option="" data-option-id="EAmrxsb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((u=1, w = 3.5)\)</span></span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-gbc-3</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-giraffe-blow-chair --></p>
 </section>
@@ -576,7 +755,7 @@ id: "octopus-iron-kayak"
 created: "Fri Oct 23 10:46:13 2026"
 attribution: DTK
 mode: drill
-status: ready-to-go
+status: ready-to-use
 chapter: 10
 
 -->
@@ -604,7 +783,7 @@ chapter: 10
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Drill-10_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Drill-10_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -612,220 +791,174 @@ chapter: 10
 <ol type="i">
 <li>Which temperature gives the highest profit?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-OIK-i-hintarea" class="hintarea">D10-OIK-i</small>
-<form id="D10-OIK-i-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="17.5 million$" id="D10-OIK-i-1" w="19" name="D10-OIK-i" hint="That is not a temperature!" show_hints="TRUE"> 17.5 million$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="400 C" id="D10-OIK-i-2" w="3" name="D10-OIK-i" hint="Try again! A higher temperature might be better" show_hints="TRUE"> 400 C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="900 C" id="D10-OIK-i-3" w="5" name="D10-OIK-i" hint="Right-O!" show_hints="TRUE"> 900 C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1200 C" id="D10-OIK-i-4" w="19" name="D10-OIK-i" hint="Sorry. Would a somewhat lower temperature be better" show_hints="TRUE"> 1200 C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-OIK-i" id="D10-OIK-i.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-OIK-i.');
-      const form = document.getElementById('D10-OIK-i-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-OIK-i-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-OIK-i.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-OIK-i.");
-          localStorage.setItem('D10-OIK-i-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-OIK-i" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d69" id="devoirs3-selection-4431302d4f494b2d69-1" value="AAhmlhq" data-devoirs3-option="" data-option-id="AAhmlhq" data-feedback="That is not a temperature!" data-feedback-html="That is not a temperature!">
+    <span>17.5 million$</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d69" id="devoirs3-selection-4431302d4f494b2d69-2" value="BAxeqfo" data-devoirs3-option="" data-option-id="BAxeqfo" data-feedback="Try again! A higher temperature might be better" data-feedback-html="Try again! A higher temperature might be better">
+    <span>400 C</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d69" id="devoirs3-selection-4431302d4f494b2d69-3" value="CAqanpl" data-devoirs3-option="" data-option-id="CAqanpl" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>900 C</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d69" id="devoirs3-selection-4431302d4f494b2d69-4" value="DAnftau" data-devoirs3-option="" data-option-id="DAnftau" data-feedback="Sorry. Would a somewhat lower temperature be better" data-feedback-html="Sorry. Would a somewhat lower temperature be better">
+    <span>1200 C</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-OIK-i</span>
+</span>
+</div>
+</div>
 <ol start="2" type="i">
 <li>What is the technical name for that highest-profit temperature?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-OIK-ii-hintarea" class="hintarea">D10-OIK-ii</small>
-<form id="D10-OIK-ii-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="Max temperature" id="D10-OIK-ii-1" w="32" name="D10-OIK-ii" hint="Oops!" show_hints="TRUE"> Max temperature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Argmin for profit" id="D10-OIK-ii-2" w="32" name="D10-OIK-ii" hint="Try again!" show_hints="TRUE"> Argmin for profit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Argmax for ...  pollution" id="D10-OIK-ii-3" w="7" name="D10-OIK-ii" hint="You're wrong here." show_hints="TRUE"> Argmax for pollution &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Argmax for profit" id="D10-OIK-ii-4" w="18" name="D10-OIK-ii" hint="Right!" show_hints="TRUE"> Argmax for profit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-OIK-ii" id="D10-OIK-ii.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-OIK-ii.');
-      const form = document.getElementById('D10-OIK-ii-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-OIK-ii-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-OIK-ii.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-OIK-ii.");
-          localStorage.setItem('D10-OIK-ii-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-OIK-ii" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6969" id="devoirs3-selection-4431302d4f494b2d6969-1" value="AAyoudb" data-devoirs3-option="" data-option-id="AAyoudb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Max temperature</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6969" id="devoirs3-selection-4431302d4f494b2d6969-2" value="BAixxma" data-devoirs3-option="" data-option-id="BAixxma" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Argmin for profit</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6969" id="devoirs3-selection-4431302d4f494b2d6969-3" value="CAosvav" data-devoirs3-option="" data-option-id="CAosvav" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Argmax for pollution</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6969" id="devoirs3-selection-4431302d4f494b2d6969-4" value="DAsdzej" data-devoirs3-option="" data-option-id="DAsdzej" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Argmax for profit</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-OIK-ii</span>
+</span>
+</div>
+</div>
 <ol start="3" type="i">
 <li>What is the technical name for the highest profit?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-OIK-iii-hintarea" class="hintarea">D10-OIK-iii</small>
-<form id="D10-OIK-iii-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="Max profit" id="D10-OIK-iii-1" w="18" name="D10-OIK-iii" hint="Correct." show_hints="TRUE"> Max profit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Argmax for profit" id="D10-OIK-iii-2" w="3" name="D10-OIK-iii" hint="Boo!" show_hints="TRUE"> Argmax for profit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Argmin for profit" id="D10-OIK-iii-3" w="3" name="D10-OIK-iii" hint="Wrong." show_hints="TRUE"> Argmin for profit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Max temperature" id="D10-OIK-iii-4" w="87" name="D10-OIK-iii" hint="Try again!" show_hints="TRUE"> Max temperature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-OIK-iii" id="D10-OIK-iii.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-OIK-iii.');
-      const form = document.getElementById('D10-OIK-iii-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-OIK-iii-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-OIK-iii.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-OIK-iii.");
-          localStorage.setItem('D10-OIK-iii-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-OIK-iii" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d696969" id="devoirs3-selection-4431302d4f494b2d696969-1" value="AAntifj" data-devoirs3-option="" data-option-id="AAntifj" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Max profit</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d696969" id="devoirs3-selection-4431302d4f494b2d696969-2" value="BAyeadh" data-devoirs3-option="" data-option-id="BAyeadh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Argmax for profit</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d696969" id="devoirs3-selection-4431302d4f494b2d696969-3" value="CAhnwpw" data-devoirs3-option="" data-option-id="CAhnwpw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Argmin for profit</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d696969" id="devoirs3-selection-4431302d4f494b2d696969-4" value="DAbliuq" data-devoirs3-option="" data-option-id="DAbliuq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Max temperature</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-OIK-iii</span>
+</span>
+</div>
+</div>
 <ol start="4" type="i">
 <li>What is the level of pollution when the profit is maximized? (Pick the closest.)</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-OIK-iv-hintarea" class="hintarea">D10-OIK-iv</small>
-<form id="D10-OIK-iv-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="9.5 million $" id="D10-OIK-iv-1" w="7" name="D10-OIK-iv" hint="Sorry, but that's not a level of pollution." show_hints="TRUE"> 9.5 million $ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="17.5 million $" id="D10-OIK-iv-2" w="87" name="D10-OIK-iv" hint="Sorry, but that's not a level of pollution." show_hints="TRUE"> 17.5 million $ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="700 tons" id="D10-OIK-iv-3" w="18" name="D10-OIK-iv" hint="Exactly." show_hints="TRUE"> 700 tons &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1100 tons" id="D10-OIK-iv-4" w="3" name="D10-OIK-iv" hint="That's the maximum pollution on the graph, not the pollution at the argmax for profit." show_hints="TRUE"> 1100 tons &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-OIK-iv" id="D10-OIK-iv.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-OIK-iv.');
-      const form = document.getElementById('D10-OIK-iv-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-OIK-iv-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-OIK-iv.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-OIK-iv.");
-          localStorage.setItem('D10-OIK-iv-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-OIK-iv" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6976" id="devoirs3-selection-4431302d4f494b2d6976-1" value="AAmuriq" data-devoirs3-option="" data-option-id="AAmuriq" data-feedback="Sorry, but that's not a level of pollution." data-feedback-html="Sorry, but that’s not a level of pollution.">
+    <span>9.5 million $</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6976" id="devoirs3-selection-4431302d4f494b2d6976-2" value="BAusjwo" data-devoirs3-option="" data-option-id="BAusjwo" data-feedback="Sorry, but that's not a level of pollution." data-feedback-html="Sorry, but that’s not a level of pollution.">
+    <span>17.5 million $</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6976" id="devoirs3-selection-4431302d4f494b2d6976-3" value="CAkinaa" data-devoirs3-option="" data-option-id="CAkinaa" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>700 tons</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d6976" id="devoirs3-selection-4431302d4f494b2d6976-4" value="DAkhwcd" data-devoirs3-option="" data-option-id="DAkhwcd" data-feedback="That's the maximum pollution on the graph, not the pollution at the argmax for profit." data-feedback-html="That’s the maximum pollution on the graph, not the pollution at the argmax for profit.">
+    <span>1100 tons</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-OIK-iv</span>
+</span>
+</div>
+</div>
 <ol start="22" type="a">
 <li>If the only concern were profit, the factory would operate at 900 C. By operating at a somewhat lower temperature, say 700 C, the profit would be reduced but pollution would also be lower.</li>
 </ol>
 <p>The change in profit moving from 900 C to 700 C is about negative $6 million. What’s the change in pollution when for the move from 900 C to 700 C?</p>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-OIK-v-hintarea" class="hintarea">D10-OIK-v</small>
-<form id="D10-OIK-v-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="400 tons" id="D10-OIK-v-1" w="16" name="D10-OIK-v" hint="Right." show_hints="TRUE"> 400 tons &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="700 tons" id="D10-OIK-v-2" w="7" name="D10-OIK-v" hint="Not quite." show_hints="TRUE"> 700 tons &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1100 tons" id="D10-OIK-v-3" w="87" name="D10-OIK-v" hint="Sorry!" show_hints="TRUE"> 1100 tons &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-OIK-v" id="D10-OIK-v.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-OIK-v.');
-      const form = document.getElementById('D10-OIK-v-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-OIK-v-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-OIK-v.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-OIK-v.");
-          localStorage.setItem('D10-OIK-v-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-OIK-v" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d76" id="devoirs3-selection-4431302d4f494b2d76-1" value="AAxxelr" data-devoirs3-option="" data-option-id="AAxxelr" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>400 tons</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d76" id="devoirs3-selection-4431302d4f494b2d76-2" value="BAfmjjs" data-devoirs3-option="" data-option-id="BAfmjjs" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>700 tons</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d76" id="devoirs3-selection-4431302d4f494b2d76-3" value="CAlxytd" data-devoirs3-option="" data-option-id="CAlxytd" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1100 tons</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-OIK-v</span>
+</span>
+</div>
+</div>
 <ol start="6" type="i">
 <li>Moving from 900 C to 700 C effectively pays $6 million for a pollution reduction of 400 tons. What’s the <em>shadow price</em> for lowering pollution?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="D10-OIK-vi-hintarea" class="hintarea">D10-OIK-vi</small>
-<form id="D10-OIK-vi-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="$15,000 per ton" id="D10-OIK-vi-1" w="14" name="D10-OIK-vi" hint="Bullseye!" show_hints="TRUE"> $15,000 per ton &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$6 million per ton" id="D10-OIK-vi-2" w="87" name="D10-OIK-vi" hint="Nope." show_hints="TRUE"> $6 million per ton &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="$6 million" id="D10-OIK-vi-3" w="3" name="D10-OIK-vi" hint="You're wrong here." show_hints="TRUE"> $6 million &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="6 million  ... er dollar." id="D10-OIK-vi-4" w="23" name="D10-OIK-vi" hint="Better luck next time." show_hints="TRUE"> 6 million tons per dollar. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="D10-OIK-vi" id="D10-OIK-vi.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for D10-OIK-vi.');
-      const form = document.getElementById('D10-OIK-vi-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('D10-OIK-vi-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for D10-OIK-vi.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for D10-OIK-vi.");
-          localStorage.setItem('D10-OIK-vi-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-10" data-label="D10-OIK-vi" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d7669" id="devoirs3-selection-4431302d4f494b2d7669-1" value="AAioakc" data-devoirs3-option="" data-option-id="AAioakc" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>$15,000 per ton</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d7669" id="devoirs3-selection-4431302d4f494b2d7669-2" value="BAbslcx" data-devoirs3-option="" data-option-id="BAbslcx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>$6 million per ton</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d7669" id="devoirs3-selection-4431302d4f494b2d7669-3" value="CAwmqqk" data-devoirs3-option="" data-option-id="CAwmqqk" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>$6 million</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-4431302d4f494b2d7669" id="devoirs3-selection-4431302d4f494b2d7669-4" value="DAcbeka" data-devoirs3-option="" data-option-id="DAcbeka" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>6 million tons per dollar.</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D10-OIK-vi</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-octopus-iron-kayak --></p>
 </section>
@@ -834,6 +967,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

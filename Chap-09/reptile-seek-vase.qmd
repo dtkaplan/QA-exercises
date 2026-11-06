@@ -25,29 +25,43 @@ For the function plotted just above ...
 
 1. What is the output spacing between adjacent contours?
 
-`r devoirs::devoirs_set(choices = "D-09-gab", correct = 2, id = "cp-space-3kws")`
+`r devoirs3::devoirs_set3(choices = "D-09-gab", correct = 2, label = "cp-space-3kws")`
 
 2. What is the output spacing between adjacent **labelled** contours?
 
-`r devoirs::devoirs_set(choices = "D-09-zed", correct = 4, id = "cp-labels-ekx")`
+`r devoirs3::devoirs_set3(choices = "D-09-zed", correct = 4, label = "cp-labels-ekx")`
 
 
 3. What is the minimum possible value for the function output on the input space shown. (Pick the closest answer.)
 
-`r devoirs::devoirs_set(choices = "D-09-laid", correct = -3, id = "cp-min-3kws")`
+`r devoirs3::devoirs_set3(choices = "D-09-laid", correct = -3, label = "cp-min-3kws")`
 
 4. What is the maximum possible value for the function output in the input space shown. (Pick the closest answer.)
 
-`r devoirs::devoirs_set(choices = "D-09-gale", correct = 13.5, id = "cp-max-34s")`
+`r devoirs3::devoirs_set3(choices = "D-09-gale", correct = 13.5, label = "cp-max-34s")`
 
 5. Consider an input close to x = -3, z = 0, on the left side of the input space. Which of these is the best statement about the possible output for that input?
 
-```{mcq}
-#| label: cp-sure-382
-1. The output is less than 2.
-2. The output is greater than 2.
-3. The output is greater than 2 and less than 3.
-4. The output is greater than 2 and less than 4. [correct]
+```{devoirs_choices}
+#| label: choices_cp.sure.382
+- 'The output is less than 2.':
+    correct: false
+- 'The output is greater than 2.':
+    correct: false
+- 'The output is greater than 2 and less than 3.':
+    correct: false
+- 'The output is greater than 2 and less than 4.':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cp-sure-382",
+  question = "Placeholder for now",
+  answers = choices_cp.sure.382,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

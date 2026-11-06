@@ -14,18 +14,18 @@ group: dimensions
 ::: {#exr-jellyfish-open-spoon}
 Using the broad sense of "dimension" introduced in this chapter, write down 10 familiar dimensions of an automobile. Remember that "dimension" covers not just spatial extent but also other properties of the car.
 
-`r devoirs::devoirs_text("jos-car-8dkw")`
+`r devoirs3::devoirs_text("jos-car-8dkw")`
 
 Do the same for these other familiar objects:  
 
 - A chair
-`r devoirs::devoirs_text("jos-chair-8dkw")`
+`r devoirs3::devoirs_text("jos-chair-8dkw")`
 
 - A computer
-`r devoirs::devoirs_text("jos-computer-8dkw")`
+`r devoirs3::devoirs_text("jos-computer-8dkw")`
 
 - A flowering plant
-`r devoirs::devoirs_text("jos-flowering-plant-8dkw")`
+`r devoirs3::devoirs_text("jos-flowering-plant-8dkw")`
 
 
 :::

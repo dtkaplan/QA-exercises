@@ -1,0 +1,52 @@
+<!--
+id: "sister-freeze-map"
+created: "Sun Oct 26 06:43:09 2025"
+attribution: TBA
+status: "draft"
+chapter: 8
+mode: "outline"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-sister-freeze-map}
+
+{>>Should we change this to multiple-choice answers?<<}
+
+In `r xf("sec-relative-probability")` we looked at the problem of calculating the number of Cals used on a walk, when the uncertainty in the walk length is [3 to 4] miles, and the uncertainty in Cals-per-mile is [60 to 100].
+
+In the chunk that follows, a *simulation* has been constructed that generates normally distributed random numbers based on the intervals for walk length and Cals-per-mile. 
+
+Then, the simulation is run for 5000 iterations. There will be 5000 rows in the resulting data frame, one row for each iteration. There will be three variables, the randomly generated walk length and cals per mile as well as the total Calories calculated by multiplying the two random quantities. The 5000-row output from the simulation is then passed to a statistics function which calculates the lower and upper bounds of the 95% interval.
+
+
+```{webr}
+#| caption: Simulation for arithmetic on intervals
+sim1 <- datasim_make(
+  walk_length <- rnorm(n, mean = 3.5, sd = 0.25),
+  cals_per_mile <- rnorm(n, mean = 80, sd = 10),
+  total_cals <- walk_length * cals_per_mile
+)
+sim1 |>
+  datasim_run(n = 5000) |>
+  df_stats(~ total_cals, lower = quantile(0.025), upper = quantile(0.975))
+```
+
+The intervals are given as [3 to 4] and [60 to 80], but the simulation is run using random number generators that take the *mean* and *standard deviation* as their parameter values.
+
+1. Explain how the parameters used in generating `walk_length` and `cals_per_mile` correspond to the two intervals.
+
+`r devoirs::devoirs_text("sfm-intervals")`
+
+2. Modify the code to find the uncertainty distribution of the product [-3 to 5]$\times$[-10 to 2]. What is the resulting interval? Does it include zero?
+
+`r devoirs::devoirs_text("sfm-intervals2")`
+
+3. Modify the code once again to find the uncertainty distribution of the ratio [-1 to 1] divided by [-1 to 1]. What is the resulting interval and why is it so much bigger than [-1 to 1]? (Hint: If the interval you calculate is about [-1 to 1], you probably used multiplication rather than division in your calculations.)
+
+`r devoirs::devoirs_text("sfm-intervals3")`
+
+:::
+ <!-- end of exr-sister-freeze-map -->

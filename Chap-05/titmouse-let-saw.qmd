@@ -53,15 +53,15 @@ Child mortality (deaths per 1000) versus GDP for 1960 and 2020. Source: Bolt and
 
 1. Find two countries (in the same year) that have almost the same GDP but very different mortality rates.
 
-`r devoirs::devoirs_text("tls-23-1")`
+`r devoirs3::devoirs_text("tls-23-1")`
 
 2. Find two countries (in the same year) that have almost the same mortality, but very different GDPs.
 
-`r devoirs::devoirs_text("tls-23-2")`
+`r devoirs3::devoirs_text("tls-23-2")`
 
 3. Describe the overall relationship between GDP and child mortality, as best you can discern from these data.
 
-`r devoirs::devoirs_text("tls-23-3")`
+`r devoirs3::devoirs_text("tls-23-3")`
 
 
 :::

@@ -4,7 +4,7 @@ created: "Wed Oct  8 10:51:05 2025"
 attribution: TBA
 status: "draft"
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -34,54 +34,125 @@ FtoK( 98.6)
 
 1. What is the change in C when F increases by 10 degrees?
 
-```{mcq}
-#| label: dfs-1-is4
-#| inline: true
-1.  0.556 degrees
-2.  5.56 degrees C [correct]
-3. -5.56 degrees C
-4.  5.56 degrees F
+```{devoirs_choices}
+#| label: choices_dfs.1.is4
+- '0.556 degrees':
+    correct: false
+- '5.56 degrees C':
+    correct: true
+- '-5.56 degrees C':
+    correct: false
+- '5.56 degrees F':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dfs-1-is4",
+  question = "Placeholder for now",
+  answers = choices_dfs.1.is4,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. What is the rate of change of C with respect to F?
 
-```{mcq}
-#| label: dfs-2-krod
-1.  0.556 degrees C
-2.  1.8 degrees C
-3. 0.556 degrees C / degrees F [correct]
-4. 1.8 degrees C / degrees F
+```{devoirs_choices}
+#| label: choices_dfs.2.krod
+- '0.556 degrees C':
+    correct: false
+- '1.8 degrees C':
+    correct: false
+- '0.556 degrees C / degrees F':
+    correct: true
+- '1.8 degrees C / degrees F':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dfs-2-krod",
+  question = "Placeholder for now",
+  answers = choices_dfs.2.krod,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 3. What is the dimension of the rate of change of C with respect to F?
 
-```{mcq}
-#| label: dfs-3-owe
-1.  dimensionless [correct]
-2. {{< var dim.temperature >}}
-3. {{< var dim.temperature >}}^-1^
-4. {{< var dim.temperature >}}^-2^
+```{devoirs_choices}
+#| label: choices_dfs.3.owe
+- 'dimensionless':
+    correct: true
+- '{{< var dim.temperature >}}':
+    correct: false
+- '{{< var dim.temperature >}}^-1^':
+    correct: false
+- '{{< var dim.temperature >}}^-2^':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dfs-3-owe",
+  question = "Placeholder for now",
+  answers = choices_dfs.3.owe,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 4. What is the rate of change of F with respect to C?
 
-```{mcq}
-#| label: dfs-4-krod
-1.  0.556 degrees C
-2.  1.8 degrees C
-3. 0.556 degrees F / degrees C [correct]
-4. 1.8 degrees F / degrees 
-5. 0.556 degrees C / degrees F [hint: Sorry, but look carefully at the units. A rate of change of F with respect to C will have units F on top and C on the bottom.]
+```{devoirs_choices}
+#| label: choices_dfs.4.krod
+- '0.556 degrees C':
+    correct: false
+- '1.8 degrees C':
+    correct: false
+- '0.556 degrees F / degrees C':
+    correct: true
+- '1.8 degrees F / degrees':
+    correct: false
+- '0.556 degrees C / degrees F':
+    correct: false
+    feedback: 'Sorry, but look carefully at the units. A rate of change of F with respect to C will have units F on top and C on the bottom.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dfs-4-krod",
+  question = "Placeholder for now",
+  answers = choices_dfs.4.krod,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 5. Extra credit: What is the rate of change of C with respect to K? (Hint: You'll need to give two temperatures in F, converting them to both C and K.)
 
-```{mcq}
-#| label: dfs-5-s8w
-1.  1 degrees C / degrees C
-2.  1 degrees K / degrees C 
-3.  1 degrees C / degrees K [correct]
-4.  1 degrees K / degrees K
+```{devoirs_choices}
+#| label: choices_dfs.5.s8w
+- '1 degrees C / degrees C':
+    correct: false
+- '1 degrees K / degrees C':
+    correct: false
+- '1 degrees C / degrees K':
+    correct: true
+- '1 degrees K / degrees K':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dfs-5-s8w",
+  question = "Placeholder for now",
+  answers = choices_dfs.5.s8w,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 

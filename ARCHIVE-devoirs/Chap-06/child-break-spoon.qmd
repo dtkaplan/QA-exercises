@@ -1,0 +1,99 @@
+<!--
+id: "child-break-spoon"
+created: "Tue Dec 23 17:22:19 2025"
+attribution: TBA
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-child-break-spoon}
+The graph shows the number of cell phone subscriptions per capita for the whole world.
+
+```{r}
+#| echo: false
+#| message: false
+phones <- readr::read_csv("../www/cell-phone-penetration.csv") |>
+  dplyr::mutate(rate = subscribers / population)
+phones |>
+  gf_point(rate ~ year) |>
+  gf_line() |>
+  gf_labs(y = "subscriptions per capita")
+```
+
+Find sensible values for the input and output-scaling parameters using hillside() to represent the relationship between per capita subscriptions and year.
+
+$$ \text{subscriptions}(\text{year})) \equiv A\, \text{hillside}\left(a (\text{year} - b)\right) + B$$
+
+1. What are the input scaling parameters?
+
+```{mcq}
+#| label: cbs-1-wlc
+#| inline: true
+1. A & a
+2. B & b
+3. A & B
+4. a & b [correct]
+```
+
+2. Which of these is the best value for B (with units subscribers per capita) to align the function with the data?
+
+```{mcq}
+#| label: cbs-2-yw3
+#| inline: true
+1. -0.15
+2. 0
+3. 0.15
+4. 0.25
+```
+
+3. Which of these is the best value for A?
+
+```{mcq}
+#| label: cbs-3-ydux
+#| inline: true
+1. -1.1
+2. 0.9
+3. 1.1 [correct]
+4. 1.5
+```
+
+4. Which of these is the right set of units for A?
+
+```{mcq}
+#| label: cbs-4-xjc
+#| inline: true
+1. people
+2. people per capita
+3. subscribers
+4. subscribers per capita [correct]
+```
+
+5. Which of these is the best value for b (with units of years)?
+
+```{mcq}
+#| label: cbs-5-dke
+#| inline: true
+1. 2004.5
+2. 2007.5 [correct]
+3. 2009.5
+4. 2011.5
+```
+
+6. Which of these is a sensible value for a?
+
+```{mcq}
+#| label: cbs-6-dke
+#| inline: true
+1. 5 years
+2. 5 per year
+3. 21 years
+4. 21 per year
+```
+
+:::
+ <!-- end of exr-child-break-spoon -->

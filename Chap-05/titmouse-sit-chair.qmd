@@ -5,7 +5,7 @@ attribution: DTK
 use: "Chapter 5 exercises"
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -50,7 +50,7 @@ d. Plot `osc() * hill()` using `x` as the input name. The graphics domain is -4 
 
 In the textbox, put your answers to each of (a) - (d) on a separate line.
 
-`r devoirs::devoirs_text("tsc-1-exlf")`
+`r devoirs3::devoirs_text("tsc-1-exlf")`
 
 
 

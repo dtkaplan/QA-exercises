@@ -4,7 +4,7 @@ created: "Wed Jan 28 16:05:35 2026"
 attribution: TBA
 status: "draft"
 chapter: 15
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,9 +12,9 @@ mode: "exercise"
 ::: {#exr-dog-stand-plant}
 The figure shows three aspects of a dynamical system. Match each to the appropriate color.
 
-a. the flow field `r devoirs::devoirs_set(id = "dsp-a", choices = c("black", "blue", "green"), correct = "black")`
-b. a trajectory `r devoirs::devoirs_set(id = "dsp-b", choices = c("black", "blue", "green"), correct = "blue")`
-c. a time series `r devoirs::devoirs_set(id = "dsp-c", choices = c("black", "blue", "green"), correct = "green")`
+a. the flow field `r devoirs3::devoirs_set3(label = "dsp-a", choices = c("black", "blue", "green"), correct = "black")`
+b. a trajectory `r devoirs3::devoirs_set3(label = "dsp-b", choices = c("black", "blue", "green"), correct = "blue")`
+c. a time series `r devoirs3::devoirs_set3(label = "dsp-c", choices = c("black", "blue", "green"), correct = "green")`
 
 ```{r}
 #| label: fig-climb-56
@@ -50,7 +50,7 @@ gf_line(z ~ t, data = Pts, color = "darkgreen") |>
 
 Explain what you see in the figure that tells you that the flow field, trajectory, and time series are consistent with one another.
 
-`r devoirs::devoirs_text("dsp-d-3ks")`
+`r devoirs3::devoirs_text("dsp-d-3ks")`
 
 
 :::

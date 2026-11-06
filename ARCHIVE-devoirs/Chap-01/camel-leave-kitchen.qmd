@@ -1,0 +1,17 @@
+<!--
+id: "camel-leave-kitchen"
+created: "Sat Oct 18 08:52:35 2025"
+attribution: TBA
+status: "sketch"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-camel-leave-kitchen}
+
+:::
+ <!-- end of exr-camel-leave-kitchen -->

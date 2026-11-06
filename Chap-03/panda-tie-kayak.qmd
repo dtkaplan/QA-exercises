@@ -14,12 +14,27 @@ chapter: 03
 ::: {#exr-panda-tie-kayak}
 Which statement is correct?
 
-```{mcq}
-#| label: d03-lxew
-1. Meter is a dimension and length is a unit.
-2. Length is a dimension and meter is a unit. [correct]
-3. Length and meter are two names for the same thing. [hint: A meter is a specific length.]
-4. Neither length nor meter is a dimension or unit.
+```{devoirs_choices}
+#| label: choices_d03.lxew
+- 'Meter is a dimension and length is a unit.':
+    correct: false
+- 'Length is a dimension and meter is a unit.':
+    correct: true
+- 'Length and meter are two names for the same thing.':
+    correct: false
+    feedback: 'A meter is a specific length.'
+- 'Neither length nor meter is a dimension or unit.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d03-lxew",
+  question = "Placeholder for now",
+  answers = choices_d03.lxew,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-panda-tie-kayak -->

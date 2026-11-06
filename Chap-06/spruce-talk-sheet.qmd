@@ -5,7 +5,7 @@ attribution: Dave Ruth
 use: Chap 6 Drill
 status: ready-to-use
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -21,13 +21,29 @@ Consider a function `Profit(price, weather)` used by an ice cream shop owner to 
 
 In a system diagram of this specific model, how would we classify the variable demand?
 
-```{mcq}
-#| label: sts-1-k3s
-#| inline: true
-a. Exogenous [hint: Not in this model. In the model Profit(price, weather), demand is calculated from the two inputs price and weather. Those inputs are exogenous; the model doesn't determine the weather and the price is dictated by the shop owner.]
-b. Endogenous [correct]
-c. An Argument [hint: Sorry. "Argument" is another word for the input to a function.]
-d. An Algorithm [hint: No. An algorithm is a "recipe" for a computation.]
+```{devoirs_choices}
+#| label: choices_sts.1.k3s
+- 'Exogenous':
+    correct: false
+    feedback: 'Not in this model. In the model Profit(price, weather), demand is calculated from the two inputs price and weather. Those inputs are exogenous; the model doesn''t determine the weather and the price is dictated by the shop owner.'
+- 'Endogenous':
+    correct: true
+- 'An Argument':
+    correct: false
+    feedback: 'Sorry. "Argument" is another word for the input to a function.'
+- 'An Algorithm':
+    correct: false
+    feedback: 'No. An algorithm is a "recipe" for a computation.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sts-1-k3s",
+  question = "Placeholder for now",
+  answers = choices_sts.1.k3s,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-spruce-talk-sheet -->

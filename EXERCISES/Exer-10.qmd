@@ -13,11 +13,11 @@ source("../_exercise_startup.R")
 
 ## 1 
 
-{{< include ../devoirs3/Chap-10/jaquar-shut-pot.qmd >}}
+{{< include ../Chap-10/jaquar-shut-pot.qmd >}}
 
 ## 2 
 
-{{< include ../devoirs3/Chap-10/monkey-talk-pants.qmd >}}
+{{< include ../Chap-10/monkey-talk-pants.qmd >}}
 
 
 

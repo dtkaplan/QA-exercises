@@ -1,0 +1,21 @@
+<!--
+id: "horse-hide-ship"
+created: "Mon Oct 27 11:18:57 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-horse-hide-ship}
+Examples of multiplying osc by various envelopes. 
+
+Making a flat-topped hill by with hillside(hill()). Then multiply this by an osc(). Then have different "attack" and "decay" times by using a multiplication strategy: [hillside(t) - hillside(done - a t)]*hill(t)*osc(t)
+
+
+:::
+ <!-- end of exr-horse-hide-ship -->

@@ -1,0 +1,17 @@
+<!--
+id: "deer-break-bowl"
+created: "Fri Nov  7 07:50:33 2025"
+attribution: TBA
+status: "sketch"
+chapter: 1
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-deer-break-bowl}
+`r xf("car-expt-discussion")`
+:::
+ <!-- end of exr-deer-break-bowl -->

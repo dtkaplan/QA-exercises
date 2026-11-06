@@ -14,47 +14,47 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-14/buck-chew-dress.qmd >}}
+{{< include ../Chap-14/buck-chew-dress.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-14/cheetah-stand-mattress.qmd >}}
+{{< include ../Chap-14/cheetah-stand-mattress.qmd >}}
 
 ## 3
 
-{{< include ../devoirs3/Chap-14/cheetah-think-tv.qmd >}}
+{{< include ../Chap-14/cheetah-think-tv.qmd >}}
 
 ## 4
 
-{{< include ../devoirs3/Chap-14/dingo-eat-saw.qmd >}}
+{{< include ../Chap-14/dingo-eat-saw.qmd >}}
 
 ## 5
 
-{{< include ../devoirs3/Chap-14/kid-hurt-dress.qmd >}}
+{{< include ../Chap-14/kid-hurt-dress.qmd >}}
 
 ## 6
 
-{{< include ../devoirs3/Chap-14/niece-eat-pot.qmd >}}
+{{< include ../Chap-14/niece-eat-pot.qmd >}}
 
 ## 7
 
-{{< include ../devoirs3/Chap-14/rabbit-fight-ring.qmd >}}
+{{< include ../Chap-14/rabbit-fight-ring.qmd >}}
 
 ## 8
 
-{{< include ../devoirs3/Chap-14/seahorse-lose-plyer.qmd >}}
+{{< include ../Chap-14/seahorse-lose-plyer.qmd >}}
 
 ## 9
 
-{{< include ../devoirs3/Chap-14/snail-sail-screen.qmd >}}
+{{< include ../Chap-14/snail-sail-screen.qmd >}}
 
 ## 10
 
-{{< include ../devoirs3/Chap-14/spider-mean-bolt.qmd >}}
+{{< include ../Chap-14/spider-mean-bolt.qmd >}}
 
 ## 11
 
-{{< include ../devoirs3/Chap-14/turtle-break-stair.qmd >}}
+{{< include ../Chap-14/turtle-break-stair.qmd >}}
 
 
 

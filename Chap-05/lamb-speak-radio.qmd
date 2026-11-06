@@ -4,7 +4,7 @@ created: "Mon Dec 22 10:17:40 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -40,10 +40,10 @@ idn <- function(n) {
   glue::glue("sca-{n}-{paste0(sample(letters, 5), collapse='')}")
 }
 scale_Q <- function(n=1, answer = "linear", type = c("linear", "magnitude")) {
-  devoirs::devoirs_TF(
+  devoirs3::devoirs_TF(
     c(TRUE, FALSE)[which(answer == type)],
     format = paste(type, collapse = " or "),
-    id = idn(n)
+    label = idn(n)
   )
 }
 ```

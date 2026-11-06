@@ -1,0 +1,53 @@
+<!--
+status: "draft"
+chapter: 8
+mode: "exercise"
+-->
+
+NEED TO ADD SOME QUESTIONS for students. MAYBE : Factor x increases risk by 22% from a baseline of 10%, factor y by 44%. What would be the risk if both factors x and y are present.
+
+
+Policy makers and medical workers often use **risk** to quantify the chances of an event such as a tsunami or vulnerability to a disease. Often, there are several contributors to a given risk, for example with diabetes age, weight, (lack of) physical activity, and so on. It's sensible to combine these contributions together to find the overall risk. 
+
+Here's a made up example relating to risk of a hypothetical disease. Suppose a person with no risk factors has a probability of 10% of getting the disease in the next five years. This is called the **baseline** risk. Suppose that each of the risk factors---age, obesity, sedentary---on its own triples the probability of getting the disease. This is called a risk ratio, and you will often see risk ratios reported for exposures to toxins or other hazards. To get the risk of the person with the risk factor, multiply the risk ratio times the baseline risk: $3 \times 10% = 30%$. For example, a sedentary person who is neither old nor obese has a 30% chance of the disease.  
+
+Question: What is the probability of an old, sedentary, obese person getting the disease? Since each risk factor triples the chances of getting the disease, common sense may suggest that the risk for our old, sedentary, obese person will be $3 \times 3 \times 3 \times 10% = 270%$. But no real probability can be larger than 100%.
+
+The combination of risk factors was an unanswered riddle until about 1950. The accepted technique has come into common use only in the last several decades. The technique involves pipelining simple functions. The first step is to convert the baseline risk from a probability to another scaled called **odds**. The conversion is simple:
+
+$$\text{convert_to_odds}(\text{prob}) \equiv \frac{\text{prob}}{1 - \text{prob}}$$
+There is similarly a function that will convert odds into the format of probability:
+$$\text{convert_to_prob}(\text{odds}) \equiv \frac{\text{odds}}{\text{odds} + 1}$$
+
+or, in computer notation:
+```{r}
+#| label: C08-gggin
+convert_to_odds <- function(prob) prob / (1 - prob)
+convert_to_prob <- function(odds) odds/ (1 + odds)
+```
+
+
+In our example, the baseline odds is 0.1/0.9 = 0.1111.
+
+The next step is to convert the *risk ratio* and baseline odds into an **odds ratio**. This is a pipeline involving convert_to_odds() and ratio() 
+
+top: risk ratio $\rightarrow$ odds() $\rightarrow$
+                                              ratio(top, bottom) $\rightarrow$ log2()
+bottom: baseline risk $\rightarrow$ odds() $\rightarrow$ 
+
+For example, the probability of our obese-but-not-old-or-sedentary person getting the disease is 0.3. This corresponds to an odds of 0.3/0.7 = 0.43. The baseline odds is 0.1111. So the odds ratio associated with obesity is 0.43/0.1111 = 3.87.  The odds ratio is often very close to the risk ratio: here, 3.87 compared to 3.
+
+Next step ... compute log2() of the odds ratio. We can approximate this from what we know about exp2(): exp2(1) gives 2 and exp2(2) gives 4. So log2(3.87) will be close to 2; the actual value is 1.95. This is called the **log-odds-ratio**. 
+
+The accepted rule for combining multiple risk ratios is to *add together* the log-odds-ratio for each risk factor. So the overall log-odds-ratio for our old, sedentary, obese person will be 1.95 + 1.95 + 1.95 = 5.85. Since the baseline odds are 0.1111, the disease log-odds for our triply burdened person will be 5.85 $\times$ 0.1111 = 0.65. 
+
+Although risk calculations are done using odds and log-odds-ratios, it's deemed better to use *probability* to communicate with policy-makers and patients. The computation is
+
+```{r}
+#| label: C08-efjzi
+0.65 |> exp2() |> convert_to_prob()
+```
+
+Combining together three risk factors each of which has a risk ratio of 3 gives not the absurd 270% but only 61.1% risk of the disease.
+
+Use income => performance and argue for a composition with log2() when it comes to income.

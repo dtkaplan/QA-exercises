@@ -13,12 +13,26 @@ chapter: 1
 ::: {#exr-maple-forgive-socks}
 Which statement best describes **formal reasoning** as used in this chapter?
 
-```{mcq}
-#| label: d01-formal
-1. It uses links governed by rules that are accepted as certain. [correct]
-2. It is reasoning based only on common sense.
-3. It is always about real-world situations.
-4. It cannot contain human errors.
+```{devoirs_choices}
+#| label: choices_d01.formal
+- 'It uses links governed by rules that are accepted as certain.':
+    correct: true
+- 'It is reasoning based only on common sense.':
+    correct: false
+- 'It is always about real-world situations.':
+    correct: false
+- 'It cannot contain human errors.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-formal",
+  question = "Placeholder for now",
+  answers = choices_d01.formal,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-maple-forgive-socks -->

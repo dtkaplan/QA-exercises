@@ -1,0 +1,30 @@
+<!--
+id: "doe-teach-chair"
+created: "Thu Jan  8 13:51:21 2026"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-doe-teach-chair}
+Using the SIR model in the text: (NOTE: Some students have experienced problems getting the SIR model to load. If you are among these, work with a colleague whose SIR model is functional. Sorry for the inconvenience.)
+
+a. Describe the behavior of the number of infected persons with time in cases of the following policy options:
+    i. Social Distancing = 9’; Isolation = 10%
+    ii. Social Distancing = 3’; Isolation = 40%
+    
+`r devoirs::devoirs_text("dtc-a-4233")`
+    
+b. How many people ultimately are infected under each of these policies?
+
+`r devoirs::devoirs_text("dtc-b-4233")`
+
+c. Which of these is preferable to the other, and why? 
+
+`r devoirs::devoirs_text("dtc-c-4233")`
+
+:::
+ <!-- end of exr-doe-teach-chair -->

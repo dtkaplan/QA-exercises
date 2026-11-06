@@ -13,12 +13,26 @@ chapter: 1
 ::: {#exr-dingo-iron-rug}
 What links the observation of a rooster sound to the reasoned belief that it is dawn?
 
-```{mcq}
-#| label: d01-rooster-link
-1. The heuristic rule that roosters crow at dawn. [correct]
-2. The fact that dawn always occurs when a rooster makes a sound.
-3. A formal proof that dawn has occurred.
-4. A measurement of the time of day.
+```{devoirs_choices}
+#| label: choices_d01.rooster.link
+- 'The heuristic rule that roosters crow at dawn.':
+    correct: true
+- 'The fact that dawn always occurs when a rooster makes a sound.':
+    correct: false
+- 'A formal proof that dawn has occurred.':
+    correct: false
+- 'A measurement of the time of day.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-rooster-link",
+  question = "Placeholder for now",
+  answers = choices_d01.rooster.link,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-dingo-iron-rug -->

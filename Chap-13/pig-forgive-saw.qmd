@@ -4,7 +4,7 @@ created: "Thu Sep 18 12:00:55 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -22,7 +22,7 @@ Age | Mortality | Starting Population
 
 Calculate the life expectancy for these birds. Give a number, but also explain you reasoning in words. (Hint: It's not a long calculation.)
 
-`r devoirs_text("pfs-LE")`
+`r devoirs3::devoirs_text("pfs-LE")`
 
 
 :::

@@ -23,7 +23,7 @@ Model unsuitable
 "
 ```
 
-`r devoirs::devoirs_text("acf-RQ1-erl", contents=default, rows=6)`
+`r devoirs3::devoirs_text("acf-RQ1-erl", contents=default, height=6)`
 
 :::
  <!-- end of exr-ant-catch-roof -->

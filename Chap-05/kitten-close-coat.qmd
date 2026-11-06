@@ -4,7 +4,7 @@ created: "Tue Jan 20 14:02:46 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -56,6 +56,7 @@ Poultry <- tibble::tribble(
 
 ```{r}
 #| label: fig-safe-poultry-temp
+#| echo: false
 Poultry |>
   gf_line(c_time ~ temp) |>
   gf_labs(x = "Safe temperature (deg F)", y = "Holding time") |>
@@ -65,14 +66,28 @@ Poultry |>
 
 1. Suppose you determine to cook your chicken at 140 deg F. Assuming it takes two hours of cooking to ensure that the entire chicken reaches that temperature, how much longer do you need to cook the chicken in order to make it safe?
 
-```{mcq}
-#| label: kcc-1-kes
-#| inline: true
-1. 25 minutes
-2. 30 minutes
-3. 35 minutes [correct]
-4. 40 minutes
-5. No such time.
+```{devoirs_choices}
+#| label: choices_kcc.1.kes
+- '25 minutes':
+    correct: false
+- '30 minutes':
+    correct: false
+- '35 minutes':
+    correct: true
+- '40 minutes':
+    correct: false
+- 'No such time.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "kcc-1-kes",
+  question = "Placeholder for now",
+  answers = choices_kcc.1.kes,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 Naturally, you want to avoid any risk of food poisoning. This could happen, for instance, if your oven runs cool. For instance, an oven set to 140 deg F might actually have cold spots at, say, 135 deg F.
@@ -81,13 +96,26 @@ There are two ways to guard against this. One is simply to hold the chicken at t
 
 2. If you want to guard against the possibility of an oven temperature of 135 deg F, how long do you need to hold the chicken at cooking temperature for safety? (Remember, this is the time *beyond* the original two hours needed to get the bird up to the cooking temperature.) 
 
-```{mcq}
-#| label: kcc-2-kes
-#| inline: true
-1. 40 minutes
-2. 60 minutes
-3. 80 minutes 
-4. No such time shown in graph. [correct]
+```{devoirs_choices}
+#| label: choices_kcc.2.kes
+- '40 minutes':
+    correct: false
+- '60 minutes':
+    correct: false
+- '80 minutes':
+    correct: false
+- 'No such time shown in graph.':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "kcc-2-kes",
+  question = "Placeholder for now",
+  answers = choices_kcc.2.kes,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 Home chefs are used to a cooking method where the temperature is set very high (e.g. 350 deg F) and the time carefully regulated to avoid overcooking. Better results can be had at much lower temperatures so long as you take care to hold the bird at the temperature for long enough and check and calibrate your oven to ensure that it is at the right temperature. Commercial rotisseries have ovens set up for this purpose.

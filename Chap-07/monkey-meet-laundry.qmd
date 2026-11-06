@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,12 +13,26 @@ mode: "exercise"
 ::: {#exr-monkey-meet-laundry}
 The function `exp2()` ...
 
-```{mcq}
-#| label: d06-mml-ldx
-1. goes up from a baseline and then back down to the baseline
-2. the output doubles for every unit increase in input [correct]
-3. tells you how many doublings correspond to a given output
-4. decreases quickly at first, then more slowly
+```{devoirs_choices}
+#| label: choices_d06.mml.ldx
+- 'goes up from a baseline and then back down to the baseline':
+    correct: false
+- 'the output doubles for every unit increase in input':
+    correct: true
+- 'tells you how many doublings correspond to a given output':
+    correct: false
+- 'decreases quickly at first, then more slowly':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-mml-ldx",
+  question = "Placeholder for now",
+  answers = choices_d06.mml.ldx,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

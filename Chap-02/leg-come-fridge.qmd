@@ -14,13 +14,26 @@ topic: data
 ::: {#exr-leg-come-fridge}
 Which statement about a variable in a data frame is consistent with the terminology used in this book?
 
-```{mcq}
-#| label: d01-variable
-#| inline: true
-1. A variable is a column of a data frame. [correct]
-2. A variable is always an unknown number.
-3. A variable is always a continuous numerical measurement.
-4. A variable is the entire data frame.
+```{devoirs_choices}
+#| label: choices_d01.variable
+- 'A variable is a column of a data frame.':
+    correct: true
+- 'A variable is always an unknown number.':
+    correct: false
+- 'A variable is always a continuous numerical measurement.':
+    correct: false
+- 'A variable is the entire data frame.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-variable",
+  question = "Placeholder for now",
+  answers = choices_d01.variable,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

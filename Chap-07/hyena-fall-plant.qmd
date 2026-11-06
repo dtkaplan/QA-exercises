@@ -14,12 +14,26 @@ chapter: 7
 ::: {#exr-hyena-fall-plant}
 A slice plot shows monthly mortgage payment on the vertical axis and interest rate on the horizontal axis. The curve rises from left to right. What happens to the monthly payment as the interest rate increases?
 
-```{mcq}
-#| label: d07-input-output-03
-1. It decreases.
-2. It stays constant.
-3. It increases. [correct]
-4. It first increases and then decreases.
+```{devoirs_choices}
+#| label: choices_d07.input.output.03
+- 'It decreases.':
+    correct: false
+- 'It stays constant.':
+    correct: false
+- 'It increases.':
+    correct: true
+- 'It first increases and then decreases.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d07-input-output-03",
+  question = "Placeholder for now",
+  answers = choices_d07.input.output.03,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-hyena-fall-plant -->

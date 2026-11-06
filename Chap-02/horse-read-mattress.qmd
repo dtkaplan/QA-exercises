@@ -14,12 +14,26 @@ chapter: 02
 ::: {#exr-horse-read-mattress}
 Which of the following is a dimension of a system in the sense used in this chapter?
 
-```{mcq}
-#| label: d02-dimension
-1. A property or aspect of the system [correct]
-2. Only a numerical measurement
-3. Only a spatial direction
-4. Only a column in a data frame
+```{devoirs_choices}
+#| label: choices_d02.dimension
+- 'A property or aspect of the system':
+    correct: true
+- 'Only a numerical measurement':
+    correct: false
+- 'Only a spatial direction':
+    correct: false
+- 'Only a column in a data frame':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d02-dimension",
+  question = "Placeholder for now",
+  answers = choices_d02.dimension,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-horse-read-mattress -->

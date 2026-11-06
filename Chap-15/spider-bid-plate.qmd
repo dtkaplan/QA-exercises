@@ -4,7 +4,7 @@ created: "Tue Feb 24 13:32:03 2026"
 attribution: DTK
 status: ready-to-use
 chapter: 15
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,12 +16,28 @@ An AI reported the following:
 
 Accepting the numbers, is something wrong about the AI's description of GNP?
 
-```{mcq}
-#| label: sbp-gnp
-1. Saying "total value" isn't right. GNP includes only goods and services for which money was exchanged. But there is a large amount of "value" in other goods and services, for instance child-care by grandparents or siblings, meal preparation, volunteer work, etc. [hint: This is a correct objection to the over-use of GNP. But there is a more basic error in terms of units and dimension.]
-2. The units should be dollars per year. [correct]
-3. They should report *per capita* GNP. [hint: For some purposes, this might be useful. But the total GNP is a widely used quantity to describe the size of the economy.] 
-4. Nothing's wrong
+```{devoirs_choices}
+#| label: choices_sbp.gnp
+- 'Saying "total value" isn''t right. GNP includes only goods and services for which money was exchanged. But there is a large amount of "value" in other goods and services, for instance child-care by grandparents or siblings, meal preparation, volunteer work, etc.':
+    correct: false
+    feedback: 'This is a correct objection to the over-use of GNP. But there is a more basic error in terms of units and dimension.'
+- 'The units should be dollars per year.':
+    correct: true
+- 'They should report *per capita* GNP.':
+    correct: false
+    feedback: 'For some purposes, this might be useful. But the total GNP is a widely used quantity to describe the size of the economy.'
+- 'Nothing''s wrong':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbp-gnp",
+  question = "Placeholder for now",
+  answers = choices_sbp.gnp,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

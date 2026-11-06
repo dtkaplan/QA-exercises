@@ -32,29 +32,57 @@ slice_plot( fun(x) ~ x, domain(x = 0:10)) |>
 
 
 1. Which of these outcomes is the least likely?
-`r devoirs::devoirs_set(id = "sdl-1-uew", choices=LETTERS[1:4], correct = "D")`
+`r devoirs3::devoirs_set3(label = "sdl-1-uew", choices=LETTERS[1:4], correct = "D")`
 
 2. Which of these outcomes is the most likely?
-`r devoirs::devoirs_set(id = "sdl-2-uew", choices=LETTERS[1:4], correct = "C")`
+`r devoirs3::devoirs_set3(label = "sdl-2-uew", choices=LETTERS[1:4], correct = "C")`
 
 3. How much more likely is outcome C compared to outcome B? (Pick the closest estimate.)
 
-```{mcq}
-#| label: sdl-3-kss
-1. About 30 percent more likely
-2. About 60 percent more likely [correct]
-3. About 100 percent more likely
-4. About 150 percent more likely
+```{devoirs_choices}
+#| label: choices_sdl.3.kss
+- 'About 30 percent more likely':
+    correct: false
+- 'About 60 percent more likely':
+    correct: true
+- 'About 100 percent more likely':
+    correct: false
+- 'About 150 percent more likely':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sdl-3-kss",
+  question = "Placeholder for now",
+  answers = choices_sdl.3.kss,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 4. How much more likely is outcome B compared to outcome D? (Pick the closest estimate.)
 
-```{mcq}
-#| label: sdl-4-kss
-1. About 100 percent more likely
-2. About 200 percent more likely 
-3. About 300 percent more likely [correct]
-4. About 500 percent more likely
+```{devoirs_choices}
+#| label: choices_sdl.4.kss
+- 'About 100 percent more likely':
+    correct: false
+- 'About 200 percent more likely':
+    correct: false
+- 'About 300 percent more likely':
+    correct: true
+- 'About 500 percent more likely':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sdl-4-kss",
+  question = "Placeholder for now",
+  answers = choices_sdl.4.kss,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

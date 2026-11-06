@@ -7,7 +7,7 @@ subtitle: "Chapter 9 Reading Questions"
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+`r devoirs3::devoirs_start("QA-RQ-09")`
 
 ::: {.panel-tabset}
 

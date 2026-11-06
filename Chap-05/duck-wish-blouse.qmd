@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:07:16 2025"
 attribution: TBA
 status: "sketch"
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,6 +12,6 @@ mode: "exercise"
 ::: {#exr-duck-wish-blouse}
 Explain what is meant by a *mantissa* and the rule for formating one. 
 
-`r devoirs::devoirs_text("RQ-mag-mantissa")`
+`r devoirs3::devoirs_text("RQ-mag-mantissa")`
 :::
  <!-- end of exr-duck-wish-blouse -->

@@ -5,20 +5,19 @@ filters:
   - live
 ---
 
+```{r include=FALSE}
+source("../_exercise_startup.R")
+```
+
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
 ```{r include=FALSE}
 library(drill)
 ```
 
+`r devoirs3::devoirs_start("QA-drill-01", feedback=TRUE)`
 
-```{r include=FALSE}
-source("../_exercise_startup.R")
-```
 
-{{< include ../_devoirs.qmd >}}
-
-`r devoirs::push_answer_style("block")`
 
 :::: {.callout-note collapse=true}
 ## Argument and reasoning

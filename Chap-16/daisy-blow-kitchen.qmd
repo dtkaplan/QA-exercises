@@ -4,7 +4,7 @@ created: "Wed Mar  4 18:24:56 2026"
 attribution: DTK
 status: "draft"
 chapter: 16
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -34,15 +34,15 @@ Here is a contour plot of a function $f(x, y)$, annotated with several letters. 
 
 `r choices <- c("N", "NE", "E", "SE", "S", "SW", "W", "NW", "Zero")`
 
-1. At point A: `r devoirs::devoirs_set(choices, correct = "NW", n = 9, id = "dbk-A-dkws")`
+1. At point A: `r devoirs3::devoirs_set3(choices, correct = "NW", n = 9, label = "dbk-A-dkws")`
 
-2. At point B: `r devoirs::devoirs_set(choices, correct = "SW", n = 9, id = "dbk-B-dkws")`
+2. At point B: `r devoirs3::devoirs_set3(choices, correct = "SW", n = 9, label = "dbk-B-dkws")`
 
-3. At point C: `r devoirs::devoirs_set(choices, correct = "S", n = 9, id = "dbk-C-dkws")`
+3. At point C: `r devoirs3::devoirs_set3(choices, correct = "S", n = 9, label = "dbk-C-dkws")`
 
-4. At point D: `r devoirs::devoirs_set(choices, correct = "NW", n = 9, id = "dbk-D-dkws")`
+4. At point D: `r devoirs3::devoirs_set3(choices, correct = "NW", n = 9, label = "dbk-D-dkws")`
 
-5. At point E: `r devoirs::devoirs_set(choices, correct = "Zero", n = 9, id = "dbk-E-dkws")`
+5. At point E: `r devoirs3::devoirs_set3(choices, correct = "Zero", n = 9, label = "dbk-E-dkws")`
 
 :::
  <!-- end of exr-daisy-blow-kitchen -->

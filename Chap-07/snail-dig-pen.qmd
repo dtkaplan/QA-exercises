@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -20,13 +20,26 @@ slice_plot(pnorm(x) ~ x, domain(x = -3:3)) |>
 
 Which core modeling function does this graph show?
 
-```{mcq}
-#| label: sdp-1-dkw
-#| inline: true
-1. hill()
-2. hillside() [correct]
-3. osc()
-4. exp2()
+```{devoirs_choices}
+#| label: choices_sdp.1.dkw
+- 'hill()':
+    correct: false
+- 'hillside()':
+    correct: true
+- 'osc()':
+    correct: false
+- 'exp2()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sdp-1-dkw",
+  question = "Placeholder for now",
+  answers = choices_sdp.1.dkw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

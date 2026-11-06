@@ -4,7 +4,7 @@ created: "Fri Feb 20 08:39:41 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -22,12 +22,12 @@ vectorfield_plot(y ~ 1/(x-6), x ~ x-1 ,
   gf_refine(coord_fixed())
 ```
 
-1. `r devoirs_TF(TRUE, id="flow-ftb-1-k3")` The y-component of the flow depends on the value of x.
+1. `r devoirs3::devoirs_TF(TRUE, label="flow-ftb-1-k3")` The y-component of the flow depends on the value of x.
 
-2. `r devoirs_TF(FALSE, id="flow-ftb-2-ws")` The x-component of the flow depends strongly on the value of y.
+2. `r devoirs3::devoirs_TF(FALSE, label="flow-ftb-2-ws")` The x-component of the flow depends strongly on the value of y.
 
-3. `r devoirs_TF(TRUE, id="flow-ftb-3-8d")` The x-component of the flow depends strongly on the value of x.
+3. `r devoirs3::devoirs_TF(TRUE, label="flow-ftb-3-8d")` The x-component of the flow depends strongly on the value of x.
 
-4. `r devoirs_TF(FALSE, id="flow-ftb-4-is")` The y-component of the flow depends on the value of y.
+4. `r devoirs3::devoirs_TF(FALSE, label="flow-ftb-4-is")` The y-component of the flow depends on the value of y.
 :::
  <!-- end of exr-fish-toss-boat -->

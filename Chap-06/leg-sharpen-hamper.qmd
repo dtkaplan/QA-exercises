@@ -14,12 +14,26 @@ chapter: 06
 ::: {#exr-leg-sharpen-hamper}
 In the solar-panel diagram, cloudiness and sun position are shown as inputs taken as given, while production is produced within the model. Which classification is correct?
 
-```{mcq}
-#| label: d06-model-04
-1. Cloudiness and sun position are endogenous; production is exogenous.
-2. Cloudiness and sun position are exogenous; production is endogenous. [correct]
-3. All three dimensions are endogenous.
-4. All three dimensions are exogenous.
+```{devoirs_choices}
+#| label: choices_d06.model.04
+- 'Cloudiness and sun position are endogenous; production is exogenous.':
+    correct: false
+- 'Cloudiness and sun position are exogenous; production is endogenous.':
+    correct: true
+- 'All three dimensions are endogenous.':
+    correct: false
+- 'All three dimensions are exogenous.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-model-04",
+  question = "Placeholder for now",
+  answers = choices_d06.model.04,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-leg-sharpen-hamper -->

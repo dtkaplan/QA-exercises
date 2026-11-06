@@ -1,0 +1,160 @@
+<!--
+id: "fly-hide-mattress"
+created: "Sat Dec 20 08:53:02 2025"
+attribution: TBA
+status: "draft"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-fly-hide-mattress}
+AI generated question: When navigating a river, your speed is affected by the current, wind, and your own physical stamina. To model this, we can use a relative probability function to visualize the range of possible outcomes.
+
+Scenario: You are planning a canoe trip 8 miles upstream to a campsite. Under perfect conditions, you paddle at a constant rate of 4 miles per hour (mph). However, the river has a variable current that flows against you.
+
+@fig-fhm-speed shows your professor's sense of the relative probability for your  "Net Upstream Speed" (your paddling speed minus the river's current). 
+
+```{r}
+#| label: fig-fhm-speed
+#| echo: false
+#| fig-cap: "Relative probability for net speed."
+
+# --- 1. Define Parameters ---
+distance <- 8 # miles
+
+# --- 2. Create Data for Speed Uncertainty ---
+# We define a triangular distribution where speed is between 1 and 3 mph, 
+# with the peak (mode) at 2 mph.
+speed_df <- data.frame(v = seq(1, 3, length.out = 500))
+speed_df$likelihood <- ifelse(speed_df$v <= 2, 
+                               speed_df$v - 1,   # Upslope
+                               3 - speed_df$v)   # Downslope
+
+# --- 3. Create Data for Time Uncertainty ---
+# Transformation: T = distance / V
+# Math: g(t) = f_v(distance/t) * | -distance / t^2 |
+time_df <- data.frame(t = seq(distance/3, distance/1, length.out = 500))
+
+# Calculate the corresponding speed for each time point
+time_df$v_equiv <- distance / time_df$t
+
+# Calculate the likelihood of that speed
+time_df$f_v <- ifelse(time_df$v_equiv <= 2, 
+                      time_df$v_equiv - 1, 
+                      3 - time_df$v_equiv)
+
+triangle <- function(t) {
+  ifelse(t < 2.67, 0,
+         ifelse(t < 5, (t - 2.67),
+                ifelse(t < 8, (8 - t)*2.33/3 , 0)
+                )
+  )/5.33
+}
+
+# Apply the Jacobian adjustment (distance / t^2) to keep the area under the curve = 1
+time_df$likelihood <- time_df$f_v * (distance / (time_df$t^2))
+time_df$triangle <- triangle(time_df$t)
+
+# --- 4. Plotting ---
+
+# Speed Plot
+p1 <- ggplot(speed_df, aes(x = v, y = likelihood)) +
+  geom_area(fill = "skyblue", alpha = 0.5, color = "blue") +
+  labs(title = "Uncertainty in Speed (V)",
+       subtitle = "Symmetrical Triangular Distribution",
+       x = "Net Speed (mph)",
+       y = "Probability") +
+  theme_minimal()
+
+# Time Plot
+p2 <- ggplot(time_df, aes(x = t, y = likelihood)) +
+  geom_area(fill = "salmon", alpha = 0.5, color = "red") +
+  labs(x = "Travel Time (hours)",
+       y = "Probability") +
+  theme_minimal()
+
+p3 <- ggplot(time_df, aes(x = 10.67-t, y = likelihood)) +
+  geom_area(fill = "salmon", alpha = 0.5, color = "red") +
+  labs(x = "Travel Time (hours)",
+       y = "Probability") +
+  theme_minimal()
+
+p4 <- ggplot(time_df, aes(x = t, y = triangle)) +
+  geom_area(fill = "salmon", alpha = 0.5, color = "red") +
+  labs(x = "Travel Time (hours)",
+       y = "Probability") +
+  theme_minimal()
+p1
+```
+
+
+
+The function shows that your net speed is most likely to be 2 mph, but due to fluctuating currents, it could be as low as 1 mph or as high as 3 mph.
+
+1. What's the longest possible duration for the 8-mile trip?
+
+```{mcq}
+#| label: fhm-1-udw2
+#| inline: true
+1. 4 hours
+2. 5 hours
+3. 6.67 hours
+4. 8 hours [correct]
+```
+
+
+2. What's the shortest possible duration for the 8-mile trip?
+
+```{mcq}
+#| label: fhm-2-34df
+#| inline: true
+1. 2 hours
+2. 2.67 hours [correct]
+3. 3 hours
+4. 4 hours
+```
+
+3. What's the most likely duration?
+
+```{mcq}
+#| label: fhm-3-9t3
+#| inline: true
+1. 3 hours
+2. 4 hours [correct]
+3. 5 hours
+4. 6.67 hours
+```
+
+```{r}
+#| label: fig-ftm-3
+#| echo: false
+#| layout-ncol: 3
+#| fig-cap: "Candidate relative probability functions for trip duration."
+#| fig-subcap:
+#| - " "
+#| - " "
+#| - " "
+p2
+p3
+p4
+```
+
+@fig-ftm-3 shows three different relative probability functions, each purporting to show the distribution of travel times. Only one is correct. Which one?
+
+```{mcq}
+#| label: fhm-4-rdf
+#| inline: true
+1. a [correct]
+2. b 
+3. c
+```
+
+
+
+
+
+:::
+ <!-- end of exr-fly-hide-mattress -->

@@ -4,7 +4,7 @@ created: "Fri Aug 14 07:33:06 2026"
 attribution: DTK
 status: "draft"
 chapter: 14
-mode: "exercise"
+mode: exercise
 use: "Discussion of heuristics"
 -->
 

@@ -1,0 +1,29 @@
+<!--
+id: "dolphin-go-oven"
+created: "Sun Feb  1 08:58:55 2026"
+attribution: TBA
+status: "sketch"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-dolphin-go-oven}
+Consider two different forms 
+
+i. $f(g(x))$ 
+ii. $f(x)g(x)$
+
+Which words most appropriately describe the distinction between the two forms?
+
+```{mcq}
+#| label: dgo-1-kcsl
+1. multiplication & pipelining, repectively. [hint: Sorry. The order is wrong.]
+2. interior combination vs exterior combination, respectively.
+3. pipelining & multiplication, respectively. [correct]
+4. linear combination and pipelining, respectively.
+```
+
+:::
+ <!-- end of exr-dolphin-go-oven -->

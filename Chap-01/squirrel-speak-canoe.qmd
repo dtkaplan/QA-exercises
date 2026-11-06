@@ -13,12 +13,26 @@ chapter: 1
 ::: {#exr-squirrel-speak-canoe}
 Which of the following can be a **given** at the start of a reasoning process?
 
-```{mcq}
-#| label: d01-givens
-1. An observation [correct]
-2. Only a mathematical equation
-3. Only a fact known with certainty
-4. Only a numerical measurement
+```{devoirs_choices}
+#| label: choices_d01.givens
+- 'An observation':
+    correct: true
+- 'Only a mathematical equation':
+    correct: false
+- 'Only a fact known with certainty':
+    correct: false
+- 'Only a numerical measurement':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-givens",
+  question = "Placeholder for now",
+  answers = choices_d01.givens,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-squirrel-speak-canoe -->

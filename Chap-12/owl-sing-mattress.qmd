@@ -55,13 +55,29 @@ make_temperature_plot(winter) |> gf_labs(title = "Function D")
 
 i. Which of the four functions best represents a sensible *prior* belief about the temperature?
 
-```{mcq}
-#| label: D12-xxxx-i
-#| inline: true
-1. A [hint: too narrow]
-2. B [correct]
-3. C [hint: too narrow]
-4. D [hint: too narrow]
+```{devoirs_choices}
+#| label: choices_D12.xxxx.i
+- 'A':
+    correct: false
+    feedback: 'too narrow'
+- 'B':
+    correct: true
+- 'C':
+    correct: false
+    feedback: 'too narrow'
+- 'D':
+    correct: false
+    feedback: 'too narrow'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D12-xxxx-i",
+  question = "Placeholder for now",
+  answers = choices_D12.xxxx.i,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 Eager to know more about the time of year, you ask to have a thermometer read-out installed which shows the outside temperature.
@@ -70,25 +86,53 @@ Eager to know more about the time of year, you ask to have a thermometer read-ou
 
 ii. Which of the four plots shows a sensible *likelihood* for temperature under the hypothesis that it is either spring or fall?
 
-```{mcq}
-#| label: D12-xxxx-ii
-#| inline: true
-1. A [correct]
-2. B 
-3. C 
-4. D 
+```{devoirs_choices}
+#| label: choices_D12.xxxx.ii
+- 'A':
+    correct: true
+- 'B':
+    correct: false
+- 'C':
+    correct: false
+- 'D':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D12-xxxx-ii",
+  question = "Placeholder for now",
+  answers = choices_D12.xxxx.ii,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 -----
 
 iii. What is the best of the following criterion for judging which of the four functions is suitable for the *prior*?
 
-```{mcq}
-#| label: D12-xxxx-iii
-1. It should be taller than the others.
-2. It should cover only a narrow range of temperatures.
-3. It should cover a broad range of temperatures. [correct]
-4. It should never have a negative value. [hint: This is true of all relative probability functions.]
+```{devoirs_choices}
+#| label: choices_D12.xxxx.iii
+- 'It should be taller than the others.':
+    correct: false
+- 'It should cover only a narrow range of temperatures.':
+    correct: false
+- 'It should cover a broad range of temperatures.':
+    correct: true
+- 'It should never have a negative value.':
+    correct: false
+    feedback: 'This is true of all relative probability functions.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D12-xxxx-iii",
+  question = "Placeholder for now",
+  answers = choices_D12.xxxx.iii,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 
@@ -96,13 +140,26 @@ iii. What is the best of the following criterion for judging which of the four f
 
 iv. Which of the four plots shows a sensible *likelihood* for temperature under the hypothesis that it is summer?
 
-```{mcq}
-#| label: D12-xxxx-iv
-#| inline: true
-1. A 
-2. B 
-3. C [correct]
-4. D 
+```{devoirs_choices}
+#| label: choices_D12.xxxx.iv
+- 'A':
+    correct: false
+- 'B':
+    correct: false
+- 'C':
+    correct: true
+- 'D':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D12-xxxx-iv",
+  question = "Placeholder for now",
+  answers = choices_D12.xxxx.iv,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

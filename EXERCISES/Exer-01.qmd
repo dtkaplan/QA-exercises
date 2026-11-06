@@ -13,11 +13,11 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-01/hamster-hurt-lamp.qmd >}}
+{{< include ../Chap-01/hamster-hurt-lamp.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-01/monkey-drive-book.qmd >}}
+{{< include ../Chap-01/monkey-drive-book.qmd >}}
 
 
 

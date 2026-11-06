@@ -14,6 +14,6 @@ chapter: 03
 ::: {#exr-octopus-have-book}
 Recall that the notation [ x ] means "the dimension of x."
 
-`r devoirs::devoirs_TF(correct = TRUE, id="D-03-ohm")` [Pints] is the same as [gallons].
+`r devoirs3::devoirs_TF(correct = TRUE, label="D-03-ohm")` [Pints] is the same as [gallons].
 :::
  <!-- end of exr-octopus-have-book -->

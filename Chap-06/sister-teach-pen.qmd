@@ -11,7 +11,7 @@ status: in progress
 
 The calculator in @fig-heat-index-sliders is based on a formula well suited to computers. Can you find a (temperature, humidity) input where the output from the formula is different from the table presented in @fig-original-heat-index?
 
-`r devoirs::devoirs_text("sister-teach-pen")`
+`r devoirs3::devoirs_text("sister-teach-pen")`
 
 
 <!-- Opening answer: stp-2Av -->

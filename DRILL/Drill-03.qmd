@@ -2,22 +2,22 @@
 title: "*Quantitative Argumentation*"
 subtitle: "Chapter 3 Drill Questions"
 filters:
-  - shinylive
+  - live
 ---
-
-{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-
-```{r include = FALSE}
-library(drill)
-```
 
 ```{r include=FALSE}
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-`r devoirs::push_answer_style("block")`
+```{r include=FALSE}
+library(drill)
+```
+
+`r devoirs3::devoirs_start("QA-drill-03", feedback=TRUE)`
+
+
 
 Note: You are not expected to memorize the values of conversion factors. Look them up as you need them.
 
@@ -207,7 +207,7 @@ Your job is to figure out if the putative conversion factor (36 inches per yard 
 
 To convert from yards to mm, multiply yards by 914.4 yards per mm.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[3], id = "D-03-halo", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[3], label ="D-03-halo", inline=FALSE)`
 
 ## ii.
 
@@ -215,43 +215,43 @@ To convert from yards to mm, multiply yards by 914.4 yards per mm.
 
 To convert from pints to cubic meters, multiply pints by 2113.38 meters^3^ per pint.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[5], id = "D-03-vas", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[5], label ="D-03-vas", inline=FALSE)`
 
 ## iii.
 
 To convert from *meters per second* to miles, multiply by 0.000621371 miles per meter.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[1], id = "D-03-vat", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[1], label ="D-03-vat", inline=FALSE)`
 
 ## iv.
 
 To convert from seconds to hours, multiply by seconds per hour.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[3], id = "D-03-wet", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[3], label ="D-03-wet", inline=FALSE)`
 
 ## v.
 
 To convert from *acre-feet* to *cubic meters*, multiply by 1233.48 meters per foot.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[2], id = "D-03-yin", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[2], label ="D-03-yin", inline=FALSE)`
 
 ## vi.
 
 To convert from *cc* to *liters*, multiply by 0.001 liters per cc.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[5], id = "D-03-ball", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[5], label ="D-03-ball", inline=FALSE)`
 
 ## vii.
 
 To convert from *meters per second* to *miles per second*, multiply by 0.000621371 miles per meter.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[5], id = "D-03-cage", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[5], label ="D-03-cage", inline=FALSE)`
 
 ## viii.
 
 To convert from *GDP dollars per capita* to *total GDP dollars*, multiply by 365 capita per dollar.
 
-`r devoirs::devoirs_set(for_flavors, for_flavors[1], id = "D-03-nut", inline=FALSE)`
+`r devoirs3::devoirs_set3(for_flavors, for_flavors[1], label ="D-03-nut", inline=FALSE)`
 
 ## ix.
 

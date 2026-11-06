@@ -6,7 +6,7 @@ mode: exercise
 status: sketch
 group: shadow-price
 chapter: 10
-topic: "shadow-price and domination
+topic: "shadow-price and domination"
 -->
 
 {{< include ../exercise-header.qmd >}}

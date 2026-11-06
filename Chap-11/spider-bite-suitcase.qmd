@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:31:21 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 11
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,7 +12,7 @@ mode: "reading-question"
 ::: {#exr-spider-bite-suitcase}
 Explain the relationship between the *state space* and the *trajectory*?
 
-`r devoirs::devoirs_text("RQ11-sbs")`
+`r devoirs3::devoirs_text("RQ11-sbs")`
 
 <!-- Opening answer: R1d-5ds -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

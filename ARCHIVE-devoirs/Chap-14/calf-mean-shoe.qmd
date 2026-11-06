@@ -1,0 +1,37 @@
+<!--
+id: "calf-mean-shoe"
+created: "Mon Nov 17 13:22:20 2025"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-calf-mean-shoe}
+A better way to see the smooth flow. The display of the straight arrows for the dynamical rule is mathematically correct and shows the instantaneous motion over a wide domain of state space. But it is visually somewhat confusing. On the other hand, the display of the trajectory, also mathematically correct, shows the motion over a very limited domain. 
+
+We can design a display that, for many people, gives a less distracting view of the *flow* induced by the dynamical rule. We pick many more-or-less evenly spaced points in the state space at random. Then draw a trajectory starting at each of those point. Track the trajectory for a short interval at time.
+
+```{r}
+#| label: fig-gif-flow
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "The flow field for the system of `r xf('fig-pendulum-gif')`." 
+pend_gif<- makeODE(dp ~ v, dv ~ - 6.11 * (p - 20.3))
+soln <- integrateODE(pend_gif, domain(t=0:2), p = 8, v=2)
+
+streamlines(pend_gif,
+           domain(p = 5:33, v = -30:30), 
+           npts = 14, scale = 0.75) |>
+  gf_labs(x = "Position (deg)", y = "Velocity (deg/sec)" ) |>
+  gf_refine(coord_fixed(ratio=.4)) 
+```
+
+
+:::
+ <!-- end of exr-calf-mean-shoe -->

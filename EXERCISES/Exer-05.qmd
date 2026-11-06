@@ -13,57 +13,57 @@ source("../_exercise_startup.R")
 
 ## 1 
 
-{{< include ../devoirs3/Chap-05/bee-spend-magnet.qmd >}}
+{{< include ../Chap-05/bee-spend-magnet.qmd >}}
 
 ## 2. 
 
-{{< include ../devoirs3/Chap-05/jellyfish-open-socks.qmd >}}
+{{< include ../Chap-05/jellyfish-open-socks.qmd >}}
 
 ## 3. 
 
-{{< include ../devoirs3/Chap-05/kitten-close-coat.qmd >}}
+{{< include ../Chap-05/kitten-close-coat.qmd >}}
 
 ## 4. 
 
-{{< include ../devoirs3/Chap-05/lamb-speak-radio.qmd >}}
+{{< include ../Chap-05/lamb-speak-radio.qmd >}}
 
 ## 5. 
 
-{{< include ../devoirs3/Chap-05/lion-understand-suitcase.qmd >}}
+{{< include ../Chap-05/lion-understand-suitcase.qmd >}}
 
 ## 6. 
 
-{{< include ../devoirs3/Chap-05/maple-shut-pantry.qmd >}}
+{{< include ../Chap-05/maple-shut-pantry.qmd >}}
 
 ## 7. 
 
-{{< include ../devoirs3/Chap-05/pig-think-bolt.qmd >}}
+{{< include ../Chap-05/pig-think-bolt.qmd >}}
 
 ## 8. 
 
-{{< include ../devoirs3/Chap-05/pollen-stand-pen.qmd >}}
+{{< include ../Chap-05/pollen-stand-pen.qmd >}}
 
 ## 9. 
 
-{{< include ../devoirs3/Chap-05/seahorse-pitch-teacup.qmd >}}
+{{< include ../Chap-05/seahorse-pitch-teacup.qmd >}}
 
 ## 10. 
 
-{{< include ../devoirs3/Chap-05/snail-say-clock.qmd >}}
+{{< include ../Chap-05/snail-say-clock.qmd >}}
 
 ## 11.  
 
-{{< include ../devoirs3/Chap-05/walrus-hang-kitchen.qmd >}}
+{{< include ../Chap-05/walrus-hang-kitchen.qmd >}}
 
 
 <!-- Still to be processed
 A mix of drill, computational, and problematic compilation
-include ../devoirs3/Chap-05/zebra-dream-blouse.qmd
-include ../devoirs3/Chap-05/arm-hold-hamper.qmd
-include ../devoirs3/Chap-05/maple-shut-pencil.qmd
-include ../devoirs3/Chap-05/titmouse-sit-chair.qmd
-include ../devoirs3/Chap-05/giraffe-meet-cotton.qmd
-include ../devoirs3/Chap-05/goldfish-cost-bed.qmd
+include ../Chap-05/zebra-dream-blouse.qmd
+include ../Chap-05/arm-hold-hamper.qmd
+include ../Chap-05/maple-shut-pencil.qmd
+include ../Chap-05/titmouse-sit-chair.qmd
+include ../Chap-05/giraffe-meet-cotton.qmd
+include ../Chap-05/goldfish-cost-bed.qmd
 
 -->
 

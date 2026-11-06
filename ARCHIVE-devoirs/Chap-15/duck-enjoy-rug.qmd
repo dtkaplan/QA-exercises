@@ -1,0 +1,30 @@
+<!--
+id: "duck-enjoy-rug"
+created: "Wed Nov 26 12:03:18 2025"
+attribution: TBA
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#prp-duck-enjoy-rug}
+In a classroom discussion, ask students to write down all the meanings that occur to them of *variable*, *value*, and *quantity* as they relate to STEM areas. Have the students, one at a time, read their definitions. The instructor should write on the board core words from each student's definition (or point out when students' definitions substantially overlap). Be encouraging and treat all definitions with respect. Seek coherence in each definition and how it fits in to the whole collection. For instance, if a student says, "A variable is something like $x$ and $y$," generalize this to "a variable is a symbolic name." In algebra, this name is used as a placeholder, but statistics and quantitative reasoning have very different meanings for "variable."
+
+
+The point is to guide the students to our preferred senses for the words: 
+
+- A **variable** is a general "characteristic" such as height, weight, LDL cholesterol level.
+
+- A **quantity** is similarly a "characteristic" but in a form that can be measured.
+
+- **Operationalization** refers to a defined process for quantifying a variable.
+
+- A **value** is a specific level of the quantity in a particular context.
+:::
+
+See `r xf("nte-variable-in-different-fields")`.
+ <!-- end of prp-duck-enjoy-rug -->

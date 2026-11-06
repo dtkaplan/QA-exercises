@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Quantitative Argumentation – Quantitative Argumentation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><em>Quantitative Argumentation</em></h1>
+<p class="subtitle lead">Chapter 8 Drill Questions</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
+  }
+
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
+
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
+
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
+        }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
+    }
+
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
+
+    document.body.prepend(toolbar);
+  }
+
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
+    }
+  }
+
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
+
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
+    }
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A. Relative probability
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">4.</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<!--
+id: "shark-dream-linen"
+created: "Thu Jan 29 13:24:12 2026"
+attribution: DTK
+chapter: 8
+mode: exercise
+status: ready
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-shark-dream-linen" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Consider the relative probability distribution graphed below.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Drill-08_files/figure-html/C08-gyleu-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><p>Which of these outcomes is the least likely? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="sdl-1-uew" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d312d756577" id="devoirs3-selection-73646c2d312d756577-1" value="AAeigcw" data-devoirs3-option="" data-option-id="AAeigcw" data-feedback="Sorry." data-feedback-html="Sorry."> <span>A</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d312d756577" id="devoirs3-selection-73646c2d312d756577-2" value="BArpmcf" data-devoirs3-option="" data-option-id="BArpmcf" data-feedback="Sorry." data-feedback-html="Sorry."> <span>B</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d312d756577" id="devoirs3-selection-73646c2d312d756577-3" value="CAobetv" data-devoirs3-option="" data-option-id="CAobetv" data-feedback="Sorry." data-feedback-html="Sorry."> <span>C</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d312d756577" id="devoirs3-selection-73646c2d312d756577-4" value="DAibqkn" data-devoirs3-option="" data-option-id="DAibqkn" data-feedback="Correct!" data-feedback-html="Correct!"> <span>D</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sdl-1-uew</span> </span></p></li>
+<li><p>Which of these outcomes is the most likely? <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="sdl-2-uew" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d322d756577" id="devoirs3-selection-73646c2d322d756577-1" value="AAekzqe" data-devoirs3-option="" data-option-id="AAekzqe" data-feedback="Sorry." data-feedback-html="Sorry."> <span>A</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d322d756577" id="devoirs3-selection-73646c2d322d756577-2" value="BAorwig" data-devoirs3-option="" data-option-id="BAorwig" data-feedback="Sorry." data-feedback-html="Sorry."> <span>B</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d322d756577" id="devoirs3-selection-73646c2d322d756577-3" value="CAcuhxz" data-devoirs3-option="" data-option-id="CAcuhxz" data-feedback="Correct!" data-feedback-html="Correct!"> <span>C</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73646c2d322d756577" id="devoirs3-selection-73646c2d322d756577-4" value="DAlltmd" data-devoirs3-option="" data-option-id="DAlltmd" data-feedback="Sorry." data-feedback-html="Sorry."> <span>D</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sdl-2-uew</span> </span></p></li>
+<li><p>How much more likely is outcome C compared to outcome B? (Pick the closest estimate.)</p></li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="sdl-3-kss" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d332d6b7373" id="devoirs3-selection-73646c2d332d6b7373-1" value="AAddheu" data-devoirs3-option="" data-option-id="AAddheu" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>About 30 percent more likely</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d332d6b7373" id="devoirs3-selection-73646c2d332d6b7373-2" value="BAiuang" data-devoirs3-option="" data-option-id="BAiuang" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>About 60 percent more likely</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d332d6b7373" id="devoirs3-selection-73646c2d332d6b7373-3" value="CAattlu" data-devoirs3-option="" data-option-id="CAattlu" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>About 100 percent more likely</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d332d6b7373" id="devoirs3-selection-73646c2d332d6b7373-4" value="DAqbygs" data-devoirs3-option="" data-option-id="DAqbygs" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>About 150 percent more likely</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sdl-3-kss</span>
+</fieldset>
+</div>
+</div>
+<ol start="4" type="1">
+<li>How much more likely is outcome B compared to outcome D? (Pick the closest estimate.)</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="sdl-4-kss" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d342d6b7373" id="devoirs3-selection-73646c2d342d6b7373-1" value="AAwjcpz" data-devoirs3-option="" data-option-id="AAwjcpz" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>About 100 percent more likely</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d342d6b7373" id="devoirs3-selection-73646c2d342d6b7373-2" value="BAebivb" data-devoirs3-option="" data-option-id="BAebivb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>About 200 percent more likely</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d342d6b7373" id="devoirs3-selection-73646c2d342d6b7373-3" value="CAeiovx" data-devoirs3-option="" data-option-id="CAeiovx" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>About 300 percent more likely</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73646c2d342d6b7373" id="devoirs3-selection-73646c2d342d6b7373-4" value="DAqkkue" data-devoirs3-option="" data-option-id="DAqkkue" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>About 500 percent more likely</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sdl-4-kss</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-shark-dream-linen --></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<!--
+id: "horse-point-closet"
+created: "Fri Jan 30 08:15:29 2026"
+attribution: prompted by AI
+use: Chap 7 drill
+status: ready-to-use
+chapter: 8
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-horse-point-closet" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Each of the following graphics, except one, can be interpretted as a relative probability function. Which is the exception?</p>
+<div id="fig-hpc-1-u23" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hpc-1-u23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-hpc-1-u23" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-hpc-1-u23-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-hpc-1-u23-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-hpc-1-u23-1.png" id="fig-hpc-1-u23-1" class="img-fluid figure-img" data-ref-parent="fig-hpc-1-u23" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hpc-1-u23-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-hpc-1-u23" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-hpc-1-u23-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-hpc-1-u23-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-hpc-1-u23-2.png" id="fig-hpc-1-u23-2" class="img-fluid figure-img" data-ref-parent="fig-hpc-1-u23" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hpc-1-u23-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-hpc-1-u23" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-hpc-1-u23-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-hpc-1-u23-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-hpc-1-u23-3.png" id="fig-hpc-1-u23-3" class="img-fluid figure-img" data-ref-parent="fig-hpc-1-u23" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hpc-1-u23-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-hpc-1-u23" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-hpc-1-u23-4" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-hpc-1-u23-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-hpc-1-u23-4.png" id="fig-hpc-1-u23-4" class="img-fluid figure-img" data-ref-parent="fig-hpc-1-u23" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-hpc-1-u23-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hpc-1-u23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Functions that might be relative probability distributions
+</figcaption>
+</figure>
+</div>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="hpc-1-67s" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6870632d312d363773" id="devoirs3-selection-6870632d312d363773-1" value="AAhptgs" data-devoirs3-option="" data-option-id="AAhptgs" data-feedback="Sorry." data-feedback-html="Sorry."> <span>a</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6870632d312d363773" id="devoirs3-selection-6870632d312d363773-2" value="BAxjldb" data-devoirs3-option="" data-option-id="BAxjldb" data-feedback="Sorry." data-feedback-html="Sorry."> <span>b</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6870632d312d363773" id="devoirs3-selection-6870632d312d363773-3" value="CAoaeqn" data-devoirs3-option="" data-option-id="CAoaeqn" data-feedback="Correct!" data-feedback-html="Correct!"> <span>c</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6870632d312d363773" id="devoirs3-selection-6870632d312d363773-4" value="DAwkstj" data-devoirs3-option="" data-option-id="DAwkstj" data-feedback="Sorry." data-feedback-html="Sorry."> <span>d</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">hpc-1-67s</span> </span></p>
+</div>
+<p><!-- end of exr-horse-point-closet --></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<!--
+id: "hamster-cut-tv"
+created: "Fri Feb 13 16:03:05 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 8
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-hamster-cut-tv" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="hct-1-fkw" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6863742d312d666b77" id="devoirs3-selection-6863742d312d666b77-1" value="AAafkvp" data-devoirs3-option="" data-option-id="AAafkvp" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6863742d312d666b77" id="devoirs3-selection-6863742d312d666b77-2" value="BAjfbrh" data-devoirs3-option="" data-option-id="BAjfbrh" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">hct-1-fkw</span> </span> An (absolute) probability is also a relative probability.</p>
+</div>
+<p><!-- end of exr-hamster-cut-tv --></p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<!--
+id: "frog-choose-knife"
+created: "Fri Feb 13 17:47:15 2026"
+attribution: TBA
+status: ready-to-use
+chapter: 8
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-frog-choose-knife" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Large Language Models generate responses in steps. In each step, one new token is added to the part of the response that has already been formed. To illustrate, here are the tokens that one AI considers to be likely to follow, “When I was walking …”.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">token</th>
+<th style="text-align: right;">weight</th>
+<th style="text-align: right;">lyrics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">in</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">2.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">around</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">-0.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">to</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">0.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">through</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">down</td>
+<td style="text-align: right;">-1.2</td>
+<td style="text-align: right;">1.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">2.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">back</td>
+<td style="text-align: right;">-0.3</td>
+<td style="text-align: right;">-1.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I</td>
+<td style="text-align: right;">1.7</td>
+<td style="text-align: right;">0.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">by</td>
+<td style="text-align: right;">-1.1</td>
+<td style="text-align: right;">1.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">along</td>
+<td style="text-align: right;">-2.6</td>
+<td style="text-align: right;">1.4</td>
+</tr>
+</tbody>
+</table>
+<p>Each word is assigned a weight. There are typically around 50,000 words to choose from. The above shows just a handful of the more likely ones.</p>
+<p>The prompt “What are the most likely AI tokens that might follow ‘When I was walking’” generated the weights in the middle column. But for the “lyrics” column, the prompt was preceeded by “Taking into account the lyrics of popular music, ….”</p>
+<ol type="1">
+<li>The numbers in the “weight” and “lyrics” columns are not relative probabilities. Which of the following explanations is most salient for this conclusion?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="fck-1-ue2" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-66636b2d312d756532" id="devoirs3-selection-66636b2d312d756532-1" value="AAzouph" data-devoirs3-option="" data-option-id="AAzouph" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Some of the numbers are greater than 1.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-66636b2d312d756532" id="devoirs3-selection-66636b2d312d756532-2" value="BAaqaif" data-devoirs3-option="" data-option-id="BAaqaif" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Some of the numbers are negative.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-66636b2d312d756532" id="devoirs3-selection-66636b2d312d756532-3" value="CAacivx" data-devoirs3-option="" data-option-id="CAacivx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The numbers don’t add up to 1.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fck-1-ue2</span>
+</fieldset>
+</div>
+</div>
+<ol start="2" type="1">
+<li><p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="fck-2-3kd" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-66636b2d322d336b64" id="devoirs3-selection-66636b2d322d336b64-1" value="AAlqlot" data-devoirs3-option="" data-option-id="AAlqlot" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-66636b2d322d336b64" id="devoirs3-selection-66636b2d322d336b64-2" value="BAfcljc" data-devoirs3-option="" data-option-id="BAfcljc" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fck-2-3kd</span> </span> Relative probabilities do not need to add up to 1.</p></li>
+<li><p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="fck-3-7dw" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-66636b2d332d376477" id="devoirs3-selection-66636b2d332d376477-1" value="AAfmbee" data-devoirs3-option="" data-option-id="AAfmbee" data-feedback="Sorry"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-66636b2d332d376477" id="devoirs3-selection-66636b2d332d376477-2" value="BArbsnu" data-devoirs3-option="" data-option-id="BArbsnu" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fck-3-7dw</span> </span> Relative probabilities do not need to be non-negative.</p></li>
+<li><p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="fck-4-3ks" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-66636b2d342d336b73" id="devoirs3-selection-66636b2d342d336b73-1" value="AAewjvo" data-devoirs3-option="" data-option-id="AAewjvo" data-feedback="Sorry"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-66636b2d342d336b73" id="devoirs3-selection-66636b2d342d336b73-2" value="BAenrei" data-devoirs3-option="" data-option-id="BAenrei" data-feedback="Nice!"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fck-4-3ks</span> </span> A relative probability can never be zero.</p></li>
+</ol>
+<p>In fact, the weights generated by the AI are not relative probabilities. They are ordinary numbers which might be large or small, positive or negative. In the context of indicating a relative probability, the AI weights are called “logits.” Converting a logit to a relative probability is simple: use the core modeling function <code>exp2()</code>. The following chunk reads the weights and words into an R data frame, then does the conversion to relative and absolute probabilities.</p>
+<div class="cell" data-caption="Working with logits">
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImNhcHRpb24iOiJXb3JraW5nIHdpdGggbG9naXRzIiwiZWRpdCI6dHJ1ZSwiZXZhbCI6dHJ1ZX0sImNvZGUiOiJXYWxraW5nX3dvcmRzIDwtIHRpYmJsZTo6dHJpYmJsZShcbn4gd29yZCwgICAgIH4gd2VpZ2h0LCB+IGx5cmljcyxcblwiaW5cIiAgICAgICAsICAyLjggICwgIDIuMSxcblwiYXJvdW5kXCIgICAsICAxLjQgICwgLTAuMSxcblwidG9cIiAgICAgICAsICAzLjEgICwgIDAuNixcblwidGhyb3VnaFwiICAsICAwLjcgICwgIDEuMCxcblwiZG93blwiICAgICAsIC0xLjIgICwgIDEuOCxcblwiaG9tZVwiICAgICAsICAxLjkgICwgIDIuMCxcblwiYmFja1wiICAgICAsIC0wLjMgICwgLTEuMSxcblwiSVwiICAgICAgICAsICAxLjcgICwgIDAuOCxcblwiYnlcIiAgICAgICAsIC0xLjEgICwgIDEuNixcblwiYWxvbmdcIiAgICAsIC0yLjYgICwgIDEuNCxcbilcblxuV2Fsa2luZ193b3JkcyB8PlxuICBkcGx5cjo6bXV0YXRlKFxuICAgICMgQ29udmVydCB0byByZWxhdGl2ZSBwcm9iYWJpbGl0aWVzXG4gICAgaW5fZ2VuZXJhbCA9IGV4cDIod2VpZ2h0KSxcbiAgICBpbl9seXJpY3MgPSBleHAyKGx5cmljcyksXG4gICAgIyBDb252ZXJ0IHRob3NlIHRvIGFic29sdXRlIHByb2JhYmlsaXRpZXMpXG4gICAgcHJvYl9nZW5lcmFsID0gaW5fZ2VuZXJhbCAvIHN1bShpbl9nZW5lcmFsKSxcbiAgICBwcm9iX2x5cmljcyAgPSBpbl9seXJpY3MgIC8gc3VtKGluX2x5cmljcyksXG4gICAgIyBhbmQgY29tcGFyZSB0aGUgbHlyaWNzIHRvIHRoZSBnZW5lcmFsXG4gICAgcmF0aW8gPSBwcm9iX2x5cmljcyAvIHByb2JfZ2VuZXJhbFxuICAgIFxuICApIn0=
+</script>
+</div>
+</div>
+<ol start="5" type="1">
+<li>Which three words are much more likely to occur following “When I was walking” in the context of lyrics compared to general text?</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="fck-5-2dw" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-66636b2d352d326477" id="devoirs3-selection-66636b2d352d326477-1" value="AAkshsq" data-devoirs3-option="" data-option-id="AAkshsq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>along, home, through</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-66636b2d352d326477" id="devoirs3-selection-66636b2d352d326477-2" value="BAqjuau" data-devoirs3-option="" data-option-id="BAqjuau" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>along, down, by</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-66636b2d352d326477" id="devoirs3-selection-66636b2d352d326477-3" value="CAdtdyp" data-devoirs3-option="" data-option-id="CAdtdyp" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>around, in, home</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-66636b2d352d326477" id="devoirs3-selection-66636b2d352d326477-4" value="DAkyvfk" data-devoirs3-option="" data-option-id="DAkyvfk" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>by, down, through</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">fck-5-2dw</span>
+</fieldset>
+</div>
+</div>
+</div>
+<p><!-- end of exr-frog-choose-knife --></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>B. Named distributions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">A.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">B.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">C.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">D.</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<!--
+id: "birch-throw-bowl"
+created: "Tue Dec  9 16:13:20 2025"
+attribution: TBA
+status: "draft"
+chapter: 8
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-birch-throw-bowl" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Which of these pictures corresponds best to the idea that the quantity Q is <span class="math inline">\(5 \pm 2\)</span>?</p>
+<div id="fig-D-07-ehso" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-D-07-ehso-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-D-07-ehso" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-D-07-ehso-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-D-07-ehso-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-D-07-ehso-1.png" id="fig-D-07-ehso-1" class="img-fluid figure-img" data-ref-parent="fig-D-07-ehso" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-D-07-ehso-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-D-07-ehso" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-D-07-ehso-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-D-07-ehso-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-D-07-ehso-2.png" id="fig-D-07-ehso-2" class="img-fluid figure-img" data-ref-parent="fig-D-07-ehso" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-D-07-ehso-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-D-07-ehso" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-D-07-ehso-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-D-07-ehso-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-D-07-ehso-3.png" id="fig-D-07-ehso-3" class="img-fluid figure-img" data-ref-parent="fig-D-07-ehso" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-D-07-ehso-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-D-07-ehso" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-D-07-ehso-4" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-D-07-ehso-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-D-07-ehso-4.png" id="fig-D-07-ehso-4" class="img-fluid figure-img" data-ref-parent="fig-D-07-ehso" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-D-07-ehso-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-D-07-ehso-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Three relative probability distributions
+</figcaption>
+</figure>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="D-07-ehso" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-442d30372d6568736f" id="devoirs3-selection-442d30372d6568736f-1" value="AAkgiwh" data-devoirs3-option="" data-option-id="AAkgiwh" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>a</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-442d30372d6568736f" id="devoirs3-selection-442d30372d6568736f-2" value="BAhkbcf" data-devoirs3-option="" data-option-id="BAhkbcf" data-feedback="Five is not the most likely value." data-feedback-html="Five is not the most likely value.">
+    <span>b</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-442d30372d6568736f" id="devoirs3-selection-442d30372d6568736f-3" value="CAyqaes" data-devoirs3-option="" data-option-id="CAyqaes" data-feedback="Five is not the most likely value." data-feedback-html="Five is not the most likely value.">
+    <span>c</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-442d30372d6568736f" id="devoirs3-selection-442d30372d6568736f-4" value="DAvsgbv" data-devoirs3-option="" data-option-id="DAvsgbv" data-feedback="Much too broad." data-feedback-html="Much too broad.">
+    <span>d</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">D-07-ehso</span>
+</span>
+</div>
+</div>
+</div>
+<p><!-- end of exr-birch-throw-bowl --></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<!--
+id: "fox-fly-bottle"
+created: "Thu Jan 29 12:02:53 2026"
+attribution: TBA
+status: "draft"
+chapter: 8
+mode: exercise
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-fox-fly-bottle" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> <a href="#fig-austin-weather-range" class="quarto-xref">Figure&nbsp;3</a> shows the seasonal pattern in daily high and low temperatures for Austin, Texas, USA. Scanning the graph from left to right, you can see a yearly osc() pattern. Naturally, the high and low temperature on any given day vary from year to year so that, for each day, there is an uncertainty distribution.</p>
+<div id="fig-austin-weather-range" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-austin-weather-range-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../www/Austin-temperatures.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-austin-weather-range-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: As described by the source … “The daily range of reported temperatures (gray bars) and 24-hour highs (red ticks) and lows (blue ticks), placed over the daily average high (faint red line) and low (faint blue line) temperature, with 25th to 75th and 10th to 90th percentile bands.” Source: weatherspark.com
+</figcaption>
+</figure>
+</div>
+<p>Here are graphs of the low-temperature distributions for three days. Days were chosen at the lines dividing two consecutive months, e.g.&nbsp;March/April.</p>
+<div id="fig-ffb-austin" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ffb-austin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ffb-austin" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div id="fig-ffb-austin-1" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ffb-austin-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-ffb-austin-1.png" id="fig-ffb-austin-1" class="img-fluid figure-img" data-ref-parent="fig-ffb-austin" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ffb-austin-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ffb-austin" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div id="fig-ffb-austin-2" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ffb-austin-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-ffb-austin-2.png" id="fig-ffb-austin-2" class="img-fluid figure-img" data-ref-parent="fig-ffb-austin" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ffb-austin-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ffb-austin" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div id="fig-ffb-austin-3" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ffb-austin-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Drill-08_files/figure-html/fig-ffb-austin-3.png" id="fig-ffb-austin-3" class="img-fluid figure-img" data-ref-parent="fig-ffb-austin" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ffb-austin-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ffb-austin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Uncertainty distributions for the daily low temperature on four days during the year.
+</figcaption>
+</figure>
+</div>
+<p>Match each graph to one of these days:</p>
+<p>Graphic (a): <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="ffb_d07_a" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f61" id="devoirs3-selection-6666625f6430375f61-1" value="AAenbvh" data-devoirs3-option="" data-option-id="AAenbvh" data-feedback="Correct!" data-feedback-html="Correct!"> <span>Apr/May</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f61" id="devoirs3-selection-6666625f6430375f61-2" value="BAwdtqg" data-devoirs3-option="" data-option-id="BAwdtqg" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Feb/Mar</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f61" id="devoirs3-selection-6666625f6430375f61-3" value="CArdzoi" data-devoirs3-option="" data-option-id="CArdzoi" data-feedback="Sorry." data-feedback-html="Sorry."> <span>New Year’s Day</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f61" id="devoirs3-selection-6666625f6430375f61-4" value="DAaewgl" data-devoirs3-option="" data-option-id="DAaewgl" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Aug/Sept</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f61" id="devoirs3-selection-6666625f6430375f61-5" value="EAdfaso" data-devoirs3-option="" data-option-id="EAdfaso" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Nov/Dec</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ffb_d07_a</span> </span></p>
+<p>Graphic (b): <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="ffb_d07_b" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f62" id="devoirs3-selection-6666625f6430375f62-1" value="AAdrlsm" data-devoirs3-option="" data-option-id="AAdrlsm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Nov/Dec</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f62" id="devoirs3-selection-6666625f6430375f62-2" value="BAdgkzf" data-devoirs3-option="" data-option-id="BAdgkzf" data-feedback="Sorry." data-feedback-html="Sorry."> <span>June/July</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f62" id="devoirs3-selection-6666625f6430375f62-3" value="CArrrpj" data-devoirs3-option="" data-option-id="CArrrpj" data-feedback="Sorry." data-feedback-html="Sorry."> <span>New Year’s Day</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f62" id="devoirs3-selection-6666625f6430375f62-4" value="DApzjmh" data-devoirs3-option="" data-option-id="DApzjmh" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Apr/May</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f62" id="devoirs3-selection-6666625f6430375f62-5" value="EAuqoax" data-devoirs3-option="" data-option-id="EAuqoax" data-feedback="Correct!" data-feedback-html="Correct!"> <span>Sept/Oct</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ffb_d07_b</span> </span></p>
+<p>Graphic (c): <span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="ffb_d07_c" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f63" id="devoirs3-selection-6666625f6430375f63-1" value="AAnamit" data-devoirs3-option="" data-option-id="AAnamit" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Sept/Oct</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f63" id="devoirs3-selection-6666625f6430375f63-2" value="BAlvpcy" data-devoirs3-option="" data-option-id="BAlvpcy" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Nov/Dec</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f63" id="devoirs3-selection-6666625f6430375f63-3" value="CAyehle" data-devoirs3-option="" data-option-id="CAyehle" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Apr/May</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f63" id="devoirs3-selection-6666625f6430375f63-4" value="DAfxtsr" data-devoirs3-option="" data-option-id="DAfxtsr" data-feedback="Sorry." data-feedback-html="Sorry."> <span>June/July</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f63" id="devoirs3-selection-6666625f6430375f63-5" value="EAwmchh" data-devoirs3-option="" data-option-id="EAwmchh" data-feedback="Sorry." data-feedback-html="Sorry."> <span>Mar/Apr</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6666625f6430375f63" id="devoirs3-selection-6666625f6430375f63-6" value="FAuutbe" data-devoirs3-option="" data-option-id="FAuutbe" data-feedback="Correct!" data-feedback-html="Correct!"> <span>Feb/Mar</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ffb_d07_c</span> </span></p>
+</div>
+<p><!-- end of exr-fox-fly-bottle --></p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<!--
+id: "oak-eat-pan"
+created: "Fri Jan 30 08:26:10 2026"
+attribution: prompted by AI
+status: ready-to-use
+chapter: 8
+mode: drill
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-oak-eat-pan" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7</strong></span> Match the following real-world scenarios to the distribution that best models them (Uniform, Normal, or Exponential).</p>
+<p>A. “I will arrive sometime between 1:00 PM and 5:00 PM, but any time in that window is equally likely.”</p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="oep-a-3ks" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d612d336b73" id="devoirs3-selection-6f65702d612d336b73-1" value="AAbloei" data-devoirs3-option="" data-option-id="AAbloei" data-feedback="Correct!" data-feedback-html="Correct!"> <span>uniform</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d612d336b73" id="devoirs3-selection-6f65702d612d336b73-2" value="BAcqaup" data-devoirs3-option="" data-option-id="BAcqaup" data-feedback="Sorry." data-feedback-html="Sorry."> <span>normal</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d612d336b73" id="devoirs3-selection-6f65702d612d336b73-3" value="CAybfvx" data-devoirs3-option="" data-option-id="CAybfvx" data-feedback="Sorry." data-feedback-html="Sorry."> <span>exponential</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">oep-a-3ks</span> </span></p>
+<p>B. “The bus usually arrives at 8:00 AM, but it can be a few minutes early or late. It is very unlikely to be more than 15 minutes off.”</p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="oep-b-3ks" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d622d336b73" id="devoirs3-selection-6f65702d622d336b73-1" value="AAguonl" data-devoirs3-option="" data-option-id="AAguonl" data-feedback="Sorry." data-feedback-html="Sorry."> <span>uniform</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d622d336b73" id="devoirs3-selection-6f65702d622d336b73-2" value="BAbooic" data-devoirs3-option="" data-option-id="BAbooic" data-feedback="Correct!" data-feedback-html="Correct!"> <span>normal</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d622d336b73" id="devoirs3-selection-6f65702d622d336b73-3" value="CAhtnkx" data-devoirs3-option="" data-option-id="CAhtnkx" data-feedback="Sorry." data-feedback-html="Sorry."> <span>exponential</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">oep-b-3ks</span> </span></p>
+<p>C. The amount of time that passes between two random, independent events (like 100-year storms or, on a different time scale, receiving text messages).</p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="oep-c-3ks" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d632d336b73" id="devoirs3-selection-6f65702d632d336b73-1" value="AAbmcfg" data-devoirs3-option="" data-option-id="AAbmcfg" data-feedback="Sorry." data-feedback-html="Sorry."> <span>uniform</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d632d336b73" id="devoirs3-selection-6f65702d632d336b73-2" value="BAgceag" data-devoirs3-option="" data-option-id="BAgceag" data-feedback="Sorry." data-feedback-html="Sorry."> <span>normal</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d632d336b73" id="devoirs3-selection-6f65702d632d336b73-3" value="CAqabfz" data-devoirs3-option="" data-option-id="CAqabfz" data-feedback="Correct!" data-feedback-html="Correct!"> <span>exponential</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">oep-c-3ks</span> </span></p>
+<p>D. A quantity where values outside a specific range are considered impossible (probability = 0).</p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="oep-d-3ks" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d642d336b73" id="devoirs3-selection-6f65702d642d336b73-1" value="AAuqdnh" data-devoirs3-option="" data-option-id="AAuqdnh" data-feedback="Correct!" data-feedback-html="Correct!"> <span>uniform</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d642d336b73" id="devoirs3-selection-6f65702d642d336b73-2" value="BAgvvvb" data-devoirs3-option="" data-option-id="BAgvvvb" data-feedback="Sorry." data-feedback-html="Sorry."> <span>normal</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6f65702d642d336b73" id="devoirs3-selection-6f65702d642d336b73-3" value="CAefyud" data-devoirs3-option="" data-option-id="CAefyud" data-feedback="Sorry." data-feedback-html="Sorry."> <span>exponential</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">oep-d-3ks</span> </span></p>
+</div>
+<p><!-- end of exr-oak-eat-pan --></p>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<!--
+id: "elm-read-glasses"
+created: "Fri Jan 30 08:29:22 2026"
+attribution: prompted by AI
+status: "sketch"
+chapter: 9
+mode: drill
+-->
+<style>
+.theorem-title {
+  display: none;
+}
+</style>
+<div id="exr-elm-read-glasses" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8</strong></span> Which core modeling function introduced in previous chapters is mathematically equivalent to the normal (a.k.a. Gaussian) distribution?</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-08" data-label="erg-1-ue2" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6572672d312d756532" id="devoirs3-selection-6572672d312d756532-1" value="AActbhc" data-devoirs3-option="" data-option-id="AActbhc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>exp2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6572672d312d756532" id="devoirs3-selection-6572672d312d756532-2" value="BAwuzte" data-devoirs3-option="" data-option-id="BAwuzte" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>log2()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6572672d312d756532" id="devoirs3-selection-6572672d312d756532-3" value="CAziybq" data-devoirs3-option="" data-option-id="CAziybq" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>hill()</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6572672d312d756532" id="devoirs3-selection-6572672d312d756532-4" value="DAydgxz" data-devoirs3-option="" data-option-id="DAydgxz" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>hillside()</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">erg-1-ue2</span>
+</span>
+</div>
+</div>
+</div>
+<p><!-- end of exr-elm-read-glasses --></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="webr-data">
+eyJvcHRpb25zIjp7ImJhc2VVcmwiOiJodHRwczovL3dlYnIuci13YXNtLm9yZy92MC42LjAvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsiZXZhbHVhdGUiLCJrbml0ciIsImh0bWx0b29scyIsIm1vc2FpY0NhbGMiLCJnZ3Bsb3QyIiwiZ2dmb3JtdWxhIiwiZHBseXIiXSwicmVwb3MiOlsiaHR0cHM6Ly9kdGthcGxhbi5yLXVuaXZlcnNlLmRldiJdfSwicmVuZGVyX2RmIjoiZGVmYXVsdCJ9
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJ3ZWJyLXdpZGdldC0xIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoie1xuICAvLyBXYWl0IGZvciBvdXRwdXQgdG8gYmUgd3JpdHRlbiB0byB0aGUgRE9NLCB0aGVuIHRyaWdnZXIgd2lkZ2V0IHJlbmRlcmluZ1xuICBhd2FpdCBfd2Vicl92YWx1ZV8xO1xuICBpZiAod2luZG93LkhUTUxXaWRnZXRzKSB7XG4gICAgd2luZG93LkhUTUxXaWRnZXRzLnN0YXRpY1JlbmRlcigpO1xuICB9XG4gIGlmICh3aW5kb3cuUGFnZWRUYWJsZURvYykge1xuICAgIHdpbmRvdy5QYWdlZFRhYmxlRG9jLmluaXRBbGwoKTtcbiAgfVxufVxuIn0seyJjZWxsTmFtZSI6IndlYnItMSIsImlubGluZSI6ZmFsc2UsIm1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJzb3VyY2UiOiJ2aWV3b2YgX3dlYnJfZWRpdG9yXzEgPSB7XG4gIGNvbnN0IHsgV2ViUkV4ZXJjaXNlRWRpdG9yLCBiNjREZWNvZGUgfSA9IHdpbmRvdy5fZXhlcmNpc2Vfb2pzX3J1bnRpbWU7XG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwid2Vici0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHdlYnItMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBXZWJSRXhlcmNpc2VFZGl0b3Iod2ViUk9qcy53ZWJSUHJvbWlzZSwgYmxvY2suY29kZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGVkaXRvci5jb250YWluZXI7XG59XG5fd2Vicl92YWx1ZV8xID0gd2ViUk9qcy5wcm9jZXNzKF93ZWJyX2VkaXRvcl8xLCB7fSk7XG4ifSx7ImNlbGxOYW1lIjoid2Vici1wcmVsdWRlIiwiaW5saW5lIjpmYWxzZSwibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoid2ViUk9qcyA9IHtcbiAgY29uc3QgeyBXZWJSLCBDaGFubmVsVHlwZSB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZS5XZWJSO1xuICBjb25zdCB7XG4gICAgV2ViUkV2YWx1YXRvcixcbiAgICBXZWJSRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoXG4gIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHN0YXR1c0NvbnRhaW5lciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiZXhlcmNpc2UtbG9hZGluZy1zdGF0dXNcIik7XG4gIGNvbnN0IGluZGljYXRvckNvbnRhaW5lciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiZXhlcmNpc2UtbG9hZGluZy1pbmRpY2F0b3JcIik7XG4gIGluZGljYXRvckNvbnRhaW5lci5jbGFzc0xpc3QucmVtb3ZlKFwiZC1ub25lXCIpO1xuXG4gIGxldCBzdGF0dXNUZXh0ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcImRpdlwiKVxuICBzdGF0dXNUZXh0LmNsYXNzTGlzdCA9IFwiZXhlcmNpc2UtbG9hZGluZy1kZXRhaWxzXCI7XG4gIHN0YXR1c1RleHQgPSBzdGF0dXNDb250YWluZXIuYXBwZW5kQ2hpbGQoc3RhdHVzVGV4dCk7XG4gIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgSW5pdGlhbGlzZWA7XG5cbiAgLy8gSG9pc3QgaW5kaWNhdG9yIG91dCBmcm9tIGZpbmFsIHNsaWRlIHdoZW4gcnVubmluZyB1bmRlciByZXZlYWxcbiAgY29uc3QgcmV2ZWFsU3RhdHVzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXZlYWwgLmV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpZiAocmV2ZWFsU3RhdHVzKSB7XG4gICAgcmV2ZWFsU3RhdHVzLnJlbW92ZSgpO1xuICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsID4gLnNsaWRlc1wiKS5hcHBlbmRDaGlsZChyZXZlYWxTdGF0dXMpO1xuICB9XG5cbiAgLy8gTWFrZSBhbnkgcmV2ZWFsIHNsaWRlcyB3aXRoIGxpdmUgY2VsbHMgc2Nyb2xsYWJsZVxuICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKFwiLnJldmVhbCAuZXhlcmNpc2UtY2VsbFwiKS5mb3JFYWNoKChlbCkgPT4ge1xuICAgIGVsLmNsb3Nlc3QoJ3NlY3Rpb24uc2xpZGUnKS5jbGFzc0xpc3QuYWRkKFwic2Nyb2xsYWJsZVwiKTtcbiAgfSlcblxuICAvLyB3ZWJSIHN1cHBsZW1lbnRhbCBkYXRhIGFuZCBvcHRpb25zXG4gIGNvbnN0IGRhdGFDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcIndlYnItZGF0YVxcXCJdYCkudGV4dENvbnRlbnQ7XG4gIGNvbnN0IGRhdGEgPSBKU09OLnBhcnNlKGI2NERlY29kZShkYXRhQ29udGVudCkpO1xuXG4gIC8vIEdyYWIgbGlzdCBvZiByZXNvdXJjZXMgdG8gYmUgZG93bmxvYWRlZFxuICBjb25zdCBmaWxlc0NvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwidmZzLWZpbGVcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBmaWxlcyA9IEpTT04ucGFyc2UoYjY0RGVjb2RlKGZpbGVzQ29udGVudCkpO1xuXG4gIC8vIEluaXRpYWxpc2Ugd2ViUiBhbmQgc2V0dXAgZm9yIFIgY29kZSBldmFsdWF0aW9uXG4gIGxldCB3ZWJSUHJvbWlzZSA9IChhc3luYyAod2ViUikgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgd2ViUmA7XG4gICAgYXdhaXQgd2ViUi5pbml0KCk7XG5cbiAgICAvLyBJbnN0YWxsIHByb3ZpZGVkIGxpc3Qgb2YgcGFja2FnZXNcbiAgICAvLyBFbnN1cmUgd2ViUiBkZWZhdWx0IHJlcG8gaXMgaW5jbHVkZWRcbiAgICBkYXRhLnBhY2thZ2VzLnJlcG9zLnB1c2goXCJodHRwczovL3JlcG8uci13YXNtLm9yZ1wiKVxuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIHdlYlIuZXZhbFJWb2lkKGBcbiAgICAgICAgd2Vicjo6aW5zdGFsbChwa2csIHJlcG9zID0gcmVwb3MpXG4gICAgICAgIGxpYnJhcnkocGtnLCBjaGFyYWN0ZXIub25seSA9IFRSVUUpXG4gICAgICBgLCB7IGVudjoge1xuICAgICAgICBwa2c6IHBrZyxcbiAgICAgICAgcmVwb3M6IGRhdGEucGFja2FnZXMucmVwb3MsXG4gICAgICB9fSk7XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgY29uc3QgYW5hbHlzaXMgPSBhd2FpdCB3ZWJSLkZTLmFuYWx5emVQYXRoKHBhdGgpO1xuICAgICAgICBpZiAoIWFuYWx5c2lzLmV4aXN0cykge1xuICAgICAgICAgIHRyeSB7XG4gICAgICAgICAgICBhd2FpdCB3ZWJSLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICAgIH0gY2F0Y2ggKGUpIHtcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvcjogXCIke2UubWVzc2FnZX1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHJldHVybiBhd2FpdCB3ZWJSLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluc3RhbGxpbmcgd2ViUiBzaGltc2A7XG4gICAgYXdhaXQgd2ViUi5ldmFsUlZvaWQoYHdlYnI6OnNoaW1faW5zdGFsbCgpYCk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFdlYlIgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUih3ZWJSLCBkYXRhKTtcblxuICAgIHN0YXR1c1RleHQucmVtb3ZlKCk7XG4gICAgaWYgKHN0YXR1c0NvbnRhaW5lci5jaGlsZHJlbi5sZW5ndGggPT0gMCkge1xuICAgICAgc3RhdHVzQ29udGFpbmVyLnBhcmVudE5vZGUucmVtb3ZlKCk7XG4gICAgfVxuICAgIHJldHVybiB3ZWJSO1xuICB9KShuZXcgV2ViUihkYXRhLm9wdGlvbnMpKTtcblxuICAvLyBLZWVwIHRyYWNrIG9mIGluaXRpYWwgT0pTIGJsb2NrIHJlbmRlclxuICBjb25zdCByZW5kZXJlZE9qcyA9IHt9O1xuXG4gIGNvbnN0IHByb2Nlc3MgPSBhc3luYyAoY29udGV4dCwgaW5wdXRzKSA9PiB7XG4gICAgY29uc3Qgd2ViUiA9IGF3YWl0IHdlYlJQcm9taXNlO1xuICAgIGNvbnN0IGV2YWx1YXRvciA9IG5ldyBXZWJSRXZhbHVhdG9yKHdlYlIsIGNvbnRleHQpXG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHJvY2VzcyxcbiAgICB3ZWJSUHJvbWlzZSxcbiAgICByZW5kZXJlZE9qcyxcbiAgfTtcbn1cbiJ9XX0=
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

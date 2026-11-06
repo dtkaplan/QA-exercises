@@ -4,7 +4,7 @@ created: "Thu Aug 28 06:51:27 2025"
 attribution: DTK
 status: "sketch"
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

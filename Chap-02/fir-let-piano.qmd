@@ -14,12 +14,26 @@ chapter: 02
 ::: {#exr-fir-let-piano}
 Which statement best distinguishes a dimension from a quantity?
 
-```{mcq}
-#| label: d01-dimension-quantity
-1. A dimension is an aspect of a system; a quantity is a measurable way of representing that aspect. [correct]
-2. A quantity is an aspect of a system; a dimension is always a number.
-3. Dimension and quantity mean exactly the same thing.
-4. A dimension must be measured in meters.
+```{devoirs_choices}
+#| label: choices_d01.dimension.quantity
+- 'A dimension is an aspect of a system; a quantity is a measurable way of representing that aspect.':
+    correct: true
+- 'A quantity is an aspect of a system; a dimension is always a number.':
+    correct: false
+- 'Dimension and quantity mean exactly the same thing.':
+    correct: false
+- 'A dimension must be measured in meters.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-dimension-quantity",
+  question = "Placeholder for now",
+  answers = choices_d01.dimension.quantity,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-fir-let-piano -->

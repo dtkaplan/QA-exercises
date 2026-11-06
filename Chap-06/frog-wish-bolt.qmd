@@ -4,7 +4,7 @@ created: "Mon May 11 09:45:18 2026"
 attribution: DTK 
 status: "draft"
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

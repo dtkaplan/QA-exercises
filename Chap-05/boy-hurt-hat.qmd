@@ -16,32 +16,74 @@ In each of the following, you are asked to compare two numbers written in *scien
 
 ### A. Compare `3.2e5` and `4.1e4`
 
-```{mcq}
-#| label: bhh-ns-a
-1. Compare the exponents [correct]
-2. Compare the first digit of the mantissa
-3. Compare the second digit of the mantissa
-4. Compare the third digit of the mantissa.
+```{devoirs_choices}
+#| label: choices_bhh.ns.a
+- 'Compare the exponents':
+    correct: true
+- 'Compare the first digit of the mantissa':
+    correct: false
+- 'Compare the second digit of the mantissa':
+    correct: false
+- 'Compare the third digit of the mantissa.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bhh-ns-a",
+  question = "Placeholder for now",
+  answers = choices_bhh.ns.a,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 ### B. Compare `7.5e3` and `7.1e3`
 
-```{mcq}
-#| label: bhh-ns-b
-1. Compare the exponents 
-2. Compare the first digit of the mantissa
-3. Compare the second digit of the mantissa [correct]
-4. Compare the third digit of the mantissa.
+```{devoirs_choices}
+#| label: choices_bhh.ns.b
+- 'Compare the exponents':
+    correct: false
+- 'Compare the first digit of the mantissa':
+    correct: false
+- 'Compare the second digit of the mantissa':
+    correct: true
+- 'Compare the third digit of the mantissa.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bhh-ns-b",
+  question = "Placeholder for now",
+  answers = choices_bhh.ns.b,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 ### C. Compare `1.2e-5` and `1.3e5`
 
-```{mcq}
-#| label: bhh-ns-c
-1. Compare the exponents [correct]
-2. Compare the first digit of the mantissa
-3. Compare the second digit of the mantissa
-4. Compare the third digit of the mantissa.
+```{devoirs_choices}
+#| label: choices_bhh.ns.c
+- 'Compare the exponents':
+    correct: true
+- 'Compare the first digit of the mantissa':
+    correct: false
+- 'Compare the second digit of the mantissa':
+    correct: false
+- 'Compare the third digit of the mantissa.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bhh-ns-c",
+  question = "Placeholder for now",
+  answers = choices_bhh.ns.c,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

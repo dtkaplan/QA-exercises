@@ -1,0 +1,18 @@
+<!--
+id: "leg-fight-stair"
+created: "Sun Dec 28 14:09:02 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-leg-fight-stair}
+What's the distinction between an "argument" and an "input"?
+
+`r devoirs::devoirs_text("lfs-1-3sews")`
+
+:::
+ <!-- end of exr-leg-fight-stair -->

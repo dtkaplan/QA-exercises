@@ -4,7 +4,7 @@ created: "Mon Aug 25 15:25:02 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 3
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,18 +16,18 @@ mode: "exercise"
 
 a. What are the {{< var dim.dim >}}s of *public debt*? [S in units of whatever is the relevant currency.]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: ssk-1ss"}
 
-`r devoirs::devoirs_text("ssk-a-94ls", rows = 1)`
+`r devoirs3::devoirs_text("ssk-a-94ls", height = 1)`
 
 b. What are the {{< var dim.dim >}}s of *gross domestic product*?  [S T^-1^]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: ssk-1NQ"}
 
-`r devoirs::devoirs_text("ssk-b-94ls", rows = 1)`
+`r devoirs3::devoirs_text("ssk-b-94ls", height = 1)`
 
 c. It's quantitatively incorrect to compare *public debt* with *gross domestic product*. 
 
     i. What {{< var dim.dim >}} must the quantity be that multiplies *gross domestic product* in order to convert it to a quantity that is directly comparable with *public debt*?
     ii. Let's give the name B to the quantity in (i). You know the dimension of B, but to perform the multiplication you need to choose a *value* for B. Is there a value for B that is obviously correct? If you say "no," explain why not. If you say "yes," explain the reasoning behind its being obvious.
     
-    `r devoirs::devoirs_text("ssk-c-94ls", rows = 4)`
+    `r devoirs3::devoirs_text("ssk-c-94ls", height = 4)`
 
 The *Economist* article continues:
 
@@ -35,14 +35,14 @@ The *Economist* article continues:
 
 d. If *fiscal deficit* can be stated as a percentage of GDP, what does that say about the {{< var dim.dim >}} of *fiscal deficit*?
 
-`r devoirs::devoirs_text("ssk-d-94ls", rows = 2)`
+`r devoirs3::devoirs_text("ssk-d-94ls", height = 2)`
 
 e. Explain what's different between *fiscal deficit* and *debt*.
 
-`r devoirs::devoirs_text("ssk-e-94ls", rows = 2)`
+`r devoirs3::devoirs_text("ssk-e-94ls", height = 2)`
 
 f. *Fiscal deficit* can be reckoned as the sum of 1) *interest payments* on the debt (3.3%) and 2) the amount of other spending (on education, pensions, military, etc.) in excess of government income (taxes, etc.) By what percentage would spending need to decrease or taxes need to increase in order to eliminate the fiscal deficit?
 
-`r devoirs::devoirs_text("ssk-f-94ls", rows = 1)`
+`r devoirs3::devoirs_text("ssk-f-94ls", height = 1)`
 :::
  <!-- end of exr-snake-show-knife -->

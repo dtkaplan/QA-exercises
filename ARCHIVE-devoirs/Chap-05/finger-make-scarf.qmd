@@ -1,0 +1,16 @@
+<!--
+id: "finger-make-scarf"
+created: "Thu Aug 20 10:59:32 2026"
+attribution: DTK
+uses: magnitudes and rates of change
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-finger-make-scarf}
+Something about economists using a rate of change of magnitudes for describing the relationship between two financial dimensions. When the underlying ratio reflects *prices* of a good, the magnitude rate of change is called an elasticity.
+:::
+ <!-- end of exr-finger-make-scarf -->

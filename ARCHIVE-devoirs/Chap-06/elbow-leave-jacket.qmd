@@ -1,0 +1,15 @@
+<!--
+id: "elbow-leave-jacket"
+created: "Wed Mar  4 17:09:26 2026"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-elbow-leave-jacket}
+Do the calculations to produce the years-saved versus cost function from `r xf("fig-survival-sketch")`. Or maybe just the average years saved, that is, how to compute an expectation value.
+:::
+ <!-- end of exr-elbow-leave-jacket -->

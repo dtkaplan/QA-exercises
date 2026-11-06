@@ -1,0 +1,18 @@
+<!--
+id: "cat-know-scarf"
+created: "Wed Mar  4 17:08:52 2026"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cat-know-scarf}
+Construct the whole QALYs versus cost, with optimal allocation between Natal and Cancer. Turn this into an "average cost" per QALY. Will this have a maximum? Show that near the maximum the function is flat. 
+
+I"M NOT SURE the above will work. Find some optimality 
+
+:::
+ <!-- end of exr-cat-know-scarf -->

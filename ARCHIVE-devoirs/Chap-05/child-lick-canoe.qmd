@@ -1,0 +1,16 @@
+<!--
+id: "child-lick-canoe"
+created: "Fri Aug 29 11:06:00 2025"
+attribution: TBA
+status: "sketch"
+chapter: 5
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-child-lick-canoe}
+BUILD AN EXERCISE OUT OF THIS
+The use of factors of 10 in counting orders of magnitude is arbitrary. A person walking and a person jogging are on the edge of being qualitatively different, although their speeds differ by a factor of only 2. Aircraft that cruise at 600 mph and 1200 mph are qualitatively different in design, although the speeds are only a factor of 2 apart. A professional basketball player (height 2 meters or more) is qualitatively different from a third grader (height about 1 meter).
+:::
+ <!-- end of exr-child-lick-canoe -->

@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Ch 14 drill
 status: ready-to-use
 chapter: 14
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,12 +13,26 @@ mode: "exercise"
 ::: {#exr-spider-mean-bolt}
 On a graph of a function, what geometric quantity is the *rate of change* of the function with respect to its input? What is the name of the *function* that outputs that rate for every input?
 
-```{mcq}
-#| label: smb-1-lse
-1. The rate of change is the *height* of the graph; the function that gives it is the *integral*.
-2. The rate of change is the *slope* of the graph at that input; the function that gives the slope at every input is the *derivative*. [correct]
-3. The rate of change is the *area* under the graph; the function is the *antiderivative*.
-4. The rate of change is the *intercept*; the function is the *marginal* function.
+```{devoirs_choices}
+#| label: choices_smb.1.lse
+- 'The rate of change is the *height* of the graph; the function that gives it is the *integral*.':
+    correct: false
+- 'The rate of change is the *slope* of the graph at that input; the function that gives the slope at every input is the *derivative*.':
+    correct: true
+- 'The rate of change is the *area* under the graph; the function is the *antiderivative*.':
+    correct: false
+- 'The rate of change is the *intercept*; the function is the *marginal* function.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "smb-1-lse",
+  question = "Placeholder for now",
+  answers = choices_smb.1.lse,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

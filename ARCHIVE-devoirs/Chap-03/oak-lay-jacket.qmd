@@ -1,0 +1,23 @@
+<!--
+id: "oak-lay-jacket"
+created: "Fri Nov  7 08:10:53 2025"
+attribution: TBA
+status: "draft"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-oak-lay-jacket}
+INCORPORATE THIS INTO A REFLECTION on "operationalization"
+
+
+
+Profit and loss are often quantified in terms of price and money. This is a limited quantification of the broader concept. Other elements that merit consideration are environmental and health impacts, societal impacts such as the role of work in society, and many others. Attempts to quantify this, such as the ?? Gross Happiness Index or the Gini Index of income inequality are genuinely helpful insofar as they allow us to expand the set of factors that go into the calculations.
+
+
+:::
+ <!-- end of exr-oak-lay-jacket -->

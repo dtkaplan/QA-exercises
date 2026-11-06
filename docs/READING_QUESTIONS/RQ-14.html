@@ -136,136 +136,441 @@ window.Quarto = {
 </header>
 
 
-<p><span id="devoirs-docID" style="display: none;">RQ-14.rmarkdown</span> <span><button onclick="devoirsSubmit()">Collect your answers</button></span> <span id="devoirs_summary">No answers yet collected</span></p>
-<div class="cell">
-<div class="cell-output-display">
-<script type="text/javascript">
- console.log("In devoirs.js")
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-function devoirsCollectEssays() {
-  var essay_answers = [];
-  var items = document.getElementsByClassName("devoirs-text");
-  for (i = 0; i < items.length; i++) {
-    //console.log("text entry" + i + "being handled");
-    essay_answers[i] = {itemid: items[i].id, contents: items[i].value}
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
   }
 
-  return essay_answers;
-}
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
 
-function devoirsGetDocID() {
-  return document.getElementById("devoirs-docID").innerHTML
-}
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
 
-function devoirsCollectMC() {
-    let mc_answers = [] // Hold the information
-    var ele = document.getElementsByClassName("devoirs-mcq");
-    var count = 0;
-    for (i = 0; i < ele.length; i++) {
-        if (ele[i].checked) {
-          //console.log("Entering conditional.");
-          let checked_one = ele[i];
-          mc_answers[count++] = {itemid: checked_one.id, w: checked_one.getAttribute("w"), contents: checked_one.text};
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
         }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
     }
-    return mc_answers;
-}
 
-console.log("About to define WebR")
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
 
-function devoirsCollectWebR() {
-  var chunk_contents = []; // placeholder for collecting webr items
-  if (typeof qwebrCellDetails == "undefined") {
-    // There aren't any webr chunks
-    return chunk_contents;
-  }
-  var chunks = qwebrCellDetails;
-  for (i = 0; i < chunks.length; i++) {
-    chunk_contents[i] = {itemid: chunks[i].options["label"], contents: chunks[i].code};
-  }
-
-  return chunk_contents;
-}
-
-console.log("About to define devoirsSubmit")
-
-function devoirsSubmit() {
-  console.log("About to collect history")
-
-  // check if there is any sign of a webr entry
-  // If not, don't try to collect webr entries
-  if (typeof qwebrRCommandHistory === 'undefined') {
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays(), WebR: {}, R: {}}
-  } else {
-    console.log("Getting R commands.")
-    var Rhistory = qwebrRCommandHistory.map((x) => x.replace(/Ran code in (.*) at (.*[AP]M).{5}(.*)/, "[chunk: $1, time: $2, code: $3]"))
-
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays()} //, WebR: devoirsCollectWebR(), R: Rhistory}
+    document.body.prepend(toolbar);
   }
 
-  navigator.clipboard.writeText(JSON.stringify(items));
-
-  // summarize what's being collected
-  var my_summary = "Answers copied to clipboard. Fixed choice: " + items.MC.length + " Essays: " + items.Essays.length + " WebR chunks: " + items.WebR.length
-
-  document.getElementById("devoirs_summary").innerHTML = my_summary;
-}
-
-console.log("Read devoirsSubmit()")
-
-// Hint handling in Multiple choice
-
-// Still have to add an on/off switch from options
-
-function devoirs_setup_hintarea() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) answers[i].addEventListener('click', function(e){document.getElementById(e.target.name + "-hintarea").innerHTML = e.target.getAttribute("hint")})
-}
-
- window.addEventListener("load", function() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) {
-    if (answers[i].getAttribute("show_hints") == "TRUE") {
-        answers[i].addEventListener('click', function(e){
-          console.log("inserting hint")
-        document.getElementById(e.target.name + "-hintarea").innerText = e.target.getAttribute("hint")
-      })
-
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
     }
   }
-})
 
-console.log("Added hint summary.") 
-</script>
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
 
-</div>
-</div>
-<script type="text/javascript">
-      // clear the local storage
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('btnClearStorage');
-      form.addEventListener("click", function () {
-        localStorage.clear();
-        location.reload();
-        console.log("Clearing memory");
-      }, false);
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
     }
-    )
-    </script>
-<button id="btnClearStorage">
-Clear memory
-</button>
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
 <div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3.</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2.</a></li></ul>
 <div class="tab-content page-columns page-full">
 <div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <!--
 id: "cheetah-stand-mattress"
 created: "Sun Dec 28 14:33:01 2025"
 attribution: DTK
-status: "ready-to-use"
+status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
@@ -280,25 +585,9 @@ mode: "exercise"
 <p>We are going to look at the rate of change of the horse’s position with respect to time. Of course, “rate of change of position with respect to time” is more commonly known as <em>velocity</em>. And, evidently, different parts of the horse are moving with different velocities at different times.</p>
 <p>To start, make measurements from the photos of two parts of the horse: the tip of the nose and the center of one of the front hooves. Which hoof? The one that is <em>not</em> in contact with the ground in frame 1 and is being pulled behind a bent knee in frame 2. (Note that to see the hoof is being pulled, you might need to refer to frame 3. Simple dynamical phenomena play out over extended time.)</p>
 <p>The following is a text-entry box that will be submitted along with your other answers. Questions (1) - (3) below are to get you started filling in the velocity columns of the table.</p>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for csm-tab-3ks.');
-      const form = document.getElementById('csm-tab-3ks');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('csm-tab-3ks').value;
-        localStorage.setItem("csm-tab-3ks-contents", todo);
-        console.log("Saving value of csm-tab-3ks.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("csm-tab-3ks-contents");
-      if (savedValue) {
-        document.getElementById('csm-tab-3ks').value = savedValue;
-      }
-})
-</script>
-<textarea id="csm-tab-3ks" name="csm-tab-3ks" class="devoirs-text" style="font-family: monospace, monospace;" rows="14" cols="50" placeholder="Type here. (ID csm-tab-3ks)">                              Nose       Hoof
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-RQ-14" data-label="csm-tab-3ks">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d7461622d336b73">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d7461622d336b73" class="devoirs3-text-input" rows="14" cols="40" placeholder="" data-devoirs3-input="">                              Nose       Hoof
 Frame | Time | Nose | Hoof | Velocity | Velocity 
 ------|------|------|------|----------|----------
 1     | 0.00 |  8.1 |  5.4 |
@@ -313,176 +602,46 @@ Frame | Time | Nose | Hoof | Velocity | Velocity
 10    | 0.36 | 17.2 | 14.3 |
 11    | 0.40 | 18.3 | 16.1 |
 </textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-tab-3ks</span></p>
+</div>
 <ol type="1">
 <li>What is the change in nose position from frame 1 to frame 2?</li>
 </ol>
-<span> <small style="color: grey;" id="csm-1-clw-hintarea" class="hintarea">csm-1-clw</small>
-<form id="csm-1-clw-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-0.6" id="csm-1-clw-1" w="32" name="csm-1-clw" hint="Sorry!" show_hints="TRUE"> -0.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.6" id="csm-1-clw-2" w="7" name="csm-1-clw" hint="This is wide of the mark." show_hints="TRUE"> 0.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1.3" id="csm-1-clw-3" w="5" name="csm-1-clw" hint="You're right!" show_hints="TRUE"> 1.3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="2.7" id="csm-1-clw-4" w="19" name="csm-1-clw" hint="Oops!" show_hints="TRUE"> 2.7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="3.5" id="csm-1-clw-5" w="87" name="csm-1-clw" hint="No." show_hints="TRUE"> 3.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="csm-1-clw" id="csm-1-clw.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for csm-1-clw.');
-      const form = document.getElementById('csm-1-clw-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('csm-1-clw-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for csm-1-clw.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for csm-1-clw.");
-          localStorage.setItem('csm-1-clw-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-RQ-14" data-label="csm-1-clw" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-1" value="AAnuowp" data-devoirs3-option="" data-option-id="AAnuowp" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-0.6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-2" value="BAyspvm" data-devoirs3-option="" data-option-id="BAyspvm" data-feedback="Sorry." data-feedback-html="Sorry."> <span>0.6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-3" value="CAkfeyg" data-devoirs3-option="" data-option-id="CAkfeyg" data-feedback="Correct!" data-feedback-html="Correct!"> <span>1.3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-4" value="DAozxov" data-devoirs3-option="" data-option-id="DAozxov" data-feedback="Sorry." data-feedback-html="Sorry."> <span>2.7</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-63736d2d312d636c77" id="devoirs3-selection-63736d2d312d636c77-5" value="EAnadgi" data-devoirs3-option="" data-option-id="EAnadgi" data-feedback="Sorry." data-feedback-html="Sorry."> <span>3.5</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-1-clw</span> </span></p>
 <ol start="2" type="1">
 <li>What is the rate of change of nose position with respect to time from frame 1 to frame 2?</li>
 </ol>
-<span> <small style="color: grey;" id="csv-2-kwc-hintarea" class="hintarea">csv-2-kwc</small>
-<form id="csv-2-kwc-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="-10.9" id="csv-2-kwc-1" w="32" name="csv-2-kwc" hint="Incorrect choice." show_hints="TRUE"> -10.9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="14.6" id="csv-2-kwc-2" w="19" name="csv-2-kwc" hint="Not quite." show_hints="TRUE"> 14.6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="32.5" id="csv-2-kwc-3" w="29" name="csv-2-kwc" hint="You're right!" show_hints="TRUE"> 32.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="52.3" id="csv-2-kwc-4" w="23" name="csv-2-kwc" hint="This is wide of the mark." show_hints="TRUE"> 52.3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="57.7" id="csv-2-kwc-5" w="87" name="csv-2-kwc" hint="You're wrong here." show_hints="TRUE"> 57.7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="csv-2-kwc" id="csv-2-kwc.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for csv-2-kwc.');
-      const form = document.getElementById('csv-2-kwc-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('csv-2-kwc-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for csv-2-kwc.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for csv-2-kwc.");
-          localStorage.setItem('csv-2-kwc-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-RQ-14" data-label="csv-2-kwc" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-1" value="AAyvrpq" data-devoirs3-option="" data-option-id="AAyvrpq" data-feedback="Sorry." data-feedback-html="Sorry."> <span>-10.9</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-2" value="BAslcgc" data-devoirs3-option="" data-option-id="BAslcgc" data-feedback="Sorry." data-feedback-html="Sorry."> <span>14.6</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-3" value="CAsiuhu" data-devoirs3-option="" data-option-id="CAsiuhu" data-feedback="Correct!" data-feedback-html="Correct!"> <span>32.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-4" value="DAutfri" data-devoirs3-option="" data-option-id="DAutfri" data-feedback="Sorry." data-feedback-html="Sorry."> <span>52.3</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d322d6b7763" id="devoirs3-selection-6373762d322d6b7763-5" value="EAixzuy" data-devoirs3-option="" data-option-id="EAixzuy" data-feedback="Sorry." data-feedback-html="Sorry."> <span>57.7</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csv-2-kwc</span> </span></p>
 <ol start="3" type="1">
 <li>What is the rate of change in hoof position with respect to time from frame 1 to frame 2?</li>
 </ol>
-<span> <small style="color: grey;" id="csv-3-csl-hintarea" class="hintarea">csv-3-csl</small>
-<form id="csv-3-csl-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="25.1" id="csv-3-csl-1" w="19" name="csv-3-csl" hint="Nope." show_hints="TRUE"> 25.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="31.9" id="csv-3-csl-2" w="19" name="csv-3-csl" hint="You might think so, but ..." show_hints="TRUE"> 31.9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="45.1" id="csv-3-csl-3" w="19" name="csv-3-csl" hint="Not so!" show_hints="TRUE"> 45.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="52.5" id="csv-3-csl-4" w="8" name="csv-3-csl" hint="Correct." show_hints="TRUE"> 52.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="57.7" id="csv-3-csl-5" w="87" name="csv-3-csl" hint="Sorry!" show_hints="TRUE"> 57.7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="csv-3-csl" id="csv-3-csl.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for csv-3-csl.');
-      const form = document.getElementById('csv-3-csl-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('csv-3-csl-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for csv-3-csl.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for csv-3-csl.");
-          localStorage.setItem('csv-3-csl-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
+<p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-RQ-14" data-label="csv-3-csl" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">Placeholder for now</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-1" value="AAiogmp" data-devoirs3-option="" data-option-id="AAiogmp" data-feedback="Sorry." data-feedback-html="Sorry."> <span>25.1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-2" value="BAapebk" data-devoirs3-option="" data-option-id="BAapebk" data-feedback="Sorry." data-feedback-html="Sorry."> <span>31.9</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-3" value="CAvzgxx" data-devoirs3-option="" data-option-id="CAvzgxx" data-feedback="Sorry." data-feedback-html="Sorry."> <span>45.1</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-4" value="DAaokex" data-devoirs3-option="" data-option-id="DAaokex" data-feedback="Correct!" data-feedback-html="Correct!"> <span>52.5</span> </label> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-6373762d332d63736c" id="devoirs3-selection-6373762d332d63736c-5" value="EAlurde" data-devoirs3-option="" data-option-id="EAlurde" data-feedback="Sorry." data-feedback-html="Sorry."> <span>57.7</span> </label> <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csv-3-csl</span> </span></p>
 <ol start="4" type="1">
 <li><p>Consider this phrase: “The rate of change in hoof position with respect to nose position.” Calculate it, then explain how the value is related to the values from (2) and (3).</p></li>
 <li><p>Do similar calculations as in (2) and (3), but go backwards: from frame 2 to frame 1. Do your results have an evident relationship to the values you calculated in (2) and (3).</p></li>
 <li><p>Fill in the velocity columns for <strong>?@tbl-nose-hoof</strong> for all ten pairs of successive frames. As you do so, contemplate this question: for the rates of change from frame n to n+1, should you enter the values on line n or line n+1 or something different? Would either be valid? Both? We just want to hear what you’re thinking about this, not that there is a right answer.</p></li>
 </ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for csm-roc-uw34.');
-      const form = document.getElementById('csm-roc-uw34');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('csm-roc-uw34').value;
-        localStorage.setItem("csm-roc-uw34-contents", todo);
-        console.log("Saving value of csm-roc-uw34.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("csm-roc-uw34-contents");
-      if (savedValue) {
-        document.getElementById('csm-roc-uw34').value = savedValue;
-      }
-})
-</script>
-<textarea id="csm-roc-uw34" name="csm-roc-uw34" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID csm-roc-uw34)"></textarea>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-RQ-14" data-label="csm-roc-uw34">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d726f632d75773334">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d726f632d75773334" class="devoirs3-text-input" rows="3" cols="40" placeholder="Write your answer to (6) here." data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-roc-uw34</span></p>
+</div>
 <ol start="7" type="1">
 <li>Imagine that your answer to the previous question was “both.” You would then have two different velocities to enter on each line of the table. But the horse’s nose cannot have two different velocities at the same time. This is a genuine problem. In <a href="Chap-14-rates-of-change.html#sec-rates-of-change">Chapter 14</a> the word “instantaneous” is associated with the conceptual resolution of this problem. Explain the connection between “instantaneous” and the resolution of the riddle in (6).</li>
 </ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for csm-7-xekw.');
-      const form = document.getElementById('csm-7-xekw');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('csm-7-xekw').value;
-        localStorage.setItem("csm-7-xekw-contents", todo);
-        console.log("Saving value of csm-7-xekw.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("csm-7-xekw-contents");
-      if (savedValue) {
-        document.getElementById('csm-7-xekw').value = savedValue;
-      }
-})
-</script>
-<textarea id="csm-7-xekw" name="csm-7-xekw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID csm-7-xekw)"></textarea>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-RQ-14" data-label="csm-7-xekw">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d372d78656b77">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d372d78656b77" class="devoirs3-text-input" rows="3" cols="40" placeholder="Write your answer to (7) here." data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-7-xekw</span></p>
+</div>
 <ol start="8" type="1">
 <li>A high-speed, high-resolution video camera can cover the same time span as covered in Muybridge’s photo with thousands of successive frames rather than just eleven. How might such data make the question of where to place each velocity data point practically of no consequence.</li>
 </ol>
-<script type="text/javascript">
-      //save entered info
-      document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for csm-8-gskw.');
-      const form = document.getElementById('csm-8-gskw');
-      form.addEventListener("input", function () {
-        var todo = document.getElementById('csm-8-gskw').value;
-        localStorage.setItem("csm-8-gskw-contents", todo);
-        console.log("Saving value of csm-8-gskw.")
-      }, false);
-
-      //on page load, read in the old value
-      const savedValue = localStorage.getItem("csm-8-gskw-contents");
-      if (savedValue) {
-        document.getElementById('csm-8-gskw').value = savedValue;
-      }
-})
-</script>
-<textarea id="csm-8-gskw" name="csm-8-gskw" class="devoirs-text" style="font-family: monospace, monospace;" rows="4" cols="50" placeholder="Type here. (ID csm-8-gskw)"></textarea>
+<div class="devoirs3-text-widget" data-devoirs3-widget="text" data-docid="QA-RQ-14" data-label="csm-8-gskw">
+<label class="devoirs3-visually-hidden" for="devoirs3-text-63736d2d382d67736b77">Text editor box.</label>
+<textarea id="devoirs3-text-63736d2d382d67736b77" class="devoirs3-text-input" rows="3" cols="40" placeholder="Write your answer to (8) here." data-devoirs3-input=""></textarea>
+<p><button type="button" class="devoirs3-clear-button" data-devoirs3-clear="" aria-label="Clear answer for Text editor box.">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">csm-8-gskw</span></p>
+</div>
 <p><a href="#fig-nose-hoof-continuous" class="quarto-xref">Figure&nbsp;1</a> shows a model of the position of the nose and hoof as they vary continuously in time. The graphs are annotated with sloping lines where the unit of the slope is m/s.</p>
 <div id="fig-nose-hoof-continuous" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
@@ -530,7 +689,7 @@ Figure&nbsp;1: A reconstruction of nose and hoof positions as a continuous funct
 </ol></li>
 </ol>
 <p>The <code>{devoirs}</code> homework collection system doesn’t handle pictures, but bring your annotated graph to class for discussion purposes.</p>
-</span></span></span></div>
+</div>
 <p><!-- end of exr-cheetah-stand-mattress --></p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
@@ -540,7 +699,7 @@ created: "Sat Dec 20 08:45:42 2025"
 attribution: TBA
 status: "draft"
 chapter: 14
-mode: "reading-question"
+mode: reading-question
 -->
 <style>
 .theorem-title {
@@ -561,52 +720,33 @@ mode: "reading-question"
 </ul>
 <p>Question: What is the approximate fuel efficiency of the European model in miles per gallon, and which car is more “efficient” (uses less fuel per mile)?</p>
 <div class="cell">
-<span> <small style="color: grey;" id="bbg-1-cfr-hintarea" class="hintarea">bbg-1-cfr</small>
-<form id="bbg-1-cfr-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... efficient." id="bbg-1-cfr-1" w="19" name="bbg-1-cfr" hint="No." show_hints="TRUE"> The European model is 18.6 mpg, making the American model more efficient.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... efficient." id="bbg-1-cfr-2" w="41" name="bbg-1-cfr" hint="Score!" show_hints="TRUE"> The European model is 29.5 mpg, making the American model slightly more efficient.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... efficient." id="bbg-1-cfr-3" w="19" name="bbg-1-cfr" hint="Not quite right." show_hints="TRUE"> The European model is 46.5 mpg, making the European model significantly more efficient.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The Europe ... long trip." id="bbg-1-cfr-4" w="3" name="bbg-1-cfr" hint="You might think so, but ..." show_hints="TRUE"> The European model is 7.75 mpg, making it a very poor choice for a long trip.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="bbg-1-cfr" id="bbg-1-cfr.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for bbg-1-cfr.');
-      const form = document.getElementById('bbg-1-cfr-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('bbg-1-cfr-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for bbg-1-cfr.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for bbg-1-cfr.");
-          localStorage.setItem('bbg-1-cfr-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-RQ-14" data-label="bbg-1-cfr" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6262672d312d636672" id="devoirs3-selection-6262672d312d636672-1" value="AAeexjc" data-devoirs3-option="" data-option-id="AAeexjc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The European model is 18.6 mpg, making the American model more efficient.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6262672d312d636672" id="devoirs3-selection-6262672d312d636672-2" value="BAwavau" data-devoirs3-option="" data-option-id="BAwavau" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>The European model is 29.5 mpg, making the American model slightly more efficient.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6262672d312d636672" id="devoirs3-selection-6262672d312d636672-3" value="CAtwznj" data-devoirs3-option="" data-option-id="CAtwznj" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The European model is 46.5 mpg, making the European model significantly more efficient.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6262672d312d636672" id="devoirs3-selection-6262672d312d636672-4" value="DAktlmf" data-devoirs3-option="" data-option-id="DAktlmf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The European model is 7.75 mpg, making it a very poor choice for a long trip.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">bbg-1-cfr</span>
+</fieldset>
+</div>
+</div>
 <!-- Opening answer: bbg-7Se -->
-<div class="callout callout-style-default callout-tip callout-titled" style="display: block;">
+<div class="callout callout-style-default callout-tip callout-titled" style="display: none;">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -628,317 +768,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- closing answer bbg-7Se -->
 </div>
 <p><!-- end of exr-bee-begin-gloves --></p>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<!--
-id: "crow-pull-laundry"
-created: "Sat Jul 12 09:28:56 2025"
-attribution: TBA
-status: "ready-to-use"
-chapter: 14
-mode: "reading-question"
--->
-<style>
-.theorem-title {
-  display: none;
-}
-</style>
-<div id="exr-crow-pull-laundry" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3</strong></span> Light bulbs generally have a quantity printed on them: the wattage. Similarly, light-bulb sockets often have a “max watts” label advising the user of the largest wattage bulb that can work safely in the socket.</p>
-<dl>
-<dt>Part a</dt>
-<dd>
-What is the dimension of a watt?
-</dd>
-</dl>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="bulb-wattage-hintarea" class="hintarea">bulb-wattage</small>
-<form id="bulb-wattage-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="Energy " id="bulb-wattage-1" w="19" name="bulb-wattage" hint="Wrong." show_hints="TRUE"> Energy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Power" id="bulb-wattage-2" w="5" name="bulb-wattage" hint="You've got it!" show_hints="TRUE"> Power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Electrical voltage" id="bulb-wattage-3" w="19" name="bulb-wattage" hint="Nope." show_hints="TRUE"> Electrical voltage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Electrical current" id="bulb-wattage-4" w="87" name="bulb-wattage" hint="Wrong." show_hints="TRUE"> Electrical current &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="bulb-wattage" id="bulb-wattage.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for bulb-wattage.');
-      const form = document.getElementById('bulb-wattage-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('bulb-wattage-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for bulb-wattage.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for bulb-wattage.");
-          localStorage.setItem('bulb-wattage-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<!-- Opening answer: quantities-2uB -->
-<div class="callout callout-style-default callout-tip callout-titled" style="display: block;">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Since people don’t directly perceive electrical current or voltage, it is hard to form an intuition about them. Instead, training is required to interpret properly the meanings of electrical dimensions.</p>
-<p>An exact mathematical analogy to electrical dimensions can be made to water and flow. You turn on the shower and step in for four minutes. As you shower, at each instant you can feel the “intensity” (flow) of the spray from the shower-head. You even have a faucet to set the flow. This flow is analogous to the power used by a light bulb.</p>
-<p>Over the full course of your 4-minute shower, six gallons of water goes down the train. Gallons, of course, have the dimension of <em>volume</em>. You used those six gallons over four minutes. Consequently, the <strong>flow</strong> of water is <span class="math inline">\(\frac{6\, \text{gallons}}{4\, \text{minutes}} = 1.5\, \text{gallons per minute}\)</span>. The volume of water used in your shower session is analogous to the energy used by a light bulb: it is power multiplied by duration. <span data-tooltip="Ans id: quantities-2uB">..id..</span></p>
-</div>
-</div>
-</div>
-<!-- closing answer quantities-2uB -->
-<dl>
-<dt>Part b</dt>
-<dd>
-The brightness of the light emitted by a light bulb is proportional to power. Suppose you turn on a 20-watt light when you walk into a room. This consumes energy. The energy used by the bulb is the power multiplied by the duration that the light was on.
-</dd>
-</dl>
-<ol type="1">
-<li>If you stay in the room for 1 hour, turning off the light when you leave, how much energy has the light consumed?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-b1-hintarea" class="hintarea">light-bulb-b1</small>
-<form id="light-bulb-b1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="20 watts" id="light-bulb-b1-1" w="7" name="light-bulb-b1" hint="A watt is a unit of power, not energy," show_hints="TRUE"> 20 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="20 watt-hours" id="light-bulb-b1-2" w="35" name="light-bulb-b1" hint="Right-O!" show_hints="TRUE"> 20 watt-hours &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough ... n is given" id="light-bulb-b1-3" w="7" name="light-bulb-b1" hint="Not quite right." show_hints="TRUE"> Not enough information is given &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1 hour" id="light-bulb-b1-4" w="19" name="light-bulb-b1" hint="An hour is a unit of time. Energy is power multiplied by duration (time)." show_hints="TRUE"> 1 hour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b1" id="light-bulb-b1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-b1.');
-      const form = document.getElementById('light-bulb-b1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-b1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-b1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-b1.");
-          localStorage.setItem('light-bulb-b1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="2" type="1">
-<li>In terms of the fundamental <em>dimension</em>s—L, M, T—energy has <em>dimension</em> L<sup>2</sup> M T<sup>-2</sup>. What is the <em>dimension</em> of power?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-b2-hintarea" class="hintarea">light-bulb-b2</small>
-<form id="light-bulb-b2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L^2^ M T^-1^" id="light-bulb-b2-1" w="3" name="light-bulb-b2" hint="No." show_hints="TRUE"> L<sup>2</sup> M T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ M T^-2^" id="light-bulb-b2-2" w="19" name="light-bulb-b2" hint="Incorrect." show_hints="TRUE"> L<sup>2</sup> M T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ M T^-3^" id="light-bulb-b2-3" w="41" name="light-bulb-b2" hint="That is, energy *divided by* time." show_hints="TRUE"> L<sup>2</sup> M T<sup>-3</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b2" id="light-bulb-b2.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-b2.');
-      const form = document.getElementById('light-bulb-b2-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-b2-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-b2.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-b2.");
-          localStorage.setItem('light-bulb-b2-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="3" type="1">
-<li>You might reasonably ask, “What does mass have to do with energy?” Perhaps you remember Einstein’s famous equation for energy: <span class="math display">\[E = m\, c^2\]</span> where <span class="math inline">\(m\)</span> is mass and <span class="math inline">\(c\)</span> is the <em>speed</em> of light. What is the dimension of <span class="math inline">\(c^2\)</span>?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-b3-hintarea" class="hintarea">light-bulb-b3</small>
-<form id="light-bulb-b3-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="L T" id="light-bulb-b3-1" w="23" name="light-bulb-b3" hint="Oops!" show_hints="TRUE"> L T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L" id="light-bulb-b3-2" w="32" name="light-bulb-b3" hint="Hmmm ..." show_hints="TRUE"> L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L T^-1^" id="light-bulb-b3-3" w="19" name="light-bulb-b3" hint="Incorrect." show_hints="TRUE"> L T<sup>-1</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L T^-2^" id="light-bulb-b3-4" w="32" name="light-bulb-b3" hint="Incorrect." show_hints="TRUE"> L T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="L^2^ T^-2^" id="light-bulb-b3-5" w="5" name="light-bulb-b3" hint="Excellent!" show_hints="TRUE"> L<sup>2</sup> T<sup>-2</sup> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-b3" id="light-bulb-b3.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-b3.');
-      const form = document.getElementById('light-bulb-b3-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-b3-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-b3.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-b3.");
-          localStorage.setItem('light-bulb-b3-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<p>Consequently, <span class="math inline">\(m\, c^2\)</span> has the dimension of energy.</p>
-<dl>
-<dt>Part c</dt>
-<dd>
-Consider this statement:
-</dd>
-</dl>
-<blockquote class="blockquote">
-<p>Power consumption is a property of the light bulb, but <em>energy</em> consumption involves both the light bulb itself and the pattern of usage.</p>
-</blockquote>
-&nbsp;&nbsp; <span> <small style="color: grey;" id="light-bulb-c1-hintarea" class="hintarea">light-bulb-c1</small>
-<form id="light-bulb-c1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="True &nbsp;&nbsp;&nbsp; or" id="light-bulb-c1-1" w="18" name="light-bulb-c1" hint="Certainly." show_hints="TRUE"> True &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="False " id="light-bulb-c1-2" w="23" name="light-bulb-c1" hint="Better luck next time." show_hints="TRUE"> False &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-c1" id="light-bulb-c1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-c1.');
-      const form = document.getElementById('light-bulb-c1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-c1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-c1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-c1.");
-          localStorage.setItem('light-bulb-c1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-<dl>
-<dt>Part d</dt>
-<dd>
-A typical household uses about 10 kilowatt-hours of energy per day. “10 kilowatt-hours” is an amount of energy, but “energy per day” is a flow of energy, that is, a power.
-</dd>
-</dl>
-<ol type="1">
-<li>Translate “10 kilowatt-hours of energy per day” into the equivalent watts. For simplicity in the calculation, assume that the energy is used evenly over the 24-hour day.</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-d1-hintarea" class="hintarea">light-bulb-d1</small>
-<form id="light-bulb-d1-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="417 watts" id="light-bulb-d1-1" w="16" name="light-bulb-d1" hint="A hit!" show_hints="TRUE"> 417 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="10,000 watts" id="light-bulb-d1-2" w="23" name="light-bulb-d1" hint="Boo!" show_hints="TRUE"> 10,000 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="240,000 watts" id="light-bulb-d1-3" w="32" name="light-bulb-d1" hint="Not on target." show_hints="TRUE"> 240,000 watts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough ... formation " id="light-bulb-d1-4" w="87" name="light-bulb-d1" hint="Sorry!" show_hints="TRUE"> Not enough information &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-d1" id="light-bulb-d1.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-d1.');
-      const form = document.getElementById('light-bulb-d1-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-d1-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-d1.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-d1.");
-          localStorage.setItem('light-bulb-d1-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<ol start="2" type="1">
-<li>Look up the power consumption of a hand-held blow-dryer. When the blow-dryer is in use, energy consumption of the household increases. Which of these is a plausible fraction of average household power consumed by the hair-dryer?</li>
-</ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="light-bulb-d2-hintarea" class="hintarea">light-bulb-d2</small>
-<form id="light-bulb-d2-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="10% of ave ... rage power" id="light-bulb-d2-1" w="23" name="light-bulb-d2" hint="Try again!" show_hints="TRUE"> 10% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="50% of ave ... rage power" id="light-bulb-d2-2" w="23" name="light-bulb-d2" hint="Think again." show_hints="TRUE"> 50% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="100% of av ... rage power" id="light-bulb-d2-3" w="3" name="light-bulb-d2" hint="Boo!" show_hints="TRUE"> 100% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="200% of av ... rage power" id="light-bulb-d2-4" w="20" name="light-bulb-d2" hint="Yeah!" show_hints="TRUE"> 200% of average power &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="light-bulb-d2" id="light-bulb-d2.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for light-bulb-d2.');
-      const form = document.getElementById('light-bulb-d2-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('light-bulb-d2-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for light-bulb-d2.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for light-bulb-d2.");
-          localStorage.setItem('light-bulb-d2-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-</span></div>
-<p><!-- end of exr-crow-pull-laundry --></p>
 </div>
 </div>
 </div>

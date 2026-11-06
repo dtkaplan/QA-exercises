@@ -1,0 +1,17 @@
+<!--
+id: "ash-buy-rug"
+created: "Sun Dec 28 14:13:00 2025"
+attribution: TBA
+status: "draft"
+chapter: 11
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-ash-buy-rug}
+ Some of the core modeling functions are in the right form to be a relative probability distribution, but others are not. Name three that are not. 
+
+`r devoirs::devoirs_text("RQ7-04")`
+:::
+ <!-- end of exr-ash-buy-rug -->

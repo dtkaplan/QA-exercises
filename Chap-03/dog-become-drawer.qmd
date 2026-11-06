@@ -12,7 +12,7 @@ chapter: 03
 
 
 ::: {#exr-dog-become-drawer}
-`r devoirs::devoirs_TF(correct = TRUE, id="D-03-hex")` You can add or subtract any two *numbers*.
+`r devoirs3::devoirs_TF(correct = TRUE, label="D-03-hex")` You can add or subtract any two *numbers*.
 
 :::
  <!-- end of exr-dog-become-drawer -->

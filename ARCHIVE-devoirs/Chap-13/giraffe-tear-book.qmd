@@ -1,0 +1,20 @@
+<!--
+id: "giraffe-tear-book"
+created: "Sat Dec  6 07:49:11 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-giraffe-tear-book}
+Suppose that the units of a quantity are in "newtons." (You don't need to know what a newton is to do this problem, but if you're interested, a newton is a unit of force.) A relative probability, on the other hand, can be a pure number: dimensionless and with no unit. Accumulate a relative probability distribution on that quantity from $-\infty$ to $\infty$. What will be the units of the accumulated quantity.
+
+To turn a relative probability into an absolute probability, divide the relative probability by the accumulated quantity from the previous paragraph. What will be the units of the absolute probability relevant to our newton-quantity.
+
+:::
+ <!-- end of exr-giraffe-tear-book -->

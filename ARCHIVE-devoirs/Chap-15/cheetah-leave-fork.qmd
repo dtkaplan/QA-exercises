@@ -1,0 +1,43 @@
+<!--
+id: "cheetah-leave-fork"
+created: "Sat Dec 20 08:37:49 2025"
+attribution: TBA
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cheetah-leave-fork}
+AI generated: The Urban Garden Project
+
+Scenario: You are volunteering for a community garden. You need to apply liquid fertilizer to 480 individual tomato seedlings. The manufacturer’s instructions state that you must use a rate of 3 fluid ounces of fertilizer per 8 seedlings.
+
+The Question: The fertilizer is only sold in 1-quart bottles. How many bottles do you need to buy to treat all the seedlings? (Note the conversion factor: 32 fluid ounces = 1 quart)
+
+```{mcq}
+#| label: clf-10-mfdmd
+1. 2 bottles. You need 180 total fluid ounces, and two quarts only provide 64 ounces.
+2. 6 bottles. You need 180 total fluid ounces, which equals 5.625 quarts. [correct]
+3. 5 bottles. You need 160 total fluid ounces, which equals exactly 5 quarts. 
+4. 3 bottles. You need 90 total fluid ounces, which is just under 3 quarts.
+```
+
+Human comment:
+
+This problem involves two different transformations:
+
+1. Transform 480 seedlings into ounces of fertilizer.
+2. Convert *from* fluid ounces of fertilizer *to* quarts of fertilizer.
+
+Note the use of two different verbs: "transform" versus "convert." Fluid ounces of fertilizer and quarts of fertilizer are merely different units for the same kind of thing. We use conversion factors to convert one such unit into the other. As always, the *from* unit goes on the bottom and the *to* unit on the top. Since 32 fluid ounces equals one quart, the "flavor of one" conversion factor will be $\frac{1\, \text{quart}}{32\, \text{fluid ounces}}$ which is dimensionless, like all conversion factors.
+
+On the other hand, seedlings are not the same kind of thing as fertilizer. There is no universal "flavor of one" to convert one into the other. But there is a rate for fertilizer use per seedling. It's given as 3 oz per 8 seedlings or 3/8 oz per seedling. This is not a dimensionless rate. Multiplying this rate by 480 seedlings gives $$480\, \text{seedings} \times \frac{3\, \text{fluid ounces}}{8\, \text{seedlings}} = 60 \times 3\, \text{fluid ounces} = 180\, \text{fluid ounces}$$
+
+Now convert 180 fluid ounces to quarts:
+
+$$ 180\, \text{fluid ounces} \times \frac{1\, \text{quart}}{32\, \text{fluid ounces}} = \frac{180}{32} \times 1\, \text{quart} = 5.625\, \text{quarts}$$
+
+:::
+ <!-- end of exr-cheetah-leave-fork -->

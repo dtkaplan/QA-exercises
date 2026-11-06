@@ -13,7 +13,7 @@ chapter: 1
 ::: {#exr-falcon-bite-shelf}
 The usefulness of a model depends in part on the purpose for which the model is built.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-01-yak")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-01-yak")`
 
 :::
  <!-- end of exr-falcon-bite-shelf -->

@@ -18,6 +18,6 @@ In the SIR model presented in the chapter, leave the "social distance" and "isol
 a. Is there a *tipping point*?
 b. Give a short description of the pattern you see as the number of initial cases increases.
     
-`r devoirs::devoirs_text("RQ-models-3")`
+`r devoirs3::devoirs_text("RQ-models-3")`
 :::
  <!-- end of exr-frog-dig-pot -->

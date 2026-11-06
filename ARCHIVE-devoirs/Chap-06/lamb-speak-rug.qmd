@@ -1,0 +1,33 @@
+<!--
+id: "lamb-speak-rug"
+created: "Mon Sep 15 12:13:08 2025"
+attribution: TBA
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lamb-speak-rug}
+The hill() function is used extensively to represent the relative probabilies of random outcomes whose values tend to cluster about a specified mean. (hill() is used so extensively that it's often called the "normal distribution.")
+
+For each of these depictions of the normal distribution, figure out what input scaling was used, that is, what are the values of $a$ and $q_0$ in the expression hill($a (\text{size} - q_0)$).
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+doplot <- function(a, q0, dom, ...) {
+  f <- function(size) dnorm(size, q0, a)
+  slice_plot(f(size) ~ size, dom, npts = 500) |>
+  gf_hline(yintercept = ~ 0, color = "blue", alpha = 0.5) |>
+  gf_labs(x = "Size of object (mm)", y = "Relative probability")
+}
+doplot(2, 5, domain(size=0:12))
+doplot(0.5, 2.5, domain(size=0:4))
+doplot(0.2, 1, domain(size=0:1.5))
+doplot(7, 12, domain(size=0:40))
+```
+
+:::
+ <!-- end of exr-lamb-speak-rug -->

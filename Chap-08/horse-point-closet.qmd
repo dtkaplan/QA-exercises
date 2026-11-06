@@ -5,7 +5,7 @@ attribution: prompted by AI
 use: Chap 7 drill
 status: ready-to-use
 chapter: 8
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,7 +16,9 @@ Each of the following graphics, except one, can be interpretted as a relative pr
 ```{r}
 #| label: fig-hpc-1-u23
 #| echo: false
-#| layout-ncol: 4
+#| warning: false
+#| message: false
+#| layout-ncol: 2
 #| fig-cap: "Functions that might be relative probability distributions"
 #| fig-subcap:
 #| - " "
@@ -45,7 +47,7 @@ slice_plot((abs(r3((direction+80)/60)))/3 ~ direction, domain(direction = -180:1
   gf_theme(theme_minimal(base_size = 18))  
 ```
 
-`r devoirs::devoirs_set("hpc-1-67s", choices=c("a", "b", "c", "d"), correct = "c")`
+`r devoirs3::devoirs_set3(label = "hpc-1-67s", choices=c("a", "b", "c", "d"), correct = "c")`
 
 :::
  <!-- end of exr-horse-point-closet -->

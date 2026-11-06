@@ -4,7 +4,7 @@ created: "Fri Jan 30 13:57:23 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,12 +12,26 @@ mode: "exercise"
 ::: {#exr-girl-sleep-linen}
 Which core modeling function has an output bounded by -1 and 1?
 
-```{mcq}
-#| label: gsl-1-cjs
-1. `hillside()`
-2. `osc()` [correct]
-3. `log2()`
-4. `same()`
+```{devoirs_choices}
+#| label: choices_gsl.1.cjs
+- '`hillside()`':
+    correct: false
+- '`osc()`':
+    correct: true
+- '`log2()`':
+    correct: false
+- '`same()`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gsl-1-cjs",
+  question = "Placeholder for now",
+  answers = choices_gsl.1.cjs,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-girl-sleep-linen -->

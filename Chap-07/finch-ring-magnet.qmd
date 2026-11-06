@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,12 +13,26 @@ mode: "exercise"
 ::: {#exr-finch-ring-magnet}
 The function `hillside()` ...
 
-```{mcq}
-#| label: d06-frm-clw
-1. goes up and then back down to a baseline
-2. repeats the same pattern over and over
-3. starts at a low value and gradually levels off at a higher value [correct]
-4. decreases quickly at first, then more slowly
+```{devoirs_choices}
+#| label: choices_d06.frm.clw
+- 'goes up and then back down to a baseline':
+    correct: false
+- 'repeats the same pattern over and over':
+    correct: false
+- 'starts at a low value and gradually levels off at a higher value':
+    correct: true
+- 'decreases quickly at first, then more slowly':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-frm-clw",
+  question = "Placeholder for now",
+  answers = choices_d06.frm.clw,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-finch-ring-magnet -->

@@ -4,7 +4,7 @@ created: "Sun Nov  9 08:54:41 2025"
 attribution: DTK
 status: "sketch"
 chapter: 8
-mode: "exercise"
+mode: exercise
 topic: "mean and extreme"
 -->
 

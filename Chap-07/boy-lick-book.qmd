@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: "sketch"
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,13 +13,26 @@ mode: "exercise"
 ::: {#exr-boy-lick-book}
 At what input value does `hillside()` produce an output of 0.5 (halfway between its minimum and maximum)?
 
-```{mcq}
-#| label: d06-blb-ckw
-#| inline: true
-1. -1
-2. 0 [correct]
-3. 0.5
-4. 1
+```{devoirs_choices}
+#| label: choices_d06.blb.ckw
+- '-1':
+    correct: false
+- '0':
+    correct: true
+- '0.5':
+    correct: false
+- '1':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-blb-ckw",
+  question = "Placeholder for now",
+  answers = choices_d06.blb.ckw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

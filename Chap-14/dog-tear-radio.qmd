@@ -4,7 +4,7 @@ created: "Sat Dec 20 09:32:10 2025"
 attribution: TBA
 status: "draft"
 chapter: 14
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -43,24 +43,53 @@ To understand how each additional dollar spent contributes to your satisfaction,
 
 Question 1: If you are deciding between spending $25 on a standard meal or $100 on a premium "Grand Tasting," which of the following statements correctly describes your marginal utility (the rate of change of satisfaction per dollar) at those two price points?
 
-```{mcq}
-#| label: dtr-1-43fo
-1. At $25, your rate of change of utility is 2.0 units per dollar; at $100, it is 1.0 unit per dollar. This shows diminishing marginal returns. [correct]
-2. At $25, your rate of change of utility is 0.4 units per dollar; at $100, it is 0.1 units per dollar. This shows diminishing marginal returns.
-3. Your rate of change of utility is constant because the more you pay, the more food you get.
-4. At $100, your utility is higher (200 units) than at 25 (100 units), therefore the rate of change must also be higher. [hint: But the rate of change is the *slope* of the utility function. There's nothing that says a utility function must have increasing slope for increasing values. ]
+```{devoirs_choices}
+#| label: choices_dtr.1.43fo
+- 'At $25, your rate of change of utility is 2.0 units per dollar; at $100, it is 1.0 unit per dollar. This shows diminishing marginal returns.':
+    correct: true
+- 'At $25, your rate of change of utility is 0.4 units per dollar; at $100, it is 0.1 units per dollar. This shows diminishing marginal returns.':
+    correct: false
+- 'Your rate of change of utility is constant because the more you pay, the more food you get.':
+    correct: false
+- 'At $100, your utility is higher (200 units) than at 25 (100 units), therefore the rate of change must also be higher.':
+    correct: false
+    feedback: 'But the rate of change is the *slope* of the utility function. There''s nothing that says a utility function must have increasing slope for increasing values.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dtr-1-43fo",
+  question = "Placeholder for now",
+  answers = choices_dtr.1.43fo,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 [The first choice is correct. Even though your Total Utility is higher at the 100 price point, the rate at which you are gaining utility has slowed down significantly. Spending that last dollar at the 100 level only buys you half as much extra happiness as it did at the 25 level.]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: dtr-7qL"}
 
 2. Why does the $100th dollar spent provide less satisfaction than the 25th dollar?
 
-```{mcq}
-#| label: dtr-2-scld
-1. The total utility $U(p)$ becomes negative at high prices.
-2. The price of the meal is growing exponentially.
-3. The restaurant increases prices for frequent customers.
-4. The rate of change of $U(p)$ with respect to $p$ decreases as $p$ increases.
+```{devoirs_choices}
+#| label: choices_dtr.2.scld
+- 'The total utility $U(p)$ becomes negative at high prices.':
+    correct: false
+- 'The price of the meal is growing exponentially.':
+    correct: false
+- 'The restaurant increases prices for frequent customers.':
+    correct: false
+- 'The rate of change of $U(p)$ with respect to $p$ decreases as $p$ increases.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dtr-2-scld",
+  question = "Placeholder for now",
+  answers = choices_dtr.2.scld,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
  <!-- end of exr-dog-tear-radio -->

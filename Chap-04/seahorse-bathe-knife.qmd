@@ -4,7 +4,7 @@ created: "Sun Jul 27 16:37:05 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 4
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -18,88 +18,183 @@ The article describes the then-current leader in the Tour de France as having a 
 
 1. If this rider weighs 70 kg, how many watts can he generate?
 
-```{mcq}
-#| label: sbk-1-vsw
-#| inline: true
-1. 49 watts
-2. 70 watts
-3. 490 watts [correct]
-4. 700 watts
+```{devoirs_choices}
+#| label: choices_sbk.1.vsw
+- '49 watts':
+    correct: false
+- '70 watts':
+    correct: false
+- '490 watts':
+    correct: true
+- '700 watts':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbk-1-vsw",
+  question = "Placeholder for now",
+  answers = choices_sbk.1.vsw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 
 2. Look up the conversion factor from watts to horsepower. How many horsepower is the rider generating? 
 
-```{mcq}
-#| label: sbk-2-ie2d
-#| inline: true
-1. 0.066 hp
-2. 0.660 hp [correct]
-3. 6.60 hp 
-4. 66.0 hp
+```{devoirs_choices}
+#| label: choices_sbk.2.ie2d
+- '0.066 hp':
+    correct: false
+- '0.660 hp':
+    correct: true
+- '6.60 hp':
+    correct: false
+- '66.0 hp':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbk-2-ie2d",
+  question = "Placeholder for now",
+  answers = choices_sbk.2.ie2d,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. A horse weighing 500 kg can generate one horsepower while walking. How does the horse's power efficiency per weight compare to the champion bike rider.
 
-```{mcq}
-#| label: sbk-3-r7f
-1. Horse 7 W/kg versus human 1.4 W/kg
-2. Human 7 W/kg versus horse 1.4 W/kg [correct]
-3. Human 7 W/kg versus horse 2.8 W/kg
-4. Horse 70 W/kg versus human 280 W/kg
+```{devoirs_choices}
+#| label: choices_sbk.3.r7f
+- 'Horse 7 W/kg versus human 1.4 W/kg':
+    correct: false
+- 'Human 7 W/kg versus horse 1.4 W/kg':
+    correct: true
+- 'Human 7 W/kg versus horse 2.8 W/kg':
+    correct: false
+- 'Horse 70 W/kg versus human 280 W/kg':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbk-3-r7f",
+  question = "Placeholder for now",
+  answers = choices_sbk.3.r7f,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 4. There is no conversion factor from watts to calories. Why not? 
 
-```{mcq}
-#| label: sbk-4-ri3
-1. One is metric units, the other is "traditional" units. 
-2. You can't compare light-bulbs to food!
-3. They have different dimensions. [correct]
-4. That's wrong. There is a conversion factor.
+```{devoirs_choices}
+#| label: choices_sbk.4.ri3
+- 'One is metric units, the other is "traditional" units.':
+    correct: false
+- 'You can''t compare light-bulbs to food!':
+    correct: false
+- 'They have different dimensions.':
+    correct: true
+- 'That''s wrong. There is a conversion factor.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbk-4-ri3",
+  question = "Placeholder for now",
+  answers = choices_sbk.4.ri3,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 
 5. Look up the conversion factor from watt-seconds to kilo-calories (kcal (or "Cal"), the relevant unit when looking at diet). How many kcal does the rider produce when biking for one hour at 7 w/kg?
 
-```{mcq}
-#| label: sbk-5-nsl2
-#| inline: true
-1. 211 kcal
-2. 422 kcal [correct]
-3. 633 kcal
-4. 844 kcal
-5. 1688 kcal
+```{devoirs_choices}
+#| label: choices_sbk.5.nsl2
+- '211 kcal':
+    correct: false
+- '422 kcal':
+    correct: true
+- '633 kcal':
+    correct: false
+- '844 kcal':
+    correct: false
+- '1688 kcal':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbk-5-nsl2",
+  question = "Placeholder for now",
+  answers = choices_sbk.5.nsl2,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 [1 watt-second is 0.000239006 kcal. In an hour, the rider generates 3600 s times 70 kg times 7 w/kg = 422 kcal ]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: sbk-1Qy"}
 
 6. It's estimated that a person's efficiency when converting dietary calories to work/movement calories is about 25%. In an hour of biking at 7 w/kg, how many dietary calories does a 70-kg rider consume?
 
-```{mcq}
-#| label: sbk-6-fjfk
-#| inline: true
-1. 211 kcal
-2. 422 kcal
-3. 633 kcal
-4. 844 kcal
-5. 1688 kcal [correct]
+```{devoirs_choices}
+#| label: choices_sbk.6.fjfk
+- '211 kcal':
+    correct: false
+- '422 kcal':
+    correct: false
+- '633 kcal':
+    correct: false
+- '844 kcal':
+    correct: false
+- '1688 kcal':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbk-6-fjfk",
+  question = "Placeholder for now",
+  answers = choices_sbk.6.fjfk,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 7. An "average" adult walking at 2.5 mi/hr is said to use about 150 watts of power. For this hypothetical adult, how much energy is consumed in a 1-hour walk?  
 
-```{mcq}
-#| label: sbk-7-fjfk
-#| inline: true
-1. 130 Cal [correct]
-2. 260 Cal
-3. 1.5 Wh
-3. 15 Wh
+```{devoirs_choices}
+#| label: choices_sbk.7.fjfk
+- '130 Cal':
+    correct: true
+- '260 Cal':
+    correct: false
+- '1.5 Wh':
+    correct: false
+- '15 Wh':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sbk-7-fjfk",
+  question = "Placeholder for now",
+  answers = choices_sbk.7.fjfk,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 8. In the exercise/diet literature it's said that walking a mile consumes about 100 kcal. 
 
-`r devoirs::devoirs_TF(correct = TRUE, id="sbk-8-ywr")` This is (roughly) consistent with the 150 watts of power claimed when waking at 2.5 mi/hr.
+`r devoirs3::devoirs_TF(correct = TRUE, label="sbk-8-ywr")` This is (roughly) consistent with the 150 watts of power claimed when waking at 2.5 mi/hr.
 
 
 

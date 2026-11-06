@@ -13,6 +13,6 @@ chapter: 03
 
 ::: {#exr-cat-take-closet}
 Is [acceleration] is the same as [velocity]?
-`r devoirs::devoirs_TF(correct = FALSE, id="D-03-guy", format="Yes or No")` 
+`r devoirs3::devoirs_TF(correct = FALSE, label="D-03-guy", format="Yes or No")` 
 :::
  <!-- end of exr-cat-take-closet -->

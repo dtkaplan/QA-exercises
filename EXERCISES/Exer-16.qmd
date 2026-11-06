@@ -12,7 +12,7 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-16/toe-lose-pen.qmd >}}
+{{< include ../Chap-16/toe-lose-pen.qmd >}}
 
 
 :::

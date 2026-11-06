@@ -15,7 +15,7 @@ chapter: 03
 
 Write down the names of five base dimensions. As well, give the symbol for each of those dimensions.
 
-`r devoirs::devoirs_text("D-03-sad")`
+`r devoirs3::devoirs_text("D-03-sad")`
 
 <!-- Opening answer: D0q-9kP -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

@@ -14,12 +14,28 @@ chapter: 09
 ::: {#exr-frog-mean-candy}
 How is the output value represented on a contour plot?
 
-```{mcq}
-#| label: d05-output-rep
-1. As the position along the horizontal axis. [hint: No, that's one of the inputs.]
-2. As the position along the vertical axis. [hint: No, that's one of the inputs.]
-3. By the labels along the contour lines. [correct]
-4. The output isn't shown.
+```{devoirs_choices}
+#| label: choices_d05.output.rep
+- 'As the position along the horizontal axis.':
+    correct: false
+    feedback: 'No, that''s one of the inputs.'
+- 'As the position along the vertical axis.':
+    correct: false
+    feedback: 'No, that''s one of the inputs.'
+- 'By the labels along the contour lines.':
+    correct: true
+- 'The output isn''t shown.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d05-output-rep",
+  question = "Placeholder for now",
+  answers = choices_d05.output.rep,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-frog-mean-candy -->

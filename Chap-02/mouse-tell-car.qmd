@@ -14,13 +14,26 @@ topic: data
 ::: {#exr-mouse-tell-car}
 In the terminology of this book, what is a **value** in a data frame?
 
-```{mcq}
-#| label: d01-value
-#| inline: true
-1. The entry at the intersection of a variable and a row. [correct]
-2. The name of the data frame.
-3. The object type of the data frame.
-4. The entire column.
+```{devoirs_choices}
+#| label: choices_d01.value
+- 'The entry at the intersection of a variable and a row.':
+    correct: true
+- 'The name of the data frame.':
+    correct: false
+- 'The object type of the data frame.':
+    correct: false
+- 'The entire column.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-value",
+  question = "Placeholder for now",
+  answers = choices_d01.value,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-mouse-tell-car -->

@@ -13,7 +13,7 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-02/jellyfish-open-spoon.qmd >}}
+{{< include ../Chap-02/jellyfish-open-spoon.qmd >}}
 
 
 

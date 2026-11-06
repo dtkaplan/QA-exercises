@@ -13,6 +13,6 @@ chapter: 1
 ::: {#exr-snake-speak-sofa}
 In the epidemic example, the SIR model is used to represent the connections among **susceptible**, **infective**, and **recovered** people.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-01-mair")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-01-mair")`
 :::
  <!-- end of exr-snake-speak-sofa -->

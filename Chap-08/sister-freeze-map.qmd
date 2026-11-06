@@ -38,15 +38,15 @@ The intervals are given as [3 to 4] and [60 to 80], but the simulation is run us
 
 1. Explain how the parameters used in generating `walk_length` and `cals_per_mile` correspond to the two intervals.
 
-`r devoirs::devoirs_text("sfm-intervals")`
+`r devoirs3::devoirs_text("sfm-intervals")`
 
 2. Modify the code to find the uncertainty distribution of the product [-3 to 5]$\times$[-10 to 2]. What is the resulting interval? Does it include zero?
 
-`r devoirs::devoirs_text("sfm-intervals2")`
+`r devoirs3::devoirs_text("sfm-intervals2")`
 
 3. Modify the code once again to find the uncertainty distribution of the ratio [-1 to 1] divided by [-1 to 1]. What is the resulting interval and why is it so much bigger than [-1 to 1]? (Hint: If the interval you calculate is about [-1 to 1], you probably used multiplication rather than division in your calculations.)
 
-`r devoirs::devoirs_text("sfm-intervals3")`
+`r devoirs3::devoirs_text("sfm-intervals3")`
 
 :::
  <!-- end of exr-sister-freeze-map -->

@@ -4,7 +4,7 @@ created: "Fri Feb 20 07:51:13 2026"
 attribution: DTK
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,31 +14,68 @@ mode: "exercise"
 
 1. Which of these best describes the change in the x-component of the state as it moves through this region of state space?
 
-```{mcq}
-#| label: flow-lrk-1-82s
-#| inline: true
-1. decreasing
-2. not changing
-3. increasing [correct]
+```{devoirs_choices}
+#| label: choices_flow.lrk.1.82s
+- 'decreasing':
+    correct: false
+- 'not changing':
+    correct: false
+- 'increasing':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "flow-lrk-1-82s",
+  question = "Placeholder for now",
+  answers = choices_flow.lrk.1.82s,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. Which of these best describes the change in the y-component of the state as it moves through this region of state space?
 
-```{mcq}
-#| label: flow-lrk-2-982
-#| inline: true
-1. decreasing [correct]
-2. not changing
-3. increasing 
+```{devoirs_choices}
+#| label: choices_flow.lrk.2.982
+- 'decreasing':
+    correct: true
+- 'not changing':
+    correct: false
+- 'increasing':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "flow-lrk-2-982",
+  question = "Placeholder for now",
+  answers = choices_flow.lrk.2.982,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. Notice that the previous questions didn't offer choices like "decreasing slowly" or "increasing quickly." That's for a good reason. What is it?
 
-```{mcq}
-#| label: flow-lrk-3-u3s
-1. There is only one flow arrow.
-2. "slowly" and "quickly" are relative. Here, the rate of change has about the same magnitude in both the x and y directions. [correct]
-3. The flow is toward the south-east rather than the south-west.
+```{devoirs_choices}
+#| label: choices_flow.lrk.3.u3s
+- 'There is only one flow arrow.':
+    correct: false
+- '"slowly" and "quickly" are relative. Here, the rate of change has about the same magnitude in both the x and y directions.':
+    correct: true
+- 'The flow is toward the south-east rather than the south-west.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "flow-lrk-3-u3s",
+  question = "Placeholder for now",
+  answers = choices_flow.lrk.3.u3s,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

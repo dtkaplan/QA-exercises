@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:14:50 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 8
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,6 +12,6 @@ mode: "reading-question"
 ::: {#exr-snail-get-futon}
 What is the role of *coefficients* in building a linear combination?
 
-`r devoirs::devoirs_text("RQ8-1mb")`
+`r devoirs3::devoirs_text("RQ8-1mb")`
 :::
  <!-- end of exr-snail-get-futon -->

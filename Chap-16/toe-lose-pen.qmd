@@ -4,7 +4,7 @@ created: "Wed Mar  4 18:06:44 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -37,7 +37,7 @@ vectorfield_plot(u ~ dfdu(u, w), w ~ dfdw(u, w),
 
 The graph shows gradient vectors of a function. Starting at the black dot, follow the vectors until you reach the end of the trail. Which of the letters is closest to trail's end?
 
-`r devoirs::devoirs_set(c("A", "B", "C", "D"), correct = "D", id = "tlp-1-oiw", sort = TRUE)`
+`r devoirs3::devoirs_set3(c("A", "B", "C", "D"), correct = "D", label = "tlp-1-oiw", sort = TRUE)`
 
 
 :::

@@ -32,69 +32,152 @@ gf_labs(x = "Temperature (C)")
 
 i. Which temperature gives the highest profit?
 
-```{mcq}
-#| label: D10-OIK-i
-#| inline: true
-1. 17.5 million$ [hint: That is not a temperature!]
-2. 400 C [hint: Try again! A higher temperature might be better]
-3. 900 C [correct]
-4. 1200 C [hint: Sorry. Would a somewhat lower temperature be better]
+```{devoirs_choices}
+#| label: choices_D10.OIK.i
+- '17.5 million$':
+    correct: false
+    feedback: 'That is not a temperature!'
+- '400 C':
+    correct: false
+    feedback: 'Try again! A higher temperature might be better'
+- '900 C':
+    correct: true
+- '1200 C':
+    correct: false
+    feedback: 'Sorry. Would a somewhat lower temperature be better'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-OIK-i",
+  question = "Placeholder for now",
+  answers = choices_D10.OIK.i,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 ii. What is the technical name for that highest-profit temperature?
 
-```{mcq}
-#| label: D10-OIK-ii
-#| inline: true
-1. Max temperature
-2. Argmin for profit
-3. Argmax for pollution
-4. Argmax for profit [correct]
+```{devoirs_choices}
+#| label: choices_D10.OIK.ii
+- 'Max temperature':
+    correct: false
+- 'Argmin for profit':
+    correct: false
+- 'Argmax for pollution':
+    correct: false
+- 'Argmax for profit':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-OIK-ii",
+  question = "Placeholder for now",
+  answers = choices_D10.OIK.ii,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 iii. What is the technical name for the highest profit?
 
-```{mcq}
-#| label: D10-OIK-iii
-#| inline: true
-1. Max profit [correct]
-2. Argmax for profit
-3. Argmin for profit
-4. Max temperature
+```{devoirs_choices}
+#| label: choices_D10.OIK.iii
+- 'Max profit':
+    correct: true
+- 'Argmax for profit':
+    correct: false
+- 'Argmin for profit':
+    correct: false
+- 'Max temperature':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-OIK-iii",
+  question = "Placeholder for now",
+  answers = choices_D10.OIK.iii,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 iv. What is the level of pollution when the profit is maximized? (Pick the closest.)
 
-```{mcq}
-#| label: D10-OIK-iv
-#| inline: true
-1. 9.5 million $ [hint: Sorry, but that's not a level of pollution.]
-2. 17.5 million $ [hint: Sorry, but that's not a level of pollution.]
-3. 700 tons [correct]
-4. 1100 tons [hint: That's the maximum pollution on the graph, not the pollution at the argmax for profit.]
+```{devoirs_choices}
+#| label: choices_D10.OIK.iv
+- '9.5 million $':
+    correct: false
+    feedback: 'Sorry, but that''s not a level of pollution.'
+- '17.5 million $':
+    correct: false
+    feedback: 'Sorry, but that''s not a level of pollution.'
+- '700 tons':
+    correct: true
+- '1100 tons':
+    correct: false
+    feedback: 'That''s the maximum pollution on the graph, not the pollution at the argmax for profit.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-OIK-iv",
+  question = "Placeholder for now",
+  answers = choices_D10.OIK.iv,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 v. If the only concern were profit, the factory would operate at 900 C. By operating at a somewhat lower temperature, say 700 C, the profit would be reduced but pollution would also be lower.
 
 The change in profit moving from 900 C to 700 C is about negative $6 million. What's the change in pollution when for the move from 900 C to 700 C?
 
-```{mcq}
-#| label: D10-OIK-v
-#| inline: true
-1. 400 tons [correct]
-2. 700 tons
-3. 1100 tons
+```{devoirs_choices}
+#| label: choices_D10.OIK.v
+- '400 tons':
+    correct: true
+- '700 tons':
+    correct: false
+- '1100 tons':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-OIK-v",
+  question = "Placeholder for now",
+  answers = choices_D10.OIK.v,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 vi. Moving from 900 C to 700 C effectively pays $6 million for a pollution reduction of 400 tons. What's the *shadow price* for lowering pollution?
 
-```{mcq}
-#| label: D10-OIK-vi
-#| inline: true
-1. $15,000 per ton [correct]
-2. $6 million per ton
-3. $6 million
-4. 6 million tons per dollar.
+```{devoirs_choices}
+#| label: choices_D10.OIK.vi
+- '$15,000 per ton':
+    correct: true
+- '$6 million per ton':
+    correct: false
+- '$6 million':
+    correct: false
+- '6 million tons per dollar.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-OIK-vi",
+  question = "Placeholder for now",
+  answers = choices_D10.OIK.vi,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-octopus-iron-kayak -->

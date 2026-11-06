@@ -4,7 +4,7 @@ created: "Sun Dec 28 13:59:51 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 3
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,7 +12,7 @@ mode: "reading-question"
 ::: {#exr-beech-understand-cotton}
 Explain in your own words what is meant by a *{{< var dim.dim >}}*?
 
-`r devoirs::devoirs_text("RQ-dim")`
+`r devoirs3::devoirs_text("RQ-dim")`
 
 <!-- Opening answer: Reading-questions-1ly -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

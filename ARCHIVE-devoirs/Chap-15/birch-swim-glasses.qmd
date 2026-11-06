@@ -1,0 +1,23 @@
+<!--
+id: "birch-swim-glasses"
+created: "Sat Aug 23 13:27:30 2025"
+attribution: TBA
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#prp-birch-swim-glasses}
+Life expectancy is a quantity that varies between different countries, the sexes, different socio-economic groups, and over time. It is often used as a "vital statistic" to indicate the health of a population. 
+
+How do you think that life expectancy is operationalized? 
+
+In contemporary society, at least outside the poorest countries, births and deaths are centrally recorded. This is *raw* data. How could you process the data to construct for each calendar year the mortality rate for each age group?
+
+The life expectancy calculation is based on a (simple) model, it is not directly measured. What is that model and how does it relate to life expectancy? From age-specific mortality, project forward a hypothetical cohort born in the current year. The key outcome is the number of people from this population who are alive at each year of age. [Note: bring this up in the functions chapter?] How does this population living versus age get turned into life expectancy?
+
+It helps to understand the details of the calculation in order to properly interpret life expectancy. For instance, many people assume that life expectancy is related fundamentally to health conditions among the elderly. Comment on whether this assumption holds water.
+:::
+ <!-- end of prp-birch-swim-glasses -->

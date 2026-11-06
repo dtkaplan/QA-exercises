@@ -13,19 +13,19 @@ source("../_exercise_startup.R")
 
 ## 1 
 
-{{< include ../devoirs3/Chap-04/ant-spend-shoe.qmd >}}
+{{< include ../Chap-04/ant-spend-shoe.qmd >}}
 
 ## 2 
 
-{{< include ../devoirs3/Chap-04/falcon-iron-pants.qmd >}}
+{{< include ../Chap-04/falcon-iron-pants.qmd >}}
 
 ## 3 
 
-{{< include ../devoirs3/Chap-04/finger-dig-fridge.qmd >}}
+{{< include ../Chap-04/finger-dig-fridge.qmd >}}
 
 ## 4 
 
-{{< include ../devoirs3/Chap-04/seahorse-bathe-knife.qmd >}}
+{{< include ../Chap-04/seahorse-bathe-knife.qmd >}}
 
 
 

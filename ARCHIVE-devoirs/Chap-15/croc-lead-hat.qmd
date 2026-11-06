@@ -1,0 +1,15 @@
+<!--
+id: "croc-lead-hat"
+created: "Thu Mar  5 08:57:32 2026"
+attribution: TBA
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-croc-lead-hat}
+Alignment of random vectors in high-dimensional space. And what is a random vector. Maybe a 3-d plot of random, unit-length vectors. How to create a unit-length vector.
+:::
+ <!-- end of exr-croc-lead-hat -->

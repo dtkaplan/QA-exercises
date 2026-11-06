@@ -5,7 +5,7 @@ attribution: DTK
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -20,7 +20,7 @@ slice_plot(QRA::osc(x/3)~ x, domain(x = -3:3)) |>
   gf_theme(theme_minimal(base_size = 18))
 ```
 
-`r devoirs::devoirs_set(id="shf-1-ese", choices = c("input scaling", "output scaling", "none"), correct = "input scaling")`
+`r devoirs3::devoirs_set3(label="shf-1-ese", choices = c("input scaling", "output scaling", "none"), correct = "input scaling")`
 
 
 :::

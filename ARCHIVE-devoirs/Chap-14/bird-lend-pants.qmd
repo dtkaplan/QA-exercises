@@ -1,0 +1,79 @@
+<!--
+id: "bird-lend-pants"
+created: "Sat Aug 23 06:23:54 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bird-lend-pants}
+
+One description of "quantitative reasoning" is this:
+
+> "[Quantitative] reasoning is a habit of mind, seeking pattern and order when faced with unfamiliar contexts." [Source: Dana Center 2020](https://dcmathpathways.org/course/quantitative-reasoning))
+
+Instructor
+: *What do you think of this definition? What are its merits and demerits?*
+
+Demerit: Nothing about it explicitly relates to quantities.
+
+Merit: The idea of guiding reasoning by applying habits of mind. We're going to illustrate some helpful habits for quantitative reasoning, specifically, the use of functions to relate a quantitative output to quantitative inputs and looking toward the *dimensions* of quantities to inform the possible relationships among them.
+
+
+The [*Graduate Record Examination*](https://en.wikipedia.org/wiki/Graduate_Record_Examinations) is a standardized test. Student scores on the GRE are often used as part of the graduate-school admissions process. It is divided into two parts: *verbal reasoning* and *quantitative reasoning*. 
+
+[Sample questions are posted online](https://www.ets.org/pdfs/gre/gre-sample-questions.pdf?utm_campaign=9717161-GRE%20PDF%20Downloads&utm_medium=email&_hsenc=p2ANqtz-81UE2o9NypcSclszJPlmbzAvwiqvazg15O_8fBaW1VuX3EEd7Wm_m-YTh8PM2Y4DOK0xEbpxZPH7i2QS3Mq5gW74Delw&_hsmi=326270991&utm_content=326270991&utm_source=hs_automation) by the GRE organization. Here is an example:
+
+> "A car got 33 miles per gallon using gasoline that cost $2.95 per gallon. Approximately what was the cost, in dollars, of the gasoline used in driving the car 350 miles?" 
+
+Instructor 
+: *What's your intuition about how to go at this question?* Go student by student, writing down the major point(s) of each student's response. 
+
+The point is to see what students think about when presented with the question, not to demonstrate to them the answer. If a student happens to offer a complete answer, note it on the board, then come back to it later.
+
+Look for common themes in the student's responses.
+
+For a student who has a complete answer, ask them how they know that the answer is correct? How can the student communicate their reasoning to others in a compelling way?
+
+Be prepared for this explanation: We know that the answer should be in the tens of dollars.
+
+Instructor
+: *How many quantities are involved?*
+
+Four. The model will relate these quantities to one another. 
+
+Instructor
+: An important habit of mind when modeling is to choose the mathematical materials out of which the the model will be built. *What ideas do you have?* They will likely say "fractions," or "rates," or "ratios."
+
+A very common form for a model is to build a *function*. This course emphasizes building models out of functions. Every function has an output and a set of inputs. The function calculates the output from the inputs.
+
+Instructor
+: *In this instance, which quantity should be the output and which quantities the inputs?* 
+
+Point out that the answer is not always obvious from first glance. As an example, refer to the SIR model from the text. Two important quantities in that model is the number of infectives I and the number of susceptibles S. The model involves *two* functions. Discuss what are the outputs of those functions. (Rate of change of I; rate of change of S) Functions whose outputs are rates of change are very common in models. We need to develop the habit of mind of working with rates of change.
+
+Instructor
+: Every function involves an *algorithm* that tells how to calculate the output from the input. (Sometimes the algorithm is a formula, sometimes not.) Experience is important in selecting the appropriate algorithm. That will come in time. But there are habits of mind that help in selecting an appropriate algorithm.
+
+For instance, looking at the units of each quantity provides important guidance in constructing an appropriate algorithm to produce the output from the inputs:
+
+i. Distance travelled: miles
+ii. Car performance: miles per gallon
+iii. Gas price: dollars per gallon
+iv. Function output: dollars
+
+Sometimes it's useful to construct additional quantities to guide our thoughts. For example, consider
+
+v. the quantity of gasoline consumed (gallons)
+
+*If you knew the quantity of gasoline consumed, how would you calculate the function output from the three inputs?*
+
+*How would you calculate the quantity of gasoline from the three inputs?*
+
+
+
+:::
+ <!-- end of exr-bird-lend-pants -->

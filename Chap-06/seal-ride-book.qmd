@@ -5,7 +5,7 @@ attribution:  Dave Ruth
 uses: "Quiz Ch 6"
 status: ready-to-use
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,12 +13,26 @@ mode: "exercise"
 ::: {#exr-seal-ride-book}
 In the text's example about sun position, cloudiness, and production, select the correct description:
 
-```{mcq}
-#| label: srb-1-njvc
-1.  All three variables are endogenous.
-1.  The variables sun position and cloudiness are endogenous; production is exogenous.
-1.  The variables sun position and cloudiness are exogenous; production is endogenous. [correct]
-1.  All three variables are exogenous.
+```{devoirs_choices}
+#| label: choices_srb.1.njvc
+- 'All three variables are endogenous.':
+    correct: false
+- 'The variables sun position and cloudiness are endogenous; production is exogenous.':
+    correct: false
+- 'The variables sun position and cloudiness are exogenous; production is endogenous.':
+    correct: true
+- 'All three variables are exogenous.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "srb-1-njvc",
+  question = "Placeholder for now",
+  answers = choices_srb.1.njvc,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-seal-ride-book -->

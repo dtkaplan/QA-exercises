@@ -1,0 +1,26 @@
+<!--
+id: "elephant-buy-car"
+created: "Fri Jan 16 09:19:58 2026"
+attribution: TBA
+status: "sketch"
+chapter: 10
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-elephant-buy-car}
+At an input of zero, the osc() function has output zero and a positive slope.
+
+a. What is the smallest input value greater than zero at which osc() has output zero and a positive slope?
+`r devoirs::devoirs_set(choices = c(0.25, 0.5, 1, 1.5, 2), correct=1, n=5, id = "ebc-a-3slc")`
+
+b. What is the smallest input value greater than zero at which osc() has output zero and a *negative* slope?
+`r devoirs::devoirs_set(choices = c(0.25, 0.5, 1, 1.5, 2), correct=0.5, n=5, id = "ebc-b-sc")`
+
+c. Which of these input values gives a *zero* rate of change of osc() with respect to the input?
+`r devoirs::devoirs_set(choices = c(0.25, 0.5, 1, 1.5, 2), correct=0.25, n=5, id = "ebc-c-sc")`
+
+
+:::
+ <!-- end of exr-elephant-buy-car -->

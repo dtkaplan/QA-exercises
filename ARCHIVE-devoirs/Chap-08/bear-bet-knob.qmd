@@ -1,0 +1,17 @@
+<!--
+id: "bear-bet-knob"
+created: "Mon Dec  8 11:29:39 2025"
+attribution: TBA
+status: "sketch"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-bear-bet-knob}
+Interpreting normal temperature ranges in the context of extremes. Why shifting the mean of a normal distribution by a little can dramatically increase the probability of an event that was previously extreme.
+:::
+ <!-- end of exr-bear-bet-knob -->

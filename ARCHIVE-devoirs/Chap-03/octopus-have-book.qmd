@@ -1,0 +1,19 @@
+<!--
+id: "octopus-have-book"
+created: "Fri Oct 16 08:53:20 2026"
+attribution: DTK
+mode: drill
+status: ready-to-use
+chapter: 03
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-octopus-have-book}
+Recall that the notation [ x ] means "the dimension of x."
+
+`r devoirs::devoirs_TF(correct = TRUE, id="D-03-ohm")` [Pints] is the same as [gallons].
+:::
+ <!-- end of exr-octopus-have-book -->

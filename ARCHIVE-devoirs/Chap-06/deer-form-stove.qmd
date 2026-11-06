@@ -1,0 +1,89 @@
+<!--
+id: "deer-form-stove"
+created: "Wed Oct  8 10:51:05 2025"
+attribution: TBA
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-deer-form-stove}
+
+```{webr}
+#| echo: false
+#| autorun: true
+FtoC <- function(fahr) 5 * (fahr - 32) / 9
+FtoK <- function(fahr) FtoC(fahr) + 273.15
+```
+
+
+The three temperature scales---C, F, and K---define zero degrees differently. This make it hard to do the conversion in one's head. 
+
+The computational chunk that follows provides two functions, `FtoC()` and `FtoK()`
+
+
+```{webr}
+#| autorun: true
+#| caption: Converting temperature scales
+FtoC( 72 )
+FtoK( 98.6)
+```
+
+1. What is the change in C when F increases by 10 degrees?
+
+```{mcq}
+#| label: dfs-1-is4
+#| inline: true
+1.  0.556 degrees
+2.  5.56 degrees C [correct]
+3. -5.56 degrees C
+4.  5.56 degrees F
+```
+
+2. What is the rate of change of C with respect to F?
+
+```{mcq}
+#| label: dfs-2-krod
+1.  0.556 degrees C
+2.  1.8 degrees C
+3. 0.556 degrees C / degrees F [correct]
+4. 1.8 degrees C / degrees F
+```
+
+3. What is the dimension of the rate of change of C with respect to F?
+
+```{mcq}
+#| label: dfs-3-owe
+1.  dimensionless [correct]
+2. {{< var dim.temperature >}}
+3. {{< var dim.temperature >}}^-1^
+4. {{< var dim.temperature >}}^-2^
+```
+
+4. What is the rate of change of F with respect to C?
+
+```{mcq}
+#| label: dfs-4-krod
+1.  0.556 degrees C
+2.  1.8 degrees C
+3. 0.556 degrees F / degrees C [correct]
+4. 1.8 degrees F / degrees 
+5. 0.556 degrees C / degrees F [hint: Sorry, but look carefully at the units. A rate of change of F with respect to C will have units F on top and C on the bottom.]
+```
+
+5. Extra credit: What is the rate of change of C with respect to K? (Hint: You'll need to give two temperatures in F, converting them to both C and K.)
+
+```{mcq}
+#| label: dfs-5-s8w
+1.  1 degrees C / degrees C
+2.  1 degrees K / degrees C 
+3.  1 degrees C / degrees K [correct]
+4.  1 degrees K / degrees K
+```
+
+
+:::
+ <!-- end of exr-deer-form-stove -->

@@ -4,7 +4,7 @@ created: "Tue Feb 24 13:05:56 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 15
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,12 +12,26 @@ mode: "exercise"
 ::: {#exr-sister-pay-candy}
 Energy has dimension L^2^ M T^-2^. Power has dimension L^2 M T^-3^.  What is the relationship between energy and power?
 
-```{mcq}
-#| label: spc-1-clw2
-1. Energy is proportional to power.
-2. Energy is the derivative of power with respect to time. 
-3. Energy is the accumulation of power with respect to time. [correct]
-4. The dimensions are unrelated.
+```{devoirs_choices}
+#| label: choices_spc.1.clw2
+- 'Energy is proportional to power.':
+    correct: false
+- 'Energy is the derivative of power with respect to time.':
+    correct: false
+- 'Energy is the accumulation of power with respect to time.':
+    correct: true
+- 'The dimensions are unrelated.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "spc-1-clw2",
+  question = "Placeholder for now",
+  answers = choices_spc.1.clw2,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 ::: {.callout-tip collapse=true}

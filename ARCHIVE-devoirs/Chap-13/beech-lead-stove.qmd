@@ -1,0 +1,37 @@
+<!--
+id: "beech-lead-stove"
+created: "Mon Nov  3 11:28:24 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-beech-lead-stove}
+@fig-pendulums-state-space-numbered show the state space for the pendulum system. Five points in the state space have been marked. For each, draw a corresponding pendulum picture of the sort shown in `r xf("exr-kid-ring-screen")` (but those pictures are not necessarily answers for this question).
+```{r}
+#| echo: false
+#| label: fig-pendulums-state-space-numbered
+Locations <- tibble::tribble(
+  ~ theta, ~ v, ~label, # theta in degrees
+  0, -0.5, "A", 
+  30, -0.25, "B",
+  -30, -0.25, "C", 
+  -45, 0.5, "D", 
+  60, 0.1, "E"
+)
+gf_text(v ~ theta, label=~label, data=Locations) |>
+  gf_lims(y = .75*c(-1,1)) |>
+  gf_labs(y = "velocity", x = (expression(paste(theta, " (deg)")))) |>
+  gf_refine(
+    scale_x_continuous(
+      limits = c(-70,70), 
+      breaks = c(-60, -45, -30, -15, 0, 15, 30, 60, 45, 60))) |> 
+  gf_theme(theme_minimal())
+```
+:::
+ <!-- end of exr-beech-lead-stove -->

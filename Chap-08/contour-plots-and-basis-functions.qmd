@@ -1,7 +1,7 @@
 <!--
 status: "draft"
 chapter: 8
-mode: "exercise"
+mode: exercise
 -->
 
 NEED TO ADD IN SOME TASKS FOR STUDENTS. Maybe choose the quadratic approximation that locally matches some part of the map or of a sketch_plot() function.

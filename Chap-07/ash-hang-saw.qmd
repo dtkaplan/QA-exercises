@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,24 +13,50 @@ mode: "drill"
 ::: {#exr-ash-hang-saw}
 An **output transformation** has the form $A \cdot f(\text{input}) + B$ where $f()$ is a core modeling function. If you want the transformed function to have a maximum output of 100 and a minimum of 0, and the core modeling function naturally ranges from 0 to 1, what should $A$ be?
 
-```{mcq}
-#| label: d06-ahs-A-ues
-#| inline: true
-1. 1
-2. 50
-3. 100 [correct]
-4. 200
+```{devoirs_choices}
+#| label: choices_d06.ahs.A.ues
+- '1':
+    correct: false
+- '50':
+    correct: false
+- '100':
+    correct: true
+- '200':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-ahs-A-ues",
+  question = "Placeholder for now",
+  answers = choices_d06.ahs.A.ues,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 Continuing from the previous question, what should $B$ be?
 
-```{mcq}
-#| label: d06-ahs-B-3xl
-#| inline: true
-1. -50
-2. 0 [correct]
-3. 50
-4. 100
+```{devoirs_choices}
+#| label: choices_d06.ahs.B.3xl
+- '-50':
+    correct: false
+- '0':
+    correct: true
+- '50':
+    correct: false
+- '100':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-ahs-B-3xl",
+  question = "Placeholder for now",
+  answers = choices_d06.ahs.B.3xl,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

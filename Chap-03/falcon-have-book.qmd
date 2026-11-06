@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:00:24 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 3
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,7 +12,7 @@ mode: "reading-question"
 ::: {#exr-falcon-have-book}
 Explain why calling a conversion factor a "factor of one" is justified or is misleading.
 
-`r devoirs::devoirs_text("RQ-units-flavor")`
+`r devoirs3::devoirs_text("RQ-units-flavor")`
 
 <!-- Opening answer: Reading-questions-3mc -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

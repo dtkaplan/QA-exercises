@@ -14,12 +14,29 @@ chapter: 04
 ::: {#exr-spider-find-blouse}
 What is the conversion factor ("flavor of one") for converting an angle measured in radians into degrees?
 
-```{mcq}
-#| label: R-3-14
-1. 0.01745 radian/degree [hint: Sorry. We're converting *to* degrees, so that must be on top.]
-2. 57.30 degree/radians [correct]
-3. 0.01745 degree [hint: Sorry, this isn't a flavor of one.]
-4. 57.30 radians [hint: Sorry, this isn't a flavor of one.]
+```{devoirs_choices}
+#| label: choices_R.3.14
+- '0.01745 radian/degree':
+    correct: false
+    feedback: 'Sorry. We''re converting *to* degrees, so that must be on top.'
+- '57.30 degree/radians':
+    correct: true
+- '0.01745 degree':
+    correct: false
+    feedback: 'Sorry, this isn''t a flavor of one.'
+- '57.30 radians':
+    correct: false
+    feedback: 'Sorry, this isn''t a flavor of one.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "R-3-14",
+  question = "Placeholder for now",
+  answers = choices_R.3.14,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 <!-- Opening answer: Drill-questions-9Hx -->

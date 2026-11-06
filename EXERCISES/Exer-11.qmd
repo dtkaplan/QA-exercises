@@ -13,23 +13,23 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-11/kid-ring-screen.qmd >}}
+{{< include ../Chap-11/kid-ring-screen.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-11/nephew-find-drawer.qmd >}}
+{{< include ../Chap-11/nephew-find-drawer.qmd >}}
 
 ## 3
 
-{{< include ../devoirs3/Chap-11/panda-mean-pen.qmd >}}
+{{< include ../Chap-11/panda-mean-pen.qmd >}}
 
 ## 4
 
-{{< include ../devoirs3/Chap-11/titmouse-refer-laundry.qmd >}}
+{{< include ../Chap-11/titmouse-refer-laundry.qmd >}}
 
 ## 5
 
-{{< include ../devoirs3/Chap-11/walrus-sharpen-boat.qmd >}}
+{{< include ../Chap-11/walrus-sharpen-boat.qmd >}}
 
 
 

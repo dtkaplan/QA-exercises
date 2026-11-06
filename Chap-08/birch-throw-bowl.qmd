@@ -4,7 +4,7 @@ created: "Tue Dec  9 16:13:20 2025"
 attribution: TBA
 status: "draft"
 chapter: 8
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -38,13 +38,29 @@ slice_plot(dbeta((x+3)/15, 20, 13) ~ x, dom, npts=500) |> label()
 slice_plot((dnorm(x, mean=3, sd=0.5) + dnorm(x, mean=7, sd=0.65))/2 ~ x, dom, npts=500) |> label()
 slice_plot(dnorm(x, mean=5.5, sd=3) ~ x, dom, npts=500) |> label()
 ```
-```{mcq}
-#| label: D-07-ehso
-#| inline: true
-1. a [correct]
-2. b [hint: Five is not the most likely value.]
-3. c [hint: Five is not the most likely value.]
-4. d [hint: Much too broad.]
+```{devoirs_choices}
+#| label: choices_D.07.ehso
+- 'a':
+    correct: true
+- 'b':
+    correct: false
+    feedback: 'Five is not the most likely value.'
+- 'c':
+    correct: false
+    feedback: 'Five is not the most likely value.'
+- 'd':
+    correct: false
+    feedback: 'Much too broad.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D-07-ehso",
+  question = "Placeholder for now",
+  answers = choices_D.07.ehso,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-birch-throw-bowl -->

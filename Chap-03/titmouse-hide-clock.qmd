@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:06:52 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 3
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -28,7 +28,7 @@ Need decimal point?:
 "
 ```
 
-`r devoirs::devoirs_text("RQ-mag-weight", contents=default, rows=6)`
+`r devoirs3::devoirs_text("RQ-mag-weight", contents=default, height=6)`
 
 :::
  <!-- end of exr-titmouse-hide-clock -->

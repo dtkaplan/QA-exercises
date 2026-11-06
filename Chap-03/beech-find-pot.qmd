@@ -4,7 +4,7 @@ created: "Tue Jul 29 10:36:03 2025"
 attribution: TBA
 status: "sketch"
 chapter: 3
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -32,7 +32,7 @@ vii. Temperature, or intensity of heat:
 viii. Money, or value:"
 ```
 
-`r devoirs_text("bfp-unit-names", rows=8, contents = default_text)`
+`r devoirs3::devoirs_text("bfp-unit-names", height=8, contents = default_text)`
 
 :::
  <!-- end of exr-beech-find-pot -->

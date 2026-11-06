@@ -53,24 +53,24 @@ To illustrate how one might be mislead by percent and percentage points, conside
 > *Cigarette smokers face significantly higher mortality risks than non-smokers, with studies showing smokers are about twice as likely to die prematurely, experiencing higher rates of lung cancer, heart disease, and respiratory illnesses; for example, one study found current smokers had an overall mortality rate of around 11 per 1,000 person-years, compared to about 3 per 1,000 for never smokers, with risks increasing with the amount and duration of smoking.*
 
 1. Cigarette smokers have a 100% greater risk of premature death. 
-`r devoirs::devoirs_TF(TRUE, id="dsl-1-72kd")`
+`r devoirs3::devoirs_TF(TRUE, label="dsl-1-72kd")`
 
 2. Would (1), if true, mean that smokers are certain to die prematurely?
-`r devoirs::devoirs_TF(FALSE, id="dsl-2-72kd")`
+`r devoirs3::devoirs_TF(FALSE, label="dsl-2-72kd")`
 
 3. The mortality rate of cigarette smokers is 267% greater than for non-smokers. 
-`r devoirs::devoirs_TF(TRUE, id="dsl-3-gsd")`
+`r devoirs3::devoirs_TF(TRUE, label="dsl-3-gsd")`
 
 4. Does (3), if true, mean that cigarette smokers have a mortality rate greater than 100%? (Cats, with their proverbial nine lives, might get away with this, but not people.)
-`r devoirs::devoirs_TF(FALSE, id="dsl-4-hwdw")`
+`r devoirs3::devoirs_TF(FALSE, label="dsl-4-hwdw")`
 
 5. The mortality rate of smokers is 0.8 percentage points higher than for non-smokers.
 
-`r devoirs::devoirs_TF(TRUE, id="dsl-5-72kd")`
+`r devoirs3::devoirs_TF(TRUE, label="dsl-5-72kd")`
 
 6. Does (5), if true, mean that smoking is not a big deal? Explain why or why not.
 
-`r devoirs::devoirs_text("dsl-6-ie2s")`
+`r devoirs3::devoirs_text("dsl-6-ie2s")`
 
 :::
  <!-- end of exr-duck-sleep-lamp -->

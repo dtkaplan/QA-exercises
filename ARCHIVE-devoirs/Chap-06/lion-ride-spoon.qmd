@@ -1,0 +1,37 @@
+<!--
+id: "lion-ride-spoon"
+created: "Wed Jul 23 15:50:29 2025"
+attribution: TBA
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-lion-ride-spoon}
+FIX THIS UP AS AN EXERCISE
+
+Often, you will want to store a number or the result of a computation for later reference. There is a simple syntax for this that involves a **name** and the **storage arrow** `<-`. Storage names in R can be made from letters as well as the underscore (`_`) character and the digits 0 through 9. Names must always start with a letter and they can *never* contain spaces or other punctuation. For instance:
+
+```{webr}
+#| caption: Storage syntax examples
+#| autorun: true
+fred <- 4 / (5 + 3)
+a17 <- sqrt(8.8) * sqrt(1.931818)
+total_score <- sum(0, 2, 0, 1) 
+```
+
+Once you have stored something under a name, you use the name to refer to the stored value. Try the following:
+
+```{webr}
+#| caption: Refering to stored values
+fred
+a17
+total_score
+a17^2
+fred / total_score
+```
+
+:::
+ <!-- end of exr-lion-ride-spoon -->

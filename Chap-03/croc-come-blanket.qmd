@@ -5,7 +5,7 @@ attribution: DTK
 use: Chapter 3 reading questions
 status: ready-to-use
 chapter: 3
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,7 +13,7 @@ mode: "reading-question"
 ::: {#exr-croc-come-blanket}
 In the context of quantities and *{{< var dim.dim >}}s*, what does the word "*per*" mean?
 
-`r devoirs::devoirs_text("RQ-per")`
+`r devoirs3::devoirs_text("RQ-per")`
 
 ["divided by"]{.shortanswer `r devoirs:::answer_style()` data-tooltip="Ans id: Reading-questions-4Eh"}
 :::

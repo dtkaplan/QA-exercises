@@ -4,7 +4,7 @@ created: "Tue Feb 24 12:31:03 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 15
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,12 +14,26 @@ Most people have a tangible sense of the distinction between *velocity* and *acc
 
 Translate the units given in the previous paragraph into *dimensions* for velocity and acceleration. Then say which of these is true of the relationship between acceleration and velocity.
 
-```{mcq}
-#| label: fdr-1-b3a
-1. Velocity is proportional to acceleration.
-2. Velocity is the derivative of acceleration with respect to time.
-3. Velocity is the accumulation of acceleration with respect to time. [correct]
-4. Velocity and acceleration have unrelated dimensions.
+```{devoirs_choices}
+#| label: choices_fdr.1.b3a
+- 'Velocity is proportional to acceleration.':
+    correct: false
+- 'Velocity is the derivative of acceleration with respect to time.':
+    correct: false
+- 'Velocity is the accumulation of acceleration with respect to time.':
+    correct: true
+- 'Velocity and acceleration have unrelated dimensions.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fdr-1-b3a",
+  question = "Placeholder for now",
+  answers = choices_fdr.1.b3a,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

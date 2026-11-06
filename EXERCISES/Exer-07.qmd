@@ -14,107 +14,107 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-07/finch-ring-magnet.qmd >}}
+{{< include ../Chap-07/finch-ring-magnet.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-07/fox-burn-spoon.qmd >}}
+{{< include ../Chap-07/fox-burn-spoon.qmd >}}
 
 ## 3
 
-{{< include ../devoirs3/Chap-07/gator-trim-bed.qmd >}}
+{{< include ../Chap-07/gator-trim-bed.qmd >}}
 
 ## 4
 
-{{< include ../devoirs3/Chap-07/girl-keep-hamper.qmd >}}
+{{< include ../Chap-07/girl-keep-hamper.qmd >}}
 
 ## 5
 
-{{< include ../devoirs3/Chap-07/girl-sleep-linen.qmd >}}
+{{< include ../Chap-07/girl-sleep-linen.qmd >}}
 
 ## 6
 
-{{< include ../devoirs3/Chap-07/kangaroo-hurt-bowl.qmd >}}
+{{< include ../Chap-07/kangaroo-hurt-bowl.qmd >}}
 
 ## 7
 
-{{< include ../devoirs3/Chap-07/kitten-sing-ring.qmd >}}
+{{< include ../Chap-07/kitten-sing-ring.qmd >}}
 
 ## 8
 
-{{< include ../devoirs3/Chap-07/monkey-meet-laundry.qmd >}}
+{{< include ../Chap-07/monkey-meet-laundry.qmd >}}
 
 ## 9
 
-{{< include ../devoirs3/Chap-07/nephew-toss-gloves.qmd >}}
+{{< include ../Chap-07/nephew-toss-gloves.qmd >}}
 
 ## 10
 
-{{< include ../devoirs3/Chap-07/oak-type-mug.qmd >}}
+{{< include ../Chap-07/oak-type-mug.qmd >}}
 
 ## 11
 
-{{< include ../devoirs3/Chap-07/pig-become-blouse.qmd >}}
+{{< include ../Chap-07/pig-become-blouse.qmd >}}
 
 ## 12
 
-{{< include ../devoirs3/Chap-07/pig-say-pen.qmd >}}
+{{< include ../Chap-07/pig-say-pen.qmd >}}
 
 ## 13
 
-{{< include ../devoirs3/Chap-07/pig-speak-closet.qmd >}}
+{{< include ../Chap-07/pig-speak-closet.qmd >}}
 
 ## 14
 
-{{< include ../devoirs3/Chap-07/pine-sail-kitchen.qmd >}}
+{{< include ../Chap-07/pine-sail-kitchen.qmd >}}
 
 ## 15
 
-{{< include ../devoirs3/Chap-07/pollen-close-sheet.qmd >}}
+{{< include ../Chap-07/pollen-close-sheet.qmd >}}
 
 ## 16
 
-{{< include ../devoirs3/Chap-07/reptile-take-socks.qmd >}}
+{{< include ../Chap-07/reptile-take-socks.qmd >}}
 
 ## 17
 
-{{< include ../devoirs3/Chap-07/seal-talk-room.qmd >}}
+{{< include ../Chap-07/seal-talk-room.qmd >}}
 
 ## 18
 
-{{< include ../devoirs3/Chap-07/shark-choose-bed.qmd >}}
+{{< include ../Chap-07/shark-choose-bed.qmd >}}
 
 ## 19
 
-{{< include ../devoirs3/Chap-07/sheep-write-jacket.qmd >}}
+{{< include ../Chap-07/sheep-write-jacket.qmd >}}
 
 ## 20
 
-{{< include ../devoirs3/Chap-07/sister-bite-gloves.qmd >}}
+{{< include ../Chap-07/sister-bite-gloves.qmd >}}
 
 ## 21
 
-{{< include ../devoirs3/Chap-07/snail-dig-pen.qmd >}}
+{{< include ../Chap-07/snail-dig-pen.qmd >}}
 
 ## 22
 
-{{< include ../devoirs3/Chap-07/spider-hit-fork.qmd >}}
+{{< include ../Chap-07/spider-hit-fork.qmd >}}
 
 ## 23
 
-{{< include ../devoirs3/Chap-07/spruce-lie-kayak.qmd >}}
+{{< include ../Chap-07/spruce-lie-kayak.qmd >}}
 
 ## 24
 
-{{< include ../devoirs3/Chap-07/squirrel-type-sofa.qmd >}}
+{{< include ../Chap-07/squirrel-type-sofa.qmd >}}
 
 ## 25
 
-{{< include ../devoirs3/Chap-07/tiger-blow-shoe.qmd >}}
+{{< include ../Chap-07/tiger-blow-shoe.qmd >}}
 
 ## 26
 
-{{< include ../devoirs3/Chap-07/toe-dig-pencil.qmd >}}
+{{< include ../Chap-07/toe-dig-pencil.qmd >}}
 
 
 

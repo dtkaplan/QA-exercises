@@ -1,0 +1,38 @@
+<!--
+id: "beech-find-pot"
+created: "Tue Jul 29 10:36:03 2025"
+attribution: TBA
+status: "sketch"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-find-pot}
+Give three different named units for each of J.E. Thompson's eight "common measurements" 
+
+i. Length
+ii. Surface, or area 
+iii. Volume, or capacity
+iv. Weight, or force of gravity
+v. Time
+vi. Angles, latitude and longitude
+vii. Temperature, or intensity of heat
+viii. Money, or value
+
+```{r echo=FALSE}
+default_text <- "i. Length:
+ii. Surface, or area:
+iii. Volume, or capacity:
+iv. Weight, or force of gravity:
+v. Time:
+vi. Angles, latitude and longitude:
+vii. Temperature, or intensity of heat:
+viii. Money, or value:"
+```
+
+`r devoirs_text("bfp-unit-names", rows=8, contents = default_text)`
+
+:::
+ <!-- end of exr-beech-find-pot -->

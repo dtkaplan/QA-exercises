@@ -13,7 +13,7 @@ chapter: 1
 ::: {#exr-cow-lie-bed}
 A premise is a statement assumed to be true for the purpose of formal reasoning.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-01-jar")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-01-jar")`
 
 :::
  <!-- end of exr-cow-lie-bed -->

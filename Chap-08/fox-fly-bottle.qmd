@@ -4,7 +4,7 @@ created: "Thu Jan 29 12:02:53 2026"
 attribution: TBA
 status: "draft"
 chapter: 8
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -32,16 +32,13 @@ Here are graphs of the low-temperature distributions for three days. Days were c
 #| - " "
 
 P1 <- slice_plot(dnorm(x, mean = 47, sd = 11) ~ x, domain(x = 15:80)) |>
-  gf_labs(y = "Rel. probability", x = "The day's low temperature") |>
-  .bigger_text(size = 24) 
+  gf_labs(y = "Rel. probability", x = "The day's low temperature") 
 
 P2 <- slice_plot(dnorm(x, mean = 62, sd = 7.8) ~ x, domain(x = 15:80)) |>
-  gf_labs(y = "Rel. probability", x = "The day's low temperature") |>
-  .bigger_text(size = 24) 
+  gf_labs(y = "Rel. probability", x = "The day's low temperature") 
 
 P3 <- slice_plot(dnorm(x, mean = 64, sd = 7.4) ~ x, domain(x = 15:80)) |>
-  gf_labs(y = "Rel. probability", x = "The day's low temperature") |>
-  .bigger_text(size = 24) 
+  gf_labs(y = "Rel. probability", x = "The day's low temperature") 
 
 P2
 P3
@@ -52,11 +49,11 @@ Match each graph to one of these days:
 
 `r day_choice <- c("New Year's Day", "Feb/Mar", "Mar/Apr", "Apr/May", "June/July", "Aug/Sept", "Sept/Oct", "Nov/Dec" )`
 
-Graphic (a): `r devoirs::devoirs_set(id = "ffb_d07_a", choices = day_choice, correct = "Apr/May", n = 5)`
+Graphic (a): `r devoirs3::devoirs_set3(label = "ffb_d07_a", choices = day_choice, correct = "Apr/May", n = 5)`
 
-Graphic (b): `r devoirs::devoirs_set(id = "ffb_d07_b", choices = day_choice, correct = "Sept/Oct", n = 5)`
+Graphic (b): `r devoirs3::devoirs_set3(label = "ffb_d07_b", choices = day_choice, correct = "Sept/Oct", n = 5)`
 
-Graphic (c): `r devoirs::devoirs_set(id = "ffb_d07_c", choices = day_choice, correct = "Feb/Mar", n = 5)`
+Graphic (c): `r devoirs3::devoirs_set3(label = "ffb_d07_c", choices = day_choice, correct = "Feb/Mar", n = 5)`
 
 
 :::

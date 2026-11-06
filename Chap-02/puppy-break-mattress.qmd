@@ -4,7 +4,7 @@ created: "Sun Dec 28 13:50:24 2025"
 attribution: DTK
 status: ready-to-use
 chapter: 2
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,7 +14,7 @@ mode: "reading-question"
 ::: {#exr-puppy-break-mattress}
 What is meant by "operationalization?"
 
-`r devoirs::devoirs_text("RQ-02-2")`
+`r devoirs3::devoirs_text("RQ-02-2")`
 
 :::
  <!-- end of exr-puppy-break-mattress -->

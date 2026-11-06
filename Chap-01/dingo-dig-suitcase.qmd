@@ -4,7 +4,7 @@ created: "Sun Nov 23 10:12:52 2025"
 attribution: TBA
 status: "sketch"
 chapter: 1
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -24,7 +24,7 @@ Number of US households versus time.
 
 Do the calculation of household growth yourself, based on these data. Explain your calculation and whether the result agrees with the claim in the text.
 
-`r devoirs::devoirs_text("dds52")`
+`r devoirs3::devoirs_text("dds52")`
 
 :::
  <!-- end of exr-dingo-dig-suitcase -->

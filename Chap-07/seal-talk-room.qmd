@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,14 +13,14 @@ mode: "exercise"
 ::: {#exr-seal-talk-room}
 Which core modeling functions have a positive rate of change for all positive inputs?
 
-1. `recip()` `r devoirs::devoirs_TF(FALSE,  id="d06-str-3ks")`
+1. `recip()` `r devoirs3::devoirs_TF(FALSE,  label="d06-str-3ks")`
 
-2. `exp2()` `r devoirs::devoirs_TF(TRUE, id="d06-str-lxe")`
+2. `exp2()` `r devoirs3::devoirs_TF(TRUE, label="d06-str-lxe")`
 
-3. `hill()` `r devoirs::devoirs_TF(FALSE, id="d06-str-8ue")`
+3. `hill()` `r devoirs3::devoirs_TF(FALSE, label="d06-str-8ue")`
 
-4. `hillside()` `r devoirs::devoirs_TF(TRUE, id="d06-str-lex")`
+4. `hillside()` `r devoirs3::devoirs_TF(TRUE, label="d06-str-lex")`
 
-5. `same()` `r devoirs::devoirs_TF(TRUE, id="d06-str-cwox")`
+5. `same()` `r devoirs3::devoirs_TF(TRUE, label="d06-str-cwox")`
 :::
  <!-- end of exr-seal-talk-room -->

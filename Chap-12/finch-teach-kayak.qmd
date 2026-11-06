@@ -4,7 +4,7 @@ created: "Mon Feb 16 08:31:11 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 12
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,22 +14,54 @@ There are two outcomes possible: Win or Lose. Your personal opinion is that the 
 
 1. What's the odds of Win?
 
-```{mcq}
-#| label: ftk-1-k4ld
-1. 2 / 3
-2. 15 / 25 [correct]
-3. 25 / 15 [hint: Sorry, but this is upside down. We want the odds of *Win*, not Lose.]
-4. 15 / (15 + 25) [hint: No. But this is how you would calculate the (absolute) probability of Win.]
+```{devoirs_choices}
+#| label: choices_ftk.1.k4ld
+- '2 / 3':
+    correct: false
+- '15 / 25':
+    correct: true
+- '25 / 15':
+    correct: false
+    feedback: 'Sorry, but this is upside down. We want the odds of *Win*, not Lose.'
+- '15 / (15 + 25)':
+    correct: false
+    feedback: 'No. But this is how you would calculate the (absolute) probability of Win.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ftk-1-k4ld",
+  question = "Placeholder for now",
+  answers = choices_ftk.1.k4ld,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 2. What's the odds of Lose?
 
-```{mcq}
-#| label: ftk-2-3823
-1. 3 / 2
-2. 15 / 25 [hint: Sorry, but this is upside down. We want the odds of *Lose*, not *Win*.]
-3. 25 / 15 [correct] 
-4. 25 / (15 + 25) [hint: No. But this is how you would calculate the (absolute) probability of Win.]
+```{devoirs_choices}
+#| label: choices_ftk.2.3823
+- '3 / 2':
+    correct: false
+- '15 / 25':
+    correct: false
+    feedback: 'Sorry, but this is upside down. We want the odds of *Lose*, not *Win*.'
+- '25 / 15':
+    correct: true
+- '25 / (15 + 25)':
+    correct: false
+    feedback: 'No. But this is how you would calculate the (absolute) probability of Win.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ftk-2-3823",
+  question = "Placeholder for now",
+  answers = choices_ftk.2.3823,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 

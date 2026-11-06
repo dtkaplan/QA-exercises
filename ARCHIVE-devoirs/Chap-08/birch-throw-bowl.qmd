@@ -1,0 +1,50 @@
+<!--
+id: "birch-throw-bowl"
+created: "Tue Dec  9 16:13:20 2025"
+attribution: TBA
+status: "draft"
+chapter: 8
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-birch-throw-bowl}
+Which of these pictures corresponds best to the idea that the quantity Q is $5 \pm 2$?
+
+```{r}
+#| label: fig-D-07-ehso
+#| layout-ncol: 2
+#| echo: false
+#| fig-cap: "Three relative probability distributions"
+#| fig-subcap: 
+#| - " "
+#| - " "
+#| - " "
+#| - " "
+
+#| echo: false
+label <- function(P) {
+  P |> 
+    gf_labs(x="Q", y = "Relative prob.") |>
+    gf_theme(theme(axis.text = element_text(size = 24),
+                   axis.title=element_text(size=24,face="bold")))
+}
+dom <- domain(x = 0:10)
+slice_plot(dnorm(x, mean=4.5, sd=1) ~ x, dom, npts=500) |> label()
+slice_plot(dbeta((x+3)/15, 20, 13) ~ x, dom, npts=500) |> label()
+slice_plot((dnorm(x, mean=3, sd=0.5) + dnorm(x, mean=7, sd=0.65))/2 ~ x, dom, npts=500) |> label()
+slice_plot(dnorm(x, mean=5.5, sd=3) ~ x, dom, npts=500) |> label()
+```
+```{mcq}
+#| label: D-07-ehso
+#| inline: true
+1. a [correct]
+2. b [hint: Five is not the most likely value.]
+3. c [hint: Five is not the most likely value.]
+4. d [hint: Much too broad.]
+```
+:::
+ <!-- end of exr-birch-throw-bowl -->

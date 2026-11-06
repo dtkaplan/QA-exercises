@@ -5,7 +5,7 @@ attribution: DTK
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,12 +13,26 @@ mode: "exercise"
 ::: {#exr-squirrel-type-sofa}
 Which core modeling functions have an output that is unbounded on *both* the top and the bottom?
 
-```{mcq}
-#| label: sts-1-3cw
-1. `log2()` & `same()` [correct]
-2. `hillside()` & `hill()`
-3. `exp2()` & `recip()` 
-4. `same()` & `osc()`
+```{devoirs_choices}
+#| label: choices_sts.1.3cw
+- '`log2()` & `same()`':
+    correct: true
+- '`hillside()` & `hill()`':
+    correct: false
+- '`exp2()` & `recip()`':
+    correct: false
+- '`same()` & `osc()`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "sts-1-3cw",
+  question = "Placeholder for now",
+  answers = choices_sts.1.3cw,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-squirrel-type-sofa -->

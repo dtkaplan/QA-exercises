@@ -4,7 +4,7 @@ created: "Mon Feb 23 17:15:39 2026"
 attribution: DTK
 status: ready-to-use
 chapter: 15
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -25,7 +25,7 @@ slice_plot(f(x) ~ x, domain(x = -2:2)) |>
 
 1. Which of the two functions has the shape of a core modeling function, left, right, or both? 
 
-`r devoirs::devoirs_set(c("left", "right", "both"), correct="both", id="atp-1-cls")`
+`r devoirs3::devoirs_set3(c("left", "right", "both"), correct="both", label="atp-1-cls")`
 
 ::: {.callout-tip collapse=true}
 Sorry. Remember that this core modeling function has output 1 when the input is 0.
@@ -36,7 +36,7 @@ Sorry. Remember that this core modeling function has output 1 when the input is 
 
 2. Which core modeling function is shown?
 
-`r devoirs::devoirs_set(core_modelings, core_modelings[7], id="atp-2-3d")`
+`r devoirs3::devoirs_set3(core_modelings, core_modelings[7], label="atp-2-3d")`
 
 
 

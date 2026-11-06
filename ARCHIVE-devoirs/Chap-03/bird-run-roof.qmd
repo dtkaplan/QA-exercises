@@ -1,0 +1,42 @@
+<!--
+id: "bird-run-roof"
+created: "Mon Aug 18 16:44:51 2025"
+attribution: TBA
+status: "draft"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-bird-run-roof}
+**Computing with units and dimensions**
+
+[I'm playing around with this. Can I get it simple enough that students can use it?]
+
+```{r include=FALSE}
+library(units)
+install_unit("dollar")
+install_unit("euro", "1.163 dollar")
+install_unit("yen", "0.00677 dollar")
+install_unit("yuan", "0.1393 dollar")
+# install_unit("persons")
+# install_unit("platoon", "16 persons")
+
+```
+```{r}
+v <- set_units(60, mi/hr)
+g <- set_units(9.8, m/s2)
+t <- set_units(1, s)
+units(g*t^2)
+v*t
+
+```
+
+
+A routine task in quantitative analysis is to check that computations make {{< var dim.dim >}}al sense and to avoid the pitfalls that often arise from named units whose {{< var dim.dim >}}s are easy to confuse. There are many unfamiliar units used in the sciences. Even more are added by journalists who like to express areas as "football fields" and volumes as "olympic swimming pools." In geophysics, river and ocean flows may be quantified as "Sverdrup" (Sv). Typical flow in the Amazon River is 0.2 Sv, compared to the Gulf Stream's roughly 100 Sv. A journalist seeking to make the Amazon flow accessible in everyday terms could use "80 olympic swimming pools in the blink of an eye." Calculations involving such quantities can easily go awry.
+
+In this exercise, you are going to work with a computing notation for units and dimensions. 
+
+:::
+ <!-- end of exr-bird-run-roof -->

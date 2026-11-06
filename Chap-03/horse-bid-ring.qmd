@@ -12,6 +12,6 @@ chapter: 03
 
 
 ::: {#exr-horse-bid-ring}
-`r devoirs::devoirs_TF(correct = TRUE, id="D-03-off", right.hint = "The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit.")` The ratio of two quantities with the same dimension is always dimensionless.
+`r devoirs3::devoirs_TF(correct = TRUE, label="D-03-off", right_hint = "The dimensions cancel out, but the units only cancel out if both quantities are expressed in the same unit.")` The ratio of two quantities with the same dimension is always dimensionless.
 :::
  <!-- end of exr-horse-bid-ring -->

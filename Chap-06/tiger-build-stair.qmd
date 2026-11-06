@@ -4,7 +4,7 @@ created: "Thu Oct 23 15:33:39 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -38,13 +38,13 @@ slice_plot(myfun(val) ~ val, domain(val = 0:20))
 
 Copy your function definition here.
 
-`r devoirs::devoirs_text("tbs-1lsxe")`
+`r devoirs3::devoirs_text("tbs-1lsxe")`
 
 2. The hillside() function has a parameter `sd` that governs the speed of the transition from zero to one. Modify your function to make the output look more like a uniform distribution running from 5 to 15.
 
 Copy your new function definition here.
 
-`r devoirs::devoirs_text("tbs-2-ekkc")`
+`r devoirs3::devoirs_text("tbs-2-ekkc")`
 
 
 :::

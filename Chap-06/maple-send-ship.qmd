@@ -5,7 +5,7 @@ attribution: DTK
 uses: functions Chap 6
 status: ready-to-use
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -15,6 +15,6 @@ Heavier individuals burn more calories due to the increased energy needed to mov
 
 Translate the previous paragraph into a list of the inputs to and output from a function. You don't have to build the function, but you should give plausible units for the input and output quantities.
 
-`r devoirs::devoirs_text("mss-elxd")`
+`r devoirs3::devoirs_text("mss-elxd")`
 :::
  <!-- end of exr-maple-send-ship -->

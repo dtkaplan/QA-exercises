@@ -1,0 +1,15 @@
+<!--
+id: "birch-cost-stove"
+created: "Sat Aug 30 09:51:36 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-birch-cost-stove}
+Show the syntax in several different computer languages, including R, for defining a function. Ask students to translate between traditional math notation and the computer notation, and vice versa, for a list of given functions. For instance, give a `makeFun()` function and ask for it to be translated into python, Javascript, Mathematic, ... 
+:::
+ <!-- end of exr-birch-cost-stove -->

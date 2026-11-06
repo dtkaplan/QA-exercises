@@ -4,7 +4,7 @@ created: "Fri Jan 30 14:17:44 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -18,7 +18,7 @@ slice_plot(2 * QRA::osc(x) + 4 ~ x, domain(x = -2:2)) |>
   gf_theme(theme_minimal(base_size = 18))
 ```
 
-`r devoirs::devoirs_set(id="ksr-1-ese", choices = c("input scaling", "output scaling", "none"), correct = "output scaling")`
+`r devoirs3::devoirs_set3(label="ksr-1-ese", choices = c("input scaling", "output scaling", "none"), correct = "output scaling")`
 
 
 :::

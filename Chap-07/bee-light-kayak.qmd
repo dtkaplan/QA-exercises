@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 7 drill
 status: "sketch"
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,13 +13,26 @@ mode: "exercise"
 ::: {#exr-bee-light-kayak}
 Which core modeling function would best describe the adoption of a new technology (few users at first, rapid growth, then leveling off as the market saturates)?
 
-```{mcq}
-#| label: d06-blk-73
-#| inline: true
-1. hill()
-2. hillside() [correct]
-3. osc()
-4. exp2()
+```{devoirs_choices}
+#| label: choices_d06.blk.73
+- 'hill()':
+    correct: false
+- 'hillside()':
+    correct: true
+- 'osc()':
+    correct: false
+- 'exp2()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d06-blk-73",
+  question = "Placeholder for now",
+  answers = choices_d06.blk.73,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

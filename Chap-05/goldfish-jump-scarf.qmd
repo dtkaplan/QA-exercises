@@ -5,7 +5,7 @@ attribution: DTK
 use: magnitude chapter, wider discussion point
 status: "sketch"
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

@@ -30,13 +30,11 @@ h <- doodle_fun(~ x, seed = 765)
 g <- doodle_fun(~ y + z, seed = 766)
 slice_plot(h(x+0.2) + 1.35~ x, domain(x = -4:4)) |>
   gf_labs(x = "Available choices for x", y = "Output: Merit",
-          subtitle="Choice space (x)") |>
-  .bigger_text() 
+          subtitle="Choice space (x)") 
 contour_plot(g(y, z) ~ y + z, domain(y = -4:4, z = -4:4)) |>
   gf_labs(subtitle="Choice space (y, z)",
           x = "Available choices for y",
           y = "Available choices for z") |>
-  .bigger_text() |>
   gf_refine(coord_fixed())
 ```
 

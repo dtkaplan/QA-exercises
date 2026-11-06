@@ -16,7 +16,7 @@ A good test for whether a variable in a data frame should be represented *quanti
 
 Danish is meaningfully between Chinese and English.
 
-`r devoirs::devoirs_TF(correct = FALSE, id = "D-02-odd", wrong.hint="Although 'D' is alphabetically between 'C' and 'E', this has nothing to do with the nature of the three languages.")`
+`r devoirs3::devoirs_TF(correct = FALSE, label = "D-02-odd", wrong_hint="Although 'D' is alphabetically between 'C' and 'E', this has nothing to do with the nature of the three languages.")`
 
 :::
  <!-- end of exr-hamster-forgive-closet -->

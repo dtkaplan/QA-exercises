@@ -4,7 +4,7 @@ created: "Mon Dec 22 13:15:23 2025"
 attribution: DTK
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -37,56 +37,121 @@ P |> gf_girafe()
 
 1. The lesser short-tailed shrew has both the smallest body mass and brain mass. What is the brain mass of the short-tailed shrew? (Pick the answer that's closest.)
 
-```{mcq}
-#| label: msp-1-4lse
-#| inline: true
-1. 0.03 gm
-2. 0.14 gm [correct]
-3. 0.52 gm
+```{devoirs_choices}
+#| label: choices_msp.1.4lse
+- '0.03 gm':
+    correct: false
+- '0.14 gm':
+    correct: true
+- '0.52 gm':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "msp-1-4lse",
+  question = "Placeholder for now",
+  answers = choices_msp.1.4lse,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. The water opossum, arctic fox, nine-banded armadillo, and rock hyrax (in the middle of the cloud of points) all have about the same body mass. What is that body mass? (Pick the answer that's closest.) 
 
-```{mcq}
-#| label: msp-2-sddo
-#| inline: true
-1. 1-2 kg
-2. 3-4 kg [correct]
-3. 6-7 kg
-4. 8-9 kg
+```{devoirs_choices}
+#| label: choices_msp.2.sddo
+- '1-2 kg':
+    correct: false
+- '3-4 kg':
+    correct: true
+- '6-7 kg':
+    correct: false
+- '8-9 kg':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "msp-2-sddo",
+  question = "Placeholder for now",
+  answers = choices_msp.2.sddo,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. Which of these animals has a body mass closest to 10 kg?
 
-```{mcq}
-#| label: msp-3-fhsl
-#| inline: true
-1. raccoon
-1. baboon [correct]
-2. roe deer
-4. vervet
+```{devoirs_choices}
+#| label: choices_msp.3.fhsl
+- 'raccoon':
+    correct: false
+- 'baboon':
+    correct: true
+- 'roe deer':
+    correct: false
+- 'vervet':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "msp-3-fhsl",
+  question = "Placeholder for now",
+  answers = choices_msp.3.fhsl,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 4. Of the mammals in the range of body masses from 10 to 100 kg, which has the smallest brain size?
 
-```{mcq}
-#| label: msp-4-le4
-#| inline: true
-1. water opposum [hint: It's smaller than 10 kg, so not the answer to the question.]
-2. giant armadillo
-3. goat
-4. kangaroo [correct]
+```{devoirs_choices}
+#| label: choices_msp.4.le4
+- 'water opposum':
+    correct: false
+    feedback: 'It''s smaller than 10 kg, so not the answer to the question.'
+- 'giant armadillo':
+    correct: false
+- 'goat':
+    correct: false
+- 'kangaroo':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "msp-4-le4",
+  question = "Placeholder for now",
+  answers = choices_msp.4.le4,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 5. The gray bar surrounding the blue line in @fig-mammal-mass contains about 2/3 of the 62 mammals plotted. Which animal has the smallest ratio of brain mass compared its range of body masses?
 
-```{mcq}
-#| label: msp-5-odr
-#| inline: true
-1. water opposum [correct]
-2. tenrec
-3. musk shrew
-4. desert hedgehog
+```{devoirs_choices}
+#| label: choices_msp.5.odr
+- 'water opposum':
+    correct: true
+- 'tenrec':
+    correct: false
+- 'musk shrew':
+    correct: false
+- 'desert hedgehog':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "msp-5-odr",
+  question = "Placeholder for now",
+  answers = choices_msp.5.odr,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 @fig-mammal-sleep shows the daily sleeping time versus lifetime for the 62 mammals. The level of danger from predation that the animal is exposed to is shown by color.
@@ -112,30 +177,58 @@ P |> gf_girafe()
 
 6. The mammal who sleeps the least sleeps how many hours per day?
 
-```{mcq}
-#| label: msp-6-kew
-1. 2.5 [correct]
-2. 2.9
-3. 3.5
-4. Can't tell the difference on this scale.
+```{devoirs_choices}
+#| label: choices_msp.6.kew
+- '2.5':
+    correct: true
+- '2.9':
+    correct: false
+- '3.5':
+    correct: false
+- 'Can''t tell the difference on this scale.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "msp-6-kew",
+  question = "Placeholder for now",
+  answers = choices_msp.6.kew,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 7. A chinchilla lives about 7 years. What level of danger does the chinchilla face?
 
-```{mcq}
-#| label: msp-7-ese
-#| inline: true
-1. 1
-2. 2
-3. 3
-4. 4 [correct]
-5. 5
+```{devoirs_choices}
+#| label: choices_msp.7.ese
+- '1':
+    correct: false
+- '2':
+    correct: false
+- '3':
+    correct: false
+- '4':
+    correct: true
+- '5':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "msp-7-ese",
+  question = "Placeholder for now",
+  answers = choices_msp.7.ese,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 
 8. The Sleep axis is linear, while the Lifespan axis is magnitude. Explain why this choice makes sense (or if it doesn't).
 
-`r devoirs::devoirs_text("msp-8-klj")`
+`r devoirs3::devoirs_text("msp-8-klj")`
 
 :::
  <!-- end of exr-maple-shut-pantry -->

@@ -4,7 +4,7 @@ created: "Tue Sep 30 12:38:32 2025"
 attribution: TBA
 status: "draft"
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -67,7 +67,7 @@ vectorfield_plot(dS~ ifelse(S > 100000-I, NA, -a*S*I), dI ~ ifelse(I > 100000-S,
   gf_theme(theme_minimal()) 
 ```
 
-`r devoirs::devoirs_text("fsb-two-flows")`
+`r devoirs3::devoirs_text("fsb-two-flows")`
 
 <!-- Opening answer: fsb-3lj -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

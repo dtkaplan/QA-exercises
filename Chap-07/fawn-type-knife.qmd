@@ -19,16 +19,16 @@ drill::slope_question(78)
 
 a. What is the rate of change when y = -2?
 
-`r devoirs::devoirs_set(c(-6, -4, -2, 0, 2, 4, 6), correct = -6, id="D-07-lip")`
+`r devoirs3::devoirs_set3(c(-6, -4, -2, 0, 2, 4, 6), correct = -6, label="D-07-lip")`
 
 b. What is the rate of change when y = 3?
 
-`r devoirs::devoirs_set(c(-6, -2, 0, 2, 6), correct = 6, id="D-07-led")`
+`r devoirs3::devoirs_set3(c(-6, -2, 0, 2, 6), correct = 6, label="D-07-led")`
 
 
 c. For what input is the rate of change practically zero?
 
-`r devoirs::devoirs_set(c(-3, -2.5, -1, 0, 1.5, 2.5, 3), correct = 1.5, id="D-07-ape")`
+`r devoirs3::devoirs_set3(c(-3, -2.5, -1, 0, 1.5, 2.5, 3), correct = 1.5, label="D-07-ape")`
 
 :::
  <!-- end of exr-fawn-type-knife -->

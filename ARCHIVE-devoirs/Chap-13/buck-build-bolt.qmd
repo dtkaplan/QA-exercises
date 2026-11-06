@@ -1,0 +1,28 @@
+<!--
+id: "buck-build-bolt"
+created: "Mon Aug 24 17:41:54 2026"
+attribution: DTK
+uses: "functions and system diagrams, foreshadowing dynamics"
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-buck-build-bolt}
+-----
+
+Write a static diagram for the SIR model where infectives influences the number of susceptibles, the number of susceptibles influences the number of infectives. Similarly, the number of infectives influences the number of recovered.
+
+Chicken and egg problems cause confusion. When such a situation arises there are special techniques for building models. The key for now is to learn to identify such situations and defer modeling them to when you know the technique. In the SIR diagram. the chicken-and-egg situation can be identified by the existence of a **cycle** of arrows: you start on one box and follow arrows that lead you back where you started from.
+
+USE THE EPIDEMIC MODEL AS AN EXAMPLE
+
+An important convention in modeling tries to avoid such cycles. The techniques for handling situations like the one diagrammed is introduced in sec-dynamics.
+
+-----
+
+
+:::
+ <!-- end of exr-buck-build-bolt -->

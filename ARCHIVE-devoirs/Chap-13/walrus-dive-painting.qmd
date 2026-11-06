@@ -1,0 +1,15 @@
+<!--
+id: "walrus-dive-painting"
+created: "Sat Aug 30 10:05:39 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-walrus-dive-painting}
+Construct a `population_growth_rate()` function that is has `population` and `year` as inputs and combines  `birth_rate(year)`, `death_rate(year)`, and `immigration(year)`. Use this to calculate next year's population. THEN PICK THIS UP AGAIN when talking about iteration.
+:::
+ <!-- end of exr-walrus-dive-painting -->

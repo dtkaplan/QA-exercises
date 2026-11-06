@@ -1,0 +1,40 @@
+<!--
+id: "owl-go-sofa"
+created: "Tue Oct 28 12:28:55 2025"
+attribution: TBA
+status: "draft"
+chapter: 12
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-owl-go-sofa}
+The exponential distribution has 1 parameter, the normal has two, and the 17-23-31 has three. Formulas to take into account the number of parameters when comparing likelihoods have been offered. Two well-known ones are:
+
+- The Akaike Information Criterion (AIC). The total score is $2 k - 2 \ln(L)$ where $k$ is the number of parameters and $L$ is the calculated likelihood. 
+
+- The Bayesian Information Criterion (BIC). The score incorporates not only the number of parameters ($k$), but also the number of data points ($n$, which is 3 in our example). The formula is $k \ln(n) - 2 \ln(L)$.
+
+Hypothesis | $k$ | $L$ | AIC | BIC
+-----------|-----|-----|-----|-----
+Exponential | 1  | 0.000006 | 26 | 30
+Normal | 2 | 0.00004 | 28.3 | 22.5
+17-23-31 | 3 | 12.6 | 8.7
+
+A lower score for AIC or BIC is better.
+
+Let's imagine two scenarios where we collect new data. 
+
+Scenario 1
+: The next two intervals turn out to be 5 and 47 years. 
+
+Scenario 2 (in the spirit of science fiction)
+: The next two measurements are 31 and 31 years.
+
+Calculate the likelihood, AIC and BIC for each of the three hypotheses using just the 2 new data points. Which hypothesis is favored according to L (higher is better), AIC, and BIC.
+
+:::
+ <!-- end of exr-owl-go-sofa -->

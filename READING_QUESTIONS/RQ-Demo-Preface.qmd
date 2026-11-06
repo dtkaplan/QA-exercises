@@ -7,9 +7,7 @@ subtitle: "Reading Questions"
 source("_start-up.R")
 ```
 
-{{< include _status/draft_DTK.qmd >}}
-
-{{< include _devoirs.qmd >}}
+`r devoirs3::devoirs_start("QA-RQ-Demo-Preface")`
 
 **Note:** For much of human history there was little or no long-term trend in population numbers; whatever population growth occurred was offset by episodes of famine, war, and plague. Starting around the 18th century, population growth became a regular phenomenon. This prompted the emergence of the discipline of *demography*.
 
@@ -22,9 +20,9 @@ The author of the reading points out that world population was mostly steady ove
 
 Estimate how many people have ever lived from the population figures the author gives. Explain your estimate.
 
-`r devoirs::devoirs_text("RQ-demo-preface-a")`
+`r devoirs3::devoirs_text("RQ-demo-preface-a")`
 
 According to the *Short Introduction*, who estimated that the mortality rate for men does not differ between age 20 and age 40?
 
-`r devoirs::devoirs_text("RQ-demo-preface-b")`
+`r devoirs3::devoirs_text("RQ-demo-preface-b")`
 

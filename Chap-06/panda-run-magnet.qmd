@@ -5,7 +5,7 @@ attribution: DTK
 uses: functions. A classroom activity?
 status: ready-to-use
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

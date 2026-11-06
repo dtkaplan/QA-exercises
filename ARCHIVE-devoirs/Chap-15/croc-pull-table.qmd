@@ -1,0 +1,29 @@
+<!--
+id: "croc-pull-table"
+created: "Mon Oct 20 08:27:41 2025"
+attribution: TBA
+status: "sketch"
+chapter: 15
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-croc-pull-table}
+
+Operationalize the notion of the position of the sun in the sky. How do you turn it into a quantity? Is more than one quantity needed? Imagine that your instrumentation consists of 
+
+i. a compass
+ii. a stick
+iii. a ruler
+
+You can start with this result from an AI search on "how to measure the position of the sun": 
+
+> *You can measure the sun's position using either physical methods or mathematical calculations, which determine its altitude (height above the horizon) and azimuth (compass direction). For a simple physical measurement, use a stick and measure the length of its shadow to find the altitude, as the tangent of the sun's altitude angle is the ratio of the stick's height to the shadow's length.* 
+
+`r devoirs::devoirs_text("position-of-sun")`
+
+:::
+ <!-- end of exr-croc-pull-table -->

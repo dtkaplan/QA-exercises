@@ -4,7 +4,7 @@ created: "Mon Dec 22 06:06:02 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,24 +16,51 @@ The standard form for writing a number in scientific notation has, as you know, 
 
 1. Which one of the following is *not* in standard form?
 
-```{mcq}
-#| label: ptb-1-o3f
-#| inline: true
-1. `0.2e-6` [correct]
-2. `1.56e4` 
-3. `-9.2e-2`
-4. `4.5e17`
+```{devoirs_choices}
+#| label: choices_ptb.1.o3f
+- '`0.2e-6`':
+    correct: true
+- '`1.56e4`':
+    correct: false
+- '`-9.2e-2`':
+    correct: false
+- '`4.5e17`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ptb-1-o3f",
+  question = "Placeholder for now",
+  answers = choices_ptb.1.o3f,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. Which one of the following is *not* in standard form?
 
-```{mcq}
-#| label: ptb-2-fdw
-#| inline: true
-1. `7.1e2`
-2. `7.4e-1` 
-3. `7e2.1` [correct]
-4. `7.9e0` [hint:Zero is a perfectly good exponent. Numbers in the range from 1 to 9.999... have order of magnitude zero.]
+```{devoirs_choices}
+#| label: choices_ptb.2.fdw
+- '`7.1e2`':
+    correct: false
+- '`7.4e-1`':
+    correct: false
+- '`7e2.1`':
+    correct: true
+- '`7.9e0`':
+    correct: false
+    feedback: 'Zero is a perfectly good exponent. Numbers in the range from 1 to 9.999... have order of magnitude zero.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ptb-2-fdw",
+  question = "Placeholder for now",
+  answers = choices_ptb.2.fdw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 Suppose you have a number written in non-standard form, e.g. `36.525e1`. To change this to standard form, you need to divide the mantissa by 10, that is, move the decimal point one place to the **left**. To compensate for the division by 10, you need to raise the exponent by 1. This gives `3.6525e2`
@@ -44,62 +71,133 @@ Similarly, when the leading digit of the mantissa is zero, for instance `0.0052e
 
 3a. `92425.01`
 
-```{mcq}
-#| label: ptb-3a-clse
-#| inline: true
-1. 4L [correct]
-2. 3L 
-3. 2L
-4. 1L
-5. OK as is
-6. 1R
-7. 2R
-8. 3R
-9. 4R
+```{devoirs_choices}
+#| label: choices_ptb.3a.clse
+- '4L':
+    correct: true
+- '3L':
+    correct: false
+- '2L':
+    correct: false
+- '1L':
+    correct: false
+- 'OK as is':
+    correct: false
+- '1R':
+    correct: false
+- '2R':
+    correct: false
+- '3R':
+    correct: false
+- '4R':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ptb-3a-clse",
+  question = "Placeholder for now",
+  answers = choices_ptb.3a.clse,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3b. `0.00314e3`
 
-```{mcq}
-#| label: ptb-3b-s3d
-#| inline: true
-1. 4L 
-2. 3L 
-3. 2L
-4. 1L
-5. OK as is
-6. 1R
-7. 2R
-8. 3R [correct]
-9. 4R
+```{devoirs_choices}
+#| label: choices_ptb.3b.s3d
+- '4L':
+    correct: false
+- '3L':
+    correct: false
+- '2L':
+    correct: false
+- '1L':
+    correct: false
+- 'OK as is':
+    correct: false
+- '1R':
+    correct: false
+- '2R':
+    correct: false
+- '3R':
+    correct: true
+- '4R':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ptb-3b-s3d",
+  question = "Placeholder for now",
+  answers = choices_ptb.3b.s3d,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3c. `1.00026e-3`
 
-```{mcq}
-#| label: ptb-3c-s3d
-#| inline: true
-1. 4L 
-2. 3L 
-3. 2L
-4. 1L
-5. OK as is [correct]
-6. 1R
-7. 2R
-8. 3R 
-9. 4R
+```{devoirs_choices}
+#| label: choices_ptb.3c.s3d
+- '4L':
+    correct: false
+- '3L':
+    correct: false
+- '2L':
+    correct: false
+- '1L':
+    correct: false
+- 'OK as is':
+    correct: true
+- '1R':
+    correct: false
+- '2R':
+    correct: false
+- '3R':
+    correct: false
+- '4R':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ptb-3c-s3d",
+  question = "Placeholder for now",
+  answers = choices_ptb.3c.s3d,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 
 4. Three of the following numbers have the same order of magnitude. Which one doesn't?
 
-```{mcq}
-#| label: ptb-4-dkwd
-#| inline: true
-1. 65e5 [hint: Move decimal point on the mantissa one place to the left and, correspondingly, raise the exponent by 1 to get standard form.]
-2. 7.229e6 [hint: Already in standard form. Order of magnitude is 6.]
-3. 659e7 [correct hint: Move decimal point two places to the left and, correspondingly raise the exponent by two. This places the number in proper form from which you can read off the order of magnitude directly from the exponent, 9]
-4. 0.0063e9 [hint: To get standard form, move the decimal point in the mantissa three places to the right. The compensatory change in the exponent is to subtract 3, giving 9-3 = 6 for the order of magnitude.]
+```{devoirs_choices}
+#| label: choices_ptb.4.dkwd
+- '65e5':
+    correct: false
+    feedback: 'Move decimal point on the mantissa one place to the left and, correspondingly, raise the exponent by 1 to get standard form.'
+- '7.229e6':
+    correct: false
+    feedback: 'Already in standard form. Order of magnitude is 6.'
+- '659e7':
+    correct: true
+    feedback: 'Move decimal point two places to the left and, correspondingly raise the exponent by two. This places the number in proper form from which you can read off the order of magnitude directly from the exponent, 9'
+- '0.0063e9':
+    correct: false
+    feedback: 'To get standard form, move the decimal point in the mantissa three places to the right. The compensatory change in the exponent is to subtract 3, giving 9-3 = 6 for the order of magnitude.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ptb-4-dkwd",
+  question = "Placeholder for now",
+  answers = choices_ptb.4.dkwd,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

@@ -13,23 +13,23 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-08/frog-choose-knife.qmd >}}
+{{< include ../Chap-08/frog-choose-knife.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-08/hamster-cut-tv.qmd >}}
+{{< include ../Chap-08/hamster-cut-tv.qmd >}}
 
 ## 3
 
-{{< include ../devoirs3/Chap-08/horse-point-closet.qmd >}}
+{{< include ../Chap-08/horse-point-closet.qmd >}}
 
 ## 4
 
-{{< include ../devoirs3/Chap-08/pig-teach-oven.qmd >}}
+{{< include ../Chap-08/pig-teach-oven.qmd >}}
 
 ## 5
 
-{{< include ../devoirs3/Chap-08/pony-rise-boat.qmd >}}
+{{< include ../Chap-08/pony-rise-boat.qmd >}}
 
 
 

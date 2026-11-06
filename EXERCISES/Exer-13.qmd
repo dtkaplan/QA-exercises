@@ -14,75 +14,75 @@ source("../_exercise_startup.R")
 
 ## 1 
 
-{{< include ../devoirs3/Chap-13/beech-sleep-canoe.qmd >}}
+{{< include ../Chap-13/beech-sleep-canoe.qmd >}}
 
 ## 2 
 
-{{< include ../devoirs3/Chap-13/calf-freeze-saw.qmd >}}
+{{< include ../Chap-13/calf-freeze-saw.qmd >}}
 
 ## 3 
 
-{{< include ../devoirs3/Chap-13/cow-sharpen-linen.qmd >}}
+{{< include ../Chap-13/cow-sharpen-linen.qmd >}}
 
 ## 4 
 
-{{< include ../devoirs3/Chap-13/elephant-have-knife.qmd >}}
+{{< include ../Chap-13/elephant-have-knife.qmd >}}
 
 ## 5 
 
-{{< include ../devoirs3/Chap-13/fish-toss-boat.qmd >}}
+{{< include ../Chap-13/fish-toss-boat.qmd >}}
 
 ## 6 
 
-{{< include ../devoirs3/Chap-13/fox-tell-dress.qmd >}}
+{{< include ../Chap-13/fox-tell-dress.qmd >}}
 
 ## 7 
 
-{{< include ../devoirs3/Chap-13/gator-walk-piano.qmd >}}
+{{< include ../Chap-13/gator-walk-piano.qmd >}}
 
 ## 8 
 
-{{< include ../devoirs3/Chap-13/goldfish-sleep-lamp.qmd >}}
+{{< include ../Chap-13/goldfish-sleep-lamp.qmd >}}
 
 ## 9 
 
-{{< include ../devoirs3/Chap-13/kitten-serve-lamp.qmd >}}
+{{< include ../Chap-13/kitten-serve-lamp.qmd >}}
 
 ## 10 
 
-{{< include ../devoirs3/Chap-13/lamb-rise-kitchen.qmd >}}
+{{< include ../Chap-13/lamb-rise-kitchen.qmd >}}
 
 ## 11 
 
-{{< include ../devoirs3/Chap-13/nephew-do-screen.qmd >}}
+{{< include ../Chap-13/nephew-do-screen.qmd >}}
 
 ## 12 
 
-{{< include ../devoirs3/Chap-13/oak-ring-socks.qmd >}}
+{{< include ../Chap-13/oak-ring-socks.qmd >}}
 
 ## 13 
 
-{{< include ../devoirs3/Chap-13/pig-forgive-saw.qmd >}}
+{{< include ../Chap-13/pig-forgive-saw.qmd >}}
 
 ## 14 
 
-{{< include ../devoirs3/Chap-13/pine-teach-mug.qmd >}}
+{{< include ../Chap-13/pine-teach-mug.qmd >}}
 
 ## 15 
 
-{{< include ../devoirs3/Chap-13/rabbit-lead-socks.qmd >}}
+{{< include ../Chap-13/rabbit-lead-socks.qmd >}}
 
 ## 16 
 
-{{< include ../devoirs3/Chap-13/rhinosaurus-buy-screen.qmd >}}
+{{< include ../Chap-13/rhinosaurus-buy-screen.qmd >}}
 
 ## 17 
 
-{{< include ../devoirs3/Chap-13/turtle-sing-socks.qmd >}}
+{{< include ../Chap-13/turtle-sing-socks.qmd >}}
 
 ## 18 
 
-{{< include ../devoirs3/Chap-13/wolf-choose-stove.qmd >}}
+{{< include ../Chap-13/wolf-choose-stove.qmd >}}
 
 
 

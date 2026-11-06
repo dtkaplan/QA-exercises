@@ -5,7 +5,7 @@ attribution: DTK
 uses: magnitudes
 status: "sketch"
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

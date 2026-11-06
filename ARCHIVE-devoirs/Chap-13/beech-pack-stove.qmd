@@ -1,0 +1,20 @@
+<!--
+id: "beech-pack-stove"
+created: "Mon Oct 27 12:01:43 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-beech-pack-stove}
+
+Babies, toddlers, children, adults, seniors, and the very elderly do not all die from the same causes. So why should there be a single smooth function.  Divide mortality data into regimes that are each modeled by a simple function. Is there always a clear dividing point. 
+
+Show a death rate function based on mortality tables. Point out how all the details of reading the table can be hidden away in the function so that it has a very simple interface (API): `mortality_rate(age, sex)`. Write it so that if sex is not specified, it uses the average of the male and female mortality rates.
+:::
+ <!-- end of exr-beech-pack-stove -->

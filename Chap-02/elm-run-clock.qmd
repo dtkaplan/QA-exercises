@@ -14,13 +14,26 @@ topic: data
 ::: {#exr-elm-run-clock}
 Suppose a data frame contains measurements of 898 adult children, with variables for mother's height, father's height, sex, and the child's height. A smaller data frame containing some of those children can be described as:
 
-```{mcq}
-#| label: d01-data-frame-sample
-#| inline: true
-1. A sample from the larger data frame. [correct]
-2. A new object type.
-3. A dimension of the original data frame.
-4. A conversion factor.
+```{devoirs_choices}
+#| label: choices_d01.data.frame.sample
+- 'A sample from the larger data frame.':
+    correct: true
+- 'A new object type.':
+    correct: false
+- 'A dimension of the original data frame.':
+    correct: false
+- 'A conversion factor.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-data-frame-sample",
+  question = "Placeholder for now",
+  answers = choices_d01.data.frame.sample,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-elm-run-clock -->

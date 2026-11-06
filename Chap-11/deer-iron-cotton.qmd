@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:31:05 2025"
 attribution: TBA
 status: "sketch"
 chapter: 13
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -12,7 +12,7 @@ mode: "reading-question"
 ::: {#exr-deer-iron-cotton}
 What does the output from the dynamical rule tell about the *state*? What does the word "*instantaneous*" have to do with it?
 
-`r devoirs::devoirs_text("RQ11-dic")`
+`r devoirs3::devoirs_text("RQ11-dic")`
 
 <!-- Opening answer: R1d-3FE -->
 ::: {.callout-tip collapse=true `r devoirs:::answer_style()`}

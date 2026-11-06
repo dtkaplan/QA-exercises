@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:19:45 2025"
 attribution: TBA
 status: "sketch"
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -18,7 +18,7 @@ Frustrated, tired, hungry, thirsty, and in a semi-psychotic state, you decide to
     
 Explain the reasoning behind your answer.
 
-`r devoirs::devoirs_text("RQ10-lost-in-space")`
+`r devoirs3::devoirs_text("RQ10-lost-in-space")`
 
 ::: {#fig-bastrop-austin}
 ![](../www/Austin-map2.png)

@@ -2,22 +2,21 @@
 title: "*Quantitative Argumentation*"
 subtitle: "Chapter 5 Drill Questions"
 filters:
-  - shinylive
+  - live
 ---
-
-{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
-
-```{r include = FALSE}
-library(drill)
-```
 
 ```{r include=FALSE}
 source("../_exercise_startup.R")
 ```
 
-{{< include ../_devoirs.qmd >}}
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
-`r devoirs::push_answer_style("block")`
+```{r include=FALSE}
+library(drill)
+```
+
+`r devoirs3::devoirs_start("QA-drill-05", feedback=TRUE)`
+
 
 :::: {.callout-note collapse=true}
 ## Scientific notation and logarithms
@@ -34,19 +33,19 @@ source("../_exercise_startup.R")
 
 True or false: `log10(5e8)` is between 8 and 9.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "d05-log-04")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "d05-log-04")`
 
 ## 4.
 
 True or false: The logarithm of `5 kg` is a quantity with dimension `[mass]`.
 
-`r devoirs::devoirs_TF(correct = FALSE, id = "d05-unit-02", wrong.hint="The logarithm applies to only the number part of a quantity. The unit is lost.")`
+`r devoirs3::devoirs_TF(correct = FALSE, label = "d05-unit-02", wrong_hint="The logarithm applies to only the number part of a quantity. The unit is lost.")`
 
 ## 5.
 
 True or false: The logarithm of `5 kg` is a quantity with dimension `[log mass]`.
 
-`r devoirs::devoirs_TF(correct = FALSE, id = "d05-unit-5628", wrong.hint="[log mass] is not a dimension. Logarithms of a quantity do not carry a dimension in the framework we are using for units and dimensions")`
+`r devoirs3::devoirs_TF(correct = FALSE, label = "d05-unit-5628", wrong_hint="[log mass] is not a dimension. Logarithms of a quantity do not carry a dimension in the framework we are using for units and dimensions")`
 
 :::
 ::::
@@ -116,7 +115,7 @@ True or false: The logarithm of `5 kg` is a quantity with dimension `[log mass]`
 
 ## iv.
 
-`r devoirs::devoirs_TF(correct = FALSE, id = "d05-graphics-02")` A magnitude axis changes the underlying values of the quantities begin plotted.
+`r devoirs3::devoirs_TF(correct = FALSE, label = "d05-graphics-02")` A magnitude axis changes the underlying values of the quantities begin plotted.
 
 
 :::

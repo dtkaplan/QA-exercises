@@ -13,23 +13,23 @@ source("../_exercise_startup.R")
 
 ## 1
 
-{{< include ../devoirs3/Chap-09/finch-sit-painting.qmd >}}
+{{< include ../Chap-09/finch-sit-painting.qmd >}}
 
 ## 2
 
-{{< include ../devoirs3/Chap-09/hamster-hear-radio.qmd >}}
+{{< include ../Chap-09/hamster-hear-radio.qmd >}}
 
 ## 3
 
-{{< include ../devoirs3/Chap-09/lamb-fly-clock.qmd >}}
+{{< include ../Chap-09/lamb-fly-clock.qmd >}}
 
 ## 4
 
-{{< include ../devoirs3/Chap-09/oak-close-window.qmd >}}
+{{< include ../Chap-09/oak-close-window.qmd >}}
 
 ## 5
 
-{{< include ../devoirs3/Chap-09/puppy-get-painting.qmd >}}
+{{< include ../Chap-09/puppy-get-painting.qmd >}}
 
 
 

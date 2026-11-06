@@ -1,0 +1,31 @@
+<!--
+id: "boy-forgive-pen"
+created: "Mon Oct 27 11:32:58 2025"
+attribution: TBA
+status: "sketch"
+chapter: 7
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-boy-forgive-pen}
+Showing a few natural splines. They head off linearly instead of as x^2 or x^3 or higher order. Return 
+
+```{r}
+#| label: C07-adyac
+x <- seq(0, 1, length=51)
+foo <- splines::ns(x, df=2)
+plot(foo[,1])
+plot(foo[,2])
+foo <- splines::ns(x, df=3)
+plot(foo[,2])
+plot(foo[,1])
+plot(foo[,3])
+```
+
+
+:::
+ <!-- end of exr-boy-forgive-pen -->

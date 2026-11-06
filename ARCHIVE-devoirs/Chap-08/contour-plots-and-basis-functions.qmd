@@ -1,0 +1,56 @@
+<!--
+status: "draft"
+chapter: 8
+mode: "exercise"
+-->
+
+NEED TO ADD IN SOME TASKS FOR STUDENTS. Maybe choose the quadratic approximation that locally matches some part of the map or of a sketch_plot() function.
+
+The surface of the Earth provides a nice example of a function. We'll let location on the Earth be the input to the function, specifying position quantitatively with latitude and longitude. The output of the function will be the elevation above sea level. Maps are the means to display such functions, as in @fig-saint-john which depicts a small island.
+
+::: {#fig-saint-john}
+![](../www/St-John-topo-map.png)
+
+1958 US Geological Survey map of St. John in the US Virgin Islands in the Carribean Sea. [Source](https://maps.lib.utexas.edu/maps/topo/virgin_islands/txu-oclc-20009999-eastern_st_john-1958.jpg)
+:::
+
+Hikers are familiar with "topographic maps" which indicate the slopes, hills, mountains and valleys of a geographic area. @fig-saint-john contains a topographic map of an island in the Caribbean Sea. Like geographic maps generally, position on the map corresponds to latitude and longitude. Many of the marks on the map are special features of the place: houses, roads, bays, and such. Green ink marks vegetation.
+
+@fig-saint-john is such a topographical map. The topography is indicated by brown lines called **contours**. All the points on a given contour are at the same elevation. For an example, locate the relatively thick brown line that passes near the upper corner of the final "N" in the label "ST JOHN." ![](../www/Contour-at-200.png) That brown line runs in an irregular circuit. All the points on that circuit are at 200 feet elevation. You can tell this only by following the contour until you come to a label. Nearby brown lines run nearly parallel to the 200 foot elevation lines. These nearby lines are at different elevations; adjacent lines are separated by 20 vertical feet of elevation.
+
+If there was a hiking trail that followed a contour, the trail would be absolutely level: no uphills or downhills. The shoreline of the island (contour at zero elevation) is similarly a kind of absolutely level path around the island. On the other hand, where a road crosses a contour as at ![](../www/steep-road.png) the road is leading from one elevation to another, that is, going uphill or downhill.
+
+Geographic land forms can have complicated terrain. Over the centuries, cartographers (that is, map-makers) have adopted many graphical conventions to avoid inundating the human reader with that complexity. For instance, only a few of the contours are labelled. You need to count up or down from the labelled contours to figure out the elevation of the unlabelled contours. The map format is a compromise between helping you to see the overall pattern of the geography and letting you examine the details in a particular locale.
+
+The sultriness function can be analogized to a map of terrain. Instead of the inputs being latitude and longitude, they are temperature and humidity. The output, sultriness, is measured in degrees, not the feet of elevation marked by the map of St. John. @fig-heat-index-contour shows shows the "topographical map" of the sultriness function. Since the word "topographic" refers specifically to elevation of the terrain, we call the displays of mathematical functions **contour plots**.
+
+::: {#fig-heat-index-contour}
+```{r}
+#| echo: false
+#| error: false
+#| label: C08-sugzf
+# Note: need the sources from  QR-A/www/software/heat_index.R
+ include www/software/heat_index.R >}}
+contour_plot(heat_index(T = t, RH = h, as_numeric = TRUE) ~ h & t,
+             domain(t = 30:50, h = 0:100),
+             contours_at = c(30,32.5, 35, 37.5, 40, 42.5, 45, 47.5, 50),
+             contour_color = "black", skip = 1) |>
+  ggformula::gf_refine(
+    scale_x_reverse(name = "Temperature (C)"),
+    scale_y_continuous(name = "Humidity (%)", sec.axis = dup_axis())
+    ) |>
+  ggformula::gf_refine(coord_flip()) 
+  
+```
+
+A contour plot of the heat-index function. The function itself is shown by the black contours. Note that the temperature scale is inverted in order to match the plot to the format of the table in `r xf("fig-sultriness-table")`.
+:::
+
+The location on a contour plot indicates the values of the input quantities. The output of the function at any given location has to be inferred by the nearby contours.
+
+The contour plot in @fig-heat-index-contour presents the same information as `r xf("fig-sultriness-table")`. Each format has its own merits and demerits. In `r xf("sec-change-as-a-quantity")` we will see that the "steepness" of a function has important things to say. The contour-plot format makes it easier to see steepness at a glance.
+
+Graphics are in many ways intuitive. But they are mostly limited to presentations that fit on a piece of paper or a computer display or, ultimately, the two-dimensional firm of our eye's retina. In later chapters, we'll develop non-graphical tools to deal with functions with more than two inputs. For the sake of developing intuition, we will introduce these tools in the context of functions with two inputs.
+
+
+

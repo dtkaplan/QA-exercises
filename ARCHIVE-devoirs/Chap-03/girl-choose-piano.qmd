@@ -1,0 +1,25 @@
+<!--
+id: "girl-choose-piano"
+created: "Wed Oct 15 10:07:50 2025"
+attribution: TBA
+status: "sketch"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-girl-choose-piano}
+Economist's Big Mac index to introduce the adjustment
+
+[List of per capita PPP by country](https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)_per_capita#:~:text=A%20country's%20gross%20domestic%20product,of%20living%20in%20each%20country.&text=In%202023%2C%20the%20estimated%20average,countries%20by%20wealth%20per%20adult.)
+
+See price levels (relative to US) in this [Wikipedia article](https://en.wikipedia.org/wiki/Purchasing_power_parity).
+
+Question for students ... Would it make a difference if some other country were used as the baseline for price levels?
+
+<https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Purchasing-Power-Parity-PPP>
+:::
+ <!-- end of exr-girl-choose-piano -->

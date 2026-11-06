@@ -5,7 +5,7 @@ attribution: DTK
 use: "Reading Question Chap 1"
 status: "sketch"
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -15,6 +15,6 @@ mode: "exercise"
 ::: {#exr-child-tug-stove}
 What are the two key features of a *model* in the technical sense used in the chapter?
 
-`r devoirs::devoirs_text("RQ-models-2")`
+`r devoirs3::devoirs_text("RQ-models-2")`
 :::
  <!-- end of exr-child-tug-stove -->

@@ -5,7 +5,7 @@ attribution: DTK
 use: Chap 06 drill
 status: ready-to-use
 chapter: 7
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,12 +13,26 @@ mode: "drill"
 ::: {#exr-avoid-refer-fridge}
 For which core modeling functions is the output bounded on the bottom by zero but unbounded on the top?
 
-```{mcq}
-#| label: arf-1-82kd
-1. `log2()` & `same()`
-2. `hillside()` & `hill()`
-3. `exp2()` & `recip()` [correct]
-4. `same()` & `osc()`
+```{devoirs_choices}
+#| label: choices_arf.1.82kd
+- '`log2()` & `same()`':
+    correct: false
+- '`hillside()` & `hill()`':
+    correct: false
+- '`exp2()` & `recip()`':
+    correct: true
+- '`same()` & `osc()`':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "arf-1-82kd",
+  question = "Placeholder for now",
+  answers = choices_arf.1.82kd,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-avoid-refer-fridge -->

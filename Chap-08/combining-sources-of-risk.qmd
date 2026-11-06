@@ -1,7 +1,7 @@
 <!--
 status: "draft"
 chapter: 8
-mode: "exercise"
+mode: exercise
 -->
 
 NEED TO ADD SOME QUESTIONS for students. MAYBE : Factor x increases risk by 22% from a baseline of 10%, factor y by 44%. What would be the risk if both factors x and y are present.

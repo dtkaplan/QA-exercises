@@ -1,0 +1,23 @@
+<!--
+id: "bear-choose-linen"
+created: "Sun Dec 28 13:49:40 2025"
+attribution: DTK
+use: "Reading Question Chap 1"
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+::: {#exr-bear-choose-linen}
+Many families and institutions organize planning of their yearly spending with a *budget*. 
+
+a. Explain why (or why not) it makes sense to think about a budget as a model. 
+b. At the end of the year, there are often discrepancies between the actual yearly spending and the budget. How can a budget be *useful* even if, in the end, it is not a perfect depiction of events as they actually occurred.
+    
+`r devoirs::devoirs_text("RQ-models-1")`
+
+:::
+ <!-- end of exr-bear-choose-linen -->

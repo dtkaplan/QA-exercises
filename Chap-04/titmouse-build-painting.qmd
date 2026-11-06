@@ -13,12 +13,27 @@ chapter: 04
 
 ::: {#exr-titmouse-build-painting}
 The dimension of a rate is:
-```{mcq}
-#| label: R-3-12
-1. The dimension of the numerator (the quantity on top).
-2. The dimension of the denominator (the quantity on the bottom).
-3. The dimension of the numerator divided by the dimension of the denominator. [correct]
-4. Rates do not have a dimension. [hint: Wrong. A rate is a quantity. Quantities *always* have a dimension!]
+```{devoirs_choices}
+#| label: choices_R.3.12
+- 'The dimension of the numerator (the quantity on top).':
+    correct: false
+- 'The dimension of the denominator (the quantity on the bottom).':
+    correct: false
+- 'The dimension of the numerator divided by the dimension of the denominator.':
+    correct: true
+- 'Rates do not have a dimension.':
+    correct: false
+    feedback: 'Wrong. A rate is a quantity. Quantities *always* have a dimension!'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "R-3-12",
+  question = "Placeholder for now",
+  answers = choices_R.3.12,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-titmouse-build-painting -->

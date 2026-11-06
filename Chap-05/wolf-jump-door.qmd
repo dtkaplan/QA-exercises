@@ -32,6 +32,6 @@ This is not at all the case. The table below shows the amount owed at the end of
 
 What about the information in the table points to the growth of debt being a **magnitude** process?
 
-`r devoirs::devoirs_text("wjd-debt")`
+`r devoirs3::devoirs_text("wjd-debt")`
 :::
  <!-- end of exr-wolf-jump-door -->

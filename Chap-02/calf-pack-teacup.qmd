@@ -14,7 +14,7 @@ topic: data
 ::: {#exr-calf-pack-teacup}
 In a data frame, each row represents one specimen. Every row should represent a specimens of the same object type.
 
-`r devoirs::devoirs_TF(correct = TRUE, id = "D-02-claw")`
+`r devoirs3::devoirs_TF(correct = TRUE, label = "D-02-claw")`
 
 :::
  <!-- end of exr-calf-pack-teacup -->

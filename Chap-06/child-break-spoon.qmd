@@ -4,7 +4,7 @@ created: "Tue Dec 23 17:22:19 2025"
 attribution: TBA
 status: "draft"
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -31,68 +31,146 @@ $$ \text{subscriptions}(\text{year})) \equiv A\, \text{hillside}\left(a (\text{y
 
 1. What are the input scaling parameters?
 
-```{mcq}
-#| label: cbs-1-wlc
-#| inline: true
-1. A & a
-2. B & b
-3. A & B
-4. a & b [correct]
+```{devoirs_choices}
+#| label: choices_cbs.1.wlc
+- 'A & a':
+    correct: false
+- 'B & b':
+    correct: false
+- 'A & B':
+    correct: false
+- 'a & b':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cbs-1-wlc",
+  question = "Placeholder for now",
+  answers = choices_cbs.1.wlc,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. Which of these is the best value for B (with units subscribers per capita) to align the function with the data?
 
-```{mcq}
-#| label: cbs-2-yw3
-#| inline: true
-1. -0.15
-2. 0
-3. 0.15
-4. 0.25
+```{devoirs_choices}
+#| label: choices_cbs.2.yw3
+- '-0.15':
+    correct: false
+- '0':
+    correct: false
+- '0.15':
+    correct: false
+- '0.25':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cbs-2-yw3",
+  question = "Placeholder for now",
+  answers = choices_cbs.2.yw3,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. Which of these is the best value for A?
 
-```{mcq}
-#| label: cbs-3-ydux
-#| inline: true
-1. -1.1
-2. 0.9
-3. 1.1 [correct]
-4. 1.5
+```{devoirs_choices}
+#| label: choices_cbs.3.ydux
+- '-1.1':
+    correct: false
+- '0.9':
+    correct: false
+- '1.1':
+    correct: true
+- '1.5':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cbs-3-ydux",
+  question = "Placeholder for now",
+  answers = choices_cbs.3.ydux,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 4. Which of these is the right set of units for A?
 
-```{mcq}
-#| label: cbs-4-xjc
-#| inline: true
-1. people
-2. people per capita
-3. subscribers
-4. subscribers per capita [correct]
+```{devoirs_choices}
+#| label: choices_cbs.4.xjc
+- 'people':
+    correct: false
+- 'people per capita':
+    correct: false
+- 'subscribers':
+    correct: false
+- 'subscribers per capita':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cbs-4-xjc",
+  question = "Placeholder for now",
+  answers = choices_cbs.4.xjc,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 5. Which of these is the best value for b (with units of years)?
 
-```{mcq}
-#| label: cbs-5-dke
-#| inline: true
-1. 2004.5
-2. 2007.5 [correct]
-3. 2009.5
-4. 2011.5
+```{devoirs_choices}
+#| label: choices_cbs.5.dke
+- '2004.5':
+    correct: false
+- '2007.5':
+    correct: true
+- '2009.5':
+    correct: false
+- '2011.5':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cbs-5-dke",
+  question = "Placeholder for now",
+  answers = choices_cbs.5.dke,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 6. Which of these is a sensible value for a?
 
-```{mcq}
-#| label: cbs-6-dke
-#| inline: true
-1. 5 years
-2. 5 per year
-3. 21 years
-4. 21 per year
+```{devoirs_choices}
+#| label: choices_cbs.6.dke
+- '5 years':
+    correct: false
+- '5 per year':
+    correct: false
+- '21 years':
+    correct: false
+- '21 per year':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "cbs-6-dke",
+  question = "Placeholder for now",
+  answers = choices_cbs.6.dke,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

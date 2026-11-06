@@ -1,0 +1,15 @@
+<!--
+id: "deer-trim-coat"
+created: "Thu May 14 11:45:04 2026"
+attribution: DTK
+status: "sketch"
+chapter: 3
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-deer-trim-coat}
+DRAFT. Explain why [Temperature is an exception.]
+:::
+ <!-- end of exr-deer-trim-coat -->

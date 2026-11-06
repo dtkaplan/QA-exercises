@@ -5,7 +5,7 @@ attribution: DTK
 uses: "core functions how to draw a graph on the computer"
 status: "sketch"
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

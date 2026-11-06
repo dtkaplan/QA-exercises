@@ -4,7 +4,7 @@ created: "Mon Feb 16 15:50:44 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 14
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -78,43 +78,98 @@ tibble::tibble(
 
 1. What is the end-of-game posterior for a total score of 10 pts? (That is, no points scored in the second half.)
 
-```{mcq}
-#| label: bcd-1-ek32
-1. One in a thousand [correct]
-2. One in a hundred
-3. Five in a hundred
-4. Five in ten
+```{devoirs_choices}
+#| label: choices_bcd.1.ek32
+- 'One in a thousand':
+    correct: true
+- 'One in a hundred':
+    correct: false
+- 'Five in a hundred':
+    correct: false
+- 'Five in ten':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bcd-1-ek32",
+  question = "Placeholder for now",
+  answers = choices_bcd.1.ek32,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 2. A friend, impressed with your Bayesian powers, asks you at half-time, "What's the probability that the final score will be $\leq 15$?" (Pick the closest answer.)
 
-```{mcq}
-#| label: bcd-2-ldw
-#| inline: true
-1. 6%
-2. 13% [correct]
-3. 26%
-4. 33%
+```{devoirs_choices}
+#| label: choices_bcd.2.ldw
+- '6%':
+    correct: false
+- '13%':
+    correct: true
+- '26%':
+    correct: false
+- '33%':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bcd-2-ldw",
+  question = "Placeholder for now",
+  answers = choices_bcd.2.ldw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. Another friend, more competitive than the first, offers you an even-money bet claiming that the end-of-game score will be $\geq 20$. How enthusiastic should you be to accept this bet?
 
-```{mcq}
-#| label: bcd-3-xlew
-1. Don't go near it.
-2. Indifferent but slightly disinclined.
-3. Indifferent but slighly inclined [correct]
-4. Super excited.
+```{devoirs_choices}
+#| label: choices_bcd.3.xlew
+- 'Don''t go near it.':
+    correct: false
+- 'Indifferent but slightly disinclined.':
+    correct: false
+- 'Indifferent but slighly inclined':
+    correct: true
+- 'Super excited.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bcd-3-xlew",
+  question = "Placeholder for now",
+  answers = choices_bcd.3.xlew,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 4. A third friend thinks that the number 21 has magical properties. She's not so silly as to make an even money bet that the end-of-game outcome will be 21, and asks you to give her 7-to-1 odds. (This means, if she wins you pay her $7. If she loses, she pays you $1.) Are you willing to take the bet?
 
-```{mcq}
-#| label: bcd-4-he3ls
-1. You would be ripping her off.
-2. It's to your advantage, but reasonably fair for a friend. [correct]
-3. It's to her advantage, but for a friend, why not?
-4. She's ripping you off.
+```{devoirs_choices}
+#| label: choices_bcd.4.he3ls
+- 'You would be ripping her off.':
+    correct: false
+- 'It''s to your advantage, but reasonably fair for a friend.':
+    correct: true
+- 'It''s to her advantage, but for a friend, why not?':
+    correct: false
+- 'She''s ripping you off.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "bcd-4-he3ls",
+  question = "Placeholder for now",
+  answers = choices_bcd.4.he3ls,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

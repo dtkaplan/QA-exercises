@@ -13,23 +13,23 @@ source("../_exercise_startup.R")
 
 ## 1. 
 
-{{< include ../devoirs3/Chap-03/avoid-get-laundry.qmd >}}
+{{< include ../Chap-03/avoid-get-laundry.qmd >}}
 
 ## 2. 
 
-{{< include ../devoirs3/Chap-03/deer-put-cotton.qmd >}}
+{{< include ../Chap-03/deer-put-cotton.qmd >}}
 
 ## 3. 
 
-{{< include ../devoirs3/Chap-03/pine-speak-shelf.qmd >}}
+{{< include ../Chap-03/pine-speak-shelf.qmd >}}
 
 ## 4. 
 
-{{< include ../devoirs3/Chap-03/snake-show-knife.qmd >}}
+{{< include ../Chap-03/snake-show-knife.qmd >}}
 
 ## 5. 
 
-{{< include ../devoirs3/Chap-03/titmouse-leave-shelf.qmd >}}
+{{< include ../Chap-03/titmouse-leave-shelf.qmd >}}
 
 
 :::

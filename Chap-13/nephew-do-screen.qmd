@@ -5,7 +5,7 @@ attribution: DTK
 use: Drill dynamics
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,26 +16,51 @@ mode: "exercise"
 
 1. Following the flow through this small region of space, which of the following best describes the shape of the trajectory?
 
-```{mcq}
-#| label: flow-nds-1-jw
-#| inline: true
-1. straight 
-2. curved clockwise 
-3. curved counterclockwise [correct]
+```{devoirs_choices}
+#| label: choices_flow.nds.1.jw
+- 'straight':
+    correct: false
+- 'curved clockwise':
+    correct: false
+- 'curved counterclockwise':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "flow-nds-1-jw",
+  question = "Placeholder for now",
+  answers = choices_flow.nds.1.jw,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. Which of the following best describes the speed of movement through the state-space region?
 
-```{mcq}
-#| label: flow-nds-2-xls
-#| inline: true
-1. steady speed
-2. speeding up
-3. slowing down [correct]
-4. not enough information
-2. blue [correct]
+```{devoirs_choices}
+#| label: choices_flow.nds.2.xls
+- 'steady speed':
+    correct: false
+- 'speeding up':
+    correct: false
+- 'slowing down':
+    correct: true
+- 'not enough information':
+    correct: false
+- 'blue':
+    correct: true
 ```
-:::
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "flow-nds-2-xls",
+  question = "Placeholder for now",
+  answers = choices_flow.nds.2.xls,
+  multiple = TRUE
+)
+Q(inline = TRUE)
+```
 
 :::
  <!-- end of exr-nephew-do-screen -->

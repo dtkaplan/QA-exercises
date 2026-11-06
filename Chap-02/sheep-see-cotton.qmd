@@ -14,7 +14,7 @@ topic: data
 ::: {#exr-sheep-see-cotton}
 A column containing student ID numbers is necessarily a quantitative variable because its values are written as digits.
 
-`r devoirs::devoirs_TF(correct = FALSE, id = "D-02-pet", wrong.hint="An ID can be a categorical variable even when its values consist of digits. The important feature of 'betweenness' doesn't have meaning for ID numbers.")`
+`r devoirs3::devoirs_TF(correct = FALSE, label = "D-02-pet", wrong_hint="An ID can be a categorical variable even when its values consist of digits. The important feature of 'betweenness' doesn't have meaning for ID numbers.")`
 
 :::
  <!-- end of exr-sheep-see-cotton -->

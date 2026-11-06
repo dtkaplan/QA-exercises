@@ -5,7 +5,7 @@ attribution: Dave Ruth
 use: Chap 5 Drill
 status: "sketch"
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -17,12 +17,29 @@ If you slice this function at a fixed release `speed`, you will have created a f
 
 How many possible answers for angle should you expect to find?
 
-```{mcq}
-#| label: dgf-10eks
-a. Exactly 1 [hint: Not really. This is a very attractive answer, but there doesn't need to be any angle that will do the job, as with a ping-pong ball.]
-b. Exactly 2 [hint: Might be, but doesn't need to be. How might it be? A very shallow angle might work, with the ball skimming the target. At the same time, a steep angle might send the ball up high in the air, giving enough time for its slight horizontal speed to carry it to the target. ]
-c. Exactly 0 [hint: This might be the case, but it might not. For instance, you are unlikely to be able to send a ping-pong ball 50 meters no matter what the initial speed and launch angle. Even for a heavier ball, the fixed value of `speed` in the slice might be inadequate. But if the speed were high enough, a heavier ball could well be aimed to reach the target.]
-d. It might be any of the above [correct]
+```{devoirs_choices}
+#| label: choices_dgf.10eks
+- 'Exactly 1':
+    correct: false
+    feedback: 'Not really. This is a very attractive answer, but there doesn''t need to be any angle that will do the job, as with a ping-pong ball.'
+- 'Exactly 2':
+    correct: false
+    feedback: 'Might be, but doesn''t need to be. How might it be? A very shallow angle might work, with the ball skimming the target. At the same time, a steep angle might send the ball up high in the air, giving enough time for its slight horizontal speed to carry it to the target.'
+- 'Exactly 0':
+    correct: false
+    feedback: 'This might be the case, but it might not. For instance, you are unlikely to be able to send a ping-pong ball 50 meters no matter what the initial speed and launch angle. Even for a heavier ball, the fixed value of `speed` in the slice might be inadequate. But if the speed were high enough, a heavier ball could well be aimed to reach the target.'
+- 'It might be any of the above':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dgf-10eks",
+  question = "Placeholder for now",
+  answers = choices_dgf.10eks,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-duck-get-futon -->

@@ -1,0 +1,17 @@
+<!--
+id: "elm-take-window"
+created: "Mon Nov 24 07:02:49 2025"
+attribution: TBA
+status: "sketch"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-elm-take-window}
+Use US Population data to plot rate of change versus population. This is the same format as the dynamical rule. For exponential growth, the pattern should be steady.
+:::
+ <!-- end of exr-elm-take-window -->

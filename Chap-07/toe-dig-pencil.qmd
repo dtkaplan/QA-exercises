@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: Chap 6 drill
 status: ready-to-use
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -20,13 +20,26 @@ slice_plot(sin(2*pi*x) ~ x, domain(x = 0:3), npts = 500) |>
 
 Which core modeling function does this graph show?
 
-```{mcq}
-#| label: tdp-1-lfr
-#| inline: true
-1. hill()
-2. hillside()
-3. osc() [correct]
-4. same()
+```{devoirs_choices}
+#| label: choices_tdp.1.lfr
+- 'hill()':
+    correct: false
+- 'hillside()':
+    correct: false
+- 'osc()':
+    correct: true
+- 'same()':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "tdp-1-lfr",
+  question = "Placeholder for now",
+  answers = choices_tdp.1.lfr,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

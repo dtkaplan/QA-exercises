@@ -5,7 +5,7 @@ attribution: Dave Ruth
 use: "Reading Question Chap 1"
 status: "sketch"
 chapter: 1
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,6 +13,6 @@ mode: "exercise"
 ::: {#exr-eagle-seek-clock}
 In a footnote, the text contrasts the definition of a "variable" in Algebra versus its definition in Statistics/Quantitative Reasoning. What is the primary difference in how these two approaches define a variable?
 
-`r devoirs::devoirs_text("esc-RQ1-er5kf")`
+`r devoirs3::devoirs_text("esc-RQ1-er5kf")`
 :::
  <!-- end of exr-eagle-seek-clock -->

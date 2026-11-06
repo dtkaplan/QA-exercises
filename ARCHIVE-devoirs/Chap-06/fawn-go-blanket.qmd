@@ -1,0 +1,27 @@
+<!--
+id: "fawn-go-blanket"
+created: "Thu Oct 23 07:59:26 2025"
+attribution: TBA
+status: "sketch"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-fawn-go-blanket}
+
+```{r}
+#| label: fig-plot-fun-mag
+#| layout-ncol: 2
+slice_plot(exp2(t) ~ t, domain(t=1:20)) |>
+  gf_refine(scale_y_log10(n.breaks = 10))
+slice_plot(1/t ~ t, domain(t=0.1:100)) |>
+  gf_refine(scale_y_log10(n.breaks = 10),
+            scale_x_log10(n.breaks = 10))
+```
+
+:::
+ <!-- end of exr-fawn-go-blanket -->

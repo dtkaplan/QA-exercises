@@ -6,10 +6,7 @@ subtitle: "Reading Questions"
 ```{r include=FALSE}
 source("_start-up.R")
 ```
-
-{{< include _status/refine_DD.qmd >}}
-
-{{< include _devoirs.qmd >}}
+`r devoirs3::devoirs_start("QA-RQ-Economist-humanity-shrink")`
 
 On 11 Sept, 2025, *The Economist* published an article, "Humanity will shrink far sooner than you think." Here is a [link to the article](https://www.economist.com/interactive/briefing/2025/09/11/humanity-will-shrink-far-sooner-than-you-think)
 

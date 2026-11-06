@@ -1,0 +1,16 @@
+<!--
+id: "frog-wish-bolt"
+created: "Mon May 11 09:45:18 2026"
+attribution: DTK 
+status: "draft"
+chapter: 6
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-frog-wish-bolt}
+DRAFT.  Functions with the shape of `hill()` are, in general, called *sigmoidal functions*. This means S-shaped; *sigma* is the Greek equivalent of S. Show the logistic function, which has a simpler formula and is also useful in applications. In biochemistry, there is a Hill() function, which generalizes `hillside()` but is named after Archibald V. Hill.
+
+:::
+ <!-- end of exr-frog-wish-bolt -->

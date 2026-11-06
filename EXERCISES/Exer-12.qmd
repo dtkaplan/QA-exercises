@@ -13,31 +13,31 @@ source("../_exercise_startup.R")
 
 ## 1 
 
-{{< include ../devoirs3/Chap-12/finch-teach-kayak.qmd >}}
+{{< include ../Chap-12/finch-teach-kayak.qmd >}}
 
 ## 2 
 
-{{< include ../devoirs3/Chap-12/oak-swim-bed.qmd >}}
+{{< include ../Chap-12/oak-swim-bed.qmd >}}
 
 ## 3 
 
-{{< include ../devoirs3/Chap-12/panda-cost-door.qmd >}}
+{{< include ../Chap-12/panda-cost-door.qmd >}}
 
 ## 4 
 
-{{< include ../devoirs3/Chap-12/pollen-cut-lamp.qmd >}}
+{{< include ../Chap-12/pollen-cut-lamp.qmd >}}
 
 ## 5 
 
-{{< include ../devoirs3/Chap-12/pollen-wish-hamper.qmd >}}
+{{< include ../Chap-12/pollen-wish-hamper.qmd >}}
 
 ## 6 
 
-{{< include ../devoirs3/Chap-12/pony-bite-suitcase.qmd >}}
+{{< include ../Chap-12/pony-bite-suitcase.qmd >}}
 
 ## 7 
 
-{{< include ../devoirs3/Chap-12/pony-do-suitcase.qmd >}}
+{{< include ../Chap-12/pony-do-suitcase.qmd >}}
 
 
 

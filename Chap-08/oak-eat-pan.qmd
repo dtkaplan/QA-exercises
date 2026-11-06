@@ -4,7 +4,7 @@ created: "Fri Jan 30 08:26:10 2026"
 attribution: prompted by AI
 status: ready-to-use
 chapter: 8
-mode: "drill"
+mode: drill
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -14,19 +14,19 @@ Match the following real-world scenarios to the distribution that best models th
 
 A. "I will arrive sometime between 1:00 PM and 5:00 PM, but any time in that window is equally likely."
 
-`r devoirs::devoirs_set("oep-a-3ks", choices = c("uniform", "normal", "exponential"), correct = "uniform")`
+`r devoirs3::devoirs_set3(label = "oep-a-3ks", choices = c("uniform", "normal", "exponential"), correct = "uniform")`
 
 B. "The bus usually arrives at 8:00 AM, but it can be a few minutes early or late. It is very unlikely to be more than 15 minutes off."
 
-`r devoirs::devoirs_set("oep-b-3ks", choices = c("uniform", "normal", "exponential"), correct = "normal")`
+`r devoirs3::devoirs_set3(label = "oep-b-3ks", choices = c("uniform", "normal", "exponential"), correct = "normal")`
 
 C. The amount of time that passes between two random, independent events (like 100-year storms or, on a different time scale, receiving text messages).
 
-`r devoirs::devoirs_set("oep-c-3ks", choices = c("uniform", "normal", "exponential"), correct = "exponential")`
+`r devoirs3::devoirs_set3(label = "oep-c-3ks", choices = c("uniform", "normal", "exponential"), correct = "exponential")`
 
 D. A quantity where values outside a specific range are considered impossible (probability = 0).
 
-`r devoirs::devoirs_set("oep-d-3ks", choices = c("uniform", "normal", "exponential"), correct = "uniform")`
+`r devoirs3::devoirs_set3(label = "oep-d-3ks", choices = c("uniform", "normal", "exponential"), correct = "uniform")`
 
 
 :::

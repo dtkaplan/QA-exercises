@@ -4,7 +4,7 @@ created: "Sat Dec 20 08:28:00 2025"
 attribution: TBA
 status: "sketch"
 chapter: 14
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -16,12 +16,27 @@ AI generated.
 
 You are planning a trip to London and need to exchange some money. The current exchange rate is 1 British Pound (£) to 1.25 U.S. Dollars ($). If you have $600 for spending money, how many British Pounds will you receive (assuming no fees)?
 
-```{mcq}
-#| label: dbf-1-pcas
-1. £500, because you divide the dollars by the rate of 1.25 per pound. [correct]
-2. £750, because you multiply the dollars by the rate of 1.25. 
-3. £400, because the pound is stronger and you should expect significantly less currency.
-4. £480, because the ratio is  $1.25 per £1 and $600 $\times$ 1.25 = 480. [hint: See the human comment below.]
+```{devoirs_choices}
+#| label: choices_dbf.1.pcas
+- '£500, because you divide the dollars by the rate of 1.25 per pound.':
+    correct: true
+- '£750, because you multiply the dollars by the rate of 1.25.':
+    correct: false
+- '£400, because the pound is stronger and you should expect significantly less currency.':
+    correct: false
+- '£480, because the ratio is  $1.25 per £1 and $600 $\times$ 1.25 = 480.':
+    correct: false
+    feedback: 'See the human comment below.'
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dbf-1-pcas",
+  question = "Placeholder for now",
+  answers = choices_dbf.1.pcas,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 Human comments:

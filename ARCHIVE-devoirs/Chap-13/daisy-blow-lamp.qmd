@@ -1,0 +1,56 @@
+<!--
+id: "daisy-blow-lamp"
+created: "Mon Sep 15 11:53:17 2025"
+attribution: TBA
+status: "draft"
+chapter: 13
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-daisy-blow-lamp}
+Many phenomena, particularly those relating to storms and earthquakes are described by the *time between successive events*. For instance, a 500-year flood is one whose large magnitude makes it an infrequent event. Major earthquakes or volcano eruptions are described in a similar way.
+
+Contrary to popular intuition, a 500-year flood is not scheduled to be repeated after about 500 years. Instead, the time to the next event is modeled as uncertain but with definite properties, for instance, that the next event is equally likely to come at any time but with an average inter-event interval as about 500 years.
+
+The exp2() function is often used to describe what we know about when the next random event will occur. (exp2() is our core modeling name for the mathematical exponential function.) Input scaling is applied to set the average time between events.
+
+Here's what the function looks like for a 500-year event:
+
+```{r}
+#| label: C13-xikbs
+slice_plot(dexp(time, rate=1/500) ~ time, domain(time = 0:1500)) |>
+  # slice_plot(0.002*exp2(-0.002885*time) ~ time, color = "red", alpha = .5) |>
+  gf_hline(yintercept = ~ 0, color = "blue", alpha = 0.5) |>
+  gf_labs(x = "Time between events (years)", y = "Relative probability")
+```
+
+For each of the following, figure out about what is the average time between events.
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| label: C13-qrxer
+slice_plot(dexp(time, rate = 1/50) ~ time, domain(time = 0:250)) |>
+   gf_hline(yintercept = ~ 0, color = "blue", alpha = 0.5) |>
+   gf_labs(x = "Time between events (years)", y = "Relative probability")  |>
+   gf_theme(axis.text.y = element_blank())
+slice_plot(dexp(time, rate = 1/25) ~ time, domain(time = 0:250)) |>
+   gf_hline(yintercept = ~ 0, color = "blue", alpha = 0.5) |>
+   gf_labs(x = "Time between events (years)", y = "Relative probability")  |>
+   gf_theme(axis.text.y = element_blank())
+slice_plot(dexp(time, rate = 1/800) ~ time, domain(time = 0:1000)) |>
+   gf_hline(yintercept = ~ 0, color = "blue", alpha = 0.5) |>
+   gf_labs(x = "Time between events (years)", y = "Relative probability")  |>
+   gf_theme(axis.text.y = element_blank())
+slice_plot(dexp(time, rate = 1/.25) ~ time, domain(time = 0:1)) |>
+   gf_hline(yintercept = ~ 0, color = "blue", alpha = 0.5) |>
+   gf_labs(x = "Time between events (years)", y = "Relative probability") |>
+   gf_theme(axis.text.y = element_blank())
+
+```
+
+
+:::
+ <!-- end of exr-daisy-blow-lamp -->

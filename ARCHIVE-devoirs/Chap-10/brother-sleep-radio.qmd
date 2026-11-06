@@ -1,0 +1,44 @@
+<!--
+id: "brother-sleep-radio"
+created: "Fri Jan 16 08:59:04 2026"
+attribution: TBA
+status: "draft"
+chapter: 10
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-brother-sleep-radio}
+The `r xf_definition("Rule of 72")` is a calculation age for estimating the doubling time of an exponentially growing quantity. It's set up to work with growth rates stated in *percentages*, as in bank-account interest (about 4% per year), credit-card interest (about 20% per year), population growth rates (0-3% per year).
+
+The calculation is straightforward. To find the (approximate) doubling time for the given growth rate, divide that rate into 72. For instance, a 4% growth rate corresponds to a doubling time of 72/(4 per year) = 18 years.
+
+1. Using the Rule of 72, find the doubling time (in years) for a population growing at 1 percent per year.
+
+`r devoirs::devoirs_set(choices = c(22, 52, 72, 102), correct=72, id = "bsr-1-kew")`
+
+2. Radioactive isotopes are characterized by their `r xf_definition("half-life")`, that is, the time in which the amount of that isotope falls to half its original value. Iodine-131, used in medical procedures, has a relatively short half life. Look up the half life of Iodine-131 and use it, along with the Rule of 72, to calculate the daily reduction (in percent per day) in the amount of that isotope.  
+
+```{mcq}
+#| label: bsr-2-cse
+#| inline: true
+1. Reduction of 9% per day. [correct]
+2. Reduction of 12% per day.
+3. Reduction of 24% per day.
+4. Not enough information was given.
+```
+
+3. Suppose the population of an endangered fish species is dwindling by 6% per year. At this rate, how many years will it take for the population of the species to fall to one-half it's original value?
+
+```{mcq}
+#| label: bsr-3-eys
+#| inline: true
+1. 6 years
+2. 12 years [correct]
+3. 24 years
+4. 48 years
+```
+
+:::
+ <!-- end of exr-brother-sleep-radio -->

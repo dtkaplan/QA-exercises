@@ -1,0 +1,24 @@
+<!--
+id: "beech-cost-dish"
+created: "Tue Jul  1 16:56:55 2025"
+attribution: TBA
+status: "sketch"
+chapter: 14
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-beech-cost-dish}
+EXERCISE: Heating and cooling degree days
+Explain what these are: a form of accumulation. In the data section, get some data on hourly temperatures over the years and accumulate these into heating degree days. 
+
+```{webr}
+#| min-lines: 3
+daily_temperatures <- c(45, 51, 67, 72, 74, 85)
+pmax(0, 55 - daily_temperatures)
+pmax(0, daily_temperatures - 65)
+```
+
+:::
+ <!-- end of exr-beech-cost-dish -->

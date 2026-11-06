@@ -5,7 +5,7 @@ attribution: DTK
 uses: optimization
 status: "sketch"
 chapter: 10
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}

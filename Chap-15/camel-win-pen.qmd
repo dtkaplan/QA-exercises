@@ -5,7 +5,7 @@ attribution: Dorothy Dickmann
 use: RQ-13
 status: "sketch"
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -13,6 +13,6 @@ mode: "exercise"
 ::: {#exr-camel-win-pen}
 The chapter describes the modeling logic behind the QALYs-versus-expenditure curves for Natal and Cancer (r xf("fig-QALY-vs-cost")`). What role does anti-differentiation play in that logic?
 
-`r devoirs::devoirs_text("RQ13-cwp-2")`
+`r devoirs3::devoirs_text("RQ13-cwp-2")`
 :::
  <!-- end of exr-camel-win-pen -->

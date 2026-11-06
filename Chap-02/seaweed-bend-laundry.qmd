@@ -21,7 +21,7 @@ Using the internet, find out what's behind these operationalizations of the abov
 - consumer confidence 
 - market capitalization of a company
 
-`r devoirs::devoirs_text("sbl-econ-ckse")`
+`r devoirs3::devoirs_text("sbl-econ-ckse")`
 
 :::
  <!-- end of exr-seaweed-bend-laundry -->

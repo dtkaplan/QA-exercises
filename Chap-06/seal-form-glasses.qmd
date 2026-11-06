@@ -4,7 +4,7 @@ created: "Fri Jan 16 11:24:35 2026"
 attribution: "Dorothy Dickmann"
 status: ready-to-use
 chapter: 6
-mode: "reading-question"
+mode: reading-question
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -34,10 +34,10 @@ gf_lims(y=c(0, NA))
 
 How can one function, `monthly_payment()` have two different graphs? 
 
-`r devoirs::devoirs_text("sfg-1-kr3s")`
+`r devoirs3::devoirs_text("sfg-1-kr3s")`
 
 Which of the two panels---(a) or (b)---gives insight into the suggested long-duration policy? 
 
-`r devoirs::devoirs_text("sfg-2-kr3s")`
+`r devoirs3::devoirs_text("sfg-2-kr3s")`
 :::
  <!-- end of exr-seal-form-glasses -->

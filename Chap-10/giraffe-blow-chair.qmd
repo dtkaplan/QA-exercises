@@ -22,40 +22,82 @@ gf_theme(theme_minimal(base_size=12))
 
 i. Which of the following is closest to the *minimum* of the function?
 
-```{mcq}
-#| label: D10-gbc-1
-#| inline: true
-1. $(u = 1, w = 1)$
-2. 12
-3. -3 [correct]
-4. $(u=-1.5, w = 0.75)$
-5. $(u=1, w = 3.5)$
+```{devoirs_choices}
+#| label: choices_D10.gbc.1
+- '$(u = 1, w = 1)$':
+    correct: false
+- '12':
+    correct: false
+- '-3':
+    correct: true
+- '$(u=-1.5, w = 0.75)$':
+    correct: false
+- '$(u=1, w = 3.5)$':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-gbc-1",
+  question = "Placeholder for now",
+  answers = choices_D10.gbc.1,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 
 ii. Which of the following is closest to the *argmax* of the function?
 
-```{mcq}
-#| label: D10-gbc-2
-#| inline: true
-1. $(u = 1, w = 1)$
-2. 12
-3. -3 
-4. $(u=-1.5, w = 0.75)$ [correct]
-5. $(u=1, w = 3.5)$
+```{devoirs_choices}
+#| label: choices_D10.gbc.2
+- '$(u = 1, w = 1)$':
+    correct: false
+- '12':
+    correct: false
+- '-3':
+    correct: false
+- '$(u=-1.5, w = 0.75)$':
+    correct: true
+- '$(u=1, w = 3.5)$':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-gbc-2",
+  question = "Placeholder for now",
+  answers = choices_D10.gbc.2,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 
 iii. Which of the following is closest to the *argmin* of the function?
 
-```{mcq}
-#| label: D10-gbc-3
-#| inline: true
-1. $(u = 1, w = 1)$ [correct]
-2. 12
-3. -3 
-4. $(u=-1.5, w = 0.75)$ 
-5. $(u=1, w = 3.5)$
+```{devoirs_choices}
+#| label: choices_D10.gbc.3
+- '$(u = 1, w = 1)$':
+    correct: true
+- '12':
+    correct: false
+- '-3':
+    correct: false
+- '$(u=-1.5, w = 0.75)$':
+    correct: false
+- '$(u=1, w = 3.5)$':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "D10-gbc-3",
+  question = "Placeholder for now",
+  answers = choices_D10.gbc.3,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 

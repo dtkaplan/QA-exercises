@@ -1,0 +1,55 @@
+<!--
+id: "cat-run-screen"
+created: "Thu Feb 19 16:49:07 2026"
+attribution: TBA
+status: "draft"
+chapter: 11
+mode: "exercise"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+::: {#exr-cat-run-screen}
+Here's a weather forecast in the midst of a snowy period. 
+
+![](../www/Snow-forecast-bethany.png)
+
+Due to round-off, the "likelihoods" do not add exactly to 1.00. But close enough, so let's treat them as probabilities. 
+
+1. What's the probability of $\leq 1$ in of snowfall?
+
+```{mcq}
+#| label: crs-1-sno
+#| inline: true
+1. 18%
+2. 30%
+3. 48% [correct]
+4. Not enough info.
+```
+
+2. What's the probability of $1 \leq\ \text{snowfall} \ \leq 6$ in of snowfall?
+
+```{mcq}
+#| label: crs-2-srto
+#| inline: true
+1. 23%
+2. 32% [correct]
+3. 47% 
+4. Not enough info.
+```
+
+3. What's the probability of $1 \leq\ \text{snowfall} \ \leq 3$ in of snowfall?
+
+```{mcq}
+#| label: crs-3-wql
+#| inline: true
+1. 16% [hint: Not what I was looking for, but pretty clever. I'm thinking you divided the 14 percent for 2 to 4 inches into 7 percent for 2 to 3 inches. Very reasonable.]
+2. 32% 
+3. 48% 
+4. Not enough info. [correct]
+```
+
+
+
+:::
+ <!-- end of exr-cat-run-screen -->

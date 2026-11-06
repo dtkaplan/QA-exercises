@@ -4,7 +4,7 @@ created: "Sun Feb  1 08:58:55 2026"
 attribution: TBA
 status: "sketch"
 chapter: 7
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -17,12 +17,27 @@ ii. $f(x)g(x)$
 
 Which words most appropriately describe the distinction between the two forms?
 
-```{mcq}
-#| label: dgo-1-kcsl
-1. multiplication & pipelining, repectively. [hint: Sorry. The order is wrong.]
-2. interior combination vs exterior combination, respectively.
-3. pipelining & multiplication, respectively. [correct]
-4. linear combination and pipelining, respectively.
+```{devoirs_choices}
+#| label: choices_dgo.1.kcsl
+- 'multiplication & pipelining, repectively.':
+    correct: false
+    feedback: 'Sorry. The order is wrong.'
+- 'interior combination vs exterior combination, respectively.':
+    correct: false
+- 'pipelining & multiplication, respectively.':
+    correct: true
+- 'linear combination and pipelining, respectively.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "dgo-1-kcsl",
+  question = "Placeholder for now",
+  answers = choices_dgo.1.kcsl,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 :::

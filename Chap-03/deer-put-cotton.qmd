@@ -4,7 +4,7 @@ created: "Sun Dec 28 14:00:11 2025"
 attribution: TBA
 status: ready-to-use
 chapter: 3
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -23,7 +23,7 @@ Temperature:
 "
 ```
 
-`r devoirs::devoirs_text("RQ-units-fundamental", contents = default_text, rows = 5)`
+`r devoirs3::devoirs_text("RQ-units-fundamental", contents = default_text, height = 5)`
 
 :::
  <!-- end of exr-deer-put-cotton -->

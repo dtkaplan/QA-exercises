@@ -4,7 +4,7 @@ created: "Tue Feb 24 12:23:20 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 13
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -18,14 +18,30 @@ The bus starts from city A, it is carrying 10 passengers. At city B, four passen
 
 How how much transportation service has the bus provided?
 
-```{mcq}
-#| label: ksl-1-ris
-1. 3400 miles
-2. 3400 passenger-miles
-2. 6650 miles
-4. 6650 passenger-miles
-5. 9850 miles
-6. 9850 passenger-miles
+```{devoirs_choices}
+#| label: choices_ksl.1.ris
+- '3400 miles':
+    correct: false
+- '3400 passenger-miles':
+    correct: false
+- '6650 miles':
+    correct: false
+- '6650 passenger-miles':
+    correct: false
+- '9850 miles':
+    correct: false
+- '9850 passenger-miles':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "ksl-1-ris",
+  question = "Placeholder for now",
+  answers = choices_ksl.1.ris,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 :::
  <!-- end of exr-kitten-serve-lamp -->

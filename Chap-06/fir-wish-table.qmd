@@ -4,7 +4,7 @@ created: "Fri Jan 16 08:29:31 2026"
 attribution: TBA
 status: ready-to-use
 chapter: 6
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -43,37 +43,81 @@ Why *exponential* growth? In the third column of @tbl-2-exponential the quantiti
 
 1. What is the rate of change of biomass with respect to time, looking at time 5 to 6? Remember, the *change in biomass* will be on top in the ratio, the *change in time* (we asked about 1 day).
 
-```{mcq}
-#| label: fwt-1-2kdw
-1. 20 gm per day
-2. 32 gm per day [correct]
-3. 65 gm per day
-4. 128 gm per day
-5. 256 gm per day
+```{devoirs_choices}
+#| label: choices_fwt.1.2kdw
+- '20 gm per day':
+    correct: false
+- '32 gm per day':
+    correct: true
+- '65 gm per day':
+    correct: false
+- '128 gm per day':
+    correct: false
+- '256 gm per day':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fwt-1-2kdw",
+  question = "Placeholder for now",
+  answers = choices_fwt.1.2kdw,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 2. What is the rate of change of biomass with respect to time over the interval day 8 to 9?
 
-```{mcq}
-#| label: fwt-2-2kdw
-1. 20 gm per day
-2. 32 gm per day 
-3. 65 gm per day
-4. 128 gm per day
-5. 256 gm per day [correct]
+```{devoirs_choices}
+#| label: choices_fwt.2.2kdw
+- '20 gm per day':
+    correct: false
+- '32 gm per day':
+    correct: false
+- '65 gm per day':
+    correct: false
+- '128 gm per day':
+    correct: false
+- '256 gm per day':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fwt-2-2kdw",
+  question = "Placeholder for now",
+  answers = choices_fwt.2.2kdw,
+  multiple = FALSE
+)
+Q(inline = FALSE)
 ```
 
 It's very convenient for the purposes of this problem that the algal biomass doubles with every new day. In reality, however, the *doubling time* would depend on things like the temperature or the oxygen or mineral content of the water.
 
 Suppose that the doubling time for algae is 3.5 days. How many days would it take for the biomass to reach 1024 gm (that is, about 1 kg)?
 
-```{mcq}
-#| label: fwt-3-3lse
-#| inline: true
-1. 28 days
-2. 35 days [correct hint: 3.5 times as long as it took to grow to 1 kg when the doubling time was 1 day.]
-3. 64 days
-4. 72 days
+```{devoirs_choices}
+#| label: choices_fwt.3.3lse
+- '28 days':
+    correct: false
+- '35 days':
+    correct: true
+    feedback: '3.5 times as long as it took to grow to 1 kg when the doubling time was 1 day.'
+- '64 days':
+    correct: false
+- '72 days':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "fwt-3-3lse",
+  question = "Placeholder for now",
+  answers = choices_fwt.3.3lse,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::

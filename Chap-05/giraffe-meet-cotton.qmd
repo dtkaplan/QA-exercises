@@ -5,7 +5,7 @@ attribution: DTK
 use: "Chapter 5 exercises"
 status: ready-to-use
 chapter: 5
-mode: "exercise"
+mode: exercise
 -->
 
 {{< include ../exercise-header.qmd >}}
@@ -30,65 +30,138 @@ slice_plot(f1(z) ~ z, domain(z = -5:5))
 
 1. For `f1()`, for what input does the output reach its maximum value? (Select the closest value.)
 
-```{mcq}
-#| label: gmc-1-lesle
-#| inline: true
-1. -4
-2. -3
-3. -2 [correct]
-4.  0
-5.  2
-6.  3
-7.  4
+```{devoirs_choices}
+#| label: choices_gmc.1.lesle
+- '-4':
+    correct: false
+- '-3':
+    correct: false
+- '-2':
+    correct: true
+- '0':
+    correct: false
+- '2':
+    correct: false
+- '3':
+    correct: false
+- '4':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-1-lesle",
+  question = "Placeholder for now",
+  answers = choices_gmc.1.lesle,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 2. For `f2()`, what is the input where the output crosses zero?  [Pick the closest answer.]
 
-```{mcq}
-#| label: gmc-2-loie
-#| inline: true
-1. -3
-2. -1 [correct]
-3. 0 
-4.  1
-5.  3
+```{devoirs_choices}
+#| label: choices_gmc.2.loie
+- '-3':
+    correct: false
+- '-1':
+    correct: true
+- '0':
+    correct: false
+- '1':
+    correct: false
+- '3':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-2-loie",
+  question = "Placeholder for now",
+  answers = choices_gmc.2.loie,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 3. For `f3()`, what is the minimum value of the output? [Pick the closest answer.]
 
-```{mcq}
-#| label: gmc-3-yee
-#| inline: true
-1. 0
-2. -10
-3. -20
-4. -30 [correct]
+```{devoirs_choices}
+#| label: choices_gmc.3.yee
+- '0':
+    correct: false
+- '-10':
+    correct: false
+- '-20':
+    correct: false
+- '-30':
+    correct: true
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-3-yee",
+  question = "Placeholder for now",
+  answers = choices_gmc.3.yee,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 4. For `f4()`, at what input does the output cross zero? [Pick the closest answer.]
 
-```{mcq}
-#| label: gmc-4-rwsle
-#| inline: true
-1. -4
-2. -3
-3. -2 
-4.  0
-5.  2
-6.  3 [correct]
-7.  4
+```{devoirs_choices}
+#| label: choices_gmc.4.rwsle
+- '-4':
+    correct: false
+- '-3':
+    correct: false
+- '-2':
+    correct: false
+- '0':
+    correct: false
+- '2':
+    correct: false
+- '3':
+    correct: true
+- '4':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-4-rwsle",
+  question = "Placeholder for now",
+  answers = choices_gmc.4.rwsle,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 5. For `f5()`, at how many different inputs does the output cross zero? 
 
-```{mcq}
-#| label: gmc-5-qdr
-#| inline: true
-1. 0
-2. 1
-3. 2 
-4. 3 [correct]
-5. 4
+```{devoirs_choices}
+#| label: choices_gmc.5.qdr
+- '0':
+    correct: false
+- '1':
+    correct: false
+- '2':
+    correct: false
+- '3':
+    correct: true
+- '4':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "gmc-5-qdr",
+  question = "Placeholder for now",
+  answers = choices_gmc.5.qdr,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 :::
  <!-- end of exr-giraffe-meet-cotton -->

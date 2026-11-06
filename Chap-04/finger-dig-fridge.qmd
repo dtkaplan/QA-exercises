@@ -4,7 +4,7 @@ created: "Fri Jan  9 17:37:40 2026"
 attribution: Dave Ruth
 status: ready-to-use
 chapter: 4
-mode: "exercise"
+mode: exercise
 topic: "energy"
 -->
 
@@ -21,6 +21,6 @@ With fuel efficiency, a change from 6 L/100km to 5 L/100km represents an improve
 
 Is the same true for "fuel economy?" Does a change from 10 to 20 mpg correspond to the same savings as increasing it from 30 to 40 mpg? Explain your reasoning.
 
-`r devoirs::devoirs_text("fdf-3kse")`
+`r devoirs3::devoirs_text("fdf-3kse")`
 :::
  <!-- end of exr-finger-dig-fridge -->

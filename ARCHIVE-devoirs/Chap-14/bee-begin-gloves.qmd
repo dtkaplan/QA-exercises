@@ -1,0 +1,58 @@
+<!--
+id: "bee-begin-gloves"
+created: "Sat Dec 20 08:45:42 2025"
+attribution: TBA
+status: "draft"
+chapter: 14
+mode: "reading-question"
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+
+
+::: {#exr-bee-begin-gloves}
+AI generated in response to a prompt about "fuel economy" versus "fuel consumption."
+
+This is a fantastic topic for our quantitative reasoning course because it highlights how different cultures choose different units to represent the same concept—and how those choices change the math.
+
+In the United States, we use Fuel Efficiency (Distance/Volume), while in Europe and much of the world, they use Fuel Consumption (Volume/Distance).
+
+
+Scenario: You are comparing two rental cars for a road trip.
+
+The American Model: Rated at 30 miles per gallon (mpg).
+
+The European Model: Rated at 8 liters per 100 kilometers (L/100km).
+
+To compare them, you need to convert the European rating into "American" units. Use the following conversion factors:
+
+* 1 gallon ≈ 3.8 liters
+* 100 kilometers ≈ 62 miles
+
+Question: What is the approximate fuel efficiency of the European model in miles per gallon, and which car is more "efficient" (uses less fuel per mile)?
+
+```{mcq}
+#| label: bbg-1-cfr
+1. The European model is 18.6 mpg, making the American model more efficient.
+2. The European model is 29.5 mpg, making the American model slightly more efficient. [correct]
+3. The European model is 46.5 mpg, making the European model significantly more efficient.
+4. The European model is 7.75 mpg, making it a very poor choice for a long trip.
+```
+
+<!-- Opening answer: bbg-7Se -->
+::: {.callout-tip collapse=true `r devoirs:::answer_style()`}
+## Answer
+
+To compare two quantities, they must have the same dimension. The dimension of miles-per-gallon is L / L^3^ = L^-2^. The dimension of "liters per 100 km" is L^3^ / L = L^2$. So we can't directly compare the two cars.
+
+Nonetheless, it is straightforward to calculate the miles-per-gallon of the European car. The car consumes 8 liters in order to go 100 km. The problem statement told us that 100 km = 62 miles. But how many gallons are their in eight liters? We need a conversion factor *from* liters *to* gallons. The conversion factor will be a flavor of 1 with gallons on top and liters on the bottom. Since 1 gallon ≈ 3.8 liters, we divide 1 gallon by 3.8 liters; the conversion factor is $$\frac{1\, \text{gallon} }{3.8\, \text{liters}} = 0.263\, \text{gallons per litre} .$$
+
+Converting 8 liters to gallons is a simple matter of multiplying by the conversion factor: $$8\, \text{liters} \times 0.263\, \frac{\text{gallons}}{\text{litre}} = 2.112\,  \text{gallons}$$
+To find the miles-per-gallon, divide the distance by the fuel used, that is $$62\, \text{miles} / 2.112\, \text{gallons} \approx 29.5\, \text{mpg} .$$ 
+
+[..id..]{data-tooltip="Ans id: bbg-7Se"}
+:::
+<!-- closing answer bbg-7Se -->
+:::
+ <!-- end of exr-bee-begin-gloves -->

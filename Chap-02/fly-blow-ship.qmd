@@ -14,13 +14,26 @@ chapter: 02
 ::: {#exr-fly-blow-ship}
 Why is the heat index used in the chapter as an example of operationalization?
 
-```{mcq}
-#| label: d01-heat-index
-#| inline: true
-1. It provides a quantitative indicator related to comfort in hot, humid weather. [correct]
-2. It measures every aspect of human comfort.
-3. It is simply another word for temperature.
-4. It eliminates the need for a model.
+```{devoirs_choices}
+#| label: choices_d01.heat.index
+- 'It provides a quantitative indicator related to comfort in hot, humid weather.':
+    correct: true
+- 'It measures every aspect of human comfort.':
+    correct: false
+- 'It is simply another word for temperature.':
+    correct: false
+- 'It eliminates the need for a model.':
+    correct: false
+```
+
+```{r echo=FALSE}
+Q <- devoirs_selection(
+  label = "d01-heat-index",
+  question = "Placeholder for now",
+  answers = choices_d01.heat.index,
+  multiple = FALSE
+)
+Q(inline = TRUE)
 ```
 
 :::
