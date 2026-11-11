@@ -1,0 +1,29 @@
+
+```{devoirs_choices unsupervised_learning_16_one_choices}
+- Finding structure in examples when the desired groupings or answers are not supplied.:
+    correct: true
+    feedback: Correct.
+- Training a model using known labels for every example.:
+    correct: false
+    feedback: That is supervised learning; unsupervised learning proceeds without
+      labeled target patterns.
+- A method that always identifies the correct categories before examining examples.:
+    correct: false
+    feedback: The task is to discover structure without knowing in advance what patterns
+      to find.
+- A procedure that discards all measurements and keeps only category names.:
+    correct: false
+    feedback: Without labels, the method analyzes measurements to discover structure
+      rather than relying on category names.
+```
+
+Only one of the following is a valid description of unsupervised learning. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "unsupervised-learning-16-one",
+  question = "Only one of the following is a valid description of unsupervised learning. Mark that one.",
+  answers = unsupervised_learning_16_one_choices,
+  multiple = FALSE
+)()
+```

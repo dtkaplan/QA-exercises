@@ -1,0 +1,29 @@
+
+```{devoirs_choices data_frame_2_one_choices}
+- A procedure for translating a dimension into a measurable quantity.:
+    correct: false
+    feedback: This describes operationalization, not data frame. In this chapter,
+      data frame refers to a rectangular array of data organized into rows and columns.
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not data frame. In this chapter, data frame
+      refers to a rectangular array of data organized into rows and columns.
+- A structured table whose cells contain values for variables and specimens.:
+    correct: true
+    feedback: Correct.
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not data frame. In this chapter, data frame
+      refers to a rectangular array of data organized into rows and columns.
+```
+
+Only one of the following is a valid description of data frame. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "data-frame-2-one",
+  question = "Only one of the following is a valid description of data frame. Mark that one.",
+  answers = data_frame_2_one_choices,
+  multiple = FALSE
+)()
+```

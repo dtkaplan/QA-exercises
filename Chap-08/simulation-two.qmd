@@ -1,0 +1,31 @@
+
+```{devoirs_choices simulation_8_two_choices}
+- A computational technique that propagates uncertain inputs through a model by repeated sampling.:
+    correct: true
+    feedback: Correct.
+- A process for drawing a graph without calculating any model outputs.:
+    correct: false
+    feedback: Simulation evaluates the model on generated inputs to study its outputs.
+- A calculation that multiplies the lower and upper ends of two ranges.:
+    correct: false
+    feedback: The chapter presents simulation as a way to handle uncertain calculations
+      that ranges alone cannot reliably solve.
+- A way to estimate output uncertainty by sampling uncertain inputs from their distributions.:
+    correct: true
+    feedback: Correct.
+- A proof that a model's output is correct for every possible input.:
+    correct: false
+    feedback: Simulation explores outcomes under a model; it does not prove the model
+      correct.
+```
+
+Two of the following are valid descriptions of simulation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "simulation-8-two",
+  question = "Two of the following are valid descriptions of simulation. The other three are not. Mark both of the VALID descriptions.",
+  answers = simulation_8_two_choices,
+  multiple = TRUE
+)()
+```

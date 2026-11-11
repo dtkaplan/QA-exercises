@@ -1,0 +1,28 @@
+
+```{devoirs_choices bayesian_8_one_choices}
+- A method that forbids using any knowledge formed before collecting data.:
+    correct: false
+    feedback: Bayesian inference can represent pre-data knowledge with a prior distribution.
+- A computer routine that generates unpredictable values without a model.:
+    correct: false
+    feedback: Random number generation can support Bayesian calculations, but it is
+      not the meaning of Bayesian.
+- A perspective on inference that combines prior knowledge with evidence from observations.:
+    correct: true
+    feedback: Correct.
+- A distribution describing only values observed in the past.:
+    correct: false
+    feedback: Bayesian distributions can represent uncertainty about hypotheses and
+      quantities, including unobserved possibilities.
+```
+
+Only one of the following is a valid description of bayesian. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "bayesian-8-one",
+  question = "Only one of the following is a valid description of bayesian. Mark that one.",
+  answers = bayesian_8_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,32 @@
+
+```{devoirs_choices bayesian_8_two_choices}
+- The claim that data alone determine a conclusion without assumptions.:
+    correct: false
+    feedback: Bayesian analysis explicitly combines data with assumptions or prior
+      knowledge.
+- An approach to inference that uses distributions to express and update beliefs about hypotheses.:
+    correct: true
+    feedback: Correct.
+- A school of thought that treats every hypothesis as simply true or false.:
+    correct: false
+    feedback: The chapter describes Bayesian reasoning in terms of distributions over
+      hypotheses, not only binary verdicts.
+- A method of reasoning that updates a probability distribution as data arrive.:
+    correct: true
+    feedback: Correct.
+- A distribution describing only values observed in the past.:
+    correct: false
+    feedback: Bayesian distributions can represent uncertainty about hypotheses and
+      quantities, including unobserved possibilities.
+```
+
+Two of the following are valid descriptions of bayesian. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "bayesian-8-two",
+  question = "Two of the following are valid descriptions of bayesian. The other three are not. Mark both of the VALID descriptions.",
+  answers = bayesian_8_two_choices,
+  multiple = TRUE
+)()
+```

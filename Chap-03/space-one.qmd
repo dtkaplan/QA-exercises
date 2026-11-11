@@ -1,0 +1,29 @@
+
+```{devoirs_choices space_3_one_choices}
+- The change in a primary quantity divided by the corresponding change in a context-setting quantity.:
+    correct: false
+    feedback: This describes rate of change, not space. In this chapter, space refers
+      to a collection of quantities whose values identify locations within it.
+- A ratio of two quantities where division expresses a relationship between their underlying dimensions.:
+    correct: false
+    feedback: This describes rate, not space. In this chapter, space refers to a collection
+      of quantities whose values identify locations within it.
+- A set of one or more quantities considered together as possible positions.:
+    correct: true
+    feedback: Correct.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not space. In this chapter, space refers to
+      a collection of quantities whose values identify locations within it.
+```
+
+Only one of the following is a valid description of space. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "space-3-one",
+  question = "Only one of the following is a valid description of space. Mark that one.",
+  answers = space_3_one_choices,
+  multiple = FALSE
+)()
+```

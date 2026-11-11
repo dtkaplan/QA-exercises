@@ -1,0 +1,27 @@
+
+```{devoirs_choices trade_off_10_one_choices}
+- A situation where there is only one possible objective.:
+    correct: false
+    feedback: Trade-offs arise because competing objectives must be balanced.
+- A transaction in which two different people exchange goods.:
+    correct: false
+    feedback: The chapter distinguishes a trade-off as a balance of objectives faced
+      by one party.
+- A choice that improves every objective without worsening any.:
+    correct: false
+    feedback: That is a win-win improvement or dominance, not a trade-off.
+- A situation in which one person must balance competing objectives.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of trade-off. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "trade-off-10-one",
+  question = "Only one of the following is a valid description of trade-off. Mark that one.",
+  answers = trade_off_10_one_choices,
+  multiple = FALSE
+)()
+```

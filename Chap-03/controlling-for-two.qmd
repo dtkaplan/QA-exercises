@@ -1,0 +1,35 @@
+
+```{devoirs_choices controlling_for_3_two_choices}
+- Units formed by multiplying or dividing base units.:
+    correct: false
+    feedback: This describes derived units, not controlling for. In this chapter,
+      controlling for refers to accounting for other variables while examining a relationship
+      of interest.
+- A method for isolating one variable's contribution by holding other influences constant.:
+    correct: true
+    feedback: Correct.
+- Dimensions formed by multiplying or dividing base dimensions.:
+    correct: false
+    feedback: This describes derived dimensions, not controlling for. In this chapter,
+      controlling for refers to accounting for other variables while examining a relationship
+      of interest.
+- Considering one factor while statistically accounting for additional factors.:
+    correct: true
+    feedback: Correct.
+- A one-dimensional line on which points represent values of a quantity.:
+    correct: false
+    feedback: This describes number line, not controlling for. In this chapter, controlling
+      for refers to accounting for other variables while examining a relationship
+      of interest.
+```
+
+Two of the following are valid descriptions of controlling for. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "controlling-for-3-two",
+  question = "Two of the following are valid descriptions of controlling for. The other three are not. Mark both of the VALID descriptions.",
+  answers = controlling_for_3_two_choices,
+  multiple = TRUE
+)()
+```

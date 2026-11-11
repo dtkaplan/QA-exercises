@@ -1,0 +1,35 @@
+
+```{devoirs_choices heuristic_reasoning_1_two_choices}
+- Representations of items, processes, or settings that are easier to use than the reality.:
+    correct: false
+    feedback: This describes models, not heuristic reasoning. In this chapter, heuristic
+      reasoning refers to fast, broadly applicable reasoning that uses useful but
+      fallible rules of thumb.
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: false
+    feedback: This describes quantitative models, not heuristic reasoning. In this
+      chapter, heuristic reasoning refers to fast, broadly applicable reasoning that
+      uses useful but fallible rules of thumb.
+- Fast, broadly applicable reasoning that uses useful but fallible rules of thumb.:
+    correct: true
+    feedback: Correct.
+- A procedure for translating a dimension into a measurable quantity.:
+    correct: false
+    feedback: This describes operationalization, not heuristic reasoning. In this
+      chapter, heuristic reasoning refers to fast, broadly applicable reasoning that
+      uses useful but fallible rules of thumb.
+- Common-sense reasoning that helps people respond efficiently to situations.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of heuristic reasoning. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "heuristic-reasoning-1-two",
+  question = "Two of the following are valid descriptions of heuristic reasoning. The other three are not. Mark both of the VALID descriptions.",
+  answers = heuristic_reasoning_1_two_choices,
+  multiple = TRUE
+)()
+```

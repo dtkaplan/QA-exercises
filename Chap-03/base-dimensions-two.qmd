@@ -1,0 +1,34 @@
+
+```{devoirs_choices base_dimensions_3_two_choices}
+- Dimensions formed by multiplying or dividing base dimensions.:
+    correct: false
+    feedback: This describes derived dimensions, not base dimensions. In this chapter,
+      base dimensions refers to fundamental dimensions from which derived dimensions
+      are formed.
+- Dimensionless ratios formed by dividing two exactly equal quantities.:
+    correct: false
+    feedback: This describes flavors of one, not base dimensions. In this chapter,
+      base dimensions refers to fundamental dimensions from which derived dimensions
+      are formed.
+- Independent quantity dimensions that serve as building blocks for derived dimensions.:
+    correct: true
+    feedback: Correct.
+- The basic kinds of quantity, such as time, length, mass, temperature, capita, and worth.:
+    correct: true
+    feedback: Correct.
+- A unit for counting people, from the Latin word for head.:
+    correct: false
+    feedback: This describes capita, not base dimensions. In this chapter, base dimensions
+      refers to fundamental dimensions from which derived dimensions are formed.
+```
+
+Two of the following are valid descriptions of base dimensions. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "base-dimensions-3-two",
+  question = "Two of the following are valid descriptions of base dimensions. The other three are not. Mark both of the VALID descriptions.",
+  answers = base_dimensions_3_two_choices,
+  multiple = TRUE
+)()
+```

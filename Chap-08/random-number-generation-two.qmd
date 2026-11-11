@@ -1,0 +1,32 @@
+
+```{devoirs_choices random_number_generation_8_two_choices}
+- A method for converting an output back into its original inputs.:
+    correct: false
+    feedback: That reverses a function; random number generation samples inputs or
+      outcomes from a distribution.
+- A guarantee that the next generated value will match the real-world quantity.:
+    correct: false
+    feedback: Random draws represent possibilities under a model; they are not guaranteed
+      forecasts.
+- A computational process for drawing likely values from a probability model.:
+    correct: true
+    feedback: Correct.
+- Producing values that are all equally likely regardless of the model.:
+    correct: false
+    feedback: Generated values should reflect the chosen distribution, which need
+      not be uniform.
+- Producing values at random according to a specified probability distribution.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of random number generation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "random-number-generation-8-two",
+  question = "Two of the following are valid descriptions of random number generation. The other three are not. Mark both of the VALID descriptions.",
+  answers = random_number_generation_8_two_choices,
+  multiple = TRUE
+)()
+```

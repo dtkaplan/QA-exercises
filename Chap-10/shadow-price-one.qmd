@@ -1,0 +1,28 @@
+
+```{devoirs_choices shadow_price_10_one_choices}
+- A conversion rate that quantifies the trade between competing objective outputs.:
+    correct: true
+    feedback: Correct.
+- The maximum value of an objective function.:
+    correct: false
+    feedback: That is the maximum; a shadow price is a ratio between changes in objectives.
+- A conversion that makes two objective outputs exactly equal.:
+    correct: false
+    feedback: A shadow price gives a ratio between changes; it does not make the objectives
+      equal.
+- The market price paid in money for a single physical product.:
+    correct: false
+    feedback: A shadow price compares objective outputs and need not involve money
+      or a market purchase.
+```
+
+Only one of the following is a valid description of shadow price. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "shadow-price-10-one",
+  question = "Only one of the following is a valid description of shadow price. Mark that one.",
+  answers = shadow_price_10_one_choices,
+  multiple = FALSE
+)()
+```

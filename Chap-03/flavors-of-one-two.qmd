@@ -1,0 +1,32 @@
+
+```{devoirs_choices flavors_of_one_3_two_choices}
+- Dimensionless ratios formed by dividing two exactly equal quantities.:
+    correct: true
+    feedback: Correct.
+- Quantities such as inches per meter that equal one because numerator and denominator represent the same length.:
+    correct: true
+    feedback: Correct.
+- The International System of Units, the primary official system for defining units.:
+    correct: false
+    feedback: This describes SI, not flavors of one. In this chapter, flavors of one
+      refers to dimensionless ratios formed by dividing two exactly equal quantities.
+- A location in a space that corresponds to one or more coordinate values.:
+    correct: false
+    feedback: This describes point, not flavors of one. In this chapter, flavors of
+      one refers to dimensionless ratios formed by dividing two exactly equal quantities.
+- A number with no unit designation, such as seven or pi.:
+    correct: false
+    feedback: This describes pure number, not flavors of one. In this chapter, flavors
+      of one refers to dimensionless ratios formed by dividing two exactly equal quantities.
+```
+
+Two of the following are valid descriptions of flavors of one. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "flavors-of-one-3-two",
+  question = "Two of the following are valid descriptions of flavors of one. The other three are not. Mark both of the VALID descriptions.",
+  answers = flavors_of_one_3_two_choices,
+  multiple = TRUE
+)()
+```

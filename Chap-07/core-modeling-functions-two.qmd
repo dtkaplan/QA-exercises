@@ -1,0 +1,35 @@
+```{devoirs_choices core_modeling_functions_7_two_choices}
+- 'Functions that have no names and cannot be referred to in communication or computer code.':
+    correct: true
+    feedback: |
+      Good. This is indeed an invalid description. Why? Each core modeling function has a name, such as hill() or exp2(), so its relationship type can be identified.
+- 'A library of simple one-argument functions, each representing a useful relationship type.':
+    correct: false
+    feedback: |
+      Choose the **invalid** descriptions, not this valid description.
+- 'A group of algorithms that each take an output and reconstruct the inputs that produced it.':
+    correct: true
+    feedback: |
+      Good. This is indeed an invalid description. Why? The functions represent input-to-output relationships; they are not inverse procedures that recover inputs from outputs.
+- 'Named mathematical functions with pure-number inputs and outputs, chosen for common modeling patterns.':
+    correct: false
+    feedback: |
+      Choose the **invalid** descriptions, not this valid description.
+- 'A collection of functions whose outputs are fixed and never depend on their inputs.':
+    correct: true
+    feedback: |
+      Good. This is indeed an invalid description. Why? Some core functions, such as flat(), are constant, but the collection includes many functions whose outputs vary with input.
+```
+
+Two of the following are valid descriptions of core modeling functions. The other three are not. Mark all three of the INVALID descriptions.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "core-modeling-functions-7-two",
+  question = "Two of the following are valid descriptions of core modeling functions. The other three are not. Mark all three of the INVALID descriptions.",
+  answers = core_modeling_functions_7_two_choices,
+  multiple = TRUE
+)()
+```
+

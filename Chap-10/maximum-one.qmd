@@ -1,0 +1,27 @@
+
+```{devoirs_choices maximum_10_one_choices}
+- An option that is best on every competing objective.:
+    correct: false
+    feedback: That is a dominance comparison; maximum is the highest output of one
+      objective function.
+- A set of all possible input values.:
+    correct: false
+    feedback: That is the domain; the maximum is the greatest output attained.
+- A value guaranteed to occur in every evaluation of the function.:
+    correct: false
+    feedback: A maximum is attained only for inputs that produce the highest output.
+- The top output value achieved among the available choices.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of maximum. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "maximum-10-one",
+  question = "Only one of the following is a valid description of maximum. Mark that one.",
+  answers = maximum_10_one_choices,
+  multiple = FALSE
+)()
+```

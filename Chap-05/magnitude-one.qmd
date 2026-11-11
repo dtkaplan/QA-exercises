@@ -1,0 +1,32 @@
+
+```{devoirs_choices magnitude_5_one_choices}
+- The scale position that indicates a number's size across powers of ten.:
+    correct: true
+    feedback: Correct.
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: false
+    feedback: This describes quantitative models, not magnitude. In this chapter,
+      magnitude refers to a measure of the size of a number, closely related to its
+      exponent in scientific notation.
+- The facts, beliefs, assumptions, and observations available at the start of reasoning.:
+    correct: false
+    feedback: This describes givens, not magnitude. In this chapter, magnitude refers
+      to a measure of the size of a number, closely related to its exponent in scientific
+      notation.
+- Arranging values in order so their relative sizes are easier to compare.:
+    correct: false
+    feedback: This describes sorting, not magnitude. In this chapter, magnitude refers
+      to a measure of the size of a number, closely related to its exponent in scientific
+      notation.
+```
+
+Only one of the following is a valid description of magnitude. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "magnitude-5-one",
+  question = "Only one of the following is a valid description of magnitude. Mark that one.",
+  answers = magnitude_5_one_choices,
+  multiple = FALSE
+)()
+```

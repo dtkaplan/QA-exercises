@@ -1,0 +1,28 @@
+
+```{devoirs_choices gradient_16_one_choices}
+- A scalar that measures how long a vector is.:
+    correct: false
+    feedback: Vector length is a magnitude; the gradient is a vector of rates of change.
+- A vector combining a function's rates of change in its input directions.:
+    correct: true
+    feedback: Correct.
+- A measure of the angle between two data vectors.:
+    correct: false
+    feedback: Alignment measures the angle between vectors; the gradient combines
+      function rates of change.
+- The path a system follows after its initial state is chosen.:
+    correct: false
+    feedback: That is a trajectory; the gradient points uphill locally in the function's
+      input space.
+```
+
+Only one of the following is a valid description of gradient. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "gradient-16-one",
+  question = "Only one of the following is a valid description of gradient. Mark that one.",
+  answers = gradient_16_one_choices,
+  multiple = FALSE
+)()
+```

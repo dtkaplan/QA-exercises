@@ -1,0 +1,35 @@
+
+```{devoirs_choices quantity_3_two_choices}
+- A phrase identifying the context-setting quantity against which a change is examined.:
+    correct: false
+    feedback: This describes with respect to, not quantity. In this chapter, quantity
+      refers to a standardized measure consisting of a pure number and a unit, optionally
+      with a descriptor.
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not quantity. In this chapter, quantity refers
+      to a standardized measure consisting of a pure number and a unit, optionally
+      with a descriptor.
+- A standardized measure consisting of a pure number and a unit, optionally with a descriptor.:
+    correct: true
+    feedback: Correct.
+- A measurable amount expressed with a numerical value and an appropriate unit.:
+    correct: true
+    feedback: Correct.
+- Standardized measures that specify how much of a quantity is present.:
+    correct: false
+    feedback: This describes units, not quantity. In this chapter, quantity refers
+      to a standardized measure consisting of a pure number and a unit, optionally
+      with a descriptor.
+```
+
+Two of the following are valid descriptions of quantity. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "quantity-3-two",
+  question = "Two of the following are valid descriptions of quantity. The other three are not. Mark both of the VALID descriptions.",
+  answers = quantity_3_two_choices,
+  multiple = TRUE
+)()
+```

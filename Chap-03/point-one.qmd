@@ -1,0 +1,29 @@
+
+```{devoirs_choices point_3_one_choices}
+- The International System of Units, the primary official system for defining units.:
+    correct: false
+    feedback: This describes SI, not point. In this chapter, point refers to a location
+      in a space that corresponds to one or more coordinate values.
+- A geometric location that identifies a specific combination of quantities.:
+    correct: true
+    feedback: Correct.
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: false
+    feedback: This describes worth, not point. In this chapter, point refers to a
+      location in a space that corresponds to one or more coordinate values.
+- Standardized measures that specify how much of a quantity is present.:
+    correct: false
+    feedback: This describes units, not point. In this chapter, point refers to a
+      location in a space that corresponds to one or more coordinate values.
+```
+
+Only one of the following is a valid description of point. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "point-3-one",
+  question = "Only one of the following is a valid description of point. Mark that one.",
+  answers = point_3_one_choices,
+  multiple = FALSE
+)()
+```

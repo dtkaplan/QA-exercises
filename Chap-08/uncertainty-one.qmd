@@ -1,0 +1,29 @@
+
+```{devoirs_choices uncertainty_8_one_choices}
+- The square of a distribution's standard deviation.:
+    correct: false
+    feedback: That is variance, a measure of spread, not the broader condition of
+      not knowing a quantity's value precisely.
+- A description of how unsure we are about a quantity's value.:
+    correct: true
+    feedback: Correct.
+- The interval between the lowest and highest values a quantity can possibly take.:
+    correct: false
+    feedback: A range is one way to express uncertainty; uncertainty itself is not
+      restricted to interval endpoints.
+- The unit used to measure a quantity, such as dollars or miles.:
+    correct: false
+    feedback: Units express how a quantity is measured, not how uncertain its value
+      is.
+```
+
+Only one of the following is a valid description of uncertainty. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "uncertainty-8-one",
+  question = "Only one of the following is a valid description of uncertainty. Mark that one.",
+  answers = uncertainty_8_one_choices,
+  multiple = FALSE
+)()
+```

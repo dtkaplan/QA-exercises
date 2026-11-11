@@ -1,0 +1,32 @@
+
+```{devoirs_choices shadow_price_10_two_choices}
+- A conversion that makes two objective outputs exactly equal.:
+    correct: false
+    feedback: A shadow price gives a ratio between changes; it does not make the objectives
+      equal.
+- A price-like ratio that makes the cost of improving one goal measurable in another goal's units.:
+    correct: true
+    feedback: Correct.
+- A ratio expressing how much one objective changes per unit change in another.:
+    correct: true
+    feedback: Correct.
+- A measure of how often one outcome occurs in a probability distribution.:
+    correct: false
+    feedback: That concerns probability; a shadow price measures the exchange between
+      objective outcomes.
+- The input value that produces the minimum objective output.:
+    correct: false
+    feedback: That is an argmin; a shadow price measures an exchange rate between
+      goals.
+```
+
+Two of the following are valid descriptions of shadow price. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "shadow-price-10-two",
+  question = "Two of the following are valid descriptions of shadow price. The other three are not. Mark both of the VALID descriptions.",
+  answers = shadow_price_10_two_choices,
+  multiple = TRUE
+)()
+```

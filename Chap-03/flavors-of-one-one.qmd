@@ -1,0 +1,30 @@
+
+```{devoirs_choices flavors_of_one_3_one_choices}
+- A phrase identifying the context-setting quantity against which a change is examined.:
+    correct: false
+    feedback: This describes with respect to, not flavors of one. In this chapter,
+      flavors of one refers to dimensionless ratios formed by dividing two exactly
+      equal quantities.
+- A standardized measure consisting of a pure number and a unit, optionally with a descriptor.:
+    correct: false
+    feedback: This describes quantity, not flavors of one. In this chapter, flavors
+      of one refers to dimensionless ratios formed by dividing two exactly equal quantities.
+- Unit-bearing forms of one used to convert a quantity from one commensurate unit to another.:
+    correct: true
+    feedback: Correct.
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not flavors of one. In this chapter, flavors of
+      one refers to dimensionless ratios formed by dividing two exactly equal quantities.
+```
+
+Only one of the following is a valid description of flavors of one. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "flavors-of-one-3-one",
+  question = "Only one of the following is a valid description of flavors of one. Mark that one.",
+  answers = flavors_of_one_3_one_choices,
+  multiple = FALSE
+)()
+```

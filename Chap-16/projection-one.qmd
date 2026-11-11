@@ -1,0 +1,29 @@
+
+```{devoirs_choices projection_16_one_choices}
+- The component of a vector that is perpendicular to a subspace.:
+    correct: false
+    feedback: The projection is the component aligned with the subspace; the perpendicular
+      part is the residual component.
+- A probability that a specimen belongs to a particular category.:
+    correct: false
+    feedback: Projection is a geometric operation on vectors; it is not a classification
+      probability.
+- The vector in a subspace that captures the portion of another vector aligned with that space.:
+    correct: true
+    feedback: Correct.
+- The original vector together with every possible direction outside the subspace.:
+    correct: false
+    feedback: Projection keeps the in-subspace component rather than including all
+      perpendicular directions.
+```
+
+Only one of the following is a valid description of projection. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "projection-16-one",
+  question = "Only one of the following is a valid description of projection. Mark that one.",
+  answers = projection_16_one_choices,
+  multiple = FALSE
+)()
+```

@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -2093,6 +2128,446 @@ mode: exercise
 <p><span class="shortanswer" style="display: none;" data-tooltip="Ans id: wcs-9EG">Because every new infective corresponds to one fewer susceptible.</span></p>
 </div>
 <p><!-- end of exr-wolf-choose-stove --></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key vocabulary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Doubling time</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Dynamical rule</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Dynamical system</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Euler framework</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Exponential decay</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false" href="">Exponential growth</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false" href="">State</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-8" role="tab" aria-controls="tabset-2-8" aria-selected="false" href="">State space</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-9" role="tab" aria-controls="tabset-2-9" aria-selected="false" href="">Steady growth</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-10" role="tab" aria-controls="tabset-2-10" aria-selected="false" href="">Time series</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-11" role="tab" aria-controls="tabset-2-11" aria-selected="false" href="">Trajectory</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-12" role="tab" aria-controls="tabset-2-12" aria-selected="false" href="">Velocity</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Only one of the following is a valid description of doubling time. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"doubling-time-13-one"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of doubling time. Mark that one."</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> doubling_time_13_one_choices,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="doubling-time-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of doubling time. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65" id="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65-1" value="AAxmija" data-devoirs3-option="" data-option-id="AAxmija" data-feedback="That is a waiting time modeled by an exponential distribution, not the growth parameter described here." data-feedback-html="That is a waiting time modeled by an exponential distribution, not the growth parameter described here.">
+    <span>The delay between two independent events in an exponential distribution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65" id="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65-2" value="BAlogsa" data-devoirs3-option="" data-option-id="BAlogsa" data-feedback="A system can continue changing beyond any doubling interval; doubling time characterizes its growth pattern." data-feedback-html="A system can continue changing beyond any doubling interval; doubling time characterizes its growth pattern.">
+    <span>The total lifespan of a dynamical system.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65" id="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65-3" value="CAiswat" data-devoirs3-option="" data-option-id="CAiswat" data-feedback="That is halving time, the decay counterpart to doubling time." data-feedback-html="That is halving time, the decay counterpart to doubling time.">
+    <span>The interval required for an exponentially declining quantity to fall by half.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65" id="devoirs3-selection-646f75626c696e672d74696d652d31332d6f6e65-4" value="DApqfqi" data-devoirs3-option="" data-option-id="DApqfqi" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A parameter describing exponential growth by how long each successive doubling takes.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of doubling time. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">doubling-time-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Only one of the following is a valid description of dynamical rule. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"dynamical-rule-13-one"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of dynamical rule. Mark that one."</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> dynamical_rule_13_one_choices,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="dynamical-rule-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of dynamical rule. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65-1" value="AAsniiw" data-devoirs3-option="" data-option-id="AAsniiw" data-feedback="The chapter treats the dynamical rule as a function, with one output for each input state." data-feedback-html="The chapter treats the dynamical rule as a function, with one output for each input state.">
+    <span>A rule that gives several unrelated futures for the same state.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65-2" value="BAheuah" data-devoirs3-option="" data-option-id="BAheuah" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A rule specifying how the state changes over the next instant from each possible state.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65-3" value="CAivrgo" data-devoirs3-option="" data-option-id="CAivrgo" data-feedback="A time series records state over time; the dynamical rule maps state to rate of change." data-feedback-html="A time series records state over time; the dynamical rule maps state to rate of change.">
+    <span>A time series showing the state at successive times.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d72756c652d31332d6f6e65-4" value="DAreuqs" data-devoirs3-option="" data-option-id="DAreuqs" data-feedback="The rule gives instantaneous change; accumulating it over time produces a trajectory." data-feedback-html="The rule gives instantaneous change; accumulating it over time produces a trajectory.">
+    <span>The total change accumulated over the entire history of a system.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of dynamical rule. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dynamical-rule-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Only one of the following is a valid description of dynamical systems. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"dynamical-systems-13-one"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of dynamical systems. Mark that one."</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> dynamical_systems_13_one_choices,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="dynamical-systems-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of dynamical systems. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65-1" value="AAbmfvu" data-devoirs3-option="" data-option-id="AAbmfvu" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Systems characterized by a state, a rule for its change, and an evolving trajectory.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65-2" value="BAdikud" data-devoirs3-option="" data-option-id="BAdikud" data-feedback="Dynamical systems are specifically about changing states." data-feedback-html="Dynamical systems are specifically about changing states.">
+    <span>Collections of quantities whose values never change.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65-3" value="CAomnud" data-devoirs3-option="" data-option-id="CAomnud" data-feedback="The chapter defines these systems through state change over time." data-feedback-html="The chapter defines these systems through state change over time.">
+    <span>A set of equations that maps observations to hypotheses without time or state.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65" id="devoirs3-selection-64796e616d6963616c2d73797374656d732d31332d6f6e65-4" value="DAjalra" data-devoirs3-option="" data-option-id="DAjalra" data-feedback="The state is essential: it provides a complete description of the system at an instant." data-feedback-html="The state is essential: it provides a complete description of the system at an instant.">
+    <span>Systems with no measurable state variables.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of dynamical systems. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dynamical-systems-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Only one of the following is a valid description of Euler framework. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"euler-framework-13-one"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of Euler framework. Mark that one."</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> euler_framework_13_one_choices,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="euler-framework-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of Euler framework. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65" id="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65-1" value="AAvwqth" data-devoirs3-option="" data-option-id="AAvwqth" data-feedback="The chapter emphasizes an arithmetic, stepwise method that can be carried out computationally." data-feedback-html="The chapter emphasizes an arithmetic, stepwise method that can be carried out computationally.">
+    <span>An algebraic procedure that requires solving a closed-form equation for every system.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65" id="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65-2" value="BAuahly" data-devoirs3-option="" data-option-id="BAuahly" data-feedback="The framework uses the dynamical rule and repeated small steps to calculate a trajectory." data-feedback-html="The framework uses the dynamical rule and repeated small steps to calculate a trajectory.">
+    <span>A method that directly gives the exact state at every future time without calculating changes.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65" id="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65-3" value="CAqzrkz" data-devoirs3-option="" data-option-id="CAqzrkz" data-feedback="The Euler framework is a method for describing and calculating dynamical change, not a probability distribution." data-feedback-html="The Euler framework is a method for describing and calculating dynamical change, not a probability distribution.">
+    <span>A probability model for assigning likelihood to possible states.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65" id="devoirs3-selection-65756c65722d6672616d65776f726b2d31332d6f6e65-4" value="DAixfqh" data-devoirs3-option="" data-option-id="DAixfqh" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A stepwise arithmetic method for tracing a trajectory from a dynamical rule and initial state.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of Euler framework. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">euler-framework-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<p>Only one of the following is a valid description of exponential decay. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"exponential-decay-13-one"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of exponential decay. Mark that one."</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> exponential_decay_13_one_choices,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="exponential-decay-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of exponential decay. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65-1" value="AAcggwm" data-devoirs3-option="" data-option-id="AAcggwm" data-feedback="Exponential decay approaches smaller values through repeated proportional reductions, rather than a single cutoff." data-feedback-html="Exponential decay approaches smaller values through repeated proportional reductions, rather than a single cutoff.">
+    <span>A quantity that reaches zero after one fixed interval.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65-2" value="BAfddwa" data-devoirs3-option="" data-option-id="BAfddwa" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A process in which a quantity decreases exponentially, with a constant halving time.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65-3" value="CArufsa" data-devoirs3-option="" data-option-id="CArufsa" data-feedback="That describes steady growth; exponential decay is a declining pattern." data-feedback-html="That describes steady growth; exponential decay is a declining pattern.">
+    <span>A system state that changes at a constant positive rate.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d64656361792d31332d6f6e65-4" value="DAskssw" data-devoirs3-option="" data-option-id="DAskssw" data-feedback="That describes steady additive decline, not exponential decay." data-feedback-html="That describes steady additive decline, not exponential decay.">
+    <span>A fixed amount is subtracted from a quantity in every time period.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of exponential decay. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">exponential-decay-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<p>Only one of the following is a valid description of exponential growth. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"exponential-growth-13-one"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of exponential growth. Mark that one."</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> exponential_growth_13_one_choices,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="exponential-growth-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of exponential growth. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65-1" value="AAdaamy" data-devoirs3-option="" data-option-id="AAdaamy" data-feedback="The chapter characterizes exponential growth by successive doublings taking the same time." data-feedback-html="The chapter characterizes exponential growth by successive doublings taking the same time.">
+    <span>A process in which the doubling interval gets longer at every step.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65-2" value="BAeeevl" data-devoirs3-option="" data-option-id="BAeeevl" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A pattern in which a quantity repeatedly doubles over equal time intervals.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65-3" value="CAvvnbf" data-devoirs3-option="" data-option-id="CAvvnbf" data-feedback="Exponential growth describes a mathematical pattern; real systems can change or stop following it." data-feedback-html="Exponential growth describes a mathematical pattern; real systems can change or stop following it.">
+    <span>A process that must continue forever at an increasing rate.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d67726f7774682d31332d6f6e65-4" value="DAnrxxt" data-devoirs3-option="" data-option-id="DAnrxxt" data-feedback="That is the exponential distribution; exponential growth describes how a quantity changes over time." data-feedback-html="That is the exponential distribution; exponential growth describes how a quantity changes over time.">
+    <span>A distribution for the time between randomly occurring events.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of exponential growth. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">exponential-growth-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
+<p>Only one of the following is a valid description of state. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"state-13-one"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of state. Mark that one."</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> state_13_one_choices,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="state-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of state. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d31332d6f6e65" id="devoirs3-selection-73746174652d31332d6f6e65-1" value="AAxppmq" data-devoirs3-option="" data-option-id="AAxppmq" data-feedback="That is the dynamical rule; the state is its input." data-feedback-html="That is the dynamical rule; the state is its input.">
+    <span>A rule that maps the current system configuration to its rate of change.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d31332d6f6e65" id="devoirs3-selection-73746174652d31332d6f6e65-2" value="BAyiiod" data-devoirs3-option="" data-option-id="BAyiiod" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A system’s instantaneous configuration, represented by one or more quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d31332d6f6e65" id="devoirs3-selection-73746174652d31332d6f6e65-3" value="CAxeudz" data-devoirs3-option="" data-option-id="CAxeudz" data-feedback="That describes a probability distribution; a state is the current configuration." data-feedback-html="That describes a probability distribution; a state is the current configuration.">
+    <span>A list of all potential future outcomes with their probabilities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d31332d6f6e65" id="devoirs3-selection-73746174652d31332d6f6e65-4" value="DAvhxdh" data-devoirs3-option="" data-option-id="DAvhxdh" data-feedback="The chapter defines state as a complete description of the instantaneous configuration." data-feedback-html="The chapter defines state as a complete description of the instantaneous configuration.">
+    <span>A description that may omit quantities needed to determine the system’s configuration.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of state. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">state-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-8-tab">
+<p>Only one of the following is a valid description of state space. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"state-space-13-one"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of state space. Mark that one."</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> state_space_13_one_choices,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="state-space-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of state space. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d73706163652d31332d6f6e65" id="devoirs3-selection-73746174652d73706163652d31332d6f6e65-1" value="AAehafj" data-devoirs3-option="" data-option-id="AAehafj" data-feedback="Time is the input to a time series; state space concerns possible state values." data-feedback-html="Time is the input to a time series; state space concerns possible state values.">
+    <span>The set of time values during which the system is observed.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d73706163652d31332d6f6e65" id="devoirs3-selection-73746174652d73706163652d31332d6f6e65-2" value="BAsvxec" data-devoirs3-option="" data-option-id="BAsvxec" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The space in which a system’s current state is a point and its changes trace a path.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d73706163652d31332d6f6e65" id="devoirs3-selection-73746174652d73706163652d31332d6f6e65-3" value="CAvvota" data-devoirs3-option="" data-option-id="CAvvota" data-feedback="That is the current state; the state space contains all possible states." data-feedback-html="That is the current state; the state space contains all possible states.">
+    <span>The one state the system occupies at the present instant.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73746174652d73706163652d31332d6f6e65" id="devoirs3-selection-73746174652d73706163652d31332d6f6e65-4" value="DAhfsvg" data-devoirs3-option="" data-option-id="DAhfsvg" data-feedback="A trajectory is a path through state space; state space contains possible states, not paths." data-feedback-html="A trajectory is a path through state space; state space contains possible states, not paths.">
+    <span>A collection of all trajectories generated from one initial state.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of state space. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">state-space-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-9-tab">
+<p>Only one of the following is a valid description of steady growth. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"steady-growth-13-one"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of steady growth. Mark that one."</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> steady_growth_13_one_choices,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="steady-growth-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of steady growth. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65" id="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65-1" value="AAgihpu" data-devoirs3-option="" data-option-id="AAgihpu" data-feedback="Steady growth has a constant rate, not arbitrary interval-to-interval changes." data-feedback-html="Steady growth has a constant rate, not arbitrary interval-to-interval changes.">
+    <span>A process that adds a different random amount in every interval.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65" id="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65-2" value="BAedrja" data-devoirs3-option="" data-option-id="BAedrja" data-feedback="That is exponential growth; steady growth adds a constant amount per interval." data-feedback-html="That is exponential growth; steady growth adds a constant amount per interval.">
+    <span>Growth in which the quantity doubles during every equal time interval.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65" id="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65-3" value="CAxvtdl" data-devoirs3-option="" data-option-id="CAxvtdl" data-feedback="That is exponential decay, not steady growth." data-feedback-html="That is exponential decay, not steady growth.">
+    <span>A decline in which the value halves after equal intervals.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65" id="devoirs3-selection-7374656164792d67726f7774682d31332d6f6e65-4" value="DAvduie" data-devoirs3-option="" data-option-id="DAvduie" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Growth like water entering a bathtub at an unchanging flow rate.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of steady growth. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">steady-growth-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-10-tab">
+<p>Only one of the following is a valid description of time series. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"time-series-13-one"</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of time series. Mark that one."</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> time_series_13_one_choices,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="time-series-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of time series. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74696d652d7365726965732d31332d6f6e65" id="devoirs3-selection-74696d652d7365726965732d31332d6f6e65-1" value="AAheoqy" data-devoirs3-option="" data-option-id="AAheoqy" data-feedback="A time series represents values across time, not just one instantaneous measurement." data-feedback-html="A time series represents values across time, not just one instantaneous measurement.">
+    <span>A single state value measured at one instant.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74696d652d7365726965732d31332d6f6e65" id="devoirs3-selection-74696d652d7365726965732d31332d6f6e65-2" value="BAthgsz" data-devoirs3-option="" data-option-id="BAthgsz" data-feedback="That is the dynamical rule; a time series takes time as input and returns the state." data-feedback-html="That is the dynamical rule; a time series takes time as input and returns the state.">
+    <span>A function that takes the current state as input and returns its rate of change.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74696d652d7365726965732d31332d6f6e65" id="devoirs3-selection-74696d652d7365726965732d31332d6f6e65-3" value="CAdsgay" data-devoirs3-option="" data-option-id="CAdsgay" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A representation with time as input and the system’s state as output.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74696d652d7365726965732d31332d6f6e65" id="devoirs3-selection-74696d652d7365726965732d31332d6f6e65-4" value="DAxbuiv" data-devoirs3-option="" data-option-id="DAxbuiv" data-feedback="A time series is ordered by time, not by magnitude." data-feedback-html="A time series is ordered by time, not by magnitude.">
+    <span>A list of data values sorted from smallest to largest.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of time series. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">time-series-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-11-tab">
+<p>Only one of the following is a valid description of trajectory. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"trajectory-13-one"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of trajectory. Mark that one."</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> trajectory_13_one_choices,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="trajectory-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of trajectory. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7472616a6563746f72792d31332d6f6e65" id="devoirs3-selection-7472616a6563746f72792d31332d6f6e65-1" value="AAmlnyj" data-devoirs3-option="" data-option-id="AAmlnyj" data-feedback="That is the dynamical rule; the trajectory gives the state as a function of time." data-feedback-html="That is the dynamical rule; the trajectory gives the state as a function of time.">
+    <span>A function mapping each state to its instantaneous rate of change.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7472616a6563746f72792d31332d6f6e65" id="devoirs3-selection-7472616a6563746f72792d31332d6f6e65-2" value="BApejex" data-devoirs3-option="" data-option-id="BApejex" data-feedback="That is a graph of an objective function; a trajectory tracks system state over time." data-feedback-html="That is a graph of an objective function; a trajectory tracks system state over time.">
+    <span>A curve showing the objective function’s output for different choices.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7472616a6563746f72792d31332d6f6e65" id="devoirs3-selection-7472616a6563746f72792d31332d6f6e65-3" value="CAnuvaj" data-devoirs3-option="" data-option-id="CAnuvaj" data-feedback="That is an initial state; a trajectory traces the state over time." data-feedback-html="That is an initial state; a trajectory traces the state over time.">
+    <span>A single value specifying the system’s initial configuration.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7472616a6563746f72792d31332d6f6e65" id="devoirs3-selection-7472616a6563746f72792d31332d6f6e65-4" value="DAeajhi" data-devoirs3-option="" data-option-id="DAeajhi" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The time-evolving state produced by applying the dynamical rule and accounting method.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of trajectory. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">trajectory-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-12-tab">
+<p>Only one of the following is a valid description of velocity. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"velocity-13-one"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of velocity. Mark that one."</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> velocity_13_one_choices,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-13" data-label="velocity-13-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of velocity. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76656c6f636974792d31332d6f6e65" id="devoirs3-selection-76656c6f636974792d31332d6f6e65-1" value="AAjpbcn" data-devoirs3-option="" data-option-id="AAjpbcn" data-feedback="That is an exponential distribution; velocity describes the motion of an object's position." data-feedback-html="That is an exponential distribution; velocity describes the motion of an object’s position.">
+    <span>A probability distribution describing uncertain event intervals.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76656c6f636974792d31332d6f6e65" id="devoirs3-selection-76656c6f636974792d31332d6f6e65-2" value="BAzcxtj" data-devoirs3-option="" data-option-id="BAzcxtj" data-feedback="Velocity includes direction and can be negative depending on the coordinate convention." data-feedback-html="Velocity includes direction and can be negative depending on the coordinate convention.">
+    <span>A quantity that must always be positive, regardless of direction.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76656c6f636974792d31332d6f6e65" id="devoirs3-selection-76656c6f636974792d31332d6f6e65-3" value="CAfwiae" data-devoirs3-option="" data-option-id="CAfwiae" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A measure of how quickly and in what direction position changes.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76656c6f636974792d31332d6f6e65" id="devoirs3-selection-76656c6f636974792d31332d6f6e65-4" value="DAihelr" data-devoirs3-option="" data-option-id="DAihelr" data-feedback="Total distance is accumulated motion; velocity is an instantaneous rate of position change." data-feedback-html="Total distance is accumulated motion; velocity is an instantaneous rate of position change.">
+    <span>The total distance traveled over the entire journey.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of velocity. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">velocity-13-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -1,0 +1,30 @@
+
+```{devoirs_choices argumentation_1_one_choices}
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not argumentation. In this chapter,
+      argumentation refers to the process of constructing good arguments from evidence
+      and reasoning.
+- The practice of building arguments that can support useful debate and action.:
+    correct: true
+    feedback: Correct.
+- Recorded facts, findings, and measurements.:
+    correct: false
+    feedback: This describes data, not argumentation. In this chapter, argumentation
+      refers to the process of constructing good arguments from evidence and reasoning.
+- A highlighted term whose meaning is specifically defined for use in the book.:
+    correct: false
+    feedback: This describes word or phrase, not argumentation. In this chapter, argumentation
+      refers to the process of constructing good arguments from evidence and reasoning.
+```
+
+Only one of the following is a valid description of argumentation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "argumentation-1-one",
+  question = "Only one of the following is a valid description of argumentation. Mark that one.",
+  answers = argumentation_1_one_choices,
+  multiple = FALSE
+)()
+```

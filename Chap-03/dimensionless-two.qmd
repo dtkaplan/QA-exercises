@@ -1,0 +1,32 @@
+
+```{devoirs_choices dimensionless_3_two_choices}
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not dimensionless. In this chapter, dimensionless
+      refers to having the pure-number dimension, with no combination of base dimensions.
+- A dimensional status shared by pure numbers and ratios of like dimensions.:
+    correct: true
+    feedback: Correct.
+- Standardized measures that specify how much of a quantity is present.:
+    correct: false
+    feedback: This describes units, not dimensionless. In this chapter, dimensionless
+      refers to having the pure-number dimension, with no combination of base dimensions.
+- Describes a ratio such as length divided by length, which has no dimension.:
+    correct: true
+    feedback: Correct.
+- Dimensionless ratios formed by dividing two exactly equal quantities.:
+    correct: false
+    feedback: This describes flavors of one, not dimensionless. In this chapter, dimensionless
+      refers to having the pure-number dimension, with no combination of base dimensions.
+```
+
+Two of the following are valid descriptions of dimensionless. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dimensionless-3-two",
+  question = "Two of the following are valid descriptions of dimensionless. The other three are not. Mark both of the VALID descriptions.",
+  answers = dimensionless_3_two_choices,
+  multiple = TRUE
+)()
+```

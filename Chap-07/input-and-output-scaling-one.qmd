@@ -1,0 +1,31 @@
+```{devoirs_choices input_and_output_scaling_7_one_choices}
+- 'Choosing labels and intervals on both axes so pure-number coordinates correspond to quantities.':
+    correct: true
+    feedback: |
+      Correct.
+- 'Replacing all quantities in a model with unitless numbers and discarding their units.':
+    correct: false
+    feedback: |
+      Scaling allows quantities and their units to be represented on the axes; it does not discard what the quantities mean.
+- 'A procedure for measuring whether a system''s dimensions are interconnected.':
+    correct: false
+    feedback: |
+      That concerns describing a system. Input and output scaling adapts a core function's numerical axes to quantities.
+- 'Reversing a function so that its quantity output becomes its input and its input becomes the output.':
+    correct: false
+    feedback: |
+      Scaling maps quantities to and from the existing input-output axes; it does not reverse their roles.
+```
+
+Only one of the following is a valid description of input and output scaling. Mark that one.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "input-and-output-scaling-7-one",
+  question = "Only one of the following is a valid description of input and output scaling. Mark that one.",
+  answers = input_and_output_scaling_7_one_choices,
+  multiple = FALSE
+)()
+```
+

@@ -1,0 +1,37 @@
+```{devoirs_choices algorithm_6_two_choices}
+- ? |
+    A label for the output quantity, with no instructions for deriving it from the inputs.
+  : correct: yes
+    feedback: Good. This is indeed an invalid description. Why? Naming the output
+      does not describe the process. The algorithm must specify how the inputs are
+      used to produce that output.
+- ? |
+    A single remembered result, such as sin(pi) = 0, that replaces the process for every possible input.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? A memorized input-output pair gives only one result. An algorithm specifies how to find outputs for inputs more generally.
+- ? |
+    The set of dimensions treated as given from outside a model.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? Those are exogenous dimensions. An algorithm is the operational process for producing a function's output from its inputs.
+- A sequence of steps for calculating a function's output from given inputs.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+- The ordered operations a function applies to its inputs to determine its output.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+```
+
+Two of the following are valid descriptions of algorithm . The other three are not. Mark all three of the INVALID descriptions.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "algorithm-6-two",
+  question = "Two of the following are valid descriptions of algorithm . The other three are not. Mark all three of the INVALID descriptions.",
+  answers = algorithm_6_two_choices,
+  multiple = TRUE
+)()
+```
+

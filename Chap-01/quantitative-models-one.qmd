@@ -1,0 +1,32 @@
+
+```{devoirs_choices quantitative_models_1_one_choices}
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not quantitative models. In this chapter,
+      quantitative models refers to models built from mathematical components to support
+      reasoning about real-world situations.
+- A subset of specimens selected from a larger population for study.:
+    correct: false
+    feedback: This describes sample, not quantitative models. In this chapter, quantitative
+      models refers to models built from mathematical components to support reasoning
+      about real-world situations.
+- An epidemic model that tracks susceptible, infective, and recovered people over time.:
+    correct: false
+    feedback: This describes SIR model, not quantitative models. In this chapter,
+      quantitative models refers to models built from mathematical components to support
+      reasoning about real-world situations.
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of quantitative models. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "quantitative-models-1-one",
+  question = "Only one of the following is a valid description of quantitative models. Mark that one.",
+  answers = quantitative_models_1_one_choices,
+  multiple = FALSE
+)()
+```

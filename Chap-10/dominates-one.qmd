@@ -1,0 +1,28 @@
+
+```{devoirs_choices dominates_10_one_choices}
+- A choice that is preferred by the greatest number of people.:
+    correct: false
+    feedback: Dominance is defined by objective outcomes, not by a vote or popularity.
+- A claim that two objectives have identical units and can be added.:
+    correct: false
+    feedback: Commensurability concerns units; dominance compares choices on their
+      separate objective outputs.
+- A policy choice dominates another when both objective outputs improve.:
+    correct: true
+    feedback: Correct.
+- A measure of the price paid to improve one objective.:
+    correct: false
+    feedback: That is a shadow price; dominance means one option is better on all
+      objectives.
+```
+
+Only one of the following is a valid description of dominates. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dominates-10-one",
+  question = "Only one of the following is a valid description of dominates. Mark that one.",
+  answers = dominates_10_one_choices,
+  multiple = FALSE
+)()
+```

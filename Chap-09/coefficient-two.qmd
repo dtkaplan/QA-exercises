@@ -1,0 +1,32 @@
+
+```{devoirs_choices coefficient_9_two_choices}
+- A random number added to a model so its output changes unpredictably.:
+    correct: false
+    feedback: Coefficients are interpretable scaling factors estimated to fit data,
+      not random noise terms.
+- A value that must be the same in every regression model.:
+    correct: false
+    feedback: Coefficients depend on the data and which inputs are included in the
+      model.
+- A scalar used to scale a function or quantity before combining it with other terms.:
+    correct: true
+    feedback: Correct.
+- A label naming the units of the output, such as points or dollars.:
+    correct: false
+    feedback: Units describe measurement; a coefficient is a conversion factor with
+      units that connect input and output.
+- A conversion factor that turns an input quantity into units of the model output.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of coefficient. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "coefficient-9-two",
+  question = "Two of the following are valid descriptions of coefficient. The other three are not. Mark both of the VALID descriptions.",
+  answers = coefficient_9_two_choices,
+  multiple = TRUE
+)()
+```

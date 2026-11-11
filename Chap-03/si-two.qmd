@@ -1,0 +1,33 @@
+
+```{devoirs_choices si_3_two_choices}
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not SI. In this chapter, SI refers to the
+      international system of units, the primary official system for defining units.
+- The unit system built from seven base units and many derived units.:
+    correct: true
+    feedback: Correct.
+- Rates formed by arithmetic combinations of other rates.:
+    correct: false
+    feedback: This describes compound rates, not SI. In this chapter, SI refers to
+      the international system of units, the primary official system for defining
+      units.
+- The Système international d'unités used as the main reference for scientific units.:
+    correct: true
+    feedback: Correct.
+- Standardized measures that specify how much of a quantity is present.:
+    correct: false
+    feedback: This describes units, not SI. In this chapter, SI refers to the international
+      system of units, the primary official system for defining units.
+```
+
+Two of the following are valid descriptions of SI. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "si-3-two",
+  question = "Two of the following are valid descriptions of SI. The other three are not. Mark both of the VALID descriptions.",
+  answers = si_3_two_choices,
+  multiple = TRUE
+)()
+```

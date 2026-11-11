@@ -1,0 +1,32 @@
+
+```{devoirs_choices exponential_decay_13_two_choices}
+- A quantity that reaches zero after one fixed interval.:
+    correct: false
+    feedback: Exponential decay approaches smaller values through repeated proportional
+      reductions, rather than a single cutoff.
+- A pattern in which a quantity repeatedly doubles over equal intervals.:
+    correct: false
+    feedback: That is exponential growth; exponential decay involves repeated proportional
+      decreases.
+- A process in which a quantity decreases exponentially, with a constant halving time.:
+    correct: true
+    feedback: Correct.
+- A quantity that decreases by the same number of units each year.:
+    correct: false
+    feedback: Exponential decay is proportional; a constant number of units describes
+      steady decline.
+- Declining change that mirrors exponential growth but moves toward smaller values.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of exponential decay. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "exponential-decay-13-two",
+  question = "Two of the following are valid descriptions of exponential decay. The other three are not. Mark both of the VALID descriptions.",
+  answers = exponential_decay_13_two_choices,
+  multiple = TRUE
+)()
+```

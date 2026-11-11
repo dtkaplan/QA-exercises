@@ -103,3 +103,46 @@ library(drill)
 
 :::
 ::::
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Argumentation
+
+{{< include ../Chap-01/argumentation-two.qmd >}}
+
+## Formal reasoning
+
+{{< include ../Chap-01/formal-reasoning-two.qmd >}}
+
+## Givens
+
+{{< include ../Chap-01/givens-two.qmd >}}
+
+## Heuristic reasoning
+
+{{< include ../Chap-01/heuristic-reasoning-two.qmd >}}
+
+## LLMs
+
+{{< include ../Chap-01/large-language-model-llm-two.qmd >}}
+
+## Models
+
+{{< include ../Chap-01/models-two.qmd >}}
+
+## Quantitative models
+
+{{< include ../Chap-01/quantitative-models-two.qmd >}}
+
+## SIR model
+
+{{< include ../Chap-01/sir-model-two.qmd >}}
+
+
+:::
+::::
+
+

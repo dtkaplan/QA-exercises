@@ -1,0 +1,32 @@
+
+```{devoirs_choices per_3_two_choices}
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not per. In this chapter, per refers to a word
+      that signals division, with the following quantity in the denominator.
+- A location in a space that corresponds to one or more coordinate values.:
+    correct: false
+    feedback: This describes point, not per. In this chapter, per refers to a word
+      that signals division, with the following quantity in the denominator.
+- A word that signals division, with the following quantity in the denominator.:
+    correct: true
+    feedback: Correct.
+- A technical marker meaning divided by in units and rates.:
+    correct: true
+    feedback: Correct.
+- Standardized measures that specify how much of a quantity is present.:
+    correct: false
+    feedback: This describes units, not per. In this chapter, per refers to a word
+      that signals division, with the following quantity in the denominator.
+```
+
+Two of the following are valid descriptions of per. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "per-3-two",
+  question = "Two of the following are valid descriptions of per. The other three are not. Mark both of the VALID descriptions.",
+  answers = per_3_two_choices,
+  multiple = TRUE
+)()
+```

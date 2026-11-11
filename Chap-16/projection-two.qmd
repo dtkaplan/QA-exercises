@@ -1,0 +1,31 @@
+
+```{devoirs_choices projection_16_two_choices}
+- A direction of steepest ascent calculated from function derivatives.:
+    correct: false
+    feedback: That is the gradient; projection is a vector's component within a subspace.
+- The vector in a subspace that captures the portion of another vector aligned with that space.:
+    correct: true
+    feedback: Correct.
+- The component of a vector that is perpendicular to a subspace.:
+    correct: false
+    feedback: The projection is the component aligned with the subspace; the perpendicular
+      part is the residual component.
+- The component of a vector that lies within a chosen subspace.:
+    correct: true
+    feedback: Correct.
+- A process that rotates a vector without changing its components or position.:
+    correct: false
+    feedback: Projection decomposes or maps a vector into a subspace, rather than
+      merely changing the viewpoint.
+```
+
+Two of the following are valid descriptions of projection. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "projection-16-two",
+  question = "Two of the following are valid descriptions of projection. The other three are not. Mark both of the VALID descriptions.",
+  answers = projection_16_two_choices,
+  multiple = TRUE
+)()
+```

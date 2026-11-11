@@ -1,0 +1,28 @@
+
+```{devoirs_choices argmax_10_one_choices}
+- The average of all outputs produced by a function.:
+    correct: false
+    feedback: An average summarizes outputs; argmax identifies an input where the
+      output is greatest.
+- A statement that all possible choices have equal objective value.:
+    correct: false
+    feedback: An argmax is a maximizing choice; equal outputs are not required.
+- The set of observed data used to fit a model.:
+    correct: false
+    feedback: Data may be used to construct an objective function, but are not its
+      argmax.
+- A choice from the input domain that yields the objective function's largest output.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of argmax. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "argmax-10-one",
+  question = "Only one of the following is a valid description of argmax. Mark that one.",
+  answers = argmax_10_one_choices,
+  multiple = FALSE
+)()
+```

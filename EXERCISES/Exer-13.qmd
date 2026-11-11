@@ -7,7 +7,7 @@ subtitle: "Chapter 13 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-13")`
+`r devoirs3::devoirs_start("QA-exer-13", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -87,5 +87,64 @@ source("../_exercise_startup.R")
 
 
 :::
+
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Doubling time
+
+{{< include ../Chap-13/doubling-time-one.qmd >}}
+
+## Dynamical rule
+
+{{< include ../Chap-13/dynamical-rule-one.qmd >}}
+
+## Dynamical system
+
+{{< include ../Chap-13/dynamical-systems-one.qmd >}}
+
+## Euler framework
+
+{{< include ../Chap-13/euler-framework-one.qmd >}}
+
+## Exponential decay
+
+{{< include ../Chap-13/exponential-decay-one.qmd >}}
+
+## Exponential growth
+
+{{< include ../Chap-13/exponential-growth-one.qmd >}}
+
+## State
+
+{{< include ../Chap-13/state-one.qmd >}}
+
+## State space
+
+{{< include ../Chap-13/state-space-one.qmd >}}
+
+## Steady growth
+
+{{< include ../Chap-13/steady-growth-one.qmd >}}
+
+## Time series
+
+{{< include ../Chap-13/time-series-one.qmd >}}
+
+## Trajectory
+
+{{< include ../Chap-13/trajectory-one.qmd >}}
+
+## Velocity
+
+{{< include ../Chap-13/velocity-one.qmd >}}
+
+
+:::
+::::
 
 

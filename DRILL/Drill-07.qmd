@@ -342,3 +342,21 @@ Notice that the slope changes along with y. This is typical of functions used fo
 
 :::
 ::::  
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Core functions
+
+{{< include ../Chap-07/core-modeling-functions-two.qmd >}}
+
+## Scaling
+
+{{< include ../Chap-07/input-and-output-scaling-two.qmd >}}
+
+:::
+::::
+

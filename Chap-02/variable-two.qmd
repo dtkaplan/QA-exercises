@@ -1,0 +1,32 @@
+
+```{devoirs_choices variable_2_two_choices}
+- One field in a data table whose entries describe the corresponding specimens.:
+    correct: true
+    feedback: Correct.
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not variable. In this chapter, variable refers
+      to a column in a data frame that records one property across its specimens.
+- Fundamental dimensions from which derived dimensions are formed.:
+    correct: false
+    feedback: This describes base dimensions, not variable. In this chapter, variable
+      refers to a column in a data frame that records one property across its specimens.
+- Having the pure-number dimension, with no combination of base dimensions.:
+    correct: false
+    feedback: This describes dimensionless, not variable. In this chapter, variable
+      refers to a column in a data frame that records one property across its specimens.
+- A characteristic recorded across a collection of specimens, such as height or sex.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of variable. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "variable-2-two",
+  question = "Two of the following are valid descriptions of variable. The other three are not. Mark both of the VALID descriptions.",
+  answers = variable_2_two_choices,
+  multiple = TRUE
+)()
+```

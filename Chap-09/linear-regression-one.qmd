@@ -1,0 +1,29 @@
+
+```{devoirs_choices linear_regression_9_one_choices}
+- A way to sort observations from the newest to the oldest.:
+    correct: false
+    feedback: The statistical method uses data to estimate model coefficients; it
+      does not mean ordering observations.
+- A modeling approach that fits coefficients to data for predicting an output from selected inputs.:
+    correct: true
+    feedback: Correct.
+- A plot that displays equal-output contours for two input quantities.:
+    correct: false
+    feedback: That is a contour plot; linear regression is a method for fitting model
+      coefficients to data.
+- A procedure that always fits a curved function rather than a linear combination.:
+    correct: false
+    feedback: The chapter presents linear regression as fitting coefficients in a
+      linear combination.
+```
+
+Only one of the following is a valid description of linear regression. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "linear-regression-9-one",
+  question = "Only one of the following is a valid description of linear regression. Mark that one.",
+  answers = linear_regression_9_one_choices,
+  multiple = FALSE
+)()
+```

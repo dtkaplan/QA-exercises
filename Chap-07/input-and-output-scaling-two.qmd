@@ -1,0 +1,35 @@
+```{devoirs_choices input_and_output_scaling_7_two_choices}
+- 'A rule that forces input quantities and output quantities to use the same units.':
+    correct: true
+    feedback: |
+      Good. This is indeed an invalid description. Why? The two axes represent potentially different quantities, each with its own appropriate units and scale.
+- 'Mapping quantity inputs to pure-number function inputs and interpreting pure-number outputs as quantities.':
+    correct: false
+    feedback: |
+      Choose the **invalid** descriptions, not this valid description.
+- 'Changing only the output scale while keeping the input axis as the quantity scale.':
+    correct: true
+    feedback: |
+      Good. This is indeed an invalid description. Why? The technique scales both input and output; core functions use pure numbers on both axes.
+- 'Choosing labels and intervals on both axes so pure-number coordinates correspond to quantities.':
+    correct: false
+    feedback: |
+      Choose the **invalid** descriptions, not this valid description.
+- 'Reading quantity values from the black grid and pure-number values from the blue axes.':
+    correct: true
+    feedback: |
+      Good. This is indeed an invalid description. Why? The chapter says the black grid gives pure-number coordinates, while the blue axes give quantity values.
+```
+
+Two of the following are valid descriptions of input and output scaling. The other three are not. Mark all three of the INVALID descriptions.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "input-and-output-scaling-7-two",
+  question = "Two of the following are valid descriptions of input and output scaling. The other three are not. Mark all three of the INVALID descriptions.",
+  answers = input_and_output_scaling_7_two_choices,
+  multiple = TRUE
+)()
+```
+

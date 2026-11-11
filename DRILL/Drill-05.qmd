@@ -122,3 +122,30 @@ True or false: The logarithm of `5 kg` is a quantity with dimension `[log mass]`
 
 ::::
 
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Logarithm
+
+{{< include ../Chap-05/logarithm-two.qmd >}}
+
+## Magnitude
+
+{{< include ../Chap-05/magnitude-two.qmd >}}
+
+## Order of magnitude
+
+{{< include ../Chap-05/order-of-magnitude-two.qmd >}}
+
+## Scientific notation
+
+{{< include ../Chap-05/scientific-notation-two.qmd >}}
+
+## Sorting
+
+{{< include ../Chap-05/sorting-two.qmd >}}
+
+:::
+::::

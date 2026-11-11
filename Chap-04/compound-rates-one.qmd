@@ -1,0 +1,29 @@
+
+```{devoirs_choices compound_rates_4_one_choices}
+- A rate with multiple divisions, such as calories per mile per pound.:
+    correct: true
+    feedback: Correct.
+- A number format that expresses a value as a mantissa multiplied by a power of ten.:
+    correct: false
+    feedback: This describes scientific notation, not compound rates. In this chapter,
+      compound rates refers to rates formed by arithmetic combinations of other rates.
+- The change in a primary quantity divided by the corresponding change in a context-setting quantity.:
+    correct: false
+    feedback: This describes rate of change, not compound rates. In this chapter,
+      compound rates refers to rates formed by arithmetic combinations of other rates.
+- A measure of the size of a number, closely related to its exponent in scientific notation.:
+    correct: false
+    feedback: This describes magnitude, not compound rates. In this chapter, compound
+      rates refers to rates formed by arithmetic combinations of other rates.
+```
+
+Only one of the following is a valid description of compound rates. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "compound-rates-4-one",
+  question = "Only one of the following is a valid description of compound rates. Mark that one.",
+  answers = compound_rates_4_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,29 @@
+
+```{devoirs_choices exponential_growth_13_one_choices}
+- A process in which the doubling interval gets longer at every step.:
+    correct: false
+    feedback: The chapter characterizes exponential growth by successive doublings
+      taking the same time.
+- A pattern in which a quantity repeatedly doubles over equal time intervals.:
+    correct: true
+    feedback: Correct.
+- A process that must continue forever at an increasing rate.:
+    correct: false
+    feedback: Exponential growth describes a mathematical pattern; real systems can
+      change or stop following it.
+- A distribution for the time between randomly occurring events.:
+    correct: false
+    feedback: That is the exponential distribution; exponential growth describes how
+      a quantity changes over time.
+```
+
+Only one of the following is a valid description of exponential growth. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "exponential-growth-13-one",
+  question = "Only one of the following is a valid description of exponential growth. Mark that one.",
+  answers = exponential_growth_13_one_choices,
+  multiple = FALSE
+)()
+```

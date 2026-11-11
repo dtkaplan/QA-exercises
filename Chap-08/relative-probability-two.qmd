@@ -1,0 +1,31 @@
+
+```{devoirs_choices relative_probability_8_two_choices}
+- The exact percentage chance of a value, read directly from any distribution output.:
+    correct: false
+    feedback: A relative probability is interpreted by comparison with other outputs
+      and is not automatically a percentage.
+- A value indicating the comparative likelihood of one outcome under a probability model.:
+    correct: true
+    feedback: Correct.
+- A random sample generated from an uncertain quantity.:
+    correct: false
+    feedback: A random sample is an outcome; relative probability is the score indicating
+      how likely that outcome is.
+- A nonnegative number assigned to a possible value to indicate its likelihood relative to other values.:
+    correct: true
+    feedback: Correct.
+- A fixed guarantee that one particular value will occur.:
+    correct: false
+    feedback: Relative probability indicates likelihood, not certainty.
+```
+
+Two of the following are valid descriptions of relative probability. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "relative-probability-8-two",
+  question = "Two of the following are valid descriptions of relative probability. The other three are not. Mark both of the VALID descriptions.",
+  answers = relative_probability_8_two_choices,
+  multiple = TRUE
+)()
+```

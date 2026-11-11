@@ -1,0 +1,29 @@
+
+```{devoirs_choices pure_number_3_one_choices}
+- The change in a primary quantity divided by the corresponding change in a context-setting quantity.:
+    correct: false
+    feedback: This describes rate of change, not pure number. In this chapter, pure
+      number refers to a number with no unit designation, such as seven or pi.
+- A quantity component that carries no unit and has dimension one.:
+    correct: true
+    feedback: Correct.
+- Rates formed by arithmetic combinations of other rates.:
+    correct: false
+    feedback: This describes compound rates, not pure number. In this chapter, pure
+      number refers to a number with no unit designation, such as seven or pi.
+- A standardized measure consisting of a pure number and a unit, optionally with a descriptor.:
+    correct: false
+    feedback: This describes quantity, not pure number. In this chapter, pure number
+      refers to a number with no unit designation, such as seven or pi.
+```
+
+Only one of the following is a valid description of pure number. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "pure-number-3-one",
+  question = "Only one of the following is a valid description of pure number. Mark that one.",
+  answers = pure_number_3_one_choices,
+  multiple = FALSE
+)()
+```

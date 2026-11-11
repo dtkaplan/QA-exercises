@@ -1,0 +1,30 @@
+
+```{devoirs_choices minimum_10_two_choices}
+- The lowest output achieved among the available choices.:
+    correct: true
+    feedback: Correct.
+- A value that every possible input must produce.:
+    correct: false
+    feedback: A minimum is attained for some input; other inputs may produce larger
+      outputs.
+- The least objective outcome, distinct from the input that produces it.:
+    correct: true
+    feedback: Correct.
+- The function's set of possible inputs.:
+    correct: false
+    feedback: That is the domain; the minimum is the lowest output attained.
+- The input that produces the greatest objective value.:
+    correct: false
+    feedback: That is an argmax, not the minimum output.
+```
+
+Two of the following are valid descriptions of minimum. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "minimum-10-two",
+  question = "Two of the following are valid descriptions of minimum. The other three are not. Mark both of the VALID descriptions.",
+  answers = minimum_10_two_choices,
+  multiple = TRUE
+)()
+```

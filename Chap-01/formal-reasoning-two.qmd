@@ -1,0 +1,36 @@
+
+
+```{devoirs_choices formal_reasoning_1_two_choices}
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: false
+    feedback: This describes quantitative models, not formal reasoning. In this chapter,
+      formal reasoning refers to reasoning that applies explicit rules whose correct
+      application yields certain conclusions.
+- Fast, broadly applicable reasoning that uses useful but fallible rules of thumb.:
+    correct: false
+    feedback: This describes heuristic reasoning, not formal reasoning. In this chapter,
+      formal reasoning refers to reasoning that applies explicit rules whose correct
+      application yields certain conclusions.
+- A highlighted term whose meaning is specifically defined for use in the book.:
+    correct: false
+    feedback: This describes word or phrase, not formal reasoning. In this chapter,
+      formal reasoning refers to reasoning that applies explicit rules whose correct
+      application yields certain conclusions.
+- A chain of steps where each link is either correct or in error.:
+    correct: true
+    feedback: Correct.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of formal reasoning. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "formal-reasoning-1-two",
+  question = "Two of the following are valid descriptions of formal reasoning. The other three are not. Mark both of the VALID descriptions.",
+  answers = formal_reasoning_1_two_choices,
+  multiple = TRUE
+)()
+```

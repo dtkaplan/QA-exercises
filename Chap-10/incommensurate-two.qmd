@@ -1,0 +1,31 @@
+
+```{devoirs_choices incommensurate_10_two_choices}
+- A condition in which an objective function has no possible inputs.:
+    correct: false
+    feedback: An empty input domain is unrelated; incommensurate describes outputs
+      with different units.
+- A guarantee that two quantities are equal in magnitude.:
+    correct: false
+    feedback: Incommensurate outputs cannot be directly compared by magnitude because
+      they use different dimensions.
+- Having no numerical value that can be measured.:
+    correct: false
+    feedback: Incommensurate objectives can have numerical values; their units differ.
+- Describing objectives whose values require conversion before direct quantitative comparison.:
+    correct: true
+    feedback: Correct.
+- Describing objective outputs measured in different dimensions or units that cannot be directly added.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of incommensurate. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "incommensurate-10-two",
+  question = "Two of the following are valid descriptions of incommensurate. The other three are not. Mark both of the VALID descriptions.",
+  answers = incommensurate_10_two_choices,
+  multiple = TRUE
+)()
+```

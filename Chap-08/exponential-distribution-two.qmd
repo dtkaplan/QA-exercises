@@ -1,0 +1,32 @@
+
+```{devoirs_choices exponential_distribution_8_two_choices}
+- A distribution in which all values after the starting event are impossible.:
+    correct: false
+    feedback: The exponential model allows positive waiting times, with likelihood
+      declining rather than ending at a cutoff.
+- A distribution determined by a center and a standard deviation.:
+    correct: false
+    feedback: The chapter describes the exponential family with a rate parameter;
+      mean waiting time is its reciprocal.
+- A model in which the likelihood of an event in each short interval stays fixed over time.:
+    correct: true
+    feedback: Correct.
+- A probability model often used for the time between randomly occurring events.:
+    correct: true
+    feedback: Correct.
+- A symmetric, bell-shaped model centered at its mean.:
+    correct: false
+    feedback: That describes a normal distribution; the exponential distribution is
+      asymmetric and decays to the right.
+```
+
+Two of the following are valid descriptions of exponential distribution. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "exponential-distribution-8-two",
+  question = "Two of the following are valid descriptions of exponential distribution. The other three are not. Mark both of the VALID descriptions.",
+  answers = exponential_distribution_8_two_choices,
+  multiple = TRUE
+)()
+```

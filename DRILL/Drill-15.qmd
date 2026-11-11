@@ -144,5 +144,29 @@ Show some slope segments and ask the student to reconstitute $F()$ and say which
 ::::
 
 
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+
+## Accumulation
+
+{{< include ../Chap-15/accumulation-two.qmd >}}
+
+## Anti-differentiation
+
+{{< include ../Chap-15/anti-differentiation-two.qmd >}}
+
+## Incidence
+
+{{< include ../Chap-15/incidence-two.qmd >}}
+
+## Integration
+
+{{< include ../Chap-15/integration-two.qmd >}}
+
+:::
+::::
 
 

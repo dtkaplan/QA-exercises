@@ -1,0 +1,31 @@
+
+```{devoirs_choices normal_distribution_8_two_choices}
+- A distribution that makes all values in a bounded interval equally likely.:
+    correct: false
+    feedback: That is a uniform distribution; a normal distribution gives greater
+      relative probability near its center.
+- A probability model in which values near the center are more likely than values far from it.:
+    correct: true
+    feedback: Correct.
+- The square of the standard deviation, used as the distribution's center.:
+    correct: false
+    feedback: Variance is the square of standard deviation and measures spread, not
+      the center.
+- A collection of observed data values arranged from smallest to largest.:
+    correct: false
+    feedback: That is an ordered dataset; a normal distribution is a probability model.
+- A symmetric distribution family described by its mean and standard deviation.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of normal distribution. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "normal-distribution-8-two",
+  question = "Two of the following are valid descriptions of normal distribution. The other three are not. Mark both of the VALID descriptions.",
+  answers = normal_distribution_8_two_choices,
+  multiple = TRUE
+)()
+```

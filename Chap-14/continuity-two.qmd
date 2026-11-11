@@ -1,0 +1,31 @@
+
+```{devoirs_choices continuity_14_two_choices}
+- The property that small input changes produce small output changes.:
+    correct: true
+    feedback: Correct.
+- The total amount accumulated under a function's graph.:
+    correct: false
+    feedback: That concerns accumulation; continuity is about the behavior of output
+      under small input changes.
+- A guarantee that a function's output is always increasing.:
+    correct: false
+    feedback: Continuity concerns jumps, not whether the function increases or decreases.
+- The absence of abrupt output jumps in response to small changes in input.:
+    correct: true
+    feedback: Correct.
+- The process of calculating the derivative of a function.:
+    correct: false
+    feedback: That is differentiation; continuity describes how outputs respond to
+      nearby inputs.
+```
+
+Two of the following are valid descriptions of continuity. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "continuity-14-two",
+  question = "Two of the following are valid descriptions of continuity. The other three are not. Mark both of the VALID descriptions.",
+  answers = continuity_14_two_choices,
+  multiple = TRUE
+)()
+```

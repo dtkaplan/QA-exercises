@@ -1,0 +1,29 @@
+
+```{devoirs_choices scientific_method_11_one_choices}
+- A probability distribution assigning likelihood to every possible outcome.:
+    correct: false
+    feedback: That describes a probability distribution, which may represent a hypothesis
+      but is not the whole method.
+- A way to gather observations without forming or comparing explanations.:
+    correct: false
+    feedback: The chapter presents hypotheses and models as central to scientific
+      comparison and refinement.
+- A method of building understanding by proposing explanations and evaluating their consequences.:
+    correct: true
+    feedback: Correct.
+- A technique for calculating a function's maximum output.:
+    correct: false
+    feedback: That is optimization; the scientific method is a broader process for
+      developing and evaluating explanations.
+```
+
+Only one of the following is a valid description of scientific method. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "scientific-method-11-one",
+  question = "Only one of the following is a valid description of scientific method. Mark that one.",
+  answers = scientific_method_11_one_choices,
+  multiple = FALSE
+)()
+```

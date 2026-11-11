@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -532,9 +567,9 @@ document.head.appendChild(style);
   initializeWhenReady();
 })();</script>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">5</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">4</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">5</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <!--
 id: "frog-choose-knife"
 created: "Fri Feb 13 17:47:15 2026"
@@ -705,7 +740,7 @@ Walking_words |&gt;
 </div>
 <p><!-- end of exr-frog-choose-knife --></p>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <!--
 id: "hamster-cut-tv"
 created: "Fri Feb 13 16:03:05 2026"
@@ -724,7 +759,7 @@ mode: exercise
 </div>
 <p><!-- end of exr-hamster-cut-tv --></p>
 </div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <!--
 id: "horse-point-closet"
 created: "Fri Jan 30 08:15:29 2026"
@@ -806,7 +841,7 @@ Figure&nbsp;1: Functions that might be relative probability distributions
 </div>
 <p><!-- end of exr-horse-point-closet --></p>
 </div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
 <!--
 id: "pig-teach-oven"
 created: "Sat Dec 20 09:40:34 2025"
@@ -855,7 +890,7 @@ mode: exercise
 </div>
 <p><!-- end of exr-pig-teach-oven --></p>
 </div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
 <!--
 id: "pony-rise-boat"
 created: "Tue Oct  7 14:04:32 2025"
@@ -1138,6 +1173,551 @@ Table&nbsp;1: Life expectancy in the US as it depends on age. Tabulated in 2021.
 </div>
 <p>A “refined” operationalization of lives saved takes into account the “quality” of life. This is called “<a href="https://en.wikipedia.org/wiki/Quality-adjusted_life_year">Quality Adjusted Life Years</a>,” or QALYs for short.</p>
 <p><!-- end of exr-pony-rise-boat --></p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key vocabulary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Bayesian</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Exponential distribution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Frequentism</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Hypothesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">Mean</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">Normal distribution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false" href="">Probability distributions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false" href="">Random number generation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false" href="">Range</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false" href="">Relative probability</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-11" role="tab" aria-controls="tabset-1-11" aria-selected="false" href="">Simulation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-12" role="tab" aria-controls="tabset-1-12" aria-selected="false" href="">Standard deviation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-13-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-13" role="tab" aria-controls="tabset-1-13" aria-selected="false" href="">Uncertainty</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-14-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-14" role="tab" aria-controls="tabset-1-14" aria-selected="false" href="">Uniform distribution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-15-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-15" role="tab" aria-controls="tabset-1-15" aria-selected="false" href="">Variance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Only one of the following is a valid description of bayesian. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"bayesian-8-one"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of bayesian. Mark that one."</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> bayesian_8_one_choices,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="bayesian-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of bayesian. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-626179657369616e2d382d6f6e65" id="devoirs3-selection-626179657369616e2d382d6f6e65-1" value="AAufhru" data-devoirs3-option="" data-option-id="AAufhru" data-feedback="Bayesian inference can represent pre-data knowledge with a prior distribution." data-feedback-html="Bayesian inference can represent pre-data knowledge with a prior distribution.">
+    <span>A method that forbids using any knowledge formed before collecting data.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-626179657369616e2d382d6f6e65" id="devoirs3-selection-626179657369616e2d382d6f6e65-2" value="BAyhkcc" data-devoirs3-option="" data-option-id="BAyhkcc" data-feedback="Random number generation can support Bayesian calculations, but it is not the meaning of Bayesian." data-feedback-html="Random number generation can support Bayesian calculations, but it is not the meaning of Bayesian.">
+    <span>A computer routine that generates unpredictable values without a model.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-626179657369616e2d382d6f6e65" id="devoirs3-selection-626179657369616e2d382d6f6e65-3" value="CAesisu" data-devoirs3-option="" data-option-id="CAesisu" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A perspective on inference that combines prior knowledge with evidence from observations.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-626179657369616e2d382d6f6e65" id="devoirs3-selection-626179657369616e2d382d6f6e65-4" value="DAcvlcy" data-devoirs3-option="" data-option-id="DAcvlcy" data-feedback="Bayesian distributions can represent uncertainty about hypotheses and quantities, including unobserved possibilities." data-feedback-html="Bayesian distributions can represent uncertainty about hypotheses and quantities, including unobserved possibilities.">
+    <span>A distribution describing only values observed in the past.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of bayesian. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">bayesian-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Only one of the following is a valid description of exponential distribution. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"exponential-distribution-8-one"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of exponential distribution. Mark that one."</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> exponential_distribution_8_one_choices,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="exponential-distribution-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of exponential distribution. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65-1" value="AAelxul" data-devoirs3-option="" data-option-id="AAelxul" data-feedback="That describes a uniform distribution; the exponential density decreases over waiting time." data-feedback-html="That describes a uniform distribution; the exponential density decreases over waiting time.">
+    <span>A distribution that assigns equal probability to every value in a fixed interval.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65-2" value="BAchovv" data-devoirs3-option="" data-option-id="BAchovv" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A distribution whose density decreases exponentially with the waiting time after an event.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65-3" value="CAnlxfn" data-devoirs3-option="" data-option-id="CAnlxfn" data-feedback="Waiting times in this model are nonnegative, with probability extending toward larger times." data-feedback-html="Waiting times in this model are nonnegative, with probability extending toward larger times.">
+    <span>A model that permits negative waiting times but excludes positive ones.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6578706f6e656e7469616c2d646973747269627574696f6e2d382d6f6e65-4" value="DAxpoju" data-devoirs3-option="" data-option-id="DAxpoju" data-feedback="The distribution models uncertainty about the waiting time; it does not identify an exact future event time." data-feedback-html="The distribution models uncertainty about the waiting time; it does not identify an exact future event time.">
+    <span>A function that reports the exact date of the next event.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of exponential distribution. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">exponential-distribution-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Only one of the following is a valid description of frequentism. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"frequentism-8-one"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of frequentism. Mark that one."</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> frequentism_8_one_choices,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="frequentism-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of frequentism. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6672657175656e7469736d2d382d6f6e65" id="devoirs3-selection-6672657175656e7469736d2d382d6f6e65-1" value="AAksmzf" data-devoirs3-option="" data-option-id="AAksmzf" data-feedback="Frequentist methods assess evidence using statistical procedures; they do not declare all models equal." data-feedback-html="Frequentist methods assess evidence using statistical procedures; they do not declare all models equal.">
+    <span>A rule that treats every proposed model as equally supported by data.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6672657175656e7469736d2d382d6f6e65" id="devoirs3-selection-6672657175656e7469736d2d382d6f6e65-2" value="BAjcxfs" data-devoirs3-option="" data-option-id="BAjcxfs" data-feedback="The chapter says frequentism emphasizes mathematically provable statements about inference." data-feedback-html="The chapter says frequentism emphasizes mathematically provable statements about inference.">
+    <span>A method that never uses mathematical proofs.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6672657175656e7469736d2d382d6f6e65" id="devoirs3-selection-6672657175656e7469736d2d382d6f6e65-3" value="CAjypuj" data-devoirs3-option="" data-option-id="CAjypuj" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>An approach to inference built around long-run behavior under repeated sampling.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6672657175656e7469736d2d382d6f6e65" id="devoirs3-selection-6672657175656e7469736d2d382d6f6e65-4" value="DAkfrvw" data-devoirs3-option="" data-option-id="DAkfrvw" data-feedback="That is random number generation, which is a computational tool rather than an inference framework." data-feedback-html="That is random number generation, which is a computational tool rather than an inference framework.">
+    <span>The process of generating random numbers from a distribution.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of frequentism. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">frequentism-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Only one of the following is a valid description of hypothesis. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"hypothesis-8-one"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of hypothesis. Mark that one."</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> hypothesis_8_one_choices,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="hypothesis-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of hypothesis. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6879706f7468657369732d382d6f6e65" id="devoirs3-selection-6879706f7468657369732d382d6f6e65-1" value="AAnveom" data-devoirs3-option="" data-option-id="AAnveom" data-feedback="Standard deviation measures spread; it is not an explanatory hypothesis." data-feedback-html="Standard deviation measures spread; it is not an explanatory hypothesis.">
+    <span>A rule for calculating the standard deviation of a sample.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6879706f7468657369732d382d6f6e65" id="devoirs3-selection-6879706f7468657369732d382d6f6e65-2" value="BAfwagc" data-devoirs3-option="" data-option-id="BAfwagc" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A proposed description of a system, represented by a distribution over possible outcomes.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6879706f7468657369732d382d6f6e65" id="devoirs3-selection-6879706f7468657369732d382d6f6e65-3" value="CAkndue" data-devoirs3-option="" data-option-id="CAkndue" data-feedback="A simulated value is an output; the hypothesis is the model used to generate or explain outcomes." data-feedback-html="A simulated value is an output; the hypothesis is the model used to generate or explain outcomes.">
+    <span>A random outcome generated by a computer simulation.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6879706f7468657369732d382d6f6e65" id="devoirs3-selection-6879706f7468657369732d382d6f6e65-4" value="DAsjdhx" data-devoirs3-option="" data-option-id="DAsjdhx" data-feedback="A hypothesis is open to assessment and revision in light of evidence." data-feedback-html="A hypothesis is open to assessment and revision in light of evidence.">
+    <span>A conclusion that must be accepted before any observations are made.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of hypothesis. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">hypothesis-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p>Only one of the following is a valid description of mean. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"mean-8-one"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of mean. Mark that one."</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> mean_8_one_choices,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="mean-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of mean. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d65616e2d382d6f6e65" id="devoirs3-selection-6d65616e2d382d6f6e65-1" value="AAplmsv" data-devoirs3-option="" data-option-id="AAplmsv" data-feedback="A random draw is a possible observation; the mean is a parameter describing the distribution." data-feedback-html="A random draw is a possible observation; the mean is a parameter describing the distribution.">
+    <span>A random value generated from a probability distribution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d65616e2d382d6f6e65" id="devoirs3-selection-6d65616e2d382d6f6e65-2" value="BAszgeo" data-devoirs3-option="" data-option-id="BAszgeo" data-feedback="Those endpoints define the range of a uniform distribution; the mean is a central value." data-feedback-html="Those endpoints define the range of a uniform distribution; the mean is a central value.">
+    <span>The endpoints that define the possible values in a uniform distribution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d65616e2d382d6f6e65" id="devoirs3-selection-6d65616e2d382d6f6e65-3" value="CAxwiut" data-devoirs3-option="" data-option-id="CAxwiut" data-feedback="That is relative probability; the mean describes a distribution's center." data-feedback-html="That is relative probability; the mean describes a distribution’s center.">
+    <span>A number describing how likely one value is relative to another.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d65616e2d382d6f6e65" id="devoirs3-selection-6d65616e2d382d6f6e65-4" value="DAkwpku" data-devoirs3-option="" data-option-id="DAkwpku" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The average-value parameter of a normal distribution.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of mean. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">mean-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<p>Only one of the following is a valid description of normal distribution. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"normal-distribution-8-one"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of normal distribution. Mark that one."</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> normal_distribution_8_one_choices,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="normal-distribution-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of normal distribution. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65-1" value="AAzjxfd" data-devoirs3-option="" data-option-id="AAzjxfd" data-feedback="That is an ordered dataset; a normal distribution is a probability model." data-feedback-html="That is an ordered dataset; a normal distribution is a probability model.">
+    <span>A collection of observed data values arranged from smallest to largest.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65-2" value="BAwiaub" data-devoirs3-option="" data-option-id="BAwiaub" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A bell-shaped distribution centered at its mean, with likelihood tapering away from the center.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65-3" value="CAoapzn" data-devoirs3-option="" data-option-id="CAoapzn" data-feedback="That is random number generation or simulation, not a distribution family." data-feedback-html="That is random number generation or simulation, not a distribution family.">
+    <span>A process for repeatedly drawing numbers from a model.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-6e6f726d616c2d646973747269627574696f6e2d382d6f6e65-4" value="DAabcon" data-devoirs3-option="" data-option-id="DAabcon" data-feedback="That describes the general shape of an exponential distribution, not the symmetric normal family." data-feedback-html="That describes the general shape of an exponential distribution, not the symmetric normal family.">
+    <span>A distribution whose likelihood steadily decreases from a starting point and has only positive values.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of normal distribution. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">normal-distribution-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<p>Only one of the following is a valid description of probability distributions. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"probability-distributions-8-one"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of probability distributions. Mark that one."</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> probability_distributions_8_one_choices,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="probability-distributions-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of probability distributions. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65" id="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65-1" value="AAocixp" data-devoirs3-option="" data-option-id="AAocixp" data-feedback="A distribution can represent a hypothesis about observations; it does not prove that hypothesis." data-feedback-html="A distribution can represent a hypothesis about observations; it does not prove that hypothesis.">
+    <span>A claim that a scientific explanation has been proven true.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65" id="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65-2" value="BAvzwio" data-devoirs3-option="" data-option-id="BAvzwio" data-feedback="A distribution can describe possible values that have not yet been observed." data-feedback-html="A distribution can describe possible values that have not yet been observed.">
+    <span>A list containing only the values already observed in a sample.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65" id="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65-3" value="CAlibso" data-devoirs3-option="" data-option-id="CAlibso" data-feedback="A range gives two endpoints; a probability distribution represents relative likelihood across possible values." data-feedback-html="A range gives two endpoints; a probability distribution represents relative likelihood across possible values.">
+    <span>A pair of numbers giving only the lower and upper bounds of a range.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65" id="devoirs3-selection-70726f626162696c6974792d646973747269627574696f6e732d382d6f6e65-4" value="DAsnnik" data-devoirs3-option="" data-option-id="DAsnnik" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Functions assigning relative probabilities to possible values of an uncertain quantity.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of probability distributions. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">probability-distributions-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<p>Only one of the following is a valid description of random number generation. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"random-number-generation-8-one"</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of random number generation. Mark that one."</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> random_number_generation_8_one_choices,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="random-number-generation-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of random number generation. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65" id="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65-1" value="AAxnbfl" data-devoirs3-option="" data-option-id="AAxnbfl" data-feedback="Generation samples possible outcomes; it does not observe the entire set or eliminate uncertainty." data-feedback-html="Generation samples possible outcomes; it does not observe the entire set or eliminate uncertainty.">
+    <span>An operation that removes uncertainty by observing every possible outcome.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65" id="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65-2" value="BAvfgup" data-devoirs3-option="" data-option-id="BAvfgup" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Generating random inputs, with values more likely when the distribution assigns higher relative probability.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65" id="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65-3" value="CAveyag" data-devoirs3-option="" data-option-id="CAveyag" data-feedback="Those are data summaries, not the process of generating random values." data-feedback-html="Those are data summaries, not the process of generating random values.">
+    <span>Calculating the average and standard deviation of observed data.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65" id="devoirs3-selection-72616e646f6d2d6e756d6265722d67656e65726174696f6e2d382d6f6e65-4" value="DApsprm" data-devoirs3-option="" data-option-id="DApsprm" data-feedback="That describes a normal distribution, one possible source model for random values." data-feedback-html="That describes a normal distribution, one possible source model for random values.">
+    <span>A distribution family centered at a mean with a standard deviation.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of random number generation. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">random-number-generation-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
+<p>Only one of the following is a valid description of range. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"range-8-one"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of range. Mark that one."</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> range_8_one_choices,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="range-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of range. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e67652d382d6f6e65" id="devoirs3-selection-72616e67652d382d6f6e65-1" value="AAvbqio" data-devoirs3-option="" data-option-id="AAvbqio" data-feedback="That is a probability distribution; a range gives only lower and upper values." data-feedback-html="That is a probability distribution; a range gives only lower and upper values.">
+    <span>A function giving the relative probability of every possible value.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e67652d382d6f6e65" id="devoirs3-selection-72616e67652d382d6f6e65-2" value="BAizaip" data-devoirs3-option="" data-option-id="BAizaip" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The span between two stated endpoints that summarizes possible quantity values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e67652d382d6f6e65" id="devoirs3-selection-72616e67652d382d6f6e65-3" value="CAkcbnn" data-devoirs3-option="" data-option-id="CAkcbnn" data-feedback="A range can bound a uniform distribution, but the range itself is not a list of outcomes or probabilities." data-feedback-html="A range can bound a uniform distribution, but the range itself is not a list of outcomes or probabilities.">
+    <span>A list of equally likely outcomes from a uniform distribution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72616e67652d382d6f6e65" id="devoirs3-selection-72616e67652d382d6f6e65-4" value="DAubzuy" data-devoirs3-option="" data-option-id="DAubzuy" data-feedback="That describes the normal distribution, which can extend beyond a typical range." data-feedback-html="That describes the normal distribution, which can extend beyond a typical range.">
+    <span>A model that gives greater likelihood to values near a central mean.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of range. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">range-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
+<p>Only one of the following is a valid description of relative probability. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"relative-probability-8-one"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of relative probability. Mark that one."</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> relative_probability_8_one_choices,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="relative-probability-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of relative probability. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65" id="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65-1" value="AAcbafe" data-devoirs3-option="" data-option-id="AAcbafe" data-feedback="The distribution is the function; relative probability is the output for a particular input value." data-feedback-html="The distribution is the function; relative probability is the output for a particular input value.">
+    <span>The probability model itself, rather than one of its outputs.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65" id="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65-2" value="BAliefi" data-devoirs3-option="" data-option-id="BAliefi" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A quantity showing how likely one possible value is compared with alternatives.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65" id="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65-3" value="CAvcsdc" data-devoirs3-option="" data-option-id="CAvcsdc" data-feedback="That is a range; relative probability is assigned to individual possible values." data-feedback-html="That is a range; relative probability is assigned to individual possible values.">
+    <span>The distance between the maximum and minimum possible values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65" id="devoirs3-selection-72656c61746976652d70726f626162696c6974792d382d6f6e65-4" value="DAmznui" data-devoirs3-option="" data-option-id="DAmznui" data-feedback="Relative probability values cannot be negative." data-feedback-html="Relative probability values cannot be negative.">
+    <span>A negative number showing that an outcome is less than impossible.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of relative probability. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">relative-probability-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-11-tab">
+<p>Only one of the following is a valid description of simulation. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"simulation-8-one"</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of simulation. Mark that one."</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> simulation_8_one_choices,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="simulation-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of simulation. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65" id="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65-1" value="AAuwwsn" data-devoirs3-option="" data-option-id="AAuwwsn" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A computational technique that propagates uncertain inputs through a model by repeated sampling.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65" id="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65-2" value="BAnnvzj" data-devoirs3-option="" data-option-id="BAnnvzj" data-feedback="One draw can be part of a simulation, but simulation uses model evaluations to reason about output uncertainty." data-feedback-html="One draw can be part of a simulation, but simulation uses model evaluations to reason about output uncertainty.">
+    <span>A single random number generated once from a model.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65" id="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65-3" value="CAxkksc" data-devoirs3-option="" data-option-id="CAxkksc" data-feedback="Simulation evaluates the model on generated inputs to study its outputs." data-feedback-html="Simulation evaluates the model on generated inputs to study its outputs.">
+    <span>A process for drawing a graph without calculating any model outputs.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65" id="devoirs3-selection-73696d756c6174696f6e2d382d6f6e65-4" value="DAdndpb" data-devoirs3-option="" data-option-id="DAdndpb" data-feedback="That is a probability distribution; simulation uses distributions to generate inputs and explore outputs." data-feedback-html="That is a probability distribution; simulation uses distributions to generate inputs and explore outputs.">
+    <span>A distribution assigning relative probabilities to possible values.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of simulation. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">simulation-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-12-tab">
+<p>Only one of the following is a valid description of standard deviation. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"standard-deviation-8-one"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of standard deviation. Mark that one."</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> standard_deviation_8_one_choices,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="standard-deviation-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of standard deviation. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65" id="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65-1" value="AAmmfgs" data-devoirs3-option="" data-option-id="AAmmfgs" data-feedback="That is the exponential distribution's rate parameter, not standard deviation." data-feedback-html="That is the exponential distribution’s rate parameter, not standard deviation.">
+    <span>The rate of events per unit time in an exponential model.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65" id="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65-2" value="BAnnrdv" data-devoirs3-option="" data-option-id="BAnnrdv" data-feedback="Standard deviation is related to variance, not the square of the mean." data-feedback-html="Standard deviation is related to variance, not the square of the mean.">
+    <span>The square of a distribution’s mean.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65" id="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65-3" value="CAnvmvf" data-devoirs3-option="" data-option-id="CAnvmvf" data-feedback="Standard deviation describes spread but does not impose a hard maximum distance." data-feedback-html="Standard deviation describes spread but does not impose a hard maximum distance.">
+    <span>A guaranteed maximum distance of every value from the mean.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65" id="devoirs3-selection-7374616e646172642d646576696174696f6e2d382d6f6e65-4" value="DApkxup" data-devoirs3-option="" data-option-id="DApkxup" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The scale parameter that determines how widely a normal distribution extends from its center.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of standard deviation. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">standard-deviation-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-13" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-13-tab">
+<p>Only one of the following is a valid description of uncertainty. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"uncertainty-8-one"</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of uncertainty. Mark that one."</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> uncertainty_8_one_choices,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="uncertainty-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of uncertainty. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e6365727461696e74792d382d6f6e65" id="devoirs3-selection-756e6365727461696e74792d382d6f6e65-1" value="AArbhnt" data-devoirs3-option="" data-option-id="AArbhnt" data-feedback="That is variance, a measure of spread, not the broader condition of not knowing a quantity's value precisely." data-feedback-html="That is variance, a measure of spread, not the broader condition of not knowing a quantity’s value precisely.">
+    <span>The square of a distribution’s standard deviation.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e6365727461696e74792d382d6f6e65" id="devoirs3-selection-756e6365727461696e74792d382d6f6e65-2" value="BAdzjoq" data-devoirs3-option="" data-option-id="BAdzjoq" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A description of how unsure we are about a quantity’s value.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e6365727461696e74792d382d6f6e65" id="devoirs3-selection-756e6365727461696e74792d382d6f6e65-3" value="CAfiojf" data-devoirs3-option="" data-option-id="CAfiojf" data-feedback="A range is one way to express uncertainty; uncertainty itself is not restricted to interval endpoints." data-feedback-html="A range is one way to express uncertainty; uncertainty itself is not restricted to interval endpoints.">
+    <span>The interval between the lowest and highest values a quantity can possibly take.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e6365727461696e74792d382d6f6e65" id="devoirs3-selection-756e6365727461696e74792d382d6f6e65-4" value="DAtnxwx" data-devoirs3-option="" data-option-id="DAtnxwx" data-feedback="Units express how a quantity is measured, not how uncertain its value is." data-feedback-html="Units express how a quantity is measured, not how uncertain its value is.">
+    <span>The unit used to measure a quantity, such as dollars or miles.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of uncertainty. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">uncertainty-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-14" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-14-tab">
+<p>Only one of the following is a valid description of uniform distribution. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"uniform-distribution-8-one"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of uniform distribution. Mark that one."</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> uniform_distribution_8_one_choices,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="uniform-distribution-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of uniform distribution. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65-1" value="AAqjqsd" data-devoirs3-option="" data-option-id="AAqjqsd" data-feedback="Those parameters describe a normal distribution; a uniform distribution is specified by its range." data-feedback-html="Those parameters describe a normal distribution; a uniform distribution is specified by its range.">
+    <span>A distribution requiring a positive mean and standard deviation.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65-2" value="BAeeuhj" data-devoirs3-option="" data-option-id="BAeeuhj" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A model for values that can occur anywhere within known bounds without favoring one location.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65-3" value="CAagkic" data-devoirs3-option="" data-option-id="CAagkic" data-feedback="That describes an exponential distribution, not a uniform one." data-feedback-html="That describes an exponential distribution, not a uniform one.">
+    <span>A distribution whose likelihood declines exponentially as values increase.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65" id="devoirs3-selection-756e69666f726d2d646973747269627574696f6e2d382d6f6e65-4" value="DApqrbg" data-devoirs3-option="" data-option-id="DApqrbg" data-feedback="Every value within the range is possible in a uniform distribution, not just its endpoints." data-feedback-html="Every value within the range is possible in a uniform distribution, not just its endpoints.">
+    <span>A model in which only the two endpoints can occur.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of uniform distribution. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">uniform-distribution-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-1-15" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-15-tab">
+<p>Only one of the following is a valid description of variance. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"variance-8-one"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of variance. Mark that one."</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> variance_8_one_choices,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-08" data-label="variance-8-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of variance. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76617269616e63652d382d6f6e65" id="devoirs3-selection-76617269616e63652d382d6f6e65-1" value="AAovmue" data-devoirs3-option="" data-option-id="AAovmue" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The squared counterpart to standard deviation for describing a distribution’s spread.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76617269616e63652d382d6f6e65" id="devoirs3-selection-76617269616e63652d382d6f6e65-2" value="BAtbpei" data-devoirs3-option="" data-option-id="BAtbpei" data-feedback="Variance summarizes spread but does not set a hard bound on every observation." data-feedback-html="Variance summarizes spread but does not set a hard bound on every observation.">
+    <span>A guarantee that all observations lie within a fixed distance of the mean.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76617269616e63652d382d6f6e65" id="devoirs3-selection-76617269616e63652d382d6f6e65-3" value="CAaeybf" data-devoirs3-option="" data-option-id="CAaeybf" data-feedback="Equal likelihood within an interval describes a uniform distribution, not variance." data-feedback-html="Equal likelihood within an interval describes a uniform distribution, not variance.">
+    <span>The parameter that makes all outcomes equally likely within an interval.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-76617269616e63652d382d6f6e65" id="devoirs3-selection-76617269616e63652d382d6f6e65-4" value="DAlfndz" data-devoirs3-option="" data-option-id="DAlfndz" data-feedback="Relative probability describes an outcome's likelihood; variance summarizes distribution spread." data-feedback-html="Relative probability describes an outcome’s likelihood; variance summarizes distribution spread.">
+    <span>A relative probability assigned to one possible outcome.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of variance. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">variance-8-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 

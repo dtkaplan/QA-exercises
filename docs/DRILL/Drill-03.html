@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -1690,6 +1725,884 @@ chapter: 03
 </div>
 </div>
 <p><!-- end of exr-rabbit-write-glasses --></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key vocabulary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Base dimensions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Base units</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Capita</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false" href="">Controlling for</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-6" role="tab" aria-controls="tabset-4-6" aria-selected="false" href="">Conversion factor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-7" role="tab" aria-controls="tabset-4-7" aria-selected="false" href="">Coordinate plane</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-8" role="tab" aria-controls="tabset-4-8" aria-selected="false" href="">Derived dimensions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-9" role="tab" aria-controls="tabset-4-9" aria-selected="false" href="">Derived units</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-10" role="tab" aria-controls="tabset-4-10" aria-selected="false" href="">Dimensionless</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-11-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-11" role="tab" aria-controls="tabset-4-11" aria-selected="false" href="">Flavors of one</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-12-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-12" role="tab" aria-controls="tabset-4-12" aria-selected="false" href="">Number line</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-13-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-13" role="tab" aria-controls="tabset-4-13" aria-selected="false" href="">Partial change</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-14-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-14" role="tab" aria-controls="tabset-4-14" aria-selected="false" href="">per</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-15-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-15" role="tab" aria-controls="tabset-4-15" aria-selected="false" href="">Point</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-16-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-16" role="tab" aria-controls="tabset-4-16" aria-selected="false" href="">Pure number</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-17-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-17" role="tab" aria-controls="tabset-4-17" aria-selected="false" href="">Quantity</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-18-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-18" role="tab" aria-controls="tabset-4-18" aria-selected="false" href="">SI</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-19-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-19" role="tab" aria-controls="tabset-4-19" aria-selected="false" href="">Space</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-20-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-20" role="tab" aria-controls="tabset-4-20" aria-selected="false" href="">Units</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-21-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-21" role="tab" aria-controls="tabset-4-21" aria-selected="false" href="">… with respect to …</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-22-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-22" role="tab" aria-controls="tabset-4-22" aria-selected="false" href="">Worth</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Two of the following are valid descriptions of analysis. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"analysis-3-two"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of analysis. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> analysis_3_two_choices,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="analysis-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of analysis. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-616e616c797369732d332d74776f" id="devoirs3-selection-616e616c797369732d332d74776f-1" value="AAmupoc" data-devoirs3-option="" data-option-id="AAmupoc" data-feedback="This describes conversion factor, not analysis. In this chapter, analysis refers to examining a system by breaking it into contributing components." data-feedback-html="This describes conversion factor, not analysis. In this chapter, analysis refers to examining a system by breaking it into contributing components.">
+    <span>A dimensionless ratio of equal quantities used to convert between commensurate units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-616e616c797369732d332d74776f" id="devoirs3-selection-616e616c797369732d332d74776f-2" value="BAsqtva" data-devoirs3-option="" data-option-id="BAsqtva" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A process of separating a complex situation into parts to understand their contributions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-616e616c797369732d332d74776f" id="devoirs3-selection-616e616c797369732d332d74776f-3" value="CArxojk" data-devoirs3-option="" data-option-id="CArxojk" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Examining a system by breaking it into contributing components.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-616e616c797369732d332d74776f" id="devoirs3-selection-616e616c797369732d332d74776f-4" value="DAouprd" data-devoirs3-option="" data-option-id="DAouprd" data-feedback="This describes coordinate plane, not analysis. In this chapter, analysis refers to examining a system by breaking it into contributing components." data-feedback-html="This describes coordinate plane, not analysis. In this chapter, analysis refers to examining a system by breaking it into contributing components.">
+    <span>A two-dimensional space marked by two perpendicular number lines.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-616e616c797369732d332d74776f" id="devoirs3-selection-616e616c797369732d332d74776f-5" value="EAfjvnh" data-devoirs3-option="" data-option-id="EAfjvnh" data-feedback="This describes controlling for, not analysis. In this chapter, analysis refers to examining a system by breaking it into contributing components." data-feedback-html="This describes controlling for, not analysis. In this chapter, analysis refers to examining a system by breaking it into contributing components.">
+    <span>Accounting for other variables while examining a relationship of interest.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of analysis. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">analysis-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>Two of the following are valid descriptions of base dimensions. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"base-dimensions-3-two"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of base dimensions. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> base_dimensions_3_two_choices,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="base-dimensions-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of base dimensions. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f-1" value="AAxqlcp" data-devoirs3-option="" data-option-id="AAxqlcp" data-feedback="This describes derived dimensions, not base dimensions. In this chapter, base dimensions refers to fundamental dimensions from which derived dimensions are formed." data-feedback-html="This describes derived dimensions, not base dimensions. In this chapter, base dimensions refers to fundamental dimensions from which derived dimensions are formed.">
+    <span>Dimensions formed by multiplying or dividing base dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f-2" value="BAiuyhm" data-devoirs3-option="" data-option-id="BAiuyhm" data-feedback="This describes flavors of one, not base dimensions. In this chapter, base dimensions refers to fundamental dimensions from which derived dimensions are formed." data-feedback-html="This describes flavors of one, not base dimensions. In this chapter, base dimensions refers to fundamental dimensions from which derived dimensions are formed.">
+    <span>Dimensionless ratios formed by dividing two exactly equal quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f-3" value="CAncopb" data-devoirs3-option="" data-option-id="CAncopb" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Independent quantity dimensions that serve as building blocks for derived dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f-4" value="DAuuigs" data-devoirs3-option="" data-option-id="DAuuigs" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The basic kinds of quantity, such as time, length, mass, temperature, capita, and worth.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-626173652d64696d656e73696f6e732d332d74776f-5" value="EAqrknc" data-devoirs3-option="" data-option-id="EAqrknc" data-feedback="This describes capita, not base dimensions. In this chapter, base dimensions refers to fundamental dimensions from which derived dimensions are formed." data-feedback-html="This describes capita, not base dimensions. In this chapter, base dimensions refers to fundamental dimensions from which derived dimensions are formed.">
+    <span>A unit for counting people, from the Latin word for head.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of base dimensions. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">base-dimensions-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p>Two of the following are valid descriptions of base units. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"base-units-3-two"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of base units. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> base_units_3_two_choices,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="base-units-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of base units. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d756e6974732d332d74776f" id="devoirs3-selection-626173652d756e6974732d332d74776f-1" value="AAoaoyv" data-devoirs3-option="" data-option-id="AAoaoyv" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Units such as the second, meter, kilogram, and kelvin from which derived units are composed.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d756e6974732d332d74776f" id="devoirs3-selection-626173652d756e6974732d332d74776f-2" value="BAuzyaa" data-devoirs3-option="" data-option-id="BAuzyaa" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The primary measurement units underlying the International System of Units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d756e6974732d332d74776f" id="devoirs3-selection-626173652d756e6974732d332d74776f-3" value="CApfjjf" data-devoirs3-option="" data-option-id="CApfjjf" data-feedback="This describes coordinate plane, not base units. In this chapter, base units refers to fundamental si units that are not defined in terms of one another." data-feedback-html="This describes coordinate plane, not base units. In this chapter, base units refers to fundamental si units that are not defined in terms of one another.">
+    <span>A two-dimensional space marked by two perpendicular number lines.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d756e6974732d332d74776f" id="devoirs3-selection-626173652d756e6974732d332d74776f-4" value="DAuvwub" data-devoirs3-option="" data-option-id="DAuvwub" data-feedback="This describes capita, not base units. In this chapter, base units refers to fundamental si units that are not defined in terms of one another." data-feedback-html="This describes capita, not base units. In this chapter, base units refers to fundamental si units that are not defined in terms of one another.">
+    <span>A unit for counting people, from the Latin word for head.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-626173652d756e6974732d332d74776f" id="devoirs3-selection-626173652d756e6974732d332d74776f-5" value="EAwxsys" data-devoirs3-option="" data-option-id="EAwxsys" data-feedback="This describes partial change, not base units. In this chapter, base units refers to fundamental si units that are not defined in terms of one another." data-feedback-html="This describes partial change, not base units. In this chapter, base units refers to fundamental si units that are not defined in terms of one another.">
+    <span>Change in a primary quantity with respect to one variable while other variables are held constant.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of base units. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">base-units-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<p>Two of the following are valid descriptions of capita. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"capita-3-two"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of capita. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> capita_3_two_choices,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="capita-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of capita. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6361706974612d332d74776f" id="devoirs3-selection-6361706974612d332d74776f-1" value="AAmzkud" data-devoirs3-option="" data-option-id="AAmzkud" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The unit of person-count used in quantitative descriptions of populations.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6361706974612d332d74776f" id="devoirs3-selection-6361706974612d332d74776f-2" value="BAefdcl" data-devoirs3-option="" data-option-id="BAefdcl" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The people-counting unit used in expressions such as per capita.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6361706974612d332d74776f" id="devoirs3-selection-6361706974612d332d74776f-3" value="CAzqyhz" data-devoirs3-option="" data-option-id="CAzqyhz" data-feedback="This describes derived units, not capita. In this chapter, capita refers to a unit for counting people, from the latin word for head." data-feedback-html="This describes derived units, not capita. In this chapter, capita refers to a unit for counting people, from the latin word for head.">
+    <span>Units formed by multiplying or dividing base units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6361706974612d332d74776f" id="devoirs3-selection-6361706974612d332d74776f-4" value="DAovvaw" data-devoirs3-option="" data-option-id="DAovvaw" data-feedback="This describes flavors of one, not capita. In this chapter, capita refers to a unit for counting people, from the latin word for head." data-feedback-html="This describes flavors of one, not capita. In this chapter, capita refers to a unit for counting people, from the latin word for head.">
+    <span>Dimensionless ratios formed by dividing two exactly equal quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6361706974612d332d74776f" id="devoirs3-selection-6361706974612d332d74776f-5" value="EAzhewu" data-devoirs3-option="" data-option-id="EAzhewu" data-feedback="This describes controlling for, not capita. In this chapter, capita refers to a unit for counting people, from the latin word for head." data-feedback-html="This describes controlling for, not capita. In this chapter, capita refers to a unit for counting people, from the latin word for head.">
+    <span>Accounting for other variables while examining a relationship of interest.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of capita. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">capita-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<p>Two of the following are valid descriptions of controlling for. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"controlling-for-3-two"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of controlling for. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> controlling_for_3_two_choices,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="controlling-for-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of controlling for. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f" id="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f-1" value="AArpqxs" data-devoirs3-option="" data-option-id="AArpqxs" data-feedback="This describes derived units, not controlling for. In this chapter, controlling for refers to accounting for other variables while examining a relationship of interest." data-feedback-html="This describes derived units, not controlling for. In this chapter, controlling for refers to accounting for other variables while examining a relationship of interest.">
+    <span>Units formed by multiplying or dividing base units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f" id="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f-2" value="BAoyiex" data-devoirs3-option="" data-option-id="BAoyiex" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A method for isolating one variable’s contribution by holding other influences constant.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f" id="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f-3" value="CAcmxgb" data-devoirs3-option="" data-option-id="CAcmxgb" data-feedback="This describes derived dimensions, not controlling for. In this chapter, controlling for refers to accounting for other variables while examining a relationship of interest." data-feedback-html="This describes derived dimensions, not controlling for. In this chapter, controlling for refers to accounting for other variables while examining a relationship of interest.">
+    <span>Dimensions formed by multiplying or dividing base dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f" id="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f-4" value="DAcpooo" data-devoirs3-option="" data-option-id="DAcpooo" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Considering one factor while statistically accounting for additional factors.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f" id="devoirs3-selection-636f6e74726f6c6c696e672d666f722d332d74776f-5" value="EAivlis" data-devoirs3-option="" data-option-id="EAivlis" data-feedback="This describes number line, not controlling for. In this chapter, controlling for refers to accounting for other variables while examining a relationship of interest." data-feedback-html="This describes number line, not controlling for. In this chapter, controlling for refers to accounting for other variables while examining a relationship of interest.">
+    <span>A one-dimensional line on which points represent values of a quantity.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of controlling for. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">controlling-for-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-6-tab">
+<p>Two of the following are valid descriptions of conversion factor. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"conversion-factor-3-two"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of conversion factor. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> conversion_factor_3_two_choices,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="conversion-factor-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of conversion factor. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f" id="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f-1" value="AAmbjzo" data-devoirs3-option="" data-option-id="AAmbjzo" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A dimensionless ratio of equal quantities used to convert between commensurate units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f" id="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f-2" value="BAgzwfv" data-devoirs3-option="" data-option-id="BAgzwfv" data-feedback="This describes derived dimensions, not conversion factor. In this chapter, conversion factor refers to a dimensionless ratio of equal quantities used to convert between commensurate units." data-feedback-html="This describes derived dimensions, not conversion factor. In this chapter, conversion factor refers to a dimensionless ratio of equal quantities used to convert between commensurate units.">
+    <span>Dimensions formed by multiplying or dividing base dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f" id="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f-3" value="CAjldoa" data-devoirs3-option="" data-option-id="CAjldoa" data-feedback="This describes flavors of one, not conversion factor. In this chapter, conversion factor refers to a dimensionless ratio of equal quantities used to convert between commensurate units." data-feedback-html="This describes flavors of one, not conversion factor. In this chapter, conversion factor refers to a dimensionless ratio of equal quantities used to convert between commensurate units.">
+    <span>Dimensionless ratios formed by dividing two exactly equal quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f" id="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f-4" value="DAtwwxk" data-devoirs3-option="" data-option-id="DAtwwxk" data-feedback="This describes number line, not conversion factor. In this chapter, conversion factor refers to a dimensionless ratio of equal quantities used to convert between commensurate units." data-feedback-html="This describes number line, not conversion factor. In this chapter, conversion factor refers to a dimensionless ratio of equal quantities used to convert between commensurate units.">
+    <span>A one-dimensional line on which points represent values of a quantity.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f" id="devoirs3-selection-636f6e76657273696f6e2d666163746f722d332d74776f-5" value="EAldtuj" data-devoirs3-option="" data-option-id="EAldtuj" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A multiplier such as meters per mile that cancels the starting unit and leaves the target unit.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of conversion factor. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">conversion-factor-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-7-tab">
+<p>Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"coordinate-plane-3-two"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> coordinate_plane_3_two_choices,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="coordinate-plane-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f" id="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f-1" value="AAimobe" data-devoirs3-option="" data-option-id="AAimobe" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A way to represent paired quantity values as points on two intersecting number lines.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f" id="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f-2" value="BAklsrw" data-devoirs3-option="" data-option-id="BAklsrw" data-feedback="This describes derived units, not coordinate plane. In this chapter, coordinate plane refers to a two-dimensional space marked by two perpendicular number lines." data-feedback-html="This describes derived units, not coordinate plane. In this chapter, coordinate plane refers to a two-dimensional space marked by two perpendicular number lines.">
+    <span>Units formed by multiplying or dividing base units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f" id="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f-3" value="CAmjbvq" data-devoirs3-option="" data-option-id="CAmjbvq" data-feedback="This describes dimensionless, not coordinate plane. In this chapter, coordinate plane refers to a two-dimensional space marked by two perpendicular number lines." data-feedback-html="This describes dimensionless, not coordinate plane. In this chapter, coordinate plane refers to a two-dimensional space marked by two perpendicular number lines.">
+    <span>Having the pure-number dimension, with no combination of base dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f" id="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f-4" value="DAuorec" data-devoirs3-option="" data-option-id="DAuorec" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A plane in which each point corresponds to a pair of coordinate values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f" id="devoirs3-selection-636f6f7264696e6174652d706c616e652d332d74776f-5" value="EAafaqv" data-devoirs3-option="" data-option-id="EAafaqv" data-feedback="This describes partial change, not coordinate plane. In this chapter, coordinate plane refers to a two-dimensional space marked by two perpendicular number lines." data-feedback-html="This describes partial change, not coordinate plane. In this chapter, coordinate plane refers to a two-dimensional space marked by two perpendicular number lines.">
+    <span>Change in a primary quantity with respect to one variable while other variables are held constant.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">coordinate-plane-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-8-tab">
+<p>Two of the following are valid descriptions of derived dimensions. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"derived-dimensions-3-two"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of derived dimensions. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> derived_dimensions_3_two_choices,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="derived-dimensions-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of derived dimensions. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f-1" value="AAslibw" data-devoirs3-option="" data-option-id="AAslibw" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The products or ratios of base dimensions associated with derived quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f-2" value="BAhvwpd" data-devoirs3-option="" data-option-id="BAhvwpd" data-feedback="This describes per, not derived dimensions. In this chapter, derived dimensions refers to dimensions formed by multiplying or dividing base dimensions." data-feedback-html="This describes per, not derived dimensions. In this chapter, derived dimensions refers to dimensions formed by multiplying or dividing base dimensions.">
+    <span>A word that signals division, with the following quantity in the denominator.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f-3" value="CAdroby" data-devoirs3-option="" data-option-id="CAdroby" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Combinations such as length divided by time that describe more complex quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f-4" value="DAaharm" data-devoirs3-option="" data-option-id="DAaharm" data-feedback="This describes pure number, not derived dimensions. In this chapter, derived dimensions refers to dimensions formed by multiplying or dividing base dimensions." data-feedback-html="This describes pure number, not derived dimensions. In this chapter, derived dimensions refers to dimensions formed by multiplying or dividing base dimensions.">
+    <span>A number with no unit designation, such as seven or pi.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f" id="devoirs3-selection-646572697665642d64696d656e73696f6e732d332d74776f-5" value="EAqhjmc" data-devoirs3-option="" data-option-id="EAqhjmc" data-feedback="This describes SI, not derived dimensions. In this chapter, derived dimensions refers to dimensions formed by multiplying or dividing base dimensions." data-feedback-html="This describes SI, not derived dimensions. In this chapter, derived dimensions refers to dimensions formed by multiplying or dividing base dimensions.">
+    <span>The International System of Units, the primary official system for defining units.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of derived dimensions. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">derived-dimensions-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-9-tab">
+<p>Two of the following are valid descriptions of derived units. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"derived-units-3-two"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of derived units. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> derived_units_3_two_choices,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="derived-units-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of derived units. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d756e6974732d332d74776f" id="devoirs3-selection-646572697665642d756e6974732d332d74776f-1" value="AAugaoh" data-devoirs3-option="" data-option-id="AAugaoh" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Units formed by multiplying or dividing base units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d756e6974732d332d74776f" id="devoirs3-selection-646572697665642d756e6974732d332d74776f-2" value="BArhezf" data-devoirs3-option="" data-option-id="BArhezf" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Units for quantities like area, force, or power, composed from foundational units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d756e6974732d332d74776f" id="devoirs3-selection-646572697665642d756e6974732d332d74776f-3" value="CAmgvnh" data-devoirs3-option="" data-option-id="CAmgvnh" data-feedback="This describes point, not derived units. In this chapter, derived units refers to units formed by multiplying or dividing base units." data-feedback-html="This describes point, not derived units. In this chapter, derived units refers to units formed by multiplying or dividing base units.">
+    <span>A location in a space that corresponds to one or more coordinate values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d756e6974732d332d74776f" id="devoirs3-selection-646572697665642d756e6974732d332d74776f-4" value="DAyhgls" data-devoirs3-option="" data-option-id="DAyhgls" data-feedback="This describes space, not derived units. In this chapter, derived units refers to units formed by multiplying or dividing base units." data-feedback-html="This describes space, not derived units. In this chapter, derived units refers to units formed by multiplying or dividing base units.">
+    <span>A collection of quantities whose values identify locations within it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-646572697665642d756e6974732d332d74776f" id="devoirs3-selection-646572697665642d756e6974732d332d74776f-5" value="EAsyyfw" data-devoirs3-option="" data-option-id="EAsyyfw" data-feedback="This describes number line, not derived units. In this chapter, derived units refers to units formed by multiplying or dividing base units." data-feedback-html="This describes number line, not derived units. In this chapter, derived units refers to units formed by multiplying or dividing base units.">
+    <span>A one-dimensional line on which points represent values of a quantity.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of derived units. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">derived-units-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-10-tab">
+<p>Two of the following are valid descriptions of dimensionless. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"dimensionless-3-two"</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of dimensionless. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> dimensionless_3_two_choices,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="dimensionless-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of dimensionless. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f" id="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f-1" value="AAnyiku" data-devoirs3-option="" data-option-id="AAnyiku" data-feedback="This describes space, not dimensionless. In this chapter, dimensionless refers to having the pure-number dimension, with no combination of base dimensions." data-feedback-html="This describes space, not dimensionless. In this chapter, dimensionless refers to having the pure-number dimension, with no combination of base dimensions.">
+    <span>A collection of quantities whose values identify locations within it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f" id="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f-2" value="BAokzhy" data-devoirs3-option="" data-option-id="BAokzhy" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A dimensional status shared by pure numbers and ratios of like dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f" id="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f-3" value="CApcjqj" data-devoirs3-option="" data-option-id="CApcjqj" data-feedback="This describes units, not dimensionless. In this chapter, dimensionless refers to having the pure-number dimension, with no combination of base dimensions." data-feedback-html="This describes units, not dimensionless. In this chapter, dimensionless refers to having the pure-number dimension, with no combination of base dimensions.">
+    <span>Standardized measures that specify how much of a quantity is present.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f" id="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f-4" value="DAgakaa" data-devoirs3-option="" data-option-id="DAgakaa" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Describes a ratio such as length divided by length, which has no dimension.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f" id="devoirs3-selection-64696d656e73696f6e6c6573732d332d74776f-5" value="EAvkfdv" data-devoirs3-option="" data-option-id="EAvkfdv" data-feedback="This describes flavors of one, not dimensionless. In this chapter, dimensionless refers to having the pure-number dimension, with no combination of base dimensions." data-feedback-html="This describes flavors of one, not dimensionless. In this chapter, dimensionless refers to having the pure-number dimension, with no combination of base dimensions.">
+    <span>Dimensionless ratios formed by dividing two exactly equal quantities.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of dimensionless. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dimensionless-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-11" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-11-tab">
+<p>Two of the following are valid descriptions of flavors of one. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"flavors-of-one-3-two"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of flavors of one. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> flavors_of_one_3_two_choices,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="flavors-of-one-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of flavors of one. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f" id="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f-1" value="AAyibxv" data-devoirs3-option="" data-option-id="AAyibxv" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Dimensionless ratios formed by dividing two exactly equal quantities.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f" id="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f-2" value="BAiuhre" data-devoirs3-option="" data-option-id="BAiuhre" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Quantities such as inches per meter that equal one because numerator and denominator represent the same length.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f" id="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f-3" value="CAwihbi" data-devoirs3-option="" data-option-id="CAwihbi" data-feedback="This describes SI, not flavors of one. In this chapter, flavors of one refers to dimensionless ratios formed by dividing two exactly equal quantities." data-feedback-html="This describes SI, not flavors of one. In this chapter, flavors of one refers to dimensionless ratios formed by dividing two exactly equal quantities.">
+    <span>The International System of Units, the primary official system for defining units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f" id="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f-4" value="DAquagq" data-devoirs3-option="" data-option-id="DAquagq" data-feedback="This describes point, not flavors of one. In this chapter, flavors of one refers to dimensionless ratios formed by dividing two exactly equal quantities." data-feedback-html="This describes point, not flavors of one. In this chapter, flavors of one refers to dimensionless ratios formed by dividing two exactly equal quantities.">
+    <span>A location in a space that corresponds to one or more coordinate values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f" id="devoirs3-selection-666c61766f72732d6f662d6f6e652d332d74776f-5" value="EAenafg" data-devoirs3-option="" data-option-id="EAenafg" data-feedback="This describes pure number, not flavors of one. In this chapter, flavors of one refers to dimensionless ratios formed by dividing two exactly equal quantities." data-feedback-html="This describes pure number, not flavors of one. In this chapter, flavors of one refers to dimensionless ratios formed by dividing two exactly equal quantities.">
+    <span>A number with no unit designation, such as seven or pi.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of flavors of one. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">flavors-of-one-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-12" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-12-tab">
+<p>Two of the following are valid descriptions of number line. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"number-line-3-two"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of number line. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> number_line_3_two_choices,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="number-line-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of number line. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756d6265722d6c696e652d332d74776f" id="devoirs3-selection-6e756d6265722d6c696e652d332d74776f-1" value="AAjwlgn" data-devoirs3-option="" data-option-id="AAjwlgn" data-feedback="This describes space, not number line. In this chapter, number line refers to a one-dimensional line on which points represent values of a quantity." data-feedback-html="This describes space, not number line. In this chapter, number line refers to a one-dimensional line on which points represent values of a quantity.">
+    <span>A collection of quantities whose values identify locations within it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756d6265722d6c696e652d332d74776f" id="devoirs3-selection-6e756d6265722d6c696e652d332d74776f-2" value="BAliewa" data-devoirs3-option="" data-option-id="BAliewa" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A geometric aid for reasoning about ordered values along one dimension.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756d6265722d6c696e652d332d74776f" id="devoirs3-selection-6e756d6265722d6c696e652d332d74776f-3" value="CAhsiaj" data-devoirs3-option="" data-option-id="CAhsiaj" data-feedback="This describes per, not number line. In this chapter, number line refers to a one-dimensional line on which points represent values of a quantity." data-feedback-html="This describes per, not number line. In this chapter, number line refers to a one-dimensional line on which points represent values of a quantity.">
+    <span>A word that signals division, with the following quantity in the denominator.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756d6265722d6c696e652d332d74776f" id="devoirs3-selection-6e756d6265722d6c696e652d332d74776f-4" value="DAajuga" data-devoirs3-option="" data-option-id="DAajuga" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A spatial representation of the admissible values for a single quantity.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756d6265722d6c696e652d332d74776f" id="devoirs3-selection-6e756d6265722d6c696e652d332d74776f-5" value="EAnianr" data-devoirs3-option="" data-option-id="EAnianr" data-feedback="This describes partial change, not number line. In this chapter, number line refers to a one-dimensional line on which points represent values of a quantity." data-feedback-html="This describes partial change, not number line. In this chapter, number line refers to a one-dimensional line on which points represent values of a quantity.">
+    <span>Change in a primary quantity with respect to one variable while other variables are held constant.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of number line. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">number-line-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-13" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-13-tab">
+<p>Two of the following are valid descriptions of partial change. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"partial-change-3-two"</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of partial change. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> partial_change_3_two_choices,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="partial-change-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of partial change. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f" id="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f-1" value="AAimweh" data-devoirs3-option="" data-option-id="AAimweh" data-feedback="This describes with respect to, not partial change. In this chapter, partial change refers to change in a primary quantity with respect to one variable while other variables are held constant." data-feedback-html="This describes with respect to, not partial change. In this chapter, partial change refers to change in a primary quantity with respect to one variable while other variables are held constant.">
+    <span>A phrase identifying the context-setting quantity against which a change is examined.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f" id="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f-2" value="BAnxioe" data-devoirs3-option="" data-option-id="BAnxioe" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>One component of total change, attributed to one context variable under constant conditions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f" id="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f-3" value="CAgefmu" data-devoirs3-option="" data-option-id="CAgefmu" data-feedback="This describes space, not partial change. In this chapter, partial change refers to change in a primary quantity with respect to one variable while other variables are held constant." data-feedback-html="This describes space, not partial change. In this chapter, partial change refers to change in a primary quantity with respect to one variable while other variables are held constant.">
+    <span>A collection of quantities whose values identify locations within it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f" id="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f-4" value="DAcictx" data-devoirs3-option="" data-option-id="DAcictx" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The contribution to overall change associated with varying one context-setting quantity at a time.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f" id="devoirs3-selection-7061727469616c2d6368616e67652d332d74776f-5" value="EAqbyfm" data-devoirs3-option="" data-option-id="EAqbyfm" data-feedback="This describes per, not partial change. In this chapter, partial change refers to change in a primary quantity with respect to one variable while other variables are held constant." data-feedback-html="This describes per, not partial change. In this chapter, partial change refers to change in a primary quantity with respect to one variable while other variables are held constant.">
+    <span>A word that signals division, with the following quantity in the denominator.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of partial change. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">partial-change-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-14" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-14-tab">
+<p>Two of the following are valid descriptions of per. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"per-3-two"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of per. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> per_3_two_choices,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="per-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of per. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7065722d332d74776f" id="devoirs3-selection-7065722d332d74776f-1" value="AAxialw" data-devoirs3-option="" data-option-id="AAxialw" data-feedback="This describes space, not per. In this chapter, per refers to a word that signals division, with the following quantity in the denominator." data-feedback-html="This describes space, not per. In this chapter, per refers to a word that signals division, with the following quantity in the denominator.">
+    <span>A collection of quantities whose values identify locations within it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7065722d332d74776f" id="devoirs3-selection-7065722d332d74776f-2" value="BAkbdky" data-devoirs3-option="" data-option-id="BAkbdky" data-feedback="This describes point, not per. In this chapter, per refers to a word that signals division, with the following quantity in the denominator." data-feedback-html="This describes point, not per. In this chapter, per refers to a word that signals division, with the following quantity in the denominator.">
+    <span>A location in a space that corresponds to one or more coordinate values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7065722d332d74776f" id="devoirs3-selection-7065722d332d74776f-3" value="CAoaovg" data-devoirs3-option="" data-option-id="CAoaovg" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A word that signals division, with the following quantity in the denominator.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7065722d332d74776f" id="devoirs3-selection-7065722d332d74776f-4" value="DAaxzpt" data-devoirs3-option="" data-option-id="DAaxzpt" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A technical marker meaning divided by in units and rates.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7065722d332d74776f" id="devoirs3-selection-7065722d332d74776f-5" value="EArejax" data-devoirs3-option="" data-option-id="EArejax" data-feedback="This describes units, not per. In this chapter, per refers to a word that signals division, with the following quantity in the denominator." data-feedback-html="This describes units, not per. In this chapter, per refers to a word that signals division, with the following quantity in the denominator.">
+    <span>Standardized measures that specify how much of a quantity is present.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of per. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">per-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-15" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-15-tab">
+<p>Two of the following are valid descriptions of point. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"point-3-two"</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of point. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> point_3_two_choices,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="point-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of point. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-706f696e742d332d74776f" id="devoirs3-selection-706f696e742d332d74776f-1" value="AAexrbc" data-devoirs3-option="" data-option-id="AAexrbc" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A spatial marker for a particular value or tuple of values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-706f696e742d332d74776f" id="devoirs3-selection-706f696e742d332d74776f-2" value="BAyjvob" data-devoirs3-option="" data-option-id="BAyjvob" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A position on a number line representing one value of a quantity.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-706f696e742d332d74776f" id="devoirs3-selection-706f696e742d332d74776f-3" value="CAqsrea" data-devoirs3-option="" data-option-id="CAqsrea" data-feedback="This describes quantity, not point. In this chapter, point refers to a location in a space that corresponds to one or more coordinate values." data-feedback-html="This describes quantity, not point. In this chapter, point refers to a location in a space that corresponds to one or more coordinate values.">
+    <span>A standardized measure consisting of a pure number and a unit, optionally with a descriptor.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-706f696e742d332d74776f" id="devoirs3-selection-706f696e742d332d74776f-4" value="DAforuf" data-devoirs3-option="" data-option-id="DAforuf" data-feedback="This describes worth, not point. In this chapter, point refers to a location in a space that corresponds to one or more coordinate values." data-feedback-html="This describes worth, not point. In this chapter, point refers to a location in a space that corresponds to one or more coordinate values.">
+    <span>A base dimension used for monetary value, whose meaning depends on place and time.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-706f696e742d332d74776f" id="devoirs3-selection-706f696e742d332d74776f-5" value="EAntbnv" data-devoirs3-option="" data-option-id="EAntbnv" data-feedback="This describes units, not point. In this chapter, point refers to a location in a space that corresponds to one or more coordinate values." data-feedback-html="This describes units, not point. In this chapter, point refers to a location in a space that corresponds to one or more coordinate values.">
+    <span>Standardized measures that specify how much of a quantity is present.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of point. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">point-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-16" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-16-tab">
+<p>Two of the following are valid descriptions of pure number. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"pure-number-3-two"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of pure number. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> pure_number_3_two_choices,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="pure-number-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of pure number. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-707572652d6e756d6265722d332d74776f" id="devoirs3-selection-707572652d6e756d6265722d332d74776f-1" value="AAgjlfb" data-devoirs3-option="" data-option-id="AAgjlfb" data-feedback="This describes quantity, not pure number. In this chapter, pure number refers to a number with no unit designation, such as seven or pi." data-feedback-html="This describes quantity, not pure number. In this chapter, pure number refers to a number with no unit designation, such as seven or pi.">
+    <span>A standardized measure consisting of a pure number and a unit, optionally with a descriptor.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-707572652d6e756d6265722d332d74776f" id="devoirs3-selection-707572652d6e756d6265722d332d74776f-2" value="BAtwwwg" data-devoirs3-option="" data-option-id="BAtwwwg" data-feedback="This describes rate, not pure number. In this chapter, pure number refers to a number with no unit designation, such as seven or pi." data-feedback-html="This describes rate, not pure number. In this chapter, pure number refers to a number with no unit designation, such as seven or pi.">
+    <span>A ratio of two quantities where division expresses a relationship between their underlying dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-707572652d6e756d6265722d332d74776f" id="devoirs3-selection-707572652d6e756d6265722d332d74776f-3" value="CAizulw" data-devoirs3-option="" data-option-id="CAizulw" data-feedback="This describes logarithm, not pure number. In this chapter, pure number refers to a number with no unit designation, such as seven or pi." data-feedback-html="This describes logarithm, not pure number. In this chapter, pure number refers to a number with no unit designation, such as seven or pi.">
+    <span>A number format that condenses scientific notation into a single magnitude value.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-707572652d6e756d6265722d332d74776f" id="devoirs3-selection-707572652d6e756d6265722d332d74776f-4" value="DAoiuvk" data-devoirs3-option="" data-option-id="DAoiuvk" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A dimensionless number used as the numeric part of a quantity.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-707572652d6e756d6265722d332d74776f" id="devoirs3-selection-707572652d6e756d6265722d332d74776f-5" value="EAcstig" data-devoirs3-option="" data-option-id="EAcstig" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A numerical value considered without a unit such as meters or seconds.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of pure number. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">pure-number-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-17" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-17-tab">
+<p>Two of the following are valid descriptions of quantity. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"quantity-3-two"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of quantity. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> quantity_3_two_choices,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="quantity-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of quantity. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7175616e746974792d332d74776f" id="devoirs3-selection-7175616e746974792d332d74776f-1" value="AAdewuc" data-devoirs3-option="" data-option-id="AAdewuc" data-feedback="This describes with respect to, not quantity. In this chapter, quantity refers to a standardized measure consisting of a pure number and a unit, optionally with a descriptor." data-feedback-html="This describes with respect to, not quantity. In this chapter, quantity refers to a standardized measure consisting of a pure number and a unit, optionally with a descriptor.">
+    <span>A phrase identifying the context-setting quantity against which a change is examined.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7175616e746974792d332d74776f" id="devoirs3-selection-7175616e746974792d332d74776f-2" value="BApnwnh" data-devoirs3-option="" data-option-id="BApnwnh" data-feedback="This describes space, not quantity. In this chapter, quantity refers to a standardized measure consisting of a pure number and a unit, optionally with a descriptor." data-feedback-html="This describes space, not quantity. In this chapter, quantity refers to a standardized measure consisting of a pure number and a unit, optionally with a descriptor.">
+    <span>A collection of quantities whose values identify locations within it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7175616e746974792d332d74776f" id="devoirs3-selection-7175616e746974792d332d74776f-3" value="CAahpeo" data-devoirs3-option="" data-option-id="CAahpeo" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A standardized measure consisting of a pure number and a unit, optionally with a descriptor.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7175616e746974792d332d74776f" id="devoirs3-selection-7175616e746974792d332d74776f-4" value="DAzatuo" data-devoirs3-option="" data-option-id="DAzatuo" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A measurable amount expressed with a numerical value and an appropriate unit.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-7175616e746974792d332d74776f" id="devoirs3-selection-7175616e746974792d332d74776f-5" value="EArprdl" data-devoirs3-option="" data-option-id="EArprdl" data-feedback="This describes units, not quantity. In this chapter, quantity refers to a standardized measure consisting of a pure number and a unit, optionally with a descriptor." data-feedback-html="This describes units, not quantity. In this chapter, quantity refers to a standardized measure consisting of a pure number and a unit, optionally with a descriptor.">
+    <span>Standardized measures that specify how much of a quantity is present.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of quantity. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">quantity-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-18" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-18-tab">
+<p>Two of the following are valid descriptions of SI. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"si-3-two"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of SI. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> si_3_two_choices,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="si-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of SI. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73692d332d74776f" id="devoirs3-selection-73692d332d74776f-1" value="AAmvvpw" data-devoirs3-option="" data-option-id="AAmvvpw" data-feedback="This describes logarithm, not SI. In this chapter, SI refers to the international system of units, the primary official system for defining units." data-feedback-html="This describes logarithm, not SI. In this chapter, SI refers to the international system of units, the primary official system for defining units.">
+    <span>A number format that condenses scientific notation into a single magnitude value.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73692d332d74776f" id="devoirs3-selection-73692d332d74776f-2" value="BAgfniw" data-devoirs3-option="" data-option-id="BAgfniw" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The unit system built from seven base units and many derived units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73692d332d74776f" id="devoirs3-selection-73692d332d74776f-3" value="CAizadv" data-devoirs3-option="" data-option-id="CAizadv" data-feedback="This describes compound rates, not SI. In this chapter, SI refers to the international system of units, the primary official system for defining units." data-feedback-html="This describes compound rates, not SI. In this chapter, SI refers to the international system of units, the primary official system for defining units.">
+    <span>Rates formed by arithmetic combinations of other rates.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73692d332d74776f" id="devoirs3-selection-73692d332d74776f-4" value="DArouir" data-devoirs3-option="" data-option-id="DArouir" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The Système international d’unités used as the main reference for scientific units.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73692d332d74776f" id="devoirs3-selection-73692d332d74776f-5" value="EAnmxgb" data-devoirs3-option="" data-option-id="EAnmxgb" data-feedback="This describes units, not SI. In this chapter, SI refers to the international system of units, the primary official system for defining units." data-feedback-html="This describes units, not SI. In this chapter, SI refers to the international system of units, the primary official system for defining units.">
+    <span>Standardized measures that specify how much of a quantity is present.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of SI. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">si-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-19" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-19-tab">
+<p>Two of the following are valid descriptions of space. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"space-3-two"</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of space. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> space_3_two_choices,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="space-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of space. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73706163652d332d74776f" id="devoirs3-selection-73706163652d332d74776f-1" value="AAfbijo" data-devoirs3-option="" data-option-id="AAfbijo" data-feedback="This describes with respect to, not space. In this chapter, space refers to a collection of quantities whose values identify locations within it." data-feedback-html="This describes with respect to, not space. In this chapter, space refers to a collection of quantities whose values identify locations within it.">
+    <span>A phrase identifying the context-setting quantity against which a change is examined.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73706163652d332d74776f" id="devoirs3-selection-73706163652d332d74776f-2" value="BApvdmc" data-devoirs3-option="" data-option-id="BApvdmc" data-feedback="This describes worth, not space. In this chapter, space refers to a collection of quantities whose values identify locations within it." data-feedback-html="This describes worth, not space. In this chapter, space refers to a collection of quantities whose values identify locations within it.">
+    <span>A base dimension used for monetary value, whose meaning depends on place and time.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73706163652d332d74776f" id="devoirs3-selection-73706163652d332d74776f-3" value="CAumpqt" data-devoirs3-option="" data-option-id="CAumpqt" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A mathematical setting where locations represent combinations of values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73706163652d332d74776f" id="devoirs3-selection-73706163652d332d74776f-4" value="DAsoieh" data-devoirs3-option="" data-option-id="DAsoieh" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A multidimensional representation in which each point corresponds to a set of quantity values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-73706163652d332d74776f" id="devoirs3-selection-73706163652d332d74776f-5" value="EAfyddp" data-devoirs3-option="" data-option-id="EAfyddp" data-feedback="This describes order of magnitude, not space. In this chapter, space refers to a collection of quantities whose values identify locations within it." data-feedback-html="This describes order of magnitude, not space. In this chapter, space refers to a collection of quantities whose values identify locations within it.">
+    <span>A factor-of-ten scale used to describe how much larger or smaller one number is than another.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of space. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">space-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-20" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-20-tab">
+<p>Two of the following are valid descriptions of units. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"units-3-two"</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of units. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> units_3_two_choices,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="units-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of units. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-756e6974732d332d74776f" id="devoirs3-selection-756e6974732d332d74776f-1" value="AAmuejp" data-devoirs3-option="" data-option-id="AAmuejp" data-feedback="This describes scientific notation, not units. In this chapter, units refers to standardized measures that specify how much of a quantity is present." data-feedback-html="This describes scientific notation, not units. In this chapter, units refers to standardized measures that specify how much of a quantity is present.">
+    <span>A number format that expresses a value as a mantissa multiplied by a power of ten.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-756e6974732d332d74776f" id="devoirs3-selection-756e6974732d332d74776f-2" value="BAoqena" data-devoirs3-option="" data-option-id="BAoqena" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Named measures that make the numerical part of a quantity interpretable.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-756e6974732d332d74776f" id="devoirs3-selection-756e6974732d332d74776f-3" value="CAwazuq" data-devoirs3-option="" data-option-id="CAwazuq" data-feedback="This describes order of magnitude, not units. In this chapter, units refers to standardized measures that specify how much of a quantity is present." data-feedback-html="This describes order of magnitude, not units. In this chapter, units refers to standardized measures that specify how much of a quantity is present.">
+    <span>A factor-of-ten scale used to describe how much larger or smaller one number is than another.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-756e6974732d332d74776f" id="devoirs3-selection-756e6974732d332d74776f-4" value="DAioxud" data-devoirs3-option="" data-option-id="DAioxud" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The measurement component that distinguishes five meters from five seconds.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-756e6974732d332d74776f" id="devoirs3-selection-756e6974732d332d74776f-5" value="EAlbtsj" data-devoirs3-option="" data-option-id="EAlbtsj" data-feedback="This describes sorting, not units. In this chapter, units refers to standardized measures that specify how much of a quantity is present." data-feedback-html="This describes sorting, not units. In this chapter, units refers to standardized measures that specify how much of a quantity is present.">
+    <span>Arranging values in order so their relative sizes are easier to compare.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of units. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">units-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-21" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-21-tab">
+<p>Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"with-respect-to-3-two"</span>,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> with_respect_to_3_two_choices,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="with-respect-to-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776974682d726573706563742d746f2d332d74776f" id="devoirs3-selection-776974682d726573706563742d746f2d332d74776f-1" value="AAdreuv" data-devoirs3-option="" data-option-id="AAdreuv" data-feedback="This describes rate, not with respect to. In this chapter, with respect to refers to a phrase identifying the context-setting quantity against which a change is examined." data-feedback-html="This describes rate, not with respect to. In this chapter, with respect to refers to a phrase identifying the context-setting quantity against which a change is examined.">
+    <span>A ratio of two quantities where division expresses a relationship between their underlying dimensions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776974682d726573706563742d746f2d332d74776f" id="devoirs3-selection-776974682d726573706563742d746f2d332d74776f-2" value="BApqnzg" data-devoirs3-option="" data-option-id="BApqnzg" data-feedback="This describes worth, not with respect to. In this chapter, with respect to refers to a phrase identifying the context-setting quantity against which a change is examined." data-feedback-html="This describes worth, not with respect to. In this chapter, with respect to refers to a phrase identifying the context-setting quantity against which a change is examined.">
+    <span>A base dimension used for monetary value, whose meaning depends on place and time.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776974682d726573706563742d746f2d332d74776f" id="devoirs3-selection-776974682d726573706563742d746f2d332d74776f-3" value="CAhemwh" data-devoirs3-option="" data-option-id="CAhemwh" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A phrase such as with respect to time that identifies the second quantity in a change relationship.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776974682d726573706563742d746f2d332d74776f" id="devoirs3-selection-776974682d726573706563742d746f2d332d74776f-4" value="DAbulgo" data-devoirs3-option="" data-option-id="DAbulgo" data-feedback="This describes scientific notation, not with respect to. In this chapter, with respect to refers to a phrase identifying the context-setting quantity against which a change is examined." data-feedback-html="This describes scientific notation, not with respect to. In this chapter, with respect to refers to a phrase identifying the context-setting quantity against which a change is examined.">
+    <span>A number format that expresses a value as a mantissa multiplied by a power of ten.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776974682d726573706563742d746f2d332d74776f" id="devoirs3-selection-776974682d726573706563742d746f2d332d74776f-5" value="EAiwaun" data-devoirs3-option="" data-option-id="EAiwaun" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A phrase identifying the context-setting quantity against which a change is examined.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">with-respect-to-3-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-4-22" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-22-tab">
+<p>Two of the following are valid descriptions of worth. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"worth-3-two"</span>,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of worth. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> worth_3_two_choices,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-03" data-label="worth-3-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of worth. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776f7274682d332d74776f" id="devoirs3-selection-776f7274682d332d74776f-1" value="AAiovta" data-devoirs3-option="" data-option-id="AAiovta" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A measure of monetary value, often operationalized with currency and adjustments for inflation or place.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776f7274682d332d74776f" id="devoirs3-selection-776f7274682d332d74776f-2" value="BAmndzg" data-devoirs3-option="" data-option-id="BAmndzg" data-feedback="This describes logarithm, not worth. In this chapter, worth refers to a base dimension used for monetary value, whose meaning depends on place and time." data-feedback-html="This describes logarithm, not worth. In this chapter, worth refers to a base dimension used for monetary value, whose meaning depends on place and time.">
+    <span>A number format that condenses scientific notation into a single magnitude value.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776f7274682d332d74776f" id="devoirs3-selection-776f7274682d332d74776f-3" value="CAaqkoh" data-devoirs3-option="" data-option-id="CAaqkoh" data-feedback="This describes magnitude, not worth. In this chapter, worth refers to a base dimension used for monetary value, whose meaning depends on place and time." data-feedback-html="This describes magnitude, not worth. In this chapter, worth refers to a base dimension used for monetary value, whose meaning depends on place and time.">
+    <span>A measure of the size of a number, closely related to its exponent in scientific notation.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776f7274682d332d74776f" id="devoirs3-selection-776f7274682d332d74776f-4" value="DAcyeka" data-devoirs3-option="" data-option-id="DAcyeka" data-feedback="This describes order of magnitude, not worth. In this chapter, worth refers to a base dimension used for monetary value, whose meaning depends on place and time." data-feedback-html="This describes order of magnitude, not worth. In this chapter, worth refers to a base dimension used for monetary value, whose meaning depends on place and time.">
+    <span>A factor-of-ten scale used to describe how much larger or smaller one number is than another.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-776f7274682d332d74776f" id="devoirs3-selection-776f7274682d332d74776f-5" value="EArioaf" data-devoirs3-option="" data-option-id="EArioaf" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A base dimension used for monetary value, whose meaning depends on place and time.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of worth. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">worth-3-two</span>
+</fieldset>
+</div>
+</div>
 </div>
 </div>
 </div>

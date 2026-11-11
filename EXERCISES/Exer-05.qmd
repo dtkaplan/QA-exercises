@@ -7,7 +7,7 @@ subtitle: "Chapter 5 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-05")`
+`r devoirs3::devoirs_start("QA-exer-05", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -72,4 +72,32 @@ include ../Chap-05/goldfish-cost-bed.qmd
 
 :::
 
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Logarithm
+
+{{< include ../Chap-05/logarithm-one.qmd >}}
+
+## Magnitude
+
+{{< include ../Chap-05/magnitude-one.qmd >}}
+
+## Order of magnitude
+
+{{< include ../Chap-05/order-of-magnitude-one.qmd >}}
+
+## Scientific notation
+
+{{< include ../Chap-05/scientific-notation-one.qmd >}}
+
+## Sorting
+
+{{< include ../Chap-05/sorting-one.qmd >}}
+
+:::
+::::
 

@@ -1,0 +1,32 @@
+
+```{devoirs_choices derived_units_3_two_choices}
+- Units formed by multiplying or dividing base units.:
+    correct: true
+    feedback: Correct.
+- Units for quantities like area, force, or power, composed from foundational units.:
+    correct: true
+    feedback: Correct.
+- A location in a space that corresponds to one or more coordinate values.:
+    correct: false
+    feedback: This describes point, not derived units. In this chapter, derived units
+      refers to units formed by multiplying or dividing base units.
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not derived units. In this chapter, derived units
+      refers to units formed by multiplying or dividing base units.
+- A one-dimensional line on which points represent values of a quantity.:
+    correct: false
+    feedback: This describes number line, not derived units. In this chapter, derived
+      units refers to units formed by multiplying or dividing base units.
+```
+
+Two of the following are valid descriptions of derived units. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "derived-units-3-two",
+  question = "Two of the following are valid descriptions of derived units. The other three are not. Mark both of the VALID descriptions.",
+  answers = derived_units_3_two_choices,
+  multiple = TRUE
+)()
+```

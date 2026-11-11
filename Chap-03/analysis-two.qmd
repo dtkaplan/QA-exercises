@@ -1,0 +1,32 @@
+
+```{devoirs_choices analysis_3_two_choices}
+- A dimensionless ratio of equal quantities used to convert between commensurate units.:
+    correct: false
+    feedback: This describes conversion factor, not analysis. In this chapter, analysis
+      refers to examining a system by breaking it into contributing components.
+- A process of separating a complex situation into parts to understand their contributions.:
+    correct: true
+    feedback: Correct.
+- Examining a system by breaking it into contributing components.:
+    correct: true
+    feedback: Correct.
+- A two-dimensional space marked by two perpendicular number lines.:
+    correct: false
+    feedback: This describes coordinate plane, not analysis. In this chapter, analysis
+      refers to examining a system by breaking it into contributing components.
+- Accounting for other variables while examining a relationship of interest.:
+    correct: false
+    feedback: This describes controlling for, not analysis. In this chapter, analysis
+      refers to examining a system by breaking it into contributing components.
+```
+
+Two of the following are valid descriptions of analysis. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "analysis-3-two",
+  question = "Two of the following are valid descriptions of analysis. The other three are not. Mark both of the VALID descriptions.",
+  answers = analysis_3_two_choices,
+  multiple = TRUE
+)()
+```

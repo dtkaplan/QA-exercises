@@ -1,0 +1,28 @@
+
+```{devoirs_choices differentiation_14_one_choices}
+- The function produced by differentiating an original function.:
+    correct: false
+    feedback: That is the derivative; differentiation is the process of calculating
+      it.
+- The act of sorting data into distinct categories.:
+    correct: false
+    feedback: Differentiation in this chapter is a mathematical operation on functions,
+      not data classification.
+- A field of mathematics devoted only to arithmetic with constants.:
+    correct: false
+    feedback: Differentiation operates on functions and is a central process in calculus.
+- The operation that derives a function describing local output change per input change.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of differentiation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "differentiation-14-one",
+  question = "Only one of the following is a valid description of differentiation. Mark that one.",
+  answers = differentiation_14_one_choices,
+  multiple = FALSE
+)()
+```

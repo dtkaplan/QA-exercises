@@ -1,0 +1,30 @@
+
+```{devoirs_choices plane_16_two_choices}
+- A probability distribution over two input quantities.:
+    correct: false
+    feedback: A distribution assigns relative probabilities; a plane is a geometric
+      object.
+- A three-dimensional solid that fills all space around it.:
+    correct: false
+    feedback: A plane is a two-dimensional surface, not a three-dimensional volume.
+- A flat geometric space that may sit inside a higher-dimensional space.:
+    correct: true
+    feedback: Correct.
+- A geometric surface that contains directions and can be viewed edge-on as a line.:
+    correct: true
+    feedback: Correct.
+- A curved surface whose shape changes at every point.:
+    correct: false
+    feedback: A plane is flat; a curved surface is not a plane.
+```
+
+Two of the following are valid descriptions of plane. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "plane-16-two",
+  question = "Two of the following are valid descriptions of plane. The other three are not. Mark both of the VALID descriptions.",
+  answers = plane_16_two_choices,
+  multiple = TRUE
+)()
+```

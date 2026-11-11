@@ -1,0 +1,35 @@
+
+```{devoirs_choices with_respect_to_3_two_choices}
+- A ratio of two quantities where division expresses a relationship between their underlying dimensions.:
+    correct: false
+    feedback: This describes rate, not with respect to. In this chapter, with respect
+      to refers to a phrase identifying the context-setting quantity against which
+      a change is examined.
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: false
+    feedback: This describes worth, not with respect to. In this chapter, with respect
+      to refers to a phrase identifying the context-setting quantity against which
+      a change is examined.
+- A phrase such as with respect to time that identifies the second quantity in a change relationship.:
+    correct: true
+    feedback: Correct.
+- A number format that expresses a value as a mantissa multiplied by a power of ten.:
+    correct: false
+    feedback: This describes scientific notation, not with respect to. In this chapter,
+      with respect to refers to a phrase identifying the context-setting quantity
+      against which a change is examined.
+- A phrase identifying the context-setting quantity against which a change is examined.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "with-respect-to-3-two",
+  question = "Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions.",
+  answers = with_respect_to_3_two_choices,
+  multiple = TRUE
+)()
+```

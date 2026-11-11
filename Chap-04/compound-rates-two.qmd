@@ -1,0 +1,32 @@
+
+```{devoirs_choices compound_rates_4_two_choices}
+- The change in a primary quantity divided by the corresponding change in a context-setting quantity.:
+    correct: false
+    feedback: This describes rate of change, not compound rates. In this chapter,
+      compound rates refers to rates formed by arithmetic combinations of other rates.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not compound rates. In this chapter,
+      compound rates refers to rates formed by arithmetic combinations of other rates.
+- A quantity created by combining rates, whose interpretation depends on the order of operations.:
+    correct: true
+    feedback: Correct.
+- A rate with multiple divisions, such as calories per mile per pound.:
+    correct: true
+    feedback: Correct.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not compound rates. In this chapter, compound
+      rates refers to rates formed by arithmetic combinations of other rates.
+```
+
+Two of the following are valid descriptions of compound rates. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "compound-rates-4-two",
+  question = "Two of the following are valid descriptions of compound rates. The other three are not. Mark both of the VALID descriptions.",
+  answers = compound_rates_4_two_choices,
+  multiple = TRUE
+)()
+```

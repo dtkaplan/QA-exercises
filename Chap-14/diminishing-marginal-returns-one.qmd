@@ -1,0 +1,29 @@
+
+```{devoirs_choices diminishing_marginal_returns_14_one_choices}
+- A situation where the first purchase provides less benefit than later optional additions.:
+    correct: false
+    feedback: The chapter contrasts a strong initial benefit with smaller marginal
+      benefits from added options.
+- A falling return on additional investment as more resources are committed.:
+    correct: true
+    feedback: Correct.
+- A decrease in the total benefit even when no additional input is supplied.:
+    correct: false
+    feedback: The term concerns the return from an added input, not simply a decrease
+      in total benefit.
+- A situation where increasing one objective improves every competing objective.:
+    correct: false
+    feedback: That is a win-win improvement; diminishing returns concerns reduced
+      benefit from additional input.
+```
+
+Only one of the following is a valid description of diminishing marginal returns. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "diminishing-marginal-returns-14-one",
+  question = "Only one of the following is a valid description of diminishing marginal returns. Mark that one.",
+  answers = diminishing_marginal_returns_14_one_choices,
+  multiple = FALSE
+)()
+```

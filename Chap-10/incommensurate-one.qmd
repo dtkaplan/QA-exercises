@@ -1,0 +1,29 @@
+
+```{devoirs_choices incommensurate_10_one_choices}
+- A condition in which an objective function has no possible inputs.:
+    correct: false
+    feedback: An empty input domain is unrelated; incommensurate describes outputs
+      with different units.
+- Not expressed on a common scale, so values cannot be meaningfully combined by addition.:
+    correct: true
+    feedback: Correct.
+- A guarantee that two quantities are equal in magnitude.:
+    correct: false
+    feedback: Incommensurate outputs cannot be directly compared by magnitude because
+      they use different dimensions.
+- A strategy for choosing the most likely hypothesis.:
+    correct: false
+    feedback: That is model comparison; incommensurate describes objectives that lack
+      a shared measurement scale.
+```
+
+Only one of the following is a valid description of incommensurate. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "incommensurate-10-one",
+  question = "Only one of the following is a valid description of incommensurate. Mark that one.",
+  answers = incommensurate_10_one_choices,
+  multiple = FALSE
+)()
+```

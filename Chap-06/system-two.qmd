@@ -1,0 +1,36 @@
+```{devoirs_choices system_6_two_choices}
+- A structure in which relationships among elements can be represented and modeled.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+- ? |
+    A random collection of unrelated elements with no connections among them.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? The chapter defines a system as organized and interconnected, not as unrelated elements.
+- ? |
+    The name assigned to one of the inputs in a function.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? That is an arg. A system is a framework of interconnected elements.
+- A framework or organized structure made up of interconnected elements.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+- ? |
+    A single output quantity with no other dimensions or relationships.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? A system is an organized framework of interconnected elements, not merely one isolated output.
+```
+
+Two of the following are valid descriptions of system . The other three are not. Mark all three of the INVALID descriptions.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "system-6-two",
+  question = "Two of the following are valid descriptions of system . The other three are not. Mark all three of the INVALID descriptions.",
+  answers = system_6_two_choices,
+  multiple = TRUE
+)()
+```
+

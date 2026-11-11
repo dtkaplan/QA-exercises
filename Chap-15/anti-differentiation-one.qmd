@@ -1,0 +1,29 @@
+
+```{devoirs_choices anti_differentiation_15_one_choices}
+- A method that changes a function's input units but leaves its output unchanged.:
+    correct: false
+    feedback: Unit conversion is different; anti-differentiation reconstructs a function
+      from its derivative.
+- A method for finding the maximum output of a function.:
+    correct: false
+    feedback: That is optimization; anti-differentiation reconstructs a function from
+      its derivative.
+- A distribution family used to represent uncertainty in event timing.:
+    correct: false
+    feedback: That is an exponential distribution; anti-differentiation is a function
+      operation.
+- A way to reconstruct a function from its rate of change by accumulating marginal changes.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of anti-differentiation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "anti-differentiation-15-one",
+  question = "Only one of the following is a valid description of anti-differentiation. Mark that one.",
+  answers = anti_differentiation_15_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,31 @@
+
+```{devoirs_choices prior_12_two_choices}
+- A distribution that expresses what is believed about possible values before the experiment's evidence.:
+    correct: true
+    feedback: Correct.
+- The likelihood score assigned to an observation under a hypothesis.:
+    correct: false
+    feedback: That is a likelihood, which is combined with the prior to form the posterior.
+- A probability distribution encoding initial beliefs or knowledge in Bayesian analysis.:
+    correct: true
+    feedback: Correct.
+- A fixed parameter that cannot be revised during analysis.:
+    correct: false
+    feedback: Bayesian updating combines the prior with likelihoods to produce a posterior
+      state of knowledge.
+- A random sample drawn from a probability model.:
+    correct: false
+    feedback: A sample is an outcome; a prior is a distribution describing before-data
+      knowledge.
+```
+
+Two of the following are valid descriptions of prior. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "prior-12-two",
+  question = "Two of the following are valid descriptions of prior. The other three are not. Mark both of the VALID descriptions.",
+  answers = prior_12_two_choices,
+  multiple = TRUE
+)()
+```

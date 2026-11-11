@@ -1,0 +1,31 @@
+
+```{devoirs_choices diminishing_marginal_returns_14_two_choices}
+- The decline in benefit gained from each marginal increment of expenditure or effort.:
+    correct: true
+    feedback: Correct.
+- A situation where increasing one objective improves every competing objective.:
+    correct: false
+    feedback: That is a win-win improvement; diminishing returns concerns reduced
+      benefit from additional input.
+- A pattern where each additional input produces a smaller benefit relative to its added cost.:
+    correct: true
+    feedback: Correct.
+- The rate at which a function's output changes at one input.:
+    correct: false
+    feedback: That is a marginal rate of change; diminishing returns describes how
+      marginal benefit declines.
+- A guarantee that each extra dollar produces exactly the same benefit as the previous dollar.:
+    correct: false
+    feedback: Diminishing returns means the marginal benefit declines as more is added.
+```
+
+Two of the following are valid descriptions of diminishing marginal returns. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "diminishing-marginal-returns-14-two",
+  question = "Two of the following are valid descriptions of diminishing marginal returns. The other three are not. Mark both of the VALID descriptions.",
+  answers = diminishing_marginal_returns_14_two_choices,
+  multiple = TRUE
+)()
+```

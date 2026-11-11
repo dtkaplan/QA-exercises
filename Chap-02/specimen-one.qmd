@@ -1,0 +1,29 @@
+
+```{devoirs_choices specimen_2_one_choices}
+- The entry at the intersection of one specimen and one variable in a data frame.:
+    correct: false
+    feedback: This describes value, not specimen. In this chapter, specimen refers
+      to one individual object or event represented by a row in a data frame.
+- Fundamental dimensions from which derived dimensions are formed.:
+    correct: false
+    feedback: This describes base dimensions, not specimen. In this chapter, specimen
+      refers to one individual object or event represented by a row in a data frame.
+- A two-dimensional space marked by two perpendicular number lines.:
+    correct: false
+    feedback: This describes coordinate plane, not specimen. In this chapter, specimen
+      refers to one individual object or event represented by a row in a data frame.
+- A single observation unit, such as one child in a data frame of children.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of specimen. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "specimen-2-one",
+  question = "Only one of the following is a valid description of specimen. Mark that one.",
+  answers = specimen_2_one_choices,
+  multiple = FALSE
+)()
+```

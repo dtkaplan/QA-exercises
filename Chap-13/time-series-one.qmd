@@ -1,0 +1,28 @@
+
+```{devoirs_choices time_series_13_one_choices}
+- A single state value measured at one instant.:
+    correct: false
+    feedback: A time series represents values across time, not just one instantaneous
+      measurement.
+- A function that takes the current state as input and returns its rate of change.:
+    correct: false
+    feedback: That is the dynamical rule; a time series takes time as input and returns
+      the state.
+- A representation with time as input and the system's state as output.:
+    correct: true
+    feedback: Correct.
+- A list of data values sorted from smallest to largest.:
+    correct: false
+    feedback: A time series is ordered by time, not by magnitude.
+```
+
+Only one of the following is a valid description of time series. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "time-series-13-one",
+  question = "Only one of the following is a valid description of time series. Mark that one.",
+  answers = time_series_13_one_choices,
+  multiple = FALSE
+)()
+```

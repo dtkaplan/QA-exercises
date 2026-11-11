@@ -1,0 +1,30 @@
+
+```{devoirs_choices incidence_15_two_choices}
+- A function giving the total benefit accumulated from treatment.:
+    correct: false
+    feedback: That is a total outcome; incidence is the number or rate of new cases.
+- The total number of people currently living with a condition.:
+    correct: false
+    feedback: That is prevalence; incidence counts new cases arising during a period.
+- The accumulated number of cases after adding the annual incidence rates.:
+    correct: false
+    feedback: That describes accumulated cases; incidence itself is the new-case flow
+      during a period.
+- A rate or count describing the occurrence of newly arising cases.:
+    correct: true
+    feedback: Correct.
+- The flow of new cases into a population, distinguished from the total number already affected.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of incidence. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "incidence-15-two",
+  question = "Two of the following are valid descriptions of incidence. The other three are not. Mark both of the VALID descriptions.",
+  answers = incidence_15_two_choices,
+  multiple = TRUE
+)()
+```

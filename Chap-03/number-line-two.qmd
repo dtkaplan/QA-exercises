@@ -1,0 +1,33 @@
+
+```{devoirs_choices number_line_3_two_choices}
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not number line. In this chapter, number line
+      refers to a one-dimensional line on which points represent values of a quantity.
+- A geometric aid for reasoning about ordered values along one dimension.:
+    correct: true
+    feedback: Correct.
+- A word that signals division, with the following quantity in the denominator.:
+    correct: false
+    feedback: This describes per, not number line. In this chapter, number line refers
+      to a one-dimensional line on which points represent values of a quantity.
+- A spatial representation of the admissible values for a single quantity.:
+    correct: true
+    feedback: Correct.
+- Change in a primary quantity with respect to one variable while other variables are held constant.:
+    correct: false
+    feedback: This describes partial change, not number line. In this chapter, number
+      line refers to a one-dimensional line on which points represent values of a
+      quantity.
+```
+
+Two of the following are valid descriptions of number line. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "number-line-3-two",
+  question = "Two of the following are valid descriptions of number line. The other three are not. Mark both of the VALID descriptions.",
+  answers = number_line_3_two_choices,
+  multiple = TRUE
+)()
+```

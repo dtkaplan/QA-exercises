@@ -1,0 +1,28 @@
+
+```{devoirs_choices state_space_13_one_choices}
+- The set of time values during which the system is observed.:
+    correct: false
+    feedback: Time is the input to a time series; state space concerns possible state
+      values.
+- The space in which a system's current state is a point and its changes trace a path.:
+    correct: true
+    feedback: Correct.
+- The one state the system occupies at the present instant.:
+    correct: false
+    feedback: That is the current state; the state space contains all possible states.
+- A collection of all trajectories generated from one initial state.:
+    correct: false
+    feedback: A trajectory is a path through state space; state space contains possible
+      states, not paths.
+```
+
+Only one of the following is a valid description of state space. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "state-space-13-one",
+  question = "Only one of the following is a valid description of state space. Mark that one.",
+  answers = state_space_13_one_choices,
+  multiple = FALSE
+)()
+```

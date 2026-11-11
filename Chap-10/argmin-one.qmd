@@ -1,0 +1,29 @@
+
+```{devoirs_choices argmin_10_one_choices}
+- A method for producing random numbers from a distribution.:
+    correct: false
+    feedback: Random number generation can explore inputs, but argmin names the input
+      with minimum output.
+- A ratio comparing an input's cost with its benefit.:
+    correct: false
+    feedback: Argmin is an input choice for a minimization problem, not a cost-benefit
+      ratio.
+- The lowest objective value, regardless of which input produced it.:
+    correct: false
+    feedback: That describes the minimum; argmin specifies which input attains that
+      value.
+- The input value that produces the smallest output of an objective function.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of argmin. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "argmin-10-one",
+  question = "Only one of the following is a valid description of argmin. Mark that one.",
+  answers = argmin_10_one_choices,
+  multiple = FALSE
+)()
+```

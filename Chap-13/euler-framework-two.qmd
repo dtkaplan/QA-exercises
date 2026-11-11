@@ -1,0 +1,32 @@
+
+```{devoirs_choices euler_framework_13_two_choices}
+- A process that records only the system's final state and ignores intermediate changes.:
+    correct: false
+    feedback: The framework builds a trajectory through repeated state updates over
+      small time increments.
+- A framework separating a system's state, its change rule, and the calculation of its time evolution.:
+    correct: true
+    feedback: Correct.
+- A rule that describes only the physical structure of a system.:
+    correct: false
+    feedback: The framework describes state, state change, and the accounting that
+      traces motion over time.
+- A way to determine the initial state by averaging all later observations.:
+    correct: false
+    feedback: The initial state is supplied; the framework uses it to step forward
+      through time.
+- A modeling approach that advances a system from an initial state using small time steps and its rate of change.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of Euler framework. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "euler-framework-13-two",
+  question = "Two of the following are valid descriptions of Euler framework. The other three are not. Mark both of the VALID descriptions.",
+  answers = euler_framework_13_two_choices,
+  multiple = TRUE
+)()
+```

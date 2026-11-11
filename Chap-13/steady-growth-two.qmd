@@ -1,0 +1,30 @@
+
+```{devoirs_choices steady_growth_13_two_choices}
+- Increase at a constant rate, producing equal additions over equal time intervals.:
+    correct: true
+    feedback: Correct.
+- A pattern where the rate of increase grows in proportion to the quantity.:
+    correct: false
+    feedback: That describes exponential growth, not constant-rate steady growth.
+- Growth in which the quantity doubles during every equal time interval.:
+    correct: false
+    feedback: That is exponential growth; steady growth adds a constant amount per
+      interval.
+- A quantity that remains unchanged as time passes.:
+    correct: false
+    feedback: Steady growth is increasing, even though its rate is constant.
+- A state that increases by the same amount during each equal interval of time.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of steady growth. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "steady-growth-13-two",
+  question = "Two of the following are valid descriptions of steady growth. The other three are not. Mark both of the VALID descriptions.",
+  answers = steady_growth_13_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,29 @@
+
+```{devoirs_choices dimension_2_one_choices}
+- A feature of an object that can be described or operationalized as a quantity.:
+    correct: true
+    feedback: Correct.
+- A unit for counting people, from the Latin word for head.:
+    correct: false
+    feedback: This describes capita, not dimension. In this chapter, dimension refers
+      to an aspect, property, or characteristic of an object or system.
+- A procedure for translating a dimension into a measurable quantity.:
+    correct: false
+    feedback: This describes operationalization, not dimension. In this chapter, dimension
+      refers to an aspect, property, or characteristic of an object or system.
+- A subset of specimens selected from a larger population for study.:
+    correct: false
+    feedback: This describes sample, not dimension. In this chapter, dimension refers
+      to an aspect, property, or characteristic of an object or system.
+```
+
+Only one of the following is a valid description of dimension. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dimension-2-one",
+  question = "Only one of the following is a valid description of dimension. Mark that one.",
+  answers = dimension_2_one_choices,
+  multiple = FALSE
+)()
+```

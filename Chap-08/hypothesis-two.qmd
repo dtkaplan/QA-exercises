@@ -1,0 +1,30 @@
+
+```{devoirs_choices hypothesis_8_two_choices}
+- A fact that cannot be questioned or compared with evidence.:
+    correct: false
+    feedback: A hypothesis is a proposal whose implications can be examined against
+      observations.
+- A model-based explanation whose implications can be compared with observed data.:
+    correct: true
+    feedback: Correct.
+- A rule for calculating the standard deviation of a sample.:
+    correct: false
+    feedback: Standard deviation measures spread; it is not an explanatory hypothesis.
+- A testable account of a phenomenon that guides interpretation of evidence.:
+    correct: true
+    feedback: Correct.
+- A conclusion that must be accepted before any observations are made.:
+    correct: false
+    feedback: A hypothesis is open to assessment and revision in light of evidence.
+```
+
+Two of the following are valid descriptions of hypothesis. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "hypothesis-8-two",
+  question = "Two of the following are valid descriptions of hypothesis. The other three are not. Mark both of the VALID descriptions.",
+  answers = hypothesis_8_two_choices,
+  multiple = TRUE
+)()
+```

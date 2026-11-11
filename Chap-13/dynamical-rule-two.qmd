@@ -1,0 +1,32 @@
+
+```{devoirs_choices dynamical_rule_13_two_choices}
+- A rule specifying how the state changes over the next instant from each possible state.:
+    correct: true
+    feedback: Correct.
+- A list of every state the system has occupied in the past.:
+    correct: false
+    feedback: That is historical data; the dynamical rule specifies change from a
+      current state.
+- A description of how quickly position changes with respect to position.:
+    correct: false
+    feedback: The dynamical rule gives the rate of state change with time as a function
+      of state.
+- A function giving the direction and rate at which the state moves through state space.:
+    correct: true
+    feedback: Correct.
+- A time series showing the state at successive times.:
+    correct: false
+    feedback: A time series records state over time; the dynamical rule maps state
+      to rate of change.
+```
+
+Two of the following are valid descriptions of dynamical rule. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dynamical-rule-13-two",
+  question = "Two of the following are valid descriptions of dynamical rule. The other three are not. Mark both of the VALID descriptions.",
+  answers = dynamical_rule_13_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,31 @@
+
+```{devoirs_choices si_3_one_choices}
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not SI. In this chapter, SI refers
+      to the international system of units, the primary official system for defining
+      units.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not SI. In this chapter, SI refers to the
+      international system of units, the primary official system for defining units.
+- The change in a primary quantity divided by the corresponding change in a context-setting quantity.:
+    correct: false
+    feedback: This describes rate of change, not SI. In this chapter, SI refers to
+      the international system of units, the primary official system for defining
+      units.
+- The unit system built from seven base units and many derived units.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of SI. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "si-3-one",
+  question = "Only one of the following is a valid description of SI. Mark that one.",
+  answers = si_3_one_choices,
+  multiple = FALSE
+)()
+```

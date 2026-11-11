@@ -1,0 +1,35 @@
+
+```{devoirs_choices sir_model_1_two_choices}
+- A column in a data frame that records one property across its specimens.:
+    correct: false
+    feedback: This describes variable, not SIR model. In this chapter, SIR model refers
+      to an epidemic model that tracks susceptible, infective, and recovered people
+      over time.
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not SIR model. In this chapter, SIR model
+      refers to an epidemic model that tracks susceptible, infective, and recovered
+      people over time.
+- A bookkeeping model that uses population counts to represent infection and recovery.:
+    correct: true
+    feedback: Correct.
+- A model with susceptible, infective, and recovered groups that simulates an epidemic's progression.:
+    correct: true
+    feedback: Correct.
+- The kind of object represented by every specimen in a data frame.:
+    correct: false
+    feedback: This describes object type, not SIR model. In this chapter, SIR model
+      refers to an epidemic model that tracks susceptible, infective, and recovered
+      people over time.
+```
+
+Two of the following are valid descriptions of SIR model. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "sir-model-1-two",
+  question = "Two of the following are valid descriptions of SIR model. The other three are not. Mark both of the VALID descriptions.",
+  answers = sir_model_1_two_choices,
+  multiple = TRUE
+)()
+```

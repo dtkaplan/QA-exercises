@@ -1,0 +1,28 @@
+
+```{devoirs_choices trajectory_13_one_choices}
+- A function mapping each state to its instantaneous rate of change.:
+    correct: false
+    feedback: That is the dynamical rule; the trajectory gives the state as a function
+      of time.
+- A curve showing the objective function's output for different choices.:
+    correct: false
+    feedback: That is a graph of an objective function; a trajectory tracks system
+      state over time.
+- A single value specifying the system's initial configuration.:
+    correct: false
+    feedback: That is an initial state; a trajectory traces the state over time.
+- The time-evolving state produced by applying the dynamical rule and accounting method.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of trajectory. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "trajectory-13-one",
+  question = "Only one of the following is a valid description of trajectory. Mark that one.",
+  answers = trajectory_13_one_choices,
+  multiple = FALSE
+)()
+```

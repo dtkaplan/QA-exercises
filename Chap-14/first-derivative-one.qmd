@@ -1,0 +1,28 @@
+
+```{devoirs_choices first_derivative_14_one_choices}
+- The original function after its input has been shifted by one unit.:
+    correct: false
+    feedback: A shift changes the function's input; differentiation creates a function
+      of rates of change.
+- The derivative that describes how the original function's output changes as its input changes.:
+    correct: true
+    feedback: Correct.
+- The rate at which the derivative itself changes.:
+    correct: false
+    feedback: That is the second derivative, not the first derivative.
+- A single slope value that is constant for every input.:
+    correct: false
+    feedback: The first derivative is a function and can have different values at
+      different inputs.
+```
+
+Only one of the following is a valid description of first derivative. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "first-derivative-14-one",
+  question = "Only one of the following is a valid description of first derivative. Mark that one.",
+  answers = first_derivative_14_one_choices,
+  multiple = FALSE
+)()
+```

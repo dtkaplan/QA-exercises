@@ -1,0 +1,32 @@
+
+```{devoirs_choices linear_regression_9_two_choices}
+- A modeling approach that fits coefficients to data for predicting an output from selected inputs.:
+    correct: true
+    feedback: Correct.
+- A plot that displays equal-output contours for two input quantities.:
+    correct: false
+    feedback: That is a contour plot; linear regression is a method for fitting model
+      coefficients to data.
+- A coefficient that converts an input quantity into the output's units.:
+    correct: false
+    feedback: That is one coefficient's role within a model; linear regression is
+      the method for estimating coefficients.
+- A technique that uses only the mean and standard deviation of one quantity.:
+    correct: false
+    feedback: Regression models an output from selected inputs using fitted coefficients;
+      it is not limited to those summaries.
+- A technique for constructing a linear relationship between measured inputs and an output using data.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of linear regression. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "linear-regression-9-two",
+  question = "Two of the following are valid descriptions of linear regression. The other three are not. Mark both of the VALID descriptions.",
+  answers = linear_regression_9_two_choices,
+  multiple = TRUE
+)()
+```

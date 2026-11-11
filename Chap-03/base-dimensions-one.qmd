@@ -1,0 +1,32 @@
+
+```{devoirs_choices base_dimensions_3_one_choices}
+- A one-dimensional line on which points represent values of a quantity.:
+    correct: false
+    feedback: This describes number line, not base dimensions. In this chapter, base
+      dimensions refers to fundamental dimensions from which derived dimensions are
+      formed.
+- Fundamental dimensions from which derived dimensions are formed.:
+    correct: true
+    feedback: Correct.
+- Accounting for other variables while examining a relationship of interest.:
+    correct: false
+    feedback: This describes controlling for, not base dimensions. In this chapter,
+      base dimensions refers to fundamental dimensions from which derived dimensions
+      are formed.
+- Dimensions formed by multiplying or dividing base dimensions.:
+    correct: false
+    feedback: This describes derived dimensions, not base dimensions. In this chapter,
+      base dimensions refers to fundamental dimensions from which derived dimensions
+      are formed.
+```
+
+Only one of the following is a valid description of base dimensions. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "base-dimensions-3-one",
+  question = "Only one of the following is a valid description of base dimensions. Mark that one.",
+  answers = base_dimensions_3_one_choices,
+  multiple = FALSE
+)()
+```

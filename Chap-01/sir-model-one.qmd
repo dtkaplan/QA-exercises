@@ -1,0 +1,32 @@
+
+```{devoirs_choices sir_model_1_one_choices}
+- A representation of an outbreak in which infections move people from susceptible to infective and then recovered.:
+    correct: true
+    feedback: Correct.
+- A highlighted term whose meaning is specifically defined for use in the book.:
+    correct: false
+    feedback: This describes word or phrase, not SIR model. In this chapter, SIR model
+      refers to an epidemic model that tracks susceptible, infective, and recovered
+      people over time.
+- The entry at the intersection of one specimen and one variable in a data frame.:
+    correct: false
+    feedback: This describes value, not SIR model. In this chapter, SIR model refers
+      to an epidemic model that tracks susceptible, infective, and recovered people
+      over time.
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not SIR model. In this chapter, SIR model
+      refers to an epidemic model that tracks susceptible, infective, and recovered
+      people over time.
+```
+
+Only one of the following is a valid description of SIR model. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "sir-model-1-one",
+  question = "Only one of the following is a valid description of SIR model. Mark that one.",
+  answers = sir_model_1_one_choices,
+  multiple = FALSE
+)()
+```

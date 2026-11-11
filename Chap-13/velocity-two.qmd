@@ -1,0 +1,30 @@
+
+```{devoirs_choices velocity_13_two_choices}
+- A quantity that must always be positive, regardless of direction.:
+    correct: false
+    feedback: Velocity includes direction and can be negative depending on the coordinate
+      convention.
+- A constant amount of position added each day, independent of time.:
+    correct: false
+    feedback: Velocity can vary over time; it is a rate, not a fixed accumulated position.
+- A state-change quantity that tells how position evolves from one instant to the next.:
+    correct: true
+    feedback: Correct.
+- The change in position per unit time, including direction.:
+    correct: true
+    feedback: Correct.
+- A measure of how quickly time passes as position changes.:
+    correct: false
+    feedback: Velocity is position change with respect to time, not the reverse ratio.
+```
+
+Two of the following are valid descriptions of velocity. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "velocity-13-two",
+  question = "Two of the following are valid descriptions of velocity. The other three are not. Mark both of the VALID descriptions.",
+  answers = velocity_13_two_choices,
+  multiple = TRUE
+)()
+```

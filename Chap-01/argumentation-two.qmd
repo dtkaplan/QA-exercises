@@ -1,0 +1,33 @@
+
+```{devoirs_choices argumentation_1_two_choices}
+- Recorded facts, findings, and measurements.:
+    correct: false
+    feedback: This describes data, not argumentation. In this chapter, argumentation
+      refers to the process of constructing good arguments from evidence and reasoning.
+- Representations of items, processes, or settings that are easier to use than the reality.:
+    correct: false
+    feedback: This describes models, not argumentation. In this chapter, argumentation
+      refers to the process of constructing good arguments from evidence and reasoning.
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: true
+    feedback: Correct.
+- Reasoned support for claims, aimed at making informed decisions.:
+    correct: true
+    feedback: Correct.
+- A machine-learning system that uses patterns and alignments in text to generate language.:
+    correct: false
+    feedback: This describes Large language model (LLM), not argumentation. In this
+      chapter, argumentation refers to the process of constructing good arguments
+      from evidence and reasoning.
+```
+
+Two of the following are valid descriptions of argumentation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "argumentation-1-two",
+  question = "Two of the following are valid descriptions of argumentation. The other three are not. Mark both of the VALID descriptions.",
+  answers = argumentation_1_two_choices,
+  multiple = TRUE
+)()
+```

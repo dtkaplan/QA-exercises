@@ -1,0 +1,28 @@
+
+```{devoirs_choices subspace_16_one_choices}
+- A flat set of directions or positions embedded in a higher-dimensional space.:
+    correct: true
+    feedback: Correct.
+- A single vector that points in one direction.:
+    correct: false
+    feedback: A vector is an element; a subspace is a space containing vectors and
+      their combinations.
+- A set of points that must lie outside the larger space containing it.:
+    correct: false
+    feedback: A subspace is contained within the larger space.
+- A function that assigns likelihood to every point in a space.:
+    correct: false
+    feedback: That describes a probability distribution; a subspace is a geometric
+      structure.
+```
+
+Only one of the following is a valid description of subspace. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "subspace-16-one",
+  question = "Only one of the following is a valid description of subspace. Mark that one.",
+  answers = subspace_16_one_choices,
+  multiple = FALSE
+)()
+```

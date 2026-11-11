@@ -1,0 +1,31 @@
+
+```{devoirs_choices margin_14_two_choices}
+- The maximum output of a function.:
+    correct: false
+    feedback: A maximum is an output value; margin is the current level where a small
+      increment is considered.
+- The average level of a quantity across all observations.:
+    correct: false
+    feedback: The margin is the current edge or level, not an average across observations.
+- The edge or current level of a quantity at which a small additional change is considered.:
+    correct: true
+    feedback: Correct.
+- A function's input domain as a whole.:
+    correct: false
+    feedback: The domain contains all possible inputs; the margin is the current edge
+      or level under consideration.
+- The point at which the next small increment of income, spending, or another input occurs.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of margin. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "margin-14-two",
+  question = "Two of the following are valid descriptions of margin. The other three are not. Mark both of the VALID descriptions.",
+  answers = margin_14_two_choices,
+  multiple = TRUE
+)()
+```

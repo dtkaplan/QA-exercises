@@ -104,3 +104,50 @@ library(drill)
 
 :::
 ::::
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Data
+
+{{< include ../Chap-02/data-two.qmd >}}
+
+## Data frame
+
+{{< include ../Chap-02/data-frame-two.qmd >}}
+
+## Dimension
+
+{{< include ../Chap-02/dimension-two.qmd >}}
+
+## Object type
+
+{{< include ../Chap-02/object-type-two.qmd >}}
+
+## Operationalization
+
+{{< include ../Chap-02/operationalization-two.qmd >}}
+
+## Sample
+
+{{< include ../Chap-02/sample-two.qmd >}}
+
+## Specimen
+
+{{< include ../Chap-02/specimen-two.qmd >}}
+
+## Value
+
+{{< include ../Chap-02/value-two.qmd >}}
+
+## Variable
+
+{{< include ../Chap-02/variable-two.qmd >}}
+
+
+:::
+::::
+
+

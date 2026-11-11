@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -944,6 +979,131 @@ mode: exercise
 <p><span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="True or False question" data-devoirs3-widget="selection" data-docid="QA-exer-04" data-label="sbk-8-ywr" data-feedback-enabled="true" data-multiple="false"> <span class="devoirs3-visually-hidden">True or False question</span> <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73626b2d382d797772" id="devoirs3-selection-73626b2d382d797772-1" value="AAsdjuq" data-devoirs3-option="" data-option-id="AAsdjuq" data-feedback="Nice!"> <span>True</span> </label> or <label class="devoirs3-choice"> <input type="radio" name="devoirs3-selection-73626b2d382d797772" id="devoirs3-selection-73626b2d382d797772-2" value="BAykygx" data-devoirs3-option="" data-option-id="BAykygx" data-feedback="Sorry"> <span>False</span> </label> ? <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span> <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for True or False question">Clear</button> <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">sbk-8-ywr</span> </span> This is (roughly) consistent with the 150 watts of power claimed when waking at 2.5 mi/hr.</p>
 </div>
 <p><!-- end of exr-seahorse-bathe-knife --></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key vocabulary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Compound rate</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Rate</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Rate of change</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Only one of the following is a valid description of compound rates. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"compound-rates-4-one"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of compound rates. Mark that one."</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> compound_rates_4_one_choices,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-04" data-label="compound-rates-4-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of compound rates. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65" id="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65-1" value="AAyihrg" data-devoirs3-option="" data-option-id="AAyihrg" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A rate with multiple divisions, such as calories per mile per pound.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65" id="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65-2" value="BAgkzmv" data-devoirs3-option="" data-option-id="BAgkzmv" data-feedback="This describes scientific notation, not compound rates. In this chapter, compound rates refers to rates formed by arithmetic combinations of other rates." data-feedback-html="This describes scientific notation, not compound rates. In this chapter, compound rates refers to rates formed by arithmetic combinations of other rates.">
+    <span>A number format that expresses a value as a mantissa multiplied by a power of ten.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65" id="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65-3" value="CAjayod" data-devoirs3-option="" data-option-id="CAjayod" data-feedback="This describes rate of change, not compound rates. In this chapter, compound rates refers to rates formed by arithmetic combinations of other rates." data-feedback-html="This describes rate of change, not compound rates. In this chapter, compound rates refers to rates formed by arithmetic combinations of other rates.">
+    <span>The change in a primary quantity divided by the corresponding change in a context-setting quantity.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65" id="devoirs3-selection-636f6d706f756e642d72617465732d342d6f6e65-4" value="DAaufcd" data-devoirs3-option="" data-option-id="DAaufcd" data-feedback="This describes magnitude, not compound rates. In this chapter, compound rates refers to rates formed by arithmetic combinations of other rates." data-feedback-html="This describes magnitude, not compound rates. In this chapter, compound rates refers to rates formed by arithmetic combinations of other rates.">
+    <span>A measure of the size of a number, closely related to its exponent in scientific notation.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of compound rates. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">compound-rates-4-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Only one of the following is a valid description of rate. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"rate-4-one"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of rate. Mark that one."</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> rate_4_one_choices,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-04" data-label="rate-4-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of rate. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d342d6f6e65" id="devoirs3-selection-726174652d342d6f6e65-1" value="AAfjlqt" data-devoirs3-option="" data-option-id="AAfjlqt" data-feedback="This describes order of magnitude, not rate. In this chapter, rate refers to a ratio of two quantities where division expresses a relationship between their underlying dimensions." data-feedback-html="This describes order of magnitude, not rate. In this chapter, rate refers to a ratio of two quantities where division expresses a relationship between their underlying dimensions.">
+    <span>A factor-of-ten scale used to describe how much larger or smaller one number is than another.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d342d6f6e65" id="devoirs3-selection-726174652d342d6f6e65-2" value="BAgerda" data-devoirs3-option="" data-option-id="BAgerda" data-feedback="This describes magnitude, not rate. In this chapter, rate refers to a ratio of two quantities where division expresses a relationship between their underlying dimensions." data-feedback-html="This describes magnitude, not rate. In this chapter, rate refers to a ratio of two quantities where division expresses a relationship between their underlying dimensions.">
+    <span>A measure of the size of a number, closely related to its exponent in scientific notation.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d342d6f6e65" id="devoirs3-selection-726174652d342d6f6e65-3" value="CApgnrd" data-devoirs3-option="" data-option-id="CApgnrd" data-feedback="This describes givens, not rate. In this chapter, rate refers to a ratio of two quantities where division expresses a relationship between their underlying dimensions." data-feedback-html="This describes givens, not rate. In this chapter, rate refers to a ratio of two quantities where division expresses a relationship between their underlying dimensions.">
+    <span>The facts, beliefs, assumptions, and observations available at the start of reasoning.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d342d6f6e65" id="devoirs3-selection-726174652d342d6f6e65-4" value="DAkwfje" data-devoirs3-option="" data-option-id="DAkwfje" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A ratio used to relate dimensions, such as distance traveled to fuel consumed.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of rate. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">rate-4-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Only one of the following is a valid description of rate of change. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"rate-of-change-4-one"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of rate of change. Mark that one."</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> rate_of_change_4_one_choices,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-04" data-label="rate-of-change-4-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of rate of change. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65" id="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65-1" value="AAvdvea" data-devoirs3-option="" data-option-id="AAvdvea" data-feedback="This describes scientific notation, not rate of change. In this chapter, rate of change refers to the change in a primary quantity divided by the corresponding change in a context-setting quantity." data-feedback-html="This describes scientific notation, not rate of change. In this chapter, rate of change refers to the change in a primary quantity divided by the corresponding change in a context-setting quantity.">
+    <span>A number format that expresses a value as a mantissa multiplied by a power of ten.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65" id="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65-2" value="BApzwvl" data-devoirs3-option="" data-option-id="BApzwvl" data-feedback="This describes magnitude, not rate of change. In this chapter, rate of change refers to the change in a primary quantity divided by the corresponding change in a context-setting quantity." data-feedback-html="This describes magnitude, not rate of change. In this chapter, rate of change refers to the change in a primary quantity divided by the corresponding change in a context-setting quantity.">
+    <span>A measure of the size of a number, closely related to its exponent in scientific notation.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65" id="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65-3" value="CAauxur" data-devoirs3-option="" data-option-id="CAauxur" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A measure of change per change in a second quantity, with units of primary quantity divided by context quantity.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65" id="devoirs3-selection-726174652d6f662d6368616e67652d342d6f6e65-4" value="DAaarbd" data-devoirs3-option="" data-option-id="DAaarbd" data-feedback="This describes order of magnitude, not rate of change. In this chapter, rate of change refers to the change in a primary quantity divided by the corresponding change in a context-setting quantity." data-feedback-html="This describes order of magnitude, not rate of change. In this chapter, rate of change refers to the change in a primary quantity divided by the corresponding change in a context-setting quantity.">
+    <span>A factor-of-ten scale used to describe how much larger or smaller one number is than another.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of rate of change. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">rate-of-change-4-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

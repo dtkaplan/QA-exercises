@@ -1,0 +1,32 @@
+
+```{devoirs_choices rate_of_change_4_one_choices}
+- A number format that expresses a value as a mantissa multiplied by a power of ten.:
+    correct: false
+    feedback: This describes scientific notation, not rate of change. In this chapter,
+      rate of change refers to the change in a primary quantity divided by the corresponding
+      change in a context-setting quantity.
+- A measure of the size of a number, closely related to its exponent in scientific notation.:
+    correct: false
+    feedback: This describes magnitude, not rate of change. In this chapter, rate
+      of change refers to the change in a primary quantity divided by the corresponding
+      change in a context-setting quantity.
+- A measure of change per change in a second quantity, with units of primary quantity divided by context quantity.:
+    correct: true
+    feedback: Correct.
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not rate of change. In this chapter,
+      rate of change refers to the change in a primary quantity divided by the corresponding
+      change in a context-setting quantity.
+```
+
+Only one of the following is a valid description of rate of change. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "rate-of-change-4-one",
+  question = "Only one of the following is a valid description of rate of change. Mark that one.",
+  answers = rate_of_change_4_one_choices,
+  multiple = FALSE
+)()
+```

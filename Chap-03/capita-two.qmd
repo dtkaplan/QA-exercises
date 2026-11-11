@@ -1,0 +1,32 @@
+
+```{devoirs_choices capita_3_two_choices}
+- The unit of person-count used in quantitative descriptions of populations.:
+    correct: true
+    feedback: Correct.
+- The people-counting unit used in expressions such as per capita.:
+    correct: true
+    feedback: Correct.
+- Units formed by multiplying or dividing base units.:
+    correct: false
+    feedback: This describes derived units, not capita. In this chapter, capita refers
+      to a unit for counting people, from the latin word for head.
+- Dimensionless ratios formed by dividing two exactly equal quantities.:
+    correct: false
+    feedback: This describes flavors of one, not capita. In this chapter, capita refers
+      to a unit for counting people, from the latin word for head.
+- Accounting for other variables while examining a relationship of interest.:
+    correct: false
+    feedback: This describes controlling for, not capita. In this chapter, capita
+      refers to a unit for counting people, from the latin word for head.
+```
+
+Two of the following are valid descriptions of capita. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "capita-3-two",
+  question = "Two of the following are valid descriptions of capita. The other three are not. Mark both of the VALID descriptions.",
+  answers = capita_3_two_choices,
+  multiple = TRUE
+)()
+```

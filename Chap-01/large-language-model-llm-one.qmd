@@ -1,0 +1,32 @@
+
+```{devoirs_choices large_language_model_llm_1_one_choices}
+- The kind of object represented by every specimen in a data frame.:
+    correct: false
+    feedback: This describes object type, not Large language model (LLM). In this
+      chapter, Large language model (LLM) refers to a machine-learning system that
+      uses patterns and alignments in text to generate language.
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not Large language model (LLM). In this chapter,
+      Large language model (LLM) refers to a machine-learning system that uses patterns
+      and alignments in text to generate language.
+- A language-generating machine-learning model, often used as a form of artificial intelligence.:
+    correct: true
+    feedback: Correct.
+- An epidemic model that tracks susceptible, infective, and recovered people over time.:
+    correct: false
+    feedback: This describes SIR model, not Large language model (LLM). In this chapter,
+      Large language model (LLM) refers to a machine-learning system that uses patterns
+      and alignments in text to generate language.
+```
+
+Only one of the following is a valid description of Large language model (LLM). Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "large-language-model-llm-1-one",
+  question = "Only one of the following is a valid description of Large language model (LLM). Mark that one.",
+  answers = large_language_model_llm_1_one_choices,
+  multiple = FALSE
+)()
+```

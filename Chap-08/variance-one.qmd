@@ -1,0 +1,28 @@
+
+```{devoirs_choices variance_8_one_choices}
+- The squared counterpart to standard deviation for describing a distribution's spread.:
+    correct: true
+    feedback: Correct.
+- A guarantee that all observations lie within a fixed distance of the mean.:
+    correct: false
+    feedback: Variance summarizes spread but does not set a hard bound on every observation.
+- The parameter that makes all outcomes equally likely within an interval.:
+    correct: false
+    feedback: Equal likelihood within an interval describes a uniform distribution,
+      not variance.
+- A relative probability assigned to one possible outcome.:
+    correct: false
+    feedback: Relative probability describes an outcome's likelihood; variance summarizes
+      distribution spread.
+```
+
+Only one of the following is a valid description of variance. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "variance-8-one",
+  question = "Only one of the following is a valid description of variance. Mark that one.",
+  answers = variance_8_one_choices,
+  multiple = FALSE
+)()
+```

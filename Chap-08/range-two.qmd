@@ -1,0 +1,30 @@
+
+```{devoirs_choices range_8_two_choices}
+- The difference between a function's output and its input.:
+    correct: false
+    feedback: A range is an interval of values; it is not a function comparison.
+- An interval bounded by lower and upper values used to express uncertainty.:
+    correct: true
+    feedback: Correct.
+- A single best estimate of a quantity with no bounds.:
+    correct: false
+    feedback: A range has endpoints and represents more than one possible value.
+- A measure of how far values tend to lie from their mean.:
+    correct: false
+    feedback: That describes spread such as standard deviation; a range specifies
+      two bounds.
+- A compact uncertainty description that identifies a lower and an upper bound.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of range. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "range-8-two",
+  question = "Two of the following are valid descriptions of range. The other three are not. Mark both of the VALID descriptions.",
+  answers = range_8_two_choices,
+  multiple = TRUE
+)()
+```

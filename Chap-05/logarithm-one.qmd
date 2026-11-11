@@ -1,0 +1,32 @@
+
+```{devoirs_choices logarithm_5_one_choices}
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not logarithm. In this chapter, logarithm
+      refers to a number format that condenses scientific notation into a single magnitude
+      value.
+- A way to express the size of a pure number using one value rather than mantissa and exponent.:
+    correct: true
+    feedback: Correct.
+- Fast, broadly applicable reasoning that uses useful but fallible rules of thumb.:
+    correct: false
+    feedback: This describes heuristic reasoning, not logarithm. In this chapter,
+      logarithm refers to a number format that condenses scientific notation into
+      a single magnitude value.
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not logarithm. In this chapter, logarithm
+      refers to a number format that condenses scientific notation into a single magnitude
+      value.
+```
+
+Only one of the following is a valid description of logarithm. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "logarithm-5-one",
+  question = "Only one of the following is a valid description of logarithm. Mark that one.",
+  answers = logarithm_5_one_choices,
+  multiple = FALSE
+)()
+```

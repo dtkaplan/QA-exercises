@@ -1,0 +1,28 @@
+
+```{devoirs_choices likelihood_11_one_choices}
+- A measure used to compare competing hypotheses by their support for the data.:
+    correct: true
+    feedback: Correct.
+- The probability of every possible dataset averaged together.:
+    correct: false
+    feedback: Likelihood concerns the observed data under a specific hypothesized
+      model.
+- A guarantee that the observed data will occur again.:
+    correct: false
+    feedback: Likelihood evaluates observed data under a model; it does not guarantee
+      future repetition.
+- The range of values that a quantity could possibly take.:
+    correct: false
+    feedback: That is a range; likelihood is a model-based score for observed data.
+```
+
+Only one of the following is a valid description of likelihood. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "likelihood-11-one",
+  question = "Only one of the following is a valid description of likelihood. Mark that one.",
+  answers = likelihood_11_one_choices,
+  multiple = FALSE
+)()
+```

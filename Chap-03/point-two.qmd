@@ -1,0 +1,32 @@
+
+```{devoirs_choices point_3_two_choices}
+- A spatial marker for a particular value or tuple of values.:
+    correct: true
+    feedback: Correct.
+- A position on a number line representing one value of a quantity.:
+    correct: true
+    feedback: Correct.
+- A standardized measure consisting of a pure number and a unit, optionally with a descriptor.:
+    correct: false
+    feedback: This describes quantity, not point. In this chapter, point refers to
+      a location in a space that corresponds to one or more coordinate values.
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: false
+    feedback: This describes worth, not point. In this chapter, point refers to a
+      location in a space that corresponds to one or more coordinate values.
+- Standardized measures that specify how much of a quantity is present.:
+    correct: false
+    feedback: This describes units, not point. In this chapter, point refers to a
+      location in a space that corresponds to one or more coordinate values.
+```
+
+Two of the following are valid descriptions of point. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "point-3-two",
+  question = "Two of the following are valid descriptions of point. The other three are not. Mark both of the VALID descriptions.",
+  answers = point_3_two_choices,
+  multiple = TRUE
+)()
+```

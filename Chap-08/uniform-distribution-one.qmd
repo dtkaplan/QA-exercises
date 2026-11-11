@@ -1,0 +1,28 @@
+
+```{devoirs_choices uniform_distribution_8_one_choices}
+- A distribution requiring a positive mean and standard deviation.:
+    correct: false
+    feedback: Those parameters describe a normal distribution; a uniform distribution
+      is specified by its range.
+- A model for values that can occur anywhere within known bounds without favoring one location.:
+    correct: true
+    feedback: Correct.
+- A distribution whose likelihood declines exponentially as values increase.:
+    correct: false
+    feedback: That describes an exponential distribution, not a uniform one.
+- A model in which only the two endpoints can occur.:
+    correct: false
+    feedback: Every value within the range is possible in a uniform distribution,
+      not just its endpoints.
+```
+
+Only one of the following is a valid description of uniform distribution. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "uniform-distribution-8-one",
+  question = "Only one of the following is a valid description of uniform distribution. Mark that one.",
+  answers = uniform_distribution_8_one_choices,
+  multiple = FALSE
+)()
+```

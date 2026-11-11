@@ -1,0 +1,31 @@
+
+```{devoirs_choices length_of_a_vector_16_two_choices}
+- A measure of a vector's size independent of its direction.:
+    correct: true
+    feedback: Correct.
+- The direction in which a vector points.:
+    correct: false
+    feedback: Direction is distinct from length; vectors can have the same direction
+      but different lengths.
+- The sum of all the components of a vector.:
+    correct: false
+    feedback: Length is a magnitude computed from components, not generally their
+      simple sum.
+- The Euclidean distance from the vector's starting point to its endpoint.:
+    correct: true
+    feedback: Correct.
+- The number of dimensions in the space containing a vector.:
+    correct: false
+    feedback: A vector's space dimension is not the vector's length or magnitude.
+```
+
+Two of the following are valid descriptions of length of a vector. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "length-of-a-vector-16-two",
+  question = "Two of the following are valid descriptions of length of a vector. The other three are not. Mark both of the VALID descriptions.",
+  answers = length_of_a_vector_16_two_choices,
+  multiple = TRUE
+)()
+```

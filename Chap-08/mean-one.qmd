@@ -1,0 +1,28 @@
+
+```{devoirs_choices mean_8_one_choices}
+- A random value generated from a probability distribution.:
+    correct: false
+    feedback: A random draw is a possible observation; the mean is a parameter describing
+      the distribution.
+- The endpoints that define the possible values in a uniform distribution.:
+    correct: false
+    feedback: Those endpoints define the range of a uniform distribution; the mean
+      is a central value.
+- A number describing how likely one value is relative to another.:
+    correct: false
+    feedback: That is relative probability; the mean describes a distribution's center.
+- The average-value parameter of a normal distribution.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of mean. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "mean-8-one",
+  question = "Only one of the following is a valid description of mean. Mark that one.",
+  answers = mean_8_one_choices,
+  multiple = FALSE
+)()
+```

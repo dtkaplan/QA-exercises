@@ -1,0 +1,32 @@
+
+```{devoirs_choices givens_1_one_choices}
+- A machine-learning system that uses patterns and alignments in text to generate language.:
+    correct: false
+    feedback: This describes Large language model (LLM), not givens. In this chapter,
+      givens refers to the facts, beliefs, assumptions, and observations available
+      at the start of reasoning.
+- The facts, beliefs, assumptions, and observations available at the start of reasoning.:
+    correct: true
+    feedback: Correct.
+- An epidemic model that tracks susceptible, infective, and recovered people over time.:
+    correct: false
+    feedback: This describes SIR model, not givens. In this chapter, givens refers
+      to the facts, beliefs, assumptions, and observations available at the start
+      of reasoning.
+- Fast, broadly applicable reasoning that uses useful but fallible rules of thumb.:
+    correct: false
+    feedback: This describes heuristic reasoning, not givens. In this chapter, givens
+      refers to the facts, beliefs, assumptions, and observations available at the
+      start of reasoning.
+```
+
+Only one of the following is a valid description of givens. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "givens-1-one",
+  question = "Only one of the following is a valid description of givens. Mark that one.",
+  answers = givens_1_one_choices,
+  multiple = FALSE
+)()
+```

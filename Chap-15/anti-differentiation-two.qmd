@@ -1,0 +1,30 @@
+
+```{devoirs_choices anti_differentiation_15_two_choices}
+- The process of differentiating a function to obtain its rate of change.:
+    correct: false
+    feedback: That is differentiation; anti-differentiation works in the reverse direction.
+- A process that uniquely recovers the original function without any starting information.:
+    correct: false
+    feedback: Accumulation allows a starting value to be specified; different starting
+      values shift the reconstructed function.
+- Finding a parent function from a known derivative, up to a starting-value choice.:
+    correct: true
+    feedback: Correct.
+- The process of finding a function whose derivative is a given rate-of-change function.:
+    correct: true
+    feedback: Correct.
+- A process that turns a total function into a derivative.:
+    correct: false
+    feedback: That describes differentiation, the operation anti-differentiation undoes.
+```
+
+Two of the following are valid descriptions of anti-differentiation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "anti-differentiation-15-two",
+  question = "Two of the following are valid descriptions of anti-differentiation. The other three are not. Mark both of the VALID descriptions.",
+  answers = anti_differentiation_15_two_choices,
+  multiple = TRUE
+)()
+```

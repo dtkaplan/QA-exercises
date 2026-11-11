@@ -1,0 +1,32 @@
+
+```{devoirs_choices learning_16_two_choices}
+- A process that improves a model by changing its parameters in response to its errors.:
+    correct: true
+    feedback: Correct.
+- A way to make all input vectors have identical lengths.:
+    correct: false
+    feedback: Vector scaling is a geometric operation, not the chapter's general learning
+      process.
+- Memorizing every training example and refusing to classify new cases.:
+    correct: false
+    feedback: The goal is to establish rules that can classify new inputs, not merely
+      store the examples.
+- The process of adjusting a model so its outputs capture patterns in data.:
+    correct: true
+    feedback: Correct.
+- A guarantee that a model will never make an incorrect prediction.:
+    correct: false
+    feedback: Learning improves a model's performance but does not guarantee error-free
+      predictions.
+```
+
+Two of the following are valid descriptions of learning. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "learning-16-two",
+  question = "Two of the following are valid descriptions of learning. The other three are not. Mark both of the VALID descriptions.",
+  answers = learning_16_two_choices,
+  multiple = TRUE
+)()
+```

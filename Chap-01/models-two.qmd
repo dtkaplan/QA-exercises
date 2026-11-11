@@ -1,0 +1,35 @@
+
+```{devoirs_choices models_1_two_choices}
+- Simplified representations built to help people understand, test, or make decisions about something.:
+    correct: true
+    feedback: Correct.
+- Representations used to reason about a real-world item, process, or setting.:
+    correct: true
+    feedback: Correct.
+- A rectangular array of data organized into rows and columns.:
+    correct: false
+    feedback: This describes data frame, not models. In this chapter, models refers
+      to representations of items, processes, or settings that are easier to use than
+      the reality.
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: false
+    feedback: This describes quantitative models, not models. In this chapter, models
+      refers to representations of items, processes, or settings that are easier to
+      use than the reality.
+- The kind of object represented by every specimen in a data frame.:
+    correct: false
+    feedback: This describes object type, not models. In this chapter, models refers
+      to representations of items, processes, or settings that are easier to use than
+      the reality.
+```
+
+Two of the following are valid descriptions of models. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "models-1-two",
+  question = "Two of the following are valid descriptions of models. The other three are not. Mark both of the VALID descriptions.",
+  answers = models_1_two_choices,
+  multiple = TRUE
+)()
+```

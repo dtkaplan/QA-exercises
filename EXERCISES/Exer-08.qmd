@@ -7,7 +7,7 @@ subtitle: "Chapter 8 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-08")`
+`r devoirs3::devoirs_start("QA-exer-08", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -35,5 +35,75 @@ source("../_exercise_startup.R")
 
 
 :::
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Bayesian
+
+{{< include ../Chap-08/bayesian-one.qmd >}}
+
+## Exponential distribution
+
+{{< include ../Chap-08/exponential-distribution-one.qmd >}}
+
+## Frequentism
+
+{{< include ../Chap-08/frequentism-one.qmd >}}
+
+## Hypothesis
+
+{{< include ../Chap-08/hypothesis-one.qmd >}}
+
+## Mean
+
+{{< include ../Chap-08/mean-one.qmd >}}
+
+## Normal distribution
+
+{{< include ../Chap-08/normal-distribution-one.qmd >}}
+
+## Probability distributions
+
+{{< include ../Chap-08/probability-distributions-one.qmd >}}
+
+## Random number generation
+
+{{< include ../Chap-08/random-number-generation-one.qmd >}}
+
+## Range
+
+{{< include ../Chap-08/range-one.qmd >}}
+
+## Relative probability
+
+{{< include ../Chap-08/relative-probability-one.qmd >}}
+
+## Simulation
+
+{{< include ../Chap-08/simulation-one.qmd >}}
+
+## Standard deviation
+
+{{< include ../Chap-08/standard-deviation-one.qmd >}}
+
+## Uncertainty
+
+{{< include ../Chap-08/uncertainty-one.qmd >}}
+
+## Uniform distribution
+
+{{< include ../Chap-08/uniform-distribution-one.qmd >}}
+
+## Variance
+
+{{< include ../Chap-08/variance-one.qmd >}}
+
+:::
+::::
+
 
 

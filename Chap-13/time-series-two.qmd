@@ -1,0 +1,31 @@
+
+```{devoirs_choices time_series_13_two_choices}
+- A function that takes the current state as input and returns its rate of change.:
+    correct: false
+    feedback: That is the dynamical rule; a time series takes time as input and returns
+      the state.
+- A function or sequence showing how a state quantity changes over time.:
+    correct: true
+    feedback: Correct.
+- The total amount by which a quantity has changed since its initial value.:
+    correct: false
+    feedback: A time series records state values; total change is a difference between
+      values.
+- Values of a quantity recorded as a function of time.:
+    correct: true
+    feedback: Correct.
+- A list of data values sorted from smallest to largest.:
+    correct: false
+    feedback: A time series is ordered by time, not by magnitude.
+```
+
+Two of the following are valid descriptions of time series. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "time-series-13-two",
+  question = "Two of the following are valid descriptions of time series. The other three are not. Mark both of the VALID descriptions.",
+  answers = time_series_13_two_choices,
+  multiple = TRUE
+)()
+```

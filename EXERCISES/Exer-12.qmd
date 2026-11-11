@@ -7,7 +7,7 @@ subtitle: "Chapter 12 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-12")`
+`r devoirs3::devoirs_start("QA-exer-12", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -43,5 +43,23 @@ source("../_exercise_startup.R")
 
 
 :::
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Posterior
+
+{{< include ../Chap-12/posterior-one.qmd >}}
+
+## Prior
+
+{{< include ../Chap-12/prior-one.qmd >}}
+
+:::
+::::
+
 
 

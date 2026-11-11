@@ -1,0 +1,33 @@
+```{devoirs_choices functions_6_one_choices}
+- ? |
+    A name for the inputs to a function, without the function's input-output relationship.
+  : correct: no
+    feedback: |
+      Those names are args. A function is the representation that organizes the process from inputs to output.
+- A way to represent how specified inputs determine an output.:
+    correct: yes
+    feedback: Correct.
+- ? |
+    A process that takes an output and reconstructs the inputs that must have produced it.
+  : correct: no
+    feedback: |
+      The chapter describes functions as transforming inputs into outputs, not reversing that direction.
+- ? |
+    A physical machine that must have gears and moving parts to calculate a result.
+  : correct: no
+    feedback: |
+      The machine is an analogy. A function is a mathematical or computing concept and need not be a physical device.
+```
+
+Only one of the following is a valid description of functions . Mark that one.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "functions-6-one",
+  question = "Only one of the following is a valid description of functions . Mark that one.",
+  answers = functions_6_one_choices,
+  multiple = FALSE
+)()
+```
+

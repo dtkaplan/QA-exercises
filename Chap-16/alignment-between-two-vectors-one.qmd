@@ -1,0 +1,29 @@
+
+```{devoirs_choices alignment_between_two_vectors_16_one_choices}
+- A projection of one vector onto a subspace.:
+    correct: false
+    feedback: Projection identifies a component within a subspace; alignment compares
+      two vectors.
+- A measure of how close the endpoints of two vectors are in space.:
+    correct: false
+    feedback: Alignment compares directions; endpoint distance can differ even when
+      vectors point the same way.
+- A count of how many measurements two specimens share.:
+    correct: false
+    feedback: Alignment measures how their vector directions agree, not how many dimensions
+      they have.
+- The degree to which two vectors point alike, quantified by a normalized dot product.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of alignment between two vectors. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "alignment-between-two-vectors-16-one",
+  question = "Only one of the following is a valid description of alignment between two vectors. Mark that one.",
+  answers = alignment_between_two_vectors_16_one_choices,
+  multiple = FALSE
+)()
+```

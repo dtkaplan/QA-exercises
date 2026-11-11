@@ -1,0 +1,35 @@
+
+```{devoirs_choices large_language_model_llm_1_two_choices}
+- A machine-learning system that uses patterns and alignments in text to generate language.:
+    correct: true
+    feedback: Correct.
+- An epidemic model that tracks susceptible, infective, and recovered people over time.:
+    correct: false
+    feedback: This describes SIR model, not Large language model (LLM). In this chapter,
+      Large language model (LLM) refers to a machine-learning system that uses patterns
+      and alignments in text to generate language.
+- A model that processes language by identifying text alignments and using them to build chains of response.:
+    correct: true
+    feedback: Correct.
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not Large language model (LLM). In this chapter,
+      Large language model (LLM) refers to a machine-learning system that uses patterns
+      and alignments in text to generate language.
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: false
+    feedback: This describes quantitative models, not Large language model (LLM).
+      In this chapter, Large language model (LLM) refers to a machine-learning system
+      that uses patterns and alignments in text to generate language.
+```
+
+Two of the following are valid descriptions of Large language model (LLM). The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "large-language-model-llm-1-two",
+  question = "Two of the following are valid descriptions of Large language model (LLM). The other three are not. Mark both of the VALID descriptions.",
+  answers = large_language_model_llm_1_two_choices,
+  multiple = TRUE
+)()
+```

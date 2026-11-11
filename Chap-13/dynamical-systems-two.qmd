@@ -1,0 +1,31 @@
+
+```{devoirs_choices dynamical_systems_13_two_choices}
+- Systems in which the current state determines how the system changes next.:
+    correct: true
+    feedback: Correct.
+- Models of systems that describe how their configurations evolve over time.:
+    correct: true
+    feedback: Correct.
+- Collections of quantities whose values never change.:
+    correct: false
+    feedback: Dynamical systems are specifically about changing states.
+- Any device that contains moving mechanical parts.:
+    correct: false
+    feedback: Dynamical systems can be mathematical or social models, not only mechanical
+      devices.
+- A collection of observations ordered by size rather than by time.:
+    correct: false
+    feedback: A time series orders state values over time; dynamical systems model
+      the evolving state.
+```
+
+Two of the following are valid descriptions of dynamical systems. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dynamical-systems-13-two",
+  question = "Two of the following are valid descriptions of dynamical systems. The other three are not. Mark both of the VALID descriptions.",
+  answers = dynamical_systems_13_two_choices,
+  multiple = TRUE
+)()
+```

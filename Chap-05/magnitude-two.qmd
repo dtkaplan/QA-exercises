@@ -1,0 +1,35 @@
+
+```{devoirs_choices magnitude_5_two_choices}
+- A measure of the size of a number, closely related to its exponent in scientific notation.:
+    correct: true
+    feedback: Correct.
+- The facts, beliefs, assumptions, and observations available at the start of reasoning.:
+    correct: false
+    feedback: This describes givens, not magnitude. In this chapter, magnitude refers
+      to a measure of the size of a number, closely related to its exponent in scientific
+      notation.
+- The scale position that indicates a number's size across powers of ten.:
+    correct: true
+    feedback: Correct.
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not magnitude. In this chapter, magnitude
+      refers to a measure of the size of a number, closely related to its exponent
+      in scientific notation.
+- Fast, broadly applicable reasoning that uses useful but fallible rules of thumb.:
+    correct: false
+    feedback: This describes heuristic reasoning, not magnitude. In this chapter,
+      magnitude refers to a measure of the size of a number, closely related to its
+      exponent in scientific notation.
+```
+
+Two of the following are valid descriptions of magnitude. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "magnitude-5-two",
+  question = "Two of the following are valid descriptions of magnitude. The other three are not. Mark both of the VALID descriptions.",
+  answers = magnitude_5_two_choices,
+  multiple = TRUE
+)()
+```

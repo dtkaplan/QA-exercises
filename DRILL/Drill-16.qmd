@@ -31,3 +31,55 @@ library(drill)
 
 :::
 
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+
+## Alignment between
+
+{{< include ../Chap-16/alignment-between-two-vectors-two.qmd >}}
+
+## Dot product
+
+{{< include ../Chap-16/dot-product-two.qmd >}}
+
+## Gradient
+
+{{< include ../Chap-16/gradient-two.qmd >}}
+
+## Learning
+
+{{< include ../Chap-16/learning-two.qmd >}}
+
+## Length of a vector
+
+{{< include ../Chap-16/length-of-a-vector-two.qmd >}}
+
+## Optimization
+
+{{< include ../Chap-16/optimization-two.qmd >}}
+
+
+## Projection
+
+{{< include ../Chap-16/projection-two.qmd >}}
+
+## Subspace
+
+{{< include ../Chap-16/subspace-two.qmd >}}
+
+## Unsupervised learning
+
+{{< include ../Chap-16/unsupervised-learning-two.qmd >}}
+
+## Vector
+
+{{< include ../Chap-16/vector-two.qmd >}}
+
+
+:::
+::::
+

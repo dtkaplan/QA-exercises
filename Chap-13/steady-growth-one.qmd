@@ -1,0 +1,28 @@
+
+```{devoirs_choices steady_growth_13_one_choices}
+- A process that adds a different random amount in every interval.:
+    correct: false
+    feedback: Steady growth has a constant rate, not arbitrary interval-to-interval
+      changes.
+- Growth in which the quantity doubles during every equal time interval.:
+    correct: false
+    feedback: That is exponential growth; steady growth adds a constant amount per
+      interval.
+- A decline in which the value halves after equal intervals.:
+    correct: false
+    feedback: That is exponential decay, not steady growth.
+- Growth like water entering a bathtub at an unchanging flow rate.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of steady growth. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "steady-growth-13-one",
+  question = "Only one of the following is a valid description of steady growth. Mark that one.",
+  answers = steady_growth_13_one_choices,
+  multiple = FALSE
+)()
+```

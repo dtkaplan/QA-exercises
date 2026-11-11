@@ -1,0 +1,32 @@
+
+```{devoirs_choices conversion_factor_3_one_choices}
+- Change in a primary quantity with respect to one variable while other variables are held constant.:
+    correct: false
+    feedback: This describes partial change, not conversion factor. In this chapter,
+      conversion factor refers to a dimensionless ratio of equal quantities used to
+      convert between commensurate units.
+- A ratio that multiplies a starting quantity to express it in another unit.:
+    correct: true
+    feedback: Correct.
+- A location in a space that corresponds to one or more coordinate values.:
+    correct: false
+    feedback: This describes point, not conversion factor. In this chapter, conversion
+      factor refers to a dimensionless ratio of equal quantities used to convert between
+      commensurate units.
+- Units formed by multiplying or dividing base units.:
+    correct: false
+    feedback: This describes derived units, not conversion factor. In this chapter,
+      conversion factor refers to a dimensionless ratio of equal quantities used to
+      convert between commensurate units.
+```
+
+Only one of the following is a valid description of conversion factor. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "conversion-factor-3-one",
+  question = "Only one of the following is a valid description of conversion factor. Mark that one.",
+  answers = conversion_factor_3_one_choices,
+  multiple = FALSE
+)()
+```

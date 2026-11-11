@@ -7,7 +7,7 @@ subtitle: "Chapter 14 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-14")`
+`r devoirs3::devoirs_start("QA-exer-14", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -60,4 +60,46 @@ source("../_exercise_startup.R")
 
 :::
 
+
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Calculus
+
+{{< include ../Chap-14/calculus-one.qmd >}}
+
+## Continuity
+
+{{< include ../Chap-14/continuity-one.qmd >}}
+
+## Derivative
+
+{{< include ../Chap-14/derivative-one.qmd >}}
+
+## Differentiation
+
+{{< include ../Chap-14/differentiation-one.qmd >}}
+
+## Diminishing marginal returns
+
+{{< include ../Chap-14/diminishing-marginal-returns-one.qmd >}}
+
+## First derivative
+
+{{< include ../Chap-14/first-derivative-one.qmd >}}
+
+## Margin
+
+{{< include ../Chap-14/margin-one.qmd >}}
+
+## Second derivative
+
+{{< include ../Chap-14/second-derivative-one.qmd >}}
+
+:::
+::::
 

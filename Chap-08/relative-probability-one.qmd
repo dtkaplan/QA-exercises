@@ -1,0 +1,28 @@
+
+```{devoirs_choices relative_probability_8_one_choices}
+- The probability model itself, rather than one of its outputs.:
+    correct: false
+    feedback: The distribution is the function; relative probability is the output
+      for a particular input value.
+- A quantity showing how likely one possible value is compared with alternatives.:
+    correct: true
+    feedback: Correct.
+- The distance between the maximum and minimum possible values.:
+    correct: false
+    feedback: That is a range; relative probability is assigned to individual possible
+      values.
+- A negative number showing that an outcome is less than impossible.:
+    correct: false
+    feedback: Relative probability values cannot be negative.
+```
+
+Only one of the following is a valid description of relative probability. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "relative-probability-8-one",
+  question = "Only one of the following is a valid description of relative probability. Mark that one.",
+  answers = relative_probability_8_one_choices,
+  multiple = FALSE
+)()
+```

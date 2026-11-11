@@ -1,0 +1,30 @@
+
+```{devoirs_choices base_units_3_one_choices}
+- SI units whose definitions do not depend on other base units.:
+    correct: true
+    feedback: Correct.
+- A two-dimensional space marked by two perpendicular number lines.:
+    correct: false
+    feedback: This describes coordinate plane, not base units. In this chapter, base
+      units refers to fundamental si units that are not defined in terms of one another.
+- Dimensionless ratios formed by dividing two exactly equal quantities.:
+    correct: false
+    feedback: This describes flavors of one, not base units. In this chapter, base
+      units refers to fundamental si units that are not defined in terms of one another.
+- Dimensions formed by multiplying or dividing base dimensions.:
+    correct: false
+    feedback: This describes derived dimensions, not base units. In this chapter,
+      base units refers to fundamental si units that are not defined in terms of one
+      another.
+```
+
+Only one of the following is a valid description of base units. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "base-units-3-one",
+  question = "Only one of the following is a valid description of base units. Mark that one.",
+  answers = base_units_3_one_choices,
+  multiple = FALSE
+)()
+```

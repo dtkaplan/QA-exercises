@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -900,6 +935,341 @@ mode: exercise
 </div>
 </div>
 <p><!-- end of exr-monkey-talk-pants --></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key vocabulary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Argmax</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Argmin</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Dominates</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Incommensurate</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Maximum</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false" href="">Minimum</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false" href="">Objective function</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-8" role="tab" aria-controls="tabset-2-8" aria-selected="false" href="">Shadow price</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-9" role="tab" aria-controls="tabset-2-9" aria-selected="false" href="">Trade-off</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Only one of the following is a valid description of argmax. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"argmax-10-one"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of argmax. Mark that one."</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> argmax_10_one_choices,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="argmax-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of argmax. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d61782d31302d6f6e65" id="devoirs3-selection-6172676d61782d31302d6f6e65-1" value="AAdotta" data-devoirs3-option="" data-option-id="AAdotta" data-feedback="An average summarizes outputs; argmax identifies an input where the output is greatest." data-feedback-html="An average summarizes outputs; argmax identifies an input where the output is greatest.">
+    <span>The average of all outputs produced by a function.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d61782d31302d6f6e65" id="devoirs3-selection-6172676d61782d31302d6f6e65-2" value="BAvdwny" data-devoirs3-option="" data-option-id="BAvdwny" data-feedback="An argmax is a maximizing choice; equal outputs are not required." data-feedback-html="An argmax is a maximizing choice; equal outputs are not required.">
+    <span>A statement that all possible choices have equal objective value.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d61782d31302d6f6e65" id="devoirs3-selection-6172676d61782d31302d6f6e65-3" value="CAdbimi" data-devoirs3-option="" data-option-id="CAdbimi" data-feedback="Data may be used to construct an objective function, but are not its argmax." data-feedback-html="Data may be used to construct an objective function, but are not its argmax.">
+    <span>The set of observed data used to fit a model.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d61782d31302d6f6e65" id="devoirs3-selection-6172676d61782d31302d6f6e65-4" value="DAlikjg" data-devoirs3-option="" data-option-id="DAlikjg" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A choice from the input domain that yields the objective function’s largest output.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of argmax. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">argmax-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Only one of the following is a valid description of argmin. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"argmin-10-one"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of argmin. Mark that one."</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> argmin_10_one_choices,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="argmin-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of argmin. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d696e2d31302d6f6e65" id="devoirs3-selection-6172676d696e2d31302d6f6e65-1" value="AAcgeas" data-devoirs3-option="" data-option-id="AAcgeas" data-feedback="Random number generation can explore inputs, but argmin names the input with minimum output." data-feedback-html="Random number generation can explore inputs, but argmin names the input with minimum output.">
+    <span>A method for producing random numbers from a distribution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d696e2d31302d6f6e65" id="devoirs3-selection-6172676d696e2d31302d6f6e65-2" value="BAtfmkj" data-devoirs3-option="" data-option-id="BAtfmkj" data-feedback="Argmin is an input choice for a minimization problem, not a cost-benefit ratio." data-feedback-html="Argmin is an input choice for a minimization problem, not a cost-benefit ratio.">
+    <span>A ratio comparing an input’s cost with its benefit.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d696e2d31302d6f6e65" id="devoirs3-selection-6172676d696e2d31302d6f6e65-3" value="CAglsls" data-devoirs3-option="" data-option-id="CAglsls" data-feedback="That describes the minimum; argmin specifies which input attains that value." data-feedback-html="That describes the minimum; argmin specifies which input attains that value.">
+    <span>The lowest objective value, regardless of which input produced it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6172676d696e2d31302d6f6e65" id="devoirs3-selection-6172676d696e2d31302d6f6e65-4" value="DAgauce" data-devoirs3-option="" data-option-id="DAgauce" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The input value that produces the smallest output of an objective function.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of argmin. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">argmin-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Only one of the following is a valid description of dominates. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"dominates-10-one"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of dominates. Mark that one."</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> dominates_10_one_choices,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="dominates-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of dominates. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f6d696e617465732d31302d6f6e65" id="devoirs3-selection-646f6d696e617465732d31302d6f6e65-1" value="AAuoxvd" data-devoirs3-option="" data-option-id="AAuoxvd" data-feedback="Dominance is defined by objective outcomes, not by a vote or popularity." data-feedback-html="Dominance is defined by objective outcomes, not by a vote or popularity.">
+    <span>A choice that is preferred by the greatest number of people.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f6d696e617465732d31302d6f6e65" id="devoirs3-selection-646f6d696e617465732d31302d6f6e65-2" value="BAaszeg" data-devoirs3-option="" data-option-id="BAaszeg" data-feedback="Commensurability concerns units; dominance compares choices on their separate objective outputs." data-feedback-html="Commensurability concerns units; dominance compares choices on their separate objective outputs.">
+    <span>A claim that two objectives have identical units and can be added.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f6d696e617465732d31302d6f6e65" id="devoirs3-selection-646f6d696e617465732d31302d6f6e65-3" value="CAffyeg" data-devoirs3-option="" data-option-id="CAffyeg" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A policy choice dominates another when both objective outputs improve.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-646f6d696e617465732d31302d6f6e65" id="devoirs3-selection-646f6d696e617465732d31302d6f6e65-4" value="DAxcbtb" data-devoirs3-option="" data-option-id="DAxcbtb" data-feedback="That is a shadow price; dominance means one option is better on all objectives." data-feedback-html="That is a shadow price; dominance means one option is better on all objectives.">
+    <span>A measure of the price paid to improve one objective.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of dominates. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">dominates-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Only one of the following is a valid description of incommensurate. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"incommensurate-10-one"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of incommensurate. Mark that one."</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> incommensurate_10_one_choices,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="incommensurate-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of incommensurate. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65" id="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65-1" value="AAhjxtl" data-devoirs3-option="" data-option-id="AAhjxtl" data-feedback="An empty input domain is unrelated; incommensurate describes outputs with different units." data-feedback-html="An empty input domain is unrelated; incommensurate describes outputs with different units.">
+    <span>A condition in which an objective function has no possible inputs.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65" id="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65-2" value="BAnfird" data-devoirs3-option="" data-option-id="BAnfird" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>Not expressed on a common scale, so values cannot be meaningfully combined by addition.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65" id="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65-3" value="CAznaaq" data-devoirs3-option="" data-option-id="CAznaaq" data-feedback="Incommensurate outputs cannot be directly compared by magnitude because they use different dimensions." data-feedback-html="Incommensurate outputs cannot be directly compared by magnitude because they use different dimensions.">
+    <span>A guarantee that two quantities are equal in magnitude.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65" id="devoirs3-selection-696e636f6d6d656e7375726174652d31302d6f6e65-4" value="DAyofod" data-devoirs3-option="" data-option-id="DAyofod" data-feedback="That is model comparison; incommensurate describes objectives that lack a shared measurement scale." data-feedback-html="That is model comparison; incommensurate describes objectives that lack a shared measurement scale.">
+    <span>A strategy for choosing the most likely hypothesis.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of incommensurate. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">incommensurate-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<p>Only one of the following is a valid description of maximum. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"maximum-10-one"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of maximum. Mark that one."</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> maximum_10_one_choices,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="maximum-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of maximum. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6178696d756d2d31302d6f6e65" id="devoirs3-selection-6d6178696d756d2d31302d6f6e65-1" value="AAogoyg" data-devoirs3-option="" data-option-id="AAogoyg" data-feedback="That is a dominance comparison; maximum is the highest output of one objective function." data-feedback-html="That is a dominance comparison; maximum is the highest output of one objective function.">
+    <span>An option that is best on every competing objective.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6178696d756d2d31302d6f6e65" id="devoirs3-selection-6d6178696d756d2d31302d6f6e65-2" value="BAstdrl" data-devoirs3-option="" data-option-id="BAstdrl" data-feedback="That is the domain; the maximum is the greatest output attained." data-feedback-html="That is the domain; the maximum is the greatest output attained.">
+    <span>A set of all possible input values.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6178696d756d2d31302d6f6e65" id="devoirs3-selection-6d6178696d756d2d31302d6f6e65-3" value="CAaytis" data-devoirs3-option="" data-option-id="CAaytis" data-feedback="A maximum is attained only for inputs that produce the highest output." data-feedback-html="A maximum is attained only for inputs that produce the highest output.">
+    <span>A value guaranteed to occur in every evaluation of the function.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d6178696d756d2d31302d6f6e65" id="devoirs3-selection-6d6178696d756d2d31302d6f6e65-4" value="DAambnv" data-devoirs3-option="" data-option-id="DAambnv" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The top output value achieved among the available choices.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of maximum. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">maximum-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<p>Only one of the following is a valid description of minimum. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"minimum-10-one"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of minimum. Mark that one."</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> minimum_10_one_choices,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="minimum-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of minimum. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d696e696d756d2d31302d6f6e65" id="devoirs3-selection-6d696e696d756d2d31302d6f6e65-1" value="AAoawre" data-devoirs3-option="" data-option-id="AAoawre" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The lowest output achieved among the available choices.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d696e696d756d2d31302d6f6e65" id="devoirs3-selection-6d696e696d756d2d31302d6f6e65-2" value="BAosjmu" data-devoirs3-option="" data-option-id="BAosjmu" data-feedback="That is a shadow price; minimum is an objective output value." data-feedback-html="That is a shadow price; minimum is an objective output value.">
+    <span>The price ratio used to compare two objective functions.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d696e696d756d2d31302d6f6e65" id="devoirs3-selection-6d696e696d756d2d31302d6f6e65-3" value="CAevuyk" data-devoirs3-option="" data-option-id="CAevuyk" data-feedback="A minimum is attained for some input; other inputs may produce larger outputs." data-feedback-html="A minimum is attained for some input; other inputs may produce larger outputs.">
+    <span>A value that every possible input must produce.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6d696e696d756d2d31302d6f6e65" id="devoirs3-selection-6d696e696d756d2d31302d6f6e65-4" value="DAielcx" data-devoirs3-option="" data-option-id="DAielcx" data-feedback="The average is not necessarily the smallest output." data-feedback-html="The average is not necessarily the smallest output.">
+    <span>The average output value across all choices.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of minimum. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">minimum-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
+<p>Only one of the following is a valid description of objective function. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"objective-function-10-one"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of objective function. Mark that one."</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> objective_function_10_one_choices,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="objective-function-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of objective function. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65" id="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65-1" value="AAitofb" data-devoirs3-option="" data-option-id="AAitofb" data-feedback="That describes uncertainty; an objective function represents a goal over choices." data-feedback-html="That describes uncertainty; an objective function represents a goal over choices.">
+    <span>A value that measures uncertainty about a single quantity.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65" id="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65-2" value="BAomrfp" data-devoirs3-option="" data-option-id="BAomrfp" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A function constructed to measure how well each available choice serves a particular objective.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65" id="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65-3" value="CAeicqk" data-devoirs3-option="" data-option-id="CAeicqk" data-feedback="Each objective function represents a particular goal and may conflict with others." data-feedback-html="Each objective function represents a particular goal and may conflict with others.">
+    <span>A guarantee that the chosen input will be best for every possible goal.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65" id="devoirs3-selection-6f626a6563746976652d66756e6374696f6e2d31302d6f6e65-4" value="DAgpuok" data-devoirs3-option="" data-option-id="DAgpuok" data-feedback="Data collection can inform a model, but the objective function evaluates choices." data-feedback-html="Data collection can inform a model, but the objective function evaluates choices.">
+    <span>A process for collecting data about a system.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of objective function. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">objective-function-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-8-tab">
+<p>Only one of the following is a valid description of shadow price. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"shadow-price-10-one"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of shadow price. Mark that one."</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> shadow_price_10_one_choices,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="shadow-price-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of shadow price. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736861646f772d70726963652d31302d6f6e65" id="devoirs3-selection-736861646f772d70726963652d31302d6f6e65-1" value="AAbuyfh" data-devoirs3-option="" data-option-id="AAbuyfh" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A conversion rate that quantifies the trade between competing objective outputs.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736861646f772d70726963652d31302d6f6e65" id="devoirs3-selection-736861646f772d70726963652d31302d6f6e65-2" value="BAdcllc" data-devoirs3-option="" data-option-id="BAdcllc" data-feedback="That is the maximum; a shadow price is a ratio between changes in objectives." data-feedback-html="That is the maximum; a shadow price is a ratio between changes in objectives.">
+    <span>The maximum value of an objective function.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736861646f772d70726963652d31302d6f6e65" id="devoirs3-selection-736861646f772d70726963652d31302d6f6e65-3" value="CAytnbm" data-devoirs3-option="" data-option-id="CAytnbm" data-feedback="A shadow price gives a ratio between changes; it does not make the objectives equal." data-feedback-html="A shadow price gives a ratio between changes; it does not make the objectives equal.">
+    <span>A conversion that makes two objective outputs exactly equal.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736861646f772d70726963652d31302d6f6e65" id="devoirs3-selection-736861646f772d70726963652d31302d6f6e65-4" value="DAehywa" data-devoirs3-option="" data-option-id="DAehywa" data-feedback="A shadow price compares objective outputs and need not involve money or a market purchase." data-feedback-html="A shadow price compares objective outputs and need not involve money or a market purchase.">
+    <span>The market price paid in money for a single physical product.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of shadow price. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">shadow-price-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-9-tab">
+<p>Only one of the following is a valid description of trade-off. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"trade-off-10-one"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of trade-off. Mark that one."</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> trade_off_10_one_choices,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-10" data-label="trade-off-10-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of trade-off. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726164652d6f66662d31302d6f6e65" id="devoirs3-selection-74726164652d6f66662d31302d6f6e65-1" value="AArgiri" data-devoirs3-option="" data-option-id="AArgiri" data-feedback="Trade-offs arise because competing objectives must be balanced." data-feedback-html="Trade-offs arise because competing objectives must be balanced.">
+    <span>A situation where there is only one possible objective.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726164652d6f66662d31302d6f6e65" id="devoirs3-selection-74726164652d6f66662d31302d6f6e65-2" value="BAfneob" data-devoirs3-option="" data-option-id="BAfneob" data-feedback="The chapter distinguishes a trade-off as a balance of objectives faced by one party." data-feedback-html="The chapter distinguishes a trade-off as a balance of objectives faced by one party.">
+    <span>A transaction in which two different people exchange goods.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726164652d6f66662d31302d6f6e65" id="devoirs3-selection-74726164652d6f66662d31302d6f6e65-3" value="CAsqdld" data-devoirs3-option="" data-option-id="CAsqdld" data-feedback="That is a win-win improvement or dominance, not a trade-off." data-feedback-html="That is a win-win improvement or dominance, not a trade-off.">
+    <span>A choice that improves every objective without worsening any.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726164652d6f66662d31302d6f6e65" id="devoirs3-selection-74726164652d6f66662d31302d6f6e65-4" value="DAqalfm" data-devoirs3-option="" data-option-id="DAqalfm" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A situation in which one person must balance competing objectives.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of trade-off. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">trade-off-10-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

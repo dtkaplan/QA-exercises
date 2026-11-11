@@ -1,0 +1,28 @@
+
+```{devoirs_choices vector_16_one_choices}
+- A probability distribution over possible outcomes.:
+    correct: false
+    feedback: A distribution assigns likelihoods; a vector is a list of components
+      with a geometric interpretation.
+- A model parameter that scales an input variable.:
+    correct: false
+    feedback: That is a coefficient; a vector is a multidimensional quantity.
+- A quantity with components that represents both direction and magnitude in a space.:
+    correct: true
+    feedback: Correct.
+- A plane containing every possible data specimen.:
+    correct: false
+    feedback: A plane is a geometric space; an individual specimen's measurements
+      may be represented by a vector.
+```
+
+Only one of the following is a valid description of vector. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "vector-16-one",
+  question = "Only one of the following is a valid description of vector. Mark that one.",
+  answers = vector_16_one_choices,
+  multiple = FALSE
+)()
+```

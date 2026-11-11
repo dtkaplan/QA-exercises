@@ -1,0 +1,32 @@
+
+```{devoirs_choices accumulation_15_two_choices}
+- The process of adding marginal changes over an interval to obtain a total change.:
+    correct: true
+    feedback: Correct.
+- The difference between two quantities without considering intermediate changes.:
+    correct: false
+    feedback: Accumulation accounts for successive contributions between the starting
+      and ending levels.
+- Building a total quantity by successively adding the contributions at each input level.:
+    correct: true
+    feedback: Correct.
+- The output of a function at one specified input.:
+    correct: false
+    feedback: A function value is a single evaluation; accumulation combines changes
+      across an interval.
+- A method for increasing a quantity by the same fixed amount each year.:
+    correct: false
+    feedback: That is one possible pattern of change; accumulation is the general
+      accounting process for totals from rates.
+```
+
+Two of the following are valid descriptions of accumulation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "accumulation-15-two",
+  question = "Two of the following are valid descriptions of accumulation. The other three are not. Mark both of the VALID descriptions.",
+  answers = accumulation_15_two_choices,
+  multiple = TRUE
+)()
+```

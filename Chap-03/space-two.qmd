@@ -1,0 +1,33 @@
+
+```{devoirs_choices space_3_two_choices}
+- A phrase identifying the context-setting quantity against which a change is examined.:
+    correct: false
+    feedback: This describes with respect to, not space. In this chapter, space refers
+      to a collection of quantities whose values identify locations within it.
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: false
+    feedback: This describes worth, not space. In this chapter, space refers to a
+      collection of quantities whose values identify locations within it.
+- A mathematical setting where locations represent combinations of values.:
+    correct: true
+    feedback: Correct.
+- A multidimensional representation in which each point corresponds to a set of quantity values.:
+    correct: true
+    feedback: Correct.
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not space. In this chapter, space
+      refers to a collection of quantities whose values identify locations within
+      it.
+```
+
+Two of the following are valid descriptions of space. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "space-3-two",
+  question = "Two of the following are valid descriptions of space. The other three are not. Mark both of the VALID descriptions.",
+  answers = space_3_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,35 @@
+
+```{devoirs_choices rate_of_change_4_two_choices}
+- A two-quantity measure that relates a primary change to a change with respect to another variable.:
+    correct: true
+    feedback: Correct.
+- A machine-learning system that uses patterns and alignments in text to generate language.:
+    correct: false
+    feedback: This describes Large language model (LLM), not rate of change. In this
+      chapter, rate of change refers to the change in a primary quantity divided by
+      the corresponding change in a context-setting quantity.
+- The slope-like quantity formed from paired differences in output and input quantities.:
+    correct: true
+    feedback: Correct.
+- Arranging values in order so their relative sizes are easier to compare.:
+    correct: false
+    feedback: This describes sorting, not rate of change. In this chapter, rate of
+      change refers to the change in a primary quantity divided by the corresponding
+      change in a context-setting quantity.
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not rate of change. In this chapter, rate
+      of change refers to the change in a primary quantity divided by the corresponding
+      change in a context-setting quantity.
+```
+
+Two of the following are valid descriptions of rate of change. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "rate-of-change-4-two",
+  question = "Two of the following are valid descriptions of rate of change. The other three are not. Mark both of the VALID descriptions.",
+  answers = rate_of_change_4_two_choices,
+  multiple = TRUE
+)()
+```

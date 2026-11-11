@@ -1,0 +1,31 @@
+
+```{devoirs_choices optimization_16_two_choices}
+- The task of selecting a choice that produces the best value of a specified objective.:
+    correct: true
+    feedback: Correct.
+- A process that always minimizes every possible objective simultaneously.:
+    correct: false
+    feedback: Objectives can conflict; optimization depends on the chosen objective
+      or trade-off criteria.
+- A procedure that requires a symbolic equation for the objective function.:
+    correct: false
+    feedback: The chapter notes that optimization can use local evaluations even when
+      a formula is unavailable.
+- A way to classify data using labels supplied for every possible case.:
+    correct: false
+    feedback: That describes a supervised learning task, not optimization generally.
+- Finding input values that maximize or minimize an objective function.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of optimization. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "optimization-16-two",
+  question = "Two of the following are valid descriptions of optimization. The other three are not. Mark both of the VALID descriptions.",
+  answers = optimization_16_two_choices,
+  multiple = TRUE
+)()
+```

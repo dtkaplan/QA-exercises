@@ -1,0 +1,33 @@
+```{devoirs_choices system_6_one_choices}
+- A framework or organized structure made up of interconnected elements.:
+    correct: yes
+    feedback: Correct.
+- ? |
+    A structure in which every element is independent and cannot affect another.
+  : correct: no
+    feedback: |
+      This contradicts the chapter's emphasis on interconnected elements in a system.
+- ? |
+    A procedure for turning function inputs into an output.
+  : correct: no
+    feedback: |
+      That describes an algorithm. A system is the organized structure whose elements and relationships may be modeled.
+- ? |
+    A list of numerical values with no interpretation or relationships.
+  : correct: no
+    feedback: |
+      A system requires organized, interconnected elements; an unrelated list of values does not meet that description.
+```
+
+Only one of the following is a valid description of system . Mark that one.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "system-6-one",
+  question = "Only one of the following is a valid description of system . Mark that one.",
+  answers = system_6_one_choices,
+  multiple = FALSE
+)()
+```
+

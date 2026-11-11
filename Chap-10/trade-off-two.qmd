@@ -1,0 +1,31 @@
+
+```{devoirs_choices trade_off_10_two_choices}
+- A policy that maximizes one objective and ignores all other goals.:
+    correct: false
+    feedback: A trade-off involves balancing competing objectives, rather than considering
+      only one.
+- A conflict between objectives that requires deciding how much of each to prioritize.:
+    correct: true
+    feedback: Correct.
+- A decision in which all alternatives have identical outcomes.:
+    correct: false
+    feedback: If outcomes are identical, there is no competing objective benefit to
+      balance.
+- A choice that improves every objective without worsening any.:
+    correct: false
+    feedback: That is a win-win improvement or dominance, not a trade-off.
+- A situation where pursuing one objective can mean sacrificing some of another.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of trade-off. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "trade-off-10-two",
+  question = "Two of the following are valid descriptions of trade-off. The other three are not. Mark both of the VALID descriptions.",
+  answers = trade_off_10_two_choices,
+  multiple = TRUE
+)()
+```

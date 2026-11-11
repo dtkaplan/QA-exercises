@@ -46,4 +46,21 @@ library(drill)
 
 
 
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Posterior
+
+{{< include ../Chap-12/posterior-two.qmd >}}
+
+## Prior
+
+{{< include ../Chap-12/prior-two.qmd >}}
+
+:::
+::::
+
+
 

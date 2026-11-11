@@ -1,0 +1,32 @@
+
+```{devoirs_choices sorting_5_two_choices}
+- Arranging values in order so their relative sizes are easier to compare.:
+    correct: true
+    feedback: Correct.
+- Fast, broadly applicable reasoning that uses useful but fallible rules of thumb.:
+    correct: false
+    feedback: This describes heuristic reasoning, not sorting. In this chapter, sorting
+      refers to arranging values in order so their relative sizes are easier to compare.
+- Putting data from smallest to largest or largest to smallest.:
+    correct: true
+    feedback: Correct.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not sorting. In this chapter, sorting
+      refers to arranging values in order so their relative sizes are easier to compare.
+- An epidemic model that tracks susceptible, infective, and recovered people over time.:
+    correct: false
+    feedback: This describes SIR model, not sorting. In this chapter, sorting refers
+      to arranging values in order so their relative sizes are easier to compare.
+```
+
+Two of the following are valid descriptions of sorting. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "sorting-5-two",
+  question = "Two of the following are valid descriptions of sorting. The other three are not. Mark both of the VALID descriptions.",
+  answers = sorting_5_two_choices,
+  multiple = TRUE
+)()
+```

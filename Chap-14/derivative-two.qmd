@@ -1,0 +1,31 @@
+
+```{devoirs_choices derivative_14_two_choices}
+- A function derived from an original function whose output is its slope at the same input.:
+    correct: true
+    feedback: Correct.
+- A single average rate of change across the entire domain.:
+    correct: false
+    feedback: The derivative is a function giving rates of change at inputs, not necessarily
+      one overall average.
+- A new function that maps each original input to the original function's local rate of change.:
+    correct: true
+    feedback: Correct.
+- The total accumulated change in a function over its domain.:
+    correct: false
+    feedback: Accumulation relates to anti-differentiation; the derivative gives instantaneous
+      rates of change.
+- A number that must be constant for every input to the function.:
+    correct: false
+    feedback: A derivative is itself a function and can vary across inputs.
+```
+
+Two of the following are valid descriptions of derivative. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "derivative-14-two",
+  question = "Two of the following are valid descriptions of derivative. The other three are not. Mark both of the VALID descriptions.",
+  answers = derivative_14_two_choices,
+  multiple = TRUE
+)()
+```

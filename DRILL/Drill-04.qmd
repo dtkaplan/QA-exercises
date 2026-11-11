@@ -84,3 +84,23 @@ library(drill)
 ::::
 
 
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Compound rate
+
+{{< include ../Chap-04/compound-rates-two.qmd >}}
+
+## Rate
+
+{{< include ../Chap-04/rate-two.qmd >}}
+
+## Rate of change
+
+{{< include ../Chap-04/rate-of-change-two.qmd >}}
+
+:::
+::::
+

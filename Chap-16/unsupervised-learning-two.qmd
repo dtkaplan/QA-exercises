@@ -1,0 +1,32 @@
+
+```{devoirs_choices unsupervised_learning_16_two_choices}
+- A learning task that seeks a useful low-dimensional subspace without known target categories.:
+    correct: true
+    feedback: Correct.
+- A procedure that discards all measurements and keeps only category names.:
+    correct: false
+    feedback: Without labels, the method analyzes measurements to discover structure
+      rather than relying on category names.
+- A process that cannot use data because no answers are supplied.:
+    correct: false
+    feedback: Unsupervised learning uses data to find patterns even when labels are
+      unavailable.
+- Learning that searches for organization in data without being told in advance what to look for.:
+    correct: true
+    feedback: Correct.
+- A fixed rule written by a human and applied without adjustment.:
+    correct: false
+    feedback: Learning aims to find or develop patterns from data, rather than merely
+      apply a fixed rule.
+```
+
+Two of the following are valid descriptions of unsupervised learning. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "unsupervised-learning-16-two",
+  question = "Two of the following are valid descriptions of unsupervised learning. The other three are not. Mark both of the VALID descriptions.",
+  answers = unsupervised_learning_16_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,35 @@
+
+```{devoirs_choices scientific_notation_5_two_choices}
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not scientific notation. In this chapter,
+      scientific notation refers to a number format that expresses a value as a mantissa
+      multiplied by a power of ten.
+- A notation such as 9.461 times ten to the twelfth for representing a large value.:
+    correct: true
+    feedback: Correct.
+- Representations of items, processes, or settings that are easier to use than the reality.:
+    correct: false
+    feedback: This describes models, not scientific notation. In this chapter, scientific
+      notation refers to a number format that expresses a value as a mantissa multiplied
+      by a power of ten.
+- A number format that expresses a value as a mantissa multiplied by a power of ten.:
+    correct: true
+    feedback: Correct.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not scientific notation. In this chapter,
+      scientific notation refers to a number format that expresses a value as a mantissa
+      multiplied by a power of ten.
+```
+
+Two of the following are valid descriptions of scientific notation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "scientific-notation-5-two",
+  question = "Two of the following are valid descriptions of scientific notation. The other three are not. Mark both of the VALID descriptions.",
+  answers = scientific_notation_5_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,28 @@
+
+```{devoirs_choices posterior_12_one_choices}
+- The after-data state of knowledge about a quantity or hypothesis.:
+    correct: true
+    feedback: Correct.
+- The likelihood of one observation under a specific model.:
+    correct: false
+    feedback: That is a likelihood; the posterior combines likelihood information
+      with a prior.
+- A random number selected before an experiment begins.:
+    correct: false
+    feedback: A random draw is not the posterior distribution of knowledge after data.
+- The probability distribution used to generate the observed data.:
+    correct: false
+    feedback: That may be a likelihood model; the posterior is the updated distribution
+      after combining it with prior knowledge.
+```
+
+Only one of the following is a valid description of posterior. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "posterior-12-one",
+  question = "Only one of the following is a valid description of posterior. Mark that one.",
+  answers = posterior_12_one_choices,
+  multiple = FALSE
+)()
+```

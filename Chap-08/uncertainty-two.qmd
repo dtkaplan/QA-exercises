@@ -1,0 +1,32 @@
+
+```{devoirs_choices uncertainty_8_two_choices}
+- A fixed relationship that determines one output from specified inputs.:
+    correct: false
+    feedback: That describes a function relationship; uncertainty concerns incomplete
+      knowledge about a quantity's value.
+- A guarantee that a quantity will take one exact, known value.:
+    correct: false
+    feedback: Uncertainty concerns what is not known precisely; a guaranteed exact
+      value leaves no uncertainty.
+- The incomplete knowledge about the value a quantity will have.:
+    correct: true
+    feedback: Correct.
+- A bell-shaped curve with a center and spread.:
+    correct: false
+    feedback: That describes a normal distribution, one possible model of uncertainty
+      rather than uncertainty itself.
+- The variation in a quantity that remains when its exact value is unknown.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of uncertainty. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "uncertainty-8-two",
+  question = "Two of the following are valid descriptions of uncertainty. The other three are not. Mark both of the VALID descriptions.",
+  answers = uncertainty_8_two_choices,
+  multiple = TRUE
+)()
+```

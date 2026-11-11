@@ -1,0 +1,29 @@
+
+```{devoirs_choices coordinate_plane_3_one_choices}
+- A standardized measure consisting of a pure number and a unit, optionally with a descriptor.:
+    correct: false
+    feedback: This describes quantity, not coordinate plane. In this chapter, coordinate
+      plane refers to a two-dimensional space marked by two perpendicular number lines.
+- A location in a space that corresponds to one or more coordinate values.:
+    correct: false
+    feedback: This describes point, not coordinate plane. In this chapter, coordinate
+      plane refers to a two-dimensional space marked by two perpendicular number lines.
+- A way to represent paired quantity values as points on two intersecting number lines.:
+    correct: true
+    feedback: Correct.
+- A number with no unit designation, such as seven or pi.:
+    correct: false
+    feedback: This describes pure number, not coordinate plane. In this chapter, coordinate
+      plane refers to a two-dimensional space marked by two perpendicular number lines.
+```
+
+Only one of the following is a valid description of coordinate plane. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "coordinate-plane-3-one",
+  question = "Only one of the following is a valid description of coordinate plane. Mark that one.",
+  answers = coordinate_plane_3_one_choices,
+  multiple = FALSE
+)()
+```

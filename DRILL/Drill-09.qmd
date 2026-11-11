@@ -74,10 +74,29 @@ The instructors fed an AI the chapter text and asked for some simple questions b
 ## vi.
 
  include ../Chap-09/brother-blow-futon.qmd 
-
-
-
+ 
 -->
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Coefficient
+
+{{< include ../Chap-09/coefficient-two.qmd >}}
+
+## Contour plot
+
+{{< include ../Chap-09/contour-plot-two.qmd >}}
+
+## Linear regression
+
+{{< include ../Chap-09/linear-regression-two.qmd >}}
+
+:::
+
+::::
 
 
 

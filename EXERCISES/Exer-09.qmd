@@ -7,7 +7,7 @@ subtitle: "Chapter 9 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-09")`
+`r devoirs3::devoirs_start("QA-exer-09", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -36,4 +36,26 @@ source("../_exercise_startup.R")
 
 :::
 
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Coefficient
+
+{{< include ../Chap-09/coefficient-one.qmd >}}
+
+## Contour plot
+
+{{< include ../Chap-09/contour-plot-one.qmd >}}
+
+## Linear regression
+
+{{< include ../Chap-09/linear-regression-one.qmd >}}
+
+:::
+
+::::
 

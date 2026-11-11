@@ -1,0 +1,29 @@
+
+```{devoirs_choices units_3_one_choices}
+- Arranging values in order so their relative sizes are easier to compare.:
+    correct: false
+    feedback: This describes sorting, not units. In this chapter, units refers to
+      standardized measures that specify how much of a quantity is present.
+- Rates formed by arithmetic combinations of other rates.:
+    correct: false
+    feedback: This describes compound rates, not units. In this chapter, units refers
+      to standardized measures that specify how much of a quantity is present.
+- The named measurement scale attached to a pure number, such as meters or seconds.:
+    correct: true
+    feedback: Correct.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not units. In this chapter, units refers to
+      standardized measures that specify how much of a quantity is present.
+```
+
+Only one of the following is a valid description of units. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "units-3-one",
+  question = "Only one of the following is a valid description of units. Mark that one.",
+  answers = units_3_one_choices,
+  multiple = FALSE
+)()
+```

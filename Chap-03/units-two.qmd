@@ -1,0 +1,32 @@
+
+```{devoirs_choices units_3_two_choices}
+- A number format that expresses a value as a mantissa multiplied by a power of ten.:
+    correct: false
+    feedback: This describes scientific notation, not units. In this chapter, units
+      refers to standardized measures that specify how much of a quantity is present.
+- Named measures that make the numerical part of a quantity interpretable.:
+    correct: true
+    feedback: Correct.
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not units. In this chapter, units
+      refers to standardized measures that specify how much of a quantity is present.
+- The measurement component that distinguishes five meters from five seconds.:
+    correct: true
+    feedback: Correct.
+- Arranging values in order so their relative sizes are easier to compare.:
+    correct: false
+    feedback: This describes sorting, not units. In this chapter, units refers to
+      standardized measures that specify how much of a quantity is present.
+```
+
+Two of the following are valid descriptions of units. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "units-3-two",
+  question = "Two of the following are valid descriptions of units. The other three are not. Mark both of the VALID descriptions.",
+  answers = units_3_two_choices,
+  multiple = TRUE
+)()
+```

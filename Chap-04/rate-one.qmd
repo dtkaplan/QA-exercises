@@ -1,0 +1,32 @@
+
+```{devoirs_choices rate_4_one_choices}
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not rate. In this chapter, rate refers
+      to a ratio of two quantities where division expresses a relationship between
+      their underlying dimensions.
+- A measure of the size of a number, closely related to its exponent in scientific notation.:
+    correct: false
+    feedback: This describes magnitude, not rate. In this chapter, rate refers to
+      a ratio of two quantities where division expresses a relationship between their
+      underlying dimensions.
+- The facts, beliefs, assumptions, and observations available at the start of reasoning.:
+    correct: false
+    feedback: This describes givens, not rate. In this chapter, rate refers to a ratio
+      of two quantities where division expresses a relationship between their underlying
+      dimensions.
+- A ratio used to relate dimensions, such as distance traveled to fuel consumed.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of rate. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "rate-4-one",
+  question = "Only one of the following is a valid description of rate. Mark that one.",
+  answers = rate_4_one_choices,
+  multiple = FALSE
+)()
+```

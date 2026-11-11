@@ -1,0 +1,29 @@
+
+```{devoirs_choices sample_2_one_choices}
+- A two-dimensional space marked by two perpendicular number lines.:
+    correct: false
+    feedback: This describes coordinate plane, not sample. In this chapter, sample
+      refers to a subset of specimens selected from a larger population for study.
+- A portion of a population used to investigate its properties or relationships.:
+    correct: true
+    feedback: Correct.
+- A dimensionless ratio of equal quantities used to convert between commensurate units.:
+    correct: false
+    feedback: This describes conversion factor, not sample. In this chapter, sample
+      refers to a subset of specimens selected from a larger population for study.
+- Examining a system by breaking it into contributing components.:
+    correct: false
+    feedback: This describes analysis, not sample. In this chapter, sample refers
+      to a subset of specimens selected from a larger population for study.
+```
+
+Only one of the following is a valid description of sample. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "sample-2-one",
+  question = "Only one of the following is a valid description of sample. Mark that one.",
+  answers = sample_2_one_choices,
+  multiple = FALSE
+)()
+```

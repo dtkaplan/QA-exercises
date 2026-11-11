@@ -1,0 +1,32 @@
+
+```{devoirs_choices calculus_14_two_choices}
+- A method for calculating only the average of a dataset.:
+    correct: false
+    feedback: Calculus in this chapter concerns functions and rates of change, not
+      just data averages.
+- The process of adding up observations without regard to their input values.:
+    correct: false
+    feedback: The chapter focuses on calculus as relating functions by differentiation
+      and accumulation.
+- The study of differentiation, which constructs rate-of-change functions from functions.:
+    correct: true
+    feedback: Correct.
+- A framework for relating functions through derivatives and rates of change.:
+    correct: true
+    feedback: Correct.
+- A method that applies only to physical motion through time.:
+    correct: false
+    feedback: Rates of change and derivatives also apply to inputs such as spending,
+      not only time or motion.
+```
+
+Two of the following are valid descriptions of calculus. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "calculus-14-two",
+  question = "Two of the following are valid descriptions of calculus. The other three are not. Mark both of the VALID descriptions.",
+  answers = calculus_14_two_choices,
+  multiple = TRUE
+)()
+```

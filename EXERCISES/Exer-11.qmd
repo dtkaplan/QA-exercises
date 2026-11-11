@@ -7,7 +7,7 @@ subtitle: "Chapter 11 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-11")`
+`r devoirs3::devoirs_start("QA-exer-11", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -35,5 +35,31 @@ source("../_exercise_startup.R")
 
 
 :::
+
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Likelihood
+
+{{< include ../Chap-11/likelihood-one.qmd >}}
+
+## Likelihood framework
+
+{{< include ../Chap-11/likelihood-framework-one.qmd >}}
+
+## Null hypothesis
+
+{{< include ../Chap-11/null-hypothesis-one.qmd >}}
+
+## Scientific method
+
+{{< include ../Chap-11/scientific-method-one.qmd >}}
+
+:::
+::::
 
 

@@ -1,0 +1,29 @@
+
+```{devoirs_choices euler_framework_13_one_choices}
+- An algebraic procedure that requires solving a closed-form equation for every system.:
+    correct: false
+    feedback: The chapter emphasizes an arithmetic, stepwise method that can be carried
+      out computationally.
+- A method that directly gives the exact state at every future time without calculating changes.:
+    correct: false
+    feedback: The framework uses the dynamical rule and repeated small steps to calculate
+      a trajectory.
+- A probability model for assigning likelihood to possible states.:
+    correct: false
+    feedback: The Euler framework is a method for describing and calculating dynamical
+      change, not a probability distribution.
+- A stepwise arithmetic method for tracing a trajectory from a dynamical rule and initial state.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of Euler framework. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "euler-framework-13-one",
+  question = "Only one of the following is a valid description of Euler framework. Mark that one.",
+  answers = euler_framework_13_one_choices,
+  multiple = FALSE
+)()
+```

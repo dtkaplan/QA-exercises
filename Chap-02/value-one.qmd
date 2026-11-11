@@ -1,0 +1,30 @@
+
+```{devoirs_choices value_2_one_choices}
+- Units formed by multiplying or dividing base units.:
+    correct: false
+    feedback: This describes derived units, not value. In this chapter, value refers
+      to the entry at the intersection of one specimen and one variable in a data
+      frame.
+- A recorded level or category for a particular variable and specimen.:
+    correct: true
+    feedback: Correct.
+- A unit for counting people, from the Latin word for head.:
+    correct: false
+    feedback: This describes capita, not value. In this chapter, value refers to the
+      entry at the intersection of one specimen and one variable in a data frame.
+- Examining a system by breaking it into contributing components.:
+    correct: false
+    feedback: This describes analysis, not value. In this chapter, value refers to
+      the entry at the intersection of one specimen and one variable in a data frame.
+```
+
+Only one of the following is a valid description of value. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "value-2-one",
+  question = "Only one of the following is a valid description of value. Mark that one.",
+  answers = value_2_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,31 @@
+
+```{devoirs_choices variance_8_two_choices}
+- The squared counterpart to standard deviation for describing a distribution's spread.:
+    correct: true
+    feedback: Correct.
+- The average or central value of a distribution.:
+    correct: false
+    feedback: The mean describes the center; variance describes spread.
+- A relative probability assigned to one possible outcome.:
+    correct: false
+    feedback: Relative probability describes an outcome's likelihood; variance summarizes
+      distribution spread.
+- The square root of standard deviation, describing the center of a distribution.:
+    correct: false
+    feedback: Variance is the square of standard deviation and describes spread, not
+      center.
+- The square of a distribution's standard deviation, used to describe spread.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of variance. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "variance-8-two",
+  question = "Two of the following are valid descriptions of variance. The other three are not. Mark both of the VALID descriptions.",
+  answers = variance_8_two_choices,
+  multiple = TRUE
+)()
+```

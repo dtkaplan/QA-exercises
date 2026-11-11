@@ -1,0 +1,32 @@
+
+```{devoirs_choices dimension_2_two_choices}
+- Examining a system by breaking it into contributing components.:
+    correct: false
+    feedback: This describes analysis, not dimension. In this chapter, dimension refers
+      to an aspect, property, or characteristic of an object or system.
+- A feature of an object that can be described or operationalized as a quantity.:
+    correct: true
+    feedback: Correct.
+- Fundamental dimensions from which derived dimensions are formed.:
+    correct: false
+    feedback: This describes base dimensions, not dimension. In this chapter, dimension
+      refers to an aspect, property, or characteristic of an object or system.
+- An aspect, property, or characteristic of an object or system.:
+    correct: true
+    feedback: Correct.
+- The kind of object represented by every specimen in a data frame.:
+    correct: false
+    feedback: This describes object type, not dimension. In this chapter, dimension
+      refers to an aspect, property, or characteristic of an object or system.
+```
+
+Two of the following are valid descriptions of dimension. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dimension-2-two",
+  question = "Two of the following are valid descriptions of dimension. The other three are not. Mark both of the VALID descriptions.",
+  answers = dimension_2_two_choices,
+  multiple = TRUE
+)()
+```

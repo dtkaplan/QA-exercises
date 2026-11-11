@@ -7,7 +7,7 @@ subtitle: "Chapter 6 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-06")`
+`r devoirs3::devoirs_start("QA-exer-06", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -61,5 +61,33 @@ source("../_exercise_startup.R")
 
 
 :::
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## algorithm
+
+{{< include ../Chap-06/algorithm-one.qmd >}}
+
+## arg
+
+{{< include ../Chap-06/arg-one.qmd >}}
+
+## exogenous
+
+{{< include ../Chap-06/exogenous-one.qmd >}}
+
+## function
+
+{{< include ../Chap-06/functions-one.qmd >}}
+
+## system
+
+{{< include ../Chap-06/system-one.qmd >}}
+
+:::
+::::
 
 

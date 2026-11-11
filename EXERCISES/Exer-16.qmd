@@ -6,7 +6,7 @@ title: "*Quantitative Argumentation*"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-16")`
+`r devoirs3::devoirs_start("QA-exer-16", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -17,4 +17,56 @@ source("../_exercise_startup.R")
 
 :::
 
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+
+## Alignment between
+
+{{< include ../Chap-16/alignment-between-two-vectors-one.qmd >}}
+
+## Dot product
+
+{{< include ../Chap-16/dot-product-one.qmd >}}
+
+## Gradient
+
+{{< include ../Chap-16/gradient-one.qmd >}}
+
+## Learning
+
+{{< include ../Chap-16/learning-one.qmd >}}
+
+## Length of a vector
+
+{{< include ../Chap-16/length-of-a-vector-one.qmd >}}
+
+## Optimization
+
+{{< include ../Chap-16/optimization-one.qmd >}}
+
+
+## Projection
+
+{{< include ../Chap-16/projection-one.qmd >}}
+
+## Subspace
+
+{{< include ../Chap-16/subspace-one.qmd >}}
+
+## Unsupervised learning
+
+{{< include ../Chap-16/unsupervised-learning-one.qmd >}}
+
+## Vector
+
+{{< include ../Chap-16/vector-one.qmd >}}
+
+
+:::
+::::
 

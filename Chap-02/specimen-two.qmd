@@ -1,0 +1,32 @@
+
+```{devoirs_choices specimen_2_two_choices}
+- A column in a data frame that records one property across its specimens.:
+    correct: false
+    feedback: This describes variable, not specimen. In this chapter, specimen refers
+      to one individual object or event represented by a row in a data frame.
+- The entity described by one record in a structured dataset.:
+    correct: true
+    feedback: Correct.
+- Accounting for other variables while examining a relationship of interest.:
+    correct: false
+    feedback: This describes controlling for, not specimen. In this chapter, specimen
+      refers to one individual object or event represented by a row in a data frame.
+- A unit for counting people, from the Latin word for head.:
+    correct: false
+    feedback: This describes capita, not specimen. In this chapter, specimen refers
+      to one individual object or event represented by a row in a data frame.
+- One individual object or event represented by a row in a data frame.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of specimen. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "specimen-2-two",
+  question = "Two of the following are valid descriptions of specimen. The other three are not. Mark both of the VALID descriptions.",
+  answers = specimen_2_two_choices,
+  multiple = TRUE
+)()
+```

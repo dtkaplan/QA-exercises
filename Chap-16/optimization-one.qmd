@@ -1,0 +1,28 @@
+
+```{devoirs_choices optimization_16_one_choices}
+- Searching a function's input space for a maximum or minimum output.:
+    correct: true
+    feedback: Correct.
+- A way to classify data using labels supplied for every possible case.:
+    correct: false
+    feedback: That describes a supervised learning task, not optimization generally.
+- A process that always minimizes every possible objective simultaneously.:
+    correct: false
+    feedback: Objectives can conflict; optimization depends on the chosen objective
+      or trade-off criteria.
+- A measure of alignment between two vectors.:
+    correct: false
+    feedback: Alignment is a geometric measure; optimization is the task of finding
+      best input settings.
+```
+
+Only one of the following is a valid description of optimization. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "optimization-16-one",
+  question = "Only one of the following is a valid description of optimization. Mark that one.",
+  answers = optimization_16_one_choices,
+  multiple = FALSE
+)()
+```

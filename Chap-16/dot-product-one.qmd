@@ -1,0 +1,27 @@
+
+```{devoirs_choices dot_product_16_one_choices}
+- A probability assigned to the event that two vectors match exactly.:
+    correct: false
+    feedback: The dot product is not a probability; it is used to measure vector alignment.
+- A ratio of each component in the first vector to the matching component in the second.:
+    correct: false
+    feedback: The operation multiplies corresponding components and sums the products.
+- A rule that projects one vector onto another without using components.:
+    correct: false
+    feedback: The dot product is computed from corresponding components and can be
+      used in projection calculations.
+- An arithmetic operation on two vectors used to calculate their directional alignment.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of dot product. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dot-product-16-one",
+  question = "Only one of the following is a valid description of dot product. Mark that one.",
+  answers = dot_product_16_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,28 @@
+
+```{devoirs_choices random_number_generation_8_one_choices}
+- An operation that removes uncertainty by observing every possible outcome.:
+    correct: false
+    feedback: Generation samples possible outcomes; it does not observe the entire
+      set or eliminate uncertainty.
+- Generating random inputs, with values more likely when the distribution assigns higher relative probability.:
+    correct: true
+    feedback: Correct.
+- Calculating the average and standard deviation of observed data.:
+    correct: false
+    feedback: Those are data summaries, not the process of generating random values.
+- A distribution family centered at a mean with a standard deviation.:
+    correct: false
+    feedback: That describes a normal distribution, one possible source model for
+      random values.
+```
+
+Only one of the following is a valid description of random number generation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "random-number-generation-8-one",
+  question = "Only one of the following is a valid description of random number generation. Mark that one.",
+  answers = random_number_generation_8_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,32 @@
+
+```{devoirs_choices argmin_10_two_choices}
+- The input that produces the largest possible output.:
+    correct: false
+    feedback: That is an argmax; argmin identifies an input producing the smallest
+      output.
+- The setting of the inputs that achieves the least value of a function.:
+    correct: true
+    feedback: Correct.
+- The smallest input value in the function's domain.:
+    correct: false
+    feedback: The argmin need not be the smallest input; it is the input that minimizes
+      the output.
+- The argument, or input, at which a function reaches its minimum.:
+    correct: true
+    feedback: Correct.
+- A ratio comparing an input's cost with its benefit.:
+    correct: false
+    feedback: Argmin is an input choice for a minimization problem, not a cost-benefit
+      ratio.
+```
+
+Two of the following are valid descriptions of argmin. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "argmin-10-two",
+  question = "Two of the following are valid descriptions of argmin. The other three are not. Mark both of the VALID descriptions.",
+  answers = argmin_10_two_choices,
+  multiple = TRUE
+)()
+```

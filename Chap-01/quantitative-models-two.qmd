@@ -1,0 +1,35 @@
+
+```{devoirs_choices quantitative_models_1_two_choices}
+- The entry at the intersection of one specimen and one variable in a data frame.:
+    correct: false
+    feedback: This describes value, not quantitative models. In this chapter, quantitative
+      models refers to models built from mathematical components to support reasoning
+      about real-world situations.
+- An epidemic model that tracks susceptible, infective, and recovered people over time.:
+    correct: false
+    feedback: This describes SIR model, not quantitative models. In this chapter,
+      quantitative models refers to models built from mathematical components to support
+      reasoning about real-world situations.
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not quantitative models. In this chapter,
+      quantitative models refers to models built from mathematical components to support
+      reasoning about real-world situations.
+- Representations that make real-world questions accessible to calculation and formal reasoning.:
+    correct: true
+    feedback: Correct.
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of quantitative models. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "quantitative-models-1-two",
+  question = "Two of the following are valid descriptions of quantitative models. The other three are not. Mark both of the VALID descriptions.",
+  answers = quantitative_models_1_two_choices,
+  multiple = TRUE
+)()
+```

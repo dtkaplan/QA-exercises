@@ -1,0 +1,31 @@
+
+```{devoirs_choices posterior_12_two_choices}
+- A prior belief that excludes every view except the researcher's favorite.:
+    correct: false
+    feedback: The chapter recommends broad priors that acknowledge reasonable alternative
+      views.
+- The distribution representing knowledge about hypotheses after incorporating the data.:
+    correct: true
+    feedback: Correct.
+- A distribution that can never change when new data arrive.:
+    correct: false
+    feedback: Bayesian updating changes the state of knowledge as evidence is incorporated.
+- The likelihood of one observation under a specific model.:
+    correct: false
+    feedback: That is a likelihood; the posterior combines likelihood information
+      with a prior.
+- The result of Bayesian updating, reflecting both prior knowledge and collected data.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of posterior. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "posterior-12-two",
+  question = "Two of the following are valid descriptions of posterior. The other three are not. Mark both of the VALID descriptions.",
+  answers = posterior_12_two_choices,
+  multiple = TRUE
+)()
+```

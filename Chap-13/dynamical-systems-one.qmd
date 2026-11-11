@@ -1,0 +1,27 @@
+
+```{devoirs_choices dynamical_systems_13_one_choices}
+- Systems characterized by a state, a rule for its change, and an evolving trajectory.:
+    correct: true
+    feedback: Correct.
+- Collections of quantities whose values never change.:
+    correct: false
+    feedback: Dynamical systems are specifically about changing states.
+- A set of equations that maps observations to hypotheses without time or state.:
+    correct: false
+    feedback: The chapter defines these systems through state change over time.
+- Systems with no measurable state variables.:
+    correct: false
+    feedback: 'The state is essential: it provides a complete description of the system
+      at an instant.'
+```
+
+Only one of the following is a valid description of dynamical systems. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dynamical-systems-13-one",
+  question = "Only one of the following is a valid description of dynamical systems. Mark that one.",
+  answers = dynamical_systems_13_one_choices,
+  multiple = FALSE
+)()
+```

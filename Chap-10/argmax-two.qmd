@@ -1,0 +1,30 @@
+
+```{devoirs_choices argmax_10_two_choices}
+- The argument, or input, at which a function reaches its maximum.:
+    correct: true
+    feedback: Correct.
+- The maximum output divided by the input that produced it.:
+    correct: false
+    feedback: Argmax refers to an input value, not a ratio of output and input.
+- The setting of the inputs that achieves the highest value of a function.:
+    correct: true
+    feedback: Correct.
+- A procedure for searching randomly through the input domain.:
+    correct: false
+    feedback: A search algorithm may find an argmax, but argmax is the maximizing
+      input itself.
+- A statement that all possible choices have equal objective value.:
+    correct: false
+    feedback: An argmax is a maximizing choice; equal outputs are not required.
+```
+
+Two of the following are valid descriptions of argmax. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "argmax-10-two",
+  question = "Two of the following are valid descriptions of argmax. The other three are not. Mark both of the VALID descriptions.",
+  answers = argmax_10_two_choices,
+  multiple = TRUE
+)()
+```

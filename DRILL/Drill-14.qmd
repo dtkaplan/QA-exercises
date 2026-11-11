@@ -53,3 +53,44 @@ library(drill)
 ::::
 
 
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Calculus
+
+{{< include ../Chap-14/calculus-two.qmd >}}
+
+## Continuity
+
+{{< include ../Chap-14/continuity-two.qmd >}}
+
+## Derivative
+
+{{< include ../Chap-14/derivative-two.qmd >}}
+
+## Differentiation
+
+{{< include ../Chap-14/differentiation-two.qmd >}}
+
+## Diminishing marginal returns
+
+{{< include ../Chap-14/diminishing-marginal-returns-two.qmd >}}
+
+## First derivative
+
+{{< include ../Chap-14/first-derivative-two.qmd >}}
+
+## Margin
+
+{{< include ../Chap-14/margin-two.qmd >}}
+
+## Second derivative
+
+{{< include ../Chap-14/second-derivative-two.qmd >}}
+
+:::
+::::
+

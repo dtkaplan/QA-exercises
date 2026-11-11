@@ -1,0 +1,30 @@
+
+```{devoirs_choices mean_8_two_choices}
+- The central value around which a normal distribution is arranged.:
+    correct: true
+    feedback: Correct.
+- The parameter that determines how widely a normal distribution spreads.:
+    correct: false
+    feedback: Spread is described by the standard deviation; the mean sets the distribution's
+      center.
+- The square of the standard deviation.:
+    correct: false
+    feedback: That is the variance, not the mean.
+- The average-value parameter of a normal distribution.:
+    correct: true
+    feedback: Correct.
+- The probability that an observation falls inside a stated interval.:
+    correct: false
+    feedback: An interval probability is different from the mean parameter.
+```
+
+Two of the following are valid descriptions of mean. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "mean-8-two",
+  question = "Two of the following are valid descriptions of mean. The other three are not. Mark both of the VALID descriptions.",
+  answers = mean_8_two_choices,
+  multiple = TRUE
+)()
+```

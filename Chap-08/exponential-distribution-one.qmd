@@ -1,0 +1,29 @@
+
+```{devoirs_choices exponential_distribution_8_one_choices}
+- A distribution that assigns equal probability to every value in a fixed interval.:
+    correct: false
+    feedback: That describes a uniform distribution; the exponential density decreases
+      over waiting time.
+- A distribution whose density decreases exponentially with the waiting time after an event.:
+    correct: true
+    feedback: Correct.
+- A model that permits negative waiting times but excludes positive ones.:
+    correct: false
+    feedback: Waiting times in this model are nonnegative, with probability extending
+      toward larger times.
+- A function that reports the exact date of the next event.:
+    correct: false
+    feedback: The distribution models uncertainty about the waiting time; it does
+      not identify an exact future event time.
+```
+
+Only one of the following is a valid description of exponential distribution. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "exponential-distribution-8-one",
+  question = "Only one of the following is a valid description of exponential distribution. Mark that one.",
+  answers = exponential_distribution_8_one_choices,
+  multiple = FALSE
+)()
+```

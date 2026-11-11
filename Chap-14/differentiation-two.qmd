@@ -1,0 +1,31 @@
+
+```{devoirs_choices differentiation_14_two_choices}
+- The condition that small input changes cause small output changes.:
+    correct: false
+    feedback: That is continuity; differentiation is the process of calculating a
+      derivative.
+- A field of mathematics devoted only to arithmetic with constants.:
+    correct: false
+    feedback: Differentiation operates on functions and is a central process in calculus.
+- The act of sorting data into distinct categories.:
+    correct: false
+    feedback: Differentiation in this chapter is a mathematical operation on functions,
+      not data classification.
+- Finding the rate-of-change function associated with an original function.:
+    correct: true
+    feedback: Correct.
+- The process of calculating the derivative of a function.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of differentiation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "differentiation-14-two",
+  question = "Two of the following are valid descriptions of differentiation. The other three are not. Mark both of the VALID descriptions.",
+  answers = differentiation_14_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,30 @@
+
+```{devoirs_choices number_line_3_one_choices}
+- Standardized measures that specify how much of a quantity is present.:
+    correct: false
+    feedback: This describes units, not number line. In this chapter, number line
+      refers to a one-dimensional line on which points represent values of a quantity.
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not number line. In this chapter, number line
+      refers to a one-dimensional line on which points represent values of a quantity.
+- A line marked with numerical positions that can stand for quantity values.:
+    correct: true
+    feedback: Correct.
+- A phrase identifying the context-setting quantity against which a change is examined.:
+    correct: false
+    feedback: This describes with respect to, not number line. In this chapter, number
+      line refers to a one-dimensional line on which points represent values of a
+      quantity.
+```
+
+Only one of the following is a valid description of number line. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "number-line-3-one",
+  question = "Only one of the following is a valid description of number line. Mark that one.",
+  answers = number_line_3_one_choices,
+  multiple = FALSE
+)()
+```

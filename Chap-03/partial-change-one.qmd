@@ -1,0 +1,32 @@
+
+```{devoirs_choices partial_change_3_one_choices}
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: false
+    feedback: This describes worth, not partial change. In this chapter, partial change
+      refers to change in a primary quantity with respect to one variable while other
+      variables are held constant.
+- The contribution to overall change associated with varying one context-setting quantity at a time.:
+    correct: true
+    feedback: Correct.
+- A location in a space that corresponds to one or more coordinate values.:
+    correct: false
+    feedback: This describes point, not partial change. In this chapter, partial change
+      refers to change in a primary quantity with respect to one variable while other
+      variables are held constant.
+- The International System of Units, the primary official system for defining units.:
+    correct: false
+    feedback: This describes SI, not partial change. In this chapter, partial change
+      refers to change in a primary quantity with respect to one variable while other
+      variables are held constant.
+```
+
+Only one of the following is a valid description of partial change. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "partial-change-3-one",
+  question = "Only one of the following is a valid description of partial change. Mark that one.",
+  answers = partial_change_3_one_choices,
+  multiple = FALSE
+)()
+```

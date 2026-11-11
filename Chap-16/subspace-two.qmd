@@ -1,0 +1,31 @@
+
+```{devoirs_choices subspace_16_two_choices}
+- A space in which vectors can lie even though they also belong to a larger ambient space.:
+    correct: true
+    feedback: Correct.
+- A line or plane that changes its dimension as it is viewed.:
+    correct: false
+    feedback: Viewing perspective does not change a subspace's dimension.
+- A single vector that points in one direction.:
+    correct: false
+    feedback: A vector is an element; a subspace is a space containing vectors and
+      their combinations.
+- A group label assigned to each observation in a training set.:
+    correct: false
+    feedback: Labels are data for supervised learning; a subspace is a geometric space
+      used to represent patterns.
+- A flat set of directions or positions embedded in a higher-dimensional space.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of subspace. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "subspace-16-two",
+  question = "Two of the following are valid descriptions of subspace. The other three are not. Mark both of the VALID descriptions.",
+  answers = subspace_16_two_choices,
+  multiple = TRUE
+)()
+```

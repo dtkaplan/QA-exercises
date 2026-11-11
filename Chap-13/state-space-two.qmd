@@ -1,0 +1,30 @@
+
+```{devoirs_choices state_space_13_two_choices}
+- The path followed by one system from its initial condition.:
+    correct: false
+    feedback: That path is a trajectory within state space.
+- A rule giving the rate of change for each state.:
+    correct: false
+    feedback: That is the dynamical rule, which maps states to their changes.
+- The collection of allowable values for the quantities that make up a system's state.:
+    correct: true
+    feedback: Correct.
+- A representation of every possible configuration that the system can occupy.:
+    correct: true
+    feedback: Correct.
+- The output of a dynamical rule at a particular state.:
+    correct: false
+    feedback: That output describes the rate and direction of change, not the set
+      of possible states.
+```
+
+Two of the following are valid descriptions of state space. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "state-space-13-two",
+  question = "Two of the following are valid descriptions of state space. The other three are not. Mark both of the VALID descriptions.",
+  answers = state_space_13_two_choices,
+  multiple = TRUE
+)()
+```

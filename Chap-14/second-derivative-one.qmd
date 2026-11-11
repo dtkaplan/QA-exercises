@@ -1,0 +1,29 @@
+
+```{devoirs_choices second_derivative_14_one_choices}
+- The derivative of the original function, calculated once.:
+    correct: false
+    feedback: That is the first derivative; the second derivative differentiates the
+      first derivative.
+- A function derived from the first derivative and sharing the original function's inputs.:
+    correct: true
+    feedback: Correct.
+- The rate of change of position, also called velocity.:
+    correct: false
+    feedback: Velocity is the first derivative of position; acceleration is its second
+      derivative.
+- The first derivative evaluated at two different inputs.:
+    correct: false
+    feedback: Two first-derivative values are not themselves a second derivative;
+      the derivative of the first derivative is.
+```
+
+Only one of the following is a valid description of second derivative. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "second-derivative-14-one",
+  question = "Only one of the following is a valid description of second derivative. Mark that one.",
+  answers = second_derivative_14_one_choices,
+  multiple = FALSE
+)()
+```

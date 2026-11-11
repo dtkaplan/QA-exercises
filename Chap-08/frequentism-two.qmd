@@ -1,0 +1,31 @@
+
+```{devoirs_choices frequentism_8_two_choices}
+- A framework for statistical inference that emphasizes mathematically provable properties of procedures.:
+    correct: true
+    feedback: Correct.
+- A method that never uses mathematical proofs.:
+    correct: false
+    feedback: The chapter says frequentism emphasizes mathematically provable statements
+      about inference.
+- The belief that uncertainty can never be quantified mathematically.:
+    correct: false
+    feedback: Frequentist statistics is a mathematical framework for inference under
+      uncertainty.
+- The name for any hypothesis that has been confirmed as true.:
+    correct: false
+    feedback: Frequentism is a statistical approach, not a label for a confirmed hypothesis.
+- An approach to inference built around long-run behavior under repeated sampling.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of frequentism. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "frequentism-8-two",
+  question = "Two of the following are valid descriptions of frequentism. The other three are not. Mark both of the VALID descriptions.",
+  answers = frequentism_8_two_choices,
+  multiple = TRUE
+)()
+```

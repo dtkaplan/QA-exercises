@@ -67,14 +67,77 @@ library(drill)
 
 {{< include ../Chap-08/elm-read-glasses.qmd >}}
 
-
-
-
 ::: 
-
-
 ::::
 
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Bayesian
+
+{{< include ../Chap-08/bayesian-two.qmd >}}
+
+## Exponential distribution
+
+{{< include ../Chap-08/exponential-distribution-two.qmd >}}
+
+## Frequentism
+
+{{< include ../Chap-08/frequentism-two.qmd >}}
+
+## Hypothesis
+
+{{< include ../Chap-08/hypothesis-two.qmd >}}
+
+## Mean
+
+{{< include ../Chap-08/mean-two.qmd >}}
+
+## Normal distribution
+
+{{< include ../Chap-08/normal-distribution-two.qmd >}}
+
+## Probability distributions
+
+{{< include ../Chap-08/probability-distributions-two.qmd >}}
+
+## Random number generation
+
+{{< include ../Chap-08/random-number-generation-two.qmd >}}
+
+## Range
+
+{{< include ../Chap-08/range-two.qmd >}}
+
+## Relative probability
+
+{{< include ../Chap-08/relative-probability-two.qmd >}}
+
+## Simulation
+
+{{< include ../Chap-08/simulation-two.qmd >}}
+
+## Standard deviation
+
+{{< include ../Chap-08/standard-deviation-two.qmd >}}
+
+## Uncertainty
+
+{{< include ../Chap-08/uncertainty-two.qmd >}}
+
+## Uniform distribution
+
+{{< include ../Chap-08/uniform-distribution-two.qmd >}}
+
+## Variance
+
+{{< include ../Chap-08/variance-two.qmd >}}
+
+:::
+::::
 
 
 

@@ -1,0 +1,29 @@
+
+```{devoirs_choices objective_function_10_one_choices}
+- A value that measures uncertainty about a single quantity.:
+    correct: false
+    feedback: That describes uncertainty; an objective function represents a goal
+      over choices.
+- A function constructed to measure how well each available choice serves a particular objective.:
+    correct: true
+    feedback: Correct.
+- A guarantee that the chosen input will be best for every possible goal.:
+    correct: false
+    feedback: Each objective function represents a particular goal and may conflict
+      with others.
+- A process for collecting data about a system.:
+    correct: false
+    feedback: Data collection can inform a model, but the objective function evaluates
+      choices.
+```
+
+Only one of the following is a valid description of objective function. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "objective-function-10-one",
+  question = "Only one of the following is a valid description of objective function. Mark that one.",
+  answers = objective_function_10_one_choices,
+  multiple = FALSE
+)()
+```

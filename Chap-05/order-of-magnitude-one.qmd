@@ -1,0 +1,32 @@
+
+```{devoirs_choices order_of_magnitude_5_one_choices}
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: true
+    feedback: Correct.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not order of magnitude. In this chapter,
+      order of magnitude refers to a factor-of-ten scale used to describe how much
+      larger or smaller one number is than another.
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not order of magnitude. In this chapter,
+      order of magnitude refers to a factor-of-ten scale used to describe how much
+      larger or smaller one number is than another.
+- The facts, beliefs, assumptions, and observations available at the start of reasoning.:
+    correct: false
+    feedback: This describes givens, not order of magnitude. In this chapter, order
+      of magnitude refers to a factor-of-ten scale used to describe how much larger
+      or smaller one number is than another.
+```
+
+Only one of the following is a valid description of order of magnitude. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "order-of-magnitude-5-one",
+  question = "Only one of the following is a valid description of order of magnitude. Mark that one.",
+  answers = order_of_magnitude_5_one_choices,
+  multiple = FALSE
+)()
+```

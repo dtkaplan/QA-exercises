@@ -1,0 +1,29 @@
+
+```{devoirs_choices margin_14_one_choices}
+- The maximum output of a function.:
+    correct: false
+    feedback: A maximum is an output value; margin is the current level where a small
+      increment is considered.
+- A quantity's current edge, used to describe a small addition or marginal effect.:
+    correct: true
+    feedback: Correct.
+- A guarantee that the next unit will have the same effect as the previous one.:
+    correct: false
+    feedback: Marginal effects can vary with the current level; the margin identifies
+      where the next increment is considered.
+- The total amount accumulated from the beginning of a process.:
+    correct: false
+    feedback: A total is accumulated; the margin refers to the current boundary for
+      an incremental change.
+```
+
+Only one of the following is a valid description of margin. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "margin-14-one",
+  question = "Only one of the following is a valid description of margin. Mark that one.",
+  answers = margin_14_one_choices,
+  multiple = FALSE
+)()
+```

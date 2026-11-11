@@ -1,0 +1,35 @@
+
+```{devoirs_choices logarithm_5_two_choices}
+- A representation that folds the mantissa into a non-integer magnitude.:
+    correct: true
+    feedback: Correct.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not logarithm. In this chapter, logarithm
+      refers to a number format that condenses scientific notation into a single magnitude
+      value.
+- Representations of items, processes, or settings that are easier to use than the reality.:
+    correct: false
+    feedback: This describes models, not logarithm. In this chapter, logarithm refers
+      to a number format that condenses scientific notation into a single magnitude
+      value.
+- A way to express the size of a pure number using one value rather than mantissa and exponent.:
+    correct: true
+    feedback: Correct.
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not logarithm. In this chapter, logarithm
+      refers to a number format that condenses scientific notation into a single magnitude
+      value.
+```
+
+Two of the following are valid descriptions of logarithm. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "logarithm-5-two",
+  question = "Two of the following are valid descriptions of logarithm. The other three are not. Mark both of the VALID descriptions.",
+  answers = logarithm_5_two_choices,
+  multiple = TRUE
+)()
+```

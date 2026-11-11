@@ -1,0 +1,27 @@
+
+```{devoirs_choices exponential_decay_13_one_choices}
+- A quantity that reaches zero after one fixed interval.:
+    correct: false
+    feedback: Exponential decay approaches smaller values through repeated proportional
+      reductions, rather than a single cutoff.
+- A process in which a quantity decreases exponentially, with a constant halving time.:
+    correct: true
+    feedback: Correct.
+- A system state that changes at a constant positive rate.:
+    correct: false
+    feedback: That describes steady growth; exponential decay is a declining pattern.
+- A fixed amount is subtracted from a quantity in every time period.:
+    correct: false
+    feedback: That describes steady additive decline, not exponential decay.
+```
+
+Only one of the following is a valid description of exponential decay. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "exponential-decay-13-one",
+  question = "Only one of the following is a valid description of exponential decay. Mark that one.",
+  answers = exponential_decay_13_one_choices,
+  multiple = FALSE
+)()
+```

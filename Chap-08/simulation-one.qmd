@@ -1,0 +1,28 @@
+
+```{devoirs_choices simulation_8_one_choices}
+- A computational technique that propagates uncertain inputs through a model by repeated sampling.:
+    correct: true
+    feedback: Correct.
+- A single random number generated once from a model.:
+    correct: false
+    feedback: One draw can be part of a simulation, but simulation uses model evaluations
+      to reason about output uncertainty.
+- A process for drawing a graph without calculating any model outputs.:
+    correct: false
+    feedback: Simulation evaluates the model on generated inputs to study its outputs.
+- A distribution assigning relative probabilities to possible values.:
+    correct: false
+    feedback: That is a probability distribution; simulation uses distributions to
+      generate inputs and explore outputs.
+```
+
+Only one of the following is a valid description of simulation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "simulation-8-one",
+  question = "Only one of the following is a valid description of simulation. Mark that one.",
+  answers = simulation_8_one_choices,
+  multiple = FALSE
+)()
+```

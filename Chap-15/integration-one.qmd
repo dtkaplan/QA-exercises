@@ -1,0 +1,29 @@
+
+```{devoirs_choices integration_15_one_choices}
+- Calculating an accumulated total from a function describing marginal change.:
+    correct: true
+    feedback: Correct.
+- A probability distribution assigning likelihood to each possible value.:
+    correct: false
+    feedback: That is a probability model; integration here is the calculus process
+      of accumulation.
+- A single rate measured at one input point.:
+    correct: false
+    feedback: A rate is an input to accumulation; integration combines rates across
+      an interval.
+- A method for sorting a sequence of values from low to high.:
+    correct: false
+    feedback: Sorting orders values; integration combines marginal contributions into
+      a total.
+```
+
+Only one of the following is a valid description of integration. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "integration-15-one",
+  question = "Only one of the following is a valid description of integration. Mark that one.",
+  answers = integration_15_one_choices,
+  multiple = FALSE
+)()
+```

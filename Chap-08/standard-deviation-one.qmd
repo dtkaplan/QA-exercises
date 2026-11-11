@@ -1,0 +1,28 @@
+
+```{devoirs_choices standard_deviation_8_one_choices}
+- The rate of events per unit time in an exponential model.:
+    correct: false
+    feedback: That is the exponential distribution's rate parameter, not standard
+      deviation.
+- The square of a distribution's mean.:
+    correct: false
+    feedback: Standard deviation is related to variance, not the square of the mean.
+- A guaranteed maximum distance of every value from the mean.:
+    correct: false
+    feedback: Standard deviation describes spread but does not impose a hard maximum
+      distance.
+- The scale parameter that determines how widely a normal distribution extends from its center.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of standard deviation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "standard-deviation-8-one",
+  question = "Only one of the following is a valid description of standard deviation. Mark that one.",
+  answers = standard_deviation_8_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,28 @@
+
+```{devoirs_choices likelihood_framework_11_one_choices}
+- A scientific method that forbids revising a model once proposed.:
+    correct: false
+    feedback: The framework evaluates and compares models; scientific model refinement
+      remains possible.
+- A technique for estimating the mean of a sample.:
+    correct: false
+    feedback: The framework compares hypotheses using likelihood, rather than only
+      summarizing data with a mean.
+- A method that compares models without using any observations.:
+    correct: false
+    feedback: Likelihood evaluates hypotheses in the setting of observed data.
+- An approach that puts competing hypotheses in comparison using their likelihoods for observed data.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of likelihood framework. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "likelihood-framework-11-one",
+  question = "Only one of the following is a valid description of likelihood framework. Mark that one.",
+  answers = likelihood_framework_11_one_choices,
+  multiple = FALSE
+)()
+```

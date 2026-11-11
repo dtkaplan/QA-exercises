@@ -1,0 +1,28 @@
+
+```{devoirs_choices plane_16_one_choices}
+- A curve joining points with equal function output.:
+    correct: false
+    feedback: That is a contour line; a plane is a two-dimensional surface.
+- The set of all possible states in a dynamical system.:
+    correct: false
+    feedback: That is state space; a plane may be a two-dimensional subspace within
+      a larger space.
+- A single line with only one dimension.:
+    correct: false
+    feedback: A plane is two-dimensional, although it can appear as a line when viewed
+      edge-on.
+- A geometric surface that contains directions and can be viewed edge-on as a line.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of plane. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "plane-16-one",
+  question = "Only one of the following is a valid description of plane. Mark that one.",
+  answers = plane_16_one_choices,
+  multiple = FALSE
+)()
+```

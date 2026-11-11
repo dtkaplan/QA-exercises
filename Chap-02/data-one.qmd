@@ -1,0 +1,29 @@
+
+```{devoirs_choices data_2_one_choices}
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not data. In this chapter, data refers to
+      recorded facts, findings, and measurements.
+- Recorded facts, findings, and measurements.:
+    correct: true
+    feedback: Correct.
+- A subset of specimens selected from a larger population for study.:
+    correct: false
+    feedback: This describes sample, not data. In this chapter, data refers to recorded
+      facts, findings, and measurements.
+- A rectangular array of data organized into rows and columns.:
+    correct: false
+    feedback: This describes data frame, not data. In this chapter, data refers to
+      recorded facts, findings, and measurements.
+```
+
+Only one of the following is a valid description of data. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "data-2-one",
+  question = "Only one of the following is a valid description of data. Mark that one.",
+  answers = data_2_one_choices,
+  multiple = FALSE
+)()
+```

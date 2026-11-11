@@ -1,0 +1,32 @@
+
+```{devoirs_choices data_frame_2_two_choices}
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not data frame. In this chapter, data frame
+      refers to a rectangular array of data organized into rows and columns.
+- A subset of specimens selected from a larger population for study.:
+    correct: false
+    feedback: This describes sample, not data frame. In this chapter, data frame refers
+      to a rectangular array of data organized into rows and columns.
+- One individual object or event represented by a row in a data frame.:
+    correct: false
+    feedback: This describes specimen, not data frame. In this chapter, data frame
+      refers to a rectangular array of data organized into rows and columns.
+- A rectangular array of data organized into rows and columns.:
+    correct: true
+    feedback: Correct.
+- A rectangular data structure that stores consistent records for objects of one type.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of data frame. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "data-frame-2-two",
+  question = "Two of the following are valid descriptions of data frame. The other three are not. Mark both of the VALID descriptions.",
+  answers = data_frame_2_two_choices,
+  multiple = TRUE
+)()
+```

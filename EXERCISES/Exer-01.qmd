@@ -7,7 +7,7 @@ subtitle: "Chapter 1 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-01")`
+`r devoirs3::devoirs_start("QA-exer-01", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -22,5 +22,48 @@ source("../_exercise_startup.R")
 
 
 :::
+
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Argumentation
+
+{{< include ../Chap-01/argumentation-one.qmd >}}
+
+## Formal reasoning
+
+{{< include ../Chap-01/formal-reasoning-one.qmd >}}
+
+## Givens
+
+{{< include ../Chap-01/givens-one.qmd >}}
+
+## Heuristic reasoning
+
+{{< include ../Chap-01/heuristic-reasoning-one.qmd >}}
+
+## LLMs
+
+{{< include ../Chap-01/large-language-model-llm-one.qmd >}}
+
+## Models
+
+{{< include ../Chap-01/models-one.qmd >}}
+
+## Quantitative models
+
+{{< include ../Chap-01/quantitative-models-one.qmd >}}
+
+## SIR model
+
+{{< include ../Chap-01/sir-model-one.qmd >}}
+
+
+:::
+::::
 
 

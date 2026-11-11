@@ -1,0 +1,35 @@
+
+```{devoirs_choices order_of_magnitude_5_two_choices}
+- A number format that expresses a value as a mantissa multiplied by a power of ten.:
+    correct: false
+    feedback: This describes scientific notation, not order of magnitude. In this
+      chapter, order of magnitude refers to a factor-of-ten scale used to describe
+      how much larger or smaller one number is than another.
+- A scale comparison such as two orders of magnitude between one hundred and ten thousand.:
+    correct: true
+    feedback: Correct.
+- A way to compare sizes by counting powers of ten rather than subtracting values.:
+    correct: true
+    feedback: Correct.
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not order of magnitude. In this chapter,
+      order of magnitude refers to a factor-of-ten scale used to describe how much
+      larger or smaller one number is than another.
+- An epidemic model that tracks susceptible, infective, and recovered people over time.:
+    correct: false
+    feedback: This describes SIR model, not order of magnitude. In this chapter, order
+      of magnitude refers to a factor-of-ten scale used to describe how much larger
+      or smaller one number is than another.
+```
+
+Two of the following are valid descriptions of order of magnitude. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "order-of-magnitude-5-two",
+  question = "Two of the following are valid descriptions of order of magnitude. The other three are not. Mark both of the VALID descriptions.",
+  answers = order_of_magnitude_5_two_choices,
+  multiple = TRUE
+)()
+```

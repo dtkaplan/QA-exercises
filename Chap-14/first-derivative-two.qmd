@@ -1,0 +1,32 @@
+
+```{devoirs_choices first_derivative_14_two_choices}
+- A measure of the spread of values around a mean.:
+    correct: false
+    feedback: That describes standard deviation; the first derivative describes function
+      slope.
+- The first function obtained by differentiating a function once.:
+    correct: true
+    feedback: Correct.
+- A value describing the function only at its maximum point.:
+    correct: false
+    feedback: The first derivative is defined across the input domain where the rate
+      of change can be evaluated.
+- A single slope value that is constant for every input.:
+    correct: false
+    feedback: The first derivative is a function and can have different values at
+      different inputs.
+- A function whose values give the original function's slope at corresponding inputs.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of first derivative. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "first-derivative-14-two",
+  question = "Two of the following are valid descriptions of first derivative. The other three are not. Mark both of the VALID descriptions.",
+  answers = first_derivative_14_two_choices,
+  multiple = TRUE
+)()
+```

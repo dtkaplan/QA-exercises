@@ -1,0 +1,29 @@
+```{devoirs_choices algorithm_6_one_choices}
+- 'An explicit procedure that can be followed to calculate an output for specified inputs.':
+    correct: true
+    feedback: Correct.
+- 'A claim supported by evidence and a chain of reasoning.':
+    correct: false
+    feedback: |
+      That is an argument in this book's terminology. An algorithm is a process made up of steps for calculating a function's output.
+- 'A procedure that takes the function''s output as input and produces the original inputs.':
+    correct: false
+    feedback: |
+      This reverses the direction described in the chapter: an algorithm turns the inputs into the output.
+- 'A single remembered result, such as sin(pi) = 0, that replaces the process for every possible input.':
+    correct: false
+    feedback: A memorized input-output pair gives only one result. An algorithm specifies how to find outputs for inputs more generally.
+```
+
+Only one of the following is a valid description of algorithm. Mark that one.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "algorithm-6-one",
+  question = "Only one of the following is a valid description of algorithm. Mark that one.",
+  answers = algorithm_6_one_choices,
+  multiple = FALSE
+)()
+```
+

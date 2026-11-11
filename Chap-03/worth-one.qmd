@@ -1,0 +1,32 @@
+
+```{devoirs_choices worth_3_one_choices}
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: true
+    feedback: Correct.
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not worth. In this chapter, worth refers
+      to a base dimension used for monetary value, whose meaning depends on place
+      and time.
+- The change in a primary quantity divided by the corresponding change in a context-setting quantity.:
+    correct: false
+    feedback: This describes rate of change, not worth. In this chapter, worth refers
+      to a base dimension used for monetary value, whose meaning depends on place
+      and time.
+- Rates formed by arithmetic combinations of other rates.:
+    correct: false
+    feedback: This describes compound rates, not worth. In this chapter, worth refers
+      to a base dimension used for monetary value, whose meaning depends on place
+      and time.
+```
+
+Only one of the following is a valid description of worth. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "worth-3-one",
+  question = "Only one of the following is a valid description of worth. Mark that one.",
+  answers = worth_3_one_choices,
+  multiple = FALSE
+)()
+```

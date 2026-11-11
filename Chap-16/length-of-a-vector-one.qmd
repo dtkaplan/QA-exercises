@@ -1,0 +1,29 @@
+
+```{devoirs_choices length_of_a_vector_16_one_choices}
+- The sum of all the components of a vector.:
+    correct: false
+    feedback: Length is a magnitude computed from components, not generally their
+      simple sum.
+- The direction in which a vector points.:
+    correct: false
+    feedback: Direction is distinct from length; vectors can have the same direction
+      but different lengths.
+- The distance between the endpoints of two different vectors.:
+    correct: false
+    feedback: Vector length describes one vector's magnitude, not the distance between
+      two endpoints.
+- The vector's magnitude, representing its distance from the origin.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of length of a vector. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "length-of-a-vector-16-one",
+  question = "Only one of the following is a valid description of length of a vector. Mark that one.",
+  answers = length_of_a_vector_16_one_choices,
+  multiple = FALSE
+)()
+```

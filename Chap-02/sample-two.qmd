@@ -1,0 +1,32 @@
+
+```{devoirs_choices sample_2_two_choices}
+- A group of multiple observations drawn from the broader collection of interest.:
+    correct: true
+    feedback: Correct.
+- A two-dimensional space marked by two perpendicular number lines.:
+    correct: false
+    feedback: This describes coordinate plane, not sample. In this chapter, sample
+      refers to a subset of specimens selected from a larger population for study.
+- Selected specimens that provide data about a larger source of objects.:
+    correct: true
+    feedback: Correct.
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not sample. In this chapter, sample refers
+      to a subset of specimens selected from a larger population for study.
+- The entry at the intersection of one specimen and one variable in a data frame.:
+    correct: false
+    feedback: This describes value, not sample. In this chapter, sample refers to
+      a subset of specimens selected from a larger population for study.
+```
+
+Two of the following are valid descriptions of sample. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "sample-2-two",
+  question = "Two of the following are valid descriptions of sample. The other three are not. Mark both of the VALID descriptions.",
+  answers = sample_2_two_choices,
+  multiple = TRUE
+)()
+```

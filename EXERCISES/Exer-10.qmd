@@ -7,7 +7,7 @@ subtitle: "Chapter 10 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-10")`
+`r devoirs3::devoirs_start("QA-exer-10", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -24,4 +24,51 @@ source("../_exercise_startup.R")
 
 :::
 
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Argmax
+
+{{< include ../Chap-10/argmax-one.qmd >}}
+
+## Argmin
+
+{{< include ../Chap-10/argmin-one.qmd >}}
+
+## Dominates
+
+{{< include ../Chap-10/dominates-one.qmd >}}
+
+## Incommensurate
+
+{{< include ../Chap-10/incommensurate-one.qmd >}}
+
+## Maximum
+
+{{< include ../Chap-10/maximum-one.qmd >}}
+
+## Minimum
+
+{{< include ../Chap-10/minimum-one.qmd >}}
+
+## Objective function
+
+{{< include ../Chap-10/objective-function-one.qmd >}}
+
+## Shadow price
+
+{{< include ../Chap-10/Shadow-price-one.qmd >}}
+
+## Trade-off
+
+{{< include ../Chap-10/trade-off-one.qmd >}}
+
+
+:::
+
+::::
 

@@ -1,0 +1,29 @@
+
+```{devoirs_choices accumulation_15_one_choices}
+- A process that tracks a quantity by combining its changes starting from an initial amount.:
+    correct: true
+    feedback: Correct.
+- The amount of new cases of a disease arising in a year.:
+    correct: false
+    feedback: That is incidence, a rate or count of new cases; accumulation turns
+      rates into totals.
+- The difference between two quantities without considering intermediate changes.:
+    correct: false
+    feedback: Accumulation accounts for successive contributions between the starting
+      and ending levels.
+- A single marginal rate measured at one input level.:
+    correct: false
+    feedback: A marginal rate is an increment's rate; accumulation adds such contributions
+      over an interval.
+```
+
+Only one of the following is a valid description of accumulation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "accumulation-15-one",
+  question = "Only one of the following is a valid description of accumulation. Mark that one.",
+  answers = accumulation_15_one_choices,
+  multiple = FALSE
+)()
+```

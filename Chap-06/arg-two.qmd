@@ -1,0 +1,36 @@
+```{devoirs_choices arg_6_two_choices}
+- ? |
+    The name of a function, such as heat_index, rather than a name inside its parentheses.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? The function name identifies the function itself. An arg names one of its inputs.
+- The name inside a function's parentheses that indicates an input's role.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+- ? |
+    The complete sequence of operations that converts inputs into an output.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? That is an algorithm. An arg names an input role used by a function.
+- ? |
+    A complete description of a system and all its interconnected dimensions.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? This describes a system, not an arg. An arg is a name for one function input.
+- A label that identifies what a particular function input represents.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+```
+
+Two of the following are valid descriptions of arg . The other three are not. Mark all three of the INVALID descriptions.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "arg-6-two",
+  question = "Two of the following are valid descriptions of arg . The other three are not. Mark all three of the INVALID descriptions.",
+  answers = arg_6_two_choices,
+  multiple = TRUE
+)()
+```
+

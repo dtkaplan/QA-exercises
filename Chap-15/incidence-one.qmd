@@ -1,0 +1,26 @@
+
+```{devoirs_choices incidence_15_one_choices}
+- The average time between two unrelated observations.:
+    correct: false
+    feedback: Incidence describes new cases, not a general interval between observations.
+- A summary of how long people survive after diagnosis.:
+    correct: false
+    feedback: Survival time is distinct; incidence is about how many new cases arise.
+- The total number of cases ever recorded, regardless of date.:
+    correct: false
+    feedback: Incidence concerns newly arising cases over a specified period.
+- The flow of new cases into a population, distinguished from the total number already affected.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of incidence. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "incidence-15-one",
+  question = "Only one of the following is a valid description of incidence. Mark that one.",
+  answers = incidence_15_one_choices,
+  multiple = FALSE
+)()
+```

@@ -7,7 +7,7 @@ subtitle: "Chapter 7 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-07")`
+`r devoirs3::devoirs_start("QA-exer-07", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -119,5 +119,22 @@ source("../_exercise_startup.R")
 
 
 :::
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Core functions
+
+{{< include ../Chap-07/core-modeling-functions-one.qmd >}}
+
+## Scaling
+
+{{< include ../Chap-07/input-and-output-scaling-one.qmd >}}
+
+:::
+::::
 
 

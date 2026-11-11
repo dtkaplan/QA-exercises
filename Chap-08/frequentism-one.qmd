@@ -1,0 +1,29 @@
+
+```{devoirs_choices frequentism_8_one_choices}
+- A rule that treats every proposed model as equally supported by data.:
+    correct: false
+    feedback: Frequentist methods assess evidence using statistical procedures; they
+      do not declare all models equal.
+- A method that never uses mathematical proofs.:
+    correct: false
+    feedback: The chapter says frequentism emphasizes mathematically provable statements
+      about inference.
+- An approach to inference built around long-run behavior under repeated sampling.:
+    correct: true
+    feedback: Correct.
+- The process of generating random numbers from a distribution.:
+    correct: false
+    feedback: That is random number generation, which is a computational tool rather
+      than an inference framework.
+```
+
+Only one of the following is a valid description of frequentism. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "frequentism-8-one",
+  question = "Only one of the following is a valid description of frequentism. Mark that one.",
+  answers = frequentism_8_one_choices,
+  multiple = FALSE
+)()
+```

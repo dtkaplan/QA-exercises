@@ -1,0 +1,34 @@
+
+```{devoirs_choices givens_1_two_choices}
+- Recorded facts, findings, and measurements.:
+    correct: false
+    feedback: This describes data, not givens. In this chapter, givens refers to the
+      facts, beliefs, assumptions, and observations available at the start of reasoning.
+- The facts, beliefs, assumptions, and observations available at the start of reasoning.:
+    correct: true
+    feedback: Correct.
+- The kind of object represented by every specimen in a data frame.:
+    correct: false
+    feedback: This describes object type, not givens. In this chapter, givens refers
+      to the facts, beliefs, assumptions, and observations available at the start
+      of reasoning.
+- An aspect, property, or characteristic of an object or system.:
+    correct: false
+    feedback: This describes dimension, not givens. In this chapter, givens refers
+      to the facts, beliefs, assumptions, and observations available at the start
+      of reasoning.
+- Premises, perceptions, knowledge, and impressions used as starting points for reasoning.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of givens. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "givens-1-two",
+  question = "Two of the following are valid descriptions of givens. The other three are not. Mark both of the VALID descriptions.",
+  answers = givens_1_two_choices,
+  multiple = TRUE
+)()
+```

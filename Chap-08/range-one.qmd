@@ -1,0 +1,29 @@
+
+```{devoirs_choices range_8_one_choices}
+- A function giving the relative probability of every possible value.:
+    correct: false
+    feedback: That is a probability distribution; a range gives only lower and upper
+      values.
+- The span between two stated endpoints that summarizes possible quantity values.:
+    correct: true
+    feedback: Correct.
+- A list of equally likely outcomes from a uniform distribution.:
+    correct: false
+    feedback: A range can bound a uniform distribution, but the range itself is not
+      a list of outcomes or probabilities.
+- A model that gives greater likelihood to values near a central mean.:
+    correct: false
+    feedback: That describes the normal distribution, which can extend beyond a typical
+      range.
+```
+
+Only one of the following is a valid description of range. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "range-8-one",
+  question = "Only one of the following is a valid description of range. Mark that one.",
+  answers = range_8_one_choices,
+  multiple = FALSE
+)()
+```

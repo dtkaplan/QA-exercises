@@ -1,0 +1,29 @@
+
+```{devoirs_choices sorting_5_one_choices}
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: false
+    feedback: This describes quantitative models, not sorting. In this chapter, sorting
+      refers to arranging values in order so their relative sizes are easier to compare.
+- Recorded facts, findings, and measurements.:
+    correct: false
+    feedback: This describes data, not sorting. In this chapter, sorting refers to
+      arranging values in order so their relative sizes are easier to compare.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not sorting. In this chapter, sorting
+      refers to arranging values in order so their relative sizes are easier to compare.
+- Rearranging records according to a value, such as GDP, to support visual comparison.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of sorting. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "sorting-5-one",
+  question = "Only one of the following is a valid description of sorting. Mark that one.",
+  answers = sorting_5_one_choices,
+  multiple = FALSE
+)()
+```

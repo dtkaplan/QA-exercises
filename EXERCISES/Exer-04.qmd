@@ -7,7 +7,7 @@ subtitle: "Chapter 4 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-04")`
+`r devoirs3::devoirs_start("QA-exer-04", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -32,4 +32,25 @@ source("../_exercise_startup.R")
 
 :::
 
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Compound rate
+
+{{< include ../Chap-04/compound-rates-one.qmd >}}
+
+## Rate
+
+{{< include ../Chap-04/rate-one.qmd >}}
+
+## Rate of change
+
+{{< include ../Chap-04/rate-of-change-one.qmd >}}
+
+:::
+::::
 

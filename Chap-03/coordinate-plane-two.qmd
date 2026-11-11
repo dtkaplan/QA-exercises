@@ -1,0 +1,35 @@
+
+```{devoirs_choices coordinate_plane_3_two_choices}
+- A way to represent paired quantity values as points on two intersecting number lines.:
+    correct: true
+    feedback: Correct.
+- Units formed by multiplying or dividing base units.:
+    correct: false
+    feedback: This describes derived units, not coordinate plane. In this chapter,
+      coordinate plane refers to a two-dimensional space marked by two perpendicular
+      number lines.
+- Having the pure-number dimension, with no combination of base dimensions.:
+    correct: false
+    feedback: This describes dimensionless, not coordinate plane. In this chapter,
+      coordinate plane refers to a two-dimensional space marked by two perpendicular
+      number lines.
+- A plane in which each point corresponds to a pair of coordinate values.:
+    correct: true
+    feedback: Correct.
+- Change in a primary quantity with respect to one variable while other variables are held constant.:
+    correct: false
+    feedback: This describes partial change, not coordinate plane. In this chapter,
+      coordinate plane refers to a two-dimensional space marked by two perpendicular
+      number lines.
+```
+
+Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "coordinate-plane-3-two",
+  question = "Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions.",
+  answers = coordinate_plane_3_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,29 @@
+
+```{devoirs_choices learning_16_one_choices}
+- A way to make all input vectors have identical lengths.:
+    correct: false
+    feedback: Vector scaling is a geometric operation, not the chapter's general learning
+      process.
+- A guarantee that a model will never make an incorrect prediction.:
+    correct: false
+    feedback: Learning improves a model's performance but does not guarantee error-free
+      predictions.
+- A calculation that finds the average of all output values.:
+    correct: false
+    feedback: A mean summarizes values; learning adjusts a model to capture patterns
+      in data.
+- A process that improves a model by changing its parameters in response to its errors.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of learning. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "learning-16-one",
+  question = "Only one of the following is a valid description of learning. Mark that one.",
+  answers = learning_16_one_choices,
+  multiple = FALSE
+)()
+```

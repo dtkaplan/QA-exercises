@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -1278,6 +1313,166 @@ mode: exercise
 </div>
 </div>
 <p><!-- end of exr-walrus-sharpen-boat --></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key vocabulary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Likelihood</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Likelihood framework</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Null hypothesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Scientific method</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Only one of the following is a valid description of likelihood. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"likelihood-11-one"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of likelihood. Mark that one."</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> likelihood_11_one_choices,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-11" data-label="likelihood-11-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of likelihood. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65-1" value="AAjyrac" data-devoirs3-option="" data-option-id="AAjyrac" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A measure used to compare competing hypotheses by their support for the data.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65-2" value="BAoqhna" data-devoirs3-option="" data-option-id="BAoqhna" data-feedback="Likelihood concerns the observed data under a specific hypothesized model." data-feedback-html="Likelihood concerns the observed data under a specific hypothesized model.">
+    <span>The probability of every possible dataset averaged together.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65-3" value="CAlilxu" data-devoirs3-option="" data-option-id="CAlilxu" data-feedback="Likelihood evaluates observed data under a model; it does not guarantee future repetition." data-feedback-html="Likelihood evaluates observed data under a model; it does not guarantee future repetition.">
+    <span>A guarantee that the observed data will occur again.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d31312d6f6e65-4" value="DAbxxgy" data-devoirs3-option="" data-option-id="DAbxxgy" data-feedback="That is a range; likelihood is a model-based score for observed data." data-feedback-html="That is a range; likelihood is a model-based score for observed data.">
+    <span>The range of values that a quantity could possibly take.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of likelihood. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">likelihood-11-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Only one of the following is a valid description of likelihood framework. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"likelihood-framework-11-one"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of likelihood framework. Mark that one."</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> likelihood_framework_11_one_choices,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-11" data-label="likelihood-framework-11-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of likelihood framework. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65-1" value="AArsfui" data-devoirs3-option="" data-option-id="AArsfui" data-feedback="The framework evaluates and compares models; scientific model refinement remains possible." data-feedback-html="The framework evaluates and compares models; scientific model refinement remains possible.">
+    <span>A scientific method that forbids revising a model once proposed.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65-2" value="BAdhnnk" data-devoirs3-option="" data-option-id="BAdhnnk" data-feedback="The framework compares hypotheses using likelihood, rather than only summarizing data with a mean." data-feedback-html="The framework compares hypotheses using likelihood, rather than only summarizing data with a mean.">
+    <span>A technique for estimating the mean of a sample.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65-3" value="CAcooqc" data-devoirs3-option="" data-option-id="CAcooqc" data-feedback="Likelihood evaluates hypotheses in the setting of observed data." data-feedback-html="Likelihood evaluates hypotheses in the setting of observed data.">
+    <span>A method that compares models without using any observations.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d6f6e65-4" value="DArxahm" data-devoirs3-option="" data-option-id="DArxahm" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>An approach that puts competing hypotheses in comparison using their likelihoods for observed data.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of likelihood framework. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">likelihood-framework-11-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Only one of the following is a valid description of null hypothesis. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"null-hypothesis-11-one"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of null hypothesis. Mark that one."</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> null_hypothesis_11_one_choices,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-11" data-label="null-hypothesis-11-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of null hypothesis. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65-1" value="AAkbzmf" data-devoirs3-option="" data-option-id="AAkbzmf" data-feedback="The null is a baseline about the phenomenon, not a prohibition on data collection." data-feedback-html="The null is a baseline about the phenomenon, not a prohibition on data collection.">
+    <span>A hypothesis that no data can ever be collected.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65-2" value="BAepjri" data-devoirs3-option="" data-option-id="BAepjri" data-feedback="That describes random number generation; a null hypothesis is a claim evaluated against evidence." data-feedback-html="That describes random number generation; a null hypothesis is a claim evaluated against evidence.">
+    <span>A rule for repeatedly sampling values from a probability distribution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65-3" value="CApkwhe" data-devoirs3-option="" data-option-id="CApkwhe" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A baseline hypothesis representing a no-effect or ordinary-condition explanation for comparison.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d6f6e65-4" value="DAfgrdn" data-devoirs3-option="" data-option-id="DAfgrdn" data-feedback="The null is the baseline; the research hypothesis specifies the alternative effect." data-feedback-html="The null is the baseline; the research hypothesis specifies the alternative effect.">
+    <span>The research hypothesis that specifies the particular effect being proposed.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of null hypothesis. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">null-hypothesis-11-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Only one of the following is a valid description of scientific method. Mark that one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"scientific-method-11-one"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Only one of the following is a valid description of scientific method. Mark that one."</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> scientific_method_11_one_choices,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-exer-11" data-label="scientific-method-11-one" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Only one of the following is a valid description of scientific method. Mark that one.</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65-1" value="AAodemj" data-devoirs3-option="" data-option-id="AAodemj" data-feedback="That describes a probability distribution, which may represent a hypothesis but is not the whole method." data-feedback-html="That describes a probability distribution, which may represent a hypothesis but is not the whole method.">
+    <span>A probability distribution assigning likelihood to every possible outcome.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65-2" value="BAubfco" data-devoirs3-option="" data-option-id="BAubfco" data-feedback="The chapter presents hypotheses and models as central to scientific comparison and refinement." data-feedback-html="The chapter presents hypotheses and models as central to scientific comparison and refinement.">
+    <span>A way to gather observations without forming or comparing explanations.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65-3" value="CAsepie" data-devoirs3-option="" data-option-id="CAsepie" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A method of building understanding by proposing explanations and evaluating their consequences.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d6f6e65-4" value="DAlrvwn" data-devoirs3-option="" data-option-id="DAlrvwn" data-feedback="That is optimization; the scientific method is a broader process for developing and evaluating explanations." data-feedback-html="That is optimization; the scientific method is a broader process for developing and evaluating explanations.">
+    <span>A technique for calculating a function’s maximum output.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Only one of the following is a valid description of scientific method. Mark that one.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">scientific-method-11-one</span>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

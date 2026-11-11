@@ -1,0 +1,32 @@
+
+```{devoirs_choices quantity_3_one_choices}
+- Rates formed by arithmetic combinations of other rates.:
+    correct: false
+    feedback: This describes compound rates, not quantity. In this chapter, quantity
+      refers to a standardized measure consisting of a pure number and a unit, optionally
+      with a descriptor.
+- A standardized measure consisting of a pure number and a unit, optionally with a descriptor.:
+    correct: true
+    feedback: Correct.
+- A ratio of two quantities where division expresses a relationship between their underlying dimensions.:
+    correct: false
+    feedback: This describes rate, not quantity. In this chapter, quantity refers
+      to a standardized measure consisting of a pure number and a unit, optionally
+      with a descriptor.
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not quantity. In this chapter, quantity refers
+      to a standardized measure consisting of a pure number and a unit, optionally
+      with a descriptor.
+```
+
+Only one of the following is a valid description of quantity. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "quantity-3-one",
+  question = "Only one of the following is a valid description of quantity. Mark that one.",
+  answers = quantity_3_one_choices,
+  multiple = FALSE
+)()
+```

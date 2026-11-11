@@ -1,0 +1,32 @@
+
+```{devoirs_choices models_1_one_choices}
+- A highlighted term whose meaning is specifically defined for use in the book.:
+    correct: false
+    feedback: This describes word or phrase, not models. In this chapter, models refers
+      to representations of items, processes, or settings that are easier to use than
+      the reality.
+- A subset of specimens selected from a larger population for study.:
+    correct: false
+    feedback: This describes sample, not models. In this chapter, models refers to
+      representations of items, processes, or settings that are easier to use than
+      the reality.
+- Representations used to reason about a real-world item, process, or setting.:
+    correct: true
+    feedback: Correct.
+- One individual object or event represented by a row in a data frame.:
+    correct: false
+    feedback: This describes specimen, not models. In this chapter, models refers
+      to representations of items, processes, or settings that are easier to use than
+      the reality.
+```
+
+Only one of the following is a valid description of models. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "models-1-one",
+  question = "Only one of the following is a valid description of models. Mark that one.",
+  answers = models_1_one_choices,
+  multiple = FALSE
+)()
+```

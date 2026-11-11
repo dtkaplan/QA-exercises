@@ -1,0 +1,28 @@
+
+```{devoirs_choices skeleton_13_one_choices}
+- A complete numerical model with every coefficient already determined.:
+    correct: false
+    feedback: The skeleton is the structure before coefficients, or the model's 'flesh,'
+      is filled in.
+- A basic function pattern that identifies which terms will appear before model-specific coefficients are added.:
+    correct: true
+    feedback: Correct.
+- A physical framework made of bones that supports a moving body.:
+    correct: false
+    feedback: The chapter uses skeleton figuratively for a function's structural template.
+- A completed output value produced by evaluating a function.:
+    correct: false
+    feedback: An output is a function evaluation; the skeleton is the form of the
+      function itself.
+```
+
+Only one of the following is a valid description of skeleton. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "skeleton-13-one",
+  question = "Only one of the following is a valid description of skeleton. Mark that one.",
+  answers = skeleton_13_one_choices,
+  multiple = FALSE
+)()
+```

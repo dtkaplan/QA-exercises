@@ -1,0 +1,32 @@
+
+```{devoirs_choices objective_function_10_two_choices}
+- The largest output value achieved by a function.:
+    correct: false
+    feedback: That is the maximum; the objective function is the model mapping choices
+      to outcomes.
+- A function whose inputs are observed data and whose output is a random sample.:
+    correct: false
+    feedback: That describes neither the chapter's role for an objective function
+      nor necessarily an optimization goal.
+- A function that assigns an outcome value to each available choice.:
+    correct: true
+    feedback: Correct.
+- A statement of personal preference that cannot be quantified.:
+    correct: false
+    feedback: An objective function is a quantitative tool for comparing outcomes
+      of choices.
+- A mathematical representation of a goal, with choices as inputs and outcomes as outputs.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of objective function. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "objective-function-10-two",
+  question = "Two of the following are valid descriptions of objective function. The other three are not. Mark both of the VALID descriptions.",
+  answers = objective_function_10_two_choices,
+  multiple = TRUE
+)()
+```

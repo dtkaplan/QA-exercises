@@ -1,0 +1,29 @@
+
+```{devoirs_choices null_hypothesis_11_one_choices}
+- A hypothesis that no data can ever be collected.:
+    correct: false
+    feedback: The null is a baseline about the phenomenon, not a prohibition on data
+      collection.
+- A rule for repeatedly sampling values from a probability distribution.:
+    correct: false
+    feedback: That describes random number generation; a null hypothesis is a claim
+      evaluated against evidence.
+- A baseline hypothesis representing a no-effect or ordinary-condition explanation for comparison.:
+    correct: true
+    feedback: Correct.
+- The research hypothesis that specifies the particular effect being proposed.:
+    correct: false
+    feedback: The null is the baseline; the research hypothesis specifies the alternative
+      effect.
+```
+
+Only one of the following is a valid description of null hypothesis. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "null-hypothesis-11-one",
+  question = "Only one of the following is a valid description of null hypothesis. Mark that one.",
+  answers = null_hypothesis_11_one_choices,
+  multiple = FALSE
+)()
+```

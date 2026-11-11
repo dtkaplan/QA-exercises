@@ -82,3 +82,32 @@ library(drill)
 
 :::
 ::::
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## algorithm
+
+{{< include ../Chap-06/algorithm-two.qmd >}}
+
+## arg
+
+{{< include ../Chap-06/arg-two.qmd >}}
+
+## exogenous
+
+{{< include ../Chap-06/exogenous-two.qmd >}}
+
+## function
+
+{{< include ../Chap-06/functions-two.qmd >}}
+
+## system
+
+{{< include ../Chap-06/system-two.qmd >}}
+
+:::
+::::
+

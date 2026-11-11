@@ -1,0 +1,30 @@
+
+```{devoirs_choices trajectory_13_two_choices}
+- A function mapping each state to its instantaneous rate of change.:
+    correct: false
+    feedback: That is the dynamical rule; the trajectory gives the state as a function
+      of time.
+- A function describing the state as it evolves from an initial condition.:
+    correct: true
+    feedback: Correct.
+- A rule that specifies how much a quantity changes each year.:
+    correct: false
+    feedback: That describes a rate rule; the trajectory is the resulting state history.
+- A sequence of time values with no corresponding state values.:
+    correct: false
+    feedback: A trajectory describes how the state evolves over time, not time alone.
+- The time-evolving state produced by applying the dynamical rule and accounting method.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of trajectory. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "trajectory-13-two",
+  question = "Two of the following are valid descriptions of trajectory. The other three are not. Mark both of the VALID descriptions.",
+  answers = trajectory_13_two_choices,
+  multiple = TRUE
+)()
+```

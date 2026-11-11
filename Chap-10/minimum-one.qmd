@@ -1,0 +1,27 @@
+
+```{devoirs_choices minimum_10_one_choices}
+- The lowest output achieved among the available choices.:
+    correct: true
+    feedback: Correct.
+- The price ratio used to compare two objective functions.:
+    correct: false
+    feedback: That is a shadow price; minimum is an objective output value.
+- A value that every possible input must produce.:
+    correct: false
+    feedback: A minimum is attained for some input; other inputs may produce larger
+      outputs.
+- The average output value across all choices.:
+    correct: false
+    feedback: The average is not necessarily the smallest output.
+```
+
+Only one of the following is a valid description of minimum. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "minimum-10-one",
+  question = "Only one of the following is a valid description of minimum. Mark that one.",
+  answers = minimum_10_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,30 @@
+
+```{devoirs_choices object_type_2_one_choices}
+- A specification of what each row in a dataset represents, such as a child or house.:
+    correct: true
+    feedback: Correct.
+- A column in a data frame that records one property across its specimens.:
+    correct: false
+    feedback: This describes variable, not object type. In this chapter, object type
+      refers to the kind of object represented by every specimen in a data frame.
+- A procedure for translating a dimension into a measurable quantity.:
+    correct: false
+    feedback: This describes operationalization, not object type. In this chapter,
+      object type refers to the kind of object represented by every specimen in a
+      data frame.
+- Accounting for other variables while examining a relationship of interest.:
+    correct: false
+    feedback: This describes controlling for, not object type. In this chapter, object
+      type refers to the kind of object represented by every specimen in a data frame.
+```
+
+Only one of the following is a valid description of object type. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "object-type-2-one",
+  question = "Only one of the following is a valid description of object type. Mark that one.",
+  answers = object_type_2_one_choices,
+  multiple = FALSE
+)()
+```

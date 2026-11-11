@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -45,6 +80,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ba8f7c244c1f50cbf6c6a3aa3874339a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -136,125 +173,430 @@ window.Quarto = {
 </header>
 
 
-<p><span id="devoirs-docID" style="display: none;">Drill-11.rmarkdown</span> <span><button onclick="devoirsSubmit()">Collect your answers</button></span> <span id="devoirs_summary">No answers yet collected</span></p>
-<div class="cell">
-<div class="cell-output-display">
-<script type="text/javascript">
- console.log("In devoirs.js")
+<script data-devoirs3-css=".devoirs3-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-function devoirsCollectEssays() {
-  var essay_answers = [];
-  var items = document.getElementsByClassName("devoirs-text");
-  for (i = 0; i < items.length; i++) {
-    //console.log("text entry" + i + "being handled");
-    essay_answers[i] = {itemid: items[i].id, contents: items[i].value}
+.devoirs3-feedback {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #8aaed0;
+  color: #15558a;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-selection-widget:not(.devoirs3-selection-inline) .devoirs3-choice {
+  display: block;
+}
+
+.devoirs3-selection-inline .devoirs3-choice {
+  margin-right: 1em;
+}
+
+.devoirs3-label {
+  color: #666;
+  font-style: italic;
+}
+
+.devoirs3-clear-button {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #222;
+  background-color: #eee;
+  font-size: 6pt;
+}
+
+.devoirs3-clear-button:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-collector {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #8aaed0;
+  background-color: #f1f7fc;
+}
+
+.devoirs3-collector-button {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #15558a;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #15558a;
+  font: inherit;
+  font-weight: 600;
+}
+
+.devoirs3-collector-button:focus-visible,
+.devoirs3-collector-fallback:focus-visible,
+.devoirs3-label-toggle input:focus-visible {
+  outline: 2px solid #15558a;
+  outline-offset: 2px;
+}
+
+.devoirs3-label-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.devoirs3-collector-fallback {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  max-width: 100%;
+  resize: both;
+}" data-devoirs3-collector="true" data-devoirs3-labels="true">const style = document.createElement('style');
+style.textContent = document.currentScript.dataset.devoirs3Css;
+document.head.appendChild(style);
+(() => {
+  "use strict";
+
+  const collectorEnabled = document.currentScript.dataset.devoirs3Collector === "true";
+  const labelsEnabled = document.currentScript.dataset.devoirs3Labels === "true";
+  const stateByWidget = new WeakMap();
+  const storagePrefix = "devoirs3:v1:";
+
+  function widgetFor(target) {
+    return target.closest('[data-devoirs3-widget]');
   }
 
-  return essay_answers;
-}
+  function inputFor(widget) {
+    return widget.querySelector("[data-devoirs3-input]");
+  }
 
-function devoirsGetDocID() {
-  return document.getElementById("devoirs-docID").innerHTML
-}
+  function isSelection(widget) {
+    return widget.dataset.devoirs3Widget === "selection";
+  }
 
-function devoirsCollectMC() {
-    let mc_answers = [] // Hold the information
-    var ele = document.getElementsByClassName("devoirs-mcq");
-    var count = 0;
-    for (i = 0; i < ele.length; i++) {
-        if (ele[i].checked) {
-          //console.log("Entering conditional.");
-          let checked_one = ele[i];
-          mc_answers[count++] = {itemid: checked_one.id, w: checked_one.getAttribute("w"), contents: checked_one.text};
+  function selectionInputs(widget) {
+    return Array.from(widget.querySelectorAll("[data-devoirs3-option]"));
+  }
+
+  function setFeedback(feedback, html) {
+    const mathJax = window.MathJax;
+    if (mathJax && typeof mathJax.typesetClear === "function") {
+      mathJax.typesetClear([feedback]);
+    }
+    feedback.innerHTML = html;
+    feedback.hidden = !html;
+    if (!html || !mathJax || typeof mathJax.typesetPromise !== "function") return;
+
+    const typeset = () => mathJax.typesetPromise([feedback]);
+    const ready = mathJax.startup && mathJax.startup.promise
+      ? mathJax.startup.promise.then(typeset)
+      : typeset();
+    if (ready && typeof ready.catch === "function") ready.catch(() => {});
+  }
+
+  function storageKey(widget) {
+    return storagePrefix + encodeURIComponent(widget.dataset.docid) + ":" +
+      encodeURIComponent(widget.dataset.label);
+  }
+
+  function createSubmission() {
+    const widgets = Array.from(document.querySelectorAll("[data-devoirs3-widget]"));
+    const docID = widgets[0]?.dataset.docid || "";
+    const responses = [];
+
+    widgets.forEach((widget) => {
+      if (isSelection(widget)) {
+        const value = selectionInputs(widget)
+          .filter((input) => input.checked)
+          .map((input) => input.dataset.optionId);
+        if (value.length) {
+          responses.push({ label: widget.dataset.label, type: "selection", value });
         }
+        return;
+      }
+
+      const value = inputFor(widget).value.replace(/\r\n?/g, "\n");
+      if (!value.length) return;
+      const state = stateByWidget.get(widget);
+      const activeMs = state.activeSince !== null && !document.hidden
+        ? performance.now() - state.activeSince
+        : 0;
+      const duration = Math.round(state.elapsed + activeMs) / 1000;
+      responses.push({ label: widget.dataset.label, type: "text", value, duration });
+    });
+
+    return {
+      schemaVersion: 1,
+      docID,
+      collectedAt: new Date().toISOString(),
+      responses
+    };
+  }
+
+  function initializeCollector() {
+    if ((!collectorEnabled && !labelsEnabled) || document.querySelector("[data-devoirs3-collector-ui]")) return;
+
+    const toolbar = document.createElement("div");
+    toolbar.className = "devoirs3-collector";
+    toolbar.dataset.devoirs3CollectorUi = "";
+
+    if (collectorEnabled) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "devoirs3-collector-button";
+      button.textContent = "Copy answers";
+
+      const status = document.createElement("span");
+      status.className = "devoirs3-collector-status";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+
+      const fallback = document.createElement("textarea");
+      fallback.className = "devoirs3-collector-fallback";
+      fallback.setAttribute("aria-label", "Collected answers");
+      fallback.readOnly = true;
+      fallback.rows = 1;
+      fallback.hidden = true;
+
+      button.addEventListener("click", async () => {
+        const submission = JSON.stringify(createSubmission());
+        try {
+          if (!navigator.clipboard || typeof navigator.clipboard.writeText !== "function") {
+            throw new Error("Clipboard API unavailable");
+          }
+          await navigator.clipboard.writeText(submission);
+          fallback.hidden = true;
+          status.textContent = "Answers copied.";
+        } catch (_) {
+          fallback.value = submission;
+          fallback.hidden = false;
+          status.textContent = "Clipboard unavailable. Copy the answers below.";
+          fallback.focus();
+          fallback.select();
+        }
+      });
+
+      toolbar.append(button, status, fallback);
     }
-    return mc_answers;
-}
 
-console.log("About to define WebR")
+    if (labelsEnabled) {
+      const labelToggle = document.createElement("label");
+      labelToggle.className = "devoirs3-label-toggle";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.addEventListener("change", () => {
+        document.querySelectorAll("[data-devoirs3-label]").forEach((label) => {
+          label.hidden = !checkbox.checked;
+        });
+      });
+      labelToggle.append(checkbox, document.createTextNode("Labels?"));
+      toolbar.append(labelToggle);
+    }
 
-function devoirsCollectWebR() {
-  var chunk_contents = []; // placeholder for collecting webr items
-  if (typeof qwebrCellDetails == "undefined") {
-    // There aren't any webr chunks
-    return chunk_contents;
-  }
-  var chunks = qwebrCellDetails;
-  for (i = 0; i < chunks.length; i++) {
-    chunk_contents[i] = {itemid: chunks[i].options["label"], contents: chunks[i].code};
-  }
-
-  return chunk_contents;
-}
-
-console.log("About to define devoirsSubmit")
-
-function devoirsSubmit() {
-  console.log("About to collect history")
-
-  // check if there is any sign of a webr entry
-  // If not, don't try to collect webr entries
-  if (typeof qwebrRCommandHistory === 'undefined') {
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays(), WebR: {}, R: {}}
-  } else {
-    console.log("Getting R commands.")
-    var Rhistory = qwebrRCommandHistory.map((x) => x.replace(/Ran code in (.*) at (.*[AP]M).{5}(.*)/, "[chunk: $1, time: $2, code: $3]"))
-
-    items = {docid: devoirsGetDocID(), MC: devoirsCollectMC(), Essays: devoirsCollectEssays()} //, WebR: devoirsCollectWebR(), R: Rhistory}
+    document.body.prepend(toolbar);
   }
 
-  navigator.clipboard.writeText(JSON.stringify(items));
-
-  // summarize what's being collected
-  var my_summary = "Answers copied to clipboard. Fixed choice: " + items.MC.length + " Essays: " + items.Essays.length + " WebR chunks: " + items.WebR.length
-
-  document.getElementById("devoirs_summary").innerHTML = my_summary;
-}
-
-console.log("Read devoirsSubmit()")
-
-// Hint handling in Multiple choice
-
-// Still have to add an on/off switch from options
-
-function devoirs_setup_hintarea() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) answers[i].addEventListener('click', function(e){document.getElementById(e.target.name + "-hintarea").innerHTML = e.target.getAttribute("hint")})
-}
-
- window.addEventListener("load", function() {
-  answers = document.getElementsByClassName("devoirs-mcq")
-  for (i=0; i<answers.length; i++) {
-    if (answers[i].getAttribute("show_hints") == "TRUE") {
-        answers[i].addEventListener('click', function(e){
-          console.log("inserting hint")
-        document.getElementById(e.target.name + "-hintarea").innerText = e.target.getAttribute("hint")
-      })
-
+  function save(widget) {
+    if (isSelection(widget)) {
+      const selected = selectionInputs(widget)
+        .filter((input) => input.checked)
+        .map((input) => input.dataset.optionId);
+      try {
+        if (selected.length) {
+          localStorage.setItem(storageKey(widget), JSON.stringify({ value: selected }));
+        } else {
+          localStorage.removeItem(storageKey(widget));
+        }
+      } catch (_) {
+        // The widget remains usable when browser storage is unavailable.
+      }
+      return;
+    }
+    const input = inputFor(widget);
+    const state = stateByWidget.get(widget);
+    let duration = state.elapsed;
+    if (state.activeSince !== null && !document.hidden) {
+      duration += performance.now() - state.activeSince;
+    }
+    try {
+      localStorage.setItem(storageKey(widget), JSON.stringify({
+        value: input.value,
+        durationMs: duration
+      }));
+    } catch (_) {
+      // The widget remains usable when browser storage is unavailable.
     }
   }
-})
 
-console.log("Added hint summary.") 
-</script>
+  function pause(widget) {
+    const state = stateByWidget.get(widget);
+    if (state.activeSince === null) return;
+    state.elapsed += performance.now() - state.activeSince;
+    state.activeSince = null;
+    save(widget);
+  }
 
-</div>
-</div>
-<script type="text/javascript">
-      // clear the local storage
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('btnClearStorage');
-      form.addEventListener("click", function () {
-        localStorage.clear();
-        location.reload();
-        console.log("Clearing memory");
-      }, false);
+  function resume(widget) {
+    const state = stateByWidget.get(widget);
+    if (!document.hidden && state.activeSince === null) {
+      state.activeSince = performance.now();
     }
-    )
-    </script>
-<button id="btnClearStorage">
-Clear memory
-</button>
+  }
+
+  function initialize(root = document) {
+    root.querySelectorAll("[data-devoirs3-widget]").forEach((widget) => {
+      if (stateByWidget.has(widget)) return;
+      if (isSelection(widget)) {
+        let saved = null;
+        try {
+          saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+        } catch (_) {
+          saved = null;
+        }
+        if (saved && Array.isArray(saved.value)) {
+          const selected = new Set(saved.value);
+          selectionInputs(widget).forEach((input) => {
+            input.checked = selected.has(input.dataset.optionId);
+          });
+        }
+        stateByWidget.set(widget, {});
+        return;
+      }
+      const input = inputFor(widget);
+      let saved = null;
+      try {
+        saved = JSON.parse(localStorage.getItem(storageKey(widget)) || "null");
+      } catch (_) {
+        saved = null;
+      }
+      const durationMs = saved && Number.isFinite(saved.durationMs)
+        ? Math.max(0, saved.durationMs)
+        : 0;
+      stateByWidget.set(widget, { elapsed: durationMs, activeSince: null });
+      if (saved && typeof saved.value === "string") input.value = saved.value;
+    });
+    if (root === document) initializeCollector();
+  }
+
+  function initializeMathJax() {
+    const hasFeedbackMath = Array.from(document.querySelectorAll("[data-feedback-html]"))
+      .some((input) => input.dataset.feedbackHtml.includes('class="math inline"'));
+    if (!document.querySelector(".devoirs3-choice .math.inline") && !hasFeedbackMath) return;
+    const alreadyConfigured = window.MathJax || Array.from(document.scripts).some((script) =>
+      /mathjax/i.test(script.src)
+    );
+    if (alreadyConfigured) return;
+
+    window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function initializeWhenReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        initialize();
+        initializeMathJax();
+      }, { once: true });
+    } else {
+      initialize();
+      initializeMathJax();
+    }
+  }
+
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) save(widget);
+  });
+
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-devoirs3-option]")) return;
+    const widget = widgetFor(event.target);
+    if (!widget) return;
+    save(widget);
+    const feedback = widget.querySelector("[data-devoirs3-feedback]");
+    if (widget.dataset.feedbackEnabled === "true") {
+      const feedbackHtml = widget.dataset.multiple === "true" && !event.target.checked
+        ? ""
+        : event.target.dataset.feedbackHtml || "";
+      setFeedback(feedback, feedbackHtml);
+    }
+  });
+
+  document.addEventListener("focusin", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) resume(widget);
+  });
+
+  document.addEventListener("focusout", (event) => {
+    if (!event.target.matches("[data-devoirs3-input]")) return;
+    const widget = widgetFor(event.target);
+    if (widget) pause(widget);
+  });
+
+  document.addEventListener("click", (event) => {
+    const selectionButton = event.target.closest("[data-devoirs3-clear-selection]");
+    if (selectionButton) {
+      const selectionWidget = widgetFor(selectionButton);
+      if (!selectionWidget) return;
+      selectionInputs(selectionWidget).forEach((input) => {
+        input.checked = false;
+      });
+      const feedback = selectionWidget.querySelector("[data-devoirs3-feedback]");
+      setFeedback(feedback, "");
+      try {
+        localStorage.removeItem(storageKey(selectionWidget));
+      } catch (_) {
+        // Clearing the visible choices still works without browser storage.
+      }
+      return;
+    }
+    const button = event.target.closest("[data-devoirs3-clear]");
+    if (!button) return;
+    const widget = widgetFor(button);
+    if (!widget) return;
+    const state = stateByWidget.get(widget);
+    state.elapsed = 0;
+    state.activeSince = null;
+    const input = inputFor(widget);
+    input.value = input.defaultValue;
+    try {
+      localStorage.removeItem(storageKey(widget));
+    } catch (_) {
+      // Clearing the visible field still works without browser storage.
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach((widget) => {
+      if (document.hidden) {
+        pause(widget);
+      } else if (inputFor(widget) === document.activeElement) {
+        resume(widget);
+      }
+    });
+  });
+
+  window.addEventListener("pagehide", () => {
+    document.querySelectorAll('[data-devoirs3-widget="text"]').forEach(pause);
+  });
+
+  initializeWhenReady();
+})();</script>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -275,9 +617,9 @@ Clear memory
 id: "walrus-sharpen-boat"
 created: "Thu Feb 19 09:12:47 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
@@ -291,98 +633,60 @@ mode: "exercise"
 <li>What are the odds of A?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="wsb-1-kes-hintarea" class="hintarea">wsb-1-kes</small>
-<form id="wsb-1-kes-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$3/7 \approx 0.43$" id="wsb-1-kes-1" w="18" name="wsb-1-kes" hint="A win!" show_hints="TRUE"> <span class="math inline">\(3/7 \approx 0.43\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$3/(3+7) = 0.3$" id="wsb-1-kes-2" w="87" name="wsb-1-kes" hint="Sorry. That's the absolute probability of A." show_hints="TRUE"> <span class="math inline">\(3/(3+7) = 0.3\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$1/3$" id="wsb-1-kes-3" w="87" name="wsb-1-kes" hint="Not quite." show_hints="TRUE"> <span class="math inline">\(1/3\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Not enough ... ion given." id="wsb-1-kes-4" w="7" name="wsb-1-kes" hint="You're wrong here." show_hints="TRUE"> Not enough information given.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="wsb-1-kes" id="wsb-1-kes.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for wsb-1-kes.');
-      const form = document.getElementById('wsb-1-kes-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('wsb-1-kes-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for wsb-1-kes.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for wsb-1-kes.");
-          localStorage.setItem('wsb-1-kes-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="wsb-1-kes" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d312d6b6573" id="devoirs3-selection-7773622d312d6b6573-1" value="AAjetbz" data-devoirs3-option="" data-option-id="AAjetbz" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><span class="math inline">\(3/7 \approx 0.43\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d312d6b6573" id="devoirs3-selection-7773622d312d6b6573-2" value="BAqtslm" data-devoirs3-option="" data-option-id="BAqtslm" data-feedback="Sorry. That's the absolute probability of A." data-feedback-html="Sorry. That’s the absolute probability of A.">
+    <span><span class="math inline">\(3/(3+7) = 0.3\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d312d6b6573" id="devoirs3-selection-7773622d312d6b6573-3" value="CAbqfnh" data-devoirs3-option="" data-option-id="CAbqfnh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\(1/3\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d312d6b6573" id="devoirs3-selection-7773622d312d6b6573-4" value="DAmxxfb" data-devoirs3-option="" data-option-id="DAmxxfb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Not enough information given.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">wsb-1-kes</span>
+</fieldset>
+</div>
+</div>
 <ol start="2" type="1">
 <li>What are the odds of B?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="wsb-2-k4w2-hintarea" class="hintarea">wsb-2-k4w2</small>
-<form id="wsb-2-k4w2-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$7/3 \approx 2.33$" id="wsb-2-k4w2-1" w="14" name="wsb-2-k4w2" hint="Bingo!" show_hints="TRUE"> <span class="math inline">\(7/3 \approx 2.33\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$7/(3+7) = 0.7$" id="wsb-2-k4w2-2" w="3" name="wsb-2-k4w2" hint="Sorry. That's the absolute probability of B." show_hints="TRUE"> <span class="math inline">\(7/(3+7) = 0.7\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$(7 + 3)/3$" id="wsb-2-k4w2-3" w="87" name="wsb-2-k4w2" hint="Not so!" show_hints="TRUE"> <span class="math inline">\((7 + 3)/3\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Not enough ... ion given." id="wsb-2-k4w2-4" w="32" name="wsb-2-k4w2" hint="Not quite right." show_hints="TRUE"> Not enough information given.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="wsb-2-k4w2" id="wsb-2-k4w2.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for wsb-2-k4w2.');
-      const form = document.getElementById('wsb-2-k4w2-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('wsb-2-k4w2-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for wsb-2-k4w2.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for wsb-2-k4w2.");
-          localStorage.setItem('wsb-2-k4w2-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="wsb-2-k4w2" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d322d6b347732" id="devoirs3-selection-7773622d322d6b347732-1" value="AAhdsvu" data-devoirs3-option="" data-option-id="AAhdsvu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><span class="math inline">\(7/3 \approx 2.33\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d322d6b347732" id="devoirs3-selection-7773622d322d6b347732-2" value="BAyxygw" data-devoirs3-option="" data-option-id="BAyxygw" data-feedback="Sorry. That's the absolute probability of B." data-feedback-html="Sorry. That’s the absolute probability of B.">
+    <span><span class="math inline">\(7/(3+7) = 0.7\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d322d6b347732" id="devoirs3-selection-7773622d322d6b347732-3" value="CAridzo" data-devoirs3-option="" data-option-id="CAridzo" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((7 + 3)/3\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-7773622d322d6b347732" id="devoirs3-selection-7773622d322d6b347732-4" value="DAqsnkf" data-devoirs3-option="" data-option-id="DAqsnkf" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Not enough information given.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">wsb-2-k4w2</span>
+</fieldset>
+</div>
+</div>
 </div>
 <p><!-- end of exr-walrus-sharpen-boat --></p>
 </div>
@@ -393,7 +697,7 @@ created: "Thu Feb 19 09:30:53 2026"
 attribution: TBA
 status: "draft"
 chapter: 14
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
@@ -406,148 +710,91 @@ mode: "exercise"
 <li>What is the odds of A?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="ebs-1-e3se-hintarea" class="hintarea">ebs-1-e3se</small>
-<form id="ebs-1-e3se-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$5/2 = 2.5$ " id="ebs-1-e3se-1" w="87" name="ebs-1-e3se" hint="This compares only two of the three outcomes." show_hints="TRUE"> <span class="math inline">\(5/2 = 2.5\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$5/7 = 0.714$" id="ebs-1-e3se-2" w="3" name="ebs-1-e3se" hint="This compares only two of the three outcomes." show_hints="TRUE"> <span class="math inline">\(5/7 = 0.714\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$5/9 = 0.556$" id="ebs-1-e3se-3" w="41" name="ebs-1-e3se" hint="You're right." show_hints="TRUE"> <span class="math inline">\(5/9 = 0.556\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Odds are n ...  outcomes." id="ebs-1-e3se-4" w="87" name="ebs-1-e3se" hint="That's a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes." show_hints="TRUE"> Odds are not applicable when there are three outcomes.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="ebs-1-e3se" id="ebs-1-e3se.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ebs-1-e3se.');
-      const form = document.getElementById('ebs-1-e3se-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('ebs-1-e3se-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for ebs-1-e3se.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for ebs-1-e3se.");
-          localStorage.setItem('ebs-1-e3se-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="ebs-1-e3se" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d312d65337365" id="devoirs3-selection-6562732d312d65337365-1" value="AAoobxj" data-devoirs3-option="" data-option-id="AAoobxj" data-feedback="This compares only two of the three outcomes." data-feedback-html="This compares only two of the three outcomes.">
+    <span><span class="math inline">\(5/2 = 2.5\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d312d65337365" id="devoirs3-selection-6562732d312d65337365-2" value="BAnlfzz" data-devoirs3-option="" data-option-id="BAnlfzz" data-feedback="This compares only two of the three outcomes." data-feedback-html="This compares only two of the three outcomes.">
+    <span><span class="math inline">\(5/7 = 0.714\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d312d65337365" id="devoirs3-selection-6562732d312d65337365-3" value="CAbtsgi" data-devoirs3-option="" data-option-id="CAbtsgi" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><span class="math inline">\(5/9 = 0.556\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d312d65337365" id="devoirs3-selection-6562732d312d65337365-4" value="DAwaajb" data-devoirs3-option="" data-option-id="DAwaajb" data-feedback="That's a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes." data-feedback-html="That’s a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes.">
+    <span>Odds are not applicable when there are three outcomes.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ebs-1-e3se</span>
+</fieldset>
+</div>
+</div>
 <ol start="2" type="1">
 <li>What is the odds of C?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="ebs-2-e8ee-hintarea" class="hintarea">ebs-2-e8ee</small>
-<form id="ebs-2-e8ee-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$7/2 = 3.5$ " id="ebs-2-e8ee-1" w="23" name="ebs-2-e8ee" hint="This compares only two of the three outcomes." show_hints="TRUE"> <span class="math inline">\(7/2 = 3.5\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$7/(5 + 2) = 1$" id="ebs-2-e8ee-2" w="16" name="ebs-2-e8ee" hint="Right!" show_hints="TRUE"> <span class="math inline">\(7/(5 + 2) = 1\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$(7+2)/5 = 1.8$ " id="ebs-2-e8ee-3" w="19" name="ebs-2-e8ee" hint="Nope." show_hints="TRUE"> <span class="math inline">\((7+2)/5 = 1.8\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Odds are n ...  outcomes." id="ebs-2-e8ee-4" w="3" name="ebs-2-e8ee" hint="That's a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes." show_hints="TRUE"> Odds are not applicable when there are three outcomes.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="ebs-2-e8ee" id="ebs-2-e8ee.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ebs-2-e8ee.');
-      const form = document.getElementById('ebs-2-e8ee-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('ebs-2-e8ee-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for ebs-2-e8ee.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for ebs-2-e8ee.");
-          localStorage.setItem('ebs-2-e8ee-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="ebs-2-e8ee" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d322d65386565" id="devoirs3-selection-6562732d322d65386565-1" value="AAbkdgm" data-devoirs3-option="" data-option-id="AAbkdgm" data-feedback="This compares only two of the three outcomes." data-feedback-html="This compares only two of the three outcomes.">
+    <span><span class="math inline">\(7/2 = 3.5\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d322d65386565" id="devoirs3-selection-6562732d322d65386565-2" value="BAzxrpu" data-devoirs3-option="" data-option-id="BAzxrpu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><span class="math inline">\(7/(5 + 2) = 1\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d322d65386565" id="devoirs3-selection-6562732d322d65386565-3" value="CAwqaak" data-devoirs3-option="" data-option-id="CAwqaak" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\((7+2)/5 = 1.8\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d322d65386565" id="devoirs3-selection-6562732d322d65386565-4" value="DAonays" data-devoirs3-option="" data-option-id="DAonays" data-feedback="That's a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes." data-feedback-html="That’s a misconception. The odds of an outcome are the relative probability of that outcome divided by the sum of relative probabilities of all the other outcomes.">
+    <span>Odds are not applicable when there are three outcomes.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ebs-2-e8ee</span>
+</fieldset>
+</div>
+</div>
 <ol start="3" type="1">
 <li>What is the odds of the outcome being <em>either</em> B or C?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="ebs-3-yeis-hintarea" class="hintarea">ebs-3-yeis</small>
-<form id="ebs-3-yeis-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Same as th ... odds of A." id="ebs-3-yeis-1" w="7" name="ebs-3-yeis" hint="Not right, but a good thought since A is the alternative to outcome B or C." show_hints="TRUE"> Same as the odds of A.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="1 / (odds of A)" id="ebs-3-yeis-2" w="8" name="ebs-3-yeis" hint="Spot on!" show_hints="TRUE"> 1 / (odds of A)</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="odds B + odds C " id="ebs-3-yeis-3" w="87" name="ebs-3-yeis" hint="Boo!" show_hints="TRUE"> odds B + odds C</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Odds don't ... situation." id="ebs-3-yeis-4" w="7" name="ebs-3-yeis" hint="Boo!" show_hints="TRUE"> Odds don’t apply in this situation.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="ebs-3-yeis" id="ebs-3-yeis.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for ebs-3-yeis.');
-      const form = document.getElementById('ebs-3-yeis-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('ebs-3-yeis-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for ebs-3-yeis.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for ebs-3-yeis.");
-          localStorage.setItem('ebs-3-yeis-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<p><span class="shortanswer" style="display: block;" data-tooltip="Ans id: bes-3nw">Explanation for correct answer: 1/odds(something) is p(not something)/p(something).</span></p>
-<p><span class="shortanswer" style="display: block;" data-tooltip="Ans id: bes-3GG">Explanation for choice “odds B + odds C”: Something similar would be true for probabilities: prob(B or C) = prob(B) + prob(C), but odds work differently.</span></p>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="ebs-3-yeis" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d332d79656973" id="devoirs3-selection-6562732d332d79656973-1" value="AAghfxk" data-devoirs3-option="" data-option-id="AAghfxk" data-feedback="Not right, but a good thought since A is the alternative to outcome B or C." data-feedback-html="Not right, but a good thought since A is the alternative to outcome B or C.">
+    <span>Same as the odds of A.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d332d79656973" id="devoirs3-selection-6562732d332d79656973-2" value="BAixlzq" data-devoirs3-option="" data-option-id="BAixlzq" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>1 / (odds of A)</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d332d79656973" id="devoirs3-selection-6562732d332d79656973-3" value="CAniokw" data-devoirs3-option="" data-option-id="CAniokw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>odds B + odds C</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6562732d332d79656973" id="devoirs3-selection-6562732d332d79656973-4" value="DApibeg" data-devoirs3-option="" data-option-id="DApibeg" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Odds don’t apply in this situation.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">ebs-3-yeis</span>
+</fieldset>
+</div>
+</div>
+<p><span class="shortanswer" style="display: none;" data-tooltip="Ans id: bes-3nw">Explanation for correct answer: 1/odds(something) is p(not something)/p(something).</span></p>
+<p><span class="shortanswer" style="display: none;" data-tooltip="Ans id: bes-3GG">Explanation for choice “odds B + odds C”: Something similar would be true for probabilities: prob(B or C) = prob(B) + prob(C), but odds work differently.</span></p>
 </div>
 <p><!-- end of exr-bird-engage-saw --></p>
 </div>
@@ -556,9 +803,9 @@ document.addEventListener('DOMContentLoaded', function() {
 id: "panda-mean-pen"
 created: "Thu Feb 19 09:50:39 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 11
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
@@ -572,227 +819,127 @@ mode: "exercise"
 <li>What is the quantity rA/(rA + rB + rC + rD + rE)?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="pmp-1-xgs-hintarea" class="hintarea">pmp-1-xgs</small>
-<form id="pmp-1-xgs-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The odds of A " id="pmp-1-xgs-1" w="19" name="pmp-1-xgs" hint="Nope." show_hints="TRUE"> The odds of A</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The absolu ... hat is, pA" id="pmp-1-xgs-2" w="20" name="pmp-1-xgs" hint="A hit!" show_hints="TRUE"> The absolute probability of A, that is, pA</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Neither of ... the above." id="pmp-1-xgs-3" w="23" name="pmp-1-xgs" hint="Not quite right." show_hints="TRUE"> Neither of the above.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="pmp-1-xgs" id="pmp-1-xgs.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for pmp-1-xgs.');
-      const form = document.getElementById('pmp-1-xgs-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('pmp-1-xgs-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for pmp-1-xgs.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for pmp-1-xgs.");
-          localStorage.setItem('pmp-1-xgs-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="pmp-1-xgs" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d312d786773" id="devoirs3-selection-706d702d312d786773-1" value="AAhsfkh" data-devoirs3-option="" data-option-id="AAhsfkh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The odds of A</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d312d786773" id="devoirs3-selection-706d702d312d786773-2" value="BAjovnf" data-devoirs3-option="" data-option-id="BAjovnf" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>The absolute probability of A, that is, pA</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d312d786773" id="devoirs3-selection-706d702d312d786773-3" value="CAvpkgr" data-devoirs3-option="" data-option-id="CAvpkgr" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Neither of the above.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">pmp-1-xgs</span>
+</fieldset>
+</div>
+</div>
 <ol start="2" type="1">
 <li>What is the quantity rA/(rB + rC + rD + rE)?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="pmp-2-3xgs-hintarea" class="hintarea">pmp-2-3xgs</small>
-<form id="pmp-2-3xgs-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The odds of A" id="pmp-2-3xgs-1" w="5" name="pmp-2-3xgs" hint="Right on the nose!" show_hints="TRUE"> The odds of A</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The absolu ... at is, pA." id="pmp-2-3xgs-2" w="23" name="pmp-2-3xgs" hint="Oops!" show_hints="TRUE"> The absolute probability of A, that is, pA.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Neither of ... the above." id="pmp-2-3xgs-3" w="23" name="pmp-2-3xgs" hint="Boo!" show_hints="TRUE"> Neither of the above.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="pmp-2-3xgs" id="pmp-2-3xgs.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for pmp-2-3xgs.');
-      const form = document.getElementById('pmp-2-3xgs-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('pmp-2-3xgs-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for pmp-2-3xgs.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for pmp-2-3xgs.");
-          localStorage.setItem('pmp-2-3xgs-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="pmp-2-3xgs" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d322d33786773" id="devoirs3-selection-706d702d322d33786773-1" value="AAelait" data-devoirs3-option="" data-option-id="AAelait" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>The odds of A</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d322d33786773" id="devoirs3-selection-706d702d322d33786773-2" value="BAubceb" data-devoirs3-option="" data-option-id="BAubceb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The absolute probability of A, that is, pA.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d322d33786773" id="devoirs3-selection-706d702d322d33786773-3" value="CAylzyt" data-devoirs3-option="" data-option-id="CAylzyt" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Neither of the above.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">pmp-2-3xgs</span>
+</fieldset>
+</div>
+</div>
 <ol start="3" type="1">
 <li>What is the quantity pA/(rB + rC + rD + rE)?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="pmp-3-r3gs-hintarea" class="hintarea">pmp-3-r3gs</small>
-<form id="pmp-3-r3gs-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The odds of A" id="pmp-3-r3gs-1" w="19" name="pmp-3-r3gs" hint="Sorry. It would be, if rA = pA." show_hints="TRUE"> The odds of A</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The absolu ... at is, pA." id="pmp-3-r3gs-2" w="19" name="pmp-3-r3gs" hint="Not on target." show_hints="TRUE"> The absolute probability of A, that is, pA.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Neither of ... the above." id="pmp-3-r3gs-3" w="41" name="pmp-3-r3gs" hint="Yes, although if rA happens to equal pA we'd have the odds of A" show_hints="TRUE"> Neither of the above.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="pmp-3-r3gs" id="pmp-3-r3gs.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for pmp-3-r3gs.');
-      const form = document.getElementById('pmp-3-r3gs-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('pmp-3-r3gs-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for pmp-3-r3gs.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for pmp-3-r3gs.");
-          localStorage.setItem('pmp-3-r3gs-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="pmp-3-r3gs" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d332d72336773" id="devoirs3-selection-706d702d332d72336773-1" value="AApycoe" data-devoirs3-option="" data-option-id="AApycoe" data-feedback="Sorry. It would be, if rA = pA." data-feedback-html="Sorry. It would be, if rA = pA.">
+    <span>The odds of A</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d332d72336773" id="devoirs3-selection-706d702d332d72336773-2" value="BAnbptj" data-devoirs3-option="" data-option-id="BAnbptj" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The absolute probability of A, that is, pA.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d332d72336773" id="devoirs3-selection-706d702d332d72336773-3" value="CAluysc" data-devoirs3-option="" data-option-id="CAluysc" data-feedback="Yes, although if rA happens to equal pA we'd have the odds of A" data-feedback-html="Yes, although if rA happens to equal pA we’d have the odds of A">
+    <span>Neither of the above.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">pmp-3-r3gs</span>
+</fieldset>
+</div>
+</div>
 <ol start="4" type="1">
 <li>What is the quantity pA/(pA + pB + pC + pD + pE)?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="pmp-4-g312s-hintarea" class="hintarea">pmp-4-g312s</small>
-<form id="pmp-4-g312s-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The odds of A" id="pmp-4-g312s-1" w="32" name="pmp-4-g312s" hint="Sorry, but pA also appears in the denominator (bottom) of the fraction." show_hints="TRUE"> The odds of A</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The absolu ... at is, pA." id="pmp-4-g312s-2" w="18" name="pmp-4-g312s" hint="Yes. But a pointless computation since we already know pA, we don't need pB, pC, pD, or pE." show_hints="TRUE"> The absolute probability of A, that is, pA.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Neither of ... he above. " id="pmp-4-g312s-3" w="19" name="pmp-4-g312s" hint="Not so!" show_hints="TRUE"> Neither of the above.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="pmp-4-g312s" id="pmp-4-g312s.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for pmp-4-g312s.');
-      const form = document.getElementById('pmp-4-g312s-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('pmp-4-g312s-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for pmp-4-g312s.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for pmp-4-g312s.");
-          localStorage.setItem('pmp-4-g312s-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="pmp-4-g312s" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d342d6733313273" id="devoirs3-selection-706d702d342d6733313273-1" value="AAcypnl" data-devoirs3-option="" data-option-id="AAcypnl" data-feedback="Sorry, but pA also appears in the denominator (bottom) of the fraction." data-feedback-html="Sorry, but pA also appears in the denominator (bottom) of the fraction.">
+    <span>The odds of A</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d342d6733313273" id="devoirs3-selection-706d702d342d6733313273-2" value="BAulnsp" data-devoirs3-option="" data-option-id="BAulnsp" data-feedback="Yes. But a pointless computation since we already know pA, we don't need pB, pC, pD, or pE." data-feedback-html="Yes. But a pointless computation since we already know pA, we don’t need pB, pC, pD, or pE.">
+    <span>The absolute probability of A, that is, pA.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d342d6733313273" id="devoirs3-selection-706d702d342d6733313273-3" value="CAkodse" data-devoirs3-option="" data-option-id="CAkodse" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Neither of the above.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">pmp-4-g312s</span>
+</fieldset>
+</div>
+</div>
 <ol start="5" type="1">
 <li>What is the quantity rA/(1-rA)?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="pmp-5-gjki8-hintarea" class="hintarea">pmp-5-gjki8</small>
-<form id="pmp-5-gjki8-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The odds of A" id="pmp-5-gjki8-1" w="23" name="pmp-5-gjki8" hint="No. In fact, if rA > 1 then this quantity would be negative." show_hints="TRUE"> The odds of A</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The absolu ... t is, pA. " id="pmp-5-gjki8-2" w="7" name="pmp-5-gjki8" hint="You're mistaken" show_hints="TRUE"> The absolute probability of A, that is, pA.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Neither of ... the above." id="pmp-5-gjki8-3" w="8" name="pmp-5-gjki8" hint="Yes." show_hints="TRUE"> Neither of the above.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="pmp-5-gjki8" id="pmp-5-gjki8.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for pmp-5-gjki8.');
-      const form = document.getElementById('pmp-5-gjki8-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('pmp-5-gjki8-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for pmp-5-gjki8.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for pmp-5-gjki8.");
-          localStorage.setItem('pmp-5-gjki8-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="pmp-5-gjki8" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d352d676a6b6938" id="devoirs3-selection-706d702d352d676a6b6938-1" value="AAnlmvg" data-devoirs3-option="" data-option-id="AAnlmvg" data-feedback="No. In fact, if rA > 1 then this quantity would be negative." data-feedback-html="No.&nbsp;In fact, if rA &amp;gt; 1 then this quantity would be negative.">
+    <span>The odds of A</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d352d676a6b6938" id="devoirs3-selection-706d702d352d676a6b6938-2" value="BAioddc" data-devoirs3-option="" data-option-id="BAioddc" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The absolute probability of A, that is, pA.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-706d702d352d676a6b6938" id="devoirs3-selection-706d702d352d676a6b6938-3" value="CAthaou" data-devoirs3-option="" data-option-id="CAthaou" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Neither of the above.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">pmp-5-gjki8</span>
+</fieldset>
+</div>
+</div>
 </div>
 <p><!-- end of exr-panda-mean-pen --></p>
 </div>
@@ -801,9 +948,9 @@ document.addEventListener('DOMContentLoaded', function() {
 id: "nephew-find-drawer"
 created: "Thu Feb 19 09:59:42 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 11
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
@@ -817,155 +964,101 @@ mode: "exercise"
 <li>What are the odds of rain on Sunday?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="nfd-1-ekxs-hintarea" class="hintarea">nfd-1-ekxs</small>
-<form id="nfd-1-ekxs-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="0" id="nfd-1-ekxs-1" w="7" name="nfd-1-ekxs" hint="Not quite." show_hints="TRUE"> 0</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="0.1764" id="nfd-1-ekxs-2" w="23" name="nfd-1-ekxs" hint="Better luck next time." show_hints="TRUE"> 0.1764</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="5.67" id="nfd-1-ekxs-3" w="18" name="nfd-1-ekxs" hint="Yes! That is, 85/15" show_hints="TRUE"> 5.67</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$\infty$" id="nfd-1-ekxs-4" w="32" name="nfd-1-ekxs" hint="Boo!" show_hints="TRUE"> <span class="math inline">\(\infty\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Not enough ... ion given." id="nfd-1-ekxs-5" w="87" name="nfd-1-ekxs" hint="Boo!" show_hints="TRUE"> Not enough information given.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="nfd-1-ekxs" id="nfd-1-ekxs.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for nfd-1-ekxs.');
-      const form = document.getElementById('nfd-1-ekxs-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('nfd-1-ekxs-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for nfd-1-ekxs.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for nfd-1-ekxs.");
-          localStorage.setItem('nfd-1-ekxs-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="nfd-1-ekxs" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d312d656b7873" id="devoirs3-selection-6e66642d312d656b7873-1" value="AAvrzpb" data-devoirs3-option="" data-option-id="AAvrzpb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d312d656b7873" id="devoirs3-selection-6e66642d312d656b7873-2" value="BAeixls" data-devoirs3-option="" data-option-id="BAeixls" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.1764</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d312d656b7873" id="devoirs3-selection-6e66642d312d656b7873-3" value="CAbrtid" data-devoirs3-option="" data-option-id="CAbrtid" data-feedback="Yes! That is, 85/15" data-feedback-html="Yes! That is, 85/15">
+    <span>5.67</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d312d656b7873" id="devoirs3-selection-6e66642d312d656b7873-4" value="DAndeil" data-devoirs3-option="" data-option-id="DAndeil" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\(\infty\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d312d656b7873" id="devoirs3-selection-6e66642d312d656b7873-5" value="EAuvrek" data-devoirs3-option="" data-option-id="EAuvrek" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Not enough information given.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">nfd-1-ekxs</span>
+</fieldset>
+</div>
+</div>
 <ol start="2" type="1">
 <li>What are the odds of rain on Monday?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="nfd-2-uew-hintarea" class="hintarea">nfd-2-uew</small>
-<form id="nfd-2-uew-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="0" id="nfd-2-uew-1" w="29" name="nfd-2-uew" hint="Correct." show_hints="TRUE"> 0</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="0.1764" id="nfd-2-uew-2" w="7" name="nfd-2-uew" hint="No." show_hints="TRUE"> 0.1764</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="5.67" id="nfd-2-uew-3" w="32" name="nfd-2-uew" hint="No." show_hints="TRUE"> 5.67</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$\infty$" id="nfd-2-uew-4" w="19" name="nfd-2-uew" hint="Not quite." show_hints="TRUE"> <span class="math inline">\(\infty\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Not enough ... ion given." id="nfd-2-uew-5" w="3" name="nfd-2-uew" hint="Wrong." show_hints="TRUE"> Not enough information given.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="nfd-2-uew" id="nfd-2-uew.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for nfd-2-uew.');
-      const form = document.getElementById('nfd-2-uew-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('nfd-2-uew-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for nfd-2-uew.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for nfd-2-uew.");
-          localStorage.setItem('nfd-2-uew-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="nfd-2-uew" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d322d756577" id="devoirs3-selection-6e66642d322d756577-1" value="AAhsnco" data-devoirs3-option="" data-option-id="AAhsnco" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>0</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d322d756577" id="devoirs3-selection-6e66642d322d756577-2" value="BArptjg" data-devoirs3-option="" data-option-id="BArptjg" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.1764</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d322d756577" id="devoirs3-selection-6e66642d322d756577-3" value="CAuhkug" data-devoirs3-option="" data-option-id="CAuhkug" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>5.67</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d322d756577" id="devoirs3-selection-6e66642d322d756577-4" value="DAqqmwv" data-devoirs3-option="" data-option-id="DAqqmwv" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span><span class="math inline">\(\infty\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d322d756577" id="devoirs3-selection-6e66642d322d756577-5" value="EAebgga" data-devoirs3-option="" data-option-id="EAebgga" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Not enough information given.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">nfd-2-uew</span>
+</fieldset>
+</div>
+</div>
 <ol start="3" type="1">
 <li>What are the odds of rain for the first day of the forecast, labelled “Today.”</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="nfd-3-aur-hintarea" class="hintarea">nfd-3-aur</small>
-<form id="nfd-3-aur-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="0" id="nfd-3-aur-1" w="7" name="nfd-3-aur" hint="Untrue!" show_hints="TRUE"> 0</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="0.1764" id="nfd-3-aur-2" w="87" name="nfd-3-aur" hint="You're mistaken" show_hints="TRUE"> 0.1764</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="5.67" id="nfd-3-aur-3" w="3" name="nfd-3-aur" hint="Sorry!" show_hints="TRUE"> 5.67</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="$\infty$" id="nfd-3-aur-4" w="14" name="nfd-3-aur" hint="You're right." show_hints="TRUE"> <span class="math inline">\(\infty\)</span></p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Not enough ... ion given." id="nfd-3-aur-5" w="23" name="nfd-3-aur" hint="Hmmm ..." show_hints="TRUE"> Not enough information given.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="nfd-3-aur" id="nfd-3-aur.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for nfd-3-aur.');
-      const form = document.getElementById('nfd-3-aur-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('nfd-3-aur-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for nfd-3-aur.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for nfd-3-aur.");
-          localStorage.setItem('nfd-3-aur-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="nfd-3-aur" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d332d617572" id="devoirs3-selection-6e66642d332d617572-1" value="AAewmiq" data-devoirs3-option="" data-option-id="AAewmiq" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d332d617572" id="devoirs3-selection-6e66642d332d617572-2" value="BAwekza" data-devoirs3-option="" data-option-id="BAwekza" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.1764</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d332d617572" id="devoirs3-selection-6e66642d332d617572-3" value="CArgfvn" data-devoirs3-option="" data-option-id="CArgfvn" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>5.67</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d332d617572" id="devoirs3-selection-6e66642d332d617572-4" value="DAlzcfa" data-devoirs3-option="" data-option-id="DAlzcfa" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span><span class="math inline">\(\infty\)</span></span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6e66642d332d617572" id="devoirs3-selection-6e66642d332d617572-5" value="EAkdvcb" data-devoirs3-option="" data-option-id="EAkdvcb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Not enough information given.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">nfd-3-aur</span>
+</fieldset>
+</div>
+</div>
 </div>
 <p><!-- end of exr-nephew-find-drawer --></p>
 </div>
@@ -976,7 +1069,7 @@ created: "Thu Feb 19 16:49:07 2026"
 attribution: TBA
 status: "draft"
 chapter: 11
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
@@ -990,111 +1083,90 @@ mode: "exercise"
 <ol type="1">
 <li>What’s the probability of <span class="math inline">\(\leq 1\)</span> in of snowfall?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="crs-1-sno-hintarea" class="hintarea">crs-1-sno</small>
-<form id="crs-1-sno-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="18%" id="crs-1-sno-1" w="23" name="crs-1-sno" hint="Nope." show_hints="TRUE"> 18% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="30%" id="crs-1-sno-2" w="32" name="crs-1-sno" hint="Not quite." show_hints="TRUE"> 30% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="48%" id="crs-1-sno-3" w="18" name="crs-1-sno" hint="Right." show_hints="TRUE"> 48% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough info." id="crs-1-sno-4" w="3" name="crs-1-sno" hint="Untrue!" show_hints="TRUE"> Not enough info. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="crs-1-sno" id="crs-1-sno.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for crs-1-sno.');
-      const form = document.getElementById('crs-1-sno-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('crs-1-sno-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for crs-1-sno.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for crs-1-sno.");
-          localStorage.setItem('crs-1-sno-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="crs-1-sno" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d312d736e6f" id="devoirs3-selection-6372732d312d736e6f-1" value="AAxhhqd" data-devoirs3-option="" data-option-id="AAxhhqd" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>18%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d312d736e6f" id="devoirs3-selection-6372732d312d736e6f-2" value="BArnfqn" data-devoirs3-option="" data-option-id="BArnfqn" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>30%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d312d736e6f" id="devoirs3-selection-6372732d312d736e6f-3" value="CAeimiw" data-devoirs3-option="" data-option-id="CAeimiw" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>48%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d312d736e6f" id="devoirs3-selection-6372732d312d736e6f-4" value="DAlutes" data-devoirs3-option="" data-option-id="DAlutes" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Not enough info.</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">crs-1-sno</span>
+</span>
+</div>
+</div>
 <ol start="2" type="1">
 <li>What’s the probability of <span class="math inline">\(1 \leq\ \text{snowfall} \ \leq 6\)</span> in of snowfall?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="crs-2-srto-hintarea" class="hintarea">crs-2-srto</small>
-<form id="crs-2-srto-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="23%" id="crs-2-srto-1" w="87" name="crs-2-srto" hint="Wrong." show_hints="TRUE"> 23% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="32%" id="crs-2-srto-2" w="5" name="crs-2-srto" hint="Score!" show_hints="TRUE"> 32% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="47% " id="crs-2-srto-3" w="7" name="crs-2-srto" hint="Wrong." show_hints="TRUE"> 47% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough info." id="crs-2-srto-4" w="3" name="crs-2-srto" hint="Think again." show_hints="TRUE"> Not enough info. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="crs-2-srto" id="crs-2-srto.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for crs-2-srto.');
-      const form = document.getElementById('crs-2-srto-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('crs-2-srto-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for crs-2-srto.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for crs-2-srto.");
-          localStorage.setItem('crs-2-srto-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="crs-2-srto" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d322d7372746f" id="devoirs3-selection-6372732d322d7372746f-1" value="AAciyuz" data-devoirs3-option="" data-option-id="AAciyuz" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>23%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d322d7372746f" id="devoirs3-selection-6372732d322d7372746f-2" value="BAcksof" data-devoirs3-option="" data-option-id="BAcksof" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>32%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d322d7372746f" id="devoirs3-selection-6372732d322d7372746f-3" value="CAmdyzh" data-devoirs3-option="" data-option-id="CAmdyzh" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>47%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d322d7372746f" id="devoirs3-selection-6372732d322d7372746f-4" value="DAsqxwx" data-devoirs3-option="" data-option-id="DAsqxwx" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Not enough info.</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">crs-2-srto</span>
+</span>
+</div>
+</div>
 <ol start="3" type="1">
 <li>What’s the probability of <span class="math inline">\(1 \leq\ \text{snowfall} \ \leq 3\)</span> in of snowfall?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="crs-3-wql-hintarea" class="hintarea">crs-3-wql</small>
-<form id="crs-3-wql-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="16%" id="crs-3-wql-1" w="7" name="crs-3-wql" hint="Not what I was looking for, but pretty clever. I'm thinking you divided the 14 percent for 2 to 4 inches into 7 percent for 2 to 3 inches. Very reasonable." show_hints="TRUE"> 16% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="32% " id="crs-3-wql-2" w="87" name="crs-3-wql" hint="Boo!" show_hints="TRUE"> 32% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="48% " id="crs-3-wql-3" w="23" name="crs-3-wql" hint="Not quite right." show_hints="TRUE"> 48% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Not enough info." id="crs-3-wql-4" w="35" name="crs-3-wql" hint="Nice." show_hints="TRUE"> Not enough info. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="crs-3-wql" id="crs-3-wql.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for crs-3-wql.');
-      const form = document.getElementById('crs-3-wql-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('crs-3-wql-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for crs-3-wql.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for crs-3-wql.");
-          localStorage.setItem('crs-3-wql-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="crs-3-wql" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d332d77716c" id="devoirs3-selection-6372732d332d77716c-1" value="AAerppo" data-devoirs3-option="" data-option-id="AAerppo" data-feedback="Not what I was looking for, but pretty clever. I'm thinking you divided the 14 percent for 2 to 4 inches into 7 percent for 2 to 3 inches. Very reasonable." data-feedback-html="Not what I was looking for, but pretty clever. I’m thinking you divided the 14 percent for 2 to 4 inches into 7 percent for 2 to 3 inches. Very reasonable.">
+    <span>16%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d332d77716c" id="devoirs3-selection-6372732d332d77716c-2" value="BAdnwrv" data-devoirs3-option="" data-option-id="BAdnwrv" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>32%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d332d77716c" id="devoirs3-selection-6372732d332d77716c-3" value="CAadrke" data-devoirs3-option="" data-option-id="CAadrke" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>48%</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-6372732d332d77716c" id="devoirs3-selection-6372732d332d77716c-4" value="DAkbjoc" data-devoirs3-option="" data-option-id="DAkbjoc" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Not enough info.</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">crs-3-wql</span>
+</span>
+</div>
+</div>
 </div>
 <p><!-- end of exr-cat-run-screen --></p>
 </div>
@@ -1103,9 +1175,9 @@ document.addEventListener('DOMContentLoaded', function() {
 id: "titmouse-refer-laundry"
 created: "Fri Feb 13 11:34:41 2026"
 attribution: TBA
-status: "ready-to-use"
+status: ready-to-use
 chapter: 12
-mode: "exercise"
+mode: exercise
 -->
 <style>
 .theorem-title {
@@ -1118,86 +1190,60 @@ mode: "exercise"
 <li>What are appropriate competing hypotheses for evaluating the question of coincidence?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="trl-1-3kc-hintarea" class="hintarea">trl-1-3kc</small>
-<form id="trl-1-3kc-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The Genera ... d not win." id="trl-1-3kc-1" w="87" name="trl-1-3kc" hint="No. These are two possible observations, only the first of which happened." show_hints="TRUE"> The General won versus the General did not win.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="President  ... cipating. " id="trl-1-3kc-2" w="23" name="trl-1-3kc" hint="This is wide of the mark." show_hints="TRUE"> President Aquino participated in the conspiracy versus her not participating.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The Sept.  ... as honest." id="trl-1-3kc-3" w="7" name="trl-1-3kc" hint="Certainly." show_hints="TRUE"> The Sept.&nbsp;lottery was rigged versus the Sept.&nbsp;lottery was honest.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="The lotter ... y in 1990." id="trl-1-3kc-4" w="3" name="trl-1-3kc" hint="Hmmm ..." show_hints="TRUE"> The lottery had been rigged before 1990 versus it was rigged only in 1990.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="trl-1-3kc" id="trl-1-3kc.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for trl-1-3kc.');
-      const form = document.getElementById('trl-1-3kc-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('trl-1-3kc-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for trl-1-3kc.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for trl-1-3kc.");
-          localStorage.setItem('trl-1-3kc-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="trl-1-3kc" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d312d336b63" id="devoirs3-selection-74726c2d312d336b63-1" value="AAbgvtk" data-devoirs3-option="" data-option-id="AAbgvtk" data-feedback="No. These are two possible observations, only the first of which happened." data-feedback-html="No.&nbsp;These are two possible observations, only the first of which happened.">
+    <span>The General won versus the General did not win.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d312d336b63" id="devoirs3-selection-74726c2d312d336b63-2" value="BAllczn" data-devoirs3-option="" data-option-id="BAllczn" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>President Aquino participated in the conspiracy versus her not participating.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d312d336b63" id="devoirs3-selection-74726c2d312d336b63-3" value="CAuqgxa" data-devoirs3-option="" data-option-id="CAuqgxa" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The Sept.&nbsp;lottery was rigged versus the Sept.&nbsp;lottery was honest. [Correct]</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d312d336b63" id="devoirs3-selection-74726c2d312d336b63-4" value="DAbmaub" data-devoirs3-option="" data-option-id="DAbmaub" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>The lottery had been rigged before 1990 versus it was rigged only in 1990.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">trl-1-3kc</span>
+</fieldset>
+</div>
+</div>
 <ol start="2" type="1">
 <li>Suppose the lottery was indeed corrupt. Which of the following likelihoods would reflect skepticism that anyone in the lottery management would try to pay off the General?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="trl-2-2kd-hintarea" class="hintarea">trl-2-2kd</small>
-<form id="trl-2-2kd-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="0.001" id="trl-2-2kd-1" w="5" name="trl-2-2kd" hint="Yeah!" show_hints="TRUE"> 0.001 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.01" id="trl-2-2kd-2" w="32" name="trl-2-2kd" hint="Not quite." show_hints="TRUE"> 0.01 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.1" id="trl-2-2kd-3" w="3" name="trl-2-2kd" hint="Better luck next time." show_hints="TRUE"> 0.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="Practically 1.0" id="trl-2-2kd-4" w="7" name="trl-2-2kd" hint="Nope." show_hints="TRUE"> Practically 1.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="trl-2-2kd" id="trl-2-2kd.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for trl-2-2kd.');
-      const form = document.getElementById('trl-2-2kd-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('trl-2-2kd-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for trl-2-2kd.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for trl-2-2kd.");
-          localStorage.setItem('trl-2-2kd-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="trl-2-2kd" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d322d326b64" id="devoirs3-selection-74726c2d322d326b64-1" value="AAotfiu" data-devoirs3-option="" data-option-id="AAotfiu" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>0.001</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d322d326b64" id="devoirs3-selection-74726c2d322d326b64-2" value="BAmjsvw" data-devoirs3-option="" data-option-id="BAmjsvw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.01</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d322d326b64" id="devoirs3-selection-74726c2d322d326b64-3" value="CAqtcia" data-devoirs3-option="" data-option-id="CAqtcia" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.1</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d322d326b64" id="devoirs3-selection-74726c2d322d326b64-4" value="DAfwraa" data-devoirs3-option="" data-option-id="DAfwraa" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Practically 1.0</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">trl-2-2kd</span>
+</span>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1217,39 +1263,32 @@ Tip
 <ol start="3" type="1">
 <li>Suppose that the lottery was honest and that one-million people play it each week. What is the likelihood that the General would win the top prize?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="trl-3-jfe-hintarea" class="hintarea">trl-3-jfe</small>
-<form id="trl-3-jfe-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="1e-6" id="trl-3-jfe-1" w="16" name="trl-3-jfe" hint="Good job!" show_hints="TRUE"> 1e-6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1e-4" id="trl-3-jfe-2" w="32" name="trl-3-jfe" hint="No." show_hints="TRUE"> 1e-4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1e-2" id="trl-3-jfe-3" w="7" name="trl-3-jfe" hint="Untrue!" show_hints="TRUE"> 1e-2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1" id="trl-3-jfe-4" w="23" name="trl-3-jfe" hint="You're mistaken" show_hints="TRUE"> 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="trl-3-jfe" id="trl-3-jfe.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for trl-3-jfe.');
-      const form = document.getElementById('trl-3-jfe-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('trl-3-jfe-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for trl-3-jfe.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for trl-3-jfe.");
-          localStorage.setItem('trl-3-jfe-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="trl-3-jfe" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d332d6a6665" id="devoirs3-selection-74726c2d332d6a6665-1" value="AAanadi" data-devoirs3-option="" data-option-id="AAanadi" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>1e-6</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d332d6a6665" id="devoirs3-selection-74726c2d332d6a6665-2" value="BAialxb" data-devoirs3-option="" data-option-id="BAialxb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1e-4</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d332d6a6665" id="devoirs3-selection-74726c2d332d6a6665-3" value="CAsfbvr" data-devoirs3-option="" data-option-id="CAsfbvr" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1e-2</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d332d6a6665" id="devoirs3-selection-74726c2d332d6a6665-4" value="DAuowjb" data-devoirs3-option="" data-option-id="DAuowjb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>1</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">trl-3-jfe</span>
+</span>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1269,40 +1308,32 @@ Tip
 <ol start="4" type="1">
 <li>What is the likelihood ratio of the rigged versus honest hypotheses given the indicated answers to the above questions about likelihood?</li>
 </ol>
-<div class="cell" data-inline="true">
-<span> <small style="color: grey;" id="trl-4-3ws-hintarea" class="hintarea">trl-4-3ws</small>
-<form id="trl-4-3ws-form">
-<span> <span> <input type="radio" class="devoirs-mcq" value="0.001 " id="trl-4-3ws-1" w="87" name="trl-4-3ws" hint="Untrue!" show_hints="TRUE"> 0.001 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="0.1" id="trl-4-3ws-2" w="19" name="trl-4-3ws" hint="This is wide of the mark." show_hints="TRUE"> 0.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="10" id="trl-4-3ws-3" w="32" name="trl-4-3ws" hint="Hmmm ..." show_hints="TRUE"> 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" value="1000" id="trl-4-3ws-4" w="20" name="trl-4-3ws" hint="Right." show_hints="TRUE"> 1000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" class="devoirs-mcq" name="trl-4-3ws" id="trl-4-3ws.null" style="display: none;" w="skipped" checked=""> </span> </span>
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for trl-4-3ws.');
-      const form = document.getElementById('trl-4-3ws-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('trl-4-3ws-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for trl-4-3ws.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for trl-4-3ws.");
-          localStorage.setItem('trl-4-3ws-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
-<p>```</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="devoirs3-selection-widget devoirs3-selection-inline" role="group" aria-label="Placeholder for now" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="trl-4-3ws" data-feedback-enabled="true" data-multiple="false">
+  <span class="devoirs3-visually-hidden">Placeholder for now</span>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d342d337773" id="devoirs3-selection-74726c2d342d337773-1" value="AAvqehi" data-devoirs3-option="" data-option-id="AAvqehi" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.001</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d342d337773" id="devoirs3-selection-74726c2d342d337773-2" value="BAiturt" data-devoirs3-option="" data-option-id="BAiturt" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>0.1</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d342d337773" id="devoirs3-selection-74726c2d342d337773-3" value="CAbkaxo" data-devoirs3-option="" data-option-id="CAbkaxo" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>10</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d342d337773" id="devoirs3-selection-74726c2d342d337773-4" value="DAaybrx" data-devoirs3-option="" data-option-id="DAaybrx" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>1000</span>
+  </label>
+  <span class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></span>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">trl-4-3ws</span>
+</span>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1323,50 +1354,31 @@ Tip
 <li>On the verbal scale for interpretting likelihood, what’s the best description for the indicated answer to (4)?</li>
 </ol>
 <div class="cell">
-<span> <small style="color: grey;" id="trl-5-wkc-hintarea" class="hintarea">trl-5-wkc</small>
-<form id="trl-5-wkc-form">
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Moderate s ... ypothesis." id="trl-5-wkc-1" w="3" name="trl-5-wkc" hint="Hmmm ..." show_hints="TRUE"> Moderate support for the “rigged” hypothesis.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Weak suppo ... ypothesis." id="trl-5-wkc-2" w="32" name="trl-5-wkc" hint="No." show_hints="TRUE"> Weak support for the “honest” hypothesis.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Moderate t ... ypothesis." id="trl-5-wkc-3" w="35" name="trl-5-wkc" hint="Right!" show_hints="TRUE"> Moderate to strong support for the “rigged” hypothesis.</p>
-<p></p>
-<p>
-</p><p><input type="radio" class="devoirs-mcq" value="Moderate t ... ypothesis." id="trl-5-wkc-4" w="19" name="trl-5-wkc" hint="Untrue!" show_hints="TRUE"> Moderate to strong support for the “honest” hypothesis.</p>
-<p></p>
-<input type="radio" class="devoirs-mcq" name="trl-5-wkc" id="trl-5-wkc.null" style="display: none;" w="skipped" checked="">
-</form>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-      console.log('Adding event listener for trl-5-wkc.');
-      const form = document.getElementById('trl-5-wkc-form');
-      const radioButtons = form.querySelectorAll('input[type="radio"]');
-
-      // Load saved value on page load
-      const savedValue = localStorage.getItem('trl-5-wkc-choice');
-      if (savedValue) {
-        console.log("Restoring radio button values for trl-5-wkc.");
-        radioButtons.forEach(radio => {
-          if (radio.value === savedValue) {
-            radio.checked = true;
-          }
-        });
-      }
-
-      // Save value on change
-      form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-          console.log("Saving changed value for trl-5-wkc.");
-          localStorage.setItem('trl-5-wkc-choice', event.target.value);
-        }
-      });
-    });
-</script>
-<p></p>
-</span></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="trl-5-wkc" data-feedback-enabled="true" data-multiple="false">
+  <legend class="devoirs3-visually-hidden">Placeholder for now</legend>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d352d776b63" id="devoirs3-selection-74726c2d352d776b63-1" value="AAnidqu" data-devoirs3-option="" data-option-id="AAnidqu" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Moderate support for the “rigged” hypothesis.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d352d776b63" id="devoirs3-selection-74726c2d352d776b63-2" value="BAkjqjb" data-devoirs3-option="" data-option-id="BAkjqjb" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Weak support for the “honest” hypothesis.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d352d776b63" id="devoirs3-selection-74726c2d352d776b63-3" value="CAiisen" data-devoirs3-option="" data-option-id="CAiisen" data-feedback="Correct!" data-feedback-html="Correct!">
+    <span>Moderate to strong support for the “rigged” hypothesis.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="radio" name="devoirs3-selection-74726c2d352d776b63" id="devoirs3-selection-74726c2d352d776b63-4" value="DAinbiw" data-devoirs3-option="" data-option-id="DAinbiw" data-feedback="Sorry." data-feedback-html="Sorry.">
+    <span>Moderate to strong support for the “honest” hypothesis.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Placeholder for now">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">trl-5-wkc</span>
+</fieldset>
+</div>
+</div>
 </div>
 <p><!-- end of exr-titmouse-refer-laundry --></p>
 </div>
@@ -1375,8 +1387,198 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key vocabulary
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Likelihood</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Likelihood framework</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Null hypothesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Scientific method</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Two of the following are valid descriptions of likelihood. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"likelihood-11-two"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of likelihood. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> likelihood_11_two_choices,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="likelihood-11-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of likelihood. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d31312d74776f-1" value="AApeogw" data-devoirs3-option="" data-option-id="AApeogw" data-feedback="Likelihood values depend on the data and model and are interpreted comparatively, often by ratios." data-feedback-html="Likelihood values depend on the data and model and are interpreted comparatively, often by ratios.">
+    <span>A number that must be large whenever a model is correct.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d31312d74776f-2" value="BAlzrzt" data-devoirs3-option="" data-option-id="BAlzrzt" data-feedback="That is a range; likelihood is a model-based score for observed data." data-feedback-html="That is a range; likelihood is a model-based score for observed data.">
+    <span>The range of values that a quantity could possibly take.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d31312d74776f-3" value="CAnvzey" data-devoirs3-option="" data-option-id="CAnvzey" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The value of a hypothesis’s probability distribution at the observed outcome.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d31312d74776f-4" value="DAhtmmm" data-devoirs3-option="" data-option-id="DAhtmmm" data-feedback="That describes spread, such as standard deviation; likelihood evaluates data under a hypothesis." data-feedback-html="That describes spread, such as standard deviation; likelihood evaluates data under a hypothesis.">
+    <span>A measure of how much a quantity varies around its mean.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d31312d74776f-5" value="EAvdzow" data-devoirs3-option="" data-option-id="EAvdzow" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The probability of observing the data under a specific, hypothesized model.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of likelihood. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">likelihood-11-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"likelihood-framework-11-two"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> likelihood_framework_11_two_choices,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="likelihood-framework-11-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f-1" value="AAiiror" data-devoirs3-option="" data-option-id="AAiiror" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A framework in which hypotheses compete and likelihood serves as each hypothesis’s data-based score.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f-2" value="BAxcuee" data-devoirs3-option="" data-option-id="BAxcuee" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A way to rank or compare hypotheses according to the likelihood of the observed evidence under each.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f-3" value="CAxcxau" data-devoirs3-option="" data-option-id="CAxcxau" data-feedback="That is the posterior distribution in the Bayesian framework." data-feedback-html="That is the posterior distribution in the Bayesian framework.">
+    <span>The probability distribution that summarizes knowledge after data are processed.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f-4" value="DAzyplc" data-devoirs3-option="" data-option-id="DAzyplc" data-feedback="Likelihood evaluates hypotheses in the setting of observed data." data-feedback-html="Likelihood evaluates hypotheses in the setting of observed data.">
+    <span>A method that compares models without using any observations.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f" id="devoirs3-selection-6c696b656c69686f6f642d6672616d65776f726b2d31312d74776f-5" value="EAurwfu" data-devoirs3-option="" data-option-id="EAurwfu" data-feedback="The likelihood framework compares hypotheses by their likelihoods for data; prior belief is addressed in Bayesian updating." data-feedback-html="The likelihood framework compares hypotheses by their likelihoods for data; prior belief is addressed in Bayesian updating.">
+    <span>A framework that assigns each hypothesis a probability of being true based only on prior belief.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">likelihood-framework-11-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Two of the following are valid descriptions of null hypothesis. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"null-hypothesis-11-two"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of null hypothesis. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> null_hypothesis_11_two_choices,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="null-hypothesis-11-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of null hypothesis. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f-1" value="AAbliou" data-devoirs3-option="" data-option-id="AAbliou" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A baseline hypothesis representing a no-effect or ordinary-condition explanation for comparison.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f-2" value="BAnymta" data-devoirs3-option="" data-option-id="BAnymta" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>The reference hypothesis that specifies no unusual effect, such as an unbiased coin.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f-3" value="CAitenc" data-devoirs3-option="" data-option-id="CAitenc" data-feedback="That describes random number generation; a null hypothesis is a claim evaluated against evidence." data-feedback-html="That describes random number generation; a null hypothesis is a claim evaluated against evidence.">
+    <span>A rule for repeatedly sampling values from a probability distribution.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f-4" value="DAlqphv" data-devoirs3-option="" data-option-id="DAlqphv" data-feedback="The null is the baseline; the research hypothesis specifies the alternative effect." data-feedback-html="The null is the baseline; the research hypothesis specifies the alternative effect.">
+    <span>The research hypothesis that specifies the particular effect being proposed.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f" id="devoirs3-selection-6e756c6c2d6879706f7468657369732d31312d74776f-5" value="EAyykwf" data-devoirs3-option="" data-option-id="EAyykwf" data-feedback="The null is the comparison baseline, not the favored research claim." data-feedback-html="The null is the comparison baseline, not the favored research claim.">
+    <span>A claim that the researcher’s preferred explanation must be correct.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of null hypothesis. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">null-hypothesis-11-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Two of the following are valid descriptions of scientific method. The other three are not. Mark both of the VALID descriptions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devoirs3<span class="sc">::</span><span class="fu">devoirs_selection</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"scientific-method-11-two"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">question =</span> <span class="st">"Two of the following are valid descriptions of scientific method. The other three are not. Mark both of the VALID descriptions."</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">answers =</span> scientific_method_11_two_choices,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">multiple =</span> <span class="cn">TRUE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<fieldset class="devoirs3-selection-widget" data-devoirs3-widget="selection" data-docid="QA-drill-11" data-label="scientific-method-11-two" data-feedback-enabled="true" data-multiple="true">
+  <legend class="devoirs3-visually-hidden">Two of the following are valid descriptions of scientific method. The other three are not. Mark both of the VALID descriptions.</legend>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f-1" value="AAuuqnj" data-devoirs3-option="" data-option-id="AAuuqnj" data-feedback="That describes a probability distribution, which may represent a hypothesis but is not the whole method." data-feedback-html="That describes a probability distribution, which may represent a hypothesis but is not the whole method.">
+    <span>A probability distribution assigning likelihood to every possible outcome.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f-2" value="BAnntab" data-devoirs3-option="" data-option-id="BAnntab" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>An approach to investigation that uses evidence to improve explanatory models over time.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f-3" value="CAwkqmj" data-devoirs3-option="" data-option-id="CAwkqmj" data-feedback="The chapter emphasizes iterative refinement based on insight and evidence." data-feedback-html="The chapter emphasizes iterative refinement based on insight and evidence.">
+    <span>A procedure that accepts the first proposed model without testing it.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f-4" value="DAyixew" data-devoirs3-option="" data-option-id="DAyixew" data-feedback="A prior is part of Bayesian analysis; the scientific method is the broader evidence-driven process." data-feedback-html="A prior is part of Bayesian analysis; the scientific method is the broader evidence-driven process.">
+    <span>A rule for assigning a prior distribution to a hypothesis.</span>
+  </label>
+  <label class="devoirs3-choice">
+    <input type="checkbox" name="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f" id="devoirs3-selection-736369656e74696669632d6d6574686f642d31312d74776f-5" value="EAwghmi" data-devoirs3-option="" data-option-id="EAwghmi" data-feedback="Correct." data-feedback-html="Correct.">
+    <span>A process in which hypotheses are examined against observations and revised as needed.</span>
+  </label>
+  <div class="devoirs3-feedback" role="status" aria-live="polite" aria-atomic="true" data-devoirs3-feedback="" hidden="TRUE"></div>
+  <button type="button" class="devoirs3-clear-button" data-devoirs3-clear-selection="" aria-label="Clear answer for Two of the following are valid descriptions of scientific method. The other three are not. Mark both of the VALID descriptions.">Clear</button>
+  <span class="devoirs3-label" data-devoirs3-label="" hidden="TRUE">scientific-method-11-two</span>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

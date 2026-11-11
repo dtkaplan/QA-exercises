@@ -1,0 +1,28 @@
+
+```{devoirs_choices calculus_14_one_choices}
+- A guarantee that a function is continuous everywhere.:
+    correct: false
+    feedback: Continuity is a property of a function, not a guarantee made by calculus.
+- A graphing technique that reads function outputs from contour lines.:
+    correct: false
+    feedback: That is contour plotting; calculus includes differentiation and related
+      function operations.
+- The total change of a quantity, without reference to a rate of change.:
+    correct: false
+    feedback: Accumulation can recover totals from rates; calculus also studies derivatives
+      and their relationships.
+- A framework for relating functions through derivatives and rates of change.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of calculus. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "calculus-14-one",
+  question = "Only one of the following is a valid description of calculus. Mark that one.",
+  answers = calculus_14_one_choices,
+  multiple = FALSE
+)()
+```

@@ -1,0 +1,31 @@
+
+```{devoirs_choices probability_distributions_8_two_choices}
+- A table of measurements with no indication of how likely they are.:
+    correct: false
+    feedback: A data table records observations; a probability distribution assigns
+      relative likelihood to possibilities.
+- A way to describe uncertainty across all possible values, rather than only range endpoints.:
+    correct: true
+    feedback: Correct.
+- A list containing only the values already observed in a sample.:
+    correct: false
+    feedback: A distribution can describe possible values that have not yet been observed.
+- Probability models that associate each possible outcome with a measure of its likelihood.:
+    correct: true
+    feedback: Correct.
+- A claim that a scientific explanation has been proven true.:
+    correct: false
+    feedback: A distribution can represent a hypothesis about observations; it does
+      not prove that hypothesis.
+```
+
+Two of the following are valid descriptions of probability distributions. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "probability-distributions-8-two",
+  question = "Two of the following are valid descriptions of probability distributions. The other three are not. Mark both of the VALID descriptions.",
+  answers = probability_distributions_8_two_choices,
+  multiple = TRUE
+)()
+```

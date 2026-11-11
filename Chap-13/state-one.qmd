@@ -1,0 +1,27 @@
+
+```{devoirs_choices state_13_one_choices}
+- A rule that maps the current system configuration to its rate of change.:
+    correct: false
+    feedback: That is the dynamical rule; the state is its input.
+- A system's instantaneous configuration, represented by one or more quantities.:
+    correct: true
+    feedback: Correct.
+- A list of all potential future outcomes with their probabilities.:
+    correct: false
+    feedback: That describes a probability distribution; a state is the current configuration.
+- A description that may omit quantities needed to determine the system's configuration.:
+    correct: false
+    feedback: The chapter defines state as a complete description of the instantaneous
+      configuration.
+```
+
+Only one of the following is a valid description of state. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "state-13-one",
+  question = "Only one of the following is a valid description of state. Mark that one.",
+  answers = state_13_one_choices,
+  multiple = FALSE
+)()
+```

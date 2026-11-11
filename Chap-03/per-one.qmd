@@ -1,0 +1,29 @@
+
+```{devoirs_choices per_3_one_choices}
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: false
+    feedback: This describes worth, not per. In this chapter, per refers to a word
+      that signals division, with the following quantity in the denominator.
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not per. In this chapter, per refers to a word
+      that signals division, with the following quantity in the denominator.
+- The word used to express the divisor in a ratio, as in miles per hour.:
+    correct: true
+    feedback: Correct.
+- A number with no unit designation, such as seven or pi.:
+    correct: false
+    feedback: This describes pure number, not per. In this chapter, per refers to
+      a word that signals division, with the following quantity in the denominator.
+```
+
+Only one of the following is a valid description of per. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "per-3-one",
+  question = "Only one of the following is a valid description of per. Mark that one.",
+  answers = per_3_one_choices,
+  multiple = FALSE
+)()
+```

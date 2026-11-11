@@ -1,0 +1,28 @@
+
+```{devoirs_choices prior_12_one_choices}
+- A summary of the observed data's mean and standard deviation.:
+    correct: false
+    feedback: Those are data summaries; the prior expresses knowledge before the observations
+      are incorporated.
+- A random sample drawn from a probability model.:
+    correct: false
+    feedback: A sample is an outcome; a prior is a distribution describing before-data
+      knowledge.
+- The likelihood score assigned to an observation under a hypothesis.:
+    correct: false
+    feedback: That is a likelihood, which is combined with the prior to form the posterior.
+- A distribution that expresses what is believed about possible values before the experiment's evidence.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of prior. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "prior-12-one",
+  question = "Only one of the following is a valid description of prior. Mark that one.",
+  answers = prior_12_one_choices,
+  multiple = FALSE
+)()
+```

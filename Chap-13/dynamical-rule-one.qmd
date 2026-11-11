@@ -1,0 +1,29 @@
+
+```{devoirs_choices dynamical_rule_13_one_choices}
+- A rule that gives several unrelated futures for the same state.:
+    correct: false
+    feedback: The chapter treats the dynamical rule as a function, with one output
+      for each input state.
+- A rule specifying how the state changes over the next instant from each possible state.:
+    correct: true
+    feedback: Correct.
+- A time series showing the state at successive times.:
+    correct: false
+    feedback: A time series records state over time; the dynamical rule maps state
+      to rate of change.
+- The total change accumulated over the entire history of a system.:
+    correct: false
+    feedback: The rule gives instantaneous change; accumulating it over time produces
+      a trajectory.
+```
+
+Only one of the following is a valid description of dynamical rule. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dynamical-rule-13-one",
+  question = "Only one of the following is a valid description of dynamical rule. Mark that one.",
+  answers = dynamical_rule_13_one_choices,
+  multiple = FALSE
+)()
+```

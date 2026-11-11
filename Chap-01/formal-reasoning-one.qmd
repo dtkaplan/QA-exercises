@@ -1,0 +1,33 @@
+
+
+```{devoirs_choices formal_reasoning_1_one_choices}
+- Reasoning whose validity depends on the correctness of each step, not on how plausible it sounds.:
+    correct: true
+    feedback: Correct.
+- A machine-learning system that uses patterns and alignments in text to generate language.:
+    correct: false
+    feedback: This describes Large language model (LLM), not formal reasoning. In
+      this chapter, formal reasoning refers to reasoning that applies explicit rules
+      whose correct application yields certain conclusions.
+- Recorded facts, findings, and measurements.:
+    correct: false
+    feedback: This describes data, not formal reasoning. In this chapter, formal reasoning
+      refers to reasoning that applies explicit rules whose correct application yields
+      certain conclusions.
+- A rectangular array of data organized into rows and columns.:
+    correct: false
+    feedback: This describes data frame, not formal reasoning. In this chapter, formal
+      reasoning refers to reasoning that applies explicit rules whose correct application
+      yields certain conclusions.
+```
+
+Only one of the following is a valid description of formal reasoning. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "formal-reasoning-1-one",
+  question = "Only one of the following is a valid description of formal reasoning. Mark that one.",
+  answers = formal_reasoning_1_one_choices,
+  multiple = FALSE
+)()
+```

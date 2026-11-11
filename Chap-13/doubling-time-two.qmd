@@ -1,0 +1,32 @@
+
+```{devoirs_choices doubling_time_13_two_choices}
+- The delay between two independent events in an exponential distribution.:
+    correct: false
+    feedback: That is a waiting time modeled by an exponential distribution, not the
+      growth parameter described here.
+- The fixed interval required for an exponentially growing quantity to double.:
+    correct: true
+    feedback: Correct.
+- The time at which exponential growth begins.:
+    correct: false
+    feedback: The start time is not the repeated interval that characterizes exponential
+      growth.
+- The fixed percentage increase in a quantity during each year.:
+    correct: false
+    feedback: A percentage rate may determine growth, but doubling time is the interval
+      for the quantity to double.
+- shorter doubling means faster growth.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of doubling time. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "doubling-time-13-two",
+  question = "Two of the following are valid descriptions of doubling time. The other three are not. Mark both of the VALID descriptions.",
+  answers = doubling_time_13_two_choices,
+  multiple = TRUE
+)()
+```

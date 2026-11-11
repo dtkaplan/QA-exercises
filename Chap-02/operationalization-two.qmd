@@ -1,0 +1,34 @@
+
+```{devoirs_choices operationalization_2_two_choices}
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not operationalization. In this chapter,
+      operationalization refers to a procedure for translating a dimension into a
+      measurable quantity.
+- Fundamental dimensions from which derived dimensions are formed.:
+    correct: false
+    feedback: This describes base dimensions, not operationalization. In this chapter,
+      operationalization refers to a procedure for translating a dimension into a
+      measurable quantity.
+- The choice of how a characteristic will be measured for a particular purpose.:
+    correct: true
+    feedback: Correct.
+- A measurement process that gives a dimension a usable quantitative representation.:
+    correct: true
+    feedback: Correct.
+- Examining a system by breaking it into contributing components.:
+    correct: false
+    feedback: This describes analysis, not operationalization. In this chapter, operationalization
+      refers to a procedure for translating a dimension into a measurable quantity.
+```
+
+Two of the following are valid descriptions of operationalization. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "operationalization-2-two",
+  question = "Two of the following are valid descriptions of operationalization. The other three are not. Mark both of the VALID descriptions.",
+  answers = operationalization_2_two_choices,
+  multiple = TRUE
+)()
+```

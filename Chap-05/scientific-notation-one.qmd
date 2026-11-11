@@ -1,0 +1,32 @@
+
+```{devoirs_choices scientific_notation_5_one_choices}
+- A way to write very large or small values without listing many zeros.:
+    correct: true
+    feedback: Correct.
+- Reasoning that applies explicit rules whose correct application yields certain conclusions.:
+    correct: false
+    feedback: This describes formal reasoning, not scientific notation. In this chapter,
+      scientific notation refers to a number format that expresses a value as a mantissa
+      multiplied by a power of ten.
+- Representations of items, processes, or settings that are easier to use than the reality.:
+    correct: false
+    feedback: This describes models, not scientific notation. In this chapter, scientific
+      notation refers to a number format that expresses a value as a mantissa multiplied
+      by a power of ten.
+- Fast, broadly applicable reasoning that uses useful but fallible rules of thumb.:
+    correct: false
+    feedback: This describes heuristic reasoning, not scientific notation. In this
+      chapter, scientific notation refers to a number format that expresses a value
+      as a mantissa multiplied by a power of ten.
+```
+
+Only one of the following is a valid description of scientific notation. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "scientific-notation-5-one",
+  question = "Only one of the following is a valid description of scientific notation. Mark that one.",
+  answers = scientific_notation_5_one_choices,
+  multiple = FALSE
+)()
+```

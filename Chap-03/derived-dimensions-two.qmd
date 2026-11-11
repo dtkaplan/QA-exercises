@@ -1,0 +1,33 @@
+
+```{devoirs_choices derived_dimensions_3_two_choices}
+- The products or ratios of base dimensions associated with derived quantities.:
+    correct: true
+    feedback: Correct.
+- A word that signals division, with the following quantity in the denominator.:
+    correct: false
+    feedback: This describes per, not derived dimensions. In this chapter, derived
+      dimensions refers to dimensions formed by multiplying or dividing base dimensions.
+- Combinations such as length divided by time that describe more complex quantities.:
+    correct: true
+    feedback: Correct.
+- A number with no unit designation, such as seven or pi.:
+    correct: false
+    feedback: This describes pure number, not derived dimensions. In this chapter,
+      derived dimensions refers to dimensions formed by multiplying or dividing base
+      dimensions.
+- The International System of Units, the primary official system for defining units.:
+    correct: false
+    feedback: This describes SI, not derived dimensions. In this chapter, derived
+      dimensions refers to dimensions formed by multiplying or dividing base dimensions.
+```
+
+Two of the following are valid descriptions of derived dimensions. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "derived-dimensions-3-two",
+  question = "Two of the following are valid descriptions of derived dimensions. The other three are not. Mark both of the VALID descriptions.",
+  answers = derived_dimensions_3_two_choices,
+  multiple = TRUE
+)()
+```

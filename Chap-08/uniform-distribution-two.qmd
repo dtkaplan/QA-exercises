@@ -1,0 +1,32 @@
+
+```{devoirs_choices uniform_distribution_8_two_choices}
+- A range-based model in which all permitted values are equally likely.:
+    correct: true
+    feedback: Correct.
+- A distribution used when the value is bounded but could be anywhere within those bounds.:
+    correct: true
+    feedback: Correct.
+- A model that assigns positive probability to every value on the number line.:
+    correct: false
+    feedback: A uniform distribution in this chapter is bounded; values outside its
+      range are impossible.
+- A list of observations ranked from most to least likely.:
+    correct: false
+    feedback: A uniform distribution gives equal likelihood across its range, not
+      a ranking of observed data.
+- A distribution whose endpoints are merely unlikely but still possible.:
+    correct: false
+    feedback: The uniform model's known range excludes values outside the bounds,
+      unlike a normal model's soft tails.
+```
+
+Two of the following are valid descriptions of uniform distribution. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "uniform-distribution-8-two",
+  question = "Two of the following are valid descriptions of uniform distribution. The other three are not. Mark both of the VALID descriptions.",
+  answers = uniform_distribution_8_two_choices,
+  multiple = TRUE
+)()
+```

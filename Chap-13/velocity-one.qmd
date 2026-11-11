@@ -1,0 +1,29 @@
+
+```{devoirs_choices velocity_13_one_choices}
+- A probability distribution describing uncertain event intervals.:
+    correct: false
+    feedback: That is an exponential distribution; velocity describes the motion of
+      an object's position.
+- A quantity that must always be positive, regardless of direction.:
+    correct: false
+    feedback: Velocity includes direction and can be negative depending on the coordinate
+      convention.
+- A measure of how quickly and in what direction position changes.:
+    correct: true
+    feedback: Correct.
+- The total distance traveled over the entire journey.:
+    correct: false
+    feedback: Total distance is accumulated motion; velocity is an instantaneous rate
+      of position change.
+```
+
+Only one of the following is a valid description of velocity. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "velocity-13-one",
+  question = "Only one of the following is a valid description of velocity. Mark that one.",
+  answers = velocity_13_one_choices,
+  multiple = FALSE
+)()
+```

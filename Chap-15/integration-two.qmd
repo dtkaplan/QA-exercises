@@ -1,0 +1,31 @@
+
+```{devoirs_choices integration_15_two_choices}
+- The process of multiplying a quantity by a conversion factor.:
+    correct: false
+    feedback: That is scaling; integration accumulates contributions over an interval.
+- A probability distribution assigning likelihood to each possible value.:
+    correct: false
+    feedback: That is a probability model; integration here is the calculus process
+      of accumulation.
+- A process that guarantees a unique accumulated function without a starting value.:
+    correct: false
+    feedback: The reconstructed function can be shifted vertically; a starting value
+      fixes that freedom.
+- Calculating an accumulated total from a function describing marginal change.:
+    correct: true
+    feedback: Correct.
+- The operation that relates marginal rates to accumulated quantities.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of integration. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "integration-15-two",
+  question = "Two of the following are valid descriptions of integration. The other three are not. Mark both of the VALID descriptions.",
+  answers = integration_15_two_choices,
+  multiple = TRUE
+)()
+```

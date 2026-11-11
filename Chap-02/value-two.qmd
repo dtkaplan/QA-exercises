@@ -1,0 +1,34 @@
+
+```{devoirs_choices value_2_two_choices}
+- A recorded level or category for a particular variable and specimen.:
+    correct: true
+    feedback: Correct.
+- One cell's contents, giving the recorded information for a specimen on a variable.:
+    correct: true
+    feedback: Correct.
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not value. In this chapter, value refers
+      to the entry at the intersection of one specimen and one variable in a data
+      frame.
+- A dimensionless ratio of equal quantities used to convert between commensurate units.:
+    correct: false
+    feedback: This describes conversion factor, not value. In this chapter, value
+      refers to the entry at the intersection of one specimen and one variable in
+      a data frame.
+- A column in a data frame that records one property across its specimens.:
+    correct: false
+    feedback: This describes variable, not value. In this chapter, value refers to
+      the entry at the intersection of one specimen and one variable in a data frame.
+```
+
+Two of the following are valid descriptions of value. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "value-2-two",
+  question = "Two of the following are valid descriptions of value. The other three are not. Mark both of the VALID descriptions.",
+  answers = value_2_two_choices,
+  multiple = TRUE
+)()
+```

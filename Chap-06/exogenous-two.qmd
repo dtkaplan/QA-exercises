@@ -1,0 +1,36 @@
+```{devoirs_choices exogenous_6_two_choices}
+- ? |
+    A system made up of interconnected elements.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? That describes a system. Exogenous indicates that a dimension is taken from outside a model.
+- ? |
+    A value that comes from inside a model and is calculated by the model.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? This reverses the definition. A value produced within the model is endogenous, not exogenous.
+- Coming from outside the model rather than being produced within it.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+- ? |
+    A dimension that has no value until the model has calculated it.
+  : correct: yes
+    feedback: Good. This is indeed an invalid description. Why? A dimension calculated
+      by the model is endogenous. Exogenous dimensions are treated as given.
+- Refers to a dimension represented by a round-cornered box in the chapter's diagrams.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+```
+
+Two of the following are valid descriptions of exogenous . The other three are not. Mark all three of the INVALID descriptions.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "exogenous-6-two",
+  question = "Two of the following are valid descriptions of exogenous . The other three are not. Mark all three of the INVALID descriptions.",
+  answers = exogenous_6_two_choices,
+  multiple = TRUE
+)()
+```
+

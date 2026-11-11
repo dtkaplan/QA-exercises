@@ -1,0 +1,29 @@
+
+```{devoirs_choices variable_2_one_choices}
+- A unit for counting people, from the Latin word for head.:
+    correct: false
+    feedback: This describes capita, not variable. In this chapter, variable refers
+      to a column in a data frame that records one property across its specimens.
+- Dimensions formed by multiplying or dividing base dimensions.:
+    correct: false
+    feedback: This describes derived dimensions, not variable. In this chapter, variable
+      refers to a column in a data frame that records one property across its specimens.
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not variable. In this chapter, variable refers
+      to a column in a data frame that records one property across its specimens.
+- A characteristic recorded across a collection of specimens, such as height or sex.:
+    correct: true
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of variable. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "variable-2-one",
+  question = "Only one of the following is a valid description of variable. Mark that one.",
+  answers = variable_2_one_choices,
+  multiple = FALSE
+)()
+```

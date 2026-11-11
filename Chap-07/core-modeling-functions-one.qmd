@@ -1,0 +1,31 @@
+```{devoirs_choices core_modeling_functions_7_one_choices}
+- 'A list of input names that identifies the roles of a function''s arguments.':
+    correct: false
+    feedback: |
+      Those names are args. Core modeling functions are mathematical relationships, not lists of input names.
+- 'Every possible function that could ever be used in a mathematical model.':
+    correct: false
+    feedback: |
+      The core modeling functions are a selected set of eight useful relationship types, not all possible functions.
+- 'A group of statistical summaries used to describe a dataset''s average and spread.':
+    correct: false
+    feedback: |
+      The chapter's term refers to named function shapes for modeling relationships, not descriptive statistics.
+- 'Eight standard function shapes that modelers can use to describe relationships between quantities.':
+    correct: true
+    feedback: |
+      Correct.
+```
+
+Only one of the following is a valid description of core modeling functions. Mark that one.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "core-modeling-functions-7-one",
+  question = "Only one of the following is a valid description of core modeling functions. Mark that one.",
+  answers = core_modeling_functions_7_one_choices,
+  multiple = FALSE
+)()
+```
+

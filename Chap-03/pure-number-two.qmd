@@ -1,0 +1,32 @@
+
+```{devoirs_choices pure_number_3_two_choices}
+- A standardized measure consisting of a pure number and a unit, optionally with a descriptor.:
+    correct: false
+    feedback: This describes quantity, not pure number. In this chapter, pure number
+      refers to a number with no unit designation, such as seven or pi.
+- A ratio of two quantities where division expresses a relationship between their underlying dimensions.:
+    correct: false
+    feedback: This describes rate, not pure number. In this chapter, pure number refers
+      to a number with no unit designation, such as seven or pi.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not pure number. In this chapter, pure number
+      refers to a number with no unit designation, such as seven or pi.
+- A dimensionless number used as the numeric part of a quantity.:
+    correct: true
+    feedback: Correct.
+- A numerical value considered without a unit such as meters or seconds.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of pure number. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "pure-number-3-two",
+  question = "Two of the following are valid descriptions of pure number. The other three are not. Mark both of the VALID descriptions.",
+  answers = pure_number_3_two_choices,
+  multiple = TRUE
+)()
+```

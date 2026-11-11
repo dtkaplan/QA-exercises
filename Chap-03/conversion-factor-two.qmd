@@ -1,0 +1,35 @@
+
+```{devoirs_choices conversion_factor_3_two_choices}
+- A dimensionless ratio of equal quantities used to convert between commensurate units.:
+    correct: true
+    feedback: Correct.
+- Dimensions formed by multiplying or dividing base dimensions.:
+    correct: false
+    feedback: This describes derived dimensions, not conversion factor. In this chapter,
+      conversion factor refers to a dimensionless ratio of equal quantities used to
+      convert between commensurate units.
+- Dimensionless ratios formed by dividing two exactly equal quantities.:
+    correct: false
+    feedback: This describes flavors of one, not conversion factor. In this chapter,
+      conversion factor refers to a dimensionless ratio of equal quantities used to
+      convert between commensurate units.
+- A one-dimensional line on which points represent values of a quantity.:
+    correct: false
+    feedback: This describes number line, not conversion factor. In this chapter,
+      conversion factor refers to a dimensionless ratio of equal quantities used to
+      convert between commensurate units.
+- A multiplier such as meters per mile that cancels the starting unit and leaves the target unit.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of conversion factor. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "conversion-factor-3-two",
+  question = "Two of the following are valid descriptions of conversion factor. The other three are not. Mark both of the VALID descriptions.",
+  answers = conversion_factor_3_two_choices,
+  multiple = TRUE
+)()
+```

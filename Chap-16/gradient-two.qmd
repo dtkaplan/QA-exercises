@@ -1,0 +1,31 @@
+
+```{devoirs_choices gradient_16_two_choices}
+- The direction and amount of steepest increase in a function's output at an input location.:
+    correct: true
+    feedback: Correct.
+- A scalar that measures how long a vector is.:
+    correct: false
+    feedback: Vector length is a magnitude; the gradient is a vector of rates of change.
+- A vector combining a function's rates of change in its input directions.:
+    correct: true
+    feedback: Correct.
+- The path a system follows after its initial state is chosen.:
+    correct: false
+    feedback: That is a trajectory; the gradient points uphill locally in the function's
+      input space.
+- A measure of the angle between two data vectors.:
+    correct: false
+    feedback: Alignment measures the angle between vectors; the gradient combines
+      function rates of change.
+```
+
+Two of the following are valid descriptions of gradient. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "gradient-16-two",
+  question = "Two of the following are valid descriptions of gradient. The other three are not. Mark both of the VALID descriptions.",
+  answers = gradient_16_two_choices,
+  multiple = TRUE
+)()
+```

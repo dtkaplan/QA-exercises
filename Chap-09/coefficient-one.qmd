@@ -1,0 +1,29 @@
+
+```{devoirs_choices coefficient_9_one_choices}
+- A conversion factor that turns an input quantity into units of the model output.:
+    correct: true
+    feedback: Correct.
+- A measured output value observed for one specimen.:
+    correct: false
+    feedback: An observed output is data; a coefficient is a model parameter estimated
+      from data.
+- A probability distribution describing uncertainty in the output.:
+    correct: false
+    feedback: A coefficient is a model parameter in a linear combination, not an uncertainty
+      distribution.
+- The input quantity that a model is trying to explain.:
+    correct: false
+    feedback: The input is a model variable; the coefficient is the multiplier applied
+      to that input.
+```
+
+Only one of the following is a valid description of coefficient. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "coefficient-9-one",
+  question = "Only one of the following is a valid description of coefficient. Mark that one.",
+  answers = coefficient_9_one_choices,
+  multiple = FALSE
+)()
+```

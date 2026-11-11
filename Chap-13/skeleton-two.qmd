@@ -1,0 +1,32 @@
+
+```{devoirs_choices skeleton_13_two_choices}
+- A function's framework of terms, awaiting the coefficients that give it its particular form.:
+    correct: true
+    feedback: Correct.
+- A function with no inputs and a constant output.:
+    correct: false
+    feedback: The skeleton can include several state variables and terms; it is not
+      necessarily a constant function.
+- A complete numerical model with every coefficient already determined.:
+    correct: false
+    feedback: The skeleton is the structure before coefficients, or the model's 'flesh,'
+      is filled in.
+- A preliminary structure for a model function that is later fleshed out with parameter values.:
+    correct: true
+    feedback: Correct.
+- A list of observed data used to estimate a model.:
+    correct: false
+    feedback: Data may help estimate coefficients, but the skeleton is the function's
+      structural form.
+```
+
+Two of the following are valid descriptions of skeleton. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "skeleton-13-two",
+  question = "Two of the following are valid descriptions of skeleton. The other three are not. Mark both of the VALID descriptions.",
+  answers = skeleton_13_two_choices,
+  multiple = TRUE
+)()
+```

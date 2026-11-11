@@ -1,0 +1,31 @@
+
+```{devoirs_choices standard_deviation_8_two_choices}
+- A parameter that makes every value in a range equally likely.:
+    correct: false
+    feedback: That describes a uniform distribution, not the spread parameter of a
+      normal distribution.
+- A parameter indicating the typical spread of values around the distribution's central value.:
+    correct: true
+    feedback: Correct.
+- The square of a distribution's mean.:
+    correct: false
+    feedback: Standard deviation is related to variance, not the square of the mean.
+- The difference between a model's output and its input.:
+    correct: false
+    feedback: Standard deviation is a distribution parameter, not a comparison between
+      function inputs and outputs.
+- The square root of the variance, used to describe a distribution's spread.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of standard deviation. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "standard-deviation-8-two",
+  question = "Two of the following are valid descriptions of standard deviation. The other three are not. Mark both of the VALID descriptions.",
+  answers = standard_deviation_8_two_choices,
+  multiple = TRUE
+)()
+```

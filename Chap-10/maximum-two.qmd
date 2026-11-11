@@ -1,0 +1,29 @@
+
+```{devoirs_choices maximum_10_two_choices}
+- A price ratio used to compare competing goals.:
+    correct: false
+    feedback: That is a shadow price, not the greatest objective output.
+- The greatest output value attained by an objective function.:
+    correct: true
+    feedback: Correct.
+- The largest objective outcome, distinct from the input that produces it.:
+    correct: true
+    feedback: Correct.
+- A value guaranteed to occur in every evaluation of the function.:
+    correct: false
+    feedback: A maximum is attained only for inputs that produce the highest output.
+- The largest input value in the function's domain.:
+    correct: false
+    feedback: The maximum refers to output, not the size of the input.
+```
+
+Two of the following are valid descriptions of maximum. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "maximum-10-two",
+  question = "Two of the following are valid descriptions of maximum. The other three are not. Mark both of the VALID descriptions.",
+  answers = maximum_10_two_choices,
+  multiple = TRUE
+)()
+```

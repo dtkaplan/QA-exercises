@@ -1,0 +1,35 @@
+
+```{devoirs_choices rate_4_two_choices}
+- A number format that expresses a value as a mantissa multiplied by a power of ten.:
+    correct: false
+    feedback: This describes scientific notation, not rate. In this chapter, rate
+      refers to a ratio of two quantities where division expresses a relationship
+      between their underlying dimensions.
+- The change in a primary quantity divided by the corresponding change in a context-setting quantity.:
+    correct: false
+    feedback: This describes rate of change, not rate. In this chapter, rate refers
+      to a ratio of two quantities where division expresses a relationship between
+      their underlying dimensions.
+- A quantity formed by dividing one quantity by another to describe their relationship.:
+    correct: true
+    feedback: Correct.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not rate. In this chapter, rate refers to
+      a ratio of two quantities where division expresses a relationship between their
+      underlying dimensions.
+- A quotient of quantities interpreted as a relationship, such as dollars per hour.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of rate. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "rate-4-two",
+  question = "Two of the following are valid descriptions of rate. The other three are not. Mark both of the VALID descriptions.",
+  answers = rate_4_two_choices,
+  multiple = TRUE
+)()
+```

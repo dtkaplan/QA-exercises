@@ -1,0 +1,32 @@
+
+```{devoirs_choices heuristic_reasoning_1_one_choices}
+- Reasoning that is widely useful in everyday life, though less certain than formal reasoning.:
+    correct: true
+    feedback: Correct.
+- A rectangular array of data organized into rows and columns.:
+    correct: false
+    feedback: This describes data frame, not heuristic reasoning. In this chapter,
+      heuristic reasoning refers to fast, broadly applicable reasoning that uses useful
+      but fallible rules of thumb.
+- A machine-learning system that uses patterns and alignments in text to generate language.:
+    correct: false
+    feedback: This describes Large language model (LLM), not heuristic reasoning.
+      In this chapter, heuristic reasoning refers to fast, broadly applicable reasoning
+      that uses useful but fallible rules of thumb.
+- Models built from mathematical components to support reasoning about real-world situations.:
+    correct: false
+    feedback: This describes quantitative models, not heuristic reasoning. In this
+      chapter, heuristic reasoning refers to fast, broadly applicable reasoning that
+      uses useful but fallible rules of thumb.
+```
+
+Only one of the following is a valid description of heuristic reasoning. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "heuristic-reasoning-1-one",
+  question = "Only one of the following is a valid description of heuristic reasoning. Mark that one.",
+  answers = heuristic_reasoning_1_one_choices,
+  multiple = FALSE
+)()
+```

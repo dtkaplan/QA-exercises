@@ -1,0 +1,31 @@
+
+```{devoirs_choices contour_plot_9_two_choices}
+- A map-like display where contour lines mark constant values of a two-input function.:
+    correct: true
+    feedback: Correct.
+- A graph where line height represents the function output.:
+    correct: false
+    feedback: A contour plot uses lines in the input plane to represent constant outputs,
+      not vertical height.
+- A topographical-map-style representation of a function of two variables.:
+    correct: true
+    feedback: Correct.
+- A drawing of the input quantities as points with no output information.:
+    correct: false
+    feedback: Contour levels encode the function's output for input pairs.
+- A regression coefficient that scales one input variable.:
+    correct: false
+    feedback: A coefficient is a model multiplier; a contour plot is a graphical representation
+      of a function.
+```
+
+Two of the following are valid descriptions of contour plot. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "contour-plot-9-two",
+  question = "Two of the following are valid descriptions of contour plot. The other three are not. Mark both of the VALID descriptions.",
+  answers = contour_plot_9_two_choices,
+  multiple = TRUE
+)()
+```

@@ -1,0 +1,32 @@
+
+```{devoirs_choices object_type_2_two_choices}
+- A specification of what each row in a dataset represents, such as a child or house.:
+    correct: true
+    feedback: Correct.
+- The common kind of thing whose specimens are recorded in a data frame.:
+    correct: true
+    feedback: Correct.
+- Fundamental dimensions from which derived dimensions are formed.:
+    correct: false
+    feedback: This describes base dimensions, not object type. In this chapter, object
+      type refers to the kind of object represented by every specimen in a data frame.
+- Fundamental SI units that are not defined in terms of one another.:
+    correct: false
+    feedback: This describes base units, not object type. In this chapter, object
+      type refers to the kind of object represented by every specimen in a data frame.
+- A subset of specimens selected from a larger population for study.:
+    correct: false
+    feedback: This describes sample, not object type. In this chapter, object type
+      refers to the kind of object represented by every specimen in a data frame.
+```
+
+Two of the following are valid descriptions of object type. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "object-type-2-two",
+  question = "Two of the following are valid descriptions of object type. The other three are not. Mark both of the VALID descriptions.",
+  answers = object_type_2_two_choices,
+  multiple = TRUE
+)()
+```

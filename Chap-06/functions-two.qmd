@@ -1,0 +1,36 @@
+```{devoirs_choices functions_6_two_choices}
+- A mapping that takes one or more inputs and produces an output.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+- ? |
+    A list of input names that produces an output without any process or relationship.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? Naming inputs is not enough. A function represents how inputs relate to an output.
+- ? |
+    A collection of dimensions with no specified relationships among them.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? A function organizes a relationship between inputs and an output; unrelated dimensions alone do not define one.
+- A representation of a process whose inputs and output can be identified.:
+    correct: no
+    feedback: Choose the **invalid** descriptions, not this valid description.
+- ? |
+    A name for the inputs to a function, without the function's input-output relationship.
+  : correct: yes
+    feedback: |
+      Good. This is indeed an invalid description. Why? Those names are args. A function is the representation that organizes the process from inputs to output.
+```
+
+Two of the following are valid descriptions of functions . The other three are not. Mark all three of the INVALID descriptions.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "functions-6-two",
+  question = "Two of the following are valid descriptions of functions . The other three are not. Mark all three of the INVALID descriptions.",
+  answers = functions_6_two_choices,
+  multiple = TRUE
+)()
+```
+

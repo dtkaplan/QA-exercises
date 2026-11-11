@@ -1,0 +1,87 @@
+<!--
+id: "shark-bid-dish"
+created: "Mon Nov  9 15:29:01 2026"
+attribution: DTK
+mode: enrichment-topic
+status: sketch
+chapter: 16
+
+-->
+
+{{< include ../exercise-header.qmd >}}
+
+Find the angle between two vectors arithmetically. Add a numerical example or two.
+
+Also cover standardization of the axes.
+
+::: {#exr-shark-bid-dish}
+The opportunity provided by thinking about a specimen in this spatial is that we can apply simple geometric ideas about space and location in space to try to develop insight about the information provided by data. Although this opportunity might seem of only limited value---a kind of science fiction story---it turns out to be an extremely useful framework.
+
+In particular, it's helpful to think of the specimens in a data frame as a set of *vectors*. For @tbl-small-heights, each vector lives in four dimensional space. Vectors have two properties: length and direction. Note that "length" is different from "position." If you take an arrow---that is, an object with length and direction---and move it from one place to another while maintaining its direction, it remains the same arrow. Similarly, a vector like ↖︎ is the same as ↖︎, even though they have been drawn in two different places on the page.
+
+Direction will turn out to be useful for comparing specimens to each other and as groups. When two vectors are closely aligned, it means the two specimens are similar. Two vectors pointing in opposite directions is also about similarity; two things that are exact opposites are closely related to one another, although in a negative sense. 
+
+On the other hand, when two vectors are perpendicular, it means the specimens are unrelated, at least so far as the measured variables go. 
+
+Naturally, the alignment of two vectors can be operationalized as the **angle** between them. Measuring the angle between two vectors is easy if the vectors are in two dimensional space (an image on paper) or in three dimensional space. You can use a protractor. This is the procedure:
+
+1. Keep one vector in a fixed position. More precisely, fix the *tail* of the vector, keeping the direction to the head unchanged.
+2. Pick up the other vector and, holding its direction unchanged, place it so that the tails of the two vectors touch.
+3. Place the vertex of the protractor at the common tail and the plane of the protractor in touch with the vectors as they lie. 
+4. Swing the protractor, keeping it in touch with the two vectors, so that the zero-degree axis follows along one vector.
+5. Read of the angle where the other vector crosses the protractor scale.
+
+A protractor is a physical tool made of plastic or metal. It's easily manipulated in familiar three-dimensional space or on a two-dimensional slice of it. However, the spaces we are dealing with---for instance, the mother-father-female-height 4-dimensional space---are abstract and ethereal. Rather than a physical protractor, which doesn't "fit" in the space, we can perform the measurement with straightforward arithmetic, as we describe below. 
+
+All of the geometric properties which we associate with angles and lengths in two- or three-dimensional space apply also to the analogous arithmetic sums used in any-dimensional space. This is what justifies using the word "space" to describe the setting for a coordinate tuple, like (65, 65, 1, 59). 
+
+To measure the proper *length* of a vector, you need to lay down a ruler on top of the vector, parallel to it. Similarly, the measure the proper *angle* between the two vectors, you need to lay a protractor in the green plane that contains both vectors.
+
+We can represent the situation *arithmetically*. Since the vectors live in three-dimensional space, the tip of each vector can be written in (x,y,z) coordinates. (For simplicity, the base of each vector will always be at the origin, that is, (0,0,0).) We could have put tick marks along the x-, y-, and z-axes to let you measure the coordinates of each vector, but for convenience, here they are.
+
+$$ \color{blue}{\vec{v} \equiv \left(\begin{array}{c}7\\4\\0\end{array}\right)}\ \ \ \text{and}\ \ \ \color{magenta}{\vec{w}\equiv\left(\begin{array}{c}1.5\\-4\\0\end{array}\right)}$$
+Note that, for future reference, we have given names, $\vec{v}$ and $\vec{w}$ to the two vectors.
+
+With the arithmetic representation, we don't need a ruler to measure the `r xf_definition("length of a vector")`; the Pythagorean formula does the job.
+
+$$\color{blue}{\sqrt{7^2 + 4^2 + 0^2} = 8.06}\ \  \text{and}\ \ \  \color{magenta}{\sqrt{1.5^2 + 4^2 + 0^2} = 4.27}\ .$${#eq-pythag}
+
+We won't do very much arithmetic here. But for what we will do, it will help to have a more concise notation. Here are two parts of that notation:
+
+- A function, called the `r xf_definition("dot product")` which involves simple multiplication and addition. Here's an example, the dot product between $\vec{v}$ and $\vec{w}$: $$\vec{v} \odot \vec{w} = 1.5 \times 7\ + \ -4 \times 4\ +\ 0 \times 0 = -5.5 .$$ The dot product takes two vectors as input and produces an ordinary number as output.
+
+Sometimes it is helpful to dot a vector with itself. For instance:
+
+$$\vec{v} \odot \vec{v} = 7^2 + 4^2 + 0^2 = 65\ \ \ $$ and $$\ \ \ \vec{w} \odot \vec{w} = 1.5^2 + (-4)^2 + 0^2 = 18.25\ .$$ 
+
+This use of the dot product captures a large part of the Pythagorean formula for vector length (`r xf("eq-pythag")`).
+
+- The **length** of $\vec{v}$ is written $\|\vec{v}\|$. There is a simple formula for the length of a vector that uses the dot product:
+
+$$\|\vec{v}\| = \sqrt{\ \strut\vec{v} \odot \vec{v}\ }\ \ \  \text{and}\ \ \  \|\vec{w}\| = \sqrt{\ \strut\vec{w} \odot \vec{w}\ }\ .$$
+This dot-produce notation pays off with slightly more elaborate calculations. For instance,
+
+- The `r xf_definition("alignment between two vectors")` is calculated like this:
+$$\text{alignment}(\vec{v}, \vec{w}) \equiv \frac{\vec{v} \odot \vec{w}}{\vec{v}\|\ \|\vec{w}\|}$${#eq-alignment}
+
+
+
+## Spaces with dimension greater than 3
+
+Understandably, people have difficulty visualizing scenes in 4- or higher dimensions, or even imagining that such scenes might exist. Our cognitive abilities are tuned to perception in the familiar 3-D space of everyday life. 
+
+With the arithmetic representation of vectors, however, it's easy to see how to construct vectors in 4-space, 5-space, or any-dimensional space. A vector in such a space is merely a column of numbers. Here are a few examples. 
+
+$$\color{magenta}{\vec{a} \equiv \left(\begin{array}{r}1.5\\3.0\end{array}\right)}\ \ \ \ \ \color{green}{\vec{b}\equiv\left(\begin{array}{r}4.2\\-7.1\\2.3\end{array}\right)} \ \ \ \ \ \color{blue}{\vec{c}\equiv\left(\begin{array}{r}0.3\\4.1\\1.9\\-3.2\end{array}\right)}$$ $$ \ \ \ \ \ \color{purple}{\vec{d}\equiv\left(\begin{array}{r}1.0\\ -7.0\\  2.9\\  1.2\\ -4.1\end{array}\right)} \ \ \ \ \ \color{green}{\vec{g}\equiv\left(\begin{array}{r}-0.1\\ -8.8\\ -4.6\\  6.5\\  5.2\\ -4.2\end{array}\right)} \ \ \ \ \      $$
+
+The count of components in each vector tells the dimension of the space where the vector exists or "lives in."
+
+The reader may object. "Of course, you can make a column of numbers with as many components as you like. What does that have to do with 'space?'"
+
+What makes these simple columns of numbers into an "object in space" is the calculations we can do with them, for instance, the "length" of a vector or the alignment between two vectors. Both of these calculations are rooted in the dot product, whose formula is a simple extension of that already shown. For instance, here's a dot product in 5-dimensional space:
+
+$$\color{olive}{\left(\begin{array}{r}1.0\\ -7.0\\  2.9\\  1.2\\ -4.1\end{array}\right)} \odot \color{black}{\left(\begin{array}{r}2.6\\8.3\\6.4\\1.6\\2.7\end{array}\right)}= \text{ }1.0 \times 2.6 \ -\ 7.0 \times 8.3\ +\ 2.9 \times 6.4 \ +\ 1.2 \times 1.6 \ -\ 4.1\times 2.7 = -46.09$$
+
+
+:::
+ <!-- end of exr-shark-bid-dish -->

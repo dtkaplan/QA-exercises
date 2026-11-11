@@ -1,0 +1,35 @@
+
+```{devoirs_choices partial_change_3_two_choices}
+- A phrase identifying the context-setting quantity against which a change is examined.:
+    correct: false
+    feedback: This describes with respect to, not partial change. In this chapter,
+      partial change refers to change in a primary quantity with respect to one variable
+      while other variables are held constant.
+- One component of total change, attributed to one context variable under constant conditions.:
+    correct: true
+    feedback: Correct.
+- A collection of quantities whose values identify locations within it.:
+    correct: false
+    feedback: This describes space, not partial change. In this chapter, partial change
+      refers to change in a primary quantity with respect to one variable while other
+      variables are held constant.
+- The contribution to overall change associated with varying one context-setting quantity at a time.:
+    correct: true
+    feedback: Correct.
+- A word that signals division, with the following quantity in the denominator.:
+    correct: false
+    feedback: This describes per, not partial change. In this chapter, partial change
+      refers to change in a primary quantity with respect to one variable while other
+      variables are held constant.
+```
+
+Two of the following are valid descriptions of partial change. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "partial-change-3-two",
+  question = "Two of the following are valid descriptions of partial change. The other three are not. Mark both of the VALID descriptions.",
+  answers = partial_change_3_two_choices,
+  multiple = TRUE
+)()
+```

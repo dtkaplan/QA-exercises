@@ -1,0 +1,27 @@
+
+```{devoirs_choices normal_distribution_8_one_choices}
+- A collection of observed data values arranged from smallest to largest.:
+    correct: false
+    feedback: That is an ordered dataset; a normal distribution is a probability model.
+- A bell-shaped distribution centered at its mean, with likelihood tapering away from the center.:
+    correct: true
+    feedback: Correct.
+- A process for repeatedly drawing numbers from a model.:
+    correct: false
+    feedback: That is random number generation or simulation, not a distribution family.
+- A distribution whose likelihood steadily decreases from a starting point and has only positive values.:
+    correct: false
+    feedback: That describes the general shape of an exponential distribution, not
+      the symmetric normal family.
+```
+
+Only one of the following is a valid description of normal distribution. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "normal-distribution-8-one",
+  question = "Only one of the following is a valid description of normal distribution. Mark that one.",
+  answers = normal_distribution_8_one_choices,
+  multiple = FALSE
+)()
+```

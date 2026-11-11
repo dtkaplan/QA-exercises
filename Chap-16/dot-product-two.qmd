@@ -1,0 +1,31 @@
+
+```{devoirs_choices dot_product_16_two_choices}
+- A number obtained from two vectors whose sign indicates whether their directions tend to agree or oppose.:
+    correct: true
+    feedback: Correct.
+- A ratio of each component in the first vector to the matching component in the second.:
+    correct: false
+    feedback: The operation multiplies corresponding components and sums the products.
+- An arithmetic operation on two vectors used to calculate their directional alignment.:
+    correct: true
+    feedback: Correct.
+- The product of the two vector lengths, regardless of their directions.:
+    correct: false
+    feedback: The dot product also depends on the angle between the vectors, not only
+      their lengths.
+- A coordinate that identifies a point in the input space.:
+    correct: false
+    feedback: A vector can represent a coordinate, but the dot product is the scalar
+      operation performed on a pair of vectors.
+```
+
+Two of the following are valid descriptions of dot product. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dot-product-16-two",
+  question = "Two of the following are valid descriptions of dot product. The other three are not. Mark both of the VALID descriptions.",
+  answers = dot_product_16_two_choices,
+  multiple = TRUE
+)()
+```

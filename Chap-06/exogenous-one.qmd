@@ -1,0 +1,33 @@
+```{devoirs_choices exogenous_6_one_choices}
+- Coming from outside the model rather than being produced within it.:
+    correct: yes
+    feedback: Correct.
+- ? |
+    A value that comes from inside a model and is calculated by the model.
+  : correct: no
+    feedback: |
+      This reverses the definition. A value produced within the model is endogenous, not exogenous.
+- ? |
+    A complete operational description for calculating a function's output.
+  : correct: no
+    feedback: |
+      That is an algorithm. Exogenous identifies a dimension's relation to the model boundary.
+- ? |
+    A dimension that must always be the output of every function in a model.
+  : correct: no
+    feedback: |
+      Exogenous dimensions are given from outside; they are not defined by always being function outputs.
+```
+
+Only one of the following is a valid description of exogenous . Mark that one.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "exogenous-6-one",
+  question = "Only one of the following is a valid description of exogenous . Mark that one.",
+  answers = exogenous_6_one_choices,
+  multiple = FALSE
+)()
+```
+

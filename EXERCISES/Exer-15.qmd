@@ -7,7 +7,7 @@ subtitle: "Chapter 15 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-15")`
+`r devoirs3::devoirs_start("QA-exer-15", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -39,9 +39,32 @@ source("../_exercise_startup.R")
 
 {{< include ../Chap-15/turtle-speak-pencil.qmd >}}
 
-
-
-
 :::
 
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+
+## Accumulation
+
+{{< include ../Chap-15/accumulation-one.qmd >}}
+
+## Anti-differentiation
+
+{{< include ../Chap-15/anti-differentiation-one.qmd >}}
+
+## Incidence
+
+{{< include ../Chap-15/incidence-one.qmd >}}
+
+## Integration
+
+{{< include ../Chap-15/integration-one.qmd >}}
+
+:::
+::::
 

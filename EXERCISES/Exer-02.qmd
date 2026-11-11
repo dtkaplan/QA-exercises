@@ -7,7 +7,7 @@ subtitle: "Chapter 2 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-02")`
+`r devoirs3::devoirs_start("QA-exer-02", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -20,4 +20,50 @@ source("../_exercise_startup.R")
 
 :::
 
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Data
+
+{{< include ../Chap-02/data-one.qmd >}}
+
+## Data frame
+
+{{< include ../Chap-02/data-frame-one.qmd >}}
+
+## Dimension
+
+{{< include ../Chap-02/dimension-one.qmd >}}
+
+## Object type
+
+{{< include ../Chap-02/object-type-one.qmd >}}
+
+## Operationalization
+
+{{< include ../Chap-02/operationalization-one.qmd >}}
+
+## Sample
+
+{{< include ../Chap-02/sample-one.qmd >}}
+
+## Specimen
+
+{{< include ../Chap-02/specimen-one.qmd >}}
+
+## Value
+
+{{< include ../Chap-02/value-one.qmd >}}
+
+## Variable
+
+{{< include ../Chap-02/variable-one.qmd >}}
+
+
+:::
+::::
 

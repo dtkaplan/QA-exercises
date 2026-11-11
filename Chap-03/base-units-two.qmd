@@ -1,0 +1,32 @@
+
+```{devoirs_choices base_units_3_two_choices}
+- Units such as the second, meter, kilogram, and kelvin from which derived units are composed.:
+    correct: true
+    feedback: Correct.
+- The primary measurement units underlying the International System of Units.:
+    correct: true
+    feedback: Correct.
+- A two-dimensional space marked by two perpendicular number lines.:
+    correct: false
+    feedback: This describes coordinate plane, not base units. In this chapter, base
+      units refers to fundamental si units that are not defined in terms of one another.
+- A unit for counting people, from the Latin word for head.:
+    correct: false
+    feedback: This describes capita, not base units. In this chapter, base units refers
+      to fundamental si units that are not defined in terms of one another.
+- Change in a primary quantity with respect to one variable while other variables are held constant.:
+    correct: false
+    feedback: This describes partial change, not base units. In this chapter, base
+      units refers to fundamental si units that are not defined in terms of one another.
+```
+
+Two of the following are valid descriptions of base units. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "base-units-3-two",
+  question = "Two of the following are valid descriptions of base units. The other three are not. Mark both of the VALID descriptions.",
+  answers = base_units_3_two_choices,
+  multiple = TRUE
+)()
+```

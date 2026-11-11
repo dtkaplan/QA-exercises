@@ -1,0 +1,32 @@
+
+```{devoirs_choices vector_16_two_choices}
+- A mathematical object that can represent a specimen's location relative to a center.:
+    correct: true
+    feedback: Correct.
+- A point that can only represent a location, never a direction.:
+    correct: false
+    feedback: A coordinate tuple can be interpreted either as a location or as direction
+      and distance from the origin.
+- A directed quantity used to represent positions, differences, and patterns in multidimensional data.:
+    correct: true
+    feedback: Correct.
+- A probability distribution over possible outcomes.:
+    correct: false
+    feedback: A distribution assigns likelihoods; a vector is a list of components
+      with a geometric interpretation.
+- A list of measurements whose order can be changed without affecting its meaning.:
+    correct: false
+    feedback: Vector components correspond to specific dimensions; rearranging them
+      generally changes the represented vector.
+```
+
+Two of the following are valid descriptions of vector. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "vector-16-two",
+  question = "Two of the following are valid descriptions of vector. The other three are not. Mark both of the VALID descriptions.",
+  answers = vector_16_two_choices,
+  multiple = TRUE
+)()
+```

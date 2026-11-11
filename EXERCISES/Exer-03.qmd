@@ -7,7 +7,7 @@ subtitle: "Chapter 3 Exercises"
 source("../_exercise_startup.R")
 ```
 
-`r devoirs3::devoirs_start("QA-exer-03")`
+`r devoirs3::devoirs_start("QA-exer-03", feedback = FALSE)`
 
 ::: {.panel-tabset}
 
@@ -33,3 +33,104 @@ source("../_exercise_startup.R")
 
 
 :::
+
+
+:::: {.callout-note collapse=false}
+## Key vocabulary
+
+::: {.panel-tabset}
+
+## Analysis
+
+{{< include ../Chap-03/analysis-one.qmd >}}
+
+## Base dimensions
+
+{{< include ../Chap-03/base-dimensions-one.qmd >}}
+
+## Base units
+
+{{< include ../Chap-03/base-units-one.qmd >}}
+
+## Capita
+
+{{< include ../Chap-03/capita-one.qmd >}}
+
+## Controlling for
+
+{{< include ../Chap-03/controlling-for-one.qmd >}}
+
+## Conversion factor
+
+{{< include ../Chap-03/conversion-factor-one.qmd >}}
+
+## Coordinate plane
+
+{{< include ../Chap-03/coordinate-plane-one.qmd >}}
+
+## Derived dimensions
+
+{{< include ../Chap-03/derived-dimensions-one.qmd >}}
+
+## Derived units
+
+{{< include ../Chap-03/derived-units-one.qmd >}}
+
+## Dimensionless
+
+{{< include ../Chap-03/dimensionless-one.qmd >}}
+
+## Flavors of one
+
+{{< include ../Chap-03/flavors-of-one-one.qmd >}}
+
+## Number line
+
+{{< include ../Chap-03/number-line-one.qmd >}}
+
+## Partial change
+
+{{< include ../Chap-03/partial-change-one.qmd >}}
+
+## per
+
+{{< include ../Chap-03/per-one.qmd >}}
+
+## Point
+
+{{< include ../Chap-03/point-one.qmd >}}
+
+## Pure number
+
+{{< include ../Chap-03/pure-number-one.qmd >}}
+
+## Quantity
+
+{{< include ../Chap-03/quantity-one.qmd >}}
+
+## SI
+
+{{< include ../Chap-03/si-one.qmd >}}
+
+## Space
+
+{{< include ../Chap-03/space-one.qmd >}}
+
+## Units
+
+{{< include ../Chap-03/units-one.qmd >}}
+
+## ... with respect to ...
+
+{{< include ../Chap-03/with-respect-to-one.qmd >}}
+
+## Worth
+
+{{< include ../Chap-03/worth-one.qmd >}}
+
+
+
+
+:::
+::::
+

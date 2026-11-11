@@ -1,0 +1,30 @@
+
+```{devoirs_choices likelihood_framework_11_two_choices}
+- A framework in which hypotheses compete and likelihood serves as each hypothesis's data-based score.:
+    correct: true
+    feedback: Correct.
+- A way to rank or compare hypotheses according to the likelihood of the observed evidence under each.:
+    correct: true
+    feedback: Correct.
+- The probability distribution that summarizes knowledge after data are processed.:
+    correct: false
+    feedback: That is the posterior distribution in the Bayesian framework.
+- A method that compares models without using any observations.:
+    correct: false
+    feedback: Likelihood evaluates hypotheses in the setting of observed data.
+- A framework that assigns each hypothesis a probability of being true based only on prior belief.:
+    correct: false
+    feedback: The likelihood framework compares hypotheses by their likelihoods for
+      data; prior belief is addressed in Bayesian updating.
+```
+
+Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "likelihood-framework-11-two",
+  question = "Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions.",
+  answers = likelihood_framework_11_two_choices,
+  multiple = TRUE
+)()
+```

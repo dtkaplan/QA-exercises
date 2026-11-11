@@ -1,0 +1,32 @@
+
+```{devoirs_choices with_respect_to_3_one_choices}
+- A marker specifying the variable whose variation provides context for a change.:
+    correct: true
+    feedback: Correct.
+- A ratio of two quantities where division expresses a relationship between their underlying dimensions.:
+    correct: false
+    feedback: This describes rate, not with respect to. In this chapter, with respect
+      to refers to a phrase identifying the context-setting quantity against which
+      a change is examined.
+- The process of constructing good arguments from evidence and reasoning.:
+    correct: false
+    feedback: This describes argumentation, not with respect to. In this chapter,
+      with respect to refers to a phrase identifying the context-setting quantity
+      against which a change is examined.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not with respect to. In this chapter, with
+      respect to refers to a phrase identifying the context-setting quantity against
+      which a change is examined.
+```
+
+Only one of the following is a valid description of with respect to. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "with-respect-to-3-one",
+  question = "Only one of the following is a valid description of with respect to. Mark that one.",
+  answers = with_respect_to_3_one_choices,
+  multiple = FALSE
+)()
+```

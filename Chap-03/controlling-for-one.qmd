@@ -1,0 +1,32 @@
+
+```{devoirs_choices controlling_for_3_one_choices}
+- Having the pure-number dimension, with no combination of base dimensions.:
+    correct: false
+    feedback: This describes dimensionless, not controlling for. In this chapter,
+      controlling for refers to accounting for other variables while examining a relationship
+      of interest.
+- Dimensions formed by multiplying or dividing base dimensions.:
+    correct: false
+    feedback: This describes derived dimensions, not controlling for. In this chapter,
+      controlling for refers to accounting for other variables while examining a relationship
+      of interest.
+- A method for isolating one variable's contribution by holding other influences constant.:
+    correct: true
+    feedback: Correct.
+- A location in a space that corresponds to one or more coordinate values.:
+    correct: false
+    feedback: This describes point, not controlling for. In this chapter, controlling
+      for refers to accounting for other variables while examining a relationship
+      of interest.
+```
+
+Only one of the following is a valid description of controlling for. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "controlling-for-3-one",
+  question = "Only one of the following is a valid description of controlling for. Mark that one.",
+  answers = controlling_for_3_one_choices,
+  multiple = FALSE
+)()
+```

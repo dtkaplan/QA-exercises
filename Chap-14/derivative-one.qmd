@@ -1,0 +1,28 @@
+
+```{devoirs_choices derivative_14_one_choices}
+- A function that describes how quickly the original function's output changes with its input.:
+    correct: true
+    feedback: Correct.
+- A unit conversion factor that changes the scale of a function's output.:
+    correct: false
+    feedback: A coefficient can scale output; a derivative describes change in output
+      relative to input.
+- The probability distribution of observed function values.:
+    correct: false
+    feedback: A derivative is a rate-of-change function, not a probability distribution.
+- The total accumulated change in a function over its domain.:
+    correct: false
+    feedback: Accumulation relates to anti-differentiation; the derivative gives instantaneous
+      rates of change.
+```
+
+Only one of the following is a valid description of derivative. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "derivative-14-one",
+  question = "Only one of the following is a valid description of derivative. Mark that one.",
+  answers = derivative_14_one_choices,
+  multiple = FALSE
+)()
+```

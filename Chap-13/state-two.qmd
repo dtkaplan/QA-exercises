@@ -1,0 +1,32 @@
+
+```{devoirs_choices state_13_two_choices}
+- The set of quantities that completely describes a system's configuration at an instant.:
+    correct: true
+    feedback: Correct.
+- A system's instantaneous configuration, represented by one or more quantities.:
+    correct: true
+    feedback: Correct.
+- The path traced by a system as it moves through time.:
+    correct: false
+    feedback: That path is a trajectory; a state is one instantaneous point along
+      it.
+- The rate at which the system's position changes.:
+    correct: false
+    feedback: That is velocity; the state may include position and velocity among
+      its quantities.
+- The physical mechanism that causes a system to move.:
+    correct: false
+    feedback: The state describes the system's current configuration, not the mechanism
+      itself.
+```
+
+Two of the following are valid descriptions of state. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "state-13-two",
+  question = "Two of the following are valid descriptions of state. The other three are not. Mark both of the VALID descriptions.",
+  answers = state_13_two_choices,
+  multiple = TRUE
+)()
+```

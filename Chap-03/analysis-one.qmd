@@ -1,0 +1,29 @@
+
+```{devoirs_choices analysis_3_one_choices}
+- Examining a system by breaking it into contributing components.:
+    correct: true
+    feedback: Correct.
+- Units formed by multiplying or dividing base units.:
+    correct: false
+    feedback: This describes derived units, not analysis. In this chapter, analysis
+      refers to examining a system by breaking it into contributing components.
+- A unit for counting people, from the Latin word for head.:
+    correct: false
+    feedback: This describes capita, not analysis. In this chapter, analysis refers
+      to examining a system by breaking it into contributing components.
+- Having the pure-number dimension, with no combination of base dimensions.:
+    correct: false
+    feedback: This describes dimensionless, not analysis. In this chapter, analysis
+      refers to examining a system by breaking it into contributing components.
+```
+
+Only one of the following is a valid description of analysis. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "analysis-3-one",
+  question = "Only one of the following is a valid description of analysis. Mark that one.",
+  answers = analysis_3_one_choices,
+  multiple = FALSE
+)()
+```

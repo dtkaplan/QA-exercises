@@ -1,0 +1,31 @@
+
+```{devoirs_choices dominates_10_two_choices}
+- A relation between choices where one is better on all compared criteria.:
+    correct: true
+    feedback: Correct.
+- A choice that is preferred by the greatest number of people.:
+    correct: false
+    feedback: Dominance is defined by objective outcomes, not by a vote or popularity.
+- The choice that has the largest input value.:
+    correct: false
+    feedback: Dominance concerns objective outcomes, not the numerical size of an
+      input.
+- A policy that maximizes one goal while making every other goal worse.:
+    correct: false
+    feedback: Such a policy involves a trade-off; it does not dominate options that
+      improve other goals.
+- To dominate is to outperform another option on each relevant objective.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of dominates. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "dominates-10-two",
+  question = "Two of the following are valid descriptions of dominates. The other three are not. Mark both of the VALID descriptions.",
+  answers = dominates_10_two_choices,
+  multiple = TRUE
+)()
+```

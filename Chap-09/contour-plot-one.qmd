@@ -1,0 +1,28 @@
+
+```{devoirs_choices contour_plot_9_one_choices}
+- A diagram showing the direction of steepest increase as arrows only.:
+    correct: false
+    feedback: Gradient arrows can be added, but contour lines show levels of equal
+      function output.
+- A plot whose lines represent equal output values at different pairs of inputs.:
+    correct: true
+    feedback: Correct.
+- A map in which every line traces equal distance from a central point.:
+    correct: false
+    feedback: That describes distance contours in a special case; generally contour
+      lines mark equal function output.
+- A curve connecting all input values that produce different outputs.:
+    correct: false
+    feedback: Each contour connects input pairs with the same output value.
+```
+
+Only one of the following is a valid description of contour plot. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "contour-plot-9-one",
+  question = "Only one of the following is a valid description of contour plot. Mark that one.",
+  answers = contour_plot_9_one_choices,
+  multiple = FALSE
+)()
+```

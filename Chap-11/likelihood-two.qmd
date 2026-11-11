@@ -1,0 +1,31 @@
+
+```{devoirs_choices likelihood_11_two_choices}
+- A number that must be large whenever a model is correct.:
+    correct: false
+    feedback: Likelihood values depend on the data and model and are interpreted comparatively,
+      often by ratios.
+- The range of values that a quantity could possibly take.:
+    correct: false
+    feedback: That is a range; likelihood is a model-based score for observed data.
+- The value of a hypothesis's probability distribution at the observed outcome.:
+    correct: true
+    feedback: Correct.
+- A measure of how much a quantity varies around its mean.:
+    correct: false
+    feedback: That describes spread, such as standard deviation; likelihood evaluates
+      data under a hypothesis.
+- The probability of observing the data under a specific, hypothesized model.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of likelihood. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "likelihood-11-two",
+  question = "Two of the following are valid descriptions of likelihood. The other three are not. Mark both of the VALID descriptions.",
+  answers = likelihood_11_two_choices,
+  multiple = TRUE
+)()
+```

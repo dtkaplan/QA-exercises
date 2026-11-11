@@ -1,0 +1,31 @@
+
+```{devoirs_choices operationalization_2_one_choices}
+- Examining a system by breaking it into contributing components.:
+    correct: false
+    feedback: This describes analysis, not operationalization. In this chapter, operationalization
+      refers to a procedure for translating a dimension into a measurable quantity.
+- A dimensionless ratio of equal quantities used to convert between commensurate units.:
+    correct: false
+    feedback: This describes conversion factor, not operationalization. In this chapter,
+      operationalization refers to a procedure for translating a dimension into a
+      measurable quantity.
+- A procedure for translating a dimension into a measurable quantity.:
+    correct: true
+    feedback: Correct.
+- Accounting for other variables while examining a relationship of interest.:
+    correct: false
+    feedback: This describes controlling for, not operationalization. In this chapter,
+      operationalization refers to a procedure for translating a dimension into a
+      measurable quantity.
+```
+
+Only one of the following is a valid description of operationalization. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "operationalization-2-one",
+  question = "Only one of the following is a valid description of operationalization. Mark that one.",
+  answers = operationalization_2_one_choices,
+  multiple = FALSE
+)()
+```

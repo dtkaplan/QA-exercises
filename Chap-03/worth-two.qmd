@@ -1,0 +1,35 @@
+
+```{devoirs_choices worth_3_two_choices}
+- A measure of monetary value, often operationalized with currency and adjustments for inflation or place.:
+    correct: true
+    feedback: Correct.
+- A number format that condenses scientific notation into a single magnitude value.:
+    correct: false
+    feedback: This describes logarithm, not worth. In this chapter, worth refers to
+      a base dimension used for monetary value, whose meaning depends on place and
+      time.
+- A measure of the size of a number, closely related to its exponent in scientific notation.:
+    correct: false
+    feedback: This describes magnitude, not worth. In this chapter, worth refers to
+      a base dimension used for monetary value, whose meaning depends on place and
+      time.
+- A factor-of-ten scale used to describe how much larger or smaller one number is than another.:
+    correct: false
+    feedback: This describes order of magnitude, not worth. In this chapter, worth
+      refers to a base dimension used for monetary value, whose meaning depends on
+      place and time.
+- A base dimension used for monetary value, whose meaning depends on place and time.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of worth. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "worth-3-two",
+  question = "Two of the following are valid descriptions of worth. The other three are not. Mark both of the VALID descriptions.",
+  answers = worth_3_two_choices,
+  multiple = TRUE
+)()
+```

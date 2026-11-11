@@ -1,0 +1,28 @@
+
+```{devoirs_choices continuity_14_one_choices}
+- A relationship where nearby inputs lead to nearby outputs.:
+    correct: true
+    feedback: Correct.
+- A condition that can only apply to functions of time.:
+    correct: false
+    feedback: Continuity applies to functions with many kinds of inputs, including
+      income or expenditure.
+- A guarantee that a function's output is always increasing.:
+    correct: false
+    feedback: Continuity concerns jumps, not whether the function increases or decreases.
+- A rule stating that small output changes must cause small input changes.:
+    correct: false
+    feedback: 'The chapter describes continuity in the forward direction: small input
+      changes lead to small output changes.'
+```
+
+Only one of the following is a valid description of continuity. Mark that one.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "continuity-14-one",
+  question = "Only one of the following is a valid description of continuity. Mark that one.",
+  answers = continuity_14_one_choices,
+  multiple = FALSE
+)()
+```

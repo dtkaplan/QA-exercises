@@ -1,0 +1,32 @@
+
+```{devoirs_choices data_2_two_choices}
+- Information captured in a record, rather than all facts or beliefs one knows.:
+    correct: true
+    feedback: Correct.
+- A procedure for translating a dimension into a measurable quantity.:
+    correct: false
+    feedback: This describes operationalization, not data. In this chapter, data refers
+      to recorded facts, findings, and measurements.
+- Examining a system by breaking it into contributing components.:
+    correct: false
+    feedback: This describes analysis, not data. In this chapter, data refers to recorded
+      facts, findings, and measurements.
+- Recorded facts, findings, and measurements.:
+    correct: true
+    feedback: Correct.
+- The kind of object represented by every specimen in a data frame.:
+    correct: false
+    feedback: This describes object type, not data. In this chapter, data refers to
+      recorded facts, findings, and measurements.
+```
+
+Two of the following are valid descriptions of data. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "data-2-two",
+  question = "Two of the following are valid descriptions of data. The other three are not. Mark both of the VALID descriptions.",
+  answers = data_2_two_choices,
+  multiple = TRUE
+)()
+```

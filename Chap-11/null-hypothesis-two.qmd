@@ -1,0 +1,31 @@
+
+```{devoirs_choices null_hypothesis_11_two_choices}
+- A baseline hypothesis representing a no-effect or ordinary-condition explanation for comparison.:
+    correct: true
+    feedback: Correct.
+- The reference hypothesis that specifies no unusual effect, such as an unbiased coin.:
+    correct: true
+    feedback: Correct.
+- A rule for repeatedly sampling values from a probability distribution.:
+    correct: false
+    feedback: That describes random number generation; a null hypothesis is a claim
+      evaluated against evidence.
+- The research hypothesis that specifies the particular effect being proposed.:
+    correct: false
+    feedback: The null is the baseline; the research hypothesis specifies the alternative
+      effect.
+- A claim that the researcher's preferred explanation must be correct.:
+    correct: false
+    feedback: The null is the comparison baseline, not the favored research claim.
+```
+
+Two of the following are valid descriptions of null hypothesis. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "null-hypothesis-11-two",
+  question = "Two of the following are valid descriptions of null hypothesis. The other three are not. Mark both of the VALID descriptions.",
+  answers = null_hypothesis_11_two_choices,
+  multiple = TRUE
+)()
+```

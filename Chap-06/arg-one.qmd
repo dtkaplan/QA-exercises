@@ -1,0 +1,33 @@
+```{devoirs_choices arg_6_one_choices}
+- ? |
+    The output quantity that a function is designed to calculate.
+  : correct: no
+    feedback: |
+      An arg names an input, not the output produced by the function.
+- ? |
+    The complete sequence of operations that converts inputs into an output.
+  : correct: no
+    feedback: |
+      That is an algorithm. An arg names an input role used by a function.
+- ? |
+    A complete description of a system and all its interconnected dimensions.
+  : correct: no
+    feedback: |
+      This describes a system, not an arg. An arg is a name for one function input.
+- One of the named positions a function uses to organize its inputs.:
+    correct: yes
+    feedback: Correct.
+```
+
+Only one of the following is a valid description of arg . Mark that one.
+
+```{r}
+#| echo: false
+devoirs3::devoirs_selection(
+  label = "arg-6-one",
+  question = "Only one of the following is a valid description of arg . Mark that one.",
+  answers = arg_6_one_choices,
+  multiple = FALSE
+)()
+```
+

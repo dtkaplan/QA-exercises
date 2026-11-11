@@ -1,0 +1,31 @@
+
+```{devoirs_choices scientific_method_11_two_choices}
+- A probability distribution assigning likelihood to every possible outcome.:
+    correct: false
+    feedback: That describes a probability distribution, which may represent a hypothesis
+      but is not the whole method.
+- An approach to investigation that uses evidence to improve explanatory models over time.:
+    correct: true
+    feedback: Correct.
+- A procedure that accepts the first proposed model without testing it.:
+    correct: false
+    feedback: The chapter emphasizes iterative refinement based on insight and evidence.
+- A rule for assigning a prior distribution to a hypothesis.:
+    correct: false
+    feedback: A prior is part of Bayesian analysis; the scientific method is the broader
+      evidence-driven process.
+- A process in which hypotheses are examined against observations and revised as needed.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of scientific method. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "scientific-method-11-two",
+  question = "Two of the following are valid descriptions of scientific method. The other three are not. Mark both of the VALID descriptions.",
+  answers = scientific_method_11_two_choices,
+  multiple = TRUE
+)()
+```

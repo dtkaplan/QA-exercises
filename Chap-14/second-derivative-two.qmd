@@ -1,0 +1,30 @@
+
+```{devoirs_choices second_derivative_14_two_choices}
+- A function derived from the first derivative and sharing the original function's inputs.:
+    correct: true
+    feedback: Correct.
+- The original function's output after being squared.:
+    correct: false
+    feedback: Squaring a function is not the same as differentiating twice.
+- A measure of variation around the mean of a distribution.:
+    correct: false
+    feedback: That is statistical spread, not a derivative of a function.
+- The second observed value in a time series.:
+    correct: false
+    feedback: A time-series observation is not a second derivative; derivatives describe
+      rates of change.
+- The rate of change of the first derivative, such as acceleration from position.:
+    correct: true
+    feedback: Correct.
+```
+
+Two of the following are valid descriptions of second derivative. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "second-derivative-14-two",
+  question = "Two of the following are valid descriptions of second derivative. The other three are not. Mark both of the VALID descriptions.",
+  answers = second_derivative_14_two_choices,
+  multiple = TRUE
+)()
+```

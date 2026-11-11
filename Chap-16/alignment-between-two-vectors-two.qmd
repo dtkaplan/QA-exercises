@@ -1,0 +1,31 @@
+
+```{devoirs_choices alignment_between_two_vectors_16_two_choices}
+- A measure of how closely two vectors point in the same or opposite directions.:
+    correct: true
+    feedback: Correct.
+- A comparison that depends on which vector is named first.:
+    correct: false
+    feedback: The chapter notes that alignment is symmetric between the two vectors.
+- The location of a vector's endpoint in the coordinate space.:
+    correct: false
+    feedback: An endpoint gives a location; alignment describes the relationship between
+      two directions.
+- A comparison of two vectors' directions that can be positive, zero, or negative.:
+    correct: true
+    feedback: Correct.
+- A count of how many measurements two specimens share.:
+    correct: false
+    feedback: Alignment measures how their vector directions agree, not how many dimensions
+      they have.
+```
+
+Two of the following are valid descriptions of alignment between two vectors. The other three are not. Mark both of the VALID descriptions.
+
+```{r}
+devoirs3::devoirs_selection(
+  label = "alignment-between-two-vectors-16-two",
+  question = "Two of the following are valid descriptions of alignment between two vectors. The other three are not. Mark both of the VALID descriptions.",
+  answers = alignment_between_two_vectors_16_two_choices,
+  multiple = TRUE
+)()
+```
