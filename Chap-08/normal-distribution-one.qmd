@@ -18,6 +18,7 @@
 Only one of the following is a valid description of normal distribution. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "normal-distribution-8-one",
   question = "Only one of the following is a valid description of normal distribution. Mark that one.",

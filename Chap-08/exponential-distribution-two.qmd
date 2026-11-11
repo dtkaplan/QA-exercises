@@ -23,6 +23,7 @@
 Two of the following are valid descriptions of exponential distribution. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "exponential-distribution-8-two",
   question = "Two of the following are valid descriptions of exponential distribution. The other three are not. Mark both of the VALID descriptions.",

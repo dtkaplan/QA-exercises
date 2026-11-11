@@ -9,21 +9,21 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-02", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 2.A
+
 ::: {.panel-tabset}
 
 ## 1
 
 {{< include ../Chap-02/jellyfish-open-spoon.qmd >}}
 
-
-
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 2 Key vocabulary
 
 ::: {.panel-tabset}
 

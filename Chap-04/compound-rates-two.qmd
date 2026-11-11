@@ -23,6 +23,7 @@
 Two of the following are valid descriptions of compound rates. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "compound-rates-4-two",
   question = "Two of the following are valid descriptions of compound rates. The other three are not. Mark both of the VALID descriptions.",

@@ -23,6 +23,7 @@
 Only one of the following is a valid description of partial change. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "partial-change-3-one",
   question = "Only one of the following is a valid description of partial change. Mark that one.",

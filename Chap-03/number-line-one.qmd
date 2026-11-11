@@ -21,6 +21,7 @@
 Only one of the following is a valid description of number line. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "number-line-3-one",
   question = "Only one of the following is a valid description of number line. Mark that one.",

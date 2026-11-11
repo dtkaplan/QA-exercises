@@ -23,6 +23,7 @@
 Only one of the following is a valid description of Large language model (LLM). Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "large-language-model-llm-1-one",
   question = "Only one of the following is a valid description of Large language model (LLM). Mark that one.",

@@ -8,19 +8,21 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-16", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 16.A
+
 ::: {.panel-tabset}
 
-## 1
+## 16.A.1
 
 {{< include ../Chap-16/toe-lose-pen.qmd >}}
 
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 16 Key vocabulary
 
 ::: {.panel-tabset}
 

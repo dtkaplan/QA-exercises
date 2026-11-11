@@ -20,6 +20,7 @@
 Only one of the following is a valid description of diminishing marginal returns. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "diminishing-marginal-returns-14-one",
   question = "Only one of the following is a valid description of diminishing marginal returns. Mark that one.",

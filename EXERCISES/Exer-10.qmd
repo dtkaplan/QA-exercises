@@ -9,25 +9,25 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-10", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 10.A
+
 ::: {.panel-tabset}
 
-## 1 
+##  10.A.1
 
 {{< include ../Chap-10/jaquar-shut-pot.qmd >}}
 
-## 2 
+##  10.A.2
 
 {{< include ../Chap-10/monkey-talk-pants.qmd >}}
 
-
-
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 10Key vocabulary
 
 ::: {.panel-tabset}
 

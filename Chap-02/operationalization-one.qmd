@@ -22,6 +22,7 @@
 Only one of the following is a valid description of operationalization. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "operationalization-2-one",
   question = "Only one of the following is a valid description of operationalization. Mark that one.",

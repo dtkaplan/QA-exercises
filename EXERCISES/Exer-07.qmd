@@ -9,120 +9,121 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-07", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+##  7.A.7.A
+
 ::: {.panel-tabset}
 
 
-## 1
+##  7.A.1
 
 {{< include ../Chap-07/finch-ring-magnet.qmd >}}
 
-## 2
+##  7.A.2
 
 {{< include ../Chap-07/fox-burn-spoon.qmd >}}
 
-## 3
+##  7.A.3
 
 {{< include ../Chap-07/gator-trim-bed.qmd >}}
 
-## 4
+##  7.A.4
 
 {{< include ../Chap-07/girl-keep-hamper.qmd >}}
 
-## 5
+##  7.A.5
 
 {{< include ../Chap-07/girl-sleep-linen.qmd >}}
 
-## 6
+##  7.A.6
 
 {{< include ../Chap-07/kangaroo-hurt-bowl.qmd >}}
 
-## 7
+##  7.A.7
 
 {{< include ../Chap-07/kitten-sing-ring.qmd >}}
 
-## 8
+##  7.A.8
 
 {{< include ../Chap-07/monkey-meet-laundry.qmd >}}
 
-## 9
+##  7.A.9
 
 {{< include ../Chap-07/nephew-toss-gloves.qmd >}}
 
-## 10
+##  7.A.10
 
 {{< include ../Chap-07/oak-type-mug.qmd >}}
 
-## 11
+##  7.A.11
 
 {{< include ../Chap-07/pig-become-blouse.qmd >}}
 
-## 12
+##  7.A.12
 
 {{< include ../Chap-07/pig-say-pen.qmd >}}
 
-## 13
+##  7.A.13
 
 {{< include ../Chap-07/pig-speak-closet.qmd >}}
 
-## 14
+##  7.A.14
 
 {{< include ../Chap-07/pine-sail-kitchen.qmd >}}
 
-## 15
+##  7.A.15
 
 {{< include ../Chap-07/pollen-close-sheet.qmd >}}
 
-## 16
+##  7.A.16
 
 {{< include ../Chap-07/reptile-take-socks.qmd >}}
 
-## 17
+##  7.A.17
 
 {{< include ../Chap-07/seal-talk-room.qmd >}}
 
-## 18
+##  7.A.18
 
 {{< include ../Chap-07/shark-choose-bed.qmd >}}
 
-## 19
+##  7.A.19
 
 {{< include ../Chap-07/sheep-write-jacket.qmd >}}
 
-## 20
+##  7.A.20
 
 {{< include ../Chap-07/sister-bite-gloves.qmd >}}
 
-## 21
+##  7.A.21
 
 {{< include ../Chap-07/snail-dig-pen.qmd >}}
 
-## 22
+##  7.A.22
 
 {{< include ../Chap-07/spider-hit-fork.qmd >}}
 
-## 23
+##  7.A.23
 
 {{< include ../Chap-07/spruce-lie-kayak.qmd >}}
 
-## 24
+##  7.A.24
 
 {{< include ../Chap-07/squirrel-type-sofa.qmd >}}
 
-## 25
+##  7.A.25
 
 {{< include ../Chap-07/tiger-blow-shoe.qmd >}}
 
-## 26
+##  7.A.26
 
 {{< include ../Chap-07/toe-dig-pencil.qmd >}}
 
-
-
 :::
+::::
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 7 Key vocabulary
 
 ::: {.panel-tabset}
 

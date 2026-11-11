@@ -23,6 +23,7 @@
 Only one of the following is a valid description of quantitative models. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "quantitative-models-1-one",
   question = "Only one of the following is a valid description of quantitative models. Mark that one.",

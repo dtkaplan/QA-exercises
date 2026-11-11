@@ -19,6 +19,7 @@
 Only one of the following is a valid description of uniform distribution. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "uniform-distribution-8-one",
   question = "Only one of the following is a valid description of uniform distribution. Mark that one.",

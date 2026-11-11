@@ -26,6 +26,7 @@
 Two of the following are valid descriptions of rate of change. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "rate-of-change-4-two",
   question = "Two of the following are valid descriptions of rate of change. The other three are not. Mark both of the VALID descriptions.",

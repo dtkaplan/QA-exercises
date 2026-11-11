@@ -9,37 +9,37 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-11", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 11.A
+
 ::: {.panel-tabset}
 
-## 1
+##  11.A.1
 
 {{< include ../Chap-11/kid-ring-screen.qmd >}}
 
-## 2
+##  11.A.2
 
 {{< include ../Chap-11/nephew-find-drawer.qmd >}}
 
-## 3
+##  11.A.3
 
 {{< include ../Chap-11/panda-mean-pen.qmd >}}
 
-## 4
+##  11.A.4
 
 {{< include ../Chap-11/titmouse-refer-laundry.qmd >}}
 
-## 5
+##  11.A.5
 
 {{< include ../Chap-11/walrus-sharpen-boat.qmd >}}
 
-
-
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 11Key vocabulary
 
 ::: {.panel-tabset}
 

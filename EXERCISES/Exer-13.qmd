@@ -9,89 +9,90 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-13", feedback = FALSE)`
 
+:::: {.callout-note collapse=false}
+## 13.A
+
 ::: {.panel-tabset}
 
 
-## 1 
+##  13.A.1
 
 {{< include ../Chap-13/beech-sleep-canoe.qmd >}}
 
-## 2 
+##  13.A.2
 
 {{< include ../Chap-13/calf-freeze-saw.qmd >}}
 
-## 3 
+##  13.A.3
 
 {{< include ../Chap-13/cow-sharpen-linen.qmd >}}
 
-## 4 
+##  13.A.4
 
 {{< include ../Chap-13/elephant-have-knife.qmd >}}
 
-## 5 
+##  13.A.5
 
 {{< include ../Chap-13/fish-toss-boat.qmd >}}
 
-## 6 
+##  13.A.6
 
 {{< include ../Chap-13/fox-tell-dress.qmd >}}
 
-## 7 
+##  13.A.7
 
 {{< include ../Chap-13/gator-walk-piano.qmd >}}
 
-## 8 
+##  13.A.8
 
 {{< include ../Chap-13/goldfish-sleep-lamp.qmd >}}
 
-## 9 
+##  13.A.9
 
 {{< include ../Chap-13/kitten-serve-lamp.qmd >}}
 
-## 10 
+##  13.A.10
 
 {{< include ../Chap-13/lamb-rise-kitchen.qmd >}}
 
-## 11 
+##  13.A.11
 
 {{< include ../Chap-13/nephew-do-screen.qmd >}}
 
-## 12 
+##  13.A.12
 
 {{< include ../Chap-13/oak-ring-socks.qmd >}}
 
-## 13 
+##  13.A.13
 
 {{< include ../Chap-13/pig-forgive-saw.qmd >}}
 
-## 14 
+##  13.A.14
 
 {{< include ../Chap-13/pine-teach-mug.qmd >}}
 
-## 15 
+##  13.A.15
 
 {{< include ../Chap-13/rabbit-lead-socks.qmd >}}
 
-## 16 
+##  13.A.16
 
 {{< include ../Chap-13/rhinosaurus-buy-screen.qmd >}}
 
-## 17 
+##  13.A.17
 
 {{< include ../Chap-13/turtle-sing-socks.qmd >}}
 
-## 18 
+##  13.A.18
 
 {{< include ../Chap-13/wolf-choose-stove.qmd >}}
 
-
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 13 Key vocabulary
 
 ::: {.panel-tabset}
 

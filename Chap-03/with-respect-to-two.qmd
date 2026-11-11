@@ -26,6 +26,7 @@
 Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "with-respect-to-3-two",
   question = "Two of the following are valid descriptions of with respect to. The other three are not. Mark both of the VALID descriptions.",

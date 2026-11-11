@@ -9,24 +9,24 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-01", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 1.A
 ::: {.panel-tabset}
 
-## 1
+##  1.A.1
 
 {{< include ../Chap-01/hamster-hurt-lamp.qmd >}}
 
-## 2
+##  1.A.2
 
 {{< include ../Chap-01/monkey-drive-book.qmd >}}
 
-
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 1 Key vocabulary
 
 ::: {.panel-tabset}
 

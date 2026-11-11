@@ -25,6 +25,7 @@
 Two of the following are valid descriptions of value. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "value-2-two",
   question = "Two of the following are valid descriptions of value. The other three are not. Mark both of the VALID descriptions.",

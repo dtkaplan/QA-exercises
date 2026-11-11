@@ -23,6 +23,7 @@
 Only one of the following is a valid description of scientific notation. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "scientific-notation-5-one",
   question = "Only one of the following is a valid description of scientific notation. Mark that one.",

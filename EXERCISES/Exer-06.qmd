@@ -9,6 +9,9 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-06", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 6.A
+
 ::: {.panel-tabset}
 
 ## 1
@@ -58,12 +61,12 @@ source("../_exercise_startup.R")
 ## 12
 
 {{< include ../Chap-06/dolphin-enjoy-kitchen.qmd >}}
-
-
 :::
+::::
 
-:::: {.callout-note collapse=false}
-## Key vocabulary
+
+:::: {.callout-note collapse=true}
+## Chap 6 Key vocabulary
 
 ::: {.panel-tabset}
 

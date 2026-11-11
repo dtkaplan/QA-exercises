@@ -9,44 +9,44 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-12", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 12.A
+
 ::: {.panel-tabset}
 
-## 1 
+##  12.A.1
 
 {{< include ../Chap-12/finch-teach-kayak.qmd >}}
 
-## 2 
+##  12.A.2
 
 {{< include ../Chap-12/oak-swim-bed.qmd >}}
 
-## 3 
+##  12.A.3
 
 {{< include ../Chap-12/panda-cost-door.qmd >}}
 
-## 4 
+##  12.A.4
 
 {{< include ../Chap-12/pollen-cut-lamp.qmd >}}
 
-## 5 
+##  12.A.5
 
 {{< include ../Chap-12/pollen-wish-hamper.qmd >}}
 
-## 6 
+##  12.A.6
 
 {{< include ../Chap-12/pony-bite-suitcase.qmd >}}
 
-## 7 
+##  12.A.7
 
 {{< include ../Chap-12/pony-do-suitcase.qmd >}}
 
-
-
-
 :::
+::::
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 12 Key vocabulary
 
 ::: {.panel-tabset}
 

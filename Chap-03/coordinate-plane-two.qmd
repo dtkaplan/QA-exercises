@@ -26,6 +26,7 @@
 Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "coordinate-plane-3-two",
   question = "Two of the following are valid descriptions of coordinate plane. The other three are not. Mark both of the VALID descriptions.",

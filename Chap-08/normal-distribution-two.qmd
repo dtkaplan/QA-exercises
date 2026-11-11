@@ -22,6 +22,7 @@
 Two of the following are valid descriptions of normal distribution. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "normal-distribution-8-two",
   question = "Two of the following are valid descriptions of normal distribution. The other three are not. Mark both of the VALID descriptions.",

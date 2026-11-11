@@ -23,6 +23,7 @@
 Two of the following are valid descriptions of coefficient. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "coefficient-9-two",
   question = "Two of the following are valid descriptions of coefficient. The other three are not. Mark both of the VALID descriptions.",

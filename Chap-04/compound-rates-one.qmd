@@ -20,6 +20,7 @@
 Only one of the following is a valid description of compound rates. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "compound-rates-4-one",
   question = "Only one of the following is a valid description of compound rates. Mark that one.",

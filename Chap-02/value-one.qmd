@@ -21,6 +21,7 @@
 Only one of the following is a valid description of value. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "value-2-one",
   question = "Only one of the following is a valid description of value. Mark that one.",

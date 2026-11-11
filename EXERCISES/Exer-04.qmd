@@ -8,34 +8,33 @@ source("../_exercise_startup.R")
 ```
 
 `r devoirs3::devoirs_start("QA-exer-04", feedback = FALSE)`
+:::: {.callout-note collapse=true}
+## 4.A
 
 ::: {.panel-tabset}
 
-## 1 
+##  4.A.1
 
 {{< include ../Chap-04/ant-spend-shoe.qmd >}}
 
-## 2 
+##  4.A.2
 
 {{< include ../Chap-04/falcon-iron-pants.qmd >}}
 
-## 3 
+##  4.A.3
 
 {{< include ../Chap-04/finger-dig-fridge.qmd >}}
 
-## 4 
+##  4.A.4
 
 {{< include ../Chap-04/seahorse-bathe-knife.qmd >}}
 
-
-
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 4 Key vocabulary
 
 ::: {.panel-tabset}
 

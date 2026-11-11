@@ -9,34 +9,37 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-03", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 3.A
+
 ::: {.panel-tabset}
 
-## 1. 
+##  3.A.1.
 
 {{< include ../Chap-03/avoid-get-laundry.qmd >}}
 
-## 2. 
+##  3.A.2.
 
 {{< include ../Chap-03/deer-put-cotton.qmd >}}
 
-## 3. 
+##  3.A.3.
 
 {{< include ../Chap-03/pine-speak-shelf.qmd >}}
 
-## 4. 
+##  3.A.4.
 
 {{< include ../Chap-03/snake-show-knife.qmd >}}
 
-## 5. 
+##  3.A.5.
 
 {{< include ../Chap-03/titmouse-leave-shelf.qmd >}}
 
-
 :::
+::::
 
 
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 3 Key vocabulary
 
 ::: {.panel-tabset}
 

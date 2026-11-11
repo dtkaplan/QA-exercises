@@ -20,6 +20,7 @@
 Only one of the following is a valid description of projection. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "projection-16-one",
   question = "Only one of the following is a valid description of projection. Mark that one.",

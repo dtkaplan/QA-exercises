@@ -9,6 +9,9 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-09", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 9.A
+
 ::: {.panel-tabset}
 
 ## 1
@@ -31,15 +34,12 @@ source("../_exercise_startup.R")
 
 {{< include ../Chap-09/puppy-get-painting.qmd >}}
 
-
-
-
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 9Key vocabulary
 
 ::: {.panel-tabset}
 

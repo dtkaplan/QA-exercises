@@ -9,42 +9,45 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-15", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 15.A
+
 ::: {.panel-tabset}
 
-## 1
+##  15.A.1
 
 {{< include ../Chap-15/arm-begin-door.qmd >}}
 
-## 2
+##  15.A.2
 
 {{< include ../Chap-15/fawn-draw-radio.qmd >}}
 
-## 3
+##  15.A.3
 
 {{< include ../Chap-15/lamb-point-saucer.qmd >}}
 
-## 4
+##  15.A.4
 
 {{< include ../Chap-15/maple-freeze-hat.qmd >}}
 
-## 5
+##  15.A.5
 
 {{< include ../Chap-15/sister-pay-candy.qmd >}}
 
-## 6
+##  15.A.6
 
 {{< include ../Chap-15/spider-bid-plate.qmd >}}
 
-## 7
+##  15.A.7
 
 {{< include ../Chap-15/turtle-speak-pencil.qmd >}}
 
 :::
+::::
 
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 15 Key vocabulary
 
 ::: {.panel-tabset}
 

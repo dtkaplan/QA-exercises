@@ -17,6 +17,7 @@
 Only one of the following is a valid description of incidence. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "incidence-15-one",
   question = "Only one of the following is a valid description of incidence. Mark that one.",

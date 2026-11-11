@@ -9,62 +9,64 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-14", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 14.A
+
 ::: {.panel-tabset}
 
 
-## 1
+##  14.A.1
 
 {{< include ../Chap-14/buck-chew-dress.qmd >}}
 
-## 2
+##  14.A.2
 
 {{< include ../Chap-14/cheetah-stand-mattress.qmd >}}
 
-## 3
+##  14.A.3
 
 {{< include ../Chap-14/cheetah-think-tv.qmd >}}
 
-## 4
+##  14.A.4
 
 {{< include ../Chap-14/dingo-eat-saw.qmd >}}
 
-## 5
+##  14.A.5
 
 {{< include ../Chap-14/kid-hurt-dress.qmd >}}
 
-## 6
+##  14.A.6
 
 {{< include ../Chap-14/niece-eat-pot.qmd >}}
 
-## 7
+##  14.A.7
 
 {{< include ../Chap-14/rabbit-fight-ring.qmd >}}
 
-## 8
+##  14.A.8
 
 {{< include ../Chap-14/seahorse-lose-plyer.qmd >}}
 
-## 9
+##  14.A.9
 
 {{< include ../Chap-14/snail-sail-screen.qmd >}}
 
-## 10
+##  14.A.10
 
 {{< include ../Chap-14/spider-mean-bolt.qmd >}}
 
-## 11
+##  14.A.11
 
 {{< include ../Chap-14/turtle-break-stair.qmd >}}
 
-
-
 :::
+::::
 
 
 
 
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 14 Key vocabulary
 
 ::: {.panel-tabset}
 

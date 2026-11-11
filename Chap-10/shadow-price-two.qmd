@@ -23,6 +23,7 @@
 Two of the following are valid descriptions of shadow price. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "shadow-price-10-two",
   question = "Two of the following are valid descriptions of shadow price. The other three are not. Mark both of the VALID descriptions.",

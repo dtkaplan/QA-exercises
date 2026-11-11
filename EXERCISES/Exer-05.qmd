@@ -9,49 +9,51 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-05", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 5.A
 ::: {.panel-tabset}
 
-## 1 
+##  5.A.1
 
 {{< include ../Chap-05/bee-spend-magnet.qmd >}}
 
-## 2. 
+##  5.A.2.
 
 {{< include ../Chap-05/jellyfish-open-socks.qmd >}}
 
-## 3. 
+##  5.A.3.
 
 {{< include ../Chap-05/kitten-close-coat.qmd >}}
 
-## 4. 
+##  5.A.4.
 
 {{< include ../Chap-05/lamb-speak-radio.qmd >}}
 
-## 5. 
+##  5.A.5.
 
 {{< include ../Chap-05/lion-understand-suitcase.qmd >}}
 
-## 6. 
+##  5.A.6.
 
 {{< include ../Chap-05/maple-shut-pantry.qmd >}}
 
-## 7. 
+##  5.A.7.
 
 {{< include ../Chap-05/pig-think-bolt.qmd >}}
 
-## 8. 
+##  5.A.8.
 
 {{< include ../Chap-05/pollen-stand-pen.qmd >}}
 
-## 9. 
+##  5.A.9.
 
 {{< include ../Chap-05/seahorse-pitch-teacup.qmd >}}
 
-## 10. 
+##  5.A.10.
 
 {{< include ../Chap-05/snail-say-clock.qmd >}}
 
-## 11.  
+##  5.A.11. 
 
 {{< include ../Chap-05/walrus-hang-kitchen.qmd >}}
 
@@ -67,14 +69,11 @@ include ../Chap-05/goldfish-cost-bed.qmd
 
 -->
 
-
-
-
 :::
+::::
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 5 Key vocabulary
 
 ::: {.panel-tabset}
 

@@ -21,6 +21,7 @@
 Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "likelihood-framework-11-two",
   question = "Two of the following are valid descriptions of likelihood framework. The other three are not. Mark both of the VALID descriptions.",

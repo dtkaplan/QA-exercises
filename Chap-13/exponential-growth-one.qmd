@@ -20,6 +20,7 @@
 Only one of the following is a valid description of exponential growth. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "exponential-growth-13-one",
   question = "Only one of the following is a valid description of exponential growth. Mark that one.",

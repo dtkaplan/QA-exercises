@@ -9,36 +9,36 @@ source("../_exercise_startup.R")
 
 `r devoirs3::devoirs_start("QA-exer-08", feedback = FALSE)`
 
+:::: {.callout-note collapse=true}
+## 8.A
+
 ::: {.panel-tabset}
 
-## 1
+##  8.A.1
 
 {{< include ../Chap-08/frog-choose-knife.qmd >}}
 
-## 2
+##  8.A.2
 
 {{< include ../Chap-08/hamster-cut-tv.qmd >}}
 
-## 3
+##  8.A.3
 
 {{< include ../Chap-08/horse-point-closet.qmd >}}
 
-## 4
+##  8.A.4
 
 {{< include ../Chap-08/pig-teach-oven.qmd >}}
 
-## 5
+##  8.A.5
 
 {{< include ../Chap-08/pony-rise-boat.qmd >}}
 
-
-
-
 :::
+::::
 
-
-:::: {.callout-note collapse=false}
-## Key vocabulary
+:::: {.callout-note collapse=true}
+## Chap 8 Key vocabulary
 
 ::: {.panel-tabset}
 

@@ -23,6 +23,7 @@
 Only one of the following is a valid description of rate of change. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "rate-of-change-4-one",
   question = "Only one of the following is a valid description of rate of change. Mark that one.",

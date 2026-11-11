@@ -23,6 +23,7 @@
 Two of the following are valid descriptions of variable. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "variable-2-two",
   question = "Two of the following are valid descriptions of variable. The other three are not. Mark both of the VALID descriptions.",

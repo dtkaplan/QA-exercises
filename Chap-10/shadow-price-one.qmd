@@ -19,6 +19,7 @@
 Only one of the following is a valid description of shadow price. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "shadow-price-10-one",
   question = "Only one of the following is a valid description of shadow price. Mark that one.",

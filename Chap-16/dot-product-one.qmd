@@ -18,6 +18,7 @@
 Only one of the following is a valid description of dot product. Mark that one.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "dot-product-16-one",
   question = "Only one of the following is a valid description of dot product. Mark that one.",

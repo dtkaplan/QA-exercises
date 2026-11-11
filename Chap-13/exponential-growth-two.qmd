@@ -22,6 +22,7 @@
 Two of the following are valid descriptions of exponential growth. The other three are not. Mark both of the VALID descriptions.
 
 ```{r}
+#| echo: false
 devoirs3::devoirs_selection(
   label = "exponential-growth-13-two",
   question = "Two of the following are valid descriptions of exponential growth. The other three are not. Mark both of the VALID descriptions.",
